@@ -31,8 +31,25 @@ export const UNSTABLE_VIBES = [
 ];
 
 // Use a deterministic seed based on version string so the same version always shows the same vibe
+export const PENDING_VIBES = [
+  "Too fresh to judge ⏳",
+  "Jury's still out 🤔",
+  "Marinating... 🧪",
+  "24h observation period 🔬",
+  "The suspense is killing us 🍿",
+  "Schrodinger's version 📦",
+  "Ask again tomorrow 🎱",
+];
+
 export function getVibe(version: string, verdict: "yes" | "no" | "pending"): string {
-  if (verdict === "pending") return "Awaiting verdict ⏳";
+  if (verdict === "pending") {
+    let hash = 0;
+    for (let i = 0; i < version.length; i++) {
+      hash = ((hash << 5) - hash) + version.charCodeAt(i);
+      hash |= 0;
+    }
+    return PENDING_VIBES[Math.abs(hash) % PENDING_VIBES.length];
+  }
   const list = verdict === "yes" ? STABLE_VIBES : UNSTABLE_VIBES;
   // Simple hash from version string
   let hash = 0;
