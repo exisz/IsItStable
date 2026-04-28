@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getLatestStable } from "@/lib/github";
+import { getLatestStable } from "@/lib/data";
 
 type Props = { params: Promise<{ package: string }> };
 

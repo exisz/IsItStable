@@ -1,7 +1,5 @@
-import { getLatestStable } from "@/lib/github";
+import { getLatestStable } from "@/lib/data";
 import { notFound, redirect } from "next/navigation";
-
-export const revalidate = 120;
 
 type Props = { params: Promise<{ package: string }> };
 

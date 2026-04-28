@@ -1,7 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getPackages, getPackageVersions } from "@/lib/github";
-
-export const revalidate = 3600;
+import { getPackages, getPackageVersions } from "@/lib/data";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [

@@ -1,7 +1,5 @@
-import { getPackages } from "@/lib/github";
+import { getPackages } from "@/lib/data";
 import Link from "next/link";
-
-export const revalidate = 300;
 
 export default async function HomePage() {
   const pkgs = await getPackages();

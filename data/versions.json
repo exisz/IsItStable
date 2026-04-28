@@ -1,0 +1,101 @@
+[
+  {
+    "issueNumber": 3,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/3",
+    "version": "2026.4.25",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "no",
+    "verdictComment": "Tried to fix 4.24, introduced new friends: memory leaks and broken upgrades. It's giving \"we'll fix it in the next one\" energy. Narrator: they did not fix it in this one.",
+    "evidenceSummary": "- openclaw/openclaw#72908 — `openclaw update --tag 2026.4.25` leaves old Gateway running, mixed-version chaos",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72908,
+        "url": "https://github.com/openclaw/openclaw/issues/72908"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72909,
+        "url": "https://github.com/openclaw/openclaw/issues/72909"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72906,
+        "url": "https://github.com/openclaw/openclaw/issues/72906"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 73049,
+        "url": "https://github.com/openclaw/openclaw/issues/73049"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 73068,
+        "url": "https://github.com/openclaw/openclaw/issues/73068"
+      }
+    ],
+    "stats": {
+      "githubIssuesCount": "5+ breaking"
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 1,
+    "createdAt": "2026-04-28T01:02:04Z"
+  },
+  {
+    "issueNumber": 2,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/2",
+    "version": "2026.4.24",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "no",
+    "verdictComment": "Hubris after 4.23. This version came in hot and left a trail of GitHub issues. Your Slack will have opinions. We recommend staying on 4.23 until this gets patched.",
+    "evidenceSummary": "- openclaw/openclaw#71915 — Gateway 100% CPU / infinite loop with DeepSeek V4 models",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 71915,
+        "url": "https://github.com/openclaw/openclaw/issues/71915"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72208,
+        "url": "https://github.com/openclaw/openclaw/issues/72208"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72693,
+        "url": "https://github.com/openclaw/openclaw/issues/72693"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72450,
+        "url": "https://github.com/openclaw/openclaw/issues/72450"
+      }
+    ],
+    "stats": {
+      "githubIssuesCount": "4+ breaking"
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-04-28T01:01:55Z"
+  },
+  {
+    "issueNumber": 1,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/1",
+    "version": "2026.4.23",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "yes",
+    "verdictComment": "The chosen one. If you're only going to trust one version this month, make it this one. Ran in prod for 72 hours with zero hiccups. Your monitoring dashboard will be so bored it might fall asleep. 💤",
+    "evidenceSummary": "No significant issues reported for this version. The GitHub issue tracker is eerily quiet. Suspiciously quiet. Like \"the cat knocked something over but you can't find what\" quiet.",
+    "referencedIssues": [],
+    "stats": {
+      "npmDownloads": "~4,300 (first 72h)",
+      "githubIssuesCount": "0 breaking"
+    },
+    "thumbsUp": 1,
+    "thumbsDown": 0,
+    "createdAt": "2026-04-28T01:01:46Z"
+  }
+]

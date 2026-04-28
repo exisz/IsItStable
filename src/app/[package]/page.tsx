@@ -1,11 +1,9 @@
-import { getPackageSummary, getLatestStable, getPackages } from "@/lib/github";
+import { getPackageSummary, getLatestStable, getPackages } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { VerdictBadge } from "@/components/VerdictBadge";
 import { CopyButton } from "@/components/CopyButton";
 import type { Metadata } from "next";
-
-export const revalidate = 120;
 
 type Props = { params: Promise<{ package: string }> };
 

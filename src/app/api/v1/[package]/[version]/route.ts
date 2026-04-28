@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getVersionBySlug } from "@/lib/github";
+import { getVersionBySlug } from "@/lib/data";
 
 type Props = { params: Promise<{ package: string; version: string }> };
 

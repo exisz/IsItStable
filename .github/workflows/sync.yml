@@ -1,0 +1,32 @@
+name: Sync Version Data
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  issues:
+    types: [opened, edited, deleted]
+  issue_comment:
+    types: [created]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g tsx
+      - run: tsx scripts/sync.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || (git commit -m "data: sync version data" && git push)

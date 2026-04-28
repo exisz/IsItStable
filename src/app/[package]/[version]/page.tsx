@@ -1,10 +1,8 @@
-import { getVersionBySlug, getPackageSummary, fetchAllVersionIssues } from "@/lib/github";
+import { getVersionBySlug, getPackageSummary, fetchAllVersionIssues } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { VerdictBadge } from "@/components/VerdictBadge";
 import type { Metadata } from "next";
-
-export const revalidate = 120;
 
 type Props = { params: Promise<{ package: string; version: string }> };
 
