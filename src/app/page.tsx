@@ -1,65 +1,83 @@
-import Image from "next/image";
+import { getAllPackages } from "@/db/queries";
+import Link from "next/link";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const pkgs = await getAllPackages();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="max-w-4xl mx-auto px-6 py-16">
+      {/* Hero */}
+      <section className="text-center mb-20">
+        <h1 className="text-6xl sm:text-8xl font-black tracking-tight mb-6">
+          Is It Stable<span className="text-[var(--color-muted)]">?</span>
+        </h1>
+        <p className="text-xl sm:text-2xl text-[var(--color-muted)] max-w-2xl mx-auto leading-relaxed">
+          Because <code className="text-[var(--color-foreground)] bg-[var(--color-card)] px-2 py-0.5 rounded">npm update</code> shouldn&apos;t require a prayer circle. 🙏
+        </p>
+        <p className="mt-4 text-[var(--color-muted)]">
+          Community-driven stability verdicts for packages you actually use.
+        </p>
+      </section>
+
+      {/* Package List */}
+      <section>
+        <h2 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-6">
+          Tracked Packages
+        </h2>
+        <div className="space-y-4">
+          {pkgs.map((pkg) => (
+            <Link
+              key={pkg.id}
+              href={`/${pkg.name}`}
+              className="block border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-muted)] transition-colors group"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold group-hover:underline">
+                    {pkg.displayName}
+                  </h3>
+                  <p className="text-[var(--color-muted)] mt-1">
+                    {pkg.registry}:{pkg.name} · <span className="text-[var(--color-foreground)]">{pkg.latestVersion?.version}</span>
+                  </p>
+                </div>
+                {pkg.latestVersion && (
+                  <div className={`text-4xl font-black ${
+                    pkg.latestVersion.verdict === "yes" ? "text-[var(--color-yes)]" :
+                    pkg.latestVersion.verdict === "no" ? "text-[var(--color-no)]" :
+                    "text-[var(--color-pending)]"
+                  }`}>
+                    {pkg.latestVersion.verdict === "yes" ? "YES ✅" :
+                     pkg.latestVersion.verdict === "no" ? "NO 🔥" : "🤔"}
+                  </div>
+                )}
+              </div>
+              {pkg.latestVersion?.verdictComment && (
+                <p className="mt-3 text-[var(--color-muted)] text-sm italic">
+                  &ldquo;{pkg.latestVersion.verdictComment}&rdquo;
+                </p>
+              )}
+            </Link>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      {/* CTA */}
+      <section className="text-center mt-20 border border-[var(--color-border)] rounded-xl p-10">
+        <h2 className="text-3xl font-bold mb-4">Want your package tracked? 📦</h2>
+        <p className="text-[var(--color-muted)] mb-6">
+          Open an issue on GitHub. We&apos;ll add it if enough people share the anxiety.
+        </p>
+        <a
+          href="https://github.com/exisz/isitstable/issues/new"
+          target="_blank"
+          rel="noopener"
+          className="inline-block bg-white text-black font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors"
+        >
+          Request a Package →
+        </a>
+      </section>
     </div>
   );
 }
