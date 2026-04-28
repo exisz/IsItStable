@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export function InstallCommands({ packageName, version }: { packageName: string; version: string }) {
   const npmCmd = `npm install ${packageName}@${version}`;
-  const clawCmd = `openclaw update --channel stable`;
+  const clawCmd = `openclaw update --tag ${version}`;
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
 
   function copy(text: string, idx: number) {
