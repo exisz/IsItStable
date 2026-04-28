@@ -95,7 +95,7 @@ async function main() {
   if (version) {
     url = `${API_BASE}/${encodeURIComponent(pkg)}/${encodeURIComponent(version)}/verdict`;
   } else if (stable) {
-    url = `${API_BASE}/${encodeURIComponent(pkg)}/stable`;
+    url = `${API_BASE}/${encodeURIComponent(pkg)}/latest-stable`;
   } else {
     url = `${API_BASE}/${encodeURIComponent(pkg)}/verdict`;
   }

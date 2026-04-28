@@ -1,10 +1,15 @@
 {
   "name": "is-it-stable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Is this npm package version stable? CLI for isitstable.com",
   "type": "module",
-  "bin": { "is-it-stable": "bin/is-it-stable" },
-  "files": ["bin", "dist"],
+  "bin": {
+    "is-it-stable": "dist/cli.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsx src/cli.ts"
@@ -14,8 +19,17 @@
     "tsx": "^4",
     "typescript": "^5"
   },
-  "keywords": ["stable", "npm", "version", "check", "openclaw"],
+  "keywords": [
+    "stable",
+    "npm",
+    "version",
+    "check",
+    "openclaw"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/exisz/IsItStable" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exisz/IsItStable"
+  },
   "homepage": "https://isitstable.com"
 }
