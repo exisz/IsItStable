@@ -1,0 +1,7 @@
+#!/bin/sh
+CODE="$(cd "$(dirname "$0")/.." && pwd)"
+if [ -f "$CODE/src/cli.ts" ] && [ -x "$CODE/node_modules/.bin/tsx" ]; then
+  exec "$CODE/node_modules/.bin/tsx" "$CODE/src/cli.ts" "$@"
+else
+  exec node "$CODE/dist/cli.js" "$@"
+fi
