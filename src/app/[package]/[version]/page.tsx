@@ -1,7 +1,9 @@
 import { getVersionBySlug, getPackageSummary, fetchAllVersionIssues } from "@/lib/data";
+import { getVibe } from "@/lib/vibes";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { VerdictBadge } from "@/components/VerdictBadge";
+import { InstallCommands } from "@/components/InstallCommands";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ package: string; version: string }> };
@@ -29,6 +31,8 @@ export default async function VersionPage({ params }: Props) {
   const v = await getVersionBySlug(slug, version);
   if (!v) notFound();
 
+  const vibe = getVibe(v.version, v.verdict);
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <div className="mb-4">
@@ -42,7 +46,7 @@ export default async function VersionPage({ params }: Props) {
         <p className="text-[var(--color-muted)] text-lg mb-4">
           Is <span className="text-[var(--color-foreground)] font-bold">{pkg.displayName} v{version}</span> stable?
         </p>
-        <VerdictBadge verdict={v.verdict} size="xl" />
+        <VerdictBadge verdict={v.verdict} size="xl" version={v.version} />
       </div>
 
       {/* Comment */}
@@ -53,6 +57,12 @@ export default async function VersionPage({ params }: Props) {
           </p>
         </div>
       )}
+
+      {/* Install */}
+      <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8 bg-[var(--color-card)]">
+        <p className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-3">Install this version</p>
+        <InstallCommands packageName={slug} version={v.version} />
+      </div>
 
       {/* Stats + Votes */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">

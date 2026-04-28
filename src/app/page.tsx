@@ -1,8 +1,16 @@
-import { getPackages } from "@/lib/data";
+import { getPackages, getLatestStable } from "@/lib/data";
+import { getVibe } from "@/lib/vibes";
 import Link from "next/link";
+import { CopyButton } from "@/components/CopyButton";
 
 export default async function HomePage() {
   const pkgs = await getPackages();
+
+  // Pre-fetch latest stable for each package
+  const stableMap = new Map<string, Awaited<ReturnType<typeof getLatestStable>>>();
+  for (const pkg of pkgs) {
+    stableMap.set(pkg.slug, await getLatestStable(pkg.slug));
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
@@ -25,39 +33,69 @@ export default async function HomePage() {
           Tracked Packages
         </h2>
         <div className="space-y-4">
-          {pkgs.map((pkg) => (
-            <Link
-              key={pkg.slug}
-              href={`/${pkg.slug}`}
-              className="block border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-muted)] transition-colors group"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-2xl font-bold group-hover:underline">
-                    {pkg.displayName}
-                  </h3>
-                  <p className="text-[var(--color-muted)] mt-1">
-                    {pkg.slug} · <span className="text-[var(--color-foreground)]">v{pkg.latestVersion?.version}</span>
-                  </p>
+          {pkgs.map((pkg) => {
+            const latestStable = stableMap.get(pkg.slug);
+            const latest = pkg.latestVersion;
+            const latestVibe = latest ? getVibe(latest.version, latest.verdict) : null;
+            const installCmd = latestStable
+              ? `npm install ${pkg.slug}@${latestStable.version}`
+              : undefined;
+
+            return (
+              <Link
+                key={pkg.slug}
+                href={`/${pkg.slug}`}
+                className="block border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-muted)] transition-colors group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold group-hover:underline">
+                      {pkg.displayName}
+                    </h3>
+                    <p className="text-[var(--color-muted)] mt-1">
+                      Latest: <span className="text-[var(--color-foreground)]">v{latest?.version}</span>
+                      {latest && (
+                        <span className={`ml-2 text-sm ${
+                          latest.verdict === "yes" ? "text-[var(--color-yes)]" :
+                          latest.verdict === "no" ? "text-[var(--color-no)]" :
+                          "text-[var(--color-pending)]"
+                        }`}>
+                          {latestVibe}
+                        </span>
+                      )}
+                    </p>
+                    {latestStable && (
+                      <p className="mt-1">
+                        <span className="inline-flex items-center gap-1.5 text-sm bg-[var(--color-yes)]/10 text-[var(--color-yes)] px-2 py-0.5 rounded-full font-medium">
+                          🟢 Last stable: v{latestStable.version}
+                        </span>
+                      </p>
+                    )}
+                  </div>
+                  {latest && (
+                    <div className={`text-4xl font-black ${
+                      latest.verdict === "yes" ? "text-[var(--color-yes)]" :
+                      latest.verdict === "no" ? "text-[var(--color-no)]" :
+                      "text-[var(--color-pending)]"
+                    }`}>
+                      {latest.verdict === "yes" ? "YES ✅" :
+                       latest.verdict === "no" ? "NO 🔥" : "🤔"}
+                    </div>
+                  )}
                 </div>
-                {pkg.latestVersion && (
-                  <div className={`text-4xl font-black ${
-                    pkg.latestVersion.verdict === "yes" ? "text-[var(--color-yes)]" :
-                    pkg.latestVersion.verdict === "no" ? "text-[var(--color-no)]" :
-                    "text-[var(--color-pending)]"
-                  }`}>
-                    {pkg.latestVersion.verdict === "yes" ? "YES ✅" :
-                     pkg.latestVersion.verdict === "no" ? "NO 🔥" : "🤔"}
+                {installCmd && (
+                  <div className="mt-3 flex items-center gap-2">
+                    <code className="text-xs font-mono text-[var(--color-muted)] bg-[var(--color-card)] px-2 py-1 rounded">{installCmd}</code>
                   </div>
                 )}
-              </div>
-              {pkg.latestVersion?.verdictComment && (
-                <p className="mt-3 text-[var(--color-muted)] text-sm italic">
-                  &ldquo;{pkg.latestVersion.verdictComment}&rdquo;
-                </p>
-              )}
-            </Link>
-          ))}
+                {latest?.verdictComment && (
+                  <p className="mt-3 text-[var(--color-muted)] text-sm italic">
+                    &ldquo;{latest.verdictComment}&rdquo;
+                  </p>
+                )}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
