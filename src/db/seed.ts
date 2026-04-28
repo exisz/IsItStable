@@ -68,7 +68,7 @@ async function seed() {
   // Insert package
   await db.insert(schema.packages).values({
     name: "openclaw",
-    githubRepo: "nicepkg/openclaw",
+    githubRepo: "openclaw/openclaw",
     registry: "npm",
     displayName: "OpenClaw",
   }).onConflictDoNothing();
