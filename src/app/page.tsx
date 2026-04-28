@@ -1,10 +1,10 @@
-import { getAllPackages } from "@/db/queries";
+import { getPackages } from "@/lib/github";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export default async function HomePage() {
-  const pkgs = await getAllPackages();
+  const pkgs = await getPackages();
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
@@ -29,8 +29,8 @@ export default async function HomePage() {
         <div className="space-y-4">
           {pkgs.map((pkg) => (
             <Link
-              key={pkg.id}
-              href={`/${pkg.name}`}
+              key={pkg.slug}
+              href={`/${pkg.slug}`}
               className="block border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-muted)] transition-colors group"
             >
               <div className="flex items-center justify-between">
@@ -39,7 +39,7 @@ export default async function HomePage() {
                     {pkg.displayName}
                   </h3>
                   <p className="text-[var(--color-muted)] mt-1">
-                    {pkg.registry}:{pkg.name} · <span className="text-[var(--color-foreground)]">{pkg.latestVersion?.version}</span>
+                    {pkg.slug} · <span className="text-[var(--color-foreground)]">v{pkg.latestVersion?.version}</span>
                   </p>
                 </div>
                 {pkg.latestVersion && (
@@ -70,7 +70,7 @@ export default async function HomePage() {
           Open an issue on GitHub. We&apos;ll add it if enough people share the anxiety.
         </p>
         <a
-          href="https://github.com/exisz/isitstable/issues/new"
+          href="https://github.com/exisz/IsItStable/issues/new"
           target="_blank"
           rel="noopener"
           className="inline-block bg-white text-black font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors"

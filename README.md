@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔍 IsItStable.com
 
-## Getting Started
+> Community-driven stability verdicts for npm packages. Because `latest` doesn't mean `greatest`.
 
-First, run the development server:
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fisitstable.com&label=isitstable.com)](https://isitstable.com)
+[![GitHub Issues](https://img.shields.io/github/issues/exisz/IsItStable)](https://github.com/exisz/IsItStable/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-💛-yellow)](https://github.com/sponsors/exisz)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## What is this?
+
+**IsItStable** answers one question: *"Should I update?"*
+
+Every tracked package version gets a **community verdict** — `YES ✅` (ship it) or `NO 🔥` (hold off). Verdicts are backed by evidence: referenced GitHub issues, download stats, and community votes via GitHub reactions.
+
+<!-- TODO: Add screenshot -->
+<!-- ![Screenshot](public/screenshot.png) -->
+
+## How it works
+
+1. **Version issues** are created in this repo with the format `[v2026.4.23] PackageName`
+2. Each issue contains a **verdict** (YES/NO), humorous comment, and evidence links
+3. **You vote** by reacting on the issue: 👍 = stable, 👎 = unstable
+4. The website reads from GitHub Issues via API — no database needed
+
+## API
+
+All endpoints return JSON with `Cache-Control` headers.
+
+### `GET /api/v1/{package}/verdict`
+
+Latest verdict for a package.
+
+```json
+{
+  "package": "openclaw",
+  "version": "2026.4.23",
+  "verdict": "yes",
+  "comment": "Ship it and sleep like a baby.",
+  "thumbsUp": 12,
+  "thumbsDown": 1
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### `GET /api/v1/{package}/versions`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All tracked versions for a package.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### `GET /api/v1/{package}/latest-stable`
 
-## Learn More
+Latest version with a YES verdict. Includes an `install` command.
 
-To learn more about Next.js, take a look at the following resources:
+### `GET /api/v1/{package}/{version}`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Detailed info for a specific version including referenced issues and stats.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Request a new package
 
-## Deploy on Vercel
+[Open an issue](https://github.com/exisz/IsItStable/issues/new) requesting the package you want tracked.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Development
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm install
+pnpm dev
+```
+
+Optionally set `GITHUB_TOKEN` in `.env.local` for higher API rate limits:
+
+```
+GITHUB_TOKEN=ghp_...
+```
+
+## Built with
+
+- [Next.js](https://nextjs.org) — React framework with SSG + ISR
+- [Vercel](https://vercel.com) — Hosting & edge caching
+- [GitHub API](https://docs.github.com/en/rest) — Issues as database, reactions as votes
+- [Tailwind CSS](https://tailwindcss.com) — Styling
+
+## Contributing
+
+1. Fork this repo
+2. Create a feature branch
+3. Submit a PR
+
+For version verdicts, [open an issue](https://github.com/exisz/IsItStable/issues/new) instead.
+
+## Sponsor
+
+If this saves you from a bad `npm update`, consider [sponsoring](https://github.com/sponsors/exisz) 💛
+
+## License
+
+MIT

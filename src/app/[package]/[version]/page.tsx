@@ -1,37 +1,40 @@
-import { getPackage, getVersion } from "@/db/queries";
+import { getVersionBySlug, getPackageSummary, fetchAllVersionIssues } from "@/lib/github";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { VerdictBadge } from "@/components/VerdictBadge";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 120;
 
 type Props = { params: Promise<{ package: string; version: string }> };
 
+export async function generateStaticParams() {
+  const issues = await fetchAllVersionIssues();
+  return issues.map((i) => ({ package: i.packageSlug, version: i.version }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { package: name, version } = await params;
-  const pkg = await getPackage(name);
-  if (!pkg) return {};
-  const v = await getVersion(pkg.id, version);
+  const { package: slug, version } = await params;
+  const v = await getVersionBySlug(slug, version);
   if (!v) return {};
   const verdict = v.verdict === "yes" ? "Stable ✅" : v.verdict === "no" ? "Unstable 🔥" : "Pending 🤔";
   return {
-    title: `Is ${pkg.displayName} v${version} Stable? | IsItStable.com`,
-    description: `${pkg.displayName} v${version}: ${verdict}. ${v.verdictComment}`,
+    title: `Is ${v.packageName} v${version} Stable? | IsItStable.com`,
+    description: `${v.packageName} v${version}: ${verdict}. ${v.verdictComment}`,
   };
 }
 
 export default async function VersionPage({ params }: Props) {
-  const { package: name, version } = await params;
-  const pkg = await getPackage(name);
+  const { package: slug, version } = await params;
+  const pkg = await getPackageSummary(slug);
   if (!pkg) notFound();
-  const v = await getVersion(pkg.id, version);
+  const v = await getVersionBySlug(slug, version);
   if (!v) notFound();
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <div className="mb-4">
-        <Link href={`/${name}`} className="text-sm text-[var(--color-muted)] hover:text-white transition-colors">
+        <Link href={`/${slug}`} className="text-sm text-[var(--color-muted)] hover:text-white transition-colors">
           ← {pkg.displayName} versions
         </Link>
       </div>
@@ -45,49 +48,82 @@ export default async function VersionPage({ params }: Props) {
       </div>
 
       {/* Comment */}
-      <div className="border border-[var(--color-border)] rounded-xl p-8 mb-8 bg-[var(--color-card)] text-center">
-        <p className="text-xl italic text-[var(--color-muted)] leading-relaxed">
-          &ldquo;{v.verdictComment}&rdquo;
-        </p>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-        <StatCard label="npm Downloads" value={v.npmDownloads?.toLocaleString() ?? "—"} />
-        <StatCard label="GitHub Issues" value={String(v.githubIssuesCount ?? 0)} />
-        <StatCard label="Breaking Changes" value={String(v.breakingCount ?? 0)} color={v.breakingCount ? "text-[var(--color-no)]" : undefined} />
-        <StatCard label="Released" value={v.releaseDate ?? "—"} />
-      </div>
-
-      {/* Evidence */}
-      {v.evidenceSummary && (
-        <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8">
-          <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-3">Evidence</h3>
-          <p className="text-[var(--color-muted)]">{v.evidenceSummary}</p>
+      {v.verdictComment && (
+        <div className="border border-[var(--color-border)] rounded-xl p-8 mb-8 bg-[var(--color-card)] text-center">
+          <p className="text-xl italic text-[var(--color-muted)] leading-relaxed">
+            &ldquo;{v.verdictComment}&rdquo;
+          </p>
         </div>
       )}
 
-      {/* Vote Widget (disabled) */}
-      <div className="border border-[var(--color-border)] rounded-xl p-6 text-center bg-[var(--color-card)]">
-        <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-4">Community Vote</h3>
-        <div className="flex items-center justify-center gap-6">
-          <button disabled className="opacity-40 cursor-not-allowed px-6 py-3 rounded-lg border border-[var(--color-border)] text-lg font-bold">
-            👍 Stable
-          </button>
-          <button disabled className="opacity-40 cursor-not-allowed px-6 py-3 rounded-lg border border-[var(--color-border)] text-lg font-bold">
-            👎 Unstable
-          </button>
-        </div>
-        <p className="text-xs text-[var(--color-muted)] mt-3">Sign in to vote (coming soon)</p>
+      {/* Stats + Votes */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <StatCard label="👍 Stable" value={String(v.thumbsUp)} color={v.thumbsUp > 0 ? "text-[var(--color-yes)]" : undefined} />
+        <StatCard label="👎 Unstable" value={String(v.thumbsDown)} color={v.thumbsDown > 0 ? "text-[var(--color-no)]" : undefined} />
+        <StatCard label="npm Downloads" value={v.stats.npmDownloads ?? "—"} />
+        <StatCard label="GitHub Issues" value={v.stats.githubIssuesCount ?? "—"} />
       </div>
 
-      {/* JSON API link */}
-      <div className="mt-8 text-center">
+      {/* Evidence / Referenced Issues */}
+      {v.referencedIssues.length > 0 && (
+        <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8">
+          <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-3">Referenced Issues</h3>
+          <ul className="space-y-2">
+            {v.referencedIssues.map((issue) => (
+              <li key={`${issue.repo}#${issue.number}`}>
+                <a
+                  href={issue.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-[var(--color-muted)] hover:text-white transition-colors font-mono text-sm"
+                >
+                  {issue.repo}#{issue.number} →
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {v.evidenceSummary && (
+        <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8">
+          <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-3">Evidence</h3>
+          <p className="text-[var(--color-muted)] whitespace-pre-line">{v.evidenceSummary}</p>
+        </div>
+      )}
+
+      {/* Vote on GitHub */}
+      <div className="border border-[var(--color-border)] rounded-xl p-6 text-center bg-[var(--color-card)] mb-8">
+        <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-4">Community Vote</h3>
+        <p className="text-[var(--color-muted)] mb-4">
+          React with 👍 (stable) or 👎 (unstable) on the GitHub issue
+        </p>
         <a
-          href={`/api/v1/${name}/${version}`}
+          href={v.issueUrl}
+          target="_blank"
+          rel="noopener"
+          className="inline-block bg-white text-black font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors"
+        >
+          Vote on GitHub →
+        </a>
+      </div>
+
+      {/* Discussion link */}
+      <div className="text-center space-y-2">
+        <a
+          href={v.issueUrl}
+          target="_blank"
+          rel="noopener"
+          className="text-sm text-[var(--color-muted)] hover:text-white transition-colors"
+        >
+          See discussion →
+        </a>
+        <br />
+        <a
+          href={`/api/v1/${slug}/${version}`}
           className="text-sm text-[var(--color-muted)] hover:text-white transition-colors font-mono"
         >
-          📡 GET /api/v1/{name}/{version}
+          📡 GET /api/v1/{slug}/{version}
         </a>
       </div>
     </div>

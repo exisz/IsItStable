@@ -1,22 +1,21 @@
 import { NextResponse } from "next/server";
-import { getPackage, getVersions } from "@/db/queries";
-
-export const dynamic = "force-dynamic";
+import { getPackageVersions } from "@/lib/github";
 
 type Props = { params: Promise<{ package: string }> };
 
 export async function GET(_: Request, { params }: Props) {
-  const { package: name } = await params;
-  const pkg = await getPackage(name);
-  if (!pkg) return NextResponse.json({ error: "Package not found" }, { status: 404 });
-  const vers = await getVersions(pkg.id);
-  const latest = vers[0];
-  if (!latest) return NextResponse.json({ error: "No versions found" }, { status: 404 });
+  const { package: slug } = await params;
+  const versions = await getPackageVersions(slug);
+  if (versions.length === 0) return NextResponse.json({ error: "Package not found" }, { status: 404 });
+  const latest = versions[0];
   return NextResponse.json({
-    package: pkg.name,
+    package: slug,
     version: latest.version,
     verdict: latest.verdict,
     comment: latest.verdictComment,
-    releaseDate: latest.releaseDate,
-  });
+    thumbsUp: latest.thumbsUp,
+    thumbsDown: latest.thumbsDown,
+    issueUrl: latest.issueUrl,
+    createdAt: latest.createdAt,
+  }, { headers: { "Cache-Control": "public, s-maxage=120, stale-while-revalidate=60" } });
 }

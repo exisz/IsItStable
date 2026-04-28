@@ -1,17 +1,22 @@
-import { getPackage, getVersions, getLatestStable } from "@/db/queries";
+import { getPackageSummary, getLatestStable, getPackages } from "@/lib/github";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { VerdictBadge } from "@/components/VerdictBadge";
 import { CopyButton } from "@/components/CopyButton";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 120;
 
 type Props = { params: Promise<{ package: string }> };
 
+export async function generateStaticParams() {
+  const pkgs = await getPackages();
+  return pkgs.map((p) => ({ package: p.slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { package: name } = await params;
-  const pkg = await getPackage(name);
+  const { package: slug } = await params;
+  const pkg = await getPackageSummary(slug);
   if (!pkg) return {};
   return {
     title: `Is ${pkg.displayName} Stable? | IsItStable.com`,
@@ -20,21 +25,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PackagePage({ params }: Props) {
-  const { package: name } = await params;
-  const pkg = await getPackage(name);
+  const { package: slug } = await params;
+  const pkg = await getPackageSummary(slug);
   if (!pkg) notFound();
 
-  const allVersions = await getVersions(pkg.id);
-  const latestStable = await getLatestStable(pkg.id);
-  const latest = allVersions[0];
+  const latestStable = await getLatestStable(slug);
+  const latest = pkg.versions[0];
 
   const installCmd = latestStable
-    ? `npm install ${pkg.name}@${latestStable.version}`
-    : `npm install ${pkg.name}`;
+    ? `npm install ${slug}@${latestStable.version}`
+    : `npm install ${slug}`;
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      {/* Header */}
       <div className="mb-4">
         <Link href="/" className="text-sm text-[var(--color-muted)] hover:text-white transition-colors">← All packages</Link>
       </div>
@@ -42,12 +45,7 @@ export default async function PackagePage({ params }: Props) {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10">
         <div>
           <h1 className="text-4xl sm:text-5xl font-black">{pkg.displayName}</h1>
-          <p className="text-[var(--color-muted)] mt-2">
-            <a href={`https://github.com/${pkg.githubRepo}`} target="_blank" rel="noopener" className="hover:text-white transition-colors">
-              {pkg.githubRepo}
-            </a>
-            {" · "}{pkg.registry}
-          </p>
+          <p className="text-[var(--color-muted)] mt-2">npm · {slug}</p>
         </div>
         {latest && <VerdictBadge verdict={latest.verdict} size="lg" />}
       </div>
@@ -74,20 +72,24 @@ export default async function PackagePage({ params }: Props) {
               <th className="px-6 py-3">Version</th>
               <th className="px-6 py-3">Date</th>
               <th className="px-6 py-3">Verdict</th>
+              <th className="px-6 py-3">Votes</th>
               <th className="px-6 py-3 hidden sm:table-cell">Comment</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[var(--color-border)]">
-            {allVersions.map((v) => (
-              <tr key={v.id} className="hover:bg-[var(--color-card)] transition-colors">
+            {pkg.versions.map((v) => (
+              <tr key={v.issueNumber} className="hover:bg-[var(--color-card)] transition-colors">
                 <td className="px-6 py-4">
-                  <Link href={`/${name}/${v.version}`} className="font-mono hover:underline font-bold">
-                    {v.version}
+                  <Link href={`/${slug}/${v.version}`} className="font-mono hover:underline font-bold">
+                    v{v.version}
                   </Link>
                 </td>
-                <td className="px-6 py-4 text-[var(--color-muted)]">{v.releaseDate}</td>
+                <td className="px-6 py-4 text-[var(--color-muted)]">{new Date(v.createdAt).toLocaleDateString()}</td>
                 <td className="px-6 py-4">
                   <VerdictBadge verdict={v.verdict} size="sm" />
+                </td>
+                <td className="px-6 py-4 text-[var(--color-muted)]">
+                  👍 {v.thumbsUp} · 👎 {v.thumbsDown}
                 </td>
                 <td className="px-6 py-4 text-[var(--color-muted)] text-sm hidden sm:table-cell max-w-xs truncate">
                   {v.verdictComment}

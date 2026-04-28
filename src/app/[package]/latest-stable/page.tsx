@@ -1,15 +1,13 @@
-import { getPackage, getLatestStable } from "@/db/queries";
+import { getLatestStable } from "@/lib/github";
 import { notFound, redirect } from "next/navigation";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 120;
 
 type Props = { params: Promise<{ package: string }> };
 
 export default async function LatestStablePage({ params }: Props) {
-  const { package: name } = await params;
-  const pkg = await getPackage(name);
-  if (!pkg) notFound();
-  const stable = await getLatestStable(pkg.id);
+  const { package: slug } = await params;
+  const stable = await getLatestStable(slug);
   if (!stable) notFound();
-  redirect(`/${name}/${stable.version}`);
+  redirect(`/${slug}/${stable.version}`);
 }

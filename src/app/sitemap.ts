@@ -1,31 +1,25 @@
 import type { MetadataRoute } from "next";
-import { db } from "@/db";
-import { packages, versions } from "@/db/schema";
-import { eq, desc } from "drizzle-orm";
+import { getPackages, getPackageVersions } from "@/lib/github";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [
     { url: "https://isitstable.com", lastModified: new Date(), changeFrequency: "daily", priority: 1 },
   ];
 
-  const pkgs = await db.query.packages.findMany();
+  const pkgs = await getPackages();
   for (const pkg of pkgs) {
     entries.push({
-      url: `https://isitstable.com/${pkg.name}`,
+      url: `https://isitstable.com/${pkg.slug}`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.8,
     });
-    const vers = await db.query.versions.findMany({
-      where: eq(versions.packageId, pkg.id),
-      orderBy: desc(versions.id),
-      limit: 20,
-    });
-    for (const v of vers) {
+    const versions = await getPackageVersions(pkg.slug);
+    for (const v of versions.slice(0, 20)) {
       entries.push({
-        url: `https://isitstable.com/${pkg.name}/${v.version}`,
+        url: `https://isitstable.com/${pkg.slug}/${v.version}`,
         changeFrequency: "weekly",
         priority: 0.6,
       });

@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               🔍 IsItStable<span className="text-[var(--color-muted)]">.com</span>
             </a>
             <div className="flex items-center gap-4 text-sm text-[var(--color-muted)]">
-              <a href="https://github.com/exisz/isitstable" target="_blank" rel="noopener" className="hover:text-white transition-colors">GitHub</a>
+              <a href="https://github.com/exisz/IsItStable" target="_blank" rel="noopener" className="hover:text-white transition-colors">GitHub</a>
               <a href="https://github.com/sponsors/exisz" target="_blank" rel="noopener" className="hover:text-white transition-colors">Sponsor 💛</a>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-[var(--color-border)] px-6 py-8 text-center text-sm text-[var(--color-muted)]">
           <p>Made with mass anxiety and <code className="text-[var(--color-foreground)]">npm install</code></p>
           <p className="mt-2">
-            <a href="https://github.com/exisz/isitstable" target="_blank" rel="noopener" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://github.com/exisz/IsItStable" target="_blank" rel="noopener" className="hover:text-white transition-colors">GitHub</a>
             {" · "}
             <a href="https://github.com/sponsors/exisz" target="_blank" rel="noopener" className="hover:text-white transition-colors">Sponsor</a>
             {" · "}
