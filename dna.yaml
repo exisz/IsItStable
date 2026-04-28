@@ -1,0 +1,51 @@
+# dna.yaml — IsItStable.com
+# Version stability verdicts for npm packages
+
+project:
+  name: IsItStable.com
+  tagline: "Is this version gonna ruin your weekend?"
+  epic: NEBULA-84
+  repo: exisz/isitstable
+  domain: isitstable.com
+  visibility: public
+  status: active
+
+goal: |
+  A humorous, developer-focused site that gives YES/NO stability verdicts
+  for npm package versions. Combines GitHub issue analysis, npm download
+  stats, and community voting into a single authoritative verdict.
+
+boundaries:
+  in_scope:
+    - Website (Next.js App Router, Vercel)
+    - REST API for developer tooling
+    - npm CLI wrapper (is-it-stable)
+    - Logto SSO for voting
+    - Per-version verdict pages with SEO
+    - GitHub issue scraping + analysis
+    - npm download stats integration
+    - Synthetic baseline voting
+  out_of_scope:
+    - Operator Pod logic (lives in nebula workspace, not open source)
+    - Direct database access (API only)
+    - Non-npm package registries (future)
+
+tools:
+  framework: next.js (app router)
+  database: turso (drizzle ORM)
+  auth: logto SSO
+  deploy: vercel
+  styling: tailwind CSS
+  language: typescript
+
+packages:
+  - name: openclaw
+    github: openclaw/openclaw
+    registry: npm
+    version_format: "YYYY.M.DD"
+    exclude: patch/beta
+
+philosophy:
+  - isitstable-vibe
+
+deprecated: []
