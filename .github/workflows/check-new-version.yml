@@ -1,0 +1,56 @@
+name: Check New Versions
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # every 6 hours
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for new OpenClaw versions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get all published non-beta non-patch versions from npm
+          VERSIONS=$(npm view openclaw versions --json | node -e "
+            const v = require('fs').readFileSync('/dev/stdin','utf8');
+            const versions = JSON.parse(v).filter(x => !x.includes('beta') && !x.includes('alpha') && !x.includes('rc'));
+            versions.forEach(x => console.log(x));
+          ")
+
+          # Get existing version issues
+          EXISTING=$(gh issue list --repo exisz/IsItStable --label version,openclaw --state all --limit 500 --json title | node -e "
+            const d = require('fs').readFileSync('/dev/stdin','utf8');
+            JSON.parse(d).forEach(i => {
+              const m = i.title.match(/\[v([^\]]+)\]/);
+              if (m) console.log(m[1]);
+            });
+          ")
+
+          # Create issues for new versions
+          for V in $VERSIONS; do
+            if ! echo "$EXISTING" | grep -qx "$V"; then
+              echo "New version found: $V"
+              gh issue create --repo exisz/IsItStable \
+                --title "[v${V}] [OpenClaw] Is it stable?" \
+                --label version,openclaw \
+                --body "## Verdict: PENDING ⏳
+          Awaiting analysis. This version was auto-detected from npm.
+
+          ## Evidence
+          _No analysis yet. The operator will review GitHub issues and update this verdict._
+
+          ## Stats
+          - npm downloads: pending
+          - GitHub issues mentioning this version: pending
+
+          ---
+          _Auto-created by IsItStable version checker._"
+            fi
+          done

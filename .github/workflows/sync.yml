@@ -1,11 +1,7 @@
 name: Sync Version Data
 on:
   schedule:
-    - cron: '0 0 * * *'
-  issues:
-    types: [opened, edited, deleted]
-  issue_comment:
-    types: [created]
+    - cron: '30 0 * * *'  # daily at 00:30 UTC
   workflow_dispatch: {}
 
 permissions:

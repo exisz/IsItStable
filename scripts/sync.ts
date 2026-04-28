@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 const __dirname = typeof import.meta.dirname === "string" ? import.meta.dirname : join(fileURLToPath(import.meta.url), "..");
 const DATA_DIR = join(__dirname, "..", "data");
 
-const TITLE_RE = /^\[v([^\]]+)\]\s+(.+)$/;
+const TITLE_RE = /^\[v([^\]]+)\]\s*\[([^\]]+)\]/;
 const VERDICT_RE = /^## Verdict:\s*(YES|NO)\s*/im;
 const EVIDENCE_RE = /^## Evidence\s*\n([\s\S]*?)(?=\n## |\n*$)/im;
 const ISSUE_LINK_RE = /([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)#(\d+)/g;
@@ -95,12 +95,16 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
 
   while (true) {
     const data = await ghFetch(
-      `/repos/${REPO_OWNER}/${REPO_NAME}/issues?state=all&creator=${REPO_OWNER}&per_page=100&page=${page}&sort=created&direction=desc`
+      `/repos/${REPO_OWNER}/${REPO_NAME}/issues?state=all&labels=version&per_page=100&page=${page}&sort=created&direction=desc`
     );
     if (!Array.isArray(data) || data.length === 0) break;
 
     for (const issue of data) {
       if (issue.pull_request) continue;
+      // Label-based filtering: must have 'version' label
+      const labels: string[] = (issue.labels ?? []).map((l: any) => typeof l === 'string' ? l : l.name);
+      if (!labels.includes('version')) continue;
+
       const titleMatch = issue.title?.match(TITLE_RE);
       if (!titleMatch) continue;
 
