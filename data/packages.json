@@ -1,14 +1,14 @@
 [
   {
-    "name": "openclaw",
-    "slug": "openclaw",
-    "displayName": "OpenClaw",
+    "name": "openclaw-is-it-stable",
+    "slug": "openclaw-is-it-stable",
+    "displayName": "[OpenClaw] Is it stable?",
     "latestVersion": {
       "issueNumber": 3,
       "issueUrl": "https://github.com/exisz/IsItStable/issues/3",
       "version": "2026.4.25",
-      "packageName": "OpenClaw",
-      "packageSlug": "openclaw",
+      "packageName": "[OpenClaw] Is it stable?",
+      "packageSlug": "openclaw-is-it-stable",
       "verdict": "no",
       "verdictComment": "Tried to fix 4.24, introduced new friends: memory leaks and broken upgrades. It's giving \"we'll fix it in the next one\" energy. Narrator: they did not fix it in this one.",
       "evidenceSummary": "- openclaw/openclaw#72908 — `openclaw update --tag 2026.4.25` leaves old Gateway running, mixed-version chaos",
