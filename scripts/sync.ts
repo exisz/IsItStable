@@ -95,7 +95,7 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
 
   while (true) {
     const data = await ghFetch(
-      `/repos/${REPO_OWNER}/${REPO_NAME}/issues?state=all&labels=version&per_page=100&page=${page}&sort=created&direction=desc`
+      `/repos/${REPO_OWNER}/${REPO_NAME}/issues?state=open&labels=version&per_page=100&page=${page}&sort=created&direction=desc`
     );
     if (!Array.isArray(data) || data.length === 0) break;
 
@@ -138,6 +138,18 @@ async function main() {
   console.log("🔄 Syncing version data from GitHub...");
 
   const versions = await fetchAllVersionIssues();
+
+  // Sort by version number descending (newest first)
+  versions.sort((a, b) => {
+    const pa = a.version.split(/[.-]/).map(Number);
+    const pb = b.version.split(/[.-]/).map(Number);
+    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+      const diff = (pb[i] || 0) - (pa[i] || 0);
+      if (diff !== 0) return diff;
+    }
+    return 0;
+  });
+
   console.log(`📦 Found ${versions.length} version issues`);
 
   // Build packages summary

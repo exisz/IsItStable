@@ -21,10 +21,16 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Get all published non-beta non-patch versions from npm
+          # Get versions >= 2026.4.23 from npm (cutoff)
           VERSIONS=$(npm view openclaw versions --json | node -e "
             const v = require('fs').readFileSync('/dev/stdin','utf8');
-            const versions = JSON.parse(v).filter(x => !x.includes('beta') && !x.includes('alpha') && !x.includes('rc'));
+            const cutoff = [2026, 4, 23];
+            const versions = JSON.parse(v)
+              .filter(x => !x.includes('beta') && !x.includes('alpha') && !x.includes('rc'))
+              .filter(x => {
+                const p = x.split('.').map(Number);
+                return p[0] > cutoff[0] || (p[0] === cutoff[0] && (p[1] > cutoff[1] || (p[1] === cutoff[1] && p[2] >= cutoff[2])));
+              });
             versions.forEach(x => console.log(x));
           ")
 
