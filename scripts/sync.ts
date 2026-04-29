@@ -134,10 +134,30 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
   return issues;
 }
 
+async function fetchNpmPublishTimes(packageName: string): Promise<Record<string, string>> {
+  try {
+    const res = await fetch(`https://registry.npmjs.org/${packageName}`);
+    if (!res.ok) return {};
+    const data = await res.json() as { time?: Record<string, string> };
+    return data.time ?? {};
+  } catch {
+    return {};
+  }
+}
+
 async function main() {
   console.log("🔄 Syncing version data from GitHub...");
 
   const versions = await fetchAllVersionIssues();
+
+  // Fetch real publish times from npm
+  const npmTimes = await fetchNpmPublishTimes("openclaw");
+  for (const v of versions) {
+    const npmTime = npmTimes[v.version];
+    if (npmTime) {
+      v.createdAt = npmTime;
+    }
+  }
 
   // Sort by version number descending (newest first)
   versions.sort((a, b) => {
