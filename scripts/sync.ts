@@ -9,7 +9,7 @@ const __dirname = typeof import.meta.dirname === "string" ? import.meta.dirname 
 const DATA_DIR = join(__dirname, "..", "data");
 
 const TITLE_RE = /^\[v([^\]]+)\]\s*\[([^\]]+)\]/;
-const VERDICT_RE = /^## Verdict:\s*(YES|NO)\s*/im;
+const VERDICT_RE = /^#+ *(YES|NO)\b/im;
 const EVIDENCE_RE = /^## Evidence\s*\n([\s\S]*?)(?=\n## |\n*$)/im;
 const ISSUE_LINK_RE = /([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)#(\d+)/g;
 
