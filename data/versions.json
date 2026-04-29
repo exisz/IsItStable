@@ -3,11 +3,10 @@
     "issueNumber": 66,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/66",
     "version": "2026.4.26",
-    "packageName": "OpenClaw",
+    "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "no",
-    "verdictComment": "> This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
-    "evidenceSummary": "- openclaw/openclaw#73846 — Docker/Unraid: gateway never becomes healthy",
+    "verdictComment": "This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -80,7 +79,6 @@
         "url": "https://github.com/openclaw/openclaw/issues/73924"
       }
     ],
-    "stats": {},
     "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-04-28T01:32:04.075Z"
@@ -89,11 +87,10 @@
     "issueNumber": 3,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/3",
     "version": "2026.4.25",
-    "packageName": "OpenClaw",
+    "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
+    "verdict": "no",
     "verdictComment": "",
-    "evidenceSummary": "- openclaw/openclaw#72908 — `openclaw update --tag 2026.4.25` leaves old Gateway running, mixed-version chaos",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -121,9 +118,6 @@
         "url": "https://github.com/openclaw/openclaw/issues/73068"
       }
     ],
-    "stats": {
-      "githubIssuesCount": "5+ breaking"
-    },
     "thumbsUp": 0,
     "thumbsDown": 1,
     "createdAt": "2026-04-27T12:12:04.469Z"
@@ -132,11 +126,10 @@
     "issueNumber": 2,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/2",
     "version": "2026.4.24",
-    "packageName": "OpenClaw",
+    "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
+    "verdict": "no",
     "verdictComment": "",
-    "evidenceSummary": "- openclaw/openclaw#71915 — Gateway 100% CPU / infinite loop with DeepSeek V4 models",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -159,9 +152,6 @@
         "url": "https://github.com/openclaw/openclaw/issues/72450"
       }
     ],
-    "stats": {
-      "githubIssuesCount": "4+ breaking"
-    },
     "thumbsUp": 1,
     "thumbsDown": 0,
     "createdAt": "2026-04-25T18:11:19.840Z"
@@ -170,16 +160,11 @@
     "issueNumber": 1,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/1",
     "version": "2026.4.23",
-    "packageName": "OpenClaw",
+    "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
+    "verdict": "yes",
     "verdictComment": "",
-    "evidenceSummary": "No significant issues reported for this version. The GitHub issue tracker is eerily quiet. Suspiciously quiet. Like \"the cat knocked something over but you can't find what\" quiet.",
     "referencedIssues": [],
-    "stats": {
-      "npmDownloads": "~4,300 (first 72h)",
-      "githubIssuesCount": "0 breaking"
-    },
     "thumbsUp": 1,
     "thumbsDown": 0,
     "createdAt": "2026-04-24T16:30:05.632Z"

@@ -2,16 +2,15 @@
   {
     "name": "openclaw",
     "slug": "openclaw",
-    "displayName": "OpenClaw",
+    "displayName": "openclaw",
     "latestVersion": {
       "issueNumber": 66,
       "issueUrl": "https://github.com/exisz/IsItStable/issues/66",
       "version": "2026.4.26",
-      "packageName": "OpenClaw",
+      "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "no",
-      "verdictComment": "> This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
-      "evidenceSummary": "- openclaw/openclaw#73846 — Docker/Unraid: gateway never becomes healthy",
+      "verdictComment": "This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -84,7 +83,6 @@
           "url": "https://github.com/openclaw/openclaw/issues/73924"
         }
       ],
-      "stats": {},
       "thumbsUp": 0,
       "thumbsDown": 0,
       "createdAt": "2026-04-28T01:32:04.075Z"
