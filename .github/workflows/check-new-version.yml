@@ -50,7 +50,7 @@ jobs:
               echo "New version found: $V"
               gh issue create --repo exisz/IsItStable \
                 --title "[v${V}] [OpenClaw] Is it stable?" \
-                --label version,pkg:openclaw \
+                --label version,pkg:openclaw,verdict:pending \
                 --body "## Verdict: PENDING ⏳
           Awaiting analysis. This version was auto-detected from npm.
 
