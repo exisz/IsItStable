@@ -1,7 +1,7 @@
 name: Check New Versions
 on:
   schedule:
-    - cron: '0 */6 * * *'  # every 6 hours
+    - cron: '0 */1 * * *'  # every hour
   workflow_dispatch: {}
 
 concurrency:
@@ -38,6 +38,7 @@ jobs:
           ")
 
           # Create issues for new versions
+          CREATED=0
           for V in $VERSIONS; do
             if ! echo "$EXISTING" | grep -qx "$V"; then
               echo "New version found: $V"
@@ -56,5 +57,12 @@ jobs:
 
           ---
           _Auto-created by IsItStable version checker._"
+              CREATED=$((CREATED + 1))
             fi
           done
+
+          # Trigger sync if new versions were created
+          if [ $CREATED -gt 0 ]; then
+            echo "Triggering sync workflow ($CREATED new versions)..."
+            gh workflow run sync.yml --repo exisz/IsItStable
+          fi
