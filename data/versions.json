@@ -6,8 +6,8 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "no",
-    "verdictComment": "This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
-    "evidenceSummary": "- openclaw/openclaw#73846 — Docker/Unraid: 2026.4.24/25 gateway never becomes healthy; 2026.4.26 doctor still hangs",
+    "verdictComment": "> This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
+    "evidenceSummary": "- openclaw/openclaw#73846 — Docker/Unraid: gateway never becomes healthy",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -80,9 +80,7 @@
         "url": "https://github.com/openclaw/openclaw/issues/73924"
       }
     ],
-    "stats": {
-      "githubIssuesCount": "14+ (multiple severe regressions)"
-    },
+    "stats": {},
     "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-04-28T01:32:04.075Z"
@@ -93,8 +91,8 @@
     "version": "2026.4.25",
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
-    "verdictComment": "Tried to fix 4.24, introduced new friends: memory leaks and broken upgrades. It's giving \"we'll fix it in the next one\" energy. Narrator: they did not fix it in this one.",
+    "verdict": "pending",
+    "verdictComment": "",
     "evidenceSummary": "- openclaw/openclaw#72908 — `openclaw update --tag 2026.4.25` leaves old Gateway running, mixed-version chaos",
     "referencedIssues": [
       {
@@ -136,8 +134,8 @@
     "version": "2026.4.24",
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
-    "verdictComment": "Hubris after 4.23. This version came in hot and left a trail of GitHub issues. Your Slack will have opinions. We recommend staying on 4.23 until this gets patched.",
+    "verdict": "pending",
+    "verdictComment": "",
     "evidenceSummary": "- openclaw/openclaw#71915 — Gateway 100% CPU / infinite loop with DeepSeek V4 models",
     "referencedIssues": [
       {
@@ -174,8 +172,8 @@
     "version": "2026.4.23",
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
-    "verdict": "yes",
-    "verdictComment": "The chosen one. If you're only going to trust one version this month, make it this one. Ran in prod for 72 hours with zero hiccups. Your monitoring dashboard will be so bored it might fall asleep. 💤",
+    "verdict": "pending",
+    "verdictComment": "",
     "evidenceSummary": "No significant issues reported for this version. The GitHub issue tracker is eerily quiet. Suspiciously quiet. Like \"the cat knocked something over but you can't find what\" quiet.",
     "referencedIssues": [],
     "stats": {
