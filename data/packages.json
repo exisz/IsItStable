@@ -4,47 +4,22 @@
     "slug": "openclaw",
     "displayName": "OpenClaw",
     "latestVersion": {
-      "issueNumber": 3,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/3",
-      "version": "2026.4.25",
+      "issueNumber": 66,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/66",
+      "version": "2026.4.26",
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
-      "verdict": "no",
-      "verdictComment": "Tried to fix 4.24, introduced new friends: memory leaks and broken upgrades. It's giving \"we'll fix it in the next one\" energy. Narrator: they did not fix it in this one.",
-      "evidenceSummary": "- openclaw/openclaw#72908 — `openclaw update --tag 2026.4.25` leaves old Gateway running, mixed-version chaos",
-      "referencedIssues": [
-        {
-          "repo": "openclaw/openclaw",
-          "number": 72908,
-          "url": "https://github.com/openclaw/openclaw/issues/72908"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 72909,
-          "url": "https://github.com/openclaw/openclaw/issues/72909"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 72906,
-          "url": "https://github.com/openclaw/openclaw/issues/72906"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73049,
-          "url": "https://github.com/openclaw/openclaw/issues/73049"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73068,
-          "url": "https://github.com/openclaw/openclaw/issues/73068"
-        }
-      ],
+      "verdict": "pending",
+      "verdictComment": "",
+      "evidenceSummary": "_No analysis yet. The operator will review GitHub issues and update this verdict._",
+      "referencedIssues": [],
       "stats": {
-        "githubIssuesCount": "5+ breaking"
+        "npmDownloads": "pending",
+        "githubIssuesCount": "pending"
       },
       "thumbsUp": 0,
-      "thumbsDown": 1,
-      "createdAt": "2026-04-28T01:02:04Z"
+      "thumbsDown": 0,
+      "createdAt": "2026-04-28T06:49:04Z"
     }
   }
 ]
