@@ -17,6 +17,5 @@ export async function GET(_: Request, { params }: Props) {
     referencedIssues: v.referencedIssues,
     issueUrl: v.issueUrl,
     createdAt: v.createdAt,
-    stats: v.stats,
   }, { headers: { "Cache-Control": "public, s-maxage=120, stale-while-revalidate=60" } });
 }

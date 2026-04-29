@@ -68,8 +68,6 @@ export default async function VersionPage({ params }: Props) {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
         <StatCard label="👍 Stable" value={String(v.thumbsUp)} color={v.thumbsUp > 0 ? "text-[var(--color-yes)]" : undefined} />
         <StatCard label="👎 Unstable" value={String(v.thumbsDown)} color={v.thumbsDown > 0 ? "text-[var(--color-no)]" : undefined} />
-        <StatCard label="npm Downloads" value={v.stats.npmDownloads ?? "—"} />
-        <StatCard label="GitHub Issues" value={v.stats.githubIssuesCount ?? "—"} />
       </div>
 
       {/* Evidence / Referenced Issues */}
@@ -93,12 +91,6 @@ export default async function VersionPage({ params }: Props) {
         </div>
       )}
 
-      {v.evidenceSummary && (
-        <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8">
-          <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-3">Evidence</h3>
-          <p className="text-[var(--color-muted)] whitespace-pre-line">{v.evidenceSummary}</p>
-        </div>
-      )}
 
       {/* Vote on GitHub */}
       <div className="border border-[var(--color-border)] rounded-xl p-6 text-center bg-[var(--color-card)] mb-8">
