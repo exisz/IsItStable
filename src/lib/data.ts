@@ -9,12 +9,10 @@ export interface VersionIssue {
   packageSlug: string;
   verdict: "yes" | "no" | "pending";
   verdictComment: string;
-  evidenceSummary: string;
-  referencedIssues: { repo: string; number: number; title?: string; url: string }[];
+  referencedIssues: { repo: string; number: number; url: string }[];
   thumbsUp: number;
   thumbsDown: number;
   createdAt: string;
-  stats: { npmDownloads?: string; githubIssuesCount?: string };
 }
 
 export interface PackageSummary {

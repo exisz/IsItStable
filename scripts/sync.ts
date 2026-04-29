@@ -1,16 +1,15 @@
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
+import { fileURLToPath } from "url";
 
 const REPO_OWNER = "exisz";
 const REPO_NAME = "IsItStable";
 const GITHUB_API = "https://api.github.com";
-import { fileURLToPath } from "url";
 const __dirname = typeof import.meta.dirname === "string" ? import.meta.dirname : join(fileURLToPath(import.meta.url), "..");
 const DATA_DIR = join(__dirname, "..", "data");
 
+// Title format: [v2026.4.26] [OpenClaw] Is it stable?
 const TITLE_RE = /^\[v([^\]]+)\]\s*\[([^\]]+)\]/;
-const VERDICT_RE = /^#+ *(?:Verdict:\s*)?(YES|NO)\b/im;
-const EVIDENCE_RE = /^## Evidence\s*\n([\s\S]*?)(?=\n## |\n*$)/im;
 const ISSUE_LINK_RE = /([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)#(\d+)/g;
 
 interface VersionIssue {
@@ -21,12 +20,10 @@ interface VersionIssue {
   packageSlug: string;
   verdict: "yes" | "no" | "pending";
   verdictComment: string;
-  evidenceSummary: string;
   referencedIssues: { repo: string; number: number; url: string }[];
   thumbsUp: number;
   thumbsDown: number;
   createdAt: string;
-  stats: { npmDownloads?: string; githubIssuesCount?: string };
 }
 
 interface PackageSummary {
@@ -40,39 +37,41 @@ function slugify(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
-function parseIssueBody(body: string | null) {
-  if (!body) return { verdict: "pending" as const, verdictComment: "", evidenceSummary: "", referencedIssues: [] as { repo: string; number: number; url: string }[], stats: {} as { npmDownloads?: string; githubIssuesCount?: string } };
-
-  const verdictMatch = body.match(VERDICT_RE);
-  const verdict = verdictMatch ? (verdictMatch[1].toUpperCase() === "YES" ? "yes" : "no") as "yes" | "no" : "pending" as const;
-
-  const lines = body.split("\n");
-  const verdictIdx = lines.findIndex((l) => VERDICT_RE.test(l));
-  let verdictComment = "";
-  if (verdictIdx >= 0) {
-    for (let i = verdictIdx + 1; i < lines.length; i++) {
-      const trimmed = lines[i].trim();
-      if (trimmed && !trimmed.startsWith("##")) { verdictComment = trimmed; break; }
-    }
+/** Extract verdict from labels. Labels: verdict:yes, verdict:no, verdict:pending */
+function getVerdictFromLabels(labels: string[]): "yes" | "no" | "pending" {
+  for (const l of labels) {
+    if (l === "verdict:yes") return "yes";
+    if (l === "verdict:no") return "no";
+    if (l === "verdict:pending") return "pending";
   }
+  return "pending";
+}
 
-  const evidenceMatch = body.match(EVIDENCE_RE);
-  const evidenceSummary = evidenceMatch ? evidenceMatch[1].trim() : "";
+/** Extract package name from labels. Label: pkg:openclaw */
+function getPackageFromLabels(labels: string[]): string | null {
+  for (const l of labels) {
+    if (l.startsWith("pkg:")) return l.slice(4);
+  }
+  return null;
+}
 
-  const referencedIssues: { repo: string; number: number; url: string }[] = [];
+/** Extract first blockquote line as verdict comment, and referenced issues from body */
+function parseBody(body: string | null) {
+  const result = { verdictComment: "", referencedIssues: [] as { repo: string; number: number; url: string }[] };
+  if (!body) return result;
+
+  // First blockquote line = verdict comment
+  const bqMatch = body.match(/^>\s*(.+)/m);
+  if (bqMatch) result.verdictComment = bqMatch[1].trim();
+
+  // Referenced issues
   let m: RegExpExecArray | null;
-  const linkRe = new RegExp(ISSUE_LINK_RE.source, "g");
-  while ((m = linkRe.exec(body))) {
-    referencedIssues.push({ repo: m[1], number: parseInt(m[2]), url: `https://github.com/${m[1]}/issues/${m[2]}` });
+  const re = new RegExp(ISSUE_LINK_RE.source, "g");
+  while ((m = re.exec(body))) {
+    result.referencedIssues.push({ repo: m[1], number: parseInt(m[2]), url: `https://github.com/${m[1]}/issues/${m[2]}` });
   }
 
-  const stats: { npmDownloads?: string; githubIssuesCount?: string } = {};
-  const dlMatch = body.match(/npm downloads:\s*([^\n]+)/i);
-  if (dlMatch) stats.npmDownloads = dlMatch[1].trim();
-  const ghMatch = body.match(/GitHub issues mentioning this version:\s*([^\n]+)/i);
-  if (ghMatch) stats.githubIssuesCount = ghMatch[1].trim();
-
-  return { verdict, verdictComment, evidenceSummary, referencedIssues, stats };
+  return result;
 }
 
 async function ghFetch(path: string) {
@@ -89,6 +88,17 @@ async function ghFetch(path: string) {
   return res.json();
 }
 
+async function fetchNpmPublishTimes(packageName: string): Promise<Record<string, string>> {
+  try {
+    const res = await fetch(`https://registry.npmjs.org/${packageName}`);
+    if (!res.ok) return {};
+    const data = await res.json() as { time?: Record<string, string> };
+    return data.time ?? {};
+  } catch {
+    return {};
+  }
+}
+
 async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
   const issues: VersionIssue[] = [];
   let page = 1;
@@ -101,16 +111,24 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
 
     for (const issue of data) {
       if (issue.pull_request) continue;
-      // Label-based filtering: must have 'version' label
-      const labels: string[] = (issue.labels ?? []).map((l: any) => typeof l === 'string' ? l : l.name);
-      if (!labels.includes('version')) continue;
 
+      const labels: string[] = (issue.labels ?? []).map((l: any) => typeof l === "string" ? l : l.name);
+      if (!labels.includes("version")) continue;
+
+      // Version from title
       const titleMatch = issue.title?.match(TITLE_RE);
       if (!titleMatch) continue;
-
       const version = titleMatch[1];
-      const packageName = titleMatch[2].trim();
-      const parsed = parseIssueBody(issue.body);
+
+      // Package from label (pkg:xxx), fallback to title
+      const packageName = getPackageFromLabels(labels) ?? titleMatch[2].trim();
+
+      // Verdict from label
+      const verdict = getVerdictFromLabels(labels);
+
+      // Comment + refs from body
+      const { verdictComment, referencedIssues } = parseBody(issue.body);
+
       const thumbsUp = issue.reactions?.["+1"] ?? 0;
       const thumbsDown = issue.reactions?.["-1"] ?? 0;
 
@@ -120,7 +138,9 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
         version,
         packageName,
         packageSlug: slugify(packageName),
-        ...parsed,
+        verdict,
+        verdictComment,
+        referencedIssues,
         thumbsUp,
         thumbsDown,
         createdAt: issue.created_at,
@@ -134,29 +154,20 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
   return issues;
 }
 
-async function fetchNpmPublishTimes(packageName: string): Promise<Record<string, string>> {
-  try {
-    const res = await fetch(`https://registry.npmjs.org/${packageName}`);
-    if (!res.ok) return {};
-    const data = await res.json() as { time?: Record<string, string> };
-    return data.time ?? {};
-  } catch {
-    return {};
-  }
-}
-
 async function main() {
   console.log("🔄 Syncing version data from GitHub...");
 
   const versions = await fetchAllVersionIssues();
 
-  // Fetch real publish times from npm
-  const npmTimes = await fetchNpmPublishTimes("openclaw");
+  // Override createdAt with real npm publish times
+  const npmPackages = new Set(versions.map((v) => v.packageName));
+  const allNpmTimes: Record<string, Record<string, string>> = {};
+  for (const pkg of npmPackages) {
+    allNpmTimes[pkg] = await fetchNpmPublishTimes(pkg);
+  }
   for (const v of versions) {
-    const npmTime = npmTimes[v.version];
-    if (npmTime) {
-      v.createdAt = npmTime;
-    }
+    const npmTime = allNpmTimes[v.packageName]?.[v.version];
+    if (npmTime) v.createdAt = npmTime;
   }
 
   // Sort by version number descending (newest first)
@@ -188,7 +199,6 @@ async function main() {
 
   if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR, { recursive: true });
 
-  // Compare with existing data
   const versionsPath = join(DATA_DIR, "versions.json");
   const packagesPath = join(DATA_DIR, "packages.json");
 
@@ -202,10 +212,6 @@ async function main() {
   writeFileSync(packagesPath, JSON.stringify(packages, null, 2) + "\n");
 
   console.log(`✅ Wrote ${versions.length} versions (was ${oldVersionCount}) and ${packages.length} packages`);
-  if (versions.length !== oldVersionCount) {
-    console.log(`📝 Change detected: ${versions.length - oldVersionCount} new version(s)`);
-  }
-
   for (const pkg of packages) {
     console.log(`  📦 ${pkg.displayName}: ${byPkg.get(pkg.slug)!.length} version(s)`);
   }
