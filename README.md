@@ -3,9 +3,13 @@
 > Community-driven stability verdicts for npm packages. Because `latest` doesn't mean `greatest`.
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fisitstable.com&label=isitstable.com)](https://isitstable.com)
-[![GitHub Issues](https://img.shields.io/github/issues/exisz/IsItStable)](https://github.com/exisz/IsItStable/issues)
+[![npm version](https://img.shields.io/npm/v/is-it-stable)](https://www.npmjs.com/package/is-it-stable)
+[![npm downloads](https://img.shields.io/npm/dm/is-it-stable)](https://www.npmjs.com/package/is-it-stable)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/exisz/IsItStable)](https://github.com/exisz/IsItStable/issues)
 [![Sponsor](https://img.shields.io/badge/sponsor-💛-yellow)](https://github.com/sponsors/exisz)
+
+🌐 **Website:** [isitstable.com](https://isitstable.com) · 📦 **npm:** [is-it-stable](https://www.npmjs.com/package/is-it-stable) · 🐙 **GitHub:** [exisz/IsItStable](https://github.com/exisz/IsItStable)
 
 ---
 
@@ -15,8 +19,20 @@
 
 Every tracked package version gets a **community verdict** — `YES ✅` (ship it) or `NO 🔥` (hold off). Verdicts are backed by evidence: referenced GitHub issues, download stats, and community votes via GitHub reactions.
 
-<!-- TODO: Add screenshot -->
-<!-- ![Screenshot](public/screenshot.png) -->
+## Install & Usage (CLI)
+
+No install needed — just run:
+
+```bash
+npx is-it-stable openclaw
+```
+
+Or install globally:
+
+```bash
+npm install -g is-it-stable
+is-it-stable openclaw
+```
 
 ## How it works
 
