@@ -4,88 +4,17 @@
     "slug": "openclaw",
     "displayName": "openclaw",
     "latestVersion": {
-      "issueNumber": 66,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/66",
-      "version": "2026.4.26",
+      "issueNumber": 68,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/68",
+      "version": "2026.4.27",
       "packageName": "openclaw",
       "packageSlug": "openclaw",
-      "verdict": "no",
-      "verdictComment": "This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
-      "referencedIssues": [
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73846,
-          "url": "https://github.com/openclaw/openclaw/issues/73846"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73587,
-          "url": "https://github.com/openclaw/openclaw/issues/73587"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73520,
-          "url": "https://github.com/openclaw/openclaw/issues/73520"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73736,
-          "url": "https://github.com/openclaw/openclaw/issues/73736"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73467,
-          "url": "https://github.com/openclaw/openclaw/issues/73467"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73428,
-          "url": "https://github.com/openclaw/openclaw/issues/73428"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73421,
-          "url": "https://github.com/openclaw/openclaw/issues/73421"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73602,
-          "url": "https://github.com/openclaw/openclaw/issues/73602"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73592,
-          "url": "https://github.com/openclaw/openclaw/issues/73592"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73524,
-          "url": "https://github.com/openclaw/openclaw/issues/73524"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73303,
-          "url": "https://github.com/openclaw/openclaw/issues/73303"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73298,
-          "url": "https://github.com/openclaw/openclaw/issues/73298"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73914,
-          "url": "https://github.com/openclaw/openclaw/issues/73914"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 73924,
-          "url": "https://github.com/openclaw/openclaw/issues/73924"
-        }
-      ],
+      "verdict": "pending",
+      "verdictComment": "",
+      "referencedIssues": [],
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-04-28T01:32:04.075Z"
+      "createdAt": "2026-04-29T22:28:04.240Z"
     }
   }
 ]
