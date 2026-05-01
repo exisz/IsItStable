@@ -20,7 +20,7 @@ interface VersionIssue {
   packageSlug: string;
   verdict: "yes" | "no" | "pending";
   verdictComment: string;
-  referencedIssues: { repo: string; number: number; url: string }[];
+  referencedIssues: { repo: string; number: number; url: string; title?: string }[];
   thumbsUp: number;
   thumbsDown: number;
   createdAt: string;
@@ -57,7 +57,7 @@ function getPackageFromLabels(labels: string[]): string | null {
 
 /** Extract first blockquote line as verdict comment, and referenced issues from body */
 function parseBody(body: string | null) {
-  const result = { verdictComment: "", referencedIssues: [] as { repo: string; number: number; url: string }[] };
+  const result = { verdictComment: "", referencedIssues: [] as { repo: string; number: number; url: string; title?: string }[] };
   if (!body) return result;
 
   // First blockquote line = verdict comment
@@ -168,6 +168,29 @@ async function main() {
   for (const v of versions) {
     const npmTime = allNpmTimes[v.packageName]?.[v.version];
     if (npmTime) v.createdAt = npmTime;
+  }
+
+  // Fetch titles for referenced issues (batched, graceful fallback)
+  const allRefs = new Map<string, { repo: string; number: number }>();
+  for (const v of versions) {
+    for (const ref of v.referencedIssues) {
+      allRefs.set(`${ref.repo}#${ref.number}`, ref);
+    }
+  }
+  const titleCache = new Map<string, string>();
+  for (const [key, { repo, number }] of allRefs) {
+    try {
+      const data = await ghFetch(`/repos/${repo}/issues/${number}`);
+      if (data.title) titleCache.set(key, data.title);
+    } catch {
+      // graceful fallback: no title
+    }
+  }
+  for (const v of versions) {
+    for (const ref of v.referencedIssues) {
+      const title = titleCache.get(`${ref.repo}#${ref.number}`);
+      if (title) (ref as any).title = title;
+    }
   }
 
   // Sort by version number descending (newest first)

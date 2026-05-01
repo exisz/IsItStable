@@ -9,7 +9,7 @@ export interface VersionIssue {
   packageSlug: string;
   verdict: "yes" | "no" | "pending";
   verdictComment: string;
-  referencedIssues: { repo: string; number: number; url: string }[];
+  referencedIssues: { repo: string; number: number; url: string; title?: string }[];
   thumbsUp: number;
   thumbsDown: number;
   createdAt: string;

@@ -83,7 +83,7 @@ export default async function VersionPage({ params }: Props) {
                   rel="noopener"
                   className="text-[var(--color-muted)] hover:text-white transition-colors font-mono text-sm"
                 >
-                  {issue.repo}#{issue.number} →
+                  {issue.repo}#{issue.number}{issue.title ? ` — ${issue.title}` : ''} →
                 </a>
               </li>
             ))}
