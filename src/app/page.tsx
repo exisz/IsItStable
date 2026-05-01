@@ -1,5 +1,6 @@
 import { getPackages, getLatestStable } from "@/lib/data";
 import { getVibe } from "@/lib/vibes";
+import { sponsors } from "@/lib/sponsors";
 import Link from "next/link";
 import { CopyButton } from "@/components/CopyButton";
 
@@ -107,6 +108,45 @@ export default async function HomePage() {
           <a href="https://www.npmjs.com/package/is-it-stable" target="_blank" rel="noopener" className="hover:text-white transition-colors underline">is-it-stable</a> on npm
         </p>
       </section>
+
+      {/* Sponsors */}
+      {sponsors.length > 0 && (
+        <section className="text-center mt-16 mb-4">
+          <h2 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-6">
+            Sponsors
+          </h2>
+          <div className="flex items-center justify-center gap-6 flex-wrap">
+            {sponsors.map((sponsor) => (
+              <a
+                key={sponsor.name}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 text-[var(--color-muted)] hover:text-[var(--color-foreground)] transition-colors"
+              >
+                {sponsor.avatarUrl && (
+                  <img
+                    src={sponsor.avatarUrl}
+                    alt={sponsor.name}
+                    className="w-8 h-8 rounded-full"
+                  />
+                )}
+                <span className="text-sm font-medium">{sponsor.name}</span>
+              </a>
+            ))}
+          </div>
+          <p className="mt-4 text-xs text-[var(--color-muted)]">
+            <a
+              href="https://github.com/sponsors/exisz"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-[var(--color-foreground)] transition-colors underline"
+            >
+              Become a sponsor →
+            </a>
+          </p>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="text-center mt-8 border border-[var(--color-border)] rounded-xl p-10">
