@@ -9,9 +9,60 @@
       "version": "2026.4.29",
       "packageName": "openclaw",
       "packageSlug": "openclaw",
-      "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdict": "no",
+      "verdictComment": "Six hours after release, the bug tracker looks like a 3am incident channel. Hard pass.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75283,
+          "url": "https://github.com/openclaw/openclaw/issues/75283"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75330,
+          "url": "https://github.com/openclaw/openclaw/issues/75330"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75430,
+          "url": "https://github.com/openclaw/openclaw/issues/75430"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75394,
+          "url": "https://github.com/openclaw/openclaw/issues/75394"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75438,
+          "url": "https://github.com/openclaw/openclaw/issues/75438"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75419,
+          "url": "https://github.com/openclaw/openclaw/issues/75419"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75324,
+          "url": "https://github.com/openclaw/openclaw/issues/75324"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75420,
+          "url": "https://github.com/openclaw/openclaw/issues/75420"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75411,
+          "url": "https://github.com/openclaw/openclaw/issues/75411"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 75297,
+          "url": "https://github.com/openclaw/openclaw/issues/75297"
+        }
+      ],
       "thumbsUp": 0,
       "thumbsDown": 0,
       "createdAt": "2026-04-30T20:54:49.247Z"
