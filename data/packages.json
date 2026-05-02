@@ -15,56 +15,66 @@
         {
           "repo": "openclaw/openclaw",
           "number": 75283,
-          "url": "https://github.com/openclaw/openclaw/issues/75283"
+          "url": "https://github.com/openclaw/openclaw/issues/75283",
+          "title": "2026.4.29: Gateway repeatedly spawns runtime-deps pnpm installs and starves event loop"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75330,
-          "url": "https://github.com/openclaw/openclaw/issues/75330"
+          "url": "https://github.com/openclaw/openclaw/issues/75330",
+          "title": "Gateway event loop blocked during agent prep: max delay 32s, utilization 100%, API requests hang"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75430,
-          "url": "https://github.com/openclaw/openclaw/issues/75430"
+          "url": "https://github.com/openclaw/openclaw/issues/75430",
+          "title": "TUI startup hangs at 100% CPU due to bundled plugin reload loop (2026.4.29)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75394,
-          "url": "https://github.com/openclaw/openclaw/issues/75394"
+          "url": "https://github.com/openclaw/openclaw/issues/75394",
+          "title": "[Bug]: Failed to render WhatsApp QR - Cannot find package ‘qrcode’ in 2026.4.29"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75438,
-          "url": "https://github.com/openclaw/openclaw/issues/75438"
+          "url": "https://github.com/openclaw/openclaw/issues/75438",
+          "title": "`IMessageRpcClient.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75419,
-          "url": "https://github.com/openclaw/openclaw/issues/75419"
+          "url": "https://github.com/openclaw/openclaw/issues/75419",
+          "title": "[Bug]: [2026.4.29] openclaw cannot accept for any input"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75324,
-          "url": "https://github.com/openclaw/openclaw/issues/75324"
+          "url": "https://github.com/openclaw/openclaw/issues/75324",
+          "title": "[Discord] unresolved SecretRef at runtime despite `secrets audit` showing 0 unresolved"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75420,
-          "url": "https://github.com/openclaw/openclaw/issues/75420"
+          "url": "https://github.com/openclaw/openclaw/issues/75420",
+          "title": "Bug: web_search can receive unresolved SecretRef for Gemini provider after 2026.4.29"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75411,
-          "url": "https://github.com/openclaw/openclaw/issues/75411"
+          "url": "https://github.com/openclaw/openclaw/issues/75411",
+          "title": "[Bug]: Copilot 429 fail-fast fix is bypassed by session-custom stream path on 2026.4.29"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 75297,
-          "url": "https://github.com/openclaw/openclaw/issues/75297"
+          "url": "https://github.com/openclaw/openclaw/issues/75297",
+          "title": "Gateway event-loop saturation and very slow sessions.list/models.list on all tested versions after 2026.4.23; rollback restores stability"
         }
       ],
-      "thumbsUp": 0,
-      "thumbsDown": 0,
+      "thumbsUp": 1,
+      "thumbsDown": 1,
       "createdAt": "2026-04-30T20:54:49.247Z"
     }
   }

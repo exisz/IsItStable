@@ -11,56 +11,66 @@
       {
         "repo": "openclaw/openclaw",
         "number": 75283,
-        "url": "https://github.com/openclaw/openclaw/issues/75283"
+        "url": "https://github.com/openclaw/openclaw/issues/75283",
+        "title": "2026.4.29: Gateway repeatedly spawns runtime-deps pnpm installs and starves event loop"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75330,
-        "url": "https://github.com/openclaw/openclaw/issues/75330"
+        "url": "https://github.com/openclaw/openclaw/issues/75330",
+        "title": "Gateway event loop blocked during agent prep: max delay 32s, utilization 100%, API requests hang"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75430,
-        "url": "https://github.com/openclaw/openclaw/issues/75430"
+        "url": "https://github.com/openclaw/openclaw/issues/75430",
+        "title": "TUI startup hangs at 100% CPU due to bundled plugin reload loop (2026.4.29)"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75394,
-        "url": "https://github.com/openclaw/openclaw/issues/75394"
+        "url": "https://github.com/openclaw/openclaw/issues/75394",
+        "title": "[Bug]: Failed to render WhatsApp QR - Cannot find package ‘qrcode’ in 2026.4.29"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75438,
-        "url": "https://github.com/openclaw/openclaw/issues/75438"
+        "url": "https://github.com/openclaw/openclaw/issues/75438",
+        "title": "`IMessageRpcClient.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75419,
-        "url": "https://github.com/openclaw/openclaw/issues/75419"
+        "url": "https://github.com/openclaw/openclaw/issues/75419",
+        "title": "[Bug]: [2026.4.29] openclaw cannot accept for any input"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75324,
-        "url": "https://github.com/openclaw/openclaw/issues/75324"
+        "url": "https://github.com/openclaw/openclaw/issues/75324",
+        "title": "[Discord] unresolved SecretRef at runtime despite `secrets audit` showing 0 unresolved"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75420,
-        "url": "https://github.com/openclaw/openclaw/issues/75420"
+        "url": "https://github.com/openclaw/openclaw/issues/75420",
+        "title": "Bug: web_search can receive unresolved SecretRef for Gemini provider after 2026.4.29"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75411,
-        "url": "https://github.com/openclaw/openclaw/issues/75411"
+        "url": "https://github.com/openclaw/openclaw/issues/75411",
+        "title": "[Bug]: Copilot 429 fail-fast fix is bypassed by session-custom stream path on 2026.4.29"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75297,
-        "url": "https://github.com/openclaw/openclaw/issues/75297"
+        "url": "https://github.com/openclaw/openclaw/issues/75297",
+        "title": "Gateway event-loop saturation and very slow sessions.list/models.list on all tested versions after 2026.4.23; rollback restores stability"
       }
     ],
-    "thumbsUp": 0,
-    "thumbsDown": 0,
+    "thumbsUp": 1,
+    "thumbsDown": 1,
     "createdAt": "2026-04-30T20:54:49.247Z"
   },
   {
@@ -75,52 +85,62 @@
       {
         "repo": "openclaw/openclaw",
         "number": 75122,
-        "url": "https://github.com/openclaw/openclaw/issues/75122"
+        "url": "https://github.com/openclaw/openclaw/issues/75122",
+        "title": "WhatsApp 408 disconnects in 2026.4.27 are caused by event-loop blocking up to 100s, not Baileys"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 74986,
-        "url": "https://github.com/openclaw/openclaw/issues/74986"
+        "url": "https://github.com/openclaw/openclaw/issues/74986",
+        "title": "[Bug]: openclaw infer hangs indefinitely on 2026.4.27 — openclaw-infer child spins at 100% CPU with zero network I/O"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75045,
-        "url": "https://github.com/openclaw/openclaw/issues/75045"
+        "url": "https://github.com/openclaw/openclaw/issues/75045",
+        "title": "[Bug]: Browser plugin broken after 4.26→4.27 upgrade — ERR_MODULE_NOT_FOUND for old plugin-runtime-deps path (persists after doctor --repair)"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 74911,
-        "url": "https://github.com/openclaw/openclaw/issues/74911"
+        "url": "https://github.com/openclaw/openclaw/issues/74911",
+        "title": "4.27 Regression: Feishu response delay from 8s to 30s, resolved by downgrading to 4.23"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 74886,
-        "url": "https://github.com/openclaw/openclaw/issues/74886"
+        "url": "https://github.com/openclaw/openclaw/issues/74886",
+        "title": "Regression in 2026.4.27: WhatsApp session became unstable, leaked thinking traces, and fell back from Codex to MiniMax"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 74345,
-        "url": "https://github.com/openclaw/openclaw/issues/74345"
+        "url": "https://github.com/openclaw/openclaw/issues/74345",
+        "title": "Event-loop saturation and ACP session leak on 2026.4.27 (9d8de70)"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 74698,
-        "url": "https://github.com/openclaw/openclaw/issues/74698"
+        "url": "https://github.com/openclaw/openclaw/issues/74698",
+        "title": "[Bug]: Telegram group /status silently no-replies on 2026.4.27 while normal messages work"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75405,
-        "url": "https://github.com/openclaw/openclaw/issues/75405"
+        "url": "https://github.com/openclaw/openclaw/issues/75405",
+        "title": "[Bug]: 2026.4.27 regression: slash commands silently dropped in Telegram groups bound to non-main agents"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 75239,
-        "url": "https://github.com/openclaw/openclaw/issues/75239"
+        "url": "https://github.com/openclaw/openclaw/issues/75239",
+        "title": "WebChat assistant replies still duplicate after #66875 fix (2026.4.27)"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 74630,
-        "url": "https://github.com/openclaw/openclaw/issues/74630"
+        "url": "https://github.com/openclaw/openclaw/issues/74630",
+        "title": "Meta: correlated regression cluster in 2026.4.24 to 2026.4.26 around gateway startup/runtime/control-plane stability"
       }
     ],
     "thumbsUp": 0,
@@ -139,72 +159,86 @@
       {
         "repo": "openclaw/openclaw",
         "number": 73846,
-        "url": "https://github.com/openclaw/openclaw/issues/73846"
+        "url": "https://github.com/openclaw/openclaw/issues/73846",
+        "title": "Docker/Unraid: 2026.4.24 and 2026.4.25 gateway never becomes healthy; doctor --fix does not recover, 2026.4.26 doctor still hangs"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73587,
-        "url": "https://github.com/openclaw/openclaw/issues/73587"
+        "url": "https://github.com/openclaw/openclaw/issues/73587",
+        "title": "Gateway crash loop in 2026.4.26: `logging.file` paths starting with `~` are no longer expanded"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73520,
-        "url": "https://github.com/openclaw/openclaw/issues/73520"
+        "url": "https://github.com/openclaw/openclaw/issues/73520",
+        "title": "[Bug] Stale plugin-runtime-deps causes Gateway crash-loop after openclaw update"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73736,
-        "url": "https://github.com/openclaw/openclaw/issues/73736"
+        "url": "https://github.com/openclaw/openclaw/issues/73736",
+        "title": "[Bug]: 2026.4.26 ships incomplete typebox bundles in extensions/xai and extensions/browser, breaking plugin load"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73467,
-        "url": "https://github.com/openclaw/openclaw/issues/73467"
+        "url": "https://github.com/openclaw/openclaw/issues/73467",
+        "title": "[2026.4.26] Gateway main thread stalls under orchestration load; /readyz timeouts and reload deferred behind active runs"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73428,
-        "url": "https://github.com/openclaw/openclaw/issues/73428"
+        "url": "https://github.com/openclaw/openclaw/issues/73428",
+        "title": "[Bug]: Severe chat latency (30–90s) on Docker VPS while direct OpenAI completes in <1s — OpenClaw 2026.4.26"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73421,
-        "url": "https://github.com/openclaw/openclaw/issues/73421"
+        "url": "https://github.com/openclaw/openclaw/issues/73421",
+        "title": "[Bug]: Regression after upgrading from 2026.4.23 to 2026.4.26: delayed reply delivery and websocket/control-ui/browser stalls in NAS Docker environment"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73602,
-        "url": "https://github.com/openclaw/openclaw/issues/73602"
+        "url": "https://github.com/openclaw/openclaw/issues/73602",
+        "title": "[Bug]: WhatsApp flaps and Telegram polling stalls on WSL2 in 2026.4.26"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73592,
-        "url": "https://github.com/openclaw/openclaw/issues/73592"
+        "url": "https://github.com/openclaw/openclaw/issues/73592",
+        "title": "[Bug]: WSL local gateway binds but WebSocket handshake times out on 2026.4.26"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73524,
-        "url": "https://github.com/openclaw/openclaw/issues/73524"
+        "url": "https://github.com/openclaw/openclaw/issues/73524",
+        "title": "[Bug]: [Bug]: Gateway WebSocket handshake/request regression in 2026.4.25+ — TUI cannot connect on low-core hosts"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73303,
-        "url": "https://github.com/openclaw/openclaw/issues/73303"
+        "url": "https://github.com/openclaw/openclaw/issues/73303",
+        "title": "v2026.4.26: gateway restart can hang ~3-4 min before new process starts"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73298,
-        "url": "https://github.com/openclaw/openclaw/issues/73298"
+        "url": "https://github.com/openclaw/openclaw/issues/73298",
+        "title": "[Bug]: Severe slowdown, startup delay, and near-unusable responsiveness after upgrading from 2026.4.2 to 2026.4.26 on Codex setup"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73914,
-        "url": "https://github.com/openclaw/openclaw/issues/73914"
+        "url": "https://github.com/openclaw/openclaw/issues/73914",
+        "title": "[Bug]: WhatsApp inbound handler dead after 408 reconnect cycle — watchdog detects but reconnect doesn't restore (2026.4.26 regression)"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73924,
-        "url": "https://github.com/openclaw/openclaw/issues/73924"
+        "url": "https://github.com/openclaw/openclaw/issues/73924",
+        "title": "[Bug]: Gateway hangs from session cleanup 2026.4.x"
       }
     ],
     "thumbsUp": 0,
@@ -223,27 +257,32 @@
       {
         "repo": "openclaw/openclaw",
         "number": 72908,
-        "url": "https://github.com/openclaw/openclaw/issues/72908"
+        "url": "https://github.com/openclaw/openclaw/issues/72908",
+        "title": "[Bug]: `openclaw update --tag 2026.4.25` can leave the old Gateway running against replaced package files, causing mixed-version runtime/import failures"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 72909,
-        "url": "https://github.com/openclaw/openclaw/issues/72909"
+        "url": "https://github.com/openclaw/openclaw/issues/72909",
+        "title": "[Bug]: 2026.4.25 stable breaks Intel macOS LaunchAgent + BlueBubbles after upgrade from 4.23; rollback restores service"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 72906,
-        "url": "https://github.com/openclaw/openclaw/issues/72906"
+        "url": "https://github.com/openclaw/openclaw/issues/72906",
+        "title": "[Bug]: status channel summary is empty while Telegram health probe is OK on v2026.4.25"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73049,
-        "url": "https://github.com/openclaw/openclaw/issues/73049"
+        "url": "https://github.com/openclaw/openclaw/issues/73049",
+        "title": "v2026.4.25 regression: memory-core breaks agent by using wrong API key for embeddings"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 73068,
-        "url": "https://github.com/openclaw/openclaw/issues/73068"
+        "url": "https://github.com/openclaw/openclaw/issues/73068",
+        "title": "[Bug]: msteams \"JWT Validation Failed\" on 2026.4.25+"
       }
     ],
     "thumbsUp": 0,
@@ -262,22 +301,26 @@
       {
         "repo": "openclaw/openclaw",
         "number": 71915,
-        "url": "https://github.com/openclaw/openclaw/issues/71915"
+        "url": "https://github.com/openclaw/openclaw/issues/71915",
+        "title": "[Bug]: Gateway 100% CPU / infinite loop with DeepSeek V4 models on 2026.4.24"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 72208,
-        "url": "https://github.com/openclaw/openclaw/issues/72208"
+        "url": "https://github.com/openclaw/openclaw/issues/72208",
+        "title": "[Bug]: 4.24版本全局安装后卡死，无法使用"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 72693,
-        "url": "https://github.com/openclaw/openclaw/issues/72693"
+        "url": "https://github.com/openclaw/openclaw/issues/72693",
+        "title": "[Bug] 2026.4.24 on WSL2: Ghost EADDRINUSE loop & systemd split-brain"
       },
       {
         "repo": "openclaw/openclaw",
         "number": 72450,
-        "url": "https://github.com/openclaw/openclaw/issues/72450"
+        "url": "https://github.com/openclaw/openclaw/issues/72450",
+        "title": "[Bug]: web ui日志界面无信息"
       }
     ],
     "thumbsUp": 1,
@@ -293,7 +336,7 @@
     "verdict": "yes",
     "verdictComment": "",
     "referencedIssues": [],
-    "thumbsUp": 1,
+    "thumbsUp": 2,
     "thumbsDown": 0,
     "createdAt": "2026-04-24T16:30:05.632Z"
   }
