@@ -104,9 +104,17 @@ GITHUB_TOKEN=ghp_...
 
 For version verdicts, [open an issue](https://github.com/exisz/IsItStable/issues/new) instead.
 
-## Sponsor
+## Sponsors
 
-If this saves you from a bad `npm update`, consider [sponsoring](https://github.com/sponsors/exisz) 💛
+These legends help keep the lights on:
+
+<!-- sponsors -->
+| Avatar | Sponsor |
+|--------|--------|
+| <img src="https://avatars.githubusercontent.com/u/33719983?v=4" width="40" /> | **[dream zhao](https://github.com/Dts0)** |
+<!-- /sponsors -->
+
+Want to join them? [Become a sponsor →](https://github.com/sponsors/exisz) 💛
 
 ## License
 

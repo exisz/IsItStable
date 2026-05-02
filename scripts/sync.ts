@@ -305,9 +305,42 @@ async function syncSponsors() {
   }
 }
 
+/** Update the <!-- sponsors --> section in README.md with current sponsors.json */
+function updateReadmeSponsors(sponsors: { name: string; url: string; avatarUrl?: string }[]) {
+  const readmePath = join(DATA_DIR, "..", "README.md");
+  if (!existsSync(readmePath)) return;
+  const readme = readFileSync(readmePath, "utf-8");
+  const startTag = "<!-- sponsors -->";
+  const endTag = "<!-- /sponsors -->";
+  const startIdx = readme.indexOf(startTag);
+  const endIdx = readme.indexOf(endTag);
+  if (startIdx === -1 || endIdx === -1) return;
+
+  let table = "| Avatar | Sponsor |\n|--------|--------|\n";
+  for (const s of sponsors) {
+    const avatar = s.avatarUrl ? `<img src=\"${s.avatarUrl}\" width=\"40\" />` : "";
+    table += `| ${avatar} | **[${s.name}](${s.url})** |\n`;
+  }
+  if (sponsors.length === 0) table += "| | *Be the first — [sponsor →](https://github.com/sponsors/exisz)* |\n";
+
+  const updated = readme.slice(0, startIdx + startTag.length) + "\n" + table + readme.slice(endIdx);
+  writeFileSync(readmePath, updated);
+  console.log(`✅ README sponsors section updated (${sponsors.length} sponsor(s))`);
+}
+
 async function run() {
   await main();
   await syncSponsors();
+  // Update README with latest sponsors
+  try {
+    const sponsorsPath = join(DATA_DIR, "sponsors.json");
+    if (existsSync(sponsorsPath)) {
+      const data = JSON.parse(readFileSync(sponsorsPath, "utf-8"));
+      updateReadmeSponsors(data);
+    }
+  } catch (e: any) {
+    console.warn("⚠️  README sponsors update failed (non-fatal):", e.message);
+  }
 }
 
 run().catch((e) => {
