@@ -240,7 +240,77 @@ async function main() {
   }
 }
 
-main().catch((e) => {
+async function syncSponsors() {
+  console.log("🔄 Syncing sponsors from GitHub GraphQL...");
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    console.warn("⚠️  GITHUB_TOKEN not set, skipping sponsors sync");
+    return;
+  }
+
+  const query = `{
+    user(login: "exisz") {
+      sponsorshipsAsMaintainer(first: 100, includePrivate: false) {
+        nodes {
+          sponsorEntity {
+            ... on User { login name avatarUrl url }
+            ... on Organization { login name avatarUrl url }
+          }
+          tier { name monthlyPriceInDollars }
+        }
+      }
+    }
+  }`;
+
+  try {
+    const res = await fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "User-Agent": "IsItStable-Sync/1.0",
+      },
+      body: JSON.stringify({ query }),
+    });
+
+    if (!res.ok) {
+      console.warn(`⚠️  Sponsors API returned ${res.status}, writing empty array`);
+      writeFileSync(join(DATA_DIR, "sponsors.json"), "[]\n");
+      return;
+    }
+
+    const json = await res.json() as any;
+    if (json.errors) {
+      console.warn("⚠️  Sponsors GraphQL errors:", json.errors[0]?.message);
+      writeFileSync(join(DATA_DIR, "sponsors.json"), "[]\n");
+      return;
+    }
+
+    const nodes = json.data?.user?.sponsorshipsAsMaintainer?.nodes ?? [];
+    const sponsors = nodes
+      .filter((n: any) => n.sponsorEntity)
+      .map((n: any) => ({
+        name: n.sponsorEntity.name || n.sponsorEntity.login,
+        url: n.sponsorEntity.url,
+        avatarUrl: n.sponsorEntity.avatarUrl,
+        tier: n.tier?.name ?? undefined,
+        monthlyPriceInDollars: n.tier?.monthlyPriceInDollars ?? undefined,
+      }));
+
+    writeFileSync(join(DATA_DIR, "sponsors.json"), JSON.stringify(sponsors, null, 2) + "\n");
+    console.log(`✅ Wrote ${sponsors.length} sponsor(s)`);
+  } catch (e: any) {
+    console.warn("⚠️  Sponsors sync failed (non-fatal):", e.message);
+    writeFileSync(join(DATA_DIR, "sponsors.json"), "[]\n");
+  }
+}
+
+async function run() {
+  await main();
+  await syncSponsors();
+}
+
+run().catch((e) => {
   console.error("❌ Sync failed:", e.message);
   process.exit(1);
 });
