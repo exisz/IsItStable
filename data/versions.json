@@ -1,5 +1,18 @@
 [
   {
+    "issueNumber": 72,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/72",
+    "version": "2026.5.2",
+    "packageName": "openclaw",
+    "packageSlug": "openclaw",
+    "verdict": "yes",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-05-03T00:24:51.497Z"
+  },
+  {
     "issueNumber": 69,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/69",
     "version": "2026.4.29",
@@ -70,7 +83,7 @@
       }
     ],
     "thumbsUp": 1,
-    "thumbsDown": 1,
+    "thumbsDown": 2,
     "createdAt": "2026-04-30T20:54:49.247Z"
   },
   {
@@ -336,7 +349,7 @@
     "verdict": "yes",
     "verdictComment": "",
     "referencedIssues": [],
-    "thumbsUp": 2,
+    "thumbsUp": 3,
     "thumbsDown": 0,
     "createdAt": "2026-04-24T16:30:05.632Z"
   }
