@@ -18,9 +18,40 @@
     "version": "2026.5.3",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdict": "no",
+    "verdictComment": "Five unpatched regressions in critical paths. Gateway stability is actively getting worse. **Stay on v2026.5.2** or wait for v2026.5.4 patch.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77551,
+        "url": "https://github.com/openclaw/openclaw/issues/77551",
+        "title": "Bedrock aws-sdk auth: ExpiredTokenException after credential file refresh (regression in v2026.5.3)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77612,
+        "url": "https://github.com/openclaw/openclaw/issues/77612",
+        "title": "[Bug]: ollama/deepseek-v4-pro:cloud does not allow \"max\" in v2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77576,
+        "url": "https://github.com/openclaw/openclaw/issues/77576",
+        "title": "[Regression] Telegram group session responses route to webchat instead of back to Telegram (v2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77668,
+        "url": "https://github.com/openclaw/openclaw/issues/77668",
+        "title": "[Bug]: Discord gateway hang at 'awaiting gateway readiness' still reproduces on 2026.5.3-1 (macOS) — six closed dups, raw-ws test isolates failure to Carbon Client lifecycle"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77561,
+        "url": "https://github.com/openclaw/openclaw/issues/77561",
+        "title": "ownsCompaction tool-result context guard bypass still present in v2026.5.3 (Codex sessions have no mid-turn compaction protection)"
+      }
+    ],
     "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-05-04T07:46:24.298Z"
