@@ -4,17 +4,17 @@
     "slug": "openclaw",
     "displayName": "openclaw",
     "latestVersion": {
-      "issueNumber": 74,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/74",
-      "version": "2026.5.3-1",
+      "issueNumber": 76,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/76",
+      "version": "2026.5.4",
       "packageName": "openclaw",
       "packageSlug": "openclaw",
-      "verdict": "yes",
+      "verdict": "pending",
       "verdictComment": "",
       "referencedIssues": [],
       "thumbsUp": 0,
-      "thumbsDown": 2,
-      "createdAt": "2026-05-04T09:34:57.121Z"
+      "thumbsDown": 0,
+      "createdAt": "2026-05-05T08:11:28.661Z"
     }
   }
 ]
