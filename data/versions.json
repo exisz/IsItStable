@@ -5,9 +5,34 @@
     "version": "2026.5.5",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdict": "no",
+    "verdictComment": "Stay on v2026.4.23. v2026.5.5 brings breaking command routing, approval security bypass, and context overflow issues. Rollback recommended.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78391,
+        "url": "https://github.com/openclaw/openclaw/issues/78391",
+        "title": "Critical Regression: Direct Command Routing remains broken in v2026.5.5 (#77384 persists)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78415,
+        "url": "https://github.com/openclaw/openclaw/issues/78415",
+        "title": "Exec approval-required command executes without explicit user approval on 2026.5.5"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78569,
+        "url": "https://github.com/openclaw/openclaw/issues/78569",
+        "title": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_CLIENT_MISMATCH) via Control UI"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78562,
+        "url": "https://github.com/openclaw/openclaw/issues/78562",
+        "title": "Repeated tool-loop context overflows cause successive auto-compactions after successful compaction (v2026.5.5)"
+      }
+    ],
     "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-05-06T08:46:22.905Z"
