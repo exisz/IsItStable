@@ -9,9 +9,76 @@
       "version": "2026.5.4",
       "packageName": "openclaw",
       "packageSlug": "openclaw",
-      "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdict": "no",
+      "verdictComment": "\"Someone shipped a grenade and forgot to pull the pin. 19 different subsystems on fire.\"",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 77930,
+          "url": "https://github.com/openclaw/openclaw/issues/77930",
+          "title": "[Bug]: Discord channel not loaded in 2026.5.4 (and beta.2/beta.3), works in beta.1 and 2026.4.29"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 77779,
+          "url": "https://github.com/openclaw/openclaw/issues/77779",
+          "title": "[Bug]: WeChat plugin fails to start — api.runtime undefined in 2026.5.4 causes runtime initialization timeout"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 77868,
+          "url": "https://github.com/openclaw/openclaw/issues/77868",
+          "title": "Discord delivery crashes with SyntaxError: Plugin/Core version mismatch (2026.5.4 plugin vs 2026.5.3 core)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78232,
+          "url": "https://github.com/openclaw/openclaw/issues/78232",
+          "title": "[Bug]: openclaw-weixin plugin 2.4.1 incompatible with OpenClaw 2026.5.4 — channelRuntime API changes break inbound message processing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 77838,
+          "url": "https://github.com/openclaw/openclaw/issues/77838",
+          "title": "sqlite-vec import fails after upgrade to 2026.5.4 (regression from 5.3)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 77896,
+          "url": "https://github.com/openclaw/openclaw/issues/77896",
+          "title": "[Bug]: Matrix channel missing matrix-js-sdk after 2026.5.4 host npm update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78141,
+          "url": "https://github.com/openclaw/openclaw/issues/78141",
+          "title": "[Bug]: Bundled fal image generation provider not registered in 2026.5.4 — plugin loads but image_generate reports 'No provider registered'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78070,
+          "url": "https://github.com/openclaw/openclaw/issues/78070",
+          "title": "[Bug]: Telegram /verbose no longer streams thinking/tool progress into preview on 2026.5.4"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78123,
+          "url": "https://github.com/openclaw/openclaw/issues/78123",
+          "title": "[Bug] Feishu dispatch completes with replies=0 after upgrading to 2026.5.4 — replies not sent without streaming card"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 77960,
+          "url": "https://github.com/openclaw/openclaw/issues/77960",
+          "title": "[Bug]: ReplyRunAlreadyActiveError still fires on 5.4 for discrete sequential chat.send (follow-up to #77485)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78204,
+          "url": "https://github.com/openclaw/openclaw/issues/78204",
+          "title": "[Bug]: the bot frequently fails to reply to messages in Feishu group chats, while private messages work normally.When mentioned in the group, it shows the typing indicator after receiving the message"
+        }
+      ],
       "thumbsUp": 0,
       "thumbsDown": 0,
       "createdAt": "2026-05-05T08:11:28.661Z"
