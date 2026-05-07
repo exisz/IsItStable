@@ -39,8 +39,8 @@
         "title": "[Bug]: Severe Event Loop Blocking / Freezing due to Synchronous I/O (execSync, readFileSync)"
       }
     ],
-    "thumbsUp": 1,
-    "thumbsDown": 2,
+    "thumbsUp": 3,
+    "thumbsDown": 5,
     "createdAt": "2026-05-06T17:33:28.172Z"
   },
   {
@@ -170,7 +170,7 @@
     "verdict": "yes",
     "verdictComment": "",
     "referencedIssues": [],
-    "thumbsUp": 0,
+    "thumbsUp": 1,
     "thumbsDown": 3,
     "createdAt": "2026-05-04T09:34:57.121Z"
   },
@@ -228,7 +228,7 @@
     "verdictComment": "",
     "referencedIssues": [],
     "thumbsUp": 5,
-    "thumbsDown": 0,
+    "thumbsDown": 1,
     "createdAt": "2026-05-03T00:24:51.497Z"
   },
   {
