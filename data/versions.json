@@ -5,11 +5,42 @@
     "version": "2026.5.6",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdict": "no",
+    "verdictComment": "Gateway watchdog in death spiral, sessions broken, plugin migrations failing. **Stay on v2026.5.5 ASAP.**",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78601,
+        "url": "https://github.com/openclaw/openclaw/issues/78601",
+        "title": "[Bug]: Gateway liveness watchdog restarting the gateway after every few minutes.  (2026.5.6)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78669,
+        "url": "https://github.com/openclaw/openclaw/issues/78669",
+        "title": "Webchat persistence regression still firing on 2026.5.6 — PR #77839 fix appears to have not shipped"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78702,
+        "url": "https://github.com/openclaw/openclaw/issues/78702",
+        "title": "[v2026.5.6] Feishu channel silently offline after upgrade — plugin not auto-installed when built-in→external"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78804,
+        "url": "https://github.com/openclaw/openclaw/issues/78804",
+        "title": "[Bug]: [Bug]: Module hash mismatch after npm install — sessions_send and web_fetch broken"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78805,
+        "url": "https://github.com/openclaw/openclaw/issues/78805",
+        "title": "[Bug]: Severe Event Loop Blocking / Freezing due to Synchronous I/O (execSync, readFileSync)"
+      }
+    ],
     "thumbsUp": 1,
-    "thumbsDown": 1,
+    "thumbsDown": 2,
     "createdAt": "2026-05-06T17:33:28.172Z"
   },
   {
