@@ -1,5 +1,18 @@
 [
   {
+    "issueNumber": 79,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/79",
+    "version": "2026.5.7",
+    "packageName": "openclaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-05-07T20:38:57.626Z"
+  },
+  {
     "issueNumber": 78,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/78",
     "version": "2026.5.6",
