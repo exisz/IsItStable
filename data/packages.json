@@ -9,9 +9,76 @@
       "version": "2026.5.7",
       "packageName": "openclaw",
       "packageSlug": "openclaw",
-      "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdict": "no",
+      "verdictComment": "Do not upgrade. v2026.5.7 is a regression hotbed — 24 open bugs across channels, performance, and core features. Wait for 2026.5.8 or rollback to 2026.5.6.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79109,
+          "url": "https://github.com/openclaw/openclaw/issues/79109",
+          "title": "[Regression] Discord message send still fails with Unknown Channel in v2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79343,
+          "url": "https://github.com/openclaw/openclaw/issues/79343",
+          "title": "[Bug]: Discord channel becomes `not configured, disabled` after upgrade"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79308,
+          "url": "https://github.com/openclaw/openclaw/issues/79308",
+          "title": "[Bug] Telegram group replies sent to wrong chat_id (DM instead of group) in 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79310,
+          "url": "https://github.com/openclaw/openclaw/issues/79310",
+          "title": "QQBot: Framework slash commands (/models, /status, /new) not responding in QQ channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79349,
+          "url": "https://github.com/openclaw/openclaw/issues/79349",
+          "title": "飞书群聊线程消息回复被静默丢弃"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79264,
+          "url": "https://github.com/openclaw/openclaw/issues/79264",
+          "title": "[Bug]: [Regression] post-attach.update-sentinel ~9s sync block per model_call (previously 0ms) — v2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79341,
+          "url": "https://github.com/openclaw/openclaw/issues/79341",
+          "title": "[Bug]: image tool silently broken post-upgrade — agents.defaults.imageModel and tools.sessions_spawn.attachments.enabled now required without migration"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79224,
+          "url": "https://github.com/openclaw/openclaw/issues/79224",
+          "title": "🐛 Bug: Auto-compaction triggers gateway crash loop — old process zombie-like after successful compaction"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79258,
+          "url": "https://github.com/openclaw/openclaw/issues/79258",
+          "title": "[Bug]: Heartbeat death loop — pendingFinalDelivery stuck on agent main session, blocks all future heartbeats for days"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79107,
+          "url": "https://github.com/openclaw/openclaw/issues/79107",
+          "title": "docs command fails with missing MCP tool SearchOpenClaw on 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79053,
+          "url": "https://github.com/openclaw/openclaw/issues/79053",
+          "title": "Bug: Subagent completion announcements dropped when parent session is idle (reopened, upstream restructured)"
+        }
+      ],
       "thumbsUp": 0,
       "thumbsDown": 0,
       "createdAt": "2026-05-07T20:38:57.626Z"
