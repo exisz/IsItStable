@@ -1,0 +1,86 @@
+---
+id: dna://flow/isitstable-verdict
+legacy_id: isitstable-verdict
+type: flow
+managed_by: dna://project/isitstable
+title: IsItStable — Set Version Verdict
+summary: >-
+  Procedure for assigning a stability verdict (yes/no) to an existing
+  IsItStable version issue. OPERATOR_POD pre-creates issues with verdict:pending;
+  giving a verdict means swapping the label, NOT creating a new issue.
+tags: [flow, isitstable, nebula, verdict]
+since: 2026-05-04
+---
+
+# IsItStable — Set Version Verdict
+
+When the Emperor (or anyone) says "give vX.Y.Z a stable/unstable verdict", follow this — do **not** create a new issue.
+
+## Background
+
+OPERATOR_POD runs daily and pre-creates one issue per detected version:
+
+```
+[vX.Y.Z] [pkg] Is it stable?
+labels: version, pkg:<name>, verdict:pending
+```
+
+Issuing a verdict = relabel `verdict:pending` → `verdict:yes` or `verdict:no`.
+The site is **SSG + `data/versions.json`** (not live GitHub queries) — you must trigger `sync.yml` after the relabel, which then curls the Vercel deploy hook.
+
+## Steps
+
+### 1. Find the existing issue
+
+```bash
+gh issue list --repo exisz/IsItStable --search "<version>" \
+  --json number,title,labels --state all
+```
+
+Match the title `[v<version>] [<pkg>] Is it stable?`. If multiple packages,
+disambiguate by `pkg:` label.
+
+**If no issue exists:** the version was missed by OPERATOR_POD. Check
+`projects/isitstable-com/` for the operator schedule before creating one
+manually — likely a pod bug to fix instead.
+
+### 2. Swap the verdict label
+
+```bash
+gh issue edit <N> --repo exisz/IsItStable \
+  --remove-label "verdict:pending" \
+  --add-label "verdict:yes"   # or verdict:no
+```
+
+### 3. Trigger sync
+
+```bash
+gh workflow run sync.yml --repo exisz/IsItStable
+```
+
+`sync.yml` rebuilds `data/versions.json` and pings the Vercel deploy hook.
+Without this step, the website does not update.
+
+### 4. (Optional) Add a verdict comment
+
+For non-trivial verdicts, drop a short comment on the issue explaining why
+(known bug references, regression notes, etc.). This shows up on the
+version detail page.
+
+## Anti-Patterns
+
+- ❌ Creating a new issue with `gh issue create --label verdict:yes`. The
+  OPERATOR_POD-created issue is the canonical one and already has reactions /
+  bug references attached. A new issue duplicates and orphans existing votes.
+- ❌ Editing the label without triggering `sync.yml` — site stays stale.
+- ❌ Using the GitHub UI's Projects-style "single-select option mutation" —
+  see MEMORY.md lesson on how that wipes all field values.
+
+## Quick One-Liner
+
+```bash
+V=2026.5.3-1 VERDICT=yes && \
+N=$(gh issue list --repo exisz/IsItStable --search "$V" --state all --json number -q '.[0].number') && \
+gh issue edit "$N" --repo exisz/IsItStable --remove-label verdict:pending --add-label "verdict:$VERDICT" && \
+gh workflow run sync.yml --repo exisz/IsItStable
+```
