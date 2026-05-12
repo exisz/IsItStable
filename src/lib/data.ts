@@ -42,7 +42,10 @@ function loadVersions(): VersionIssue[] {
 
 function loadPackages(): PackageSummary[] {
   if (!_packages) {
-    const latestBySlug = new Map(loadVersions().map((v) => [v.packageSlug, v]));
+    const latestBySlug = new Map<string, VersionIssue>();
+    for (const v of loadVersions()) {
+      if (!latestBySlug.has(v.packageSlug)) latestBySlug.set(v.packageSlug, v);
+    }
     const raw = JSON.parse(readFileSync(join(DATA_DIR, "packages.json"), "utf-8")) as PackageSummary[];
     _packages = raw.map((pkg) => ({
       ...pkg,
