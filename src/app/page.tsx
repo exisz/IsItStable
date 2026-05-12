@@ -128,7 +128,7 @@ export default async function HomePage() {
                 {sponsor.avatarUrl && (
                   <img
                     src={sponsor.avatarUrl}
-                    alt={sponsor.name}
+                    alt="Sponsor"
                     className="w-9 h-9 rounded-full border border-[var(--color-border)]"
                   />
                 )}
