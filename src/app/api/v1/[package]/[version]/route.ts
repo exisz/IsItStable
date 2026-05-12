@@ -11,6 +11,7 @@ export async function GET(_: Request, { params }: Props) {
     package: slug,
     version: v.version,
     verdict: v.verdict,
+    stabilityScore: v.stabilityScore,
     comment: v.verdictComment,
     thumbsUp: v.thumbsUp,
     thumbsDown: v.thumbsDown,

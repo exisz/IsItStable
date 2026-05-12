@@ -11,6 +11,7 @@ export async function GET(_: Request, { params }: Props) {
     package: slug,
     version: stable.version,
     verdict: "yes",
+    stabilityScore: stable.stabilityScore,
     comment: stable.verdictComment,
     install: `npm install ${slug}@${stable.version}`,
     thumbsUp: stable.thumbsUp,

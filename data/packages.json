@@ -77,8 +77,380 @@
           "number": 79053,
           "url": "https://github.com/openclaw/openclaw/issues/79053",
           "title": "Bug: Subagent completion announcements dropped when parent session is idle (reopened, upstream restructured)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80576,
+          "url": "https://github.com/openclaw/openclaw/issues/80576",
+          "title": "Bug: Main agent deleted when creating sub-agent in 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80844,
+          "url": "https://github.com/openclaw/openclaw/issues/80844",
+          "title": "Critical npm audit advisory via @mistralai/mistralai in openclaw 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80420,
+          "url": "https://github.com/openclaw/openclaw/issues/80420",
+          "title": "[Bug]: cron jobs once again failing with model idle timeout in 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 81177,
+          "url": "https://github.com/openclaw/openclaw/issues/81177",
+          "title": "whatsapp: monitor outbound gate só verifica texto vazio — qualquer não-vazio passa (NO_REPLY ignorado)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80483,
+          "url": "https://github.com/openclaw/openclaw/issues/80483",
+          "title": "voice-call realtime: \"Realtime voice provider \\\"openai\\\" is not registered\" on startup — load-order bug similar to #60936 but on realtime voice path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79794,
+          "url": "https://github.com/openclaw/openclaw/issues/79794",
+          "title": "[Bug]: Discord gateway READY event never fires — bot online but guild messages not received (regression in 2026.5.7)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79753,
+          "url": "https://github.com/openclaw/openclaw/issues/79753",
+          "title": "[Bug]: Cron announce fallback delivery reports success but message never arrives (WeChat + Feishu) on 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79109,
+          "url": "https://github.com/openclaw/openclaw/issues/79109",
+          "title": "[Regression] Discord message send still fails with Unknown Channel in v2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79343,
+          "url": "https://github.com/openclaw/openclaw/issues/79343",
+          "title": "[Bug]: Discord channel becomes `not configured, disabled` after upgrade"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79308,
+          "url": "https://github.com/openclaw/openclaw/issues/79308",
+          "title": "[Bug] Telegram group replies sent to wrong chat_id (DM instead of group) in 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79310,
+          "url": "https://github.com/openclaw/openclaw/issues/79310",
+          "title": "QQBot: Framework slash commands (/models, /status, /new) not responding in QQ channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79349,
+          "url": "https://github.com/openclaw/openclaw/issues/79349",
+          "title": "飞书群聊线程消息回复被静默丢弃"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79264,
+          "url": "https://github.com/openclaw/openclaw/issues/79264",
+          "title": "[Bug]: [Regression] post-attach.update-sentinel ~9s sync block per model_call (previously 0ms) — v2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79341,
+          "url": "https://github.com/openclaw/openclaw/issues/79341",
+          "title": "[Bug]: image tool silently broken post-upgrade — agents.defaults.imageModel and tools.sessions_spawn.attachments.enabled now required without migration"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79224,
+          "url": "https://github.com/openclaw/openclaw/issues/79224",
+          "title": "🐛 Bug: Auto-compaction triggers gateway crash loop — old process zombie-like after successful compaction"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79258,
+          "url": "https://github.com/openclaw/openclaw/issues/79258",
+          "title": "[Bug]: Heartbeat death loop — pendingFinalDelivery stuck on agent main session, blocks all future heartbeats for days"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79107,
+          "url": "https://github.com/openclaw/openclaw/issues/79107",
+          "title": "docs command fails with missing MCP tool SearchOpenClaw on 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79053,
+          "url": "https://github.com/openclaw/openclaw/issues/79053",
+          "title": "Bug: Subagent completion announcements dropped when parent session is idle (reopened, upstream restructured)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80576,
+          "url": "https://github.com/openclaw/openclaw/issues/80576",
+          "title": "Bug: Main agent deleted when creating sub-agent in 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80844,
+          "url": "https://github.com/openclaw/openclaw/issues/80844",
+          "title": "Critical npm audit advisory via @mistralai/mistralai in openclaw 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80420,
+          "url": "https://github.com/openclaw/openclaw/issues/80420",
+          "title": "[Bug]: cron jobs once again failing with model idle timeout in 2026.5.7"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 81177,
+          "url": "https://github.com/openclaw/openclaw/issues/81177",
+          "title": "whatsapp: monitor outbound gate só verifica texto vazio — qualquer não-vazio passa (NO_REPLY ignorado)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80483,
+          "url": "https://github.com/openclaw/openclaw/issues/80483",
+          "title": "voice-call realtime: \"Realtime voice provider \\\"openai\\\" is not registered\" on startup — load-order bug similar to #60936 but on realtime voice path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79794,
+          "url": "https://github.com/openclaw/openclaw/issues/79794",
+          "title": "[Bug]: Discord gateway READY event never fires — bot online but guild messages not received (regression in 2026.5.7)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79753,
+          "url": "https://github.com/openclaw/openclaw/issues/79753",
+          "title": "[Bug]: Cron announce fallback delivery reports success but message never arrives (WeChat + Feishu) on 2026.5.7"
         }
       ],
+      "stabilityScore": {
+        "schemaVersion": "isitstable:v1",
+        "baseScore": 100,
+        "score": 64,
+        "verdict": "no",
+        "votePenalty": 0,
+        "evidencePenalty": 36,
+        "affected": [
+          "compaction",
+          "discord",
+          "docs-command",
+          "feishu",
+          "heartbeat",
+          "image-tool",
+          "qqbot",
+          "runtime",
+          "security",
+          "telegram",
+          "voice",
+          "whatsapp"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#79109",
+            "repo": "openclaw/openclaw",
+            "number": 79109,
+            "url": "https://github.com/openclaw/openclaw/issues/79109",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "[Regression] Discord message send still fails with Unknown Channel in v2026.5.7"
+          },
+          {
+            "issue": "openclaw/openclaw#79343",
+            "repo": "openclaw/openclaw",
+            "number": 79343,
+            "url": "https://github.com/openclaw/openclaw/issues/79343",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "[Bug]: Discord channel becomes `not configured, disabled` after upgrade"
+          },
+          {
+            "issue": "openclaw/openclaw#79308",
+            "repo": "openclaw/openclaw",
+            "number": 79308,
+            "url": "https://github.com/openclaw/openclaw/issues/79308",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "[Bug] Telegram group replies sent to wrong chat_id (DM instead of group) in 2026.5.7"
+          },
+          {
+            "issue": "openclaw/openclaw#79310",
+            "repo": "openclaw/openclaw",
+            "number": 79310,
+            "url": "https://github.com/openclaw/openclaw/issues/79310",
+            "area": "qqbot",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "QQBot: Framework slash commands (/models, /status, /new) not responding in QQ channel"
+          },
+          {
+            "issue": "openclaw/openclaw#79349",
+            "repo": "openclaw/openclaw",
+            "number": 79349,
+            "url": "https://github.com/openclaw/openclaw/issues/79349",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "飞书群聊线程消息回复被静默丢弃"
+          },
+          {
+            "issue": "openclaw/openclaw#79264",
+            "repo": "openclaw/openclaw",
+            "number": 79264,
+            "url": "https://github.com/openclaw/openclaw/issues/79264",
+            "area": "runtime",
+            "type": "other",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "[Bug]: [Regression] post-attach.update-sentinel ~9s sync block per model_call (previously 0ms) — v2026.5.7"
+          },
+          {
+            "issue": "openclaw/openclaw#79341",
+            "repo": "openclaw/openclaw",
+            "number": 79341,
+            "url": "https://github.com/openclaw/openclaw/issues/79341",
+            "area": "image-tool",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "[Bug]: image tool silently broken post-upgrade — agents.defaults.imageModel and tools.sessions_spawn.attachmen"
+          },
+          {
+            "issue": "openclaw/openclaw#79224",
+            "repo": "openclaw/openclaw",
+            "number": 79224,
+            "url": "https://github.com/openclaw/openclaw/issues/79224",
+            "area": "compaction",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Crash loop / heartbeat / compaction regression"
+          },
+          {
+            "issue": "openclaw/openclaw#79258",
+            "repo": "openclaw/openclaw",
+            "number": 79258,
+            "url": "https://github.com/openclaw/openclaw/issues/79258",
+            "area": "heartbeat",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Crash loop / heartbeat / compaction regression"
+          },
+          {
+            "issue": "openclaw/openclaw#79107",
+            "repo": "openclaw/openclaw",
+            "number": 79107,
+            "url": "https://github.com/openclaw/openclaw/issues/79107",
+            "area": "docs-command",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "docs command fails with missing MCP tool SearchOpenClaw on 2026.5.7"
+          },
+          {
+            "issue": "openclaw/openclaw#79053",
+            "repo": "openclaw/openclaw",
+            "number": 79053,
+            "url": "https://github.com/openclaw/openclaw/issues/79053",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Bug: Subagent completion announcements dropped when parent session is idle (reopened, upstream restructured)"
+          },
+          {
+            "issue": "openclaw/openclaw#80576",
+            "repo": "openclaw/openclaw",
+            "number": 80576,
+            "url": "https://github.com/openclaw/openclaw/issues/80576",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Bug: Main agent deleted when creating sub-agent in 2026.5.7"
+          },
+          {
+            "issue": "openclaw/openclaw#80844",
+            "repo": "openclaw/openclaw",
+            "number": 80844,
+            "url": "https://github.com/openclaw/openclaw/issues/80844",
+            "area": "security",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Critical npm audit advisory via @mistralai/mistralai in openclaw 2026.5.7"
+          },
+          {
+            "issue": "openclaw/openclaw#80420",
+            "repo": "openclaw/openclaw",
+            "number": 80420,
+            "url": "https://github.com/openclaw/openclaw/issues/80420",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "[Bug]: cron jobs once again failing with model idle timeout in 2026.5.7"
+          },
+          {
+            "issue": "openclaw/openclaw#81177",
+            "repo": "openclaw/openclaw",
+            "number": 81177,
+            "url": "https://github.com/openclaw/openclaw/issues/81177",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "whatsapp: monitor outbound gate só verifica texto vazio — qualquer não-vazio passa (NO_REPLY ignorado)"
+          },
+          {
+            "issue": "openclaw/openclaw#80483",
+            "repo": "openclaw/openclaw",
+            "number": 80483,
+            "url": "https://github.com/openclaw/openclaw/issues/80483",
+            "area": "voice",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "voice-call realtime: \"Realtime voice provider \\\"openai\\\" is not registered\" on startup — load-order bug simila"
+          },
+          {
+            "issue": "openclaw/openclaw#79794",
+            "repo": "openclaw/openclaw",
+            "number": 79794,
+            "url": "https://github.com/openclaw/openclaw/issues/79794",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "[Bug]: Discord gateway READY event never fires — bot online but guild messages not received (regression in 202"
+          },
+          {
+            "issue": "openclaw/openclaw#79753",
+            "repo": "openclaw/openclaw",
+            "number": 79753,
+            "url": "https://github.com/openclaw/openclaw/issues/79753",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "[Bug]: Cron announce fallback delivery reports success but message never arrives (WeChat + Feishu) on 2026.5.7"
+          }
+        ]
+      },
       "thumbsUp": 0,
       "thumbsDown": 0,
       "createdAt": "2026-05-07T20:38:57.626Z"

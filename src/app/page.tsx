@@ -55,6 +55,7 @@ export default async function HomePage() {
                     </h3>
                     <p className="text-[var(--color-muted)] mt-1">
                       Latest: <span className="text-[var(--color-foreground)]">v{latest?.version}</span>
+                      {latest && <span className="ml-2 font-mono">{latest.stabilityScore.score}/100</span>}
                       {latest && (
                         <span className={`ml-2 text-sm ${
                           latest.verdict === "yes" ? "text-[var(--color-yes)]" :

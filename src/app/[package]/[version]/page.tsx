@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { VerdictBadge } from "@/components/VerdictBadge";
 import { InstallCommands } from "@/components/InstallCommands";
+import { StabilityScoreCard } from "@/components/StabilityScoreCard";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ package: string; version: string }> };
@@ -58,6 +59,8 @@ export default async function VersionPage({ params }: Props) {
         </div>
       )}
 
+      <StabilityScoreCard stabilityScore={v.stabilityScore} />
+
       {/* Install */}
       <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8 bg-[var(--color-card)]">
         <p className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-3">Install this version</p>
@@ -70,19 +73,44 @@ export default async function VersionPage({ params }: Props) {
         <StatCard label="👎 Unstable" value={String(v.thumbsDown)} color={v.thumbsDown > 0 ? "text-[var(--color-no)]" : undefined} />
       </div>
 
-      {/* Evidence / Referenced Issues */}
-      {v.referencedIssues.length > 0 && (
+      {/* Stability Evidence */}
+      {v.stabilityScore.evidence.length > 0 ? (
+        <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8 overflow-x-auto">
+          <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-3">Score Evidence</h3>
+          <table className="w-full text-left text-sm">
+            <thead className="text-xs uppercase tracking-widest text-[var(--color-muted)]">
+              <tr>
+                <th className="py-2 pr-4">Issue</th>
+                <th className="py-2 pr-4">Area</th>
+                <th className="py-2 pr-4">Type</th>
+                <th className="py-2 pr-4">Penalty</th>
+                <th className="py-2 pr-4">Reason</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[var(--color-border)]">
+              {v.stabilityScore.evidence.map((issue) => (
+                <tr key={issue.issue}>
+                  <td className="py-3 pr-4 whitespace-nowrap">
+                    <a href={issue.url} target="_blank" rel="noopener" className="font-mono text-[var(--color-muted)] hover:text-white transition-colors">
+                      {issue.issue} →
+                    </a>
+                  </td>
+                  <td className="py-3 pr-4">{issue.area}</td>
+                  <td className="py-3 pr-4 text-[var(--color-muted)]">{issue.type}</td>
+                  <td className="py-3 pr-4 font-bold text-[var(--color-no)]">-{issue.penalty}</td>
+                  <td className="py-3 pr-4 text-[var(--color-muted)]">{issue.reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : v.referencedIssues.length > 0 && (
         <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8">
           <h3 className="text-sm uppercase tracking-widest text-[var(--color-muted)] mb-3">Referenced Issues</h3>
           <ul className="space-y-2">
             {v.referencedIssues.map((issue) => (
               <li key={`${issue.repo}#${issue.number}`}>
-                <a
-                  href={issue.url}
-                  target="_blank"
-                  rel="noopener"
-                  className="text-[var(--color-muted)] hover:text-white transition-colors font-mono text-sm"
-                >
+                <a href={issue.url} target="_blank" rel="noopener" className="text-[var(--color-muted)] hover:text-white transition-colors font-mono text-sm">
                   {issue.repo}#{issue.number}{issue.title ? ` — ${issue.title}` : ''} →
                 </a>
               </li>

@@ -62,6 +62,7 @@ export default async function PackagePage({ params }: Props) {
               <th className="px-6 py-3">Version</th>
               <th className="px-6 py-3">Date</th>
               <th className="px-6 py-3">Verdict</th>
+              <th className="px-6 py-3">Score</th>
               <th className="px-6 py-3">Vibe</th>
               <th className="px-6 py-3 hidden sm:table-cell">Comment</th>
             </tr>
@@ -77,6 +78,9 @@ export default async function PackagePage({ params }: Props) {
                 <td className="px-6 py-4 text-[var(--color-muted)]">{new Date(v.createdAt).toLocaleDateString()}</td>
                 <td className="px-6 py-4">
                   <VerdictBadge verdict={v.verdict} size="sm" />
+                </td>
+                <td className="px-6 py-4 font-mono font-bold">
+                  {v.stabilityScore.score}/100
                 </td>
                 <td className="px-6 py-4 text-sm">
                   <span className={

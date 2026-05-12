@@ -1,6 +1,7 @@
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
+import { fallbackStabilityScore, parseStabilityBlock, type StabilityScore } from "../src/lib/stability";
 
 const REPO_OWNER = "exisz";
 const REPO_NAME = "IsItStable";
@@ -21,6 +22,7 @@ interface VersionIssue {
   verdict: "yes" | "no" | "pending";
   verdictComment: string;
   referencedIssues: { repo: string; number: number; url: string; title?: string }[];
+  stabilityScore: StabilityScore;
   thumbsUp: number;
   thumbsDown: number;
   createdAt: string;
@@ -55,9 +57,13 @@ function getPackageFromLabels(labels: string[]): string | null {
   return null;
 }
 
-/** Extract first blockquote line as verdict comment, and referenced issues from body */
-function parseBody(body: string | null) {
-  const result = { verdictComment: "", referencedIssues: [] as { repo: string; number: number; url: string; title?: string }[] };
+/** Extract first blockquote line as verdict comment, referenced issues, and score metadata from body */
+function parseBody(body: string | null, thumbsUp: number, thumbsDown: number, verdict: "yes" | "no" | "pending") {
+  const result = {
+    verdictComment: "",
+    referencedIssues: [] as { repo: string; number: number; url: string; title?: string }[],
+    stabilityScore: fallbackStabilityScore(thumbsUp, thumbsDown, verdict),
+  };
   if (!body) return result;
 
   // First blockquote line = verdict comment
@@ -70,6 +76,10 @@ function parseBody(body: string | null) {
   while ((m = re.exec(body))) {
     result.referencedIssues.push({ repo: m[1], number: parseInt(m[2]), url: `https://github.com/${m[1]}/issues/${m[2]}` });
   }
+
+
+  const stabilityScore = parseStabilityBlock(body, thumbsUp, thumbsDown, verdict);
+  if (stabilityScore) result.stabilityScore = stabilityScore;
 
   return result;
 }
@@ -126,11 +136,11 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
       // Verdict from label
       const verdict = getVerdictFromLabels(labels);
 
-      // Comment + refs from body
-      const { verdictComment, referencedIssues } = parseBody(issue.body);
-
       const thumbsUp = issue.reactions?.["+1"] ?? 0;
       const thumbsDown = issue.reactions?.["-1"] ?? 0;
+
+      // Comment + refs + stability score from body
+      const { verdictComment, referencedIssues, stabilityScore } = parseBody(issue.body, thumbsUp, thumbsDown, verdict);
 
       issues.push({
         issueNumber: issue.number,
@@ -141,6 +151,7 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
         verdict,
         verdictComment,
         referencedIssues,
+        stabilityScore,
         thumbsUp,
         thumbsDown,
         createdAt: issue.created_at,

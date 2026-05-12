@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
+import { fallbackStabilityScore, type StabilityScore } from "./stability";
 
 export interface VersionIssue {
   issueNumber: number;
@@ -10,6 +11,7 @@ export interface VersionIssue {
   verdict: "yes" | "no" | "pending";
   verdictComment: string;
   referencedIssues: { repo: string; number: number; url: string; title?: string }[];
+  stabilityScore: StabilityScore;
   thumbsUp: number;
   thumbsDown: number;
   createdAt: string;
@@ -29,14 +31,23 @@ let _packages: PackageSummary[] | null = null;
 
 function loadVersions(): VersionIssue[] {
   if (!_versions) {
-    _versions = JSON.parse(readFileSync(join(DATA_DIR, "versions.json"), "utf-8"));
+    const raw = JSON.parse(readFileSync(join(DATA_DIR, "versions.json"), "utf-8")) as VersionIssue[];
+    _versions = raw.map((v) => ({
+      ...v,
+      stabilityScore: v.stabilityScore ?? fallbackStabilityScore(v.thumbsUp ?? 0, v.thumbsDown ?? 0, v.verdict),
+    }));
   }
   return _versions!;
 }
 
 function loadPackages(): PackageSummary[] {
   if (!_packages) {
-    _packages = JSON.parse(readFileSync(join(DATA_DIR, "packages.json"), "utf-8"));
+    const latestBySlug = new Map(loadVersions().map((v) => [v.packageSlug, v]));
+    const raw = JSON.parse(readFileSync(join(DATA_DIR, "packages.json"), "utf-8")) as PackageSummary[];
+    _packages = raw.map((pkg) => ({
+      ...pkg,
+      latestVersion: latestBySlug.get(pkg.slug) ?? pkg.latestVersion,
+    }));
   }
   return _packages!;
 }

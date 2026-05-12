@@ -12,6 +12,7 @@ export async function GET(_: Request, { params }: Props) {
     package: slug,
     version: latest.version,
     verdict: latest.verdict,
+    stabilityScore: latest.stabilityScore,
     comment: latest.verdictComment,
     thumbsUp: latest.thumbsUp,
     thumbsDown: latest.thumbsDown,

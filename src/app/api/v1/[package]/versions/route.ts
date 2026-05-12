@@ -12,6 +12,7 @@ export async function GET(_: Request, { params }: Props) {
     versions: versions.map((v) => ({
       version: v.version,
       verdict: v.verdict,
+      stabilityScore: v.stabilityScore,
       comment: v.verdictComment,
       thumbsUp: v.thumbsUp,
       thumbsDown: v.thumbsDown,
