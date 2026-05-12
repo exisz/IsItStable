@@ -657,11 +657,12 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 100,
-      "score": 92,
+      "score": 88,
       "verdict": "no",
       "votePenalty": 0,
-      "evidencePenalty": 8,
+      "evidencePenalty": 12,
       "affected": [
+        "approval-boundary",
         "runtime",
         "security",
         "tool"
@@ -683,11 +684,11 @@
           "repo": "openclaw/openclaw",
           "number": 78415,
           "url": "https://github.com/openclaw/openclaw/issues/78415",
-          "area": "runtime",
-          "type": "other",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Exec approval-required command executes without explicit user approval on 2026.5.5"
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Approval-required exec runs without explicit user approval; body reproduces on both 2026.5.4 and 2026.5.5"
         },
         {
           "issue": "openclaw/openclaw#78569",
@@ -794,6 +795,12 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 78415,
+        "url": "https://github.com/openclaw/openclaw/issues/78415",
+        "title": "Exec approval-required command executes without explicit user approval on 2026.5.5"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 77930,
         "url": "https://github.com/openclaw/openclaw/issues/77930",
         "title": "[Bug]: Discord channel not loaded in 2026.5.4 (and beta.2/beta.3), works in beta.1 and 2026.4.29"
@@ -857,16 +864,23 @@
         "number": 78204,
         "url": "https://github.com/openclaw/openclaw/issues/78204",
         "title": "[Bug]: the bot frequently fails to reply to messages in Feishu group chats, while private messages work normally.When mentioned in the group, it shows the typing indicator after receiving the message"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78415,
+        "url": "https://github.com/openclaw/openclaw/issues/78415",
+        "title": "Exec approval-required command executes without explicit user approval on 2026.5.5"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 100,
-      "score": 88,
+      "score": 83,
       "verdict": "no",
       "votePenalty": 0,
-      "evidencePenalty": 12,
+      "evidencePenalty": 17,
       "affected": [
+        "approval-boundary",
         "discord",
         "feishu",
         "image-tool",
@@ -996,6 +1010,17 @@
           "severity": 1,
           "penalty": 1,
           "reason": "[Bug]: the bot frequently fails to reply to messages in Feishu group chats, while private messages work normal"
+        },
+        {
+          "issue": "openclaw/openclaw#78415",
+          "repo": "openclaw/openclaw",
+          "number": 78415,
+          "url": "https://github.com/openclaw/openclaw/issues/78415",
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Approval-required exec runs without explicit user approval; body reproduces on both 2026.5.4 and 2026.5.5"
         }
       ]
     },
