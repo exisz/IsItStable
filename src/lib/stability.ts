@@ -25,7 +25,7 @@ export interface StabilityScore {
   notes?: string;
 }
 
-export const SCORE_BLOCK_RE = /<!--\s*isitstable:v1\s*([\s\S]*?)\s*-->/m;
+const SCORE_BLOCK_RE = /<!--\s*isitstable:v1\s*([\s\S]*?)\s*-->/m;
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -41,22 +41,15 @@ function parseIssueRef(raw: string): { repo: string; number: number; url: string
   };
 }
 
-export function computeVotePenalty(thumbsUp: number, thumbsDown: number): number {
+function computeVotePenalty(thumbsUp: number, thumbsDown: number): number {
   return Math.max(0, thumbsDown - thumbsUp) * 2;
 }
 
-export function computeScore(baseScore: number, evidencePenalty: number, votePenalty: number): number {
+function computeScore(baseScore: number, evidencePenalty: number, votePenalty: number): number {
   return Math.max(0, Math.min(100, baseScore - evidencePenalty - votePenalty));
 }
 
-export function scoreBucket(score: number): string {
-  const lower = Math.max(0, Math.min(90, Math.floor(score / 10) * 10));
-  const upper = lower + 9;
-  if (score === 100) return "score:100";
-  return `score:${lower}-${upper}`;
-}
-
-export function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: number, fallbackVerdict: StabilityVerdict): StabilityScore | null {
+function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: number, fallbackVerdict: StabilityVerdict): StabilityScore | null {
   if (!isRecord(raw)) return null;
   const evidenceRaw = Array.isArray(raw.evidence) ? raw.evidence : [];
   const evidence: StabilityEvidence[] = evidenceRaw.flatMap((item): StabilityEvidence[] => {

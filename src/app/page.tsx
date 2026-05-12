@@ -123,16 +123,15 @@ export default async function HomePage() {
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener"
-                className="inline-flex items-center gap-2 text-[var(--color-muted)] hover:text-[var(--color-foreground)] transition-colors"
+                className="inline-flex items-center text-[var(--color-muted)] hover:text-[var(--color-foreground)] transition-colors"
               >
                 {sponsor.avatarUrl && (
                   <img
                     src={sponsor.avatarUrl}
                     alt={sponsor.name}
-                    className="w-8 h-8 rounded-full"
+                    className="w-9 h-9 rounded-full border border-[var(--color-border)]"
                   />
                 )}
-                <span className="text-sm font-medium">{sponsor.name}</span>
               </a>
             ))}
           </div>

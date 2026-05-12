@@ -8,6 +8,14 @@ const REPO_NAME = "IsItStable";
 const GITHUB_API = "https://api.github.com";
 const __dirname = typeof import.meta.dirname === "string" ? import.meta.dirname : join(fileURLToPath(import.meta.url), "..");
 const DATA_DIR = join(__dirname, "..", "data");
+const FIXED_SPONSORS = [
+  {
+    name: "Exis",
+    url: "https://github.com/exisz",
+    avatarUrl: "https://avatars.githubusercontent.com/u/38595828?v=4",
+    tier: "Maintainer",
+  },
+];
 
 // Title format: [v2026.4.26] [OpenClaw] Is it stable?
 const TITLE_RE = /^\[v([^\]]+)\]\s*\[([^\]]+)\]/;
@@ -285,20 +293,20 @@ async function syncSponsors() {
     });
 
     if (!res.ok) {
-      console.warn(`⚠️  Sponsors API returned ${res.status}, writing empty array`);
-      writeFileSync(join(DATA_DIR, "sponsors.json"), "[]\n");
+      console.warn(`⚠️  Sponsors API returned ${res.status}, writing fixed sponsors only`);
+      writeFileSync(join(DATA_DIR, "sponsors.json"), JSON.stringify(FIXED_SPONSORS, null, 2) + "\n");
       return;
     }
 
     const json = await res.json() as any;
     if (json.errors) {
       console.warn("⚠️  Sponsors GraphQL errors:", json.errors[0]?.message);
-      writeFileSync(join(DATA_DIR, "sponsors.json"), "[]\n");
+      writeFileSync(join(DATA_DIR, "sponsors.json"), JSON.stringify(FIXED_SPONSORS, null, 2) + "\n");
       return;
     }
 
     const nodes = json.data?.user?.sponsorshipsAsMaintainer?.nodes ?? [];
-    const sponsors = nodes
+    const dynamicSponsors = nodes
       .filter((n: any) => n.sponsorEntity)
       .map((n: any) => ({
         name: n.sponsorEntity.name || n.sponsorEntity.login,
@@ -308,11 +316,13 @@ async function syncSponsors() {
         monthlyPriceInDollars: n.tier?.monthlyPriceInDollars ?? undefined,
       }));
 
+    const sponsors = [...FIXED_SPONSORS, ...dynamicSponsors.filter((s: any) => s.url !== "https://github.com/exisz")];
+
     writeFileSync(join(DATA_DIR, "sponsors.json"), JSON.stringify(sponsors, null, 2) + "\n");
     console.log(`✅ Wrote ${sponsors.length} sponsor(s)`);
   } catch (e: any) {
     console.warn("⚠️  Sponsors sync failed (non-fatal):", e.message);
-    writeFileSync(join(DATA_DIR, "sponsors.json"), "[]\n");
+    writeFileSync(join(DATA_DIR, "sponsors.json"), JSON.stringify(FIXED_SPONSORS, null, 2) + "\n");
   }
 }
 
@@ -327,12 +337,12 @@ function updateReadmeSponsors(sponsors: { name: string; url: string; avatarUrl?:
   const endIdx = readme.indexOf(endTag);
   if (startIdx === -1 || endIdx === -1) return;
 
-  let table = "| Avatar | Sponsor |\n|--------|--------|\n";
+  let table = "| Sponsors |\n|--------|\n";
   for (const s of sponsors) {
     const avatar = s.avatarUrl ? `<img src=\"${s.avatarUrl}\" width=\"40\" />` : "";
-    table += `| ${avatar} | **[${s.name}](${s.url})** |\n`;
+    table += `| [${avatar}](${s.url}) |\n`;
   }
-  if (sponsors.length === 0) table += "| | *Be the first — [sponsor →](https://github.com/sponsors/exisz)* |\n";
+  if (sponsors.length === 0) table += "| *Be the first — [sponsor →](https://github.com/sponsors/exisz)* |\n";
 
   const updated = readme.slice(0, startIdx + startTag.length) + "\n" + table + readme.slice(endIdx);
   writeFileSync(readmePath, updated);
