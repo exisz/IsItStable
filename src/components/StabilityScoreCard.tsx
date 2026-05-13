@@ -1,10 +1,5 @@
 import type { StabilityScore } from "@/lib/stability";
-
-function scoreColor(score: number) {
-  if (score >= 90) return "text-[var(--color-yes)]";
-  if (score >= 70) return "text-[var(--color-pending)]";
-  return "text-[var(--color-no)]";
-}
+import { ScoreBadge } from "@/components/ScoreBadge";
 
 export function StabilityScoreCard({ stabilityScore }: { stabilityScore: StabilityScore }) {
   const s = stabilityScore;
@@ -13,7 +8,7 @@ export function StabilityScoreCard({ stabilityScore }: { stabilityScore: Stabili
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-5">
         <div>
           <p className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Stability Score</p>
-          <p className={`text-6xl font-black ${scoreColor(s.score)}`}>{s.score}<span className="text-2xl text-[var(--color-muted)]">/100</span></p>
+          <ScoreBadge score={s.score} size="xl" />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
           <MiniStat label="Evidence" value={`-${s.evidencePenalty}`} />

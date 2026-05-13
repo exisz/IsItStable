@@ -72,9 +72,18 @@ export async function getVersionBySlug(packageSlug: string, version: string): Pr
 }
 
 export async function getLatestStable(packageSlug: string): Promise<VersionIssue | undefined> {
+  return getBestVersions(packageSlug, 1).then((versions) => versions[0]);
+}
+
+export async function getBestVersions(packageSlug: string, limit = 3): Promise<VersionIssue[]> {
   return loadVersions()
-    .filter((i) => i.packageSlug === packageSlug && i.verdict === "yes")
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())[0];
+    .filter((i) => i.packageSlug === packageSlug)
+    .sort((a, b) => {
+      const scoreDiff = b.stabilityScore.score - a.stabilityScore.score;
+      if (scoreDiff !== 0) return scoreDiff;
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    })
+    .slice(0, limit);
 }
 
 export async function getPackageSummary(packageSlug: string): Promise<{ displayName: string; versions: VersionIssue[] } | null> {

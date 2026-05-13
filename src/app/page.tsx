@@ -1,16 +1,15 @@
-import { getPackages, getLatestStable } from "@/lib/data";
-import { getVibe } from "@/lib/vibes";
+import { getBestVersions, getPackages } from "@/lib/data";
 import { sponsors } from "@/lib/sponsors";
 import Link from "next/link";
-import { CopyButton } from "@/components/CopyButton";
+import { ScoreBadge } from "@/components/ScoreBadge";
 
 export default async function HomePage() {
   const pkgs = await getPackages();
 
-  // Pre-fetch latest stable for each package
-  const stableMap = new Map<string, Awaited<ReturnType<typeof getLatestStable>>>();
+  // Pre-fetch least unstable versions for each package
+  const bestMap = new Map<string, Awaited<ReturnType<typeof getBestVersions>>>();
   for (const pkg of pkgs) {
-    stableMap.set(pkg.slug, await getLatestStable(pkg.slug));
+    bestMap.set(pkg.slug, await getBestVersions(pkg.slug, 3));
   }
 
   return (
@@ -35,12 +34,10 @@ export default async function HomePage() {
         </h2>
         <div className="space-y-4">
           {pkgs.map((pkg) => {
-            const latestStable = stableMap.get(pkg.slug);
+            const bestVersions = bestMap.get(pkg.slug) ?? [];
+            const best = bestVersions[0];
             const latest = pkg.latestVersion;
-            const latestVibe = latest ? getVibe(latest.version, latest.verdict) : null;
-            const installCmd = latestStable
-              ? `npm install ${pkg.slug}@${latestStable.version}`
-              : undefined;
+            const installCmd = best ? `npm install ${pkg.slug}@${best.version}` : undefined;
 
             return (
               <Link
@@ -54,36 +51,24 @@ export default async function HomePage() {
                       {pkg.displayName}
                     </h3>
                     <p className="text-[var(--color-muted)] mt-1">
-                      Latest: <span className="text-[var(--color-foreground)]">v{latest?.version}</span>
-                      {latest && <span className="ml-2 font-mono">{latest.stabilityScore.score}/100</span>}
-                      {latest && (
-                        <span className={`ml-2 text-sm ${
-                          latest.verdict === "yes" ? "text-[var(--color-yes)]" :
-                          latest.verdict === "no" ? "text-[var(--color-no)]" :
-                          "text-[var(--color-pending)]"
-                        }`}>
-                          {latestVibe}
-                        </span>
-                      )}
+                      Latest release: <span className="text-[var(--color-foreground)]">v{latest?.version}</span>
+                      {latest && <span className="ml-2"><ScoreBadge score={latest.stabilityScore.score} size="sm" /></span>}
                     </p>
-                    {latestStable && (
-                      <p className="mt-1">
-                        <span className="inline-flex items-center gap-1.5 text-sm bg-[var(--color-yes)]/10 text-[var(--color-yes)] px-2 py-0.5 rounded-full font-medium">
-                          🟢 Last stable: v{latestStable.version}
-                        </span>
-                      </p>
+                    {bestVersions.length > 0 && (
+                      <div className="mt-3">
+                        <p className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Best bets</p>
+                        <div className="flex flex-wrap gap-2">
+                          {bestVersions.map((v) => (
+                            <span key={v.issueNumber} className="inline-flex items-center gap-1.5 text-sm border border-[var(--color-border)] rounded-full px-2 py-1">
+                              <span className="font-mono">v{v.version}</span>
+                              <ScoreBadge score={v.stabilityScore.score} size="sm" />
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     )}
                   </div>
-                  {latest && (
-                    <div className={`text-4xl font-black ${
-                      latest.verdict === "yes" ? "text-[var(--color-yes)]" :
-                      latest.verdict === "no" ? "text-[var(--color-no)]" :
-                      "text-[var(--color-pending)]"
-                    }`}>
-                      {latest.verdict === "yes" ? "YES ✅" :
-                       latest.verdict === "no" ? "NO 🔥" : "🤔"}
-                    </div>
-                  )}
+                  {latest && <ScoreBadge score={latest.stabilityScore.score} size="lg" mutedMax />}
                 </div>
                 {installCmd && (
                   <div className="mt-3 flex items-center gap-2">

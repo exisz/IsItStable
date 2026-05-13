@@ -2,9 +2,9 @@ import { getVersionBySlug, getPackageSummary, fetchAllVersionIssues } from "@/li
 import { getVibe } from "@/lib/vibes";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { VerdictBadge } from "@/components/VerdictBadge";
 import { InstallCommands } from "@/components/InstallCommands";
 import { StabilityScoreCard } from "@/components/StabilityScoreCard";
+import { ScoreBadge } from "@/components/ScoreBadge";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ package: string; version: string }> };
@@ -42,12 +42,15 @@ export default async function VersionPage({ params }: Props) {
         </Link>
       </div>
 
-      {/* Big Verdict */}
+      {/* Big Score */}
       <div className="text-center py-16">
         <p className="text-[var(--color-muted)] text-lg mb-4">
           Is <span className="text-[var(--color-foreground)] font-bold">{pkg.displayName} v{version}</span> stable?
         </p>
-        <VerdictBadge verdict={v.verdict} size="xl" version={v.version} />
+        <ScoreBadge score={v.stabilityScore.score} size="xl" mutedMax />
+        <p className="mt-4 text-sm uppercase tracking-widest text-[var(--color-muted)]">
+          Editorial note: {v.verdict.toUpperCase()} · {vibe}
+        </p>
       </div>
 
       {/* Comment */}
