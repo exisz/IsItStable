@@ -1074,28 +1074,595 @@
     "version": "2026.5.3-1",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "yes",
-    "verdictComment": "No major evidence yet. The release gets to keep its shoes on.",
-    "referencedIssues": [],
+    "verdict": "no",
+    "verdictComment": "Evidence backfill changed the verdict: v2026.5.3-1 shipped with packaging breakage plus channel/runtime regressions across Docker, Discord, WhatsApp, iMessage, Telegram, Matrix, Feishu, Browser, memory, and agent runtimes. Skip it.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77293,
+        "url": "https://github.com/openclaw/openclaw/issues/77293",
+        "title": "[Bug]: 2026.5.3-1 bundled package broken — missing install.runtime-*.js + incorrect plugin API version"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80692,
+        "url": "https://github.com/openclaw/openclaw/issues/80692",
+        "title": "[Bug]: Docker image 2026.5.3-1 ships metadata-only Discord and WhatsApp extensions; channels do not register"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77443,
+        "url": "https://github.com/openclaw/openclaw/issues/77443",
+        "title": "[Bug]: WhatsApp event loop blocked (eventLoopDelayMaxMs=12088ms) on first inbound message — 2026.5.3-1 Windows"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78419,
+        "url": "https://github.com/openclaw/openclaw/issues/78419",
+        "title": "[Bug]: WhatsApp health-monitor re-starts channels stopped by terminal DisconnectReason (loggedOut, connectionReplaced) — 12-channel multi-tenant restart loop, 12.9GB heap, 24s RPC latency on 2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77426,
+        "url": "https://github.com/openclaw/openclaw/issues/77426",
+        "title": "[Bug]:sessions_yield: always returns \"No session context\" on MCP/claude-cli agent runtime path (gateway tool resolver missing sessionId + onYield)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80819,
+        "url": "https://github.com/openclaw/openclaw/issues/80819",
+        "title": "[Bug]: Claude CLI live-session bridge ignores `control_request` (`can_use_tool`) — sessions stall until 180/600s timeout — reproduces on `2026.5.3-1`"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77718,
+        "url": "https://github.com/openclaw/openclaw/issues/77718",
+        "title": "[Bug] Null agent workspace field causes crash loop — auto-restore does not repair missing required fields"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77531,
+        "url": "https://github.com/openclaw/openclaw/issues/77531",
+        "title": "Regression in 2026.5.3-1: CLI transcript persistence fails with \"Context engine 'legacy' is not registered\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77566,
+        "url": "https://github.com/openclaw/openclaw/issues/77566",
+        "title": "[Bug]: Gemini 3.x silent hang on subagent flows — `thoughtSignature` dropped on cross-provider replay (2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77642,
+        "url": "https://github.com/openclaw/openclaw/issues/77642",
+        "title": "[Bug]: [5.3 regression] lossless-claw: duplicate answers + \"missing tool result in session history\" synthetic errors"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77649,
+        "url": "https://github.com/openclaw/openclaw/issues/77649",
+        "title": "[Bug]: model-resolution and auth stages take 11-14s and 8-10s respectively on every agent dispatch (even with 0 plugins, 1 model)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77673,
+        "url": "https://github.com/openclaw/openclaw/issues/77673",
+        "title": "memory-lancedb npm v2026.5.3: imports nonexistent subpath `openclaw/plugin-sdk/plugin-config-runtime` — plugin fails to load"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77744,
+        "url": "https://github.com/openclaw/openclaw/issues/77744",
+        "title": "LLM idle timeout cannot be configured for long local llama.cpp requests in 2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77416,
+        "url": "https://github.com/openclaw/openclaw/issues/77416",
+        "title": "[Bug] @openclaw/discord 2026.5.3-1 channel still skipped silently with env-backed SecretRef token (regression of #76371; fix #76449 missed dist/ sidecar layout)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77503,
+        "url": "https://github.com/openclaw/openclaw/issues/77503",
+        "title": "[Bug]: iMessage channel polling broken in 2026.5.3-1 (regression from 2026.5.2)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77576,
+        "url": "https://github.com/openclaw/openclaw/issues/77576",
+        "title": "[Regression] Telegram group session responses route to webchat instead of back to Telegram (v2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77747,
+        "url": "https://github.com/openclaw/openclaw/issues/77747",
+        "title": "[Bug]: Discord gateway remains stuck at awaiting gateway readiness on Windows v2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78135,
+        "url": "https://github.com/openclaw/openclaw/issues/78135",
+        "title": "[Bug]: Matrix channel outbound m.room.message silently dropped on 2026.5.3-1 — matrix-js-sdk sendMessage never invoked, no logs at any level"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80120,
+        "url": "https://github.com/openclaw/openclaw/issues/80120",
+        "title": "[Bug] Feishu channel plugin missing in 2026.5.3 after plugin externalization"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77730,
+        "url": "https://github.com/openclaw/openclaw/issues/77730",
+        "title": "[Bug]: file-transfer plugin nodeHostCommands not advertised by Windows node host on live handshake (2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77733,
+        "url": "https://github.com/openclaw/openclaw/issues/77733",
+        "title": "[Bug]: Bare `/new` and `/reset` no longer trigger the persona greeting in 2026.5.3 (regression vs 4.x)**"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77308,
+        "url": "https://github.com/openclaw/openclaw/issues/77308",
+        "title": "Browser plugin still imports stale plugin-runtime-deps/openclaw-2026.4.26 path on 2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77350,
+        "url": "https://github.com/openclaw/openclaw/issues/77350",
+        "title": "DeepSeek V4 Pro on OpenRouter fails with 400 reasoning_effort: Invalid option (regression in 2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77723,
+        "url": "https://github.com/openclaw/openclaw/issues/77723",
+        "title": "Bug: memory-core Dreaming cleanup still leaves narrative session trajectory residue on 2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77293,
+        "url": "https://github.com/openclaw/openclaw/issues/77293",
+        "title": "[Bug]: 2026.5.3-1 bundled package broken — missing install.runtime-*.js + incorrect plugin API version"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80692,
+        "url": "https://github.com/openclaw/openclaw/issues/80692",
+        "title": "[Bug]: Docker image 2026.5.3-1 ships metadata-only Discord and WhatsApp extensions; channels do not register"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77443,
+        "url": "https://github.com/openclaw/openclaw/issues/77443",
+        "title": "[Bug]: WhatsApp event loop blocked (eventLoopDelayMaxMs=12088ms) on first inbound message — 2026.5.3-1 Windows"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78419,
+        "url": "https://github.com/openclaw/openclaw/issues/78419",
+        "title": "[Bug]: WhatsApp health-monitor re-starts channels stopped by terminal DisconnectReason (loggedOut, connectionReplaced) — 12-channel multi-tenant restart loop, 12.9GB heap, 24s RPC latency on 2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77426,
+        "url": "https://github.com/openclaw/openclaw/issues/77426",
+        "title": "[Bug]:sessions_yield: always returns \"No session context\" on MCP/claude-cli agent runtime path (gateway tool resolver missing sessionId + onYield)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80819,
+        "url": "https://github.com/openclaw/openclaw/issues/80819",
+        "title": "[Bug]: Claude CLI live-session bridge ignores `control_request` (`can_use_tool`) — sessions stall until 180/600s timeout — reproduces on `2026.5.3-1`"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77718,
+        "url": "https://github.com/openclaw/openclaw/issues/77718",
+        "title": "[Bug] Null agent workspace field causes crash loop — auto-restore does not repair missing required fields"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77531,
+        "url": "https://github.com/openclaw/openclaw/issues/77531",
+        "title": "Regression in 2026.5.3-1: CLI transcript persistence fails with \"Context engine 'legacy' is not registered\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77566,
+        "url": "https://github.com/openclaw/openclaw/issues/77566",
+        "title": "[Bug]: Gemini 3.x silent hang on subagent flows — `thoughtSignature` dropped on cross-provider replay (2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77642,
+        "url": "https://github.com/openclaw/openclaw/issues/77642",
+        "title": "[Bug]: [5.3 regression] lossless-claw: duplicate answers + \"missing tool result in session history\" synthetic errors"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77649,
+        "url": "https://github.com/openclaw/openclaw/issues/77649",
+        "title": "[Bug]: model-resolution and auth stages take 11-14s and 8-10s respectively on every agent dispatch (even with 0 plugins, 1 model)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77673,
+        "url": "https://github.com/openclaw/openclaw/issues/77673",
+        "title": "memory-lancedb npm v2026.5.3: imports nonexistent subpath `openclaw/plugin-sdk/plugin-config-runtime` — plugin fails to load"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77744,
+        "url": "https://github.com/openclaw/openclaw/issues/77744",
+        "title": "LLM idle timeout cannot be configured for long local llama.cpp requests in 2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77416,
+        "url": "https://github.com/openclaw/openclaw/issues/77416",
+        "title": "[Bug] @openclaw/discord 2026.5.3-1 channel still skipped silently with env-backed SecretRef token (regression of #76371; fix #76449 missed dist/ sidecar layout)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77503,
+        "url": "https://github.com/openclaw/openclaw/issues/77503",
+        "title": "[Bug]: iMessage channel polling broken in 2026.5.3-1 (regression from 2026.5.2)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77576,
+        "url": "https://github.com/openclaw/openclaw/issues/77576",
+        "title": "[Regression] Telegram group session responses route to webchat instead of back to Telegram (v2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77747,
+        "url": "https://github.com/openclaw/openclaw/issues/77747",
+        "title": "[Bug]: Discord gateway remains stuck at awaiting gateway readiness on Windows v2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78135,
+        "url": "https://github.com/openclaw/openclaw/issues/78135",
+        "title": "[Bug]: Matrix channel outbound m.room.message silently dropped on 2026.5.3-1 — matrix-js-sdk sendMessage never invoked, no logs at any level"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80120,
+        "url": "https://github.com/openclaw/openclaw/issues/80120",
+        "title": "[Bug] Feishu channel plugin missing in 2026.5.3 after plugin externalization"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77730,
+        "url": "https://github.com/openclaw/openclaw/issues/77730",
+        "title": "[Bug]: file-transfer plugin nodeHostCommands not advertised by Windows node host on live handshake (2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77733,
+        "url": "https://github.com/openclaw/openclaw/issues/77733",
+        "title": "[Bug]: Bare `/new` and `/reset` no longer trigger the persona greeting in 2026.5.3 (regression vs 4.x)**"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77308,
+        "url": "https://github.com/openclaw/openclaw/issues/77308",
+        "title": "Browser plugin still imports stale plugin-runtime-deps/openclaw-2026.4.26 path on 2026.5.3-1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77350,
+        "url": "https://github.com/openclaw/openclaw/issues/77350",
+        "title": "DeepSeek V4 Pro on OpenRouter fails with 400 reasoning_effort: Invalid option (regression in 2026.5.3-1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77723,
+        "url": "https://github.com/openclaw/openclaw/issues/77723",
+        "title": "Bug: memory-core Dreaming cleanup still leaves narrative session trajectory residue on 2026.5.3-1"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 74,
-      "verdict": "yes",
+      "score": 23,
+      "verdict": "no",
       "votePenalty": 6,
-      "evidencePenalty": 0,
+      "evidencePenalty": 51,
       "survivalDays": 0,
       "survivalBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 51,
         "votePenalty": 6,
         "survivalDays": 0,
         "survivalBonus": 0,
-        "score": 74
+        "score": 23
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "browser",
+        "discord",
+        "docker",
+        "feishu",
+        "imessage",
+        "matrix",
+        "memory",
+        "plugin-install",
+        "runtime",
+        "telegram",
+        "tool",
+        "whatsapp"
+      ],
+      "evidence": [
+        {
+          "issue": "openclaw/openclaw#77293",
+          "repo": "openclaw/openclaw",
+          "number": 77293,
+          "url": "https://github.com/openclaw/openclaw/issues/77293",
+          "area": "plugin-install",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.5.3-1 npm package missed install.runtime-*.js and exposed an incompatible plugin API version, breaking official plugin install/update flows."
+        },
+        {
+          "issue": "openclaw/openclaw#80692",
+          "repo": "openclaw/openclaw",
+          "number": 80692,
+          "url": "https://github.com/openclaw/openclaw/issues/80692",
+          "area": "docker",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Docker image 2026.5.3-1 shipped metadata-only channel extensions, so Discord/WhatsApp/LINE/QQBot/Feishu channels did not register."
+        },
+        {
+          "issue": "openclaw/openclaw#77443",
+          "repo": "openclaw/openclaw",
+          "number": 77443,
+          "url": "https://github.com/openclaw/openclaw/issues/77443",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "WhatsApp on Windows 2026.5.3-1 blocked the Node event loop after first inbound message, stalling agent model calls."
+        },
+        {
+          "issue": "openclaw/openclaw#78419",
+          "repo": "openclaw/openclaw",
+          "number": 78419,
+          "url": "https://github.com/openclaw/openclaw/issues/78419",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "WhatsApp health monitor restarted terminally disconnected accounts on 2026.5.3-1, causing restart loops, high heap, and gateway-wide latency."
+        },
+        {
+          "issue": "openclaw/openclaw#77426",
+          "repo": "openclaw/openclaw",
+          "number": 77426,
+          "url": "https://github.com/openclaw/openclaw/issues/77426",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "sessions_yield always returned No session context on MCP/claude-cli runtime path in 2026.5.3-1, breaking subagent handoff flows."
+        },
+        {
+          "issue": "openclaw/openclaw#80819",
+          "repo": "openclaw/openclaw",
+          "number": 80819,
+          "url": "https://github.com/openclaw/openclaw/issues/80819",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Claude CLI live-session bridge ignored control_request can_use_tool on 2026.5.3-1, stalling sessions until timeout."
+        },
+        {
+          "issue": "openclaw/openclaw#77718",
+          "repo": "openclaw/openclaw",
+          "number": 77718,
+          "url": "https://github.com/openclaw/openclaw/issues/77718",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Null agent workspace field caused a crash loop on 2026.5.3-1 and auto-restore did not repair the required field."
+        },
+        {
+          "issue": "openclaw/openclaw#77531",
+          "repo": "openclaw/openclaw",
+          "number": 77531,
+          "url": "https://github.com/openclaw/openclaw/issues/77531",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "CLI transcript persistence regressed on 2026.5.3-1 with Context engine legacy is not registered."
+        },
+        {
+          "issue": "openclaw/openclaw#77566",
+          "repo": "openclaw/openclaw",
+          "number": 77566,
+          "url": "https://github.com/openclaw/openclaw/issues/77566",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Gemini 3.x subagent flows silently hung on 2026.5.3-1 because thoughtSignature handling was still broken across provider replay."
+        },
+        {
+          "issue": "openclaw/openclaw#77642",
+          "repo": "openclaw/openclaw",
+          "number": 77642,
+          "url": "https://github.com/openclaw/openclaw/issues/77642",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "5.3 regression produced duplicate answers and synthetic missing tool result in session history errors on 2026.5.3-1."
+        },
+        {
+          "issue": "openclaw/openclaw#77649",
+          "repo": "openclaw/openclaw",
+          "number": 77649,
+          "url": "https://github.com/openclaw/openclaw/issues/77649",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Model-resolution and auth stages added roughly 20s of latency to every dispatch on 2026.5.3-1."
+        },
+        {
+          "issue": "openclaw/openclaw#77673",
+          "repo": "openclaw/openclaw",
+          "number": 77673,
+          "url": "https://github.com/openclaw/openclaw/issues/77673",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "memory-lancedb npm v2026.5.3 failed to load on OpenClaw 2026.5.3-1 due to a nonexistent plugin-sdk subpath import."
+        },
+        {
+          "issue": "openclaw/openclaw#77744",
+          "repo": "openclaw/openclaw",
+          "number": 77744,
+          "url": "https://github.com/openclaw/openclaw/issues/77744",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Long local llama.cpp requests timed out on 2026.5.3-1 because LLM idle timeout could not be configured correctly."
+        },
+        {
+          "issue": "openclaw/openclaw#77416",
+          "repo": "openclaw/openclaw",
+          "number": 77416,
+          "url": "https://github.com/openclaw/openclaw/issues/77416",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord 2026.5.3-1 channel silently skipped env-backed SecretRef token setups because dist/ sidecar layout was not resolved."
+        },
+        {
+          "issue": "openclaw/openclaw#77503",
+          "repo": "openclaw/openclaw",
+          "number": 77503,
+          "url": "https://github.com/openclaw/openclaw/issues/77503",
+          "area": "imessage",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "iMessage polling broke after upgrading from 2026.5.2 to 2026.5.3-1: messages arrived in DB but gateway did not respond."
+        },
+        {
+          "issue": "openclaw/openclaw#77576",
+          "repo": "openclaw/openclaw",
+          "number": 77576,
+          "url": "https://github.com/openclaw/openclaw/issues/77576",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram group sessions on 2026.5.3-1 routed generated responses to webchat instead of back to Telegram."
+        },
+        {
+          "issue": "openclaw/openclaw#77747",
+          "repo": "openclaw/openclaw",
+          "number": 77747,
+          "url": "https://github.com/openclaw/openclaw/issues/77747",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord gateway on Windows 2026.5.3-1 remained stuck awaiting gateway readiness and never delivered inbound events."
+        },
+        {
+          "issue": "openclaw/openclaw#78135",
+          "repo": "openclaw/openclaw",
+          "number": 78135,
+          "url": "https://github.com/openclaw/openclaw/issues/78135",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Matrix outbound m.room.message events were silently dropped on 2026.5.3-1 after agent replies were generated."
+        },
+        {
+          "issue": "openclaw/openclaw#80120",
+          "repo": "openclaw/openclaw",
+          "number": 80120,
+          "url": "https://github.com/openclaw/openclaw/issues/80120",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Feishu channel plugin was missing after upgrading to 2026.5.3-1, so Feishu messages were not processed."
+        },
+        {
+          "issue": "openclaw/openclaw#77730",
+          "repo": "openclaw/openclaw",
+          "number": 77730,
+          "url": "https://github.com/openclaw/openclaw/issues/77730",
+          "area": "tool",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "File-transfer nodeHostCommands were not advertised by Windows node host on 2026.5.3-1, so file tools failed against that node."
+        },
+        {
+          "issue": "openclaw/openclaw#77733",
+          "repo": "openclaw/openclaw",
+          "number": 77733,
+          "url": "https://github.com/openclaw/openclaw/issues/77733",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Bare /new and /reset no longer triggered persona greetings in 2026.5.3/2026.5.3-1, regressing established reset UX."
+        },
+        {
+          "issue": "openclaw/openclaw#77308",
+          "repo": "openclaw/openclaw",
+          "number": 77308,
+          "url": "https://github.com/openclaw/openclaw/issues/77308",
+          "area": "browser",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Browser plugin on 2026.5.3-1 still imported a stale 2026.4.26 runtime-deps path after update, breaking browser status."
+        },
+        {
+          "issue": "openclaw/openclaw#77350",
+          "repo": "openclaw/openclaw",
+          "number": 77350,
+          "url": "https://github.com/openclaw/openclaw/issues/77350",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "OpenRouter DeepSeek V4 Pro requests failed with invalid reasoning_effort immediately after upgrading to 2026.5.3-1."
+        },
+        {
+          "issue": "openclaw/openclaw#77723",
+          "repo": "openclaw/openclaw",
+          "number": 77723,
+          "url": "https://github.com/openclaw/openclaw/issues/77723",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "memory-core Dreaming cleanup still left session/trajectory residue on 2026.5.3-1."
+        }
+      ]
     },
     "thumbsUp": 1,
     "thumbsDown": 4,
