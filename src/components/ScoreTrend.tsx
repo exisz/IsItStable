@@ -6,10 +6,10 @@ export function ScoreTrend({ versions, packageSlug }: { versions: VersionIssue[]
   const points = versions.slice().reverse();
   if (points.length === 0) return null;
 
-  const width = 720;
+  const width = 920;
   const height = 220;
-  const padX = 46;
-  const padY = 34;
+  const padX = 24;
+  const padY = 30;
   const plotW = width - padX * 2;
   const plotH = height - padY * 2;
   const coords = points.map((v, index) => {
@@ -20,16 +20,16 @@ export function ScoreTrend({ versions, packageSlug }: { versions: VersionIssue[]
   const line = coords.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
 
   return (
-    <section className="border border-[var(--color-border)] rounded-xl p-6 mb-8 bg-[var(--color-card)]">
-      <div className="flex items-end justify-between gap-4 mb-4">
+    <section className="border border-[var(--color-border)] rounded-xl p-3 sm:p-4 mb-8 bg-[var(--color-card)]">
+      <div className="flex items-end justify-between gap-4 mb-3 px-2">
         <div>
           <h2 className="text-sm uppercase tracking-widest text-[var(--color-muted)]">Score history</h2>
           <p className="text-sm text-[var(--color-muted)] mt-1">Higher is less unstable. Click a dot to inspect the version.</p>
         </div>
       </div>
       <div className="overflow-x-auto">
-        <svg viewBox={`0 0 ${width} ${height}`} className="min-w-[620px] w-full h-48" role="img" aria-label="Version score trend">
-          {[25, 50, 75, 100].map((tick) => {
+        <svg viewBox={`0 0 ${width} ${height}`} className="min-w-[760px] w-full h-52" role="img" aria-label="Version score trend">
+          {[0, 15, 30, 45, 60].map((tick) => {
             const y = padY + (1 - tick / 100) * plotH;
             return (
               <g key={tick}>

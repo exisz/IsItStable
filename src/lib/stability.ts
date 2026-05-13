@@ -70,7 +70,7 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     }];
   });
 
-  const baseScore = Number(raw.baseScore ?? 100);
+  const baseScore = Number(raw.baseScore ?? 60);
   const votePenalty = computeVotePenalty(thumbsUp, thumbsDown);
   const evidencePenalty = evidence.reduce((sum, item) => sum + item.penalty, 0);
   const score = computeScore(baseScore, evidencePenalty, votePenalty);
@@ -110,8 +110,8 @@ export function fallbackStabilityScore(thumbsUp: number, thumbsDown: number, ver
   const votePenalty = computeVotePenalty(thumbsUp, thumbsDown);
   return {
     schemaVersion: "isitstable:v1",
-    baseScore: 100,
-    score: computeScore(100, 0, votePenalty),
+    baseScore: 60,
+    score: computeScore(60, 0, votePenalty),
     verdict,
     votePenalty,
     evidencePenalty: 0,

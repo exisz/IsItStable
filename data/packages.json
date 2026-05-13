@@ -231,8 +231,8 @@
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
-        "baseScore": 100,
-        "score": 64,
+        "baseScore": 60,
+        "score": 24,
         "verdict": "no",
         "votePenalty": 0,
         "evidencePenalty": 36,
