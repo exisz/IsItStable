@@ -7,9 +7,9 @@ export function ScoreTrend({ versions, packageSlug }: { versions: VersionIssue[]
   if (points.length === 0) return null;
 
   const width = 720;
-  const height = 180;
-  const padX = 28;
-  const padY = 18;
+  const height = 220;
+  const padX = 46;
+  const padY = 34;
   const plotW = width - padX * 2;
   const plotH = height - padY * 2;
   const coords = points.map((v, index) => {
@@ -39,12 +39,35 @@ export function ScoreTrend({ versions, packageSlug }: { versions: VersionIssue[]
             );
           })}
           <polyline fill="none" stroke="currentColor" className="text-[var(--color-muted)]" strokeWidth="2" points={line} />
-          {coords.map(({ v, x, y }) => (
-            <Link key={v.issueNumber} href={`/${packageSlug}/${v.version}`}>
-              <circle cx={x} cy={y} r="6" fill={scoreTextColor(v.stabilityScore.score)} className="hover:opacity-80 transition-opacity" />
-              <title>{`v${v.version}: ${v.stabilityScore.score}`}</title>
-            </Link>
-          ))}
+          {coords.map(({ v, x, y }, index) => {
+            const labelAbove = index % 2 === 0;
+            const labelY = labelAbove ? y - 12 : y + 20;
+            return (
+              <Link key={v.issueNumber} href={`/${packageSlug}/${v.version}`}>
+                <g className="hover:opacity-80 transition-opacity">
+                  <circle cx={x} cy={y} r="6" fill={scoreTextColor(v.stabilityScore.score)} />
+                  <text
+                    x={x}
+                    y={Math.max(12, Math.min(height - 6, labelY))}
+                    textAnchor="middle"
+                    className="fill-[var(--color-foreground)] text-[10px] font-mono"
+                  >
+                    {`v${v.version}`}
+                  </text>
+                  <text
+                    x={x}
+                    y={Math.max(24, Math.min(height - 6, labelY + 11))}
+                    textAnchor="middle"
+                    fill={scoreTextColor(v.stabilityScore.score)}
+                    className="text-[10px] font-bold"
+                  >
+                    {v.stabilityScore.score}
+                  </text>
+                </g>
+                <title>{`v${v.version}: ${v.stabilityScore.score}`}</title>
+              </Link>
+            );
+          })}
         </svg>
       </div>
     </section>
