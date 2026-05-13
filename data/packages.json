@@ -136,19 +136,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 48,
+        "score": 55,
         "verdict": "no",
         "votePenalty": 0,
         "evidencePenalty": 42,
-        "survivalDays": 5,
-        "survivalBonus": 10,
+        "survivalDays": 6,
+        "survivalBonus": 15,
+        "curated": true,
+        "curatedBonus": 2,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 42,
           "votePenalty": 0,
-          "survivalDays": 5,
-          "survivalBonus": 10,
-          "score": 48
+          "survivalDays": 6,
+          "survivalPointsPerDay": 3,
+          "survivalCreditedDays": 5,
+          "survivalBonus": 15,
+          "curatedBonus": 2,
+          "score": 55
         },
         "affected": [
           "control-ui",
@@ -272,7 +277,7 @@
           }
         ]
       },
-      "thumbsUp": 0,
+      "thumbsUp": 1,
       "thumbsDown": 0,
       "createdAt": "2026-05-07T20:38:57.626Z"
     }

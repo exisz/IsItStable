@@ -40,6 +40,9 @@ function loadScoreSettings(): StabilityScoreSettings {
           pointsPerDay: Number(raw?.stabilityScore?.survivalBonus?.pointsPerDay ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.pointsPerDay),
           maxPoints: Number(raw?.stabilityScore?.survivalBonus?.maxPoints ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.maxPoints),
         },
+        curatedBonus: {
+          points: Number(raw?.stabilityScore?.curatedBonus?.points ?? DEFAULT_STABILITY_SCORE_SETTINGS.curatedBonus.points),
+        },
       };
     } catch {
       _settings = DEFAULT_STABILITY_SCORE_SETTINGS;
@@ -66,6 +69,7 @@ function applyScoreFormula(versions: VersionIssue[]): VersionIssue[] {
         evidencePenalty: current.stabilityScore.evidencePenalty,
         votePenalty: current.stabilityScore.votePenalty,
         survivalDays: computeSurvivalDays(current.createdAt, next?.createdAt),
+        curated: current.stabilityScore.curated === true,
       });
       current.stabilityScore = withFormula(current.stabilityScore, formula);
     }

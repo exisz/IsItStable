@@ -10,11 +10,12 @@ export function StabilityScoreCard({ stabilityScore }: { stabilityScore: Stabili
           <p className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Stability Score</p>
           <ScoreBadge score={s.score} size="xl" />
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 text-sm">
           <MiniStat label="Base" value={String(s.formula.baseScore)} />
           <MiniStat label="Evidence" value={`-${s.formula.evidencePenalty}`} />
           <MiniStat label="Votes" value={`-${s.formula.votePenalty}`} />
           <MiniStat label="Survived" value={`+${s.formula.survivalBonus}`} />
+          <MiniStat label="Curated" value={`+${s.formula.curatedBonus}`} />
         </div>
       </div>
 
@@ -22,9 +23,13 @@ export function StabilityScoreCard({ stabilityScore }: { stabilityScore: Stabili
         <span className="text-[var(--color-foreground)]">{s.formula.baseScore}</span> base
         <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.evidencePenalty}</span> evidence
         <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.votePenalty}</span> votes
-        <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.survivalBonus}</span> days survived
+        <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.survivalBonus}</span> ({s.formula.survivalPointsPerDay}×{s.formula.survivalCreditedDays} days survived)
+        {s.formula.curatedBonus > 0 && (
+          <>
+            <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.curatedBonus}</span> curated
+          </>
+        )}
         <span className="mx-2">=</span><span className="text-[var(--color-foreground)] font-bold">{s.formula.score}</span>
-        <span className="ml-3 text-xs">({s.formula.survivalDays} day{s.formula.survivalDays === 1 ? "" : "s"} before next release)</span>
       </div>
 
       {s.affected.length > 0 && (

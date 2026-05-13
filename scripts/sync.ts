@@ -53,6 +53,9 @@ function loadScoreSettings(): StabilityScoreSettings {
         pointsPerDay: Number(raw?.stabilityScore?.survivalBonus?.pointsPerDay ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.pointsPerDay),
         maxPoints: Number(raw?.stabilityScore?.survivalBonus?.maxPoints ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.maxPoints),
       },
+      curatedBonus: {
+        points: Number(raw?.stabilityScore?.curatedBonus?.points ?? DEFAULT_STABILITY_SCORE_SETTINGS.curatedBonus.points),
+      },
     };
   } catch {
     return DEFAULT_STABILITY_SCORE_SETTINGS;
@@ -76,6 +79,7 @@ function applyScoreFormula(versions: VersionIssue[], settings: StabilityScoreSet
         evidencePenalty: current.stabilityScore.evidencePenalty,
         votePenalty: current.stabilityScore.votePenalty,
         survivalDays: computeSurvivalDays(current.createdAt, next?.createdAt),
+        curated: current.stabilityScore.curated === true,
       });
       current.stabilityScore = withFormula(current.stabilityScore, formula);
     }
@@ -188,6 +192,7 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
 
       // Comment + refs + stability score from body
       const { verdictComment, referencedIssues, stabilityScore } = parseBody(issue.body, thumbsUp, thumbsDown, verdict);
+      stabilityScore.curated = labels.includes("curated:yes");
 
       issues.push({
         issueNumber: issue.number,

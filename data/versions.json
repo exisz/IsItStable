@@ -132,19 +132,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 48,
+      "score": 55,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 42,
-      "survivalDays": 5,
-      "survivalBonus": 10,
+      "survivalDays": 6,
+      "survivalBonus": 15,
+      "curated": true,
+      "curatedBonus": 2,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 42,
         "votePenalty": 0,
-        "survivalDays": 5,
-        "survivalBonus": 10,
-        "score": 48
+        "survivalDays": 6,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 5,
+        "survivalBonus": 15,
+        "curatedBonus": 2,
+        "score": 55
       },
       "affected": [
         "control-ui",
@@ -268,7 +273,7 @@
         }
       ]
     },
-    "thumbsUp": 0,
+    "thumbsUp": 1,
     "thumbsDown": 0,
     "createdAt": "2026-05-07T20:38:57.626Z"
   },
@@ -345,19 +350,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 60,
+      "score": 61,
       "verdict": "no",
       "votePenalty": 8,
       "evidencePenalty": 14,
       "survivalDays": 1,
-      "survivalBonus": 2,
+      "survivalBonus": 3,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 14,
         "votePenalty": 8,
         "survivalDays": 1,
-        "survivalBonus": 2,
-        "score": 60
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
+        "curatedBonus": 0,
+        "score": 61
       },
       "affected": [
         "feishu",
@@ -494,12 +504,17 @@
       "evidencePenalty": 12,
       "survivalDays": 0,
       "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 12,
         "votePenalty": 0,
         "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
         "survivalBonus": 0,
+        "curatedBonus": 0,
         "score": 68
       },
       "affected": [
@@ -716,19 +731,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 65,
+      "score": 66,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 17,
       "survivalDays": 1,
-      "survivalBonus": 2,
+      "survivalBonus": 3,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 17,
         "votePenalty": 0,
         "survivalDays": 1,
-        "survivalBonus": 2,
-        "score": 65
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
+        "curatedBonus": 0,
+        "score": 66
       },
       "affected": [
         "approval-boundary",
@@ -1186,12 +1206,17 @@
       "evidencePenalty": 51,
       "survivalDays": 0,
       "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 51,
         "votePenalty": 6,
         "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
         "survivalBonus": 0,
+        "curatedBonus": 0,
         "score": 23
       },
       "affected": [
@@ -1558,12 +1583,17 @@
       "evidencePenalty": 6,
       "survivalDays": 0,
       "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 6,
         "votePenalty": 0,
         "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
         "survivalBonus": 0,
+        "curatedBonus": 0,
         "score": 74
       },
       "affected": [
@@ -1815,19 +1845,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 44,
+      "score": 45,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 38,
       "survivalDays": 1,
-      "survivalBonus": 2,
+      "survivalBonus": 3,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 38,
         "votePenalty": 0,
         "survivalDays": 1,
-        "survivalBonus": 2,
-        "score": 44
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
+        "curatedBonus": 0,
+        "score": 45
       },
       "affected": [
         "brave-search",
@@ -2136,19 +2171,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 58,
+      "score": 60,
       "verdict": "no",
       "votePenalty": 2,
       "evidencePenalty": 24,
       "survivalDays": 2,
-      "survivalBonus": 4,
+      "survivalBonus": 6,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 24,
         "votePenalty": 2,
         "survivalDays": 2,
-        "survivalBonus": 4,
-        "score": 58
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
+        "curatedBonus": 0,
+        "score": 60
       },
       "affected": [
         "discord",
@@ -2413,12 +2453,17 @@
       "evidencePenalty": 16,
       "survivalDays": 0,
       "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 16,
         "votePenalty": 0,
         "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
         "survivalBonus": 0,
+        "curatedBonus": 0,
         "score": 64
       },
       "affected": [
@@ -2727,19 +2772,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 36,
+      "score": 37,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 46,
       "survivalDays": 1,
-      "survivalBonus": 2,
+      "survivalBonus": 3,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 46,
         "votePenalty": 0,
         "survivalDays": 1,
-        "survivalBonus": 2,
-        "score": 36
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
+        "curatedBonus": 0,
+        "score": 37
       },
       "affected": [
         "browser",
@@ -2988,12 +3038,17 @@
       "evidencePenalty": 11,
       "survivalDays": 0,
       "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 11,
         "votePenalty": 2,
         "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
         "survivalBonus": 0,
+        "curatedBonus": 0,
         "score": 67
       },
       "affected": [
@@ -3124,19 +3179,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 74,
+      "score": 75,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 8,
       "survivalDays": 1,
-      "survivalBonus": 2,
+      "survivalBonus": 3,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 8,
         "votePenalty": 0,
         "survivalDays": 1,
-        "survivalBonus": 2,
-        "score": 74
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
+        "curatedBonus": 0,
+        "score": 75
       },
       "affected": [
         "gateway",
@@ -3205,19 +3265,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 82,
+      "score": 83,
       "verdict": "yes",
       "votePenalty": 0,
       "evidencePenalty": 0,
       "survivalDays": 1,
-      "survivalBonus": 2,
+      "survivalBonus": 3,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
         "survivalDays": 1,
-        "survivalBonus": 2,
-        "score": 82
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
+        "curatedBonus": 0,
+        "score": 83
       },
       "affected": [],
       "evidence": []

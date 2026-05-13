@@ -19,6 +19,9 @@ export interface StabilityScoreSettings {
     pointsPerDay: number;
     maxPoints: number;
   };
+  curatedBonus: {
+    points: number;
+  };
 }
 
 export interface StabilityFormula {
@@ -26,7 +29,10 @@ export interface StabilityFormula {
   evidencePenalty: number;
   votePenalty: number;
   survivalDays: number;
+  survivalPointsPerDay: number;
+  survivalCreditedDays: number;
   survivalBonus: number;
+  curatedBonus: number;
   score: number;
 }
 
@@ -39,6 +45,8 @@ export interface StabilityScore {
   evidencePenalty: number;
   survivalDays: number;
   survivalBonus: number;
+  curated: boolean;
+  curatedBonus: number;
   formula: StabilityFormula;
   affected: string[];
   evidence: StabilityEvidence[];
@@ -48,8 +56,11 @@ export interface StabilityScore {
 export const DEFAULT_STABILITY_SCORE_SETTINGS: StabilityScoreSettings = {
   baseScore: 80,
   survivalBonus: {
-    pointsPerDay: 2,
-    maxPoints: 10,
+    pointsPerDay: 3,
+    maxPoints: 15,
+  },
+  curatedBonus: {
+    points: 2,
   },
 };
 
@@ -85,17 +96,25 @@ export function computeFormula(input: {
   evidencePenalty: number;
   votePenalty: number;
   survivalDays?: number;
+  curated?: boolean;
 }): StabilityFormula {
   const settings = input.settings ?? DEFAULT_STABILITY_SCORE_SETTINGS;
   const survivalDays = input.survivalDays ?? 0;
   const survivalBonus = Math.min(settings.survivalBonus.maxPoints, survivalDays * settings.survivalBonus.pointsPerDay);
-  const score = Math.max(0, Math.min(100, settings.baseScore - input.evidencePenalty - input.votePenalty + survivalBonus));
+  const survivalCreditedDays = settings.survivalBonus.pointsPerDay > 0
+    ? Math.floor(survivalBonus / settings.survivalBonus.pointsPerDay)
+    : 0;
+  const curatedBonus = input.curated ? settings.curatedBonus.points : 0;
+  const score = Math.max(0, Math.min(100, settings.baseScore - input.evidencePenalty - input.votePenalty + survivalBonus + curatedBonus));
   return {
     baseScore: settings.baseScore,
     evidencePenalty: input.evidencePenalty,
     votePenalty: input.votePenalty,
     survivalDays,
+    survivalPointsPerDay: settings.survivalBonus.pointsPerDay,
+    survivalCreditedDays,
     survivalBonus,
+    curatedBonus,
     score,
   };
 }
@@ -109,6 +128,7 @@ export function withFormula(score: StabilityScore, formula: StabilityFormula): S
     evidencePenalty: formula.evidencePenalty,
     survivalDays: formula.survivalDays,
     survivalBonus: formula.survivalBonus,
+    curatedBonus: formula.curatedBonus,
     formula,
   };
 }
@@ -136,7 +156,8 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
 
   const votePenalty = computeVotePenalty(thumbsUp, thumbsDown);
   const evidencePenalty = evidence.reduce((sum, item) => sum + item.penalty, 0);
-  const formula = computeFormula({ evidencePenalty, votePenalty });
+  const curated = raw.curated === true;
+  const formula = computeFormula({ evidencePenalty, votePenalty, curated });
   const affected = Array.isArray(raw.affected)
     ? raw.affected.filter((item): item is string => typeof item === "string")
     : Array.from(new Set(evidence.map((item) => item.area).filter(Boolean)));
@@ -154,6 +175,8 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     evidencePenalty,
     survivalDays: formula.survivalDays,
     survivalBonus: formula.survivalBonus,
+    curated,
+    curatedBonus: formula.curatedBonus,
     formula,
     affected,
     evidence,
@@ -184,6 +207,8 @@ export function fallbackStabilityScore(thumbsUp: number, thumbsDown: number, ver
     evidencePenalty: 0,
     survivalDays: formula.survivalDays,
     survivalBonus: formula.survivalBonus,
+    curated: false,
+    curatedBonus: formula.curatedBonus,
     formula,
     affected: [],
     evidence: [],

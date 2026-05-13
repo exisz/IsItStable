@@ -2,8 +2,11 @@
   "stabilityScore": {
     "baseScore": 80,
     "survivalBonus": {
-      "pointsPerDay": 2,
-      "maxPoints": 10
+      "pointsPerDay": 3,
+      "maxPoints": 15
+    },
+    "curatedBonus": {
+      "points": 2
     }
   }
 }
