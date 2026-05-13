@@ -1202,18 +1202,354 @@
     "version": "2026.5.2",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "yes",
-    "verdictComment": "No major evidence yet. The release gets to keep its shoes on.",
-    "referencedIssues": [],
+    "verdict": "no",
+    "verdictComment": "Not a ghost town — just an under-scanned release. v2026.5.2 had gateway, compaction, upgrade, and plugin-path regressions hiding in plain sight.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77095,
+        "url": "https://github.com/openclaw/openclaw/issues/77095",
+        "title": "[5.2] Gateway crashes after ~12h uptime: consumeGatewayRestartIntentPayloadSync is not a function, then supervisor downgrade leaves install schema-incompatible"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76467,
+        "url": "https://github.com/openclaw/openclaw/issues/76467",
+        "title": "Gateway becomes completely unresponsive after compaction triggers"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76421,
+        "url": "https://github.com/openclaw/openclaw/issues/76421",
+        "title": "[Bug] sessions.list/send gateway timeout after event loop stall (v2026.5.2)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76425,
+        "url": "https://github.com/openclaw/openclaw/issues/76425",
+        "title": "Module Not Found After Upgrading to 2026.5.2 (ERR_MODULE_NOT_FOUND)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77012,
+        "url": "https://github.com/openclaw/openclaw/issues/77012",
+        "title": "[Bug]: WebChat session transcript overwritten on every turn (5.2 regression — SessionManager removal)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76586,
+        "url": "https://github.com/openclaw/openclaw/issues/76586",
+        "title": "[5.2] Upgrade path broken for users with externalized plugins in config: install location mismatch, doctor --fix unreachable, downgrade blocked by meta.lastTouchedVersion"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76441,
+        "url": "https://github.com/openclaw/openclaw/issues/76441",
+        "title": "v2026.5.2: each `openclaw plugins install` and `openclaw doctor --fix` wipes other previously-installed `@openclaw/*` packages from `~/.openclaw/npm/node_modules`"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77800,
+        "url": "https://github.com/openclaw/openclaw/issues/77800",
+        "title": "[Bug]: Breaking change: api.registerTool() silently fails without contracts.tools since 2026.5.2"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77116,
+        "url": "https://github.com/openclaw/openclaw/issues/77116",
+        "title": "Feishu channel crashes after upgrading to 2026.5.2 — appId/appSecret fields incompatible"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77106,
+        "url": "https://github.com/openclaw/openclaw/issues/77106",
+        "title": "[Bug]: Upgrade to 2026.5.2 silently breaks Discord routing — installs.json records plugins as installed without fetching, and migration doesn't populate plugins.allow"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77526,
+        "url": "https://github.com/openclaw/openclaw/issues/77526",
+        "title": "Discord channel: gateway WebSocket never reaches `ready` on 2026.5.2 and 2026.5.3 — inbound `messageCreate` events never dispatch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76935,
+        "url": "https://github.com/openclaw/openclaw/issues/76935",
+        "title": "QQ Bot sends verbose/repetitive replies after upgrading to 2026.5.2"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76852,
+        "url": "https://github.com/openclaw/openclaw/issues/76852",
+        "title": "[Bug]: 2026.5.2: Periodic Telegram getMe 10s fetch-timeout storm on networks without IPv6 egress (regression vs 2026.4.26)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76720,
+        "url": "https://github.com/openclaw/openclaw/issues/76720",
+        "title": "@openclaw/brave-plugin@2026.5.2 published without compiled dist/ — web search provider fails to load"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77095,
+        "url": "https://github.com/openclaw/openclaw/issues/77095",
+        "title": "[5.2] Gateway crashes after ~12h uptime: consumeGatewayRestartIntentPayloadSync is not a function, then supervisor downgrade leaves install schema-incompatible"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76467,
+        "url": "https://github.com/openclaw/openclaw/issues/76467",
+        "title": "Gateway becomes completely unresponsive after compaction triggers"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76421,
+        "url": "https://github.com/openclaw/openclaw/issues/76421",
+        "title": "[Bug] sessions.list/send gateway timeout after event loop stall (v2026.5.2)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76425,
+        "url": "https://github.com/openclaw/openclaw/issues/76425",
+        "title": "Module Not Found After Upgrading to 2026.5.2 (ERR_MODULE_NOT_FOUND)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77012,
+        "url": "https://github.com/openclaw/openclaw/issues/77012",
+        "title": "[Bug]: WebChat session transcript overwritten on every turn (5.2 regression — SessionManager removal)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76586,
+        "url": "https://github.com/openclaw/openclaw/issues/76586",
+        "title": "[5.2] Upgrade path broken for users with externalized plugins in config: install location mismatch, doctor --fix unreachable, downgrade blocked by meta.lastTouchedVersion"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76441,
+        "url": "https://github.com/openclaw/openclaw/issues/76441",
+        "title": "v2026.5.2: each `openclaw plugins install` and `openclaw doctor --fix` wipes other previously-installed `@openclaw/*` packages from `~/.openclaw/npm/node_modules`"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77800,
+        "url": "https://github.com/openclaw/openclaw/issues/77800",
+        "title": "[Bug]: Breaking change: api.registerTool() silently fails without contracts.tools since 2026.5.2"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77116,
+        "url": "https://github.com/openclaw/openclaw/issues/77116",
+        "title": "Feishu channel crashes after upgrading to 2026.5.2 — appId/appSecret fields incompatible"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77106,
+        "url": "https://github.com/openclaw/openclaw/issues/77106",
+        "title": "[Bug]: Upgrade to 2026.5.2 silently breaks Discord routing — installs.json records plugins as installed without fetching, and migration doesn't populate plugins.allow"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 77526,
+        "url": "https://github.com/openclaw/openclaw/issues/77526",
+        "title": "Discord channel: gateway WebSocket never reaches `ready` on 2026.5.2 and 2026.5.3 — inbound `messageCreate` events never dispatch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76935,
+        "url": "https://github.com/openclaw/openclaw/issues/76935",
+        "title": "QQ Bot sends verbose/repetitive replies after upgrading to 2026.5.2"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76852,
+        "url": "https://github.com/openclaw/openclaw/issues/76852",
+        "title": "[Bug]: 2026.5.2: Periodic Telegram getMe 10s fetch-timeout storm on networks without IPv6 egress (regression vs 2026.4.26)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 76720,
+        "url": "https://github.com/openclaw/openclaw/issues/76720",
+        "title": "@openclaw/brave-plugin@2026.5.2 published without compiled dist/ — web search provider fails to load"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 100,
-      "score": 100,
-      "verdict": "yes",
+      "score": 62,
+      "verdict": "no",
       "votePenalty": 0,
-      "evidencePenalty": 0,
-      "affected": [],
-      "evidence": []
+      "evidencePenalty": 38,
+      "affected": [
+        "brave-search",
+        "compaction",
+        "discord",
+        "feishu",
+        "gateway",
+        "plugin-install",
+        "plugin-tools",
+        "qqbot",
+        "telegram",
+        "upgrade",
+        "webchat"
+      ],
+      "evidence": [
+        {
+          "issue": "openclaw/openclaw#77095",
+          "repo": "openclaw/openclaw",
+          "number": 77095,
+          "url": "https://github.com/openclaw/openclaw/issues/77095",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Gateway crashes after ~12h, then supervisor downgrade leaves install schema-incompatible"
+        },
+        {
+          "issue": "openclaw/openclaw#76467",
+          "repo": "openclaw/openclaw",
+          "number": 76467,
+          "url": "https://github.com/openclaw/openclaw/issues/76467",
+          "area": "compaction",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Gateway becomes completely unresponsive after compaction; restart required"
+        },
+        {
+          "issue": "openclaw/openclaw#76421",
+          "repo": "openclaw/openclaw",
+          "number": 76421,
+          "url": "https://github.com/openclaw/openclaw/issues/76421",
+          "area": "compaction",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "sessions.list/send gateway timeout after event-loop stall during compaction"
+        },
+        {
+          "issue": "openclaw/openclaw#76425",
+          "repo": "openclaw/openclaw",
+          "number": 76425,
+          "url": "https://github.com/openclaw/openclaw/issues/76425",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "ERR_MODULE_NOT_FOUND after upgrading to 2026.5.2; core dispatch/runtime crash"
+        },
+        {
+          "issue": "openclaw/openclaw#77012",
+          "repo": "openclaw/openclaw",
+          "number": 77012,
+          "url": "https://github.com/openclaw/openclaw/issues/77012",
+          "area": "webchat",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "WebChat transcript overwritten on every turn; conversation history/data loss regression"
+        },
+        {
+          "issue": "openclaw/openclaw#76586",
+          "repo": "openclaw/openclaw",
+          "number": 76586,
+          "url": "https://github.com/openclaw/openclaw/issues/76586",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Upgrade path broken for externalized plugins; recovery and downgrade path blocked"
+        },
+        {
+          "issue": "openclaw/openclaw#76441",
+          "repo": "openclaw/openclaw",
+          "number": 76441,
+          "url": "https://github.com/openclaw/openclaw/issues/76441",
+          "area": "plugin-install",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Plugin install/doctor --fix wipes previously installed @openclaw plugin siblings"
+        },
+        {
+          "issue": "openclaw/openclaw#77800",
+          "repo": "openclaw/openclaw",
+          "number": 77800,
+          "url": "https://github.com/openclaw/openclaw/issues/77800",
+          "area": "plugin-tools",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "api.registerTool silently fails without contracts.tools since 2026.5.2"
+        },
+        {
+          "issue": "openclaw/openclaw#77116",
+          "repo": "openclaw/openclaw",
+          "number": 77116,
+          "url": "https://github.com/openclaw/openclaw/issues/77116",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Feishu channel crashes after upgrade due incompatible appId/appSecret schema"
+        },
+        {
+          "issue": "openclaw/openclaw#77106",
+          "repo": "openclaw/openclaw",
+          "number": 77106,
+          "url": "https://github.com/openclaw/openclaw/issues/77106",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Upgrade to 2026.5.2 silently breaks Discord routing/plugin loading"
+        },
+        {
+          "issue": "openclaw/openclaw#77526",
+          "repo": "openclaw/openclaw",
+          "number": 77526,
+          "url": "https://github.com/openclaw/openclaw/issues/77526",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord gateway never reaches ready on 2026.5.2/2026.5.3; inbound events never dispatch"
+        },
+        {
+          "issue": "openclaw/openclaw#76935",
+          "repo": "openclaw/openclaw",
+          "number": 76935,
+          "url": "https://github.com/openclaw/openclaw/issues/76935",
+          "area": "qqbot",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "QQ Bot sends verbose/repetitive replies after upgrading to 2026.5.2"
+        },
+        {
+          "issue": "openclaw/openclaw#76852",
+          "repo": "openclaw/openclaw",
+          "number": 76852,
+          "url": "https://github.com/openclaw/openclaw/issues/76852",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram getMe fetch-timeout storm on no-IPv6 networks in 2026.5.2"
+        },
+        {
+          "issue": "openclaw/openclaw#76720",
+          "repo": "openclaw/openclaw",
+          "number": 76720,
+          "url": "https://github.com/openclaw/openclaw/issues/76720",
+          "area": "brave-search",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Brave plugin package published without compiled dist; web search provider fails to load"
+        }
+      ]
     },
     "thumbsUp": 5,
     "thumbsDown": 1,
