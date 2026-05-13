@@ -28,6 +28,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 81490,
+        "url": "https://github.com/openclaw/openclaw/issues/81490",
+        "title": "[Bug]: subagent completion spawns a fresh run on the parent's route instead of resuming the yielded session (supersedes #80310)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81491,
+        "url": "https://github.com/openclaw/openclaw/issues/81491",
+        "title": "Gateway should self-SIGTERM after K=3 failed Slack reconnects (silent 15h outage in v2026.5.7)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81484,
+        "url": "https://github.com/openclaw/openclaw/issues/81484",
+        "title": "[Bug]: OpenClaw 2026.5.7 Discord guild reply regression: malformed send payloads and repeated outbound loops"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 81281,
         "url": "https://github.com/openclaw/openclaw/issues/81281",
         "title": "[Bug]: OpenAI-completions prompt_cache_key regression — caching worked in 2026.3.x, broken in 2026.5.x"
@@ -70,6 +88,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 81490,
+        "url": "https://github.com/openclaw/openclaw/issues/81490",
+        "title": "[Bug]: subagent completion spawns a fresh run on the parent's route instead of resuming the yielded session (supersedes #80310)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81491,
+        "url": "https://github.com/openclaw/openclaw/issues/81491",
+        "title": "Gateway should self-SIGTERM after K=3 failed Slack reconnects (silent 15h outage in v2026.5.7)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81484,
+        "url": "https://github.com/openclaw/openclaw/issues/81484",
+        "title": "[Bug]: OpenClaw 2026.5.7 Discord guild reply regression: malformed send payloads and repeated outbound loops"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 81281,
         "url": "https://github.com/openclaw/openclaw/issues/81281",
         "title": "[Bug]: OpenAI-completions prompt_cache_key regression — caching worked in 2026.3.x, broken in 2026.5.x"
@@ -96,26 +132,28 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 62,
+      "score": 48,
       "verdict": "no",
       "votePenalty": 0,
-      "evidencePenalty": 28,
+      "evidencePenalty": 42,
       "survivalDays": 5,
       "survivalBonus": 10,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 28,
+        "evidencePenalty": 42,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalBonus": 10,
-        "score": 62
+        "score": 48
       },
       "affected": [
         "control-ui",
         "discord",
         "runtime",
         "security",
-        "approval-boundary"
+        "approval-boundary",
+        "slack",
+        "subagent-runtime"
       ],
       "evidence": [
         {
@@ -150,6 +188,39 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Critical npm audit advisory via @mistralai/mistralai malware — blocks downstream package installs"
+        },
+        {
+          "issue": "openclaw/openclaw#81490",
+          "repo": "openclaw/openclaw",
+          "number": 81490,
+          "url": "https://github.com/openclaw/openclaw/issues/81490",
+          "area": "subagent-runtime",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Subagent completion never resumes yielded parent — spawns fresh run instead, orphans paused session"
+        },
+        {
+          "issue": "openclaw/openclaw#81491",
+          "repo": "openclaw/openclaw",
+          "number": 81491,
+          "url": "https://github.com/openclaw/openclaw/issues/81491",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Silent Slack provider death — gateway health-monitor can't recover; caused 15h+ outage; self-SIGTERM needed"
+        },
+        {
+          "issue": "openclaw/openclaw#81484",
+          "repo": "openclaw/openclaw",
+          "number": 81484,
+          "url": "https://github.com/openclaw/openclaw/issues/81484",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Discord guild reply regression — malformed send payloads, duplicates, runaway loops; guild-only, DMs fine"
         },
         {
           "issue": "openclaw/openclaw#81281",
