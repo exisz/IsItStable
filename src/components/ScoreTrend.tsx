@@ -29,7 +29,7 @@ export function ScoreTrend({ versions, packageSlug }: { versions: VersionIssue[]
       </div>
       <div className="overflow-x-auto">
         <svg viewBox={`0 0 ${width} ${height}`} className="min-w-[760px] w-full h-52" role="img" aria-label="Version score trend">
-          {[0, 15, 30, 45, 60].map((tick) => {
+          {[0, 20, 40, 60, 80].map((tick) => {
             const y = padY + (1 - tick / 100) * plotH;
             return (
               <g key={tick}>

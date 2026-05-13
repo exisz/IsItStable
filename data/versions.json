@@ -227,11 +227,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 24,
+      "baseScore": 80,
+      "score": 54,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 36,
+      "survivalDays": 5,
+      "survivalBonus": 10,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 36,
+        "votePenalty": 0,
+        "survivalDays": 5,
+        "survivalBonus": 10,
+        "score": 54
+      },
       "affected": [
         "compaction",
         "discord",
@@ -523,11 +533,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 38,
+      "baseScore": 80,
+      "score": 60,
       "verdict": "no",
       "votePenalty": 8,
       "evidencePenalty": 14,
+      "survivalDays": 1,
+      "survivalBonus": 2,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 14,
+        "votePenalty": 8,
+        "survivalDays": 1,
+        "survivalBonus": 2,
+        "score": 60
+      },
       "affected": [
         "feishu",
         "gateway",
@@ -656,11 +676,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 48,
+      "baseScore": 80,
+      "score": 68,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 12,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 12,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalBonus": 0,
+        "score": 68
+      },
       "affected": [
         "approval-boundary",
         "runtime",
@@ -874,11 +904,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 43,
+      "baseScore": 80,
+      "score": 65,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 17,
+      "survivalDays": 1,
+      "survivalBonus": 2,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 17,
+        "votePenalty": 0,
+        "survivalDays": 1,
+        "survivalBonus": 2,
+        "score": 65
+      },
       "affected": [
         "approval-boundary",
         "discord",
@@ -1039,11 +1079,21 @@
     "referencedIssues": [],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 54,
+      "baseScore": 80,
+      "score": 74,
       "verdict": "yes",
       "votePenalty": 6,
       "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 6,
+        "survivalDays": 0,
+        "survivalBonus": 0,
+        "score": 74
+      },
       "affected": [],
       "evidence": []
     },
@@ -1123,11 +1173,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 54,
+      "baseScore": 80,
+      "score": 74,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 6,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 6,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalBonus": 0,
+        "score": 74
+      },
       "affected": [
         "discord",
         "runtime",
@@ -1376,11 +1436,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 22,
+      "baseScore": 80,
+      "score": 44,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 38,
+      "survivalDays": 1,
+      "survivalBonus": 2,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 38,
+        "votePenalty": 0,
+        "survivalDays": 1,
+        "survivalBonus": 2,
+        "score": 44
+      },
       "affected": [
         "brave-search",
         "compaction",
@@ -1687,11 +1757,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 34,
+      "baseScore": 80,
+      "score": 58,
       "verdict": "no",
       "votePenalty": 2,
       "evidencePenalty": 24,
+      "survivalDays": 2,
+      "survivalBonus": 4,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 24,
+        "votePenalty": 2,
+        "survivalDays": 2,
+        "survivalBonus": 4,
+        "score": 58
+      },
       "affected": [
         "discord",
         "gateway",
@@ -1948,11 +2028,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 44,
+      "baseScore": 80,
+      "score": 64,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 16,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 16,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalBonus": 0,
+        "score": 64
+      },
       "affected": [
         "browser",
         "feishu",
@@ -2258,11 +2348,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 14,
+      "baseScore": 80,
+      "score": 36,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 46,
+      "survivalDays": 1,
+      "survivalBonus": 2,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 46,
+        "votePenalty": 0,
+        "survivalDays": 1,
+        "survivalBonus": 2,
+        "score": 36
+      },
       "affected": [
         "browser",
         "gateway",
@@ -2503,11 +2603,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 47,
+      "baseScore": 80,
+      "score": 67,
       "verdict": "no",
       "votePenalty": 2,
       "evidencePenalty": 11,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 11,
+        "votePenalty": 2,
+        "survivalDays": 0,
+        "survivalBonus": 0,
+        "score": 67
+      },
       "affected": [
         "gateway",
         "runtime",
@@ -2635,11 +2745,21 @@
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 52,
+      "baseScore": 80,
+      "score": 74,
       "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 8,
+      "survivalDays": 1,
+      "survivalBonus": 2,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 8,
+        "votePenalty": 0,
+        "survivalDays": 1,
+        "survivalBonus": 2,
+        "score": 74
+      },
       "affected": [
         "gateway",
         "runtime"
@@ -2706,11 +2826,21 @@
     "referencedIssues": [],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
-      "baseScore": 60,
-      "score": 60,
+      "baseScore": 80,
+      "score": 82,
       "verdict": "yes",
       "votePenalty": 0,
       "evidencePenalty": 0,
+      "survivalDays": 1,
+      "survivalBonus": 2,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 1,
+        "survivalBonus": 2,
+        "score": 82
+      },
       "affected": [],
       "evidence": []
     },

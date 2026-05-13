@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import { fallbackStabilityScore, type StabilityScore } from "./stability";
+import { computeFormula, computeSurvivalDays, DEFAULT_STABILITY_SCORE_SETTINGS, fallbackStabilityScore, withFormula, type StabilityScore, type StabilityScoreSettings } from "./stability";
 
 export interface VersionIssue {
   issueNumber: number;
@@ -28,14 +28,59 @@ const DATA_DIR = join(process.cwd(), "data");
 
 let _versions: VersionIssue[] | null = null;
 let _packages: PackageSummary[] | null = null;
+let _settings: StabilityScoreSettings | null = null;
+
+function loadScoreSettings(): StabilityScoreSettings {
+  if (!_settings) {
+    try {
+      const raw = JSON.parse(readFileSync(join(DATA_DIR, "settings.json"), "utf-8"));
+      _settings = {
+        baseScore: Number(raw?.stabilityScore?.baseScore ?? DEFAULT_STABILITY_SCORE_SETTINGS.baseScore),
+        survivalBonus: {
+          pointsPerDay: Number(raw?.stabilityScore?.survivalBonus?.pointsPerDay ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.pointsPerDay),
+          maxPoints: Number(raw?.stabilityScore?.survivalBonus?.maxPoints ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.maxPoints),
+        },
+      };
+    } catch {
+      _settings = DEFAULT_STABILITY_SCORE_SETTINGS;
+    }
+  }
+  return _settings;
+}
+
+function applyScoreFormula(versions: VersionIssue[]): VersionIssue[] {
+  const settings = loadScoreSettings();
+  const byPkg = new Map<string, VersionIssue[]>();
+  for (const v of versions) {
+    if (!byPkg.has(v.packageSlug)) byPkg.set(v.packageSlug, []);
+    byPkg.get(v.packageSlug)!.push(v);
+  }
+
+  for (const pkgVersions of byPkg.values()) {
+    const chronological = [...pkgVersions].sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
+    for (let i = 0; i < chronological.length; i++) {
+      const current = chronological[i];
+      const next = chronological[i + 1];
+      const formula = computeFormula({
+        settings,
+        evidencePenalty: current.stabilityScore.evidencePenalty,
+        votePenalty: current.stabilityScore.votePenalty,
+        survivalDays: computeSurvivalDays(current.createdAt, next?.createdAt),
+      });
+      current.stabilityScore = withFormula(current.stabilityScore, formula);
+    }
+  }
+
+  return versions;
+}
 
 function loadVersions(): VersionIssue[] {
   if (!_versions) {
     const raw = JSON.parse(readFileSync(join(DATA_DIR, "versions.json"), "utf-8")) as VersionIssue[];
-    _versions = raw.map((v) => ({
+    _versions = applyScoreFormula(raw.map((v) => ({
       ...v,
       stabilityScore: v.stabilityScore ?? fallbackStabilityScore(v.thumbsUp ?? 0, v.thumbsDown ?? 0, v.verdict),
-    }));
+    })));
   }
   return _versions!;
 }

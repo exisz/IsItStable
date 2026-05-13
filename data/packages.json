@@ -231,11 +231,21 @@
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
-        "baseScore": 60,
-        "score": 24,
+        "baseScore": 80,
+        "score": 54,
         "verdict": "no",
         "votePenalty": 0,
         "evidencePenalty": 36,
+        "survivalDays": 5,
+        "survivalBonus": 10,
+        "formula": {
+          "baseScore": 80,
+          "evidencePenalty": 36,
+          "votePenalty": 0,
+          "survivalDays": 5,
+          "survivalBonus": 10,
+          "score": 54
+        },
         "affected": [
           "compaction",
           "discord",

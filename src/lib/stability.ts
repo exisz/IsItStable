@@ -13,6 +13,23 @@ export interface StabilityEvidence {
   reason: string;
 }
 
+export interface StabilityScoreSettings {
+  baseScore: number;
+  survivalBonus: {
+    pointsPerDay: number;
+    maxPoints: number;
+  };
+}
+
+export interface StabilityFormula {
+  baseScore: number;
+  evidencePenalty: number;
+  votePenalty: number;
+  survivalDays: number;
+  survivalBonus: number;
+  score: number;
+}
+
 export interface StabilityScore {
   schemaVersion: "isitstable:v1";
   baseScore: number;
@@ -20,10 +37,21 @@ export interface StabilityScore {
   verdict: StabilityVerdict;
   votePenalty: number;
   evidencePenalty: number;
+  survivalDays: number;
+  survivalBonus: number;
+  formula: StabilityFormula;
   affected: string[];
   evidence: StabilityEvidence[];
   notes?: string;
 }
+
+export const DEFAULT_STABILITY_SCORE_SETTINGS: StabilityScoreSettings = {
+  baseScore: 80,
+  survivalBonus: {
+    pointsPerDay: 2,
+    maxPoints: 10,
+  },
+};
 
 const SCORE_BLOCK_RE = /<!--\s*isitstable:v1\s*([\s\S]*?)\s*-->/m;
 
@@ -41,12 +69,48 @@ function parseIssueRef(raw: string): { repo: string; number: number; url: string
   };
 }
 
-function computeVotePenalty(thumbsUp: number, thumbsDown: number): number {
+export function computeVotePenalty(thumbsUp: number, thumbsDown: number): number {
   return Math.max(0, thumbsDown - thumbsUp) * 2;
 }
 
-function computeScore(baseScore: number, evidencePenalty: number, votePenalty: number): number {
-  return Math.max(0, Math.min(100, baseScore - evidencePenalty - votePenalty));
+export function computeSurvivalDays(createdAt: string, nextCreatedAt?: string, now = new Date()): number {
+  const start = new Date(createdAt).getTime();
+  const end = nextCreatedAt ? new Date(nextCreatedAt).getTime() : now.getTime();
+  if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return 0;
+  return Math.max(0, Math.floor((end - start) / 86_400_000));
+}
+
+export function computeFormula(input: {
+  settings?: StabilityScoreSettings;
+  evidencePenalty: number;
+  votePenalty: number;
+  survivalDays?: number;
+}): StabilityFormula {
+  const settings = input.settings ?? DEFAULT_STABILITY_SCORE_SETTINGS;
+  const survivalDays = input.survivalDays ?? 0;
+  const survivalBonus = Math.min(settings.survivalBonus.maxPoints, survivalDays * settings.survivalBonus.pointsPerDay);
+  const score = Math.max(0, Math.min(100, settings.baseScore - input.evidencePenalty - input.votePenalty + survivalBonus));
+  return {
+    baseScore: settings.baseScore,
+    evidencePenalty: input.evidencePenalty,
+    votePenalty: input.votePenalty,
+    survivalDays,
+    survivalBonus,
+    score,
+  };
+}
+
+export function withFormula(score: StabilityScore, formula: StabilityFormula): StabilityScore {
+  return {
+    ...score,
+    baseScore: formula.baseScore,
+    score: formula.score,
+    votePenalty: formula.votePenalty,
+    evidencePenalty: formula.evidencePenalty,
+    survivalDays: formula.survivalDays,
+    survivalBonus: formula.survivalBonus,
+    formula,
+  };
 }
 
 function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: number, fallbackVerdict: StabilityVerdict): StabilityScore | null {
@@ -70,10 +134,9 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     }];
   });
 
-  const baseScore = Number(raw.baseScore ?? 60);
   const votePenalty = computeVotePenalty(thumbsUp, thumbsDown);
   const evidencePenalty = evidence.reduce((sum, item) => sum + item.penalty, 0);
-  const score = computeScore(baseScore, evidencePenalty, votePenalty);
+  const formula = computeFormula({ evidencePenalty, votePenalty });
   const affected = Array.isArray(raw.affected)
     ? raw.affected.filter((item): item is string => typeof item === "string")
     : Array.from(new Set(evidence.map((item) => item.area).filter(Boolean)));
@@ -84,11 +147,14 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
 
   return {
     schemaVersion: "isitstable:v1",
-    baseScore,
-    score,
+    baseScore: formula.baseScore,
+    score: formula.score,
     verdict,
     votePenalty,
     evidencePenalty,
+    survivalDays: formula.survivalDays,
+    survivalBonus: formula.survivalBonus,
+    formula,
     affected,
     evidence,
     notes: typeof raw.notes === "string" ? raw.notes : undefined,
@@ -108,13 +174,17 @@ export function parseStabilityBlock(body: string | null, thumbsUp: number, thumb
 
 export function fallbackStabilityScore(thumbsUp: number, thumbsDown: number, verdict: StabilityVerdict): StabilityScore {
   const votePenalty = computeVotePenalty(thumbsUp, thumbsDown);
+  const formula = computeFormula({ evidencePenalty: 0, votePenalty });
   return {
     schemaVersion: "isitstable:v1",
-    baseScore: 60,
-    score: computeScore(60, 0, votePenalty),
+    baseScore: formula.baseScore,
+    score: formula.score,
     verdict,
     votePenalty,
     evidencePenalty: 0,
+    survivalDays: formula.survivalDays,
+    survivalBonus: formula.survivalBonus,
+    formula,
     affected: [],
     evidence: [],
   };

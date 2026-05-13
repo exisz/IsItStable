@@ -1,13 +1,14 @@
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
-import { fallbackStabilityScore, parseStabilityBlock, type StabilityScore } from "../src/lib/stability";
+import { computeFormula, computeSurvivalDays, DEFAULT_STABILITY_SCORE_SETTINGS, fallbackStabilityScore, parseStabilityBlock, withFormula, type StabilityScore, type StabilityScoreSettings } from "../src/lib/stability";
 
 const REPO_OWNER = "exisz";
 const REPO_NAME = "IsItStable";
 const GITHUB_API = "https://api.github.com";
 const __dirname = typeof import.meta.dirname === "string" ? import.meta.dirname : join(fileURLToPath(import.meta.url), "..");
 const DATA_DIR = join(__dirname, "..", "data");
+const SETTINGS_PATH = join(DATA_DIR, "settings.json");
 const FIXED_SPONSORS = [
   {
     name: "Exis",
@@ -41,6 +42,44 @@ interface PackageSummary {
   slug: string;
   displayName: string;
   latestVersion?: VersionIssue;
+}
+
+function loadScoreSettings(): StabilityScoreSettings {
+  try {
+    const raw = JSON.parse(readFileSync(SETTINGS_PATH, "utf-8"));
+    return {
+      baseScore: Number(raw?.stabilityScore?.baseScore ?? DEFAULT_STABILITY_SCORE_SETTINGS.baseScore),
+      survivalBonus: {
+        pointsPerDay: Number(raw?.stabilityScore?.survivalBonus?.pointsPerDay ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.pointsPerDay),
+        maxPoints: Number(raw?.stabilityScore?.survivalBonus?.maxPoints ?? DEFAULT_STABILITY_SCORE_SETTINGS.survivalBonus.maxPoints),
+      },
+    };
+  } catch {
+    return DEFAULT_STABILITY_SCORE_SETTINGS;
+  }
+}
+
+function applyScoreFormula(versions: VersionIssue[], settings: StabilityScoreSettings) {
+  const byPkg = new Map<string, VersionIssue[]>();
+  for (const v of versions) {
+    if (!byPkg.has(v.packageSlug)) byPkg.set(v.packageSlug, []);
+    byPkg.get(v.packageSlug)!.push(v);
+  }
+
+  for (const pkgVersions of byPkg.values()) {
+    const chronological = [...pkgVersions].sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
+    for (let i = 0; i < chronological.length; i++) {
+      const current = chronological[i];
+      const next = chronological[i + 1];
+      const formula = computeFormula({
+        settings,
+        evidencePenalty: current.stabilityScore.evidencePenalty,
+        votePenalty: current.stabilityScore.votePenalty,
+        survivalDays: computeSurvivalDays(current.createdAt, next?.createdAt),
+      });
+      current.stabilityScore = withFormula(current.stabilityScore, formula);
+    }
+  }
 }
 
 function slugify(name: string): string {
@@ -177,6 +216,7 @@ async function main() {
   console.log("🔄 Syncing version data from GitHub...");
 
   const versions = await fetchAllVersionIssues();
+  const scoreSettings = loadScoreSettings();
 
   // Override createdAt with real npm publish times
   const npmPackages = new Set(versions.map((v) => v.packageName));
@@ -211,6 +251,8 @@ async function main() {
       if (title) (ref as any).title = title;
     }
   }
+
+  applyScoreFormula(versions, scoreSettings);
 
   // Sort by version number descending (newest first)
   versions.sort((a, b) => {

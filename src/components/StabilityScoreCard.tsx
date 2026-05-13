@@ -10,11 +10,21 @@ export function StabilityScoreCard({ stabilityScore }: { stabilityScore: Stabili
           <p className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Stability Score</p>
           <ScoreBadge score={s.score} size="xl" />
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
-          <MiniStat label="Evidence" value={`-${s.evidencePenalty}`} />
-          <MiniStat label="Votes" value={`-${s.votePenalty}`} />
-          <MiniStat label="Verdict" value={s.verdict.toUpperCase()} />
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+          <MiniStat label="Base" value={String(s.formula.baseScore)} />
+          <MiniStat label="Evidence" value={`-${s.formula.evidencePenalty}`} />
+          <MiniStat label="Votes" value={`-${s.formula.votePenalty}`} />
+          <MiniStat label="Survived" value={`+${s.formula.survivalBonus}`} />
         </div>
+      </div>
+
+      <div className="rounded-lg border border-[var(--color-border)] bg-black/10 px-4 py-3 mb-5 font-mono text-sm text-[var(--color-muted)] overflow-x-auto">
+        <span className="text-[var(--color-foreground)]">{s.formula.baseScore}</span> base
+        <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.evidencePenalty}</span> evidence
+        <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.votePenalty}</span> votes
+        <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.survivalBonus}</span> days survived
+        <span className="mx-2">=</span><span className="text-[var(--color-foreground)] font-bold">{s.formula.score}</span>
+        <span className="ml-3 text-xs">({s.formula.survivalDays} day{s.formula.survivalDays === 1 ? "" : "s"} before next release)</span>
       </div>
 
       {s.affected.length > 0 && (

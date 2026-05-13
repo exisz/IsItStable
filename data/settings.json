@@ -1,0 +1,9 @@
+{
+  "stabilityScore": {
+    "baseScore": 80,
+    "survivalBonus": {
+      "pointsPerDay": 2,
+      "maxPoints": 10
+    }
+  }
+}
