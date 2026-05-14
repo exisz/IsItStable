@@ -22,12 +22,6 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 81770,
-        "url": "https://github.com/openclaw/openclaw/issues/81770",
-        "title": "[Bug]: Cron job with multiple times per day (e.g., \"0 11,16 * * 1-5\") only triggers first time, second time never runs"
-      },
-      {
-        "repo": "openclaw/openclaw",
         "number": 80695,
         "url": "https://github.com/openclaw/openclaw/issues/80695",
         "title": "Telegram cascade on v2026.5.7: polling stall + outbound HTTP agent never rebuilt; multi-account start-account causes event-loop starvation"
@@ -58,12 +52,6 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 81770,
-        "url": "https://github.com/openclaw/openclaw/issues/81770",
-        "title": "[Bug]: Cron job with multiple times per day (e.g., \"0 11,16 * * 1-5\") only triggers first time, second time never runs"
-      },
-      {
-        "repo": "openclaw/openclaw",
         "number": 80695,
         "url": "https://github.com/openclaw/openclaw/issues/80695",
         "title": "Telegram cascade on v2026.5.7: polling stall + outbound HTTP agent never rebuilt; multi-account start-account causes event-loop starvation"
@@ -84,24 +72,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 61,
+      "score": 64,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 19,
+      "evidencePenalty": 16,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 19,
+        "evidencePenalty": 16,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 61
+        "score": 64
       },
       "affected": [
         "cron-runtime",
@@ -132,17 +120,6 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Pre-execution watchdog regression: isolated cron runs killed at attempt_dispatch after 60s (unfixed from #80888)"
-        },
-        {
-          "issue": "openclaw/openclaw#81770",
-          "repo": "openclaw/openclaw",
-          "number": 81770,
-          "url": "https://github.com/openclaw/openclaw/issues/81770",
-          "area": "cron-runtime",
-          "type": "kernel",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "Cron jobs with multiple times per day only trigger first occurrence; second scheduled run never fires"
         },
         {
           "issue": "openclaw/openclaw#80695",
