@@ -6,32 +6,178 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Beta sprawl turning into production regressions — gateway service chaos, cron watchdog amnesia, and Telegram gremlins. High volatility incoming.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81859,
+        "url": "https://github.com/openclaw/openclaw/issues/81859",
+        "title": "v2026.5.12-beta.8 macOS update can leave gateway in launchd loop from stale updater job and service env wrapper"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81368,
+        "url": "https://github.com/openclaw/openclaw/issues/81368",
+        "title": "[Bug]: Isolated cron watchdog still kills beta.4 runs at attempt_dispatch after 60s"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81770,
+        "url": "https://github.com/openclaw/openclaw/issues/81770",
+        "title": "[Bug]: Cron job with multiple times per day (e.g., \"0 11,16 * * 1-5\") only triggers first time, second time never runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80695,
+        "url": "https://github.com/openclaw/openclaw/issues/80695",
+        "title": "Telegram cascade on v2026.5.7: polling stall + outbound HTTP agent never rebuilt; multi-account start-account causes event-loop starvation"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81530,
+        "url": "https://github.com/openclaw/openclaw/issues/81530",
+        "title": "[Bug]: [5.12-beta.8] Telegram Supergroup Forum Topics — Inbound Messages Not Processed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81878,
+        "url": "https://github.com/openclaw/openclaw/issues/81878",
+        "title": "[Bug]: Ollama `num_ctx` regression"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81859,
+        "url": "https://github.com/openclaw/openclaw/issues/81859",
+        "title": "v2026.5.12-beta.8 macOS update can leave gateway in launchd loop from stale updater job and service env wrapper"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81368,
+        "url": "https://github.com/openclaw/openclaw/issues/81368",
+        "title": "[Bug]: Isolated cron watchdog still kills beta.4 runs at attempt_dispatch after 60s"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81770,
+        "url": "https://github.com/openclaw/openclaw/issues/81770",
+        "title": "[Bug]: Cron job with multiple times per day (e.g., \"0 11,16 * * 1-5\") only triggers first time, second time never runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80695,
+        "url": "https://github.com/openclaw/openclaw/issues/80695",
+        "title": "Telegram cascade on v2026.5.7: polling stall + outbound HTTP agent never rebuilt; multi-account start-account causes event-loop starvation"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81530,
+        "url": "https://github.com/openclaw/openclaw/issues/81530",
+        "title": "[Bug]: [5.12-beta.8] Telegram Supergroup Forum Topics — Inbound Messages Not Processed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81878,
+        "url": "https://github.com/openclaw/openclaw/issues/81878",
+        "title": "[Bug]: Ollama `num_ctx` regression"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 61,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 19,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 19,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 61
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "cron-runtime",
+        "gateway",
+        "service-management",
+        "telegram",
+        "runtime"
+      ],
+      "evidence": [
+        {
+          "issue": "openclaw/openclaw#81859",
+          "repo": "openclaw/openclaw",
+          "number": 81859,
+          "url": "https://github.com/openclaw/openclaw/issues/81859",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "macOS npm update leaves stale launchd updater job running; gateway enters kill loop after service refresh"
+        },
+        {
+          "issue": "openclaw/openclaw#81368",
+          "repo": "openclaw/openclaw",
+          "number": 81368,
+          "url": "https://github.com/openclaw/openclaw/issues/81368",
+          "area": "cron-runtime",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Pre-execution watchdog regression: isolated cron runs killed at attempt_dispatch after 60s (unfixed from #80888)"
+        },
+        {
+          "issue": "openclaw/openclaw#81770",
+          "repo": "openclaw/openclaw",
+          "number": 81770,
+          "url": "https://github.com/openclaw/openclaw/issues/81770",
+          "area": "cron-runtime",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Cron jobs with multiple times per day only trigger first occurrence; second scheduled run never fires"
+        },
+        {
+          "issue": "openclaw/openclaw#80695",
+          "repo": "openclaw/openclaw",
+          "number": 80695,
+          "url": "https://github.com/openclaw/openclaw/issues/80695",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Telegram cascade regression; polling stall + outbound HTTP agent never rebuilt after 408 reconnect"
+        },
+        {
+          "issue": "openclaw/openclaw#81530",
+          "repo": "openclaw/openclaw",
+          "number": 81530,
+          "url": "https://github.com/openclaw/openclaw/issues/81530",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Telegram Supergroup Forum Topics regression; inbound messages not processed on beta.8"
+        },
+        {
+          "issue": "openclaw/openclaw#81878",
+          "repo": "openclaw/openclaw",
+          "number": 81878,
+          "url": "https://github.com/openclaw/openclaw/issues/81878",
+          "area": "runtime",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Ollama provider regression: num_ctx parameter rejects user-provided values"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
