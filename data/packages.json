@@ -4,282 +4,42 @@
     "slug": "openclaw",
     "displayName": "openclaw",
     "latestVersion": {
-      "issueNumber": 79,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/79",
-      "version": "2026.5.7",
+      "issueNumber": 82,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/82",
+      "version": "2026.5.12",
       "packageName": "openclaw",
       "packageSlug": "openclaw",
-      "verdict": "no",
-      "verdictComment": "v2026.5.7 is a regression fiesta. Upgrade to 2026.5.6 or wait for 2026.5.8.",
-      "referencedIssues": [
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81214,
-          "url": "https://github.com/openclaw/openclaw/issues/81214",
-          "title": "[Bug]: OpenClaw 2026.5.7 subagent regression"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80576,
-          "url": "https://github.com/openclaw/openclaw/issues/80576",
-          "title": "Bug: Main agent deleted when creating sub-agent in 2026.5.7"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80844,
-          "url": "https://github.com/openclaw/openclaw/issues/80844",
-          "title": "Critical npm audit advisory via @mistralai/mistralai in openclaw 2026.5.7"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81490,
-          "url": "https://github.com/openclaw/openclaw/issues/81490",
-          "title": "[Bug]: subagent completion spawns a fresh run on the parent's route instead of resuming the yielded session (supersedes #80310)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81491,
-          "url": "https://github.com/openclaw/openclaw/issues/81491",
-          "title": "Gateway should self-SIGTERM after K=3 failed Slack reconnects (silent 15h outage in v2026.5.7)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81484,
-          "url": "https://github.com/openclaw/openclaw/issues/81484",
-          "title": "[Bug]: OpenClaw 2026.5.7 Discord guild reply regression: malformed send payloads and repeated outbound loops"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81281,
-          "url": "https://github.com/openclaw/openclaw/issues/81281",
-          "title": "[Bug]: OpenAI-completions prompt_cache_key regression — caching worked in 2026.3.x, broken in 2026.5.x"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80420,
-          "url": "https://github.com/openclaw/openclaw/issues/80420",
-          "title": "[Bug]: cron jobs once again failing with model idle timeout in 2026.5.7"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 79794,
-          "url": "https://github.com/openclaw/openclaw/issues/79794",
-          "title": "[Bug]: Discord gateway READY event never fires — bot online but guild messages not received (regression in 2026.5.7)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80611,
-          "url": "https://github.com/openclaw/openclaw/issues/80611",
-          "title": "Non-deep `openclaw status` repeatedly loads plugin metadata and takes ~20s on 2026.5.7"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81214,
-          "url": "https://github.com/openclaw/openclaw/issues/81214",
-          "title": "[Bug]: OpenClaw 2026.5.7 subagent regression"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80576,
-          "url": "https://github.com/openclaw/openclaw/issues/80576",
-          "title": "Bug: Main agent deleted when creating sub-agent in 2026.5.7"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80844,
-          "url": "https://github.com/openclaw/openclaw/issues/80844",
-          "title": "Critical npm audit advisory via @mistralai/mistralai in openclaw 2026.5.7"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81490,
-          "url": "https://github.com/openclaw/openclaw/issues/81490",
-          "title": "[Bug]: subagent completion spawns a fresh run on the parent's route instead of resuming the yielded session (supersedes #80310)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81491,
-          "url": "https://github.com/openclaw/openclaw/issues/81491",
-          "title": "Gateway should self-SIGTERM after K=3 failed Slack reconnects (silent 15h outage in v2026.5.7)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81484,
-          "url": "https://github.com/openclaw/openclaw/issues/81484",
-          "title": "[Bug]: OpenClaw 2026.5.7 Discord guild reply regression: malformed send payloads and repeated outbound loops"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81281,
-          "url": "https://github.com/openclaw/openclaw/issues/81281",
-          "title": "[Bug]: OpenAI-completions prompt_cache_key regression — caching worked in 2026.3.x, broken in 2026.5.x"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80420,
-          "url": "https://github.com/openclaw/openclaw/issues/80420",
-          "title": "[Bug]: cron jobs once again failing with model idle timeout in 2026.5.7"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 79794,
-          "url": "https://github.com/openclaw/openclaw/issues/79794",
-          "title": "[Bug]: Discord gateway READY event never fires — bot online but guild messages not received (regression in 2026.5.7)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80611,
-          "url": "https://github.com/openclaw/openclaw/issues/80611",
-          "title": "Non-deep `openclaw status` repeatedly loads plugin metadata and takes ~20s on 2026.5.7"
-        }
-      ],
+      "verdict": "pending",
+      "verdictComment": "",
+      "referencedIssues": [],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 55,
-        "verdict": "no",
+        "score": 80,
+        "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 42,
-        "survivalDays": 6,
-        "survivalBonus": 15,
-        "curated": true,
-        "curatedBonus": 2,
+        "evidencePenalty": 0,
+        "survivalDays": 0,
+        "survivalBonus": 0,
+        "curated": false,
+        "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 42,
+          "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 6,
+          "survivalDays": 0,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 5,
-          "survivalBonus": 15,
-          "curatedBonus": 2,
-          "score": 55
+          "survivalCreditedDays": 0,
+          "survivalBonus": 0,
+          "curatedBonus": 0,
+          "score": 80
         },
-        "affected": [
-          "control-ui",
-          "discord",
-          "runtime",
-          "security",
-          "approval-boundary",
-          "slack",
-          "subagent-runtime"
-        ],
-        "evidence": [
-          {
-            "issue": "openclaw/openclaw#81214",
-            "repo": "openclaw/openclaw",
-            "number": 81214,
-            "url": "https://github.com/openclaw/openclaw/issues/81214",
-            "area": "subagent-runtime",
-            "type": "kernel",
-            "severity": 5,
-            "penalty": 5,
-            "reason": "Subagent context engine regression — isolated lightweight spawns inject large payloads, crash Ollama hosts"
-          },
-          {
-            "issue": "openclaw/openclaw#80576",
-            "repo": "openclaw/openclaw",
-            "number": 80576,
-            "url": "https://github.com/openclaw/openclaw/issues/80576",
-            "area": "control-ui",
-            "type": "kernel",
-            "severity": 5,
-            "penalty": 5,
-            "reason": "Main agent mysteriously deleted when creating subagents via Control UI — reproducible on every attempt"
-          },
-          {
-            "issue": "openclaw/openclaw#80844",
-            "repo": "openclaw/openclaw",
-            "number": 80844,
-            "url": "https://github.com/openclaw/openclaw/issues/80844",
-            "area": "security",
-            "type": "security",
-            "severity": 5,
-            "penalty": 5,
-            "reason": "Critical npm audit advisory via @mistralai/mistralai malware — blocks downstream package installs"
-          },
-          {
-            "issue": "openclaw/openclaw#81490",
-            "repo": "openclaw/openclaw",
-            "number": 81490,
-            "url": "https://github.com/openclaw/openclaw/issues/81490",
-            "area": "subagent-runtime",
-            "type": "kernel",
-            "severity": 5,
-            "penalty": 5,
-            "reason": "Subagent completion never resumes yielded parent — spawns fresh run instead, orphans paused session"
-          },
-          {
-            "issue": "openclaw/openclaw#81491",
-            "repo": "openclaw/openclaw",
-            "number": 81491,
-            "url": "https://github.com/openclaw/openclaw/issues/81491",
-            "area": "slack",
-            "type": "channel-specific",
-            "severity": 5,
-            "penalty": 5,
-            "reason": "Silent Slack provider death — gateway health-monitor can't recover; caused 15h+ outage; self-SIGTERM needed"
-          },
-          {
-            "issue": "openclaw/openclaw#81484",
-            "repo": "openclaw/openclaw",
-            "number": 81484,
-            "url": "https://github.com/openclaw/openclaw/issues/81484",
-            "area": "discord",
-            "type": "channel-specific",
-            "severity": 4,
-            "penalty": 4,
-            "reason": "Discord guild reply regression — malformed send payloads, duplicates, runaway loops; guild-only, DMs fine"
-          },
-          {
-            "issue": "openclaw/openclaw#81281",
-            "repo": "openclaw/openclaw",
-            "number": 81281,
-            "url": "https://github.com/openclaw/openclaw/issues/81281",
-            "area": "runtime",
-            "type": "kernel",
-            "severity": 4,
-            "penalty": 4,
-            "reason": "OpenAI-completions prompt_cache_key missing — caching regression broke prefix caching (3s → 60s TTFT impact)"
-          },
-          {
-            "issue": "openclaw/openclaw#80420",
-            "repo": "openclaw/openclaw",
-            "number": 80420,
-            "url": "https://github.com/openclaw/openclaw/issues/80420",
-            "area": "cron-runtime",
-            "type": "kernel",
-            "severity": 4,
-            "penalty": 4,
-            "reason": "Cron jobs failing with model idle timeout — recurring regression"
-          },
-          {
-            "issue": "openclaw/openclaw#79794",
-            "repo": "openclaw/openclaw",
-            "number": 79794,
-            "url": "https://github.com/openclaw/openclaw/issues/79794",
-            "area": "discord",
-            "type": "channel-specific",
-            "severity": 3,
-            "penalty": 3,
-            "reason": "Discord gateway READY event never fires — bot online but guild messages not received"
-          },
-          {
-            "issue": "openclaw/openclaw#80611",
-            "repo": "openclaw/openclaw",
-            "number": 80611,
-            "url": "https://github.com/openclaw/openclaw/issues/80611",
-            "area": "runtime",
-            "type": "tool",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "openclaw status -q takes ~20s instead of instant, reports wrong model"
-          }
-        ]
+        "affected": [],
+        "evidence": []
       },
-      "thumbsUp": 1,
+      "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-05-07T20:38:57.626Z"
+      "createdAt": "2026-05-14T18:26:44.431Z"
     }
   }
 ]
