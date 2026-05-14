@@ -71,9 +71,19 @@ export default async function VersionPage({ params }: Props) {
       </div>
 
       {/* Stats + Votes */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-        <StatCard label="👍 Stable" value={String(v.thumbsUp)} color={v.thumbsUp > 0 ? "text-[var(--color-yes)]" : undefined} />
-        <StatCard label="👎 Unstable" value={String(v.thumbsDown)} color={v.thumbsDown > 0 ? "text-[var(--color-no)]" : undefined} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <StatCard
+          label="👍 Stable"
+          value={String(v.thumbsUp)}
+          color={v.thumbsUp > 0 ? "text-[var(--color-yes)]" : undefined}
+          voteHref={v.issueUrl}
+        />
+        <StatCard
+          label="👎 Unstable"
+          value={String(v.thumbsDown)}
+          color={v.thumbsDown > 0 ? "text-[var(--color-no)]" : undefined}
+          voteHref={v.issueUrl}
+        />
       </div>
 
       {/* Stability Evidence */}
@@ -161,11 +171,24 @@ export default async function VersionPage({ params }: Props) {
   );
 }
 
-function StatCard({ label, value, color }: { label: string; value: string; color?: string }) {
+function StatCard({ label, value, color, voteHref }: { label: string; value: string; color?: string; voteHref?: string }) {
   return (
-    <div className="border border-[var(--color-border)] rounded-lg p-4 text-center">
-      <p className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-1">{label}</p>
-      <p className={`text-2xl font-bold ${color ?? ""}`}>{value}</p>
+    <div className="border border-[var(--color-border)] rounded-lg p-4 bg-[var(--color-card)]">
+      <div className="flex items-center justify-center gap-2 mb-2">
+        <p className="text-xs uppercase tracking-widest text-[var(--color-muted)]">{label}</p>
+        {voteHref && (
+          <a
+            href={voteHref}
+            target="_blank"
+            rel="noopener"
+            aria-label={`Vote ${label.replace(/^[^A-Za-z]+/, "").toLowerCase()} on GitHub`}
+            className="rounded-full border border-[var(--color-border)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-[var(--color-foreground)] hover:border-[var(--color-muted)] hover:bg-white hover:text-black transition-colors"
+          >
+            Vote
+          </a>
+        )}
+      </div>
+      <p className={`text-center text-2xl font-bold ${color ?? ""}`}>{value}</p>
     </div>
   );
 }
