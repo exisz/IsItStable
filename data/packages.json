@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Production volatility spike — protocol breaks, workspace context loss, and channel startup chaos. Three new regressions in 18h: expect disruption across web, imsg, and agent identity flows.",
+      "verdictComment": "Production volatility spike — protocol breaks, workspace context loss, and channel startup chaos. Five new regressions discovered 2026-05-15 (18h-24h post-release): Telegram ingress blockade, Codex mid-turn stalls, system-wide performance cliff, agent reply lockup, Discord crash.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -40,7 +40,7 @@
           "repo": "openclaw/openclaw",
           "number": 81955,
           "url": "https://github.com/openclaw/openclaw/issues/81955",
-          "title": "[Bug]: Dashboard/web session after 2026.5.12 update loses persona/tool workspace behavior despite workspace context being injected"
+          "title": "[Bug]: Injections do not work on 2026.5.12 update - agent using ollama loses persona"
         },
         {
           "repo": "openclaw/openclaw",
@@ -52,7 +52,37 @@
           "repo": "openclaw/openclaw",
           "number": 82037,
           "url": "https://github.com/openclaw/openclaw/issues/82037",
-          "title": "[Bug]: 2026.5.12 update on MacOS 26.5 causes web/app connection failures with \"wrong protocol\" errors"
+          "title": "[Bug]: 2026.5.12 update on MacOS 26.5 causes web/app ws connection failures with \"wrong protocol\" errors"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82277,
+          "url": "https://github.com/openclaw/openclaw/issues/82277",
+          "title": "[Bug]: Telegram provider consumes updates but never routes inbound/outbound messages"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82274,
+          "url": "https://github.com/openclaw/openclaw/issues/82274",
+          "title": "2026.5.12: Telegram isolated-ingress HOL blocking + Codex app-server stalls mid-turn after custom_tool_call_output → 30 min idle timeout"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82264,
+          "url": "https://github.com/openclaw/openclaw/issues/82264",
+          "title": "[Regression]: OpenClaw 2026.5.12 is dramatically slower than 2026.5.7 (QQBot / status / overall responsiveness)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82254,
+          "url": "https://github.com/openclaw/openclaw/issues/82254",
+          "title": "[Bug]: Agent replies NO! or NO in the openclaw web UI after upgrading from 5.7 to 5.12 and using openclaw doctor"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82252,
+          "url": "https://github.com/openclaw/openclaw/issues/82252",
+          "title": "Discord `message action=read` crashes with `TypeError: (intermediate value).map is not a function`"
         },
         {
           "repo": "openclaw/openclaw",
@@ -82,7 +112,7 @@
           "repo": "openclaw/openclaw",
           "number": 81955,
           "url": "https://github.com/openclaw/openclaw/issues/81955",
-          "title": "[Bug]: Dashboard/web session after 2026.5.12 update loses persona/tool workspace behavior despite workspace context being injected"
+          "title": "[Bug]: Injections do not work on 2026.5.12 update - agent using ollama loses persona"
         },
         {
           "repo": "openclaw/openclaw",
@@ -94,30 +124,60 @@
           "repo": "openclaw/openclaw",
           "number": 82037,
           "url": "https://github.com/openclaw/openclaw/issues/82037",
-          "title": "[Bug]: 2026.5.12 update on MacOS 26.5 causes web/app connection failures with \"wrong protocol\" errors"
+          "title": "[Bug]: 2026.5.12 update on MacOS 26.5 causes web/app ws connection failures with \"wrong protocol\" errors"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82277,
+          "url": "https://github.com/openclaw/openclaw/issues/82277",
+          "title": "[Bug]: Telegram provider consumes updates but never routes inbound/outbound messages"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82274,
+          "url": "https://github.com/openclaw/openclaw/issues/82274",
+          "title": "2026.5.12: Telegram isolated-ingress HOL blocking + Codex app-server stalls mid-turn after custom_tool_call_output → 30 min idle timeout"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82264,
+          "url": "https://github.com/openclaw/openclaw/issues/82264",
+          "title": "[Regression]: OpenClaw 2026.5.12 is dramatically slower than 2026.5.7 (QQBot / status / overall responsiveness)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82254,
+          "url": "https://github.com/openclaw/openclaw/issues/82254",
+          "title": "[Bug]: Agent replies NO! or NO in the openclaw web UI after upgrading from 5.7 to 5.12 and using openclaw doctor"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82252,
+          "url": "https://github.com/openclaw/openclaw/issues/82252",
+          "title": "Discord `message action=read` crashes with `TypeError: (intermediate value).map is not a function`"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 58,
+        "score": 43,
         "verdict": "pending",
-        "votePenalty": 0,
-        "evidencePenalty": 22,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "votePenalty": 2,
+        "evidencePenalty": 38,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 22,
-          "votePenalty": 0,
-          "survivalDays": 0,
+          "evidencePenalty": 38,
+          "votePenalty": 2,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 58
+          "score": 43
         },
         "affected": [
           "cron-runtime",
@@ -128,7 +188,9 @@
           "dashboard",
           "imsg",
           "web",
-          "workspace"
+          "workspace",
+          "discord",
+          "codex"
         ],
         "evidence": [
           {
@@ -207,11 +269,66 @@
             "severity": 4,
             "penalty": 4,
             "reason": "Protocol mismatch: v2026.5.7 clients fail to connect to v2026.5.12 gateway; handshake fails with minProtocol/maxProtocol negotiation error"
+          },
+          {
+            "issue": "openclaw/openclaw#82277",
+            "repo": "openclaw/openclaw",
+            "number": 82277,
+            "url": "https://github.com/openclaw/openclaw/issues/82277",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 2,
+            "reason": "Telegram provider consumes updates but never routes inbound/outbound messages; getUpdates becomes empty while gateway running (NEW 2026-05-15)"
+          },
+          {
+            "issue": "openclaw/openclaw#82274",
+            "repo": "openclaw/openclaw",
+            "number": 82274,
+            "url": "https://github.com/openclaw/openclaw/issues/82274",
+            "area": "telegram",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Telegram isolated-ingress spool drain HOL-blocked by in-flight agent turns; +Codex app-server silent mid-turn post-tool-result → 30min timeout (NEW 2026-05-15, CRITICAL)"
+          },
+          {
+            "issue": "openclaw/openclaw#82264",
+            "repo": "openclaw/openclaw",
+            "number": 82264,
+            "url": "https://github.com/openclaw/openclaw/issues/82264",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 4,
+            "reason": "Regression: 2026.5.12 dramatically slower than 2026.5.7 (7.7s status vs 1.4s gateway status); event-loop blockage at channels.qqbot.start-account (NEW 2026-05-15, PERF CLIFF)"
+          },
+          {
+            "issue": "openclaw/openclaw#82254",
+            "repo": "openclaw/openclaw",
+            "number": 82254,
+            "url": "https://github.com/openclaw/openclaw/issues/82254",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Agent replies stuck on 'NO' / 'NO!' after upgrade to 2026.5.12 + openclaw doctor; affects all sessions including /new (NEW 2026-05-15)"
+          },
+          {
+            "issue": "openclaw/openclaw#82252",
+            "repo": "openclaw/openclaw",
+            "number": 82252,
+            "url": "https://github.com/openclaw/openclaw/issues/82252",
+            "area": "discord",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Discord message action=read crashes with TypeError: (intermediate value).map is not a function in gateway WS layer (NEW 2026-05-15)"
           }
         ]
       },
       "thumbsUp": 0,
-      "thumbsDown": 0,
+      "thumbsDown": 1,
       "createdAt": "2026-05-14T18:26:44.431Z"
     }
   }
