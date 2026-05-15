@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Beta sprawl turning into production regressions — gateway service chaos, cron watchdog amnesia, and Telegram gremlins. High volatility incoming.",
+    "verdictComment": "Production volatility spike — protocol breaks, workspace context loss, and channel startup chaos. Three new regressions in 18h: expect disruption across web, imsg, and agent identity flows.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -34,9 +34,21 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 81878,
-        "url": "https://github.com/openclaw/openclaw/issues/81878",
-        "title": "[Bug]: Ollama `num_ctx` regression"
+        "number": 81955,
+        "url": "https://github.com/openclaw/openclaw/issues/81955",
+        "title": "[Bug]: Dashboard/web session after 2026.5.12 update loses persona/tool workspace behavior despite workspace context being injected"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81940,
+        "url": "https://github.com/openclaw/openclaw/issues/81940",
+        "title": "[Bug]: 2026.5.12 imsg RPC hangs when Gateway is started by launchd"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82037,
+        "url": "https://github.com/openclaw/openclaw/issues/82037",
+        "title": "[Bug]: 2026.5.12 update on MacOS 26.5 causes web/app connection failures with \"wrong protocol\" errors"
       },
       {
         "repo": "openclaw/openclaw",
@@ -64,39 +76,55 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 81878,
-        "url": "https://github.com/openclaw/openclaw/issues/81878",
-        "title": "[Bug]: Ollama `num_ctx` regression"
+        "number": 81955,
+        "url": "https://github.com/openclaw/openclaw/issues/81955",
+        "title": "[Bug]: Dashboard/web session after 2026.5.12 update loses persona/tool workspace behavior despite workspace context being injected"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81940,
+        "url": "https://github.com/openclaw/openclaw/issues/81940",
+        "title": "[Bug]: 2026.5.12 imsg RPC hangs when Gateway is started by launchd"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82037,
+        "url": "https://github.com/openclaw/openclaw/issues/82037",
+        "title": "[Bug]: 2026.5.12 update on MacOS 26.5 causes web/app connection failures with \"wrong protocol\" errors"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 64,
+      "score": 58,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 16,
+      "evidencePenalty": 22,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 16,
+        "evidencePenalty": 22,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 64
+        "score": 58
       },
       "affected": [
         "cron-runtime",
         "gateway",
         "service-management",
         "telegram",
-        "runtime"
+        "runtime",
+        "dashboard",
+        "imsg",
+        "web",
+        "workspace"
       ],
       "evidence": [
         {
@@ -144,15 +172,37 @@
           "reason": "Telegram Supergroup Forum Topics regression; inbound messages not processed on beta.8"
         },
         {
-          "issue": "openclaw/openclaw#81878",
+          "issue": "openclaw/openclaw#81955",
           "repo": "openclaw/openclaw",
-          "number": 81878,
-          "url": "https://github.com/openclaw/openclaw/issues/81878",
-          "area": "runtime",
-          "type": "tool-specific",
+          "number": 81955,
+          "url": "https://github.com/openclaw/openclaw/issues/81955",
+          "area": "dashboard",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 2,
+          "reason": "Regression: after 2026.5.12 update, agent loses persona/identity; workspace context injected but not applied (dashboard sessions)"
+        },
+        {
+          "issue": "openclaw/openclaw#81940",
+          "repo": "openclaw/openclaw",
+          "number": 81940,
+          "url": "https://github.com/openclaw/openclaw/issues/81940",
+          "area": "imsg",
+          "type": "channel-specific",
           "severity": 2,
           "penalty": 2,
-          "reason": "Ollama provider regression: num_ctx parameter rejects user-provided values"
+          "reason": "imsg RPC hangs on launchd startup; works in interactive sessions but times out under LaunchAgent"
+        },
+        {
+          "issue": "openclaw/openclaw#82037",
+          "repo": "openclaw/openclaw",
+          "number": 82037,
+          "url": "https://github.com/openclaw/openclaw/issues/82037",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Protocol mismatch: v2026.5.7 clients fail to connect to v2026.5.12 gateway; handshake fails with minProtocol/maxProtocol negotiation error"
         }
       ]
     },
