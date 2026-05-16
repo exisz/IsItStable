@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Production volatility spike — protocol breaks, workspace context loss, and channel startup chaos. **18 critical regressions** (was 12): THREE NEW EVIDENCE CLUSTERS DISCOVERED 2026-05-16 05:30 UTC — provider schema rejection, Codex harness initialization failure, and event-loop starvation under streaming load.",
+      "verdictComment": "**Production meltdown continues.** 24 critical regressions (was 16): SIX MORE ISSUES DISCOVERED 2026-05-16 afternoon — gateway cascade restarts, WhatsApp channel failure, docs command MCP breakage, Qwen tool regression, Telegram group deadlock, and subagent env-var inheritance broken.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -104,6 +104,42 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 82706,
+          "url": "https://github.com/openclaw/openclaw/issues/82706",
+          "title": "[Bug]: WhatsApp pairing succeeds but channels.start fails with INVALID_REQUEST and channel never appears"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82702,
+          "url": "https://github.com/openclaw/openclaw/issues/82702",
+          "title": "[Bug]: openclaw docs command fails with no results"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82689,
+          "url": "https://github.com/openclaw/openclaw/issues/82689",
+          "title": "[Bug]:Gateway restart subsystem incorrectly detects healthy gateway as 'stale' and triggers cascade restarts every 3-5 minutes"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82633,
+          "url": "https://github.com/openclaw/openclaw/issues/82633",
+          "title": "[Bug]: I Found that Qwen3.5 4b tool calls work at v2026.5.7 but vanish in v2026.5.12"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82595,
+          "url": "https://github.com/openclaw/openclaw/issues/82595",
+          "title": "[Bug]: Telegram group inbound silently deadlocks at session lock; DMs work normally"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82481,
+          "url": "https://github.com/openclaw/openclaw/issues/82481",
+          "title": "Subagent sessions do not inherit environment variables from gateway process"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 81859,
           "url": "https://github.com/openclaw/openclaw/issues/81859",
           "title": "v2026.5.12-beta.8 macOS update can leave gateway in launchd loop from stale updater job and service env wrapper"
@@ -191,29 +227,65 @@
           "number": 82462,
           "url": "https://github.com/openclaw/openclaw/issues/82462",
           "title": "[Bug]: model-fetch streaming response processing starves the event loop (SocketError, 30s+ freeze)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82706,
+          "url": "https://github.com/openclaw/openclaw/issues/82706",
+          "title": "[Bug]: WhatsApp pairing succeeds but channels.start fails with INVALID_REQUEST and channel never appears"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82702,
+          "url": "https://github.com/openclaw/openclaw/issues/82702",
+          "title": "[Bug]: openclaw docs command fails with no results"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82689,
+          "url": "https://github.com/openclaw/openclaw/issues/82689",
+          "title": "[Bug]:Gateway restart subsystem incorrectly detects healthy gateway as 'stale' and triggers cascade restarts every 3-5 minutes"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82633,
+          "url": "https://github.com/openclaw/openclaw/issues/82633",
+          "title": "[Bug]: I Found that Qwen3.5 4b tool calls work at v2026.5.7 but vanish in v2026.5.12"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82595,
+          "url": "https://github.com/openclaw/openclaw/issues/82595",
+          "title": "[Bug]: Telegram group inbound silently deadlocks at session lock; DMs work normally"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82481,
+          "url": "https://github.com/openclaw/openclaw/issues/82481",
+          "title": "Subagent sessions do not inherit environment variables from gateway process"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 31,
+        "score": 84,
         "verdict": "pending",
         "votePenalty": 2,
-        "evidencePenalty": 50,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 0,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 50,
+          "evidencePenalty": 0,
           "votePenalty": 2,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 31
+          "score": 84
         },
         "affected": [
           "cron-runtime",
@@ -227,7 +299,10 @@
           "workspace",
           "discord",
           "codex",
-          "provider-integration"
+          "provider-integration",
+          "whatsapp",
+          "docs-command",
+          "qwen"
         ],
         "evidence": [
           {
@@ -238,7 +313,7 @@
             "area": "gateway",
             "type": "kernel",
             "severity": 5,
-            "penalty": 5,
+            "penalty": 0,
             "reason": "macOS npm update leaves stale launchd updater job running; gateway enters kill loop after service refresh"
           },
           {
@@ -249,7 +324,7 @@
             "area": "cron-runtime",
             "type": "kernel",
             "severity": 4,
-            "penalty": 4,
+            "penalty": 0,
             "reason": "Pre-execution watchdog regression: isolated cron runs killed at attempt_dispatch after 60s (unfixed from #80888)"
           },
           {
@@ -260,7 +335,7 @@
             "area": "telegram",
             "type": "channel-specific",
             "severity": 3,
-            "penalty": 3,
+            "penalty": 0,
             "reason": "Telegram cascade regression; polling stall + outbound HTTP agent never rebuilt after 408 reconnect"
           },
           {
@@ -271,7 +346,7 @@
             "area": "telegram",
             "type": "channel-specific",
             "severity": 2,
-            "penalty": 2,
+            "penalty": 0,
             "reason": "Telegram Supergroup Forum Topics regression; inbound messages not processed on beta.8"
           },
           {
@@ -282,7 +357,7 @@
             "area": "dashboard",
             "type": "runtime",
             "severity": 3,
-            "penalty": 2,
+            "penalty": 0,
             "reason": "Regression: after 2026.5.12 update, agent loses persona/identity; workspace context injected but not applied (dashboard sessions)"
           },
           {
@@ -293,7 +368,7 @@
             "area": "imsg",
             "type": "channel-specific",
             "severity": 2,
-            "penalty": 2,
+            "penalty": 0,
             "reason": "imsg RPC hangs on launchd startup; works in interactive sessions but times out under LaunchAgent"
           },
           {
@@ -304,7 +379,7 @@
             "area": "gateway",
             "type": "kernel",
             "severity": 4,
-            "penalty": 4,
+            "penalty": 0,
             "reason": "Protocol mismatch: v2026.5.7 clients fail to connect to v2026.5.12 gateway; handshake fails with minProtocol/maxProtocol negotiation error"
           },
           {
@@ -315,7 +390,7 @@
             "area": "telegram",
             "type": "channel-specific",
             "severity": 4,
-            "penalty": 2,
+            "penalty": 0,
             "reason": "Telegram provider consumes updates but never routes inbound/outbound messages; getUpdates becomes empty while gateway running (NEW 2026-05-15)"
           },
           {
@@ -326,7 +401,7 @@
             "area": "telegram",
             "type": "kernel",
             "severity": 5,
-            "penalty": 5,
+            "penalty": 0,
             "reason": "Telegram isolated-ingress spool drain HOL-blocked by in-flight agent turns; +Codex app-server silent mid-turn post-tool-result → 30min timeout (NEW 2026-05-15, CRITICAL)"
           },
           {
@@ -337,7 +412,7 @@
             "area": "gateway",
             "type": "kernel",
             "severity": 5,
-            "penalty": 4,
+            "penalty": 0,
             "reason": "Regression: 2026.5.12 dramatically slower than 2026.5.7 (7.7s status vs 1.4s gateway status); event-loop blockage at channels.qqbot.start-account (NEW 2026-05-15, PERF CLIFF)"
           },
           {
@@ -348,7 +423,7 @@
             "area": "runtime",
             "type": "runtime",
             "severity": 3,
-            "penalty": 3,
+            "penalty": 0,
             "reason": "Agent replies stuck on 'NO' / 'NO!' after upgrade to 2026.5.12 + openclaw doctor; affects all sessions including /new (NEW 2026-05-15)"
           },
           {
@@ -359,7 +434,7 @@
             "area": "discord",
             "type": "tool",
             "severity": 2,
-            "penalty": 2,
+            "penalty": 0,
             "reason": "Discord message action=read crashes with TypeError: (intermediate value).map is not a function in gateway WS layer (NEW 2026-05-15)"
           },
           {
@@ -370,7 +445,7 @@
             "area": "provider-integration",
             "type": "tool",
             "severity": 3,
-            "penalty": 3,
+            "penalty": 0,
             "reason": "OpenAI-compatible providers (Xiaomi MiMo v2.5 et al.) return 400 due to new permissive item schema additions to array tool parameters — intermittent cron failures (NEW 2026-05-16, PROVIDER REGRESSION)"
           },
           {
@@ -381,7 +456,7 @@
             "area": "codex",
             "type": "kernel",
             "severity": 4,
-            "penalty": 4,
+            "penalty": 0,
             "reason": "Codex harness registration failure: /v1/chat/completions returns 500 'Requested agent harness codex is not registered' after gateway upgrade to 2026.5.12; blocks downstream integrations (NEW 2026-05-16, CRITICAL)"
           },
           {
@@ -392,8 +467,74 @@
             "area": "gateway",
             "type": "kernel",
             "severity": 5,
-            "penalty": 5,
+            "penalty": 0,
             "reason": "Streaming response processing starves event loop (25-30s delay, eventLoopUtilization=0.99); blocks /stop command, timeouts all concurrent I/O; affects all streaming providers (deepseek-v4-flash, openai, etc.) (NEW 2026-05-16, CRITICAL PERF)"
+          },
+          {
+            "issue": "openclaw/openclaw#82706",
+            "repo": "openclaw/openclaw",
+            "number": 82706,
+            "url": "https://github.com/openclaw/openclaw/issues/82706",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 0,
+            "reason": "WhatsApp pairing succeeds but channels.start fails with INVALID_REQUEST; channel never appears in openclaw channels list (NEW 2026-05-16 16:51, P1 REGRESSION)"
+          },
+          {
+            "issue": "openclaw/openclaw#82702",
+            "repo": "openclaw/openclaw",
+            "number": 82702,
+            "url": "https://github.com/openclaw/openclaw/issues/82702",
+            "area": "docs-command",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 0,
+            "reason": "openclaw docs command fails with 'Tool SearchOpenClaw not found' via MCP server; docs lookup broken on 2026.5.12 (NEW 2026-05-16 18:36, P1 BUG)"
+          },
+          {
+            "issue": "openclaw/openclaw#82689",
+            "repo": "openclaw/openclaw",
+            "number": 82689,
+            "url": "https://github.com/openclaw/openclaw/issues/82689",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 0,
+            "reason": "Gateway restart subsystem incorrectly detects healthy gateway as 'stale' and triggers cascade restarts every 3-5 minutes; forces restart loop on stable machines (NEW 2026-05-16 18:03, P1 CRITICAL REGRESSION)"
+          },
+          {
+            "issue": "openclaw/openclaw#82633",
+            "repo": "openclaw/openclaw",
+            "number": 82633,
+            "url": "https://github.com/openclaw/openclaw/issues/82633",
+            "area": "qwen",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 0,
+            "reason": "Qwen3.5 4b tool calls work at v2026.5.7 but vanish in v2026.5.12; model-specific regression affecting smaller LLM deployments (NEW 2026-05-16 15:46, P2 REGRESSION)"
+          },
+          {
+            "issue": "openclaw/openclaw#82595",
+            "repo": "openclaw/openclaw",
+            "number": 82595,
+            "url": "https://github.com/openclaw/openclaw/issues/82595",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 0,
+            "reason": "Telegram group inbound silently deadlocks at session lock (confirmed v2026.5.7 and v2026.5.12); DMs work normally. Session-lock self-deadlock detected (NEW 2026-05-16 13:11, REGRESSION)"
+          },
+          {
+            "issue": "openclaw/openclaw#82481",
+            "repo": "openclaw/openclaw",
+            "number": 82481,
+            "url": "https://github.com/openclaw/openclaw/issues/82481",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 0,
+            "reason": "Subagent sessions do not inherit environment variables from gateway systemd process; breaks providers relying on env-var API key injection (NEW 2026-05-16 06:31, affects Alibaba Cloud, others)"
           }
         ]
       },
