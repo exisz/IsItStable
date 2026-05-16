@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Production volatility spike — protocol breaks, workspace context loss, and channel startup chaos. Five new regressions discovered 2026-05-15 (18h-24h post-release): Telegram ingress blockade, Codex mid-turn stalls, system-wide performance cliff, agent reply lockup, Discord crash.",
+    "verdictComment": "Production volatility spike — protocol breaks, workspace context loss, and channel startup chaos. **18 critical regressions** (was 12): THREE NEW EVIDENCE CLUSTERS DISCOVERED 2026-05-16 05:30 UTC — provider schema rejection, Codex harness initialization failure, and event-loop starvation under streaming load.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -82,6 +82,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 82447,
+        "url": "https://github.com/openclaw/openclaw/issues/82447",
+        "title": "OpenAI-compatible provider (Xiaomi MiMo v2.5) returns 400 after 2026.5.12 tool schema change (items field)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82437,
+        "url": "https://github.com/openclaw/openclaw/issues/82437",
+        "title": "v2026.5.12 regression: /v1/chat/completions returns 500 after selecting unregistered codex harness"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82462,
+        "url": "https://github.com/openclaw/openclaw/issues/82462",
+        "title": "[Bug]: model-fetch streaming response processing starves the event loop (SocketError, 30s+ freeze)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 81859,
         "url": "https://github.com/openclaw/openclaw/issues/81859",
         "title": "v2026.5.12-beta.8 macOS update can leave gateway in launchd loop from stale updater job and service env wrapper"
@@ -151,29 +169,47 @@
         "number": 82252,
         "url": "https://github.com/openclaw/openclaw/issues/82252",
         "title": "Discord `message action=read` crashes with `TypeError: (intermediate value).map is not a function`"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82447,
+        "url": "https://github.com/openclaw/openclaw/issues/82447",
+        "title": "OpenAI-compatible provider (Xiaomi MiMo v2.5) returns 400 after 2026.5.12 tool schema change (items field)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82437,
+        "url": "https://github.com/openclaw/openclaw/issues/82437",
+        "title": "v2026.5.12 regression: /v1/chat/completions returns 500 after selecting unregistered codex harness"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82462,
+        "url": "https://github.com/openclaw/openclaw/issues/82462",
+        "title": "[Bug]: model-fetch streaming response processing starves the event loop (SocketError, 30s+ freeze)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 43,
+      "score": 31,
       "verdict": "pending",
       "votePenalty": 2,
-      "evidencePenalty": 38,
+      "evidencePenalty": 50,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 38,
+        "evidencePenalty": 50,
         "votePenalty": 2,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 43
+        "score": 31
       },
       "affected": [
         "cron-runtime",
@@ -186,7 +222,8 @@
         "web",
         "workspace",
         "discord",
-        "codex"
+        "codex",
+        "provider-integration"
       ],
       "evidence": [
         {
@@ -320,6 +357,39 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Discord message action=read crashes with TypeError: (intermediate value).map is not a function in gateway WS layer (NEW 2026-05-15)"
+        },
+        {
+          "issue": "openclaw/openclaw#82447",
+          "repo": "openclaw/openclaw",
+          "number": 82447,
+          "url": "https://github.com/openclaw/openclaw/issues/82447",
+          "area": "provider-integration",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "OpenAI-compatible providers (Xiaomi MiMo v2.5 et al.) return 400 due to new permissive item schema additions to array tool parameters — intermittent cron failures (NEW 2026-05-16, PROVIDER REGRESSION)"
+        },
+        {
+          "issue": "openclaw/openclaw#82437",
+          "repo": "openclaw/openclaw",
+          "number": 82437,
+          "url": "https://github.com/openclaw/openclaw/issues/82437",
+          "area": "codex",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex harness registration failure: /v1/chat/completions returns 500 'Requested agent harness codex is not registered' after gateway upgrade to 2026.5.12; blocks downstream integrations (NEW 2026-05-16, CRITICAL)"
+        },
+        {
+          "issue": "openclaw/openclaw#82462",
+          "repo": "openclaw/openclaw",
+          "number": 82462,
+          "url": "https://github.com/openclaw/openclaw/issues/82462",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Streaming response processing starves event loop (25-30s delay, eventLoopUtilization=0.99); blocks /stop command, timeouts all concurrent I/O; affects all streaming providers (deepseek-v4-flash, openai, etc.) (NEW 2026-05-16, CRITICAL PERF)"
         }
       ]
     },
