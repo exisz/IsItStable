@@ -140,7 +140,7 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     if (!isRecord(item) || typeof item.issue !== "string") return [];
     const ref = parseIssueRef(item.issue);
     if (!ref) return [];
-    const penalty = Math.max(0, Number(item.penalty ?? 0));
+    const penalty = Math.abs(Number(item.penalty ?? 0));
     const severity = Math.max(1, Math.min(5, Number(item.severity ?? Math.min(5, Math.max(1, penalty))))) as 1 | 2 | 3 | 4 | 5;
     return [{
       issue: item.issue,

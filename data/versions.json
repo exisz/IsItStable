@@ -264,24 +264,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 84,
+      "score": 18,
       "verdict": "pending",
       "votePenalty": 2,
-      "evidencePenalty": 0,
+      "evidencePenalty": 66,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 66,
         "votePenalty": 2,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 84
+        "score": 18
       },
       "affected": [
         "cron-runtime",
@@ -309,7 +309,7 @@
           "area": "gateway",
           "type": "kernel",
           "severity": 5,
-          "penalty": 0,
+          "penalty": 5,
           "reason": "macOS npm update leaves stale launchd updater job running; gateway enters kill loop after service refresh"
         },
         {
@@ -320,7 +320,7 @@
           "area": "cron-runtime",
           "type": "kernel",
           "severity": 4,
-          "penalty": 0,
+          "penalty": 4,
           "reason": "Pre-execution watchdog regression: isolated cron runs killed at attempt_dispatch after 60s (unfixed from #80888)"
         },
         {
@@ -331,7 +331,7 @@
           "area": "telegram",
           "type": "channel-specific",
           "severity": 3,
-          "penalty": 0,
+          "penalty": 3,
           "reason": "Telegram cascade regression; polling stall + outbound HTTP agent never rebuilt after 408 reconnect"
         },
         {
@@ -342,7 +342,7 @@
           "area": "telegram",
           "type": "channel-specific",
           "severity": 2,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "Telegram Supergroup Forum Topics regression; inbound messages not processed on beta.8"
         },
         {
@@ -353,7 +353,7 @@
           "area": "dashboard",
           "type": "runtime",
           "severity": 3,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "Regression: after 2026.5.12 update, agent loses persona/identity; workspace context injected but not applied (dashboard sessions)"
         },
         {
@@ -364,7 +364,7 @@
           "area": "imsg",
           "type": "channel-specific",
           "severity": 2,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "imsg RPC hangs on launchd startup; works in interactive sessions but times out under LaunchAgent"
         },
         {
@@ -375,7 +375,7 @@
           "area": "gateway",
           "type": "kernel",
           "severity": 4,
-          "penalty": 0,
+          "penalty": 4,
           "reason": "Protocol mismatch: v2026.5.7 clients fail to connect to v2026.5.12 gateway; handshake fails with minProtocol/maxProtocol negotiation error"
         },
         {
@@ -386,7 +386,7 @@
           "area": "telegram",
           "type": "channel-specific",
           "severity": 4,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "Telegram provider consumes updates but never routes inbound/outbound messages; getUpdates becomes empty while gateway running (NEW 2026-05-15)"
         },
         {
@@ -397,7 +397,7 @@
           "area": "telegram",
           "type": "kernel",
           "severity": 5,
-          "penalty": 0,
+          "penalty": 5,
           "reason": "Telegram isolated-ingress spool drain HOL-blocked by in-flight agent turns; +Codex app-server silent mid-turn post-tool-result → 30min timeout (NEW 2026-05-15, CRITICAL)"
         },
         {
@@ -408,7 +408,7 @@
           "area": "gateway",
           "type": "kernel",
           "severity": 5,
-          "penalty": 0,
+          "penalty": 4,
           "reason": "Regression: 2026.5.12 dramatically slower than 2026.5.7 (7.7s status vs 1.4s gateway status); event-loop blockage at channels.qqbot.start-account (NEW 2026-05-15, PERF CLIFF)"
         },
         {
@@ -419,7 +419,7 @@
           "area": "runtime",
           "type": "runtime",
           "severity": 3,
-          "penalty": 0,
+          "penalty": 3,
           "reason": "Agent replies stuck on 'NO' / 'NO!' after upgrade to 2026.5.12 + openclaw doctor; affects all sessions including /new (NEW 2026-05-15)"
         },
         {
@@ -430,7 +430,7 @@
           "area": "discord",
           "type": "tool",
           "severity": 2,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "Discord message action=read crashes with TypeError: (intermediate value).map is not a function in gateway WS layer (NEW 2026-05-15)"
         },
         {
@@ -441,7 +441,7 @@
           "area": "provider-integration",
           "type": "tool",
           "severity": 3,
-          "penalty": 0,
+          "penalty": 3,
           "reason": "OpenAI-compatible providers (Xiaomi MiMo v2.5 et al.) return 400 due to new permissive item schema additions to array tool parameters — intermittent cron failures (NEW 2026-05-16, PROVIDER REGRESSION)"
         },
         {
@@ -452,7 +452,7 @@
           "area": "codex",
           "type": "kernel",
           "severity": 4,
-          "penalty": 0,
+          "penalty": 4,
           "reason": "Codex harness registration failure: /v1/chat/completions returns 500 'Requested agent harness codex is not registered' after gateway upgrade to 2026.5.12; blocks downstream integrations (NEW 2026-05-16, CRITICAL)"
         },
         {
@@ -463,7 +463,7 @@
           "area": "gateway",
           "type": "kernel",
           "severity": 5,
-          "penalty": 0,
+          "penalty": 5,
           "reason": "Streaming response processing starves event loop (25-30s delay, eventLoopUtilization=0.99); blocks /stop command, timeouts all concurrent I/O; affects all streaming providers (deepseek-v4-flash, openai, etc.) (NEW 2026-05-16, CRITICAL PERF)"
         },
         {
@@ -474,7 +474,7 @@
           "area": "whatsapp",
           "type": "channel-specific",
           "severity": 3,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "WhatsApp pairing succeeds but channels.start fails with INVALID_REQUEST; channel never appears in openclaw channels list (NEW 2026-05-16 16:51, P1 REGRESSION)"
         },
         {
@@ -485,7 +485,7 @@
           "area": "docs-command",
           "type": "tool",
           "severity": 2,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "openclaw docs command fails with 'Tool SearchOpenClaw not found' via MCP server; docs lookup broken on 2026.5.12 (NEW 2026-05-16 18:36, P1 BUG)"
         },
         {
@@ -496,7 +496,7 @@
           "area": "gateway",
           "type": "kernel",
           "severity": 5,
-          "penalty": 0,
+          "penalty": 5,
           "reason": "Gateway restart subsystem incorrectly detects healthy gateway as 'stale' and triggers cascade restarts every 3-5 minutes; forces restart loop on stable machines (NEW 2026-05-16 18:03, P1 CRITICAL REGRESSION)"
         },
         {
@@ -507,7 +507,7 @@
           "area": "qwen",
           "type": "runtime",
           "severity": 3,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "Qwen3.5 4b tool calls work at v2026.5.7 but vanish in v2026.5.12; model-specific regression affecting smaller LLM deployments (NEW 2026-05-16 15:46, P2 REGRESSION)"
         },
         {
@@ -518,7 +518,7 @@
           "area": "telegram",
           "type": "channel-specific",
           "severity": 4,
-          "penalty": 0,
+          "penalty": 3,
           "reason": "Telegram group inbound silently deadlocks at session lock (confirmed v2026.5.7 and v2026.5.12); DMs work normally. Session-lock self-deadlock detected (NEW 2026-05-16 13:11, REGRESSION)"
         },
         {
@@ -529,7 +529,7 @@
           "area": "runtime",
           "type": "runtime",
           "severity": 3,
-          "penalty": 0,
+          "penalty": 2,
           "reason": "Subagent sessions do not inherit environment variables from gateway systemd process; breaks providers relying on env-var API key injection (NEW 2026-05-16 06:31, affects Alibaba Cloud, others)"
         }
       ]
@@ -3826,7 +3826,7 @@
       "affected": [],
       "evidence": []
     },
-    "thumbsUp": 6,
+    "thumbsUp": 7,
     "thumbsDown": 0,
     "createdAt": "2026-04-24T16:30:05.632Z"
   }
