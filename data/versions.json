@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "**Production meltdown continues.** 24 critical regressions (was 16): SIX MORE ISSUES DISCOVERED 2026-05-16 afternoon — gateway cascade restarts, WhatsApp channel failure, docs command MCP breakage, Qwen tool regression, Telegram group deadlock, and subagent env-var inheritance broken.",
+    "verdictComment": "**Meltdown escalates: 34 critical regressions (was 24).** THIRTEEN MORE ISSUES DISCOVERED 2026-05-17 morning — diagnostic tool hangs, Slack/Matrix/Telegram/Codex cascading failures, model registry silent fallback, Node version incompatibility crash, auth profile collapse, and iOS PWA push silently broken.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -136,6 +136,84 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 83075,
+        "url": "https://github.com/openclaw/openclaw/issues/83075",
+        "title": "openclaw security audit --deep hangs during diagnostics on 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82886,
+        "url": "https://github.com/openclaw/openclaw/issues/82886",
+        "title": "[Bug]: Slack interactive reply clicks do not show assistant status/typing"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83023,
+        "url": "https://github.com/openclaw/openclaw/issues/83023",
+        "title": "[Bug]: Native image: dropped after sanitization regression on 2026.5.12 with Ollama/Gemma4 (Telegram)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83234,
+        "url": "https://github.com/openclaw/openclaw/issues/83234",
+        "title": "[Bug]: Regression of #78727 — TUI scope-upgrade retry generates churning requestIds, blocks manual approval on 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83233,
+        "url": "https://github.com/openclaw/openclaw/issues/83233",
+        "title": "[Bug]: Regression of #68390 — `openclaw models set <alias>` still resolves to bogus `openai/sonnet` on 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83107,
+        "url": "https://github.com/openclaw/openclaw/issues/83107",
+        "title": "Model registry name matching is load-bearing — silent fallback to picker selection on registry miss (2026.5.12)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83035,
+        "url": "https://github.com/openclaw/openclaw/issues/83035",
+        "title": "[Bug]: ERR_INTERNAL_ASSERTION in ESM→CJS translator at gateway startup on both Node 22.22.2 and Node 24.15.0 (Linux)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83142,
+        "url": "https://github.com/openclaw/openclaw/issues/83142",
+        "title": "Matrix: valid m.mentions.user_ids mention can be skipped when visible label is @[Display Name]"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83109,
+        "url": "https://github.com/openclaw/openclaw/issues/83109",
+        "title": "[Bug]: @openclaw/codex hardcodes features.code_mode_only=true, stalling every tool-using Codex-runtime turn (2026.5.10-beta.5+)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83159,
+        "url": "https://github.com/openclaw/openclaw/issues/83159",
+        "title": "Telegram: delivery-mirror transcript entries are being delivered to Telegram and edit-replacing the real assistant reply with earlier/fragmentary content"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83069,
+        "url": "https://github.com/openclaw/openclaw/issues/83069",
+        "title": "Telegram forum-topic voice notes reach agent as raw audio while DM transcription/echo works"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83088,
+        "url": "https://github.com/openclaw/openclaw/issues/83088",
+        "title": "Stale explicit auth.order can collapse profile rotation after update"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83134,
+        "url": "https://github.com/openclaw/openclaw/issues/83134",
+        "title": "Auto-generated VAPID keys use @localhost subject, breaking Apple Web Push (iOS PWA)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 81859,
         "url": "https://github.com/openclaw/openclaw/issues/81859",
         "title": "v2026.5.12-beta.8 macOS update can leave gateway in launchd loop from stale updater job and service env wrapper"
@@ -259,29 +337,107 @@
         "number": 82481,
         "url": "https://github.com/openclaw/openclaw/issues/82481",
         "title": "Subagent sessions do not inherit environment variables from gateway process"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83075,
+        "url": "https://github.com/openclaw/openclaw/issues/83075",
+        "title": "openclaw security audit --deep hangs during diagnostics on 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82886,
+        "url": "https://github.com/openclaw/openclaw/issues/82886",
+        "title": "[Bug]: Slack interactive reply clicks do not show assistant status/typing"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83023,
+        "url": "https://github.com/openclaw/openclaw/issues/83023",
+        "title": "[Bug]: Native image: dropped after sanitization regression on 2026.5.12 with Ollama/Gemma4 (Telegram)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83234,
+        "url": "https://github.com/openclaw/openclaw/issues/83234",
+        "title": "[Bug]: Regression of #78727 — TUI scope-upgrade retry generates churning requestIds, blocks manual approval on 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83233,
+        "url": "https://github.com/openclaw/openclaw/issues/83233",
+        "title": "[Bug]: Regression of #68390 — `openclaw models set <alias>` still resolves to bogus `openai/sonnet` on 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83107,
+        "url": "https://github.com/openclaw/openclaw/issues/83107",
+        "title": "Model registry name matching is load-bearing — silent fallback to picker selection on registry miss (2026.5.12)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83035,
+        "url": "https://github.com/openclaw/openclaw/issues/83035",
+        "title": "[Bug]: ERR_INTERNAL_ASSERTION in ESM→CJS translator at gateway startup on both Node 22.22.2 and Node 24.15.0 (Linux)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83142,
+        "url": "https://github.com/openclaw/openclaw/issues/83142",
+        "title": "Matrix: valid m.mentions.user_ids mention can be skipped when visible label is @[Display Name]"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83109,
+        "url": "https://github.com/openclaw/openclaw/issues/83109",
+        "title": "[Bug]: @openclaw/codex hardcodes features.code_mode_only=true, stalling every tool-using Codex-runtime turn (2026.5.10-beta.5+)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83159,
+        "url": "https://github.com/openclaw/openclaw/issues/83159",
+        "title": "Telegram: delivery-mirror transcript entries are being delivered to Telegram and edit-replacing the real assistant reply with earlier/fragmentary content"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83069,
+        "url": "https://github.com/openclaw/openclaw/issues/83069",
+        "title": "Telegram forum-topic voice notes reach agent as raw audio while DM transcription/echo works"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83088,
+        "url": "https://github.com/openclaw/openclaw/issues/83088",
+        "title": "Stale explicit auth.order can collapse profile rotation after update"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83134,
+        "url": "https://github.com/openclaw/openclaw/issues/83134",
+        "title": "Auto-generated VAPID keys use @localhost subject, breaking Apple Web Push (iOS PWA)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 18,
+      "score": 0,
       "verdict": "pending",
-      "votePenalty": 2,
-      "evidencePenalty": 66,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "votePenalty": 0,
+      "evidencePenalty": 94,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 66,
-        "votePenalty": 2,
-        "survivalDays": 2,
+        "evidencePenalty": 94,
+        "votePenalty": 0,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 18
+        "score": 0
       },
       "affected": [
         "cron-runtime",
@@ -298,7 +454,13 @@
         "provider-integration",
         "whatsapp",
         "docs-command",
-        "qwen"
+        "qwen",
+        "slack",
+        "ollama",
+        "telegram-media",
+        "matrix",
+        "authentication",
+        "diagnostics"
       ],
       "evidence": [
         {
@@ -531,10 +693,153 @@
           "severity": 3,
           "penalty": 2,
           "reason": "Subagent sessions do not inherit environment variables from gateway systemd process; breaks providers relying on env-var API key injection (NEW 2026-05-16 06:31, affects Alibaba Cloud, others)"
+        },
+        {
+          "issue": "openclaw/openclaw#83075",
+          "repo": "openclaw/openclaw",
+          "number": 83075,
+          "url": "https://github.com/openclaw/openclaw/issues/83075",
+          "area": "diagnostics",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "openclaw security audit --deep hangs during diagnostics on 2026.5.12; environment-specific regression (NEW 2026-05-17, P2 HANG)"
+        },
+        {
+          "issue": "openclaw/openclaw#82886",
+          "repo": "openclaw/openclaw",
+          "number": 82886,
+          "url": "https://github.com/openclaw/openclaw/issues/82886",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 1,
+          "reason": "Slack interactive reply clicks handled but assistant status/typing not shown on button/select interaction (NEW 2026-05-17, P2 UX)"
+        },
+        {
+          "issue": "openclaw/openclaw#83023",
+          "repo": "openclaw/openclaw",
+          "number": 83023,
+          "url": "https://github.com/openclaw/openclaw/issues/83023",
+          "area": "telegram-media",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 2,
+          "reason": "Native image dropped after sanitization regression on 2026.5.12 with Ollama/Gemma4 vision model; regression of #79750 (NEW 2026-05-17, PROVIDER)"
+        },
+        {
+          "issue": "openclaw/openclaw#83234",
+          "repo": "openclaw/openclaw",
+          "number": 83234,
+          "url": "https://github.com/openclaw/openclaw/issues/83234",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "TUI scope-upgrade retry generates churning requestIds, blocks manual approval; regression of #78727 (NEW 2026-05-17)"
+        },
+        {
+          "issue": "openclaw/openclaw#83233",
+          "repo": "openclaw/openclaw",
+          "number": 83233,
+          "url": "https://github.com/openclaw/openclaw/issues/83233",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 1,
+          "reason": "openclaw models set <alias> resolves to bogus <provider>/<alias>; regression of #68390 (NEW 2026-05-17)"
+        },
+        {
+          "issue": "openclaw/openclaw#83107",
+          "repo": "openclaw/openclaw",
+          "number": 83107,
+          "url": "https://github.com/openclaw/openclaw/issues/83107",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 2,
+          "reason": "Model registry name matching is load-bearing; silent fallback to picker on registry miss with no logs (NEW 2026-05-17, P2 OBSERVABILITY)"
+        },
+        {
+          "issue": "openclaw/openclaw#83035",
+          "repo": "openclaw/openclaw",
+          "number": 83035,
+          "url": "https://github.com/openclaw/openclaw/issues/83035",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 4,
+          "reason": "ERR_INTERNAL_ASSERTION in ESM→CJS translator at gateway startup on Node 22.22.2 and 24.15.0; Node 22.17.1 only version that works (NEW 2026-05-17, P1 CRASH)"
+        },
+        {
+          "issue": "openclaw/openclaw#83142",
+          "repo": "openclaw/openclaw",
+          "number": 83142,
+          "url": "https://github.com/openclaw/openclaw/issues/83142",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 1,
+          "reason": "Matrix mention parsing rejects protocol-valid m.mentions.user_ids when visible label uses @[Display Name] syntax (NEW 2026-05-17)"
+        },
+        {
+          "issue": "openclaw/openclaw#83109",
+          "repo": "openclaw/openclaw",
+          "number": 83109,
+          "url": "https://github.com/openclaw/openclaw/issues/83109",
+          "area": "codex",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex hardcodes features.code_mode_only=true; stalls every tool-using Codex-runtime turn after 2026.5.12 upgrade (NEW 2026-05-17, P1 CRITICAL)"
+        },
+        {
+          "issue": "openclaw/openclaw#83159",
+          "repo": "openclaw/openclaw",
+          "number": 83159,
+          "url": "https://github.com/openclaw/openclaw/issues/83159",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Telegram delivery-mirror transcript entries leak into outbound delivery, edit-replacing real assistant replies with mirror/earlier content (NEW 2026-05-17, P1 REGRESSION)"
+        },
+        {
+          "issue": "openclaw/openclaw#83069",
+          "repo": "openclaw/openclaw",
+          "number": 83069,
+          "url": "https://github.com/openclaw/openclaw/issues/83069",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 2,
+          "reason": "Telegram voice notes arrive as raw audio in forum-topic chats but transcribed in DMs; inconsistent media understanding path (NEW 2026-05-17)"
+        },
+        {
+          "issue": "openclaw/openclaw#83088",
+          "repo": "openclaw/openclaw",
+          "number": 83088,
+          "url": "https://github.com/openclaw/openclaw/issues/83088",
+          "area": "authentication",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Stale explicit auth.order collapses profile rotation after upgrade; plugin-harness provider immediate fallback (NEW 2026-05-17)"
+        },
+        {
+          "issue": "openclaw/openclaw#83134",
+          "repo": "openclaw/openclaw",
+          "number": 83134,
+          "url": "https://github.com/openclaw/openclaw/issues/83134",
+          "area": "web",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 2,
+          "reason": "VAPID keys auto-generated with @localhost subject; Apple Web Push rejects JWTs (iOS PWA push silent fail) (NEW 2026-05-17, P1 REGRESSION)"
         }
       ]
     },
-    "thumbsUp": 0,
+    "thumbsUp": 1,
     "thumbsDown": 1,
     "createdAt": "2026-05-14T18:26:44.431Z"
   },
@@ -1739,9 +2044,9 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 23,
+      "score": 21,
       "verdict": "no",
-      "votePenalty": 6,
+      "votePenalty": 8,
       "evidencePenalty": 51,
       "survivalDays": 0,
       "survivalBonus": 0,
@@ -1750,13 +2055,13 @@
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 51,
-        "votePenalty": 6,
+        "votePenalty": 8,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 23
+        "score": 21
       },
       "affected": [
         "browser",
@@ -2040,7 +2345,7 @@
       ]
     },
     "thumbsUp": 1,
-    "thumbsDown": 4,
+    "thumbsDown": 5,
     "createdAt": "2026-05-04T09:34:57.121Z"
   },
   {
@@ -2199,7 +2504,7 @@
         }
       ]
     },
-    "thumbsUp": 0,
+    "thumbsUp": 1,
     "thumbsDown": 0,
     "createdAt": "2026-05-04T07:46:24.298Z"
   },
