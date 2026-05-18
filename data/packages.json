@@ -474,20 +474,20 @@
         "baseScore": 80,
         "score": 0,
         "verdict": "pending",
-        "votePenalty": 0,
+        "votePenalty": 2,
         "evidencePenalty": 105,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "survivalDays": 4,
+        "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 105,
-          "votePenalty": 0,
-          "survivalDays": 3,
+          "votePenalty": 2,
+          "survivalDays": 4,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 4,
+          "survivalBonus": 12,
           "curatedBonus": 0,
           "score": 0
         },
@@ -936,7 +936,7 @@
         ]
       },
       "thumbsUp": 1,
-      "thumbsDown": 1,
+      "thumbsDown": 2,
       "createdAt": "2026-05-14T18:26:44.431Z"
     }
   }
