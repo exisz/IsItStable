@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "**Meltdown escalates: 34 critical regressions (was 24).** THIRTEEN MORE ISSUES DISCOVERED 2026-05-17 morning — diagnostic tool hangs, Slack/Matrix/Telegram/Codex cascading failures, model registry silent fallback, Node version incompatibility crash, auth profile collapse, and iOS PWA push silently broken.",
+    "verdictComment": "**Catastrophe deepens: 38 critical regressions (+4 NEW 2026-05-18).** Duplicate session poisoning, MiniMax auth stall, Docker image incomplete, image vision timeout. Five days of continuous failures across 21 subsystems.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -214,6 +214,30 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 83427,
+        "url": "https://github.com/openclaw/openclaw/issues/83427",
+        "title": "Cache-TTL handler causes duplicate assistant-turn emission, leading to in-context self-poisoning and verbatim response repetition"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83449,
+        "url": "https://github.com/openclaw/openclaw/issues/83449",
+        "title": "[Bug]: MiniMax auth stage takes 30-50s on every request in 5.x — worked fine in 4.23"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83459,
+        "url": "https://github.com/openclaw/openclaw/issues/83459",
+        "title": "trash-cli missing from official Docker image, causing 'openclaw agents delete' to leave residuals"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83416,
+        "url": "https://github.com/openclaw/openclaw/issues/83416",
+        "title": "[Bug]: openclaw_image vision times out after 60s on valid Talk JPEG in 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 81859,
         "url": "https://github.com/openclaw/openclaw/issues/81859",
         "title": "v2026.5.12-beta.8 macOS update can leave gateway in launchd loop from stale updater job and service env wrapper"
@@ -415,6 +439,30 @@
         "number": 83134,
         "url": "https://github.com/openclaw/openclaw/issues/83134",
         "title": "Auto-generated VAPID keys use @localhost subject, breaking Apple Web Push (iOS PWA)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83427,
+        "url": "https://github.com/openclaw/openclaw/issues/83427",
+        "title": "Cache-TTL handler causes duplicate assistant-turn emission, leading to in-context self-poisoning and verbatim response repetition"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83449,
+        "url": "https://github.com/openclaw/openclaw/issues/83449",
+        "title": "[Bug]: MiniMax auth stage takes 30-50s on every request in 5.x — worked fine in 4.23"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83459,
+        "url": "https://github.com/openclaw/openclaw/issues/83459",
+        "title": "trash-cli missing from official Docker image, causing 'openclaw agents delete' to leave residuals"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83416,
+        "url": "https://github.com/openclaw/openclaw/issues/83416",
+        "title": "[Bug]: openclaw_image vision times out after 60s on valid Talk JPEG in 2026.5.12"
       }
     ],
     "stabilityScore": {
@@ -423,14 +471,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 94,
+      "evidencePenalty": 105,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 94,
+        "evidencePenalty": 105,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
@@ -836,6 +884,50 @@
           "severity": 3,
           "penalty": 2,
           "reason": "VAPID keys auto-generated with @localhost subject; Apple Web Push rejects JWTs (iOS PWA push silent fail) (NEW 2026-05-17, P1 REGRESSION)"
+        },
+        {
+          "issue": "openclaw/openclaw#83427",
+          "repo": "openclaw/openclaw",
+          "number": 83427,
+          "url": "https://github.com/openclaw/openclaw/issues/83427",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Cache-TTL handler causes duplicate assistant-turn emission in session JSONL; model sees repeated responses → self-poisoning history → verbatim repetition (NEW 2026-05-18, CRITICAL)"
+        },
+        {
+          "issue": "openclaw/openclaw#83449",
+          "repo": "openclaw/openclaw",
+          "number": 83449,
+          "url": "https://github.com/openclaw/openclaw/issues/83449",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "MiniMax auth stage takes 30–50s on every request in 2026.5.12 (regression from 4.23, CN endpoint api.minimaxi.com affects Feishu) (NEW 2026-05-18)"
+        },
+        {
+          "issue": "openclaw/openclaw#83459",
+          "repo": "openclaw/openclaw",
+          "number": 83459,
+          "url": "https://github.com/openclaw/openclaw/issues/83459",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "trash-cli missing from official Docker image; 'openclaw agents delete' leaves residuals/stale entries (NEW 2026-05-18)"
+        },
+        {
+          "issue": "openclaw/openclaw#83416",
+          "repo": "openclaw/openclaw",
+          "number": 83416,
+          "url": "https://github.com/openclaw/openclaw/issues/83416",
+          "area": "runtime",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "openclaw_image vision times out after 60s on valid JPEG; optimizer works, vision dynamic tool fails on 2026.5.12 (NEW 2026-05-18)"
         }
       ]
     },
