@@ -6,34 +6,181 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "**🚨 HOTTEST LAUNCH EVER: Six criticals within 8 hours of release.** Crashes, silent channel death, missing deps, and perf cliffs. Not analyzed yet — too fresh. Collecting evidence.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83968,
+        "url": "https://github.com/openclaw/openclaw/issues/83968",
+        "title": "[Bug]: 2026.5.18 gateway crashes on macOS with uncaught AssertionError `assert(!this.paused)`; rollback to 2026.5.12 stabilizes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83972,
+        "url": "https://github.com/openclaw/openclaw/issues/83972",
+        "title": "[Bug]: Discord channel silently not initialized after upgrade to 2026.5.18"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83964,
+        "url": "https://github.com/openclaw/openclaw/issues/83964",
+        "title": "@openclaw/codex 2026.5.18 can fail with ERR_MODULE_NOT_FOUND for package 'openclaw' unless openclaw is installed locally"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83963,
+        "url": "https://github.com/openclaw/openclaw/issues/83963",
+        "title": "Performance regression: Control UI startup RPCs take 5-10s and can delay agent runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83744,
+        "url": "https://github.com/openclaw/openclaw/issues/83744",
+        "title": "[Bug]: Discord progress failed state can persist across runs and suppress later final replies"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83808,
+        "url": "https://github.com/openclaw/openclaw/issues/83808",
+        "title": "[Bug]: managed macOS update handoff can fail with uv_cwd after LaunchAgent stop"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83968,
+        "url": "https://github.com/openclaw/openclaw/issues/83968",
+        "title": "[Bug]: 2026.5.18 gateway crashes on macOS with uncaught AssertionError `assert(!this.paused)`; rollback to 2026.5.12 stabilizes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83972,
+        "url": "https://github.com/openclaw/openclaw/issues/83972",
+        "title": "[Bug]: Discord channel silently not initialized after upgrade to 2026.5.18"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83964,
+        "url": "https://github.com/openclaw/openclaw/issues/83964",
+        "title": "@openclaw/codex 2026.5.18 can fail with ERR_MODULE_NOT_FOUND for package 'openclaw' unless openclaw is installed locally"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83963,
+        "url": "https://github.com/openclaw/openclaw/issues/83963",
+        "title": "Performance regression: Control UI startup RPCs take 5-10s and can delay agent runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83744,
+        "url": "https://github.com/openclaw/openclaw/issues/83744",
+        "title": "[Bug]: Discord progress failed state can persist across runs and suppress later final replies"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83808,
+        "url": "https://github.com/openclaw/openclaw/issues/83808",
+        "title": "[Bug]: managed macOS update handoff can fail with uv_cwd after LaunchAgent stop"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 78,
+      "score": 58,
       "verdict": "pending",
-      "votePenalty": 2,
-      "evidencePenalty": 0,
+      "votePenalty": 0,
+      "evidencePenalty": 22,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
-        "votePenalty": 2,
+        "evidencePenalty": 22,
+        "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 78
+        "score": 58
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "gateway",
+        "discord",
+        "codex",
+        "runtime",
+        "service-management",
+        "provider-integration"
+      ],
+      "evidence": [
+        {
+          "issue": "openclaw/openclaw#83968",
+          "repo": "openclaw/openclaw",
+          "number": 83968,
+          "url": "https://github.com/openclaw/openclaw/issues/83968",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "macOS gateway crash: uncaught AssertionError assert(!this.paused); restart loop after upgrade from 2026.5.12"
+        },
+        {
+          "issue": "openclaw/openclaw#83972",
+          "repo": "openclaw/openclaw",
+          "number": 83972,
+          "url": "https://github.com/openclaw/openclaw/issues/83972",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Discord channel silently not initialized after upgrade to 2026.5.18; channels.list reports disabled despite enabled=true; 100% reproducible"
+        },
+        {
+          "issue": "openclaw/openclaw#83964",
+          "repo": "openclaw/openclaw",
+          "number": 83964,
+          "url": "https://github.com/openclaw/openclaw/issues/83964",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "@openclaw/codex 2026.5.18 missing runtime dependency on openclaw package; ERR_MODULE_NOT_FOUND unless manually installed"
+        },
+        {
+          "issue": "openclaw/openclaw#83963",
+          "repo": "openclaw/openclaw",
+          "number": 83963,
+          "url": "https://github.com/openclaw/openclaw/issues/83963",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Control UI startup RPC latency regression: 5-10s (commands.list, models.list, etc.); event-loop degraded util=1"
+        },
+        {
+          "issue": "openclaw/openclaw#83744",
+          "repo": "openclaw/openclaw",
+          "number": 83744,
+          "url": "https://github.com/openclaw/openclaw/issues/83744",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Discord progress failed state persists across runs; stale failed delivery blocks new final replies"
+        },
+        {
+          "issue": "openclaw/openclaw#83808",
+          "repo": "openclaw/openclaw",
+          "number": 83808,
+          "url": "https://github.com/openclaw/openclaw/issues/83808",
+          "area": "service-management",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 2,
+          "reason": "macOS managed update handoff crashes with uv_cwd after LaunchAgent stop; update appears to fail"
+        }
+      ]
     },
-    "thumbsUp": 0,
+    "thumbsUp": 2,
     "thumbsDown": 1,
     "createdAt": "2026-05-18T18:53:48.330Z"
   },
