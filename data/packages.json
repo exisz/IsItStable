@@ -15,9 +15,9 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 78,
         "verdict": "pending",
-        "votePenalty": 0,
+        "votePenalty": 2,
         "evidencePenalty": 0,
         "survivalDays": 0,
         "survivalBonus": 0,
@@ -26,19 +26,19 @@
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
-          "votePenalty": 0,
+          "votePenalty": 2,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 78
         },
         "affected": [],
         "evidence": []
       },
       "thumbsUp": 0,
-      "thumbsDown": 0,
+      "thumbsDown": 1,
       "createdAt": "2026-05-18T18:53:48.330Z"
     }
   }
