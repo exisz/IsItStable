@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "**🚨 HOTTEST LAUNCH EVER: Six criticals within 8 hours of release.** Crashes, silent channel death, missing deps, and perf cliffs. Not analyzed yet — too fresh. Collecting evidence.",
+      "verdictComment": "**🔥 CATASTROPHE ACCELERATING: 21 critical + kernel regressions discovered post-launch.** Four separate sub-systems now failing: gateway (crash + respawn loop), Discord (silent death + offline), Codex (missing deps + timeout), runtime (harness detection broken). Upgrade path contaminated — v2026.5.19-beta.1 inherits all 2026.5.18 flaws plus new gateway death spiral.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -50,6 +50,96 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 84139,
+          "url": "https://github.com/openclaw/openclaw/issues/84139",
+          "title": "[2026.5.18] Compaction safeguard causes duplicate messages on sessions_send interactions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84141,
+          "url": "https://github.com/openclaw/openclaw/issues/84141",
+          "title": "[Bug]: 2026.5.18 isolated cron agent turns omit requested exec tool despite toolsAllow"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84129,
+          "url": "https://github.com/openclaw/openclaw/issues/84129",
+          "title": "[Bug]: v2026.5.18: Telegram plain-text outbound dispatch silently fails after memory-pressure event; survives docker restart; cron and slash-command paths still work"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84249,
+          "url": "https://github.com/openclaw/openclaw/issues/84249",
+          "title": "[Bug]: Discord bot goes offline when SSH session disconnects (regression in      2026.5.18)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84001,
+          "url": "https://github.com/openclaw/openclaw/issues/84001",
+          "title": "Windows: openclaw status / status --json hangs in 2026.5.18 while status --all succeeds"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84092,
+          "url": "https://github.com/openclaw/openclaw/issues/84092",
+          "title": "[Bug]: WhatsApp channel silently drops long/complex agent responses (v2026.5.18)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83934,
+          "url": "https://github.com/openclaw/openclaw/issues/83934",
+          "title": "2026.5.19-beta.1 — gateway becomes unresponsive and silently respawns within ~2 minutes on a working v2026.5.18 setup"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84256,
+          "url": "https://github.com/openclaw/openclaw/issues/84256",
+          "title": "[Bug]: openclaw plugins update --all downgrades manually-updated npm plugins to their originally-recorded install version"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84222,
+          "url": "https://github.com/openclaw/openclaw/issues/84222",
+          "title": "[Bug]: [reopen #82344] Regression after upgrading from 2026.5.7 → 2026.5.18: embedded runtime detected as third-party harness while direct Claude CLI still works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84203,
+          "url": "https://github.com/openclaw/openclaw/issues/84203",
+          "title": "[Bug]: Windows — models.authStatus cold latency 10-24s per CLI session (2026.5.18 + Codex 0.131.0)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84144,
+          "url": "https://github.com/openclaw/openclaw/issues/84144",
+          "title": "[Bug]: openclaw nodes approve requires operator.admin — blocks automation after 2026.5.18 node surface gate"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83958,
+          "url": "https://github.com/openclaw/openclaw/issues/83958",
+          "title": "macOS app node regresses in 2026.5.18: flaps online/offline and gateway invokes time out"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83966,
+          "url": "https://github.com/openclaw/openclaw/issues/83966",
+          "title": "Codex dynamic tool timeout is not configurable for plugin runtime tools"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83935,
+          "url": "https://github.com/openclaw/openclaw/issues/83935",
+          "title": "Post-update sessions can surface stale openai-codex missing-key errors until doctor runs"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84022,
+          "url": "https://github.com/openclaw/openclaw/issues/84022",
+          "title": "Discord room events can suppress final assistant replies into transcript-only mode"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 83968,
           "url": "https://github.com/openclaw/openclaw/issues/83968",
           "title": "[Bug]: 2026.5.18 gateway crashes on macOS with uncaught AssertionError `assert(!this.paused)`; rollback to 2026.5.12 stabilizes"
@@ -83,29 +173,119 @@
           "number": 83808,
           "url": "https://github.com/openclaw/openclaw/issues/83808",
           "title": "[Bug]: managed macOS update handoff can fail with uv_cwd after LaunchAgent stop"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84139,
+          "url": "https://github.com/openclaw/openclaw/issues/84139",
+          "title": "[2026.5.18] Compaction safeguard causes duplicate messages on sessions_send interactions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84141,
+          "url": "https://github.com/openclaw/openclaw/issues/84141",
+          "title": "[Bug]: 2026.5.18 isolated cron agent turns omit requested exec tool despite toolsAllow"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84129,
+          "url": "https://github.com/openclaw/openclaw/issues/84129",
+          "title": "[Bug]: v2026.5.18: Telegram plain-text outbound dispatch silently fails after memory-pressure event; survives docker restart; cron and slash-command paths still work"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84249,
+          "url": "https://github.com/openclaw/openclaw/issues/84249",
+          "title": "[Bug]: Discord bot goes offline when SSH session disconnects (regression in      2026.5.18)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84001,
+          "url": "https://github.com/openclaw/openclaw/issues/84001",
+          "title": "Windows: openclaw status / status --json hangs in 2026.5.18 while status --all succeeds"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84092,
+          "url": "https://github.com/openclaw/openclaw/issues/84092",
+          "title": "[Bug]: WhatsApp channel silently drops long/complex agent responses (v2026.5.18)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83934,
+          "url": "https://github.com/openclaw/openclaw/issues/83934",
+          "title": "2026.5.19-beta.1 — gateway becomes unresponsive and silently respawns within ~2 minutes on a working v2026.5.18 setup"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84256,
+          "url": "https://github.com/openclaw/openclaw/issues/84256",
+          "title": "[Bug]: openclaw plugins update --all downgrades manually-updated npm plugins to their originally-recorded install version"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84222,
+          "url": "https://github.com/openclaw/openclaw/issues/84222",
+          "title": "[Bug]: [reopen #82344] Regression after upgrading from 2026.5.7 → 2026.5.18: embedded runtime detected as third-party harness while direct Claude CLI still works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84203,
+          "url": "https://github.com/openclaw/openclaw/issues/84203",
+          "title": "[Bug]: Windows — models.authStatus cold latency 10-24s per CLI session (2026.5.18 + Codex 0.131.0)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84144,
+          "url": "https://github.com/openclaw/openclaw/issues/84144",
+          "title": "[Bug]: openclaw nodes approve requires operator.admin — blocks automation after 2026.5.18 node surface gate"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83958,
+          "url": "https://github.com/openclaw/openclaw/issues/83958",
+          "title": "macOS app node regresses in 2026.5.18: flaps online/offline and gateway invokes time out"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83966,
+          "url": "https://github.com/openclaw/openclaw/issues/83966",
+          "title": "Codex dynamic tool timeout is not configurable for plugin runtime tools"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83935,
+          "url": "https://github.com/openclaw/openclaw/issues/83935",
+          "title": "Post-update sessions can surface stale openai-codex missing-key errors until doctor runs"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84022,
+          "url": "https://github.com/openclaw/openclaw/issues/84022",
+          "title": "Discord room events can suppress final assistant replies into transcript-only mode"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 58,
+        "score": 12,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 22,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "evidencePenalty": 71,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 22,
+          "evidencePenalty": 71,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 58
+          "score": 12
         },
         "affected": [
           "gateway",
@@ -113,7 +293,15 @@
           "codex",
           "runtime",
           "service-management",
-          "provider-integration"
+          "provider-integration",
+          "compaction",
+          "telegram",
+          "whatsapp",
+          "cron-runtime",
+          "tool-registration",
+          "node-surface",
+          "windows",
+          "macos"
         ],
         "evidence": [
           {
@@ -125,7 +313,7 @@
             "type": "kernel",
             "severity": 5,
             "penalty": 5,
-            "reason": "macOS gateway crash: uncaught AssertionError assert(!this.paused); restart loop after upgrade from 2026.5.12"
+            "reason": "macOS gateway crash: uncaught AssertionError assert(!this.paused); restart loop after upgrade from 2026.5.12 ⭐⭐⭐"
           },
           {
             "issue": "openclaw/openclaw#83972",
@@ -136,7 +324,7 @@
             "type": "channel-specific",
             "severity": 5,
             "penalty": 5,
-            "reason": "Discord channel silently not initialized after upgrade to 2026.5.18; channels.list reports disabled despite enabled=true; 100% reproducible"
+            "reason": "Discord channel silently not initialized after upgrade to 2026.5.18; channels.list reports disabled despite enabled=true; 100% reproducible ⭐⭐⭐"
           },
           {
             "issue": "openclaw/openclaw#83964",
@@ -147,7 +335,7 @@
             "type": "runtime",
             "severity": 4,
             "penalty": 4,
-            "reason": "@openclaw/codex 2026.5.18 missing runtime dependency on openclaw package; ERR_MODULE_NOT_FOUND unless manually installed"
+            "reason": "@openclaw/codex 2026.5.18 missing runtime dependency on openclaw package; ERR_MODULE_NOT_FOUND unless manually installed ⭐⭐"
           },
           {
             "issue": "openclaw/openclaw#83963",
@@ -158,7 +346,7 @@
             "type": "runtime",
             "severity": 3,
             "penalty": 3,
-            "reason": "Control UI startup RPC latency regression: 5-10s (commands.list, models.list, etc.); event-loop degraded util=1"
+            "reason": "Control UI startup RPC latency regression: 5-10s (commands.list, models.list, etc.); event-loop degraded util=1 ⭐⭐"
           },
           {
             "issue": "openclaw/openclaw#83744",
@@ -169,7 +357,7 @@
             "type": "channel-specific",
             "severity": 3,
             "penalty": 3,
-            "reason": "Discord progress failed state persists across runs; stale failed delivery blocks new final replies"
+            "reason": "Discord progress failed state persists across runs; stale failed delivery blocks new final replies ⭐⭐"
           },
           {
             "issue": "openclaw/openclaw#83808",
@@ -180,12 +368,177 @@
             "type": "runtime",
             "severity": 3,
             "penalty": 2,
-            "reason": "macOS managed update handoff crashes with uv_cwd after LaunchAgent stop; update appears to fail"
+            "reason": "macOS managed update handoff crashes with uv_cwd after LaunchAgent stop; update appears to fail ⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84139",
+            "repo": "openclaw/openclaw",
+            "number": 84139,
+            "url": "https://github.com/openclaw/openclaw/issues/84139",
+            "area": "compaction",
+            "type": "kernel",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Compaction safeguard causes duplicate messages on sessions_send interactions (macOS, regression in 2026.5.18) ⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84141",
+            "repo": "openclaw/openclaw",
+            "number": 84141,
+            "url": "https://github.com/openclaw/openclaw/issues/84141",
+            "area": "cron-runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Isolated cron agent turns omit requested exec tool despite toolsAllow; intermittent (Linux, regression in 2026.5.18) ⭐⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84129",
+            "repo": "openclaw/openclaw",
+            "number": 84129,
+            "url": "https://github.com/openclaw/openclaw/issues/84129",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Telegram plain-text outbound dispatch silently fails after memory-pressure event; survives docker restart (VPS) ⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84249",
+            "repo": "openclaw/openclaw",
+            "number": 84249,
+            "url": "https://github.com/openclaw/openclaw/issues/84249",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Discord bot goes offline when SSH session disconnects (regression in 2026.5.18) ⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84001",
+            "repo": "openclaw/openclaw",
+            "number": 84001,
+            "url": "https://github.com/openclaw/openclaw/issues/84001",
+            "area": "runtime",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Windows: openclaw status / status --json hangs in 2026.5.18 while status --all succeeds ⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84092",
+            "repo": "openclaw/openclaw",
+            "number": 84092,
+            "url": "https://github.com/openclaw/openclaw/issues/84092",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "WhatsApp channel silently drops long/complex agent responses; regression from 2026.5.12 (markdown tables, multi-line fail) ⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#83934",
+            "repo": "openclaw/openclaw",
+            "number": 83934,
+            "url": "https://github.com/openclaw/openclaw/issues/83934",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "2026.5.19-beta.1: gateway becomes unresponsive, memory exceeded, respawns every ~2 min on 2026.5.18 setup (KERNEL REGRESSION) ⭐⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84256",
+            "repo": "openclaw/openclaw",
+            "number": 84256,
+            "url": "https://github.com/openclaw/openclaw/issues/84256",
+            "area": "tool-registration",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "openclaw plugins update --all downgrades manually-updated npm plugins to originally-recorded version (regression in 2026.5.18) ⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84222",
+            "repo": "openclaw/openclaw",
+            "number": 84222,
+            "url": "https://github.com/openclaw/openclaw/issues/84222",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Embedded runtime detected as third-party harness after upgrade 2026.5.7→2026.5.18; re-regression of #82344; Telegram/Dashboard fail, CLI works ⭐⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84203",
+            "repo": "openclaw/openclaw",
+            "number": 84203,
+            "url": "https://github.com/openclaw/openclaw/issues/84203",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Windows: models.authStatus cold latency 10-24s per CLI session (2026.5.18 + Codex), every session 27-45s (regression) ⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84144",
+            "repo": "openclaw/openclaw",
+            "number": 84144,
+            "url": "https://github.com/openclaw/openclaw/issues/84144",
+            "area": "node-surface",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "openclaw nodes approve requires operator.admin after node surface gate (2026.5.18); breaks automation, permanent breakage ⭐⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#83958",
+            "repo": "openclaw/openclaw",
+            "number": 83958,
+            "url": "https://github.com/openclaw/openclaw/issues/83958",
+            "area": "node-surface",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "macOS app node regresses in 2026.5.18: flaps online/offline, gateway invokes timeout (regression from working 2026.5.12) ⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#83966",
+            "repo": "openclaw/openclaw",
+            "number": 83966,
+            "url": "https://github.com/openclaw/openclaw/issues/83966",
+            "area": "codex",
+            "type": "tool",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex dynamic tool timeout non-configurable at 30s (hardcoded CODEX_DYNAMIC_TOOL_TIMEOUT_MS); kills long-running tools (2026.5.18) ⭐⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#83935",
+            "repo": "openclaw/openclaw",
+            "number": 83935,
+            "url": "https://github.com/openclaw/openclaw/issues/83935",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Post-update stale openai-codex missing-key errors until openclaw doctor runs (regression in 2026.5.18 post-upgrade) ⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84022",
+            "repo": "openclaw/openclaw",
+            "number": 84022,
+            "url": "https://github.com/openclaw/openclaw/issues/84022",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Discord room events can suppress final assistant replies into transcript-only mode (regression in 2026.5.18) ⭐⭐"
           }
         ]
       },
-      "thumbsUp": 2,
-      "thumbsDown": 1,
+      "thumbsUp": 4,
+      "thumbsDown": 2,
       "createdAt": "2026-05-18T18:53:48.330Z"
     }
   }
