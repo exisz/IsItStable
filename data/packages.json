@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "**🔥 CATASTROPHE ACCELERATING: 21 critical + kernel regressions discovered post-launch.** Four separate sub-systems now failing: gateway (crash + respawn loop), Discord (silent death + offline), Codex (missing deps + timeout), runtime (harness detection broken). Upgrade path contaminated — v2026.5.19-beta.1 inherits all 2026.5.18 flaws plus new gateway death spiral.",
+      "verdictComment": "**🔥 CATASTROPHE ACCELERATING: 23 critical + kernel regressions discovered post-launch.** Four separate sub-systems now failing: gateway (crash + respawn loop), Discord (silent death + offline), Codex (Windows startup broken, memory leak, timeout hardcoded), runtime (harness detection broken). Upgrade path contaminated — v2026.5.19-beta.1 inherits all 2026.5.18 flaws plus new gateway death spiral.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -140,6 +140,18 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 84365,
+          "url": "https://github.com/openclaw/openclaw/issues/84365",
+          "title": "[Bug]: Codex Harness Startup Failures on Windows (OpenClaw 2026.5.18)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84413,
+          "url": "https://github.com/openclaw/openclaw/issues/84413",
+          "title": "[Bug]: 2026.5.18 Codex Chrome DevTools MCP sidecars accumulate under gateway and drive cgroup memory growth"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 83968,
           "url": "https://github.com/openclaw/openclaw/issues/83968",
           "title": "[Bug]: 2026.5.18 gateway crashes on macOS with uncaught AssertionError `assert(!this.paused)`; rollback to 2026.5.12 stabilizes"
@@ -263,29 +275,41 @@
           "number": 84022,
           "url": "https://github.com/openclaw/openclaw/issues/84022",
           "title": "Discord room events can suppress final assistant replies into transcript-only mode"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84365,
+          "url": "https://github.com/openclaw/openclaw/issues/84365",
+          "title": "[Bug]: Codex Harness Startup Failures on Windows (OpenClaw 2026.5.18)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84413,
+          "url": "https://github.com/openclaw/openclaw/issues/84413",
+          "title": "[Bug]: 2026.5.18 Codex Chrome DevTools MCP sidecars accumulate under gateway and drive cgroup memory growth"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 12,
+        "score": 5,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 71,
+        "evidencePenalty": 78,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 71,
+          "evidencePenalty": 78,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 1,
           "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 12
+          "score": 5
         },
         "affected": [
           "gateway",
@@ -534,10 +558,32 @@
             "severity": 3,
             "penalty": 3,
             "reason": "Discord room events can suppress final assistant replies into transcript-only mode (regression in 2026.5.18) ⭐⭐"
+          },
+          {
+            "issue": "openclaw/openclaw#84365",
+            "repo": "openclaw/openclaw",
+            "number": 84365,
+            "url": "https://github.com/openclaw/openclaw/issues/84365",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Windows Codex harness startup failures; app-server command handling broken (2026-05-20, NEW)"
+          },
+          {
+            "issue": "openclaw/openclaw#84413",
+            "repo": "openclaw/openclaw",
+            "number": 84413,
+            "url": "https://github.com/openclaw/openclaw/issues/84413",
+            "area": "codex",
+            "type": "kernel",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Codex Chrome DevTools MCP sidecars accumulate; cgroup memory leak unchecked (2026-05-20, NEW)"
           }
         ]
       },
-      "thumbsUp": 4,
+      "thumbsUp": 5,
       "thumbsDown": 2,
       "createdAt": "2026-05-18T18:53:48.330Z"
     }
