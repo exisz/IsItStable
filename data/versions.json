@@ -1,5 +1,43 @@
 [
   {
+    "issueNumber": 89,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/89",
+    "version": "2026.5.19",
+    "packageName": "openclaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-05-20T20:20:41.341Z"
+  },
+  {
     "issueNumber": 88,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/88",
     "version": "2026.5.18",
@@ -288,24 +326,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 5,
+      "score": 8,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 78,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 78,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 5
+        "score": 8
       },
       "affected": [
         "gateway",
