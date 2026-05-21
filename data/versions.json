@@ -1,5 +1,43 @@
 [
   {
+    "issueNumber": 90,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/90",
+    "version": "2026.5.20",
+    "packageName": "openclaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-05-21T20:41:31.699Z"
+  },
+  {
     "issueNumber": 89,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/89",
     "version": "2026.5.19",
@@ -72,24 +110,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 60,
+      "score": 63,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 20,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 20,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 60
+        "score": 63
       },
       "affected": [
         "gateway",
@@ -156,7 +194,7 @@
         }
       ]
     },
-    "thumbsUp": 0,
+    "thumbsUp": 1,
     "thumbsDown": 0,
     "createdAt": "2026-05-20T20:20:41.341Z"
   },
@@ -786,7 +824,7 @@
         }
       ]
     },
-    "thumbsUp": 4,
+    "thumbsUp": 5,
     "thumbsDown": 2,
     "createdAt": "2026-05-18T18:53:48.330Z"
   },
@@ -2927,9 +2965,9 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 21,
+      "score": 23,
       "verdict": "no",
-      "votePenalty": 8,
+      "votePenalty": 6,
       "evidencePenalty": 51,
       "survivalDays": 0,
       "survivalBonus": 0,
@@ -2938,13 +2976,13 @@
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 51,
-        "votePenalty": 8,
+        "votePenalty": 6,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 21
+        "score": 23
       },
       "affected": [
         "browser",
@@ -3227,7 +3265,7 @@
         }
       ]
     },
-    "thumbsUp": 1,
+    "thumbsUp": 2,
     "thumbsDown": 5,
     "createdAt": "2026-05-04T09:34:57.121Z"
   },
