@@ -10,32 +10,155 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "⏸️ **ESCALATION (< 24h threshold):** Critical blockers discovered 2026-05-21. Verdict deferred until 24h+ observation window; **do not upgrade** until analysis completes.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84809,
+          "url": "https://github.com/openclaw/openclaw/issues/84809",
+          "title": "[Data loss] 2026.5.19 update/backup flow removed ~/.openclaw/workspace and left plugin/npm state inconsistent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84839,
+          "url": "https://github.com/openclaw/openclaw/issues/84839",
+          "title": "Bug: sessions_yield wakes parent with yield continuation instead of child completion event"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84820,
+          "url": "https://github.com/openclaw/openclaw/issues/84820",
+          "title": "Unclosed FileHandle on session JSONL lock crashes gateway on Node ≥24 under sustained session-store load"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84783,
+          "url": "https://github.com/openclaw/openclaw/issues/84783",
+          "title": "[Bug]: Native Moonshot Discord runs spend ~30s in model-resolution before dispatch"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84808,
+          "url": "https://github.com/openclaw/openclaw/issues/84808",
+          "title": "Bug: Control UI '立即更新' (Update Now) button does nothing when clicked"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84809,
+          "url": "https://github.com/openclaw/openclaw/issues/84809",
+          "title": "[Data loss] 2026.5.19 update/backup flow removed ~/.openclaw/workspace and left plugin/npm state inconsistent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84839,
+          "url": "https://github.com/openclaw/openclaw/issues/84839",
+          "title": "Bug: sessions_yield wakes parent with yield continuation instead of child completion event"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84820,
+          "url": "https://github.com/openclaw/openclaw/issues/84820",
+          "title": "Unclosed FileHandle on session JSONL lock crashes gateway on Node ≥24 under sustained session-store load"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84783,
+          "url": "https://github.com/openclaw/openclaw/issues/84783",
+          "title": "[Bug]: Native Moonshot Discord runs spend ~30s in model-resolution before dispatch"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84808,
+          "url": "https://github.com/openclaw/openclaw/issues/84808",
+          "title": "Bug: Control UI '立即更新' (Update Now) button does nothing when clicked"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 60,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 20,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 20,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 60
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "gateway",
+          "runtime",
+          "sessions-management",
+          "update-system",
+          "ui"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#84809",
+            "repo": "openclaw/openclaw",
+            "number": 84809,
+            "url": "https://github.com/openclaw/openclaw/issues/84809",
+            "area": "update-system",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "DATA LOSS: 2026.5.19 update/backup procedure deletes ~/.openclaw/workspace directory (memory, scripts, local plugins). Workspace restored manually from Time Machine. 🚨🚨🚨"
+          },
+          {
+            "issue": "openclaw/openclaw#84839",
+            "repo": "openclaw/openclaw",
+            "number": 84839,
+            "url": "https://github.com/openclaw/openclaw/issues/84839",
+            "area": "sessions-management",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "sessions_yield broken: parent never receives child completion; parent hangs indefinitely waiting for yield continuation timer. Blocks all subagent delegation flows. 🚨🚨🚨"
+          },
+          {
+            "issue": "openclaw/openclaw#84820",
+            "repo": "openclaw/openclaw",
+            "number": 84820,
+            "url": "https://github.com/openclaw/openclaw/issues/84820",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Unclosed FileHandle on session JSONL lock crashes gateway Node ≥24 every ~2h under load. Node 22 shows only deprecation warning. Chronic crash cadence in production. 🚨🚨🚨"
+          },
+          {
+            "issue": "openclaw/openclaw#84783",
+            "repo": "openclaw/openclaw",
+            "number": 84783,
+            "url": "https://github.com/openclaw/openclaw/issues/84783",
+            "area": "runtime",
+            "type": "provider-integration",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Native Moonshot Discord runs spend ~30s in model-resolution before dispatch. Confirmed on both 2026.5.18 and 2026.5.19."
+          },
+          {
+            "issue": "openclaw/openclaw#84808",
+            "repo": "openclaw/openclaw",
+            "number": 84808,
+            "url": "https://github.com/openclaw/openclaw/issues/84808",
+            "area": "ui",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Control UI 'Update Now' button unresponsive (立即更新 does nothing when clicked). Blocks manual update path."
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
