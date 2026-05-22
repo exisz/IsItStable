@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!pkg) return {};
   return {
     title: `Is ${pkg.displayName} Stable? | IsItStable.com`,
-    description: `Stability verdicts for ${pkg.displayName}. Check before you update.`,
+    description: `Stability scores for ${pkg.displayName}. Check before you update.`,
   };
 }
 

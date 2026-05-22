@@ -162,9 +162,8 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     ? raw.affected.filter((item): item is string => typeof item === "string")
     : Array.from(new Set(evidence.map((item) => item.area).filter(Boolean)));
 
-  const verdict = raw.verdict === "yes" || raw.verdict === "no" || raw.verdict === "pending"
-    ? raw.verdict
-    : fallbackVerdict;
+  // Score-only mode: ignore any legacy verdict embedded in historical score blocks.
+  const verdict = fallbackVerdict;
 
   return {
     schemaVersion: "isitstable:v1",

@@ -6,11 +6,12 @@ type Props = { params: Promise<{ package: string }> };
 export async function GET(_: Request, { params }: Props) {
   const { package: slug } = await params;
   const stable = await getLatestStable(slug);
-  if (!stable) return NextResponse.json({ error: "No stable version found" }, { status: 404 });
+  if (!stable) return NextResponse.json({ error: "No scored version found" }, { status: 404 });
   return NextResponse.json({
     package: slug,
     version: stable.version,
-    verdict: "yes",
+    status: "score-only",
+    score: stable.stabilityScore.score,
     stabilityScore: stable.stabilityScore,
     comment: stable.verdictComment,
     install: `npm install ${slug}@${stable.version}`,

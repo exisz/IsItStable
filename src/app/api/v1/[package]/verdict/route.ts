@@ -11,7 +11,8 @@ export async function GET(_: Request, { params }: Props) {
   return NextResponse.json({
     package: slug,
     version: latest.version,
-    verdict: latest.verdict,
+    status: "score-only",
+    score: latest.stabilityScore.score,
     stabilityScore: latest.stabilityScore,
     comment: latest.verdictComment,
     thumbsUp: latest.thumbsUp,

@@ -23,7 +23,7 @@ export default async function HomePage() {
           Because <code className="text-[var(--color-foreground)] bg-[var(--color-card)] px-2 py-0.5 rounded">npm update</code> shouldn&apos;t require a prayer circle. 🙏
         </p>
         <p className="mt-4 text-[var(--color-muted)]">
-          Community-driven stability verdicts for packages you actually use.
+          Evidence-based stability scores for packages you actually use.
         </p>
       </section>
 

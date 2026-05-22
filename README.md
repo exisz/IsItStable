@@ -1,6 +1,6 @@
 # 🔍 IsItStable.com
 
-> Community-driven stability verdicts for npm packages. Because `latest` doesn't mean `greatest`.
+> Evidence-based stability scores for npm packages. Because `latest` doesn't mean `greatest`.
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fisitstable.com&label=isitstable.com)](https://isitstable.com)
 [![npm version](https://img.shields.io/npm/v/is-it-stable)](https://www.npmjs.com/package/is-it-stable)
@@ -17,7 +17,7 @@
 
 **IsItStable** answers one question: *"Should I update?"*
 
-Every tracked package version gets a **community verdict** — `YES ✅` (ship it) or `NO 🔥` (hold off). Verdicts are backed by evidence: referenced GitHub issues, download stats, and community votes via GitHub reactions.
+Every tracked package version gets a **stability score** backed by evidence: referenced GitHub issues, download stats, and community votes via GitHub reactions.
 
 ## Install & Usage (CLI)
 
@@ -37,7 +37,7 @@ is-it-stable openclaw
 ## How it works
 
 1. **Version issues** are created in this repo with the format `[v2026.4.23] PackageName`
-2. Each issue contains a **verdict** (YES/NO), humorous comment, and evidence links
+2. Each issue contains a factual stability score, a brief comment, and evidence links
 3. **You vote** by reacting on the issue: 👍 = stable, 👎 = unstable
 4. The website reads from GitHub Issues via API — no database needed
 
@@ -47,13 +47,14 @@ All endpoints return JSON with `Cache-Control` headers.
 
 ### `GET /api/v1/{package}/verdict`
 
-Latest verdict for a package.
+Latest stability score for a package.
 
 ```json
 {
   "package": "openclaw",
   "version": "2026.4.23",
-  "verdict": "yes",
+  "status": "score-only",
+  "score": 82,
   "comment": "Ship it and sleep like a baby.",
   "thumbsUp": 12,
   "thumbsDown": 1
@@ -66,7 +67,7 @@ All tracked versions for a package.
 
 ### `GET /api/v1/{package}/latest-stable`
 
-Latest version with a YES verdict. Includes an `install` command.
+Best-scoring version. Includes an `install` command.
 
 ### `GET /api/v1/{package}/{version}`
 
@@ -102,7 +103,7 @@ GITHUB_TOKEN=ghp_...
 2. Create a feature branch
 3. Submit a PR
 
-For version verdicts, [open an issue](https://github.com/exisz/IsItStable/issues/new) instead.
+For version score requests, [open an issue](https://github.com/exisz/IsItStable/issues/new) instead.
 
 ## Sponsors
 

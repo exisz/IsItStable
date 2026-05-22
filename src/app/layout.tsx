@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "IsItStable.com — Should You Update?",
-  description: "Community-driven stability verdicts for open source packages. Because 'latest' doesn't mean 'greatest'.",
+  description: "Evidence-based stability scores for open source packages. Because 'latest' doesn't mean 'greatest'.",
   metadataBase: new URL("https://isitstable.com"),
   openGraph: {
     title: "IsItStable.com — Should You Update?",
-    description: "Community-driven stability verdicts for open source packages.",
+    description: "Evidence-based stability scores for open source packages.",
     url: "https://isitstable.com",
     siteName: "IsItStable.com",
     type: "website",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "IsItStable.com — Should You Update?",
-    description: "Community-driven stability verdicts for open source packages.",
+    description: "Evidence-based stability scores for open source packages.",
   },
   robots: {
     index: true,
@@ -30,9 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen flex flex-col antialiased">
         <nav className="border-b border-[var(--color-border)] px-6 py-4">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
-            <a href="/" className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
+            <Link href="/" className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
               🔍 IsItStable<span className="text-[var(--color-muted)]">.com</span>
-            </a>
+            </Link>
             <div className="flex items-center gap-4 text-sm text-[var(--color-muted)]">
               <a href="https://github.com/exisz/IsItStable" target="_blank" rel="noopener" className="hover:text-white transition-colors">GitHub</a>
               <a href="https://github.com/sponsors/exisz" target="_blank" rel="noopener" className="hover:text-white transition-colors">Sponsor 💛</a>
@@ -49,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {" · "}
             <a href="https://github.com/sponsors/exisz" target="_blank" rel="noopener" className="hover:text-white transition-colors">Sponsor</a>
             {" · "}
-            <a href="/api/v1/openclaw/verdict" className="hover:text-white transition-colors">API</a>
+            <Link href="/api/v1/openclaw/verdict" className="hover:text-white transition-colors">API</Link>
           </p>
         </footer>
         <Analytics />

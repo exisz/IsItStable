@@ -1,5 +1,4 @@
 import { getVersionBySlug, getPackageSummary, fetchAllVersionIssues } from "@/lib/data";
-import { getVibe } from "@/lib/vibes";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { InstallCommands } from "@/components/InstallCommands";
@@ -18,10 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { package: slug, version } = await params;
   const v = await getVersionBySlug(slug, version);
   if (!v) return {};
-  const verdict = v.verdict === "yes" ? "Stable ✅" : v.verdict === "no" ? "Unstable 🔥" : "Pending 🤔";
   return {
-    title: `Is ${v.packageName} v${version} Stable? | IsItStable.com`,
-    description: `${v.packageName} v${version}: ${verdict}. ${v.verdictComment}`,
+    title: `${v.packageName} v${version} Stability Score | IsItStable.com`,
+    description: `${v.packageName} v${version}: stability score ${v.stabilityScore.score}/100. ${v.verdictComment}`,
   };
 }
 
@@ -31,8 +29,6 @@ export default async function VersionPage({ params }: Props) {
   if (!pkg) notFound();
   const v = await getVersionBySlug(slug, version);
   if (!v) notFound();
-
-  const vibe = getVibe(v.version, v.verdict);
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
@@ -49,7 +45,7 @@ export default async function VersionPage({ params }: Props) {
         </p>
         <ScoreBadge score={v.stabilityScore.score} size="xl" mutedMax />
         <p className="mt-4 text-sm uppercase tracking-widest text-[var(--color-muted)]">
-          Editorial note: {v.verdict.toUpperCase()} · {vibe}
+          Fact score: {v.stabilityScore.score}/100 · evidence-based, not a YES/NO verdict
         </p>
       </div>
 

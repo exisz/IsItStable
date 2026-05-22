@@ -11,7 +11,8 @@ export async function GET(_: Request, { params }: Props) {
     package: slug,
     versions: versions.map((v) => ({
       version: v.version,
-      verdict: v.verdict,
+      status: "score-only",
+      score: v.stabilityScore.score,
       stabilityScore: v.stabilityScore,
       comment: v.verdictComment,
       thumbsUp: v.thumbsUp,

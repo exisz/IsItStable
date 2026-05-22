@@ -5,7 +5,7 @@
     "version": "2026.5.20",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "🔴 **Critical: Multiple kernel + channel regressions detected across 48+ hours post-launch.** Update system fragility, plugin sync dependency issues, Telegram delivery regression, and 4-5x doctor slowdown form a high-risk cluster. Score **likely 42–48** (40–49 bucket).",
     "referencedIssues": [
       {
@@ -193,7 +193,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 43,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 40,
       "survivalDays": 1,
@@ -400,7 +400,7 @@
     "version": "2026.5.19",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "🚨 **VERDICT: CRITICAL (> 24h observation window)** Three kernel-level failures warrant **immediate rollback**. Do not upgrade; users on v2026.5.19 must rollback immediately.",
     "referencedIssues": [
       {
@@ -468,7 +468,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 63,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 20,
       "survivalDays": 1,
@@ -561,7 +561,7 @@
     "version": "2026.5.18",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "**🔥 CATASTROPHE ACCELERATING: 23 critical + kernel regressions discovered post-launch.** Four separate sub-systems now failing: gateway (crash + respawn loop), Discord (silent death + offline), Codex (Windows startup broken, memory leak, timeout hardcoded), runtime (harness detection broken). Upgrade path contaminated — v2026.5.19-beta.1 inherits all 2026.5.18 flaws plus new gateway death spiral.",
     "referencedIssues": [
       {
@@ -869,7 +869,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 0,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 86,
       "survivalDays": 2,
@@ -1191,7 +1191,7 @@
     "version": "2026.5.12",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "**Catastrophe deepens: 38 critical regressions (+4 NEW 2026-05-18).** Duplicate session poisoning, MiniMax auth stall, Docker image incomplete, image vision timeout. Five days of continuous failures across 21 subsystems.",
     "referencedIssues": [
       {
@@ -1655,7 +1655,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 0,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 2,
       "evidencePenalty": 105,
       "survivalDays": 4,
@@ -2127,7 +2127,7 @@
     "version": "2026.5.7",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "v2026.5.7 is a regression fiesta. Upgrade to 2026.5.6 or wait for 2026.5.8.",
     "referencedIssues": [
       {
@@ -2255,7 +2255,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 55,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 42,
       "survivalDays": 6,
@@ -2405,7 +2405,7 @@
     "version": "2026.5.6",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Gateway watchdog in death spiral, sessions broken, plugin migrations failing. **Stay on v2026.5.5 ASAP.**",
     "referencedIssues": [
       {
@@ -2473,7 +2473,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 61,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 8,
       "evidencePenalty": 14,
       "survivalDays": 1,
@@ -2565,7 +2565,7 @@
     "version": "2026.5.5",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Stay on v2026.4.23. v2026.5.5 brings breaking command routing, approval security bypass, and context overflow issues. Rollback recommended.",
     "referencedIssues": [
       {
@@ -2621,7 +2621,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 68,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 12,
       "survivalDays": 0,
@@ -2702,7 +2702,7 @@
     "version": "2026.5.4",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "\"Someone shipped a grenade and forgot to pull the pin. 19 different subsystems on fire.\"",
     "referencedIssues": [
       {
@@ -2854,7 +2854,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 66,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 17,
       "survivalDays": 1,
@@ -3027,7 +3027,7 @@
     "version": "2026.5.3-1",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Evidence backfill changed the verdict: v2026.5.3-1 shipped with packaging breakage plus channel/runtime regressions across Docker, Discord, WhatsApp, iMessage, Telegram, Matrix, Feishu, Browser, memory, and agent runtimes. Skip it.",
     "referencedIssues": [
       {
@@ -3323,7 +3323,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 23,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 6,
       "evidencePenalty": 51,
       "survivalDays": 0,
@@ -3632,7 +3632,7 @@
     "version": "2026.5.3",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Five unpatched regressions in critical paths. Gateway stability is actively getting worse. **Stay on v2026.5.2** or wait for v2026.5.4 patch.",
     "referencedIssues": [
       {
@@ -3700,7 +3700,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 74,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 6,
       "survivalDays": 0,
@@ -3792,7 +3792,7 @@
     "version": "2026.5.2",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Not a ghost town — just an under-scanned release. v2026.5.2 had gateway, compaction, upgrade, and plugin-path regressions hiding in plain sight.",
     "referencedIssues": [
       {
@@ -3968,7 +3968,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 45,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 38,
       "survivalDays": 1,
@@ -4166,7 +4166,7 @@
     "version": "2026.4.29",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Six hours after release, the bug tracker looks like a 3am incident channel. Hard pass.",
     "referencedIssues": [
       {
@@ -4294,7 +4294,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 60,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 2,
       "evidencePenalty": 24,
       "survivalDays": 2,
@@ -4442,7 +4442,7 @@
     "version": "2026.4.27",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "\"Works on my machine\" — except your machine, where the gateway is on fire.",
     "referencedIssues": [
       {
@@ -4570,7 +4570,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 64,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 16,
       "survivalDays": 0,
@@ -4719,7 +4719,7 @@
     "version": "2026.4.26",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "This one's a roach motel — your gateway checks in, but it never checks out. Skip it. Wait for 2026.4.27+.",
     "referencedIssues": [
       {
@@ -4895,7 +4895,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 37,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 46,
       "survivalDays": 1,
@@ -5087,7 +5087,7 @@
     "version": "2026.4.25",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Evidence says this one deserves caution.",
     "referencedIssues": [
       {
@@ -5155,7 +5155,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 67,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 2,
       "evidencePenalty": 11,
       "survivalDays": 0,
@@ -5246,7 +5246,7 @@
     "version": "2026.4.24",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "no",
+    "verdict": "pending",
     "verdictComment": "Evidence says this one deserves caution.",
     "referencedIssues": [
       {
@@ -5302,7 +5302,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 75,
-      "verdict": "no",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 8,
       "survivalDays": 1,
@@ -5381,14 +5381,14 @@
     "version": "2026.4.23",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "yes",
+    "verdict": "pending",
     "verdictComment": "No major evidence yet. The release gets to keep its shoes on.",
     "referencedIssues": [],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 83,
-      "verdict": "yes",
+      "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
       "survivalDays": 1,

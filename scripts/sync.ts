@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
@@ -90,15 +91,8 @@ function slugify(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
-/** Extract verdict from labels. Labels: verdict:yes, verdict:no, verdict:pending */
-function getVerdictFromLabels(labels: string[]): "yes" | "no" | "pending" {
-  for (const l of labels) {
-    if (l === "verdict:yes") return "yes";
-    if (l === "verdict:no") return "no";
-    if (l === "verdict:pending") return "pending";
-  }
-  return "pending";
-}
+// Legacy API compatibility only. IsItStable is score-only; do not infer editorial verdicts from labels.
+const SCORE_ONLY_LEGACY_VERDICT = "pending" as const;
 
 /** Extract package name from labels. Label: pkg:openclaw */
 function getPackageFromLabels(labels: string[]): string | null {
@@ -184,8 +178,8 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
       // Package from label (pkg:xxx), fallback to title
       const packageName = getPackageFromLabels(labels) ?? titleMatch[2].trim();
 
-      // Verdict from label
-      const verdict = getVerdictFromLabels(labels);
+      // Score-only mode: verdict labels are legacy and intentionally ignored.
+      const verdict = SCORE_ONLY_LEGACY_VERDICT;
 
       const thumbsUp = issue.reactions?.["+1"] ?? 0;
       const thumbsDown = issue.reactions?.["-1"] ?? 0;

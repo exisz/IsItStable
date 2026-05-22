@@ -10,7 +10,8 @@ export async function GET(_: Request, { params }: Props) {
   return NextResponse.json({
     package: slug,
     version: v.version,
-    verdict: v.verdict,
+    status: "score-only",
+    score: v.stabilityScore.score,
     stabilityScore: v.stabilityScore,
     comment: v.verdictComment,
     thumbsUp: v.thumbsUp,

@@ -83,7 +83,7 @@ function loadVersions(): VersionIssue[] {
     const raw = JSON.parse(readFileSync(join(DATA_DIR, "versions.json"), "utf-8")) as VersionIssue[];
     _versions = applyScoreFormula(raw.map((v) => ({
       ...v,
-      stabilityScore: v.stabilityScore ?? fallbackStabilityScore(v.thumbsUp ?? 0, v.thumbsDown ?? 0, v.verdict),
+      stabilityScore: v.stabilityScore ?? fallbackStabilityScore(v.thumbsUp ?? 0, v.thumbsDown ?? 0, "pending"),
     })));
   }
   return _versions!;

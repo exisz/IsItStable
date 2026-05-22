@@ -19,13 +19,13 @@ is-it-stable next
 # Check a specific version
 is-it-stable react@19.0.0
 
-# Find the latest stable version
+# Find the best-scoring version
 is-it-stable next --stable
 ```
 
 ## How It Works
 
-`is-it-stable` queries the [IsItStable.com](https://isitstable.com) API — a community-driven stability tracker for npm packages. Get real verdicts from developers who've already upgraded.
+`is-it-stable` queries the [IsItStable.com](https://isitstable.com) API — a community-driven stability tracker for npm packages. Get evidence-based scores from developers who've already upgraded.
 
 ## Links
 
