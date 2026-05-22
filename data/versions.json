@@ -5,7 +5,7 @@
     "version": "2026.5.20",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
+    "verdict": "no",
     "verdictComment": "🔴 **Critical: Multiple kernel + channel regressions detected across 48+ hours post-launch.** Update system fragility, plugin sync dependency issues, Telegram delivery regression, and 4-5x doctor slowdown form a high-risk cluster. Score **likely 42–48** (40–49 bucket).",
     "referencedIssues": [
       {
@@ -192,24 +192,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 40,
-      "verdict": "pending",
+      "score": 43,
+      "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 40,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 40,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 40
+        "score": 43
       },
       "affected": [
         "update-system",
@@ -400,7 +400,7 @@
     "version": "2026.5.19",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
+    "verdict": "no",
     "verdictComment": "🚨 **VERDICT: CRITICAL (> 24h observation window)** Three kernel-level failures warrant **immediate rollback**. Do not upgrade; users on v2026.5.19 must rollback immediately.",
     "referencedIssues": [
       {
@@ -468,7 +468,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 63,
-      "verdict": "pending",
+      "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 20,
       "survivalDays": 1,
@@ -561,7 +561,7 @@
     "version": "2026.5.18",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
+    "verdict": "no",
     "verdictComment": "**🔥 CATASTROPHE ACCELERATING: 23 critical + kernel regressions discovered post-launch.** Four separate sub-systems now failing: gateway (crash + respawn loop), Discord (silent death + offline), Codex (Windows startup broken, memory leak, timeout hardcoded), runtime (harness detection broken). Upgrade path contaminated — v2026.5.19-beta.1 inherits all 2026.5.18 flaws plus new gateway death spiral.",
     "referencedIssues": [
       {
@@ -869,7 +869,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 0,
-      "verdict": "pending",
+      "verdict": "no",
       "votePenalty": 0,
       "evidencePenalty": 86,
       "survivalDays": 2,
@@ -1191,7 +1191,7 @@
     "version": "2026.5.12",
     "packageName": "openclaw",
     "packageSlug": "openclaw",
-    "verdict": "pending",
+    "verdict": "no",
     "verdictComment": "**Catastrophe deepens: 38 critical regressions (+4 NEW 2026-05-18).** Duplicate session poisoning, MiniMax auth stall, Docker image incomplete, image vision timeout. Five days of continuous failures across 21 subsystems.",
     "referencedIssues": [
       {
@@ -1655,7 +1655,7 @@
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
       "score": 0,
-      "verdict": "pending",
+      "verdict": "no",
       "votePenalty": 2,
       "evidencePenalty": 105,
       "survivalDays": 4,

@@ -9,7 +9,7 @@
       "version": "2026.5.20",
       "packageName": "openclaw",
       "packageSlug": "openclaw",
-      "verdict": "pending",
+      "verdict": "no",
       "verdictComment": "🔴 **Critical: Multiple kernel + channel regressions detected across 48+ hours post-launch.** Update system fragility, plugin sync dependency issues, Telegram delivery regression, and 4-5x doctor slowdown form a high-risk cluster. Score **likely 42–48** (40–49 bucket).",
       "referencedIssues": [
         {
@@ -196,24 +196,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 40,
-        "verdict": "pending",
+        "score": 43,
+        "verdict": "no",
         "votePenalty": 0,
         "evidencePenalty": 40,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 40,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 40
+          "score": 43
         },
         "affected": [
           "update-system",
