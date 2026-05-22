@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "⏳ **EARLY ASSESSMENT (< 24h post-launch):** Initial evidence collection underway. Multiple regressions in update/plugin-sync and Linux exec pipelines detected. Verdict deferred until 24h observation window completes (2026-05-22 21:29 UTC).",
+      "verdictComment": "🔴 **Critical: Multiple kernel + channel regressions detected across 48+ hours post-launch.** Update system fragility, plugin sync dependency issues, Telegram delivery regression, and 4-5x doctor slowdown form a high-risk cluster. Score **likely 42–48** (40–49 bucket).",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -86,6 +86,24 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 85419,
+          "url": "https://github.com/openclaw/openclaw/issues/85419",
+          "title": "[Bug]: Telegram group chat replies silently dropped in v2026.5.20 (same as #78417)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85333,
+          "url": "https://github.com/openclaw/openclaw/issues/85333",
+          "title": "[Bug]: openclaw doctor --fix 4-5x slower on 2026.5.20 vs 2026.5.19 (55s → 229s+) — session snapshot path traversal bottleneck"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85374,
+          "url": "https://github.com/openclaw/openclaw/issues/85374",
+          "title": "[Bug]: WebChat run-complete indicator fires before reply text renders (inverse of #84754)"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 85202,
           "url": "https://github.com/openclaw/openclaw/issues/85202",
           "title": "[Bug]: Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh"
@@ -155,29 +173,47 @@
           "number": 85255,
           "url": "https://github.com/openclaw/openclaw/issues/85255",
           "title": "shouldFallbackToStartupEntry fails on non-English Windows (locale blind spot)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85419,
+          "url": "https://github.com/openclaw/openclaw/issues/85419",
+          "title": "[Bug]: Telegram group chat replies silently dropped in v2026.5.20 (same as #78417)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85333,
+          "url": "https://github.com/openclaw/openclaw/issues/85333",
+          "title": "[Bug]: openclaw doctor --fix 4-5x slower on 2026.5.20 vs 2026.5.19 (55s → 229s+) — session snapshot path traversal bottleneck"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85374,
+          "url": "https://github.com/openclaw/openclaw/issues/85374",
+          "title": "[Bug]: WebChat run-complete indicator fires before reply text renders (inverse of #84754)"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 47,
+        "score": 40,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 33,
+        "evidencePenalty": 40,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 33,
+          "evidencePenalty": 40,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 47
+          "score": 40
         },
         "affected": [
           "update-system",
@@ -187,7 +223,8 @@
           "ui",
           "compaction",
           "telegram",
-          "webchat"
+          "webchat",
+          "doctor"
         ],
         "evidence": [
           {
@@ -321,6 +358,39 @@
             "severity": 2,
             "penalty": 2,
             "reason": "shouldFallbackToStartupEntry fails on non-English Windows (locale-blind) (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85419",
+            "repo": "openclaw/openclaw",
+            "number": 85419,
+            "url": "https://github.com/openclaw/openclaw/issues/85419",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Telegram group chat replies silently dropped in v2026.5.20 — regression from 2026.5.18 — message-tool-terminal hook misclassifies group reply delivery (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85333",
+            "repo": "openclaw/openclaw",
+            "number": 85333,
+            "url": "https://github.com/openclaw/openclaw/issues/85333",
+            "area": "doctor",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "openclaw doctor --fix 4-5x slower on v2026.5.20 vs 2026.5.19 (55s → 229s+) — session snapshot path traversal bottleneck (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85374",
+            "repo": "openclaw/openclaw",
+            "number": 85374,
+            "url": "https://github.com/openclaw/openclaw/issues/85374",
+            "area": "webchat",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat run-complete indicator fires before reply text renders — UX race between event and final stream chunks (2026-05-22)"
           }
         ]
       },
