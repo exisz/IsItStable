@@ -10,32 +10,319 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "⏳ **EARLY ASSESSMENT (< 24h post-launch):** Initial evidence collection underway. Multiple regressions in update/plugin-sync and Linux exec pipelines detected. Verdict deferred until 24h observation window completes (2026-05-22 21:29 UTC).",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85202,
+          "url": "https://github.com/openclaw/openclaw/issues/85202",
+          "title": "[Bug]: Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85113,
+          "url": "https://github.com/openclaw/openclaw/issues/85113",
+          "title": "v2026.5.20 post-update Codex plugin sync can wedge managed npm root with npm ERR_INVALID_ARG_TYPE"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85184,
+          "url": "https://github.com/openclaw/openclaw/issues/85184",
+          "title": "openclaw update silently downgrades and rewrites pinned direct-dependency versions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85120,
+          "url": "https://github.com/openclaw/openclaw/issues/85120",
+          "title": "[Bug]: in-band `openclaw update` on macOS LaunchAgent can stop the gateway supervising it"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85224,
+          "url": "https://github.com/openclaw/openclaw/issues/85224",
+          "title": "respawnGatewayProcessForUpdate falsely reports mode=supervised on macOS when XPC_SERVICE_NAME is inherited from a launchd-managed parent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85234,
+          "url": "https://github.com/openclaw/openclaw/issues/85234",
+          "title": "[Bug]: openclaw update fails at \"global install swap\" step when npm hardlinks dependency binaries (macOS + fnm)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85161,
+          "url": "https://github.com/openclaw/openclaw/issues/85161",
+          "title": "[Bug]: valid tool call XML in LLM reasoning block is sometimes executed by gateway"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85203,
+          "url": "https://github.com/openclaw/openclaw/issues/85203",
+          "title": "Runtime sites bypass `prependSystemPromptAdditionAfterCacheBoundary`, destabilising Anthropic + OpenAI prompt caching"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85246,
+          "url": "https://github.com/openclaw/openclaw/issues/85246",
+          "title": "UI Update button breaks Gateway when npm global + launchd (handoff deadlock)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85260,
+          "url": "https://github.com/openclaw/openclaw/issues/85260",
+          "title": "[Bug]: WebChat long reply renders duplicate cards after upgrading to 2026.5.20"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85193,
+          "url": "https://github.com/openclaw/openclaw/issues/85193",
+          "title": "[Bug]: WebChat message-tool replies expose raw citation markers instead of rendering citations"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85255,
+          "url": "https://github.com/openclaw/openclaw/issues/85255",
+          "title": "shouldFallbackToStartupEntry fails on non-English Windows (locale blind spot)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85202,
+          "url": "https://github.com/openclaw/openclaw/issues/85202",
+          "title": "[Bug]: Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85113,
+          "url": "https://github.com/openclaw/openclaw/issues/85113",
+          "title": "v2026.5.20 post-update Codex plugin sync can wedge managed npm root with npm ERR_INVALID_ARG_TYPE"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85184,
+          "url": "https://github.com/openclaw/openclaw/issues/85184",
+          "title": "openclaw update silently downgrades and rewrites pinned direct-dependency versions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85120,
+          "url": "https://github.com/openclaw/openclaw/issues/85120",
+          "title": "[Bug]: in-band `openclaw update` on macOS LaunchAgent can stop the gateway supervising it"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85224,
+          "url": "https://github.com/openclaw/openclaw/issues/85224",
+          "title": "respawnGatewayProcessForUpdate falsely reports mode=supervised on macOS when XPC_SERVICE_NAME is inherited from a launchd-managed parent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85234,
+          "url": "https://github.com/openclaw/openclaw/issues/85234",
+          "title": "[Bug]: openclaw update fails at \"global install swap\" step when npm hardlinks dependency binaries (macOS + fnm)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85161,
+          "url": "https://github.com/openclaw/openclaw/issues/85161",
+          "title": "[Bug]: valid tool call XML in LLM reasoning block is sometimes executed by gateway"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85203,
+          "url": "https://github.com/openclaw/openclaw/issues/85203",
+          "title": "Runtime sites bypass `prependSystemPromptAdditionAfterCacheBoundary`, destabilising Anthropic + OpenAI prompt caching"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85246,
+          "url": "https://github.com/openclaw/openclaw/issues/85246",
+          "title": "UI Update button breaks Gateway when npm global + launchd (handoff deadlock)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85260,
+          "url": "https://github.com/openclaw/openclaw/issues/85260",
+          "title": "[Bug]: WebChat long reply renders duplicate cards after upgrading to 2026.5.20"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85193,
+          "url": "https://github.com/openclaw/openclaw/issues/85193",
+          "title": "[Bug]: WebChat message-tool replies expose raw citation markers instead of rendering citations"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 85255,
+          "url": "https://github.com/openclaw/openclaw/issues/85255",
+          "title": "shouldFallbackToStartupEntry fails on non-English Windows (locale blind spot)"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 47,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 33,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 33,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 47
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "update-system",
+          "linux-runtime",
+          "plugin-system",
+          "codex",
+          "ui",
+          "compaction",
+          "telegram",
+          "webchat"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#85202",
+            "repo": "openclaw/openclaw",
+            "number": 85202,
+            "url": "https://github.com/openclaw/openclaw/issues/85202",
+            "area": "linux-runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85113",
+            "repo": "openclaw/openclaw",
+            "number": 85113,
+            "url": "https://github.com/openclaw/openclaw/issues/85113",
+            "area": "plugin-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v2026.5.20 post-update Codex plugin sync can wedge managed npm root with npm ERR_INVALID_ARG_TYPE (2026-05-21)"
+          },
+          {
+            "issue": "openclaw/openclaw#85184",
+            "repo": "openclaw/openclaw",
+            "number": 85184,
+            "url": "https://github.com/openclaw/openclaw/issues/85184",
+            "area": "update-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "openclaw update silently downgrades and rewrites pinned direct-dependency versions (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85120",
+            "repo": "openclaw/openclaw",
+            "number": 85120,
+            "url": "https://github.com/openclaw/openclaw/issues/85120",
+            "area": "update-system",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "In-band openclaw update on macOS LaunchAgent can stop the gateway supervising it (2026-05-21)"
+          },
+          {
+            "issue": "openclaw/openclaw#85224",
+            "repo": "openclaw/openclaw",
+            "number": 85224,
+            "url": "https://github.com/openclaw/openclaw/issues/85224",
+            "area": "update-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "respawnGatewayProcessForUpdate falsely reports mode=supervised on macOS when XPC_SERVICE_NAME inherited from launchd parent (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85234",
+            "repo": "openclaw/openclaw",
+            "number": 85234,
+            "url": "https://github.com/openclaw/openclaw/issues/85234",
+            "area": "update-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "openclaw update fails at 'global install swap' step when npm hardlinks dependency binaries (macOS + fnm) (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85161",
+            "repo": "openclaw/openclaw",
+            "number": 85161,
+            "url": "https://github.com/openclaw/openclaw/issues/85161",
+            "area": "runtime",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Valid tool call XML in LLM reasoning block is sometimes executed by gateway (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85203",
+            "repo": "openclaw/openclaw",
+            "number": 85203,
+            "url": "https://github.com/openclaw/openclaw/issues/85203",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Runtime sites bypass prependSystemPromptAdditionAfterCacheBoundary (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85246",
+            "repo": "openclaw/openclaw",
+            "number": 85246,
+            "url": "https://github.com/openclaw/openclaw/issues/85246",
+            "area": "ui",
+            "type": "tool",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "UI Update button breaks Gateway when npm global + launchd (handoff deadlock) (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85260",
+            "repo": "openclaw/openclaw",
+            "number": 85260,
+            "url": "https://github.com/openclaw/openclaw/issues/85260",
+            "area": "webchat",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat long reply renders duplicate cards after upgrading to 2026.5.20 (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85193",
+            "repo": "openclaw/openclaw",
+            "number": 85193,
+            "url": "https://github.com/openclaw/openclaw/issues/85193",
+            "area": "webchat",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat message-tool replies expose raw citation markers instead of rendered blocks (2026-05-22)"
+          },
+          {
+            "issue": "openclaw/openclaw#85255",
+            "repo": "openclaw/openclaw",
+            "number": 85255,
+            "url": "https://github.com/openclaw/openclaw/issues/85255",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "shouldFallbackToStartupEntry fails on non-English Windows (locale-blind) (2026-05-22)"
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
