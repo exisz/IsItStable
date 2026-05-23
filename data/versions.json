@@ -1128,7 +1128,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "**🔥 CATASTROPHE ACCELERATING: 23 critical + kernel regressions discovered post-launch.** Four separate sub-systems now failing: gateway (crash + respawn loop), Discord (silent death + offline), Codex (Windows startup broken, memory leak, timeout hardcoded), runtime (harness detection broken). Upgrade path contaminated — v2026.5.19-beta.1 inherits all 2026.5.18 flaws plus new gateway death spiral.",
+    "verdictComment": "🔴 **Critical: 37 version-gated regressions after backfill.** Gateway saturation, channel drops, Windows/node-host failures, migration breakage, and token runaway all show up here. This release aged like milk in a server room.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1282,6 +1282,78 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 84698,
+        "url": "https://github.com/openclaw/openclaw/issues/84698",
+        "title": "[Bug]: openclaw status hangs and times out — regression from 2026.5.7"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84659,
+        "url": "https://github.com/openclaw/openclaw/issues/84659",
+        "title": "read tool output truncated for medium-sized files (2026.5.18 regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84644,
+        "url": "https://github.com/openclaw/openclaw/issues/84644",
+        "title": "[Bug]: Windows node-host connects but reports no commands"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84081,
+        "url": "https://github.com/openclaw/openclaw/issues/84081",
+        "title": "[Bug]: When I updated to version 2026.5.18, it prompted Agent failed before reply"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84918,
+        "url": "https://github.com/openclaw/openclaw/issues/84918",
+        "title": "OpenWebUI image uploads reach image tool as empty image via /v1/chat/completions on 2026.5.18"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84825,
+        "url": "https://github.com/openclaw/openclaw/issues/84825",
+        "title": "[Bug]: heartbeat.model override not honored by follow-up runs within a heartbeat session (2026.5.18)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84983,
+        "url": "https://github.com/openclaw/openclaw/issues/84983",
+        "title": "Native cron agent-turn fire saturates the gateway event loop (chat transports unresponsive for minutes)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85550,
+        "url": "https://github.com/openclaw/openclaw/issues/85550",
+        "title": "[Bug]: Trajectory files fed back as context cause unbounded token consumption and unexpected API billing"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84604,
+        "url": "https://github.com/openclaw/openclaw/issues/84604",
+        "title": "4.x → 5.18 upgrade leaves claude-cli harness unregistered (auth-profile mapping not migrated)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85458,
+        "url": "https://github.com/openclaw/openclaw/issues/85458",
+        "title": "[Bug]: Potential resource leak in runBoundTurnWithMissingThreadRecovery -- retry not wrapped in try/finally after thread spawn"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84026,
+        "url": "https://github.com/openclaw/openclaw/issues/84026",
+        "title": "Feishu: message tool fails with xlsx files (400 Invalid request param)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85419,
+        "url": "https://github.com/openclaw/openclaw/issues/85419",
+        "title": "[Bug]: Telegram group chat replies silently dropped in v2026.5.20 (same as #78417)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 83968,
         "url": "https://github.com/openclaw/openclaw/issues/83968",
         "title": "[Bug]: 2026.5.18 gateway crashes on macOS with uncaught AssertionError `assert(!this.paused)`; rollback to 2026.5.12 stabilizes"
@@ -1429,6 +1501,78 @@
         "number": 84820,
         "url": "https://github.com/openclaw/openclaw/issues/84820",
         "title": "Unclosed FileHandle on session JSONL lock crashes gateway on Node ≥24 under sustained session-store load"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84698,
+        "url": "https://github.com/openclaw/openclaw/issues/84698",
+        "title": "[Bug]: openclaw status hangs and times out — regression from 2026.5.7"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84659,
+        "url": "https://github.com/openclaw/openclaw/issues/84659",
+        "title": "read tool output truncated for medium-sized files (2026.5.18 regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84644,
+        "url": "https://github.com/openclaw/openclaw/issues/84644",
+        "title": "[Bug]: Windows node-host connects but reports no commands"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84081,
+        "url": "https://github.com/openclaw/openclaw/issues/84081",
+        "title": "[Bug]: When I updated to version 2026.5.18, it prompted Agent failed before reply"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84918,
+        "url": "https://github.com/openclaw/openclaw/issues/84918",
+        "title": "OpenWebUI image uploads reach image tool as empty image via /v1/chat/completions on 2026.5.18"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84825,
+        "url": "https://github.com/openclaw/openclaw/issues/84825",
+        "title": "[Bug]: heartbeat.model override not honored by follow-up runs within a heartbeat session (2026.5.18)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84983,
+        "url": "https://github.com/openclaw/openclaw/issues/84983",
+        "title": "Native cron agent-turn fire saturates the gateway event loop (chat transports unresponsive for minutes)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85550,
+        "url": "https://github.com/openclaw/openclaw/issues/85550",
+        "title": "[Bug]: Trajectory files fed back as context cause unbounded token consumption and unexpected API billing"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84604,
+        "url": "https://github.com/openclaw/openclaw/issues/84604",
+        "title": "4.x → 5.18 upgrade leaves claude-cli harness unregistered (auth-profile mapping not migrated)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85458,
+        "url": "https://github.com/openclaw/openclaw/issues/85458",
+        "title": "[Bug]: Potential resource leak in runBoundTurnWithMissingThreadRecovery -- retry not wrapped in try/finally after thread spawn"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84026,
+        "url": "https://github.com/openclaw/openclaw/issues/84026",
+        "title": "Feishu: message tool fails with xlsx files (400 Invalid request param)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85419,
+        "url": "https://github.com/openclaw/openclaw/issues/85419",
+        "title": "[Bug]: Telegram group chat replies silently dropped in v2026.5.20 (same as #78417)"
       }
     ],
     "stabilityScore": {
@@ -1437,14 +1581,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 86,
+      "evidencePenalty": 119,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 86,
+        "evidencePenalty": 119,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
@@ -1454,20 +1598,28 @@
         "score": 0
       },
       "affected": [
-        "gateway",
-        "discord",
         "codex",
+        "compaction",
+        "cron-runtime",
+        "discord",
+        "feishu",
+        "gateway",
+        "heartbeat",
+        "macos",
+        "migration",
+        "node-surface",
+        "openwebui",
+        "provider-integration",
         "runtime",
         "service-management",
-        "provider-integration",
-        "compaction",
+        "status",
         "telegram",
-        "whatsapp",
-        "cron-runtime",
         "tool-registration",
-        "node-surface",
+        "tools",
+        "trajectory",
+        "whatsapp",
         "windows",
-        "macos"
+        "windows-runtime"
       ],
       "evidence": [
         {
@@ -1744,6 +1896,138 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Unclosed FileHandle on session JSONL lock crashes gateway Node ≥24 every ~2h under load; affects 2026.5.18+ (2026-05-21, NEW CRITICAL)"
+        },
+        {
+          "issue": "openclaw/openclaw#84698",
+          "repo": "openclaw/openclaw",
+          "number": 84698,
+          "url": "https://github.com/openclaw/openclaw/issues/84698",
+          "area": "status",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "openclaw status hangs/timeouts on regression range including 2026.5.18 (2026-05-20)"
+        },
+        {
+          "issue": "openclaw/openclaw#84659",
+          "repo": "openclaw/openclaw",
+          "number": 84659,
+          "url": "https://github.com/openclaw/openclaw/issues/84659",
+          "area": "tools",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "read tool output truncated for medium-sized files in 2026.5.18 regression (2026-05-20)"
+        },
+        {
+          "issue": "openclaw/openclaw#84644",
+          "repo": "openclaw/openclaw",
+          "number": 84644,
+          "url": "https://github.com/openclaw/openclaw/issues/84644",
+          "area": "windows-runtime",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows node-host connects but reports no commands on 2026.5.18 (2026-05-20)"
+        },
+        {
+          "issue": "openclaw/openclaw#84081",
+          "repo": "openclaw/openclaw",
+          "number": 84081,
+          "url": "https://github.com/openclaw/openclaw/issues/84081",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Updating to 2026.5.18 prompts Agent failed before reply (2026-05-19)"
+        },
+        {
+          "issue": "openclaw/openclaw#84918",
+          "repo": "openclaw/openclaw",
+          "number": 84918,
+          "url": "https://github.com/openclaw/openclaw/issues/84918",
+          "area": "openwebui",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "OpenWebUI image uploads reach image tool as empty image on 2026.5.18 (2026-05-21)"
+        },
+        {
+          "issue": "openclaw/openclaw#84825",
+          "repo": "openclaw/openclaw",
+          "number": 84825,
+          "url": "https://github.com/openclaw/openclaw/issues/84825",
+          "area": "heartbeat",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "heartbeat.model override not honored by follow-up runs within heartbeat session on 2026.5.18 (2026-05-21)"
+        },
+        {
+          "issue": "openclaw/openclaw#84983",
+          "repo": "openclaw/openclaw",
+          "number": 84983,
+          "url": "https://github.com/openclaw/openclaw/issues/84983",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Native cron agent-turn fire saturates gateway event loop, affecting 2026.5.18 range (2026-05-21)"
+        },
+        {
+          "issue": "openclaw/openclaw#85550",
+          "repo": "openclaw/openclaw",
+          "number": 85550,
+          "url": "https://github.com/openclaw/openclaw/issues/85550",
+          "area": "trajectory",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Trajectory files fed back as context cause unbounded token consumption and unexpected API billing on 2026.5.18 (2026-05-22)"
+        },
+        {
+          "issue": "openclaw/openclaw#84604",
+          "repo": "openclaw/openclaw",
+          "number": 84604,
+          "url": "https://github.com/openclaw/openclaw/issues/84604",
+          "area": "migration",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "4.x → 5.18 upgrade leaves claude-cli harness unregistered (auth-profile mapping not migrated) (2026-05-20)"
+        },
+        {
+          "issue": "openclaw/openclaw#85458",
+          "repo": "openclaw/openclaw",
+          "number": 85458,
+          "url": "https://github.com/openclaw/openclaw/issues/85458",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Potential resource leak in runBoundTurnWithMissingThreadRecovery retry path on 2026.5.18 (2026-05-22)"
+        },
+        {
+          "issue": "openclaw/openclaw#84026",
+          "repo": "openclaw/openclaw",
+          "number": 84026,
+          "url": "https://github.com/openclaw/openclaw/issues/84026",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Feishu message tool fails with xlsx files on 2026.5.18 (2026-05-19)"
+        },
+        {
+          "issue": "openclaw/openclaw#85419",
+          "repo": "openclaw/openclaw",
+          "number": 85419,
+          "url": "https://github.com/openclaw/openclaw/issues/85419",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Telegram group reply silent-drop regression range includes 2026.5.18 (2026-05-22)"
         }
       ]
     },
