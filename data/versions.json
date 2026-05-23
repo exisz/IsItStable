@@ -2299,7 +2299,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "**Catastrophe deepens: 38 critical regressions (+4 NEW 2026-05-18).** Duplicate session poisoning, MiniMax auth stall, Docker image incomplete, image vision timeout. Five days of continuous failures across 21 subsystems.",
+    "verdictComment": "🔴 **Critical: 39 version-gated regressions.** Channel delivery, docs/tooling, runtime, and heartbeat latency are all competing for the rollback trophy.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -2531,6 +2531,12 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 85783,
+        "url": "https://github.com/openclaw/openclaw/issues/85783",
+        "title": "[Bug]: Embedded-run bootstrap-context stage variance causes 20-37s heartbeat fires on 5.20 (regression from 5.6; not fixed by 5.12 PR #80449 or 5.20 PRs #83477/#83858)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 81859,
         "url": "https://github.com/openclaw/openclaw/issues/81859",
         "title": "v2026.5.12-beta.8 macOS update can leave gateway in launchd loop from stale updater job and service env wrapper"
@@ -2756,6 +2762,12 @@
         "number": 83416,
         "url": "https://github.com/openclaw/openclaw/issues/83416",
         "title": "[Bug]: openclaw_image vision times out after 60s on valid Talk JPEG in 2026.5.12"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85783,
+        "url": "https://github.com/openclaw/openclaw/issues/85783",
+        "title": "[Bug]: Embedded-run bootstrap-context stage variance causes 20-37s heartbeat fires on 5.20 (regression from 5.6; not fixed by 5.12 PR #80449 or 5.20 PRs #83477/#83858)"
       }
     ],
     "stabilityScore": {
@@ -2764,14 +2776,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 2,
-      "evidencePenalty": 105,
+      "evidencePenalty": 110,
       "survivalDays": 4,
       "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 105,
+        "evidencePenalty": 110,
         "votePenalty": 2,
         "survivalDays": 4,
         "survivalPointsPerDay": 3,
@@ -2781,27 +2793,28 @@
         "score": 0
       },
       "affected": [
-        "cron-runtime",
-        "gateway",
-        "service-management",
-        "telegram",
-        "runtime",
-        "dashboard",
-        "imsg",
-        "web",
-        "workspace",
-        "discord",
-        "codex",
-        "provider-integration",
-        "whatsapp",
-        "docs-command",
-        "qwen",
-        "slack",
-        "ollama",
-        "telegram-media",
-        "matrix",
         "authentication",
-        "diagnostics"
+        "codex",
+        "cron-runtime",
+        "dashboard",
+        "diagnostics",
+        "discord",
+        "docs-command",
+        "gateway",
+        "heartbeat",
+        "imsg",
+        "matrix",
+        "ollama",
+        "provider-integration",
+        "qwen",
+        "runtime",
+        "service-management",
+        "slack",
+        "telegram",
+        "telegram-media",
+        "web",
+        "whatsapp",
+        "workspace"
       ],
       "evidence": [
         {
@@ -3221,6 +3234,17 @@
           "severity": 2,
           "penalty": 2,
           "reason": "openclaw_image vision times out after 60s on valid JPEG; optimizer works, vision dynamic tool fails on 2026.5.12 (NEW 2026-05-18)"
+        },
+        {
+          "issue": "openclaw/openclaw#85783",
+          "repo": "openclaw/openclaw",
+          "number": 85783,
+          "url": "https://github.com/openclaw/openclaw/issues/85783",
+          "area": "heartbeat",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Embedded-run bootstrap-context variance caused 27-32s heartbeat latency on v2026.5.12 production, prompting rollback after 25 minutes; still reproduced on v2026.5.20 (2026-05-23)"
         }
       ]
     },
