@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🔴 **Critical: 2026.5.20 now has 30 version-gated regressions.** Gateway crashes, update-path breakage, runtime errors, and channel delivery drops are all in the same room. Nobody brought snacks.",
+    "verdictComment": "🔴 **Critical: 2026.5.20 now has 38 version-gated regressions.** Gateway crashes, update-path breakage, runtime errors, channel delivery drops, and heartbeat latency are all in the same room. Still nobody brought snacks.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -190,6 +190,54 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 85689,
+        "url": "https://github.com/openclaw/openclaw/issues/85689",
+        "title": "fix(doctor): auto-repair stale session snapshot paths on --fix instead of reporting-only"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85773,
+        "url": "https://github.com/openclaw/openclaw/issues/85773",
+        "title": "[Bug]: After reinstalling (v2026.5.20), agents only provide generic replies, completely ignoring workspace files content and skills"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85779,
+        "url": "https://github.com/openclaw/openclaw/issues/85779",
+        "title": "[Bug]: Discord turns inject large runtime context after 2026.5.20 and status reports inconsistent context windows"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85806,
+        "url": "https://github.com/openclaw/openclaw/issues/85806",
+        "title": "[Bug]: using codex harness with gpt-5.4-nano causes errors"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85771,
+        "url": "https://github.com/openclaw/openclaw/issues/85771",
+        "title": "[Bug]: WebChat UI renders duplicate assistant messages on chat.status final event"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85702,
+        "url": "https://github.com/openclaw/openclaw/issues/85702",
+        "title": "[Bug]: WebChat OpenResponses stream delays first visible output_text.delta until agent text is available"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85669,
+        "url": "https://github.com/openclaw/openclaw/issues/85669",
+        "title": "sessions_history returns unfiltered delivery-mirror messages — duplicates visible in dashboard"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85783,
+        "url": "https://github.com/openclaw/openclaw/issues/85783",
+        "title": "[Bug]: Embedded-run bootstrap-context stage variance causes 20-37s heartbeat fires on 5.20 (regression from 5.6; not fixed by 5.12 PR #80449 or 5.20 PRs #83477/#83858)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 85202,
         "url": "https://github.com/openclaw/openclaw/issues/85202",
         "title": "[Bug]: Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh"
@@ -367,6 +415,54 @@
         "number": 85620,
         "url": "https://github.com/openclaw/openclaw/issues/85620",
         "title": "[Bug]: Matrix inbound image leaves agent turn unresolved; Matrix send queue hits fetch failed, then gateway reloads after ~60s"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85689,
+        "url": "https://github.com/openclaw/openclaw/issues/85689",
+        "title": "fix(doctor): auto-repair stale session snapshot paths on --fix instead of reporting-only"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85773,
+        "url": "https://github.com/openclaw/openclaw/issues/85773",
+        "title": "[Bug]: After reinstalling (v2026.5.20), agents only provide generic replies, completely ignoring workspace files content and skills"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85779,
+        "url": "https://github.com/openclaw/openclaw/issues/85779",
+        "title": "[Bug]: Discord turns inject large runtime context after 2026.5.20 and status reports inconsistent context windows"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85806,
+        "url": "https://github.com/openclaw/openclaw/issues/85806",
+        "title": "[Bug]: using codex harness with gpt-5.4-nano causes errors"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85771,
+        "url": "https://github.com/openclaw/openclaw/issues/85771",
+        "title": "[Bug]: WebChat UI renders duplicate assistant messages on chat.status final event"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85702,
+        "url": "https://github.com/openclaw/openclaw/issues/85702",
+        "title": "[Bug]: WebChat OpenResponses stream delays first visible output_text.delta until agent text is available"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85669,
+        "url": "https://github.com/openclaw/openclaw/issues/85669",
+        "title": "sessions_history returns unfiltered delivery-mirror messages — duplicates visible in dashboard"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85783,
+        "url": "https://github.com/openclaw/openclaw/issues/85783",
+        "title": "[Bug]: Embedded-run bootstrap-context stage variance causes 20-37s heartbeat fires on 5.20 (regression from 5.6; not fixed by 5.12 PR #80449 or 5.20 PRs #83477/#83858)"
       }
     ],
     "stabilityScore": {
@@ -375,14 +471,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 85,
+      "evidencePenalty": 105,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 85,
+        "evidencePenalty": 105,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
@@ -394,8 +490,10 @@
       "affected": [
         "codex",
         "compaction",
+        "discord",
         "doctor",
         "gateway",
+        "heartbeat",
         "launchagent",
         "linux-runtime",
         "matrix",
@@ -403,6 +501,7 @@
         "memory-wiki",
         "plugin-system",
         "runtime",
+        "sessions-management",
         "telegram",
         "ui",
         "update-system",
@@ -739,6 +838,94 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Matrix inbound image leaves agent turn unresolved and send queue fails on 2026.5.20 (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85689",
+          "repo": "openclaw/openclaw",
+          "number": 85689,
+          "url": "https://github.com/openclaw/openclaw/issues/85689",
+          "area": "doctor",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "doctor --fix detects but does not repair stale session snapshot paths after pnpm runtime-root changes, leaving sessions broken or forcing history loss (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85773",
+          "repo": "openclaw/openclaw",
+          "number": 85773,
+          "url": "https://github.com/openclaw/openclaw/issues/85773",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Reinstalled v2026.5.20 agents can ignore workspace files, identity, skills, and tool context, returning generic replies (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85779",
+          "repo": "openclaw/openclaw",
+          "number": 85779,
+          "url": "https://github.com/openclaw/openclaw/issues/85779",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Discord turns inject much larger runtime context after v2026.5.20 and status reports inconsistent context windows (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85806",
+          "repo": "openclaw/openclaw",
+          "number": 85806,
+          "url": "https://github.com/openclaw/openclaw/issues/85806",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Codex harness on v2026.5.20 errors and falls back when using openai/gpt-5.4-nano (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85771",
+          "repo": "openclaw/openclaw",
+          "number": 85771,
+          "url": "https://github.com/openclaw/openclaw/issues/85771",
+          "area": "webchat",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "WebChat UI can render duplicate assistant messages on chat.status final event while backend transcript has a single message (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85702",
+          "repo": "openclaw/openclaw",
+          "number": 85702,
+          "url": "https://github.com/openclaw/openclaw/issues/85702",
+          "area": "webchat",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "OpenResponses streaming on v2026.5.20 delays first visible output_text.delta, leaving WebChat visually idle during active work (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85669",
+          "repo": "openclaw/openclaw",
+          "number": 85669,
+          "url": "https://github.com/openclaw/openclaw/issues/85669",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "sessions_history returns delivery-mirror/gateway-injected transcript-only assistant messages, causing duplicate dashboard history (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85783",
+          "repo": "openclaw/openclaw",
+          "number": 85783,
+          "url": "https://github.com/openclaw/openclaw/issues/85783",
+          "area": "heartbeat",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Embedded-run bootstrap-context variance causes 20-37s heartbeat fire latency on v2026.5.20 in clean lab reproduction (2026-05-23)"
         }
       ]
     },
@@ -753,7 +940,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🔴 **Critical: 14 version-gated regressions.** Update flow, Windows runtime, cron isolation, Codex, and Gateway supervision are fighting in production. The pager is doing cardio.",
+    "verdictComment": "🔴 **Critical: 17 version-gated regressions.** Update flow, Windows runtime, cron isolation, Codex, Gateway supervision, and compaction are fighting in production. The pager is doing cardio.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -841,6 +1028,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 85025,
+        "url": "https://github.com/openclaw/openclaw/issues/85025",
+        "title": "Defaults cause unbounded transcript growth + nightly session death (coding-agent workloads)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85082,
+        "url": "https://github.com/openclaw/openclaw/issues/85082",
+        "title": "[Bug]: Telegram topic /status can report fallback model from internal subagent announce as the session model"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85717,
+        "url": "https://github.com/openclaw/openclaw/issues/85717",
+        "title": "Session compaction corrupts thinking blocks, breaking all subsequent requests until session restart"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 84809,
         "url": "https://github.com/openclaw/openclaw/issues/84809",
         "title": "[Data loss] 2026.5.19 update/backup flow removed ~/.openclaw/workspace and left plugin/npm state inconsistent"
@@ -922,32 +1127,51 @@
         "number": 85268,
         "url": "https://github.com/openclaw/openclaw/issues/85268",
         "title": "[Bug]:  [Windows] exec spawn: all commands hang with no output (stdio pipe deadlock)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85025,
+        "url": "https://github.com/openclaw/openclaw/issues/85025",
+        "title": "Defaults cause unbounded transcript growth + nightly session death (coding-agent workloads)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85082,
+        "url": "https://github.com/openclaw/openclaw/issues/85082",
+        "title": "[Bug]: Telegram topic /status can report fallback model from internal subagent announce as the session model"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85717,
+        "url": "https://github.com/openclaw/openclaw/issues/85717",
+        "title": "Session compaction corrupts thinking blocks, breaking all subsequent requests until session restart"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 33,
+      "score": 24,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 50,
+      "evidencePenalty": 59,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 50,
+        "evidencePenalty": 59,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 33
+        "score": 24
       },
       "affected": [
         "codex",
+        "compaction",
         "cron",
         "discord",
         "gateway",
@@ -1114,6 +1338,39 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Windows exec spawn commands hang with no output on 2026.5.19 (stdio pipe deadlock) (2026-05-22)"
+        },
+        {
+          "issue": "openclaw/openclaw#85025",
+          "repo": "openclaw/openclaw",
+          "number": 85025,
+          "url": "https://github.com/openclaw/openclaw/issues/85025",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Default transcript reset/retention causes unbounded growth and nightly session death on coding-agent workloads in v2026.5.19 (2026-05-21)"
+        },
+        {
+          "issue": "openclaw/openclaw#85082",
+          "repo": "openclaw/openclaw",
+          "number": 85082,
+          "url": "https://github.com/openclaw/openclaw/issues/85082",
+          "area": "status",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram topic /status can report fallback model from an internal subagent announce instead of the actual configured session model on v2026.5.19 (2026-05-21)"
+        },
+        {
+          "issue": "openclaw/openclaw#85717",
+          "repo": "openclaw/openclaw",
+          "number": 85717,
+          "url": "https://github.com/openclaw/openclaw/issues/85717",
+          "area": "compaction",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Session compaction can replay/corrupt thinking blocks, breaking all subsequent requests until session restart on v2026.5.19 (2026-05-23)"
         }
       ]
     },
