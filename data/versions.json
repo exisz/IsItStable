@@ -333,7 +333,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🔴 **Critical: 2026.5.20 now has 38 version-gated regressions.** Gateway crashes, update-path breakage, runtime errors, channel delivery drops, and heartbeat latency are all in the same room. Still nobody brought snacks.",
+    "verdictComment": "🔴 **Critical: 2026.5.20 now has 40 version-gated regressions.** Gateway crashes, update-path breakage, runtime errors, channel delivery drops, and heartbeat latency are all in the same room. Still nobody brought snacks.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -565,6 +565,18 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 85871,
+        "url": "https://github.com/openclaw/openclaw/issues/85871",
+        "title": "[Bug]: Heartbeat scheduler silently fails to fire on 5.20 and all 5.x versions (regression from 4.23)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85943,
+        "url": "https://github.com/openclaw/openclaw/issues/85943",
+        "title": "Regression: app-server per-agent CODEX_HOME is not a replacement for codex-cli process isolation"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 85202,
         "url": "https://github.com/openclaw/openclaw/issues/85202",
         "title": "[Bug]: Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh"
@@ -790,6 +802,18 @@
         "number": 85783,
         "url": "https://github.com/openclaw/openclaw/issues/85783",
         "title": "[Bug]: Embedded-run bootstrap-context stage variance causes 20-37s heartbeat fires on 5.20 (regression from 5.6; not fixed by 5.12 PR #80449 or 5.20 PRs #83477/#83858)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85871,
+        "url": "https://github.com/openclaw/openclaw/issues/85871",
+        "title": "[Bug]: Heartbeat scheduler silently fails to fire on 5.20 and all 5.x versions (regression from 4.23)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85943,
+        "url": "https://github.com/openclaw/openclaw/issues/85943",
+        "title": "Regression: app-server per-agent CODEX_HOME is not a replacement for codex-cli process isolation"
       }
     ],
     "stabilityScore": {
@@ -798,14 +822,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 105,
+      "evidencePenalty": 113,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 105,
+        "evidencePenalty": 113,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
@@ -1253,6 +1277,28 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Embedded-run bootstrap-context variance causes 20-37s heartbeat fire latency on v2026.5.20 in clean lab reproduction (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#85871",
+          "repo": "openclaw/openclaw",
+          "number": 85871,
+          "url": "https://github.com/openclaw/openclaw/issues/85871",
+          "area": "heartbeat",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Heartbeat scheduler silently fails to fire on 2026.5.20 and tested 5.x versions, with no heartbeat start log (2026-05-24)"
+        },
+        {
+          "issue": "openclaw/openclaw#85943",
+          "repo": "openclaw/openclaw",
+          "number": 85943,
+          "url": "https://github.com/openclaw/openclaw/issues/85943",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.20+ Codex app-server path lacks prior codex-cli process isolation for high-concurrency agents (2026-05-24)"
         }
       ]
     },
