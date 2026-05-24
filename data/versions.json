@@ -6,32 +6,321 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "🟠 **Fresh release (<24h): evidence is already chunky.** Session locks, Telegram delivery, Docker permissions, and memory bridge packaging all showed up before the coffee cooled.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85953,
+        "url": "https://github.com/openclaw/openclaw/issues/85953",
+        "title": "Bug: sessions_yield can leave parent session transcript lock held, causing subagent completion callback timeout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85930,
+        "url": "https://github.com/openclaw/openclaw/issues/85930",
+        "title": "Plugin register() invoked per agent run; silent Telegram reply loss in subagent path (v2026.5.22)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85943,
+        "url": "https://github.com/openclaw/openclaw/issues/85943",
+        "title": "Regression: app-server per-agent CODEX_HOME is not a replacement for codex-cli process isolation"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85968,
+        "url": "https://github.com/openclaw/openclaw/issues/85968",
+        "title": "[Bug]: 2026.5.22-slim has wrong directory permissions in /home/node/.config"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85291,
+        "url": "https://github.com/openclaw/openclaw/issues/85291",
+        "title": "[Bug]: api性能问题"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85966,
+        "url": "https://github.com/openclaw/openclaw/issues/85966",
+        "title": "Android UI/operator WebSocket closes silently (code=1000 bye, handshake pending) after successful node pair on v2026.5.22-dev"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85974,
+        "url": "https://github.com/openclaw/openclaw/issues/85974",
+        "title": "[Bug]: @openclaw/memory-lancedb@2026.5.22 npm bundle missing publicArtifacts registration from #85060"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85963,
+        "url": "https://github.com/openclaw/openclaw/issues/85963",
+        "title": "[Bug]: Chat session picker shows sessions from other agents"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85925,
+        "url": "https://github.com/openclaw/openclaw/issues/85925",
+        "title": "plugin-skills stale generated symlink is not replaced when target disappears"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85929,
+        "url": "https://github.com/openclaw/openclaw/issues/85929",
+        "title": "openclaw path: OC_PATH_TOO_DEEP forces hand-edits for paths > 4 segments deep in openclaw.json"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85937,
+        "url": "https://github.com/openclaw/openclaw/issues/85937",
+        "title": "Duplicate assistant.text persisted twice per turn on Gemini native streaming (v5.22) — masked by outbound dedupe, visible in session JSONL"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85939,
+        "url": "https://github.com/openclaw/openclaw/issues/85939",
+        "title": "Control UI: browser (F5) full-page reload re-fetches all API data — slow and state-less"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85953,
+        "url": "https://github.com/openclaw/openclaw/issues/85953",
+        "title": "Bug: sessions_yield can leave parent session transcript lock held, causing subagent completion callback timeout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85930,
+        "url": "https://github.com/openclaw/openclaw/issues/85930",
+        "title": "Plugin register() invoked per agent run; silent Telegram reply loss in subagent path (v2026.5.22)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85943,
+        "url": "https://github.com/openclaw/openclaw/issues/85943",
+        "title": "Regression: app-server per-agent CODEX_HOME is not a replacement for codex-cli process isolation"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85968,
+        "url": "https://github.com/openclaw/openclaw/issues/85968",
+        "title": "[Bug]: 2026.5.22-slim has wrong directory permissions in /home/node/.config"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85291,
+        "url": "https://github.com/openclaw/openclaw/issues/85291",
+        "title": "[Bug]: api性能问题"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85966,
+        "url": "https://github.com/openclaw/openclaw/issues/85966",
+        "title": "Android UI/operator WebSocket closes silently (code=1000 bye, handshake pending) after successful node pair on v2026.5.22-dev"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85974,
+        "url": "https://github.com/openclaw/openclaw/issues/85974",
+        "title": "[Bug]: @openclaw/memory-lancedb@2026.5.22 npm bundle missing publicArtifacts registration from #85060"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85963,
+        "url": "https://github.com/openclaw/openclaw/issues/85963",
+        "title": "[Bug]: Chat session picker shows sessions from other agents"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85925,
+        "url": "https://github.com/openclaw/openclaw/issues/85925",
+        "title": "plugin-skills stale generated symlink is not replaced when target disappears"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85929,
+        "url": "https://github.com/openclaw/openclaw/issues/85929",
+        "title": "openclaw path: OC_PATH_TOO_DEEP forces hand-edits for paths > 4 segments deep in openclaw.json"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85937,
+        "url": "https://github.com/openclaw/openclaw/issues/85937",
+        "title": "Duplicate assistant.text persisted twice per turn on Gemini native streaming (v5.22) — masked by outbound dedupe, visible in session JSONL"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85939,
+        "url": "https://github.com/openclaw/openclaw/issues/85939",
+        "title": "Control UI: browser (F5) full-page reload re-fetches all API data — slow and state-less"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 48,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 32,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 32,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 48
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "codex",
+        "linux-runtime",
+        "memory-wiki",
+        "node-surface",
+        "plugin-system",
+        "runtime",
+        "sessions-management",
+        "telegram",
+        "tool",
+        "ui"
+      ],
+      "evidence": [
+        {
+          "issue": "openclaw/openclaw#85953",
+          "repo": "openclaw/openclaw",
+          "number": 85953,
+          "url": "https://github.com/openclaw/openclaw/issues/85953",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "sessions_yield can leave parent transcript lock held, causing subagent completion callback timeout on 2026.5.22"
+        },
+        {
+          "issue": "openclaw/openclaw#85930",
+          "repo": "openclaw/openclaw",
+          "number": 85930,
+          "url": "https://github.com/openclaw/openclaw/issues/85930",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Telegram direct deployment on 2026.5.22 reports plugin register churn and silent reply loss in subagent path"
+        },
+        {
+          "issue": "openclaw/openclaw#85943",
+          "repo": "openclaw/openclaw",
+          "number": 85943,
+          "url": "https://github.com/openclaw/openclaw/issues/85943",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22 Codex app-server path lacks the old codex-cli process isolation needed by high-concurrency agent deployments"
+        },
+        {
+          "issue": "openclaw/openclaw#85968",
+          "repo": "openclaw/openclaw",
+          "number": 85968,
+          "url": "https://github.com/openclaw/openclaw/issues/85968",
+          "area": "linux-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22-slim Docker image has root-owned /home/node/.config, blocking npx/skill installs"
+        },
+        {
+          "issue": "openclaw/openclaw#85291",
+          "repo": "openclaw/openclaw",
+          "number": 85291,
+          "url": "https://github.com/openclaw/openclaw/issues/85291",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22 report of gateway event-loop blocking and API/session operations queueing under multi-agent load"
+        },
+        {
+          "issue": "openclaw/openclaw#85966",
+          "repo": "openclaw/openclaw",
+          "number": 85966,
+          "url": "https://github.com/openclaw/openclaw/issues/85966",
+          "area": "node-surface",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Android UI/operator WebSocket closes with code=1000 after node pairing against a 2026.5.22 gateway"
+        },
+        {
+          "issue": "openclaw/openclaw#85974",
+          "repo": "openclaw/openclaw",
+          "number": 85974,
+          "url": "https://github.com/openclaw/openclaw/issues/85974",
+          "area": "memory-wiki",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "@openclaw/memory-lancedb@2026.5.22 npm bundle misses publicArtifacts registration, leaving memory-wiki bridge imports empty"
+        },
+        {
+          "issue": "openclaw/openclaw#85963",
+          "repo": "openclaw/openclaw",
+          "number": 85963,
+          "url": "https://github.com/openclaw/openclaw/issues/85963",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Control UI chat session picker can show sessions from other agents on 2026.5.22"
+        },
+        {
+          "issue": "openclaw/openclaw#85925",
+          "repo": "openclaw/openclaw",
+          "number": 85925,
+          "url": "https://github.com/openclaw/openclaw/issues/85925",
+          "area": "plugin-system",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.22 plugin skill publisher can fail to replace stale generated symlinks when targets disappear"
+        },
+        {
+          "issue": "openclaw/openclaw#85929",
+          "repo": "openclaw/openclaw",
+          "number": 85929,
+          "url": "https://github.com/openclaw/openclaw/issues/85929",
+          "area": "tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "openclaw path rejects real openclaw.json paths deeper than four segments on 2026.5.22, forcing manual config edits"
+        },
+        {
+          "issue": "openclaw/openclaw#85937",
+          "repo": "openclaw/openclaw",
+          "number": 85937,
+          "url": "https://github.com/openclaw/openclaw/issues/85937",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Gemini native streaming on 2026.5.22 persists duplicate assistant.text records even though outbound dispatch is deduped"
+        },
+        {
+          "issue": "openclaw/openclaw#85939",
+          "repo": "openclaw/openclaw",
+          "number": 85939,
+          "url": "https://github.com/openclaw/openclaw/issues/85939",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Control UI full-page refresh re-fetches all API data and loses state; 2026.5.22 still has the behavior"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
