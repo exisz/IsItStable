@@ -1081,7 +1081,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🔴 **Critical: 2026.5.20 now has 40 version-gated regressions.** Gateway crashes, update-path breakage, runtime errors, channel delivery drops, and heartbeat latency are all in the same room. Still nobody brought snacks.",
+    "verdictComment": "🔴 **Backfill:** late reports added more channel, voice, and cron-runtime damage. The score bucket stays in the basement; bring a flashlight.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1323,6 +1323,36 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 85822,
+        "url": "https://github.com/openclaw/openclaw/issues/85822",
+        "title": "[Bug]: Silent ~48s post-`embedded run done` lane retention on Discord turns (2026.5.20) — no trace-level emit in the gap"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85848,
+        "url": "https://github.com/openclaw/openclaw/issues/85848",
+        "title": "[voice-call] OpenAI realtime: audio clipping / breaking inside words during first ~30s of outbound calls (Twilio mulaw output)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85846,
+        "url": "https://github.com/openclaw/openclaw/issues/85846",
+        "title": "[voice-call] OpenAI realtime: outbound calls greet caller twice — `triggerGreeting` + `server_vad.create_response` both fire `response.create`"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85847,
+        "url": "https://github.com/openclaw/openclaw/issues/85847",
+        "title": "[voice-call] First-turn latency degraded by ~2-3s: realtime provider WebSocket opens on Twilio Media Stream upgrade, not during TwiML webhook"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86178,
+        "url": "https://github.com/openclaw/openclaw/issues/86178",
+        "title": "[Bug]: Managed Memory Dreaming Promotion cron silently NO_REPLY since 2026-05-09 (jobs.json lastRun stays null)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 85202,
         "url": "https://github.com/openclaw/openclaw/issues/85202",
         "title": "[Bug]: Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh"
@@ -1558,6 +1588,36 @@
         "number": 85943,
         "url": "https://github.com/openclaw/openclaw/issues/85943",
         "title": "Regression: app-server per-agent CODEX_HOME is not a replacement for codex-cli process isolation"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85822,
+        "url": "https://github.com/openclaw/openclaw/issues/85822",
+        "title": "[Bug]: Silent ~48s post-`embedded run done` lane retention on Discord turns (2026.5.20) — no trace-level emit in the gap"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85848,
+        "url": "https://github.com/openclaw/openclaw/issues/85848",
+        "title": "[voice-call] OpenAI realtime: audio clipping / breaking inside words during first ~30s of outbound calls (Twilio mulaw output)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85846,
+        "url": "https://github.com/openclaw/openclaw/issues/85846",
+        "title": "[voice-call] OpenAI realtime: outbound calls greet caller twice — `triggerGreeting` + `server_vad.create_response` both fire `response.create`"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85847,
+        "url": "https://github.com/openclaw/openclaw/issues/85847",
+        "title": "[voice-call] First-turn latency degraded by ~2-3s: realtime provider WebSocket opens on Twilio Media Stream upgrade, not during TwiML webhook"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86178,
+        "url": "https://github.com/openclaw/openclaw/issues/86178",
+        "title": "[Bug]: Managed Memory Dreaming Promotion cron silently NO_REPLY since 2026-05-09 (jobs.json lastRun stays null)"
       }
     ],
     "stabilityScore": {
@@ -1566,14 +1626,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 113,
+      "evidencePenalty": 123,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 113,
+        "evidencePenalty": 123,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
@@ -1584,7 +1644,7 @@
       },
       "affected": [
         "codex",
-        "compaction",
+        "cron-runtime",
         "discord",
         "doctor",
         "gateway",
@@ -1600,6 +1660,7 @@
         "telegram",
         "ui",
         "update-system",
+        "voice",
         "webchat",
         "whatsapp"
       ],
@@ -2043,6 +2104,61 @@
           "severity": 3,
           "penalty": 3,
           "reason": "2026.5.20+ Codex app-server path lacks prior codex-cli process isolation for high-concurrency agents (2026-05-24)"
+        },
+        {
+          "issue": "openclaw/openclaw#85822",
+          "repo": "openclaw/openclaw",
+          "number": 85822,
+          "url": "https://github.com/openclaw/openclaw/issues/85822",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.20 Discord turns can retain the lane for about 48s after embedded run completion with no trace gap visibility"
+        },
+        {
+          "issue": "openclaw/openclaw#85848",
+          "repo": "openclaw/openclaw",
+          "number": 85848,
+          "url": "https://github.com/openclaw/openclaw/issues/85848",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.20 voice-call outbound audio can clip/break words during the first 30s on OpenAI realtime/Twilio mulaw"
+        },
+        {
+          "issue": "openclaw/openclaw#85846",
+          "repo": "openclaw/openclaw",
+          "number": 85846,
+          "url": "https://github.com/openclaw/openclaw/issues/85846",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.20 voice-call outbound calls can greet callers twice due triggerGreeting plus server_vad response creation"
+        },
+        {
+          "issue": "openclaw/openclaw#85847",
+          "repo": "openclaw/openclaw",
+          "number": 85847,
+          "url": "https://github.com/openclaw/openclaw/issues/85847",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "2026.5.20 voice-call first-turn latency regresses by about 2–3s because realtime websocket opens too late"
+        },
+        {
+          "issue": "openclaw/openclaw#86178",
+          "repo": "openclaw/openclaw",
+          "number": 86178,
+          "url": "https://github.com/openclaw/openclaw/issues/86178",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Managed Memory Dreaming Promotion cron silently NO_REPLYs on 2026.5.20 with jobs.json lastRun staying null"
         }
       ]
     },
@@ -2057,7 +2173,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🔴 **Critical: 17 version-gated regressions.** Update flow, Windows runtime, cron isolation, Codex, Gateway supervision, and compaction are fighting in production. The pager is doing cardio.",
+    "verdictComment": "🔴 **Backfill:** two more scoped regressions landed: Telegram forum context and WebChat model inheritance. Still score-first, still not pretty.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -2163,6 +2279,18 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 86024,
+        "url": "https://github.com/openclaw/openclaw/issues/86024",
+        "title": "[Bug]: Telegram forum topic names are not reliably included in agent context"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86174,
+        "url": "https://github.com/openclaw/openclaw/issues/86174",
+        "title": "[Bug]: WebChat + New Session displays default model but inherits parent's model override"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 84809,
         "url": "https://github.com/openclaw/openclaw/issues/84809",
         "title": "[Data loss] 2026.5.19 update/backup flow removed ~/.openclaw/workspace and left plugin/npm state inconsistent"
@@ -2262,29 +2390,41 @@
         "number": 85717,
         "url": "https://github.com/openclaw/openclaw/issues/85717",
         "title": "Session compaction corrupts thinking blocks, breaking all subsequent requests until session restart"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86024,
+        "url": "https://github.com/openclaw/openclaw/issues/86024",
+        "title": "[Bug]: Telegram forum topic names are not reliably included in agent context"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86174,
+        "url": "https://github.com/openclaw/openclaw/issues/86174",
+        "title": "[Bug]: WebChat + New Session displays default model but inherits parent's model override"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 24,
+      "score": 22,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 59,
+      "evidencePenalty": 61,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 59,
+        "evidencePenalty": 61,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 24
+        "score": 22
       },
       "affected": [
         "codex",
@@ -2297,8 +2437,10 @@
         "runtime",
         "sessions-management",
         "status",
+        "telegram",
         "ui",
         "update-system",
+        "webchat",
         "windows-runtime"
       ],
       "evidence": [
@@ -2488,6 +2630,28 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Session compaction can replay/corrupt thinking blocks, breaking all subsequent requests until session restart on v2026.5.19 (2026-05-23)"
+        },
+        {
+          "issue": "openclaw/openclaw#86024",
+          "repo": "openclaw/openclaw",
+          "number": 86024,
+          "url": "https://github.com/openclaw/openclaw/issues/86024",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram forum topic names are not reliably included in agent context on OpenClaw 2026.5.19"
+        },
+        {
+          "issue": "openclaw/openclaw#86174",
+          "repo": "openclaw/openclaw",
+          "number": 86174,
+          "url": "https://github.com/openclaw/openclaw/issues/86174",
+          "area": "webchat",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "WebChat New Session can display the default model while inheriting the parent model override on OpenClaw 2026.5.19"
         }
       ]
     },
