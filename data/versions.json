@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🟠 **Fresh release (<24h): evidence is already chunky.** Session locks, Telegram delivery, Docker permissions, and memory bridge packaging all showed up before the coffee cooled.",
+    "verdictComment": "🔴 **Fresh release (<24h): the evidence pile is now doing its own incident review.** Session locks, gateway stalls, Windows startup, Codex isolation, and channel latency all showed up before the first 24-hour window closed.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -82,6 +82,198 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 86007,
+        "url": "https://github.com/openclaw/openclaw/issues/86007",
+        "title": "[Bug]: Windows 2026.5.22 gateway install writes gateway.cmd as self-recursive wrapper"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86117,
+        "url": "https://github.com/openclaw/openclaw/issues/86117",
+        "title": "[Bug] Gateway crashes with \"Unable to resolve plugin runtime module\" after upgrade to 2026.5.22"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86070,
+        "url": "https://github.com/openclaw/openclaw/issues/86070",
+        "title": "[Bug] Feishu plugin 2026.5.22: gateway connection timeout + QR code display broken"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86044,
+        "url": "https://github.com/openclaw/openclaw/issues/86044",
+        "title": "2026.5.22: CLI hangs on Windows — provider auth-state pre-warm blocks all CLI commands"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86184,
+        "url": "https://github.com/openclaw/openclaw/issues/86184",
+        "title": "[Bug]: 2026.5.22 Telegram direct gets generic /new fallback after successful tool turn"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86047,
+        "url": "https://github.com/openclaw/openclaw/issues/86047",
+        "title": "[Regression] OpenClaw 2026.5.22: Codex app-server / plugin approval stalls cause interrupted turns and tool-execution timeouts in Nextcloud Talk agent sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85999,
+        "url": "https://github.com/openclaw/openclaw/issues/85999",
+        "title": "[Bug]: 2026.5.22 gateway pre-warm (warmCurrentProviderAuthState) blocks event loop ~60s on startup, breaks channel handshakes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86149,
+        "url": "https://github.com/openclaw/openclaw/issues/86149",
+        "title": "Discord typing indicator is delayed despite typingMode=instant"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86103,
+        "url": "https://github.com/openclaw/openclaw/issues/86103",
+        "title": "[Bug]: TUI/Web turns remain In progress with Runtime: OpenAI Codex on 2026.5.22 after successful OAuth"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86073,
+        "url": "https://github.com/openclaw/openclaw/issues/86073",
+        "title": "[Bug]: Severe slowness and near-unusability of WebUI after upgrading to OpenClaw 2026.5.22 on Windows 11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86001,
+        "url": "https://github.com/openclaw/openclaw/issues/86001",
+        "title": "[Bug]: Discord message-tool send fails with \"Ambiguous Discord recipient\" for bare numeric channel IDs (2026.5.22)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86104,
+        "url": "https://github.com/openclaw/openclaw/issues/86104",
+        "title": "macOS: launchctl submit can relaunch one-shot update jobs after clean exit"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86093,
+        "url": "https://github.com/openclaw/openclaw/issues/86093",
+        "title": "bug: Pi session event queue self-wait can hang Gateway at tool calls"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86151,
+        "url": "https://github.com/openclaw/openclaw/issues/86151",
+        "title": "[Bug]: openclaw still appending \"-preview\" to \"gemini-3.1-flash-lite\" in v2026.5.22"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86116,
+        "url": "https://github.com/openclaw/openclaw/issues/86116",
+        "title": "/btw command fails with max tokens error: model[MiniMax-M2.7] does not support max tokens > 196608"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86180,
+        "url": "https://github.com/openclaw/openclaw/issues/86180",
+        "title": "TTS voice parameter not respected in ElevenLabs provider configuration"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86039,
+        "url": "https://github.com/openclaw/openclaw/issues/86039",
+        "title": "Bundled channel setup entries emit warnings when generated modules are missing, ignoring channel/plugin disabled config"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85991,
+        "url": "https://github.com/openclaw/openclaw/issues/85991",
+        "title": "[Bug]: 2026.5.22 Discord takes a long time to respond"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85976,
+        "url": "https://github.com/openclaw/openclaw/issues/85976",
+        "title": "[Bug]: Web UI 2026.5.22: Send button stuck as \"Stop\" after task completes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86119,
+        "url": "https://github.com/openclaw/openclaw/issues/86119",
+        "title": "Orphaned node server.js worker processes accumulate after subagent/cron embedded runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86035,
+        "url": "https://github.com/openclaw/openclaw/issues/86035",
+        "title": "Bug: Control UI chat composer breaks CJK IME composition"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85998,
+        "url": "https://github.com/openclaw/openclaw/issues/85998",
+        "title": "[Bug]: Codex harness fails with listRegisteredPluginAgentPromptGuidance SyntaxError on Windows (5.19, 5.20, 5.22) — event loop stall up to 287s"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86128,
+        "url": "https://github.com/openclaw/openclaw/issues/86128",
+        "title": "[Bug]: Gateway probe/status timeouts persist after disabling Brave; Codex app-server still loaded"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86034,
+        "url": "https://github.com/openclaw/openclaw/issues/86034",
+        "title": "Media generation succeeds but completion delivery fails and looks like generation failure"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86086,
+        "url": "https://github.com/openclaw/openclaw/issues/86086",
+        "title": "Canvas embed in WebChat returns 401 (missing Gateway auth token in embed rendering)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86129,
+        "url": "https://github.com/openclaw/openclaw/issues/86129",
+        "title": "Ollama provider: missing response-level reasoning stripper for Kimi models causes inline reasoning leak to chat"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86014,
+        "url": "https://github.com/openclaw/openclaw/issues/86014",
+        "title": "SessionWriteLockTimeoutError: gateway never releases session file lock after embedded run timeout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86033,
+        "url": "https://github.com/openclaw/openclaw/issues/86033",
+        "title": "Bug: openai-codex provider drops read/write/edit tools from isolated cron sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86005,
+        "url": "https://github.com/openclaw/openclaw/issues/86005",
+        "title": "[Bug]: 5.22 still has ~20s session-resource-loader blocking in long Feishu multi-agent sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86052,
+        "url": "https://github.com/openclaw/openclaw/issues/86052",
+        "title": "v2026.5.22: stale worker accumulation (#76171) escalated to complete memory exhaustion within 2–3 min of startup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86045,
+        "url": "https://github.com/openclaw/openclaw/issues/86045",
+        "title": "Bug: web_search 和 web_fetch 双渠道搜索均不可用"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86143,
+        "url": "https://github.com/openclaw/openclaw/issues/86143",
+        "title": "[v2026.5.22] PM cron job fails: synthetic-auth.runtime.js does not export 'r'"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 85953,
         "url": "https://github.com/openclaw/openclaw/issues/85953",
         "title": "Bug: sessions_yield can leave parent session transcript lock held, causing subagent completion callback timeout"
@@ -151,41 +343,245 @@
         "number": 85939,
         "url": "https://github.com/openclaw/openclaw/issues/85939",
         "title": "Control UI: browser (F5) full-page reload re-fetches all API data — slow and state-less"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86007,
+        "url": "https://github.com/openclaw/openclaw/issues/86007",
+        "title": "[Bug]: Windows 2026.5.22 gateway install writes gateway.cmd as self-recursive wrapper"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86117,
+        "url": "https://github.com/openclaw/openclaw/issues/86117",
+        "title": "[Bug] Gateway crashes with \"Unable to resolve plugin runtime module\" after upgrade to 2026.5.22"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86070,
+        "url": "https://github.com/openclaw/openclaw/issues/86070",
+        "title": "[Bug] Feishu plugin 2026.5.22: gateway connection timeout + QR code display broken"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86044,
+        "url": "https://github.com/openclaw/openclaw/issues/86044",
+        "title": "2026.5.22: CLI hangs on Windows — provider auth-state pre-warm blocks all CLI commands"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86184,
+        "url": "https://github.com/openclaw/openclaw/issues/86184",
+        "title": "[Bug]: 2026.5.22 Telegram direct gets generic /new fallback after successful tool turn"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86047,
+        "url": "https://github.com/openclaw/openclaw/issues/86047",
+        "title": "[Regression] OpenClaw 2026.5.22: Codex app-server / plugin approval stalls cause interrupted turns and tool-execution timeouts in Nextcloud Talk agent sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85999,
+        "url": "https://github.com/openclaw/openclaw/issues/85999",
+        "title": "[Bug]: 2026.5.22 gateway pre-warm (warmCurrentProviderAuthState) blocks event loop ~60s on startup, breaks channel handshakes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86149,
+        "url": "https://github.com/openclaw/openclaw/issues/86149",
+        "title": "Discord typing indicator is delayed despite typingMode=instant"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86103,
+        "url": "https://github.com/openclaw/openclaw/issues/86103",
+        "title": "[Bug]: TUI/Web turns remain In progress with Runtime: OpenAI Codex on 2026.5.22 after successful OAuth"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86073,
+        "url": "https://github.com/openclaw/openclaw/issues/86073",
+        "title": "[Bug]: Severe slowness and near-unusability of WebUI after upgrading to OpenClaw 2026.5.22 on Windows 11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86001,
+        "url": "https://github.com/openclaw/openclaw/issues/86001",
+        "title": "[Bug]: Discord message-tool send fails with \"Ambiguous Discord recipient\" for bare numeric channel IDs (2026.5.22)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86104,
+        "url": "https://github.com/openclaw/openclaw/issues/86104",
+        "title": "macOS: launchctl submit can relaunch one-shot update jobs after clean exit"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86093,
+        "url": "https://github.com/openclaw/openclaw/issues/86093",
+        "title": "bug: Pi session event queue self-wait can hang Gateway at tool calls"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86151,
+        "url": "https://github.com/openclaw/openclaw/issues/86151",
+        "title": "[Bug]: openclaw still appending \"-preview\" to \"gemini-3.1-flash-lite\" in v2026.5.22"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86116,
+        "url": "https://github.com/openclaw/openclaw/issues/86116",
+        "title": "/btw command fails with max tokens error: model[MiniMax-M2.7] does not support max tokens > 196608"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86180,
+        "url": "https://github.com/openclaw/openclaw/issues/86180",
+        "title": "TTS voice parameter not respected in ElevenLabs provider configuration"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86039,
+        "url": "https://github.com/openclaw/openclaw/issues/86039",
+        "title": "Bundled channel setup entries emit warnings when generated modules are missing, ignoring channel/plugin disabled config"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85991,
+        "url": "https://github.com/openclaw/openclaw/issues/85991",
+        "title": "[Bug]: 2026.5.22 Discord takes a long time to respond"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85976,
+        "url": "https://github.com/openclaw/openclaw/issues/85976",
+        "title": "[Bug]: Web UI 2026.5.22: Send button stuck as \"Stop\" after task completes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86119,
+        "url": "https://github.com/openclaw/openclaw/issues/86119",
+        "title": "Orphaned node server.js worker processes accumulate after subagent/cron embedded runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86035,
+        "url": "https://github.com/openclaw/openclaw/issues/86035",
+        "title": "Bug: Control UI chat composer breaks CJK IME composition"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85998,
+        "url": "https://github.com/openclaw/openclaw/issues/85998",
+        "title": "[Bug]: Codex harness fails with listRegisteredPluginAgentPromptGuidance SyntaxError on Windows (5.19, 5.20, 5.22) — event loop stall up to 287s"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86128,
+        "url": "https://github.com/openclaw/openclaw/issues/86128",
+        "title": "[Bug]: Gateway probe/status timeouts persist after disabling Brave; Codex app-server still loaded"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86034,
+        "url": "https://github.com/openclaw/openclaw/issues/86034",
+        "title": "Media generation succeeds but completion delivery fails and looks like generation failure"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86086,
+        "url": "https://github.com/openclaw/openclaw/issues/86086",
+        "title": "Canvas embed in WebChat returns 401 (missing Gateway auth token in embed rendering)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86129,
+        "url": "https://github.com/openclaw/openclaw/issues/86129",
+        "title": "Ollama provider: missing response-level reasoning stripper for Kimi models causes inline reasoning leak to chat"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86014,
+        "url": "https://github.com/openclaw/openclaw/issues/86014",
+        "title": "SessionWriteLockTimeoutError: gateway never releases session file lock after embedded run timeout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86033,
+        "url": "https://github.com/openclaw/openclaw/issues/86033",
+        "title": "Bug: openai-codex provider drops read/write/edit tools from isolated cron sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86005,
+        "url": "https://github.com/openclaw/openclaw/issues/86005",
+        "title": "[Bug]: 5.22 still has ~20s session-resource-loader blocking in long Feishu multi-agent sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86052,
+        "url": "https://github.com/openclaw/openclaw/issues/86052",
+        "title": "v2026.5.22: stale worker accumulation (#76171) escalated to complete memory exhaustion within 2–3 min of startup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86045,
+        "url": "https://github.com/openclaw/openclaw/issues/86045",
+        "title": "Bug: web_search 和 web_fetch 双渠道搜索均不可用"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86143,
+        "url": "https://github.com/openclaw/openclaw/issues/86143",
+        "title": "[v2026.5.22] PM cron job fails: synthetic-auth.runtime.js does not export 'r'"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 48,
+      "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 32,
+      "evidencePenalty": 117,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 32,
+        "evidencePenalty": 117,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 48
+        "score": 0
       },
       "affected": [
         "codex",
+        "cron-runtime",
+        "discord",
+        "feishu",
+        "gateway",
         "linux-runtime",
+        "macos",
         "memory-wiki",
+        "model-routing",
         "node-surface",
+        "openwebui",
         "plugin-system",
+        "provider-integration",
         "runtime",
         "sessions-management",
         "telegram",
         "tool",
-        "ui"
+        "ui",
+        "voice",
+        "web_fetch",
+        "webchat",
+        "windows-runtime"
       ],
       "evidence": [
         {
@@ -319,6 +715,358 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Control UI full-page refresh re-fetches all API data and loses state; 2026.5.22 still has the behavior"
+        },
+        {
+          "issue": "openclaw/openclaw#86007",
+          "repo": "openclaw/openclaw",
+          "number": 86007,
+          "url": "https://github.com/openclaw/openclaw/issues/86007",
+          "area": "windows-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows 2026.5.22 gateway installer writes gateway.cmd as a self-recursive wrapper, breaking native startup"
+        },
+        {
+          "issue": "openclaw/openclaw#86117",
+          "repo": "openclaw/openclaw",
+          "number": 86117,
+          "url": "https://github.com/openclaw/openclaw/issues/86117",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Gateway crashes after upgrade to 2026.5.22 when plugin runtime module resolution fails"
+        },
+        {
+          "issue": "openclaw/openclaw#86070",
+          "repo": "openclaw/openclaw",
+          "number": 86070,
+          "url": "https://github.com/openclaw/openclaw/issues/86070",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Feishu plugin on 2026.5.22 reports gateway connection timeout and broken QR-code display"
+        },
+        {
+          "issue": "openclaw/openclaw#86044",
+          "repo": "openclaw/openclaw",
+          "number": 86044,
+          "url": "https://github.com/openclaw/openclaw/issues/86044",
+          "area": "windows-runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Windows 2026.5.22 CLI hangs because provider auth-state pre-warm blocks all commands"
+        },
+        {
+          "issue": "openclaw/openclaw#86184",
+          "repo": "openclaw/openclaw",
+          "number": 86184,
+          "url": "https://github.com/openclaw/openclaw/issues/86184",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Telegram direct on 2026.5.22 falls back to generic /new after successful tool turns"
+        },
+        {
+          "issue": "openclaw/openclaw#86047",
+          "repo": "openclaw/openclaw",
+          "number": 86047,
+          "url": "https://github.com/openclaw/openclaw/issues/86047",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22 Codex app-server/plugin approval stalls interrupt Nextcloud Talk turns and tool execution"
+        },
+        {
+          "issue": "openclaw/openclaw#85999",
+          "repo": "openclaw/openclaw",
+          "number": 85999,
+          "url": "https://github.com/openclaw/openclaw/issues/85999",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.5.22 gateway provider auth pre-warm blocks the event loop for about 60s and breaks channel handshakes"
+        },
+        {
+          "issue": "openclaw/openclaw#86149",
+          "repo": "openclaw/openclaw",
+          "number": 86149,
+          "url": "https://github.com/openclaw/openclaw/issues/86149",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord typing indicator is delayed on 2026.5.22 despite typingMode=instant"
+        },
+        {
+          "issue": "openclaw/openclaw#86103",
+          "repo": "openclaw/openclaw",
+          "number": 86103,
+          "url": "https://github.com/openclaw/openclaw/issues/86103",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "TUI/Web turns remain In progress with OpenAI Codex on 2026.5.22 after successful OAuth"
+        },
+        {
+          "issue": "openclaw/openclaw#86073",
+          "repo": "openclaw/openclaw",
+          "number": 86073,
+          "url": "https://github.com/openclaw/openclaw/issues/86073",
+          "area": "openwebui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows 11 WebUI becomes severely slow and nearly unusable after upgrading to 2026.5.22"
+        },
+        {
+          "issue": "openclaw/openclaw#86001",
+          "repo": "openclaw/openclaw",
+          "number": 86001,
+          "url": "https://github.com/openclaw/openclaw/issues/86001",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord message-tool send fails for bare numeric channel IDs on 2026.5.22"
+        },
+        {
+          "issue": "openclaw/openclaw#86104",
+          "repo": "openclaw/openclaw",
+          "number": 86104,
+          "url": "https://github.com/openclaw/openclaw/issues/86104",
+          "area": "macos",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "macOS launchctl submit can relaunch one-shot update jobs after clean exit in fresh 2026.5.22 update-wrapper validation"
+        },
+        {
+          "issue": "openclaw/openclaw#86093",
+          "repo": "openclaw/openclaw",
+          "number": 86093,
+          "url": "https://github.com/openclaw/openclaw/issues/86093",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.5.22 Pi session event queue can self-wait and hang the gateway at tool-call boundaries"
+        },
+        {
+          "issue": "openclaw/openclaw#86151",
+          "repo": "openclaw/openclaw",
+          "number": 86151,
+          "url": "https://github.com/openclaw/openclaw/issues/86151",
+          "area": "model-routing",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "2026.5.22 still appends -preview to gemini-3.1-flash-lite, routing to an invalid model name"
+        },
+        {
+          "issue": "openclaw/openclaw#86116",
+          "repo": "openclaw/openclaw",
+          "number": 86116,
+          "url": "https://github.com/openclaw/openclaw/issues/86116",
+          "area": "model-routing",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.22 MiniMax model-parameter resolution can send unsupported max tokens and fail /btw commands"
+        },
+        {
+          "issue": "openclaw/openclaw#86180",
+          "repo": "openclaw/openclaw",
+          "number": 86180,
+          "url": "https://github.com/openclaw/openclaw/issues/86180",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "2026.5.22 ElevenLabs TTS ignores the configured voice parameter"
+        },
+        {
+          "issue": "openclaw/openclaw#86039",
+          "repo": "openclaw/openclaw",
+          "number": 86039,
+          "url": "https://github.com/openclaw/openclaw/issues/86039",
+          "area": "plugin-system",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "2026.5.22 bundled channel setup emits warnings for generated modules even when channels/plugins are disabled"
+        },
+        {
+          "issue": "openclaw/openclaw#85991",
+          "repo": "openclaw/openclaw",
+          "number": 85991,
+          "url": "https://github.com/openclaw/openclaw/issues/85991",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord responses are slow on 2026.5.22"
+        },
+        {
+          "issue": "openclaw/openclaw#85976",
+          "repo": "openclaw/openclaw",
+          "number": 85976,
+          "url": "https://github.com/openclaw/openclaw/issues/85976",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Web UI 2026.5.22 can leave the Send button stuck as Stop after task completion"
+        },
+        {
+          "issue": "openclaw/openclaw#86119",
+          "repo": "openclaw/openclaw",
+          "number": 86119,
+          "url": "https://github.com/openclaw/openclaw/issues/86119",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "2026.5.22 embedded subagent/cron runs can accumulate orphaned node server.js workers"
+        },
+        {
+          "issue": "openclaw/openclaw#86035",
+          "repo": "openclaw/openclaw",
+          "number": 86035,
+          "url": "https://github.com/openclaw/openclaw/issues/86035",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Control UI chat composer breaks CJK IME composition on 2026.5.22"
+        },
+        {
+          "issue": "openclaw/openclaw#85998",
+          "repo": "openclaw/openclaw",
+          "number": 85998,
+          "url": "https://github.com/openclaw/openclaw/issues/85998",
+          "area": "windows-runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Windows Codex harness on 2026.5.22 can hit plugin guidance SyntaxError and stall the event loop"
+        },
+        {
+          "issue": "openclaw/openclaw#86128",
+          "repo": "openclaw/openclaw",
+          "number": 86128,
+          "url": "https://github.com/openclaw/openclaw/issues/86128",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22 gateway probe/status timeouts persist after disabling Brave because Codex app-server remains loaded"
+        },
+        {
+          "issue": "openclaw/openclaw#86034",
+          "repo": "openclaw/openclaw",
+          "number": 86034,
+          "url": "https://github.com/openclaw/openclaw/issues/86034",
+          "area": "tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.22 media generation can succeed while completion delivery fails and is reported as generation failure"
+        },
+        {
+          "issue": "openclaw/openclaw#86086",
+          "repo": "openclaw/openclaw",
+          "number": 86086,
+          "url": "https://github.com/openclaw/openclaw/issues/86086",
+          "area": "webchat",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.22 Canvas embed in WebChat can return 401 because iframe rendering lacks the gateway auth token"
+        },
+        {
+          "issue": "openclaw/openclaw#86129",
+          "repo": "openclaw/openclaw",
+          "number": 86129,
+          "url": "https://github.com/openclaw/openclaw/issues/86129",
+          "area": "provider-integration",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "2026.5.22 Ollama Kimi responses can leak inline reasoning because response-level stripping is missing"
+        },
+        {
+          "issue": "openclaw/openclaw#86014",
+          "repo": "openclaw/openclaw",
+          "number": 86014,
+          "url": "https://github.com/openclaw/openclaw/issues/86014",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.5.22 gateway can keep a session file lock after embedded run timeout, causing SessionWriteLockTimeoutError"
+        },
+        {
+          "issue": "openclaw/openclaw#86033",
+          "repo": "openclaw/openclaw",
+          "number": 86033,
+          "url": "https://github.com/openclaw/openclaw/issues/86033",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22 isolated cron sessions with openai-codex can lose read/write/edit tools"
+        },
+        {
+          "issue": "openclaw/openclaw#86005",
+          "repo": "openclaw/openclaw",
+          "number": 86005,
+          "url": "https://github.com/openclaw/openclaw/issues/86005",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.22 Feishu sessions still show about 20s resource-loader blocking in long multi-agent sessions"
+        },
+        {
+          "issue": "openclaw/openclaw#86052",
+          "repo": "openclaw/openclaw",
+          "number": 86052,
+          "url": "https://github.com/openclaw/openclaw/issues/86052",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.5.22 stale worker accumulation can escalate to complete memory exhaustion within minutes"
+        },
+        {
+          "issue": "openclaw/openclaw#86045",
+          "repo": "openclaw/openclaw",
+          "number": 86045,
+          "url": "https://github.com/openclaw/openclaw/issues/86045",
+          "area": "web_fetch",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22 web_search and web_fetch can both be unavailable despite Brave API configuration"
+        },
+        {
+          "issue": "openclaw/openclaw#86143",
+          "repo": "openclaw/openclaw",
+          "number": 86143,
+          "url": "https://github.com/openclaw/openclaw/issues/86143",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "2026.5.22 PM cron job can fail because synthetic-auth.runtime.js does not export the expected symbol"
         }
       ]
     },
@@ -416,8 +1164,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85333,
-        "url": "https://github.com/openclaw/openclaw/issues/85333",
-        "title": "[Bug]: openclaw doctor --fix 4-5x slower on 2026.5.20 vs 2026.5.19 (55s → 229s+) — session snapshot path traversal bottleneck"
+        "url": "https://github.com/openclaw/openclaw/issues/85333"
       },
       {
         "repo": "openclaw/openclaw",
@@ -446,8 +1193,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85334,
-        "url": "https://github.com/openclaw/openclaw/issues/85334",
-        "title": "[Bug]: openclaw doctor --fix automatically injects plugins.load.paths entry pointing at bundled plugin dir, causing circular warning"
+        "url": "https://github.com/openclaw/openclaw/issues/85334"
       },
       {
         "repo": "openclaw/openclaw",
@@ -656,8 +1402,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85333,
-        "url": "https://github.com/openclaw/openclaw/issues/85333",
-        "title": "[Bug]: openclaw doctor --fix 4-5x slower on 2026.5.20 vs 2026.5.19 (55s → 229s+) — session snapshot path traversal bottleneck"
+        "url": "https://github.com/openclaw/openclaw/issues/85333"
       },
       {
         "repo": "openclaw/openclaw",
@@ -686,8 +1431,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85334,
-        "url": "https://github.com/openclaw/openclaw/issues/85334",
-        "title": "[Bug]: openclaw doctor --fix automatically injects plugins.load.paths entry pointing at bundled plugin dir, causing circular warning"
+        "url": "https://github.com/openclaw/openclaw/issues/85334"
       },
       {
         "repo": "openclaw/openclaw",
@@ -2761,8 +3505,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 82462,
-        "url": "https://github.com/openclaw/openclaw/issues/82462",
-        "title": "[Bug]: model-fetch streaming response processing starves the event loop (SocketError, 30s+ freeze)"
+        "url": "https://github.com/openclaw/openclaw/issues/82462"
       },
       {
         "repo": "openclaw/openclaw",
@@ -2995,8 +3738,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 82462,
-        "url": "https://github.com/openclaw/openclaw/issues/82462",
-        "title": "[Bug]: model-fetch streaming response processing starves the event loop (SocketError, 30s+ freeze)"
+        "url": "https://github.com/openclaw/openclaw/issues/82462"
       },
       {
         "repo": "openclaw/openclaw",
