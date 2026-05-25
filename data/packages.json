@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "🔴 **Fresh release (<24h): the evidence pile is now doing its own incident review.** Session locks, gateway stalls, Windows startup, Codex isolation, and channel latency all showed up before the first 24-hour window closed.",
+      "verdictComment": "🔴 **24h backfill:** the evidence pile found more rooms to set on fire: gateway pre-warm stalls, Codex tool loss, Telegram spool/topic routing, Discord startup crashes, and session takeover/interruption regressions. Works on my machine has left the building.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -278,6 +278,102 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 86201,
+          "url": "https://github.com/openclaw/openclaw/issues/86201",
+          "title": "2026.5.22: slow responses / high CPU after upgrade on WSL2, with event-loop delay, timeout warnings, and aborted transport requests"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86241,
+          "url": "https://github.com/openclaw/openclaw/issues/86241",
+          "title": "[Bug]:[Bug] preserveGatewayHookRunner causes handler stacking + N-fold delivery after subagent hot-reload cycles (2026.5.22 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86380,
+          "url": "https://github.com/openclaw/openclaw/issues/86380",
+          "title": "2026.5.22更新后会话在第二轮输入时提示interrupted不再响应"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86383,
+          "url": "https://github.com/openclaw/openclaw/issues/86383",
+          "title": "Telegram isolated polling spool can be blocked by stale .processing claim after PID reuse"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86239,
+          "url": "https://github.com/openclaw/openclaw/issues/86239",
+          "title": "[Bug]: MissingAgentHarnessError on inbound dispatch under event-loop starvation — harness IS registered (2026.5.22, distinct root cause from #86227)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86212,
+          "url": "https://github.com/openclaw/openclaw/issues/86212",
+          "title": "🔴 2026.5.22 Regression: Provider Auth Pre-warm blocks event loop (310s), Gateway becomes unusable"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86262,
+          "url": "https://github.com/openclaw/openclaw/issues/86262",
+          "title": "Telegram forum topic responses routed to DM instead of group (channel=webchat instead of channel=telegram)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86314,
+          "url": "https://github.com/openclaw/openclaw/issues/86314",
+          "title": "[Bug] openclaw-weixin channel not registered in gateway runtime - invalid channels.start channel on WSL2"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86214,
+          "url": "https://github.com/openclaw/openclaw/issues/86214",
+          "title": "[Bug]: Codex app-server client closes mid-turn during image/tool requests with large logs_2.sqlite"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86328,
+          "url": "https://github.com/openclaw/openclaw/issues/86328",
+          "title": "[Bug] Discord /users/@me probe self-starves event loop on startup, crashes gateway (Windows, v2026.5.22)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86354,
+          "url": "https://github.com/openclaw/openclaw/issues/86354",
+          "title": "v2026.5.22: Codex native code mode disabled on Node.js-hosted gateways — exec/read/write/edit stripped from all isolated sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86370,
+          "url": "https://github.com/openclaw/openclaw/issues/86370",
+          "title": "[Bug]: EmbeddedAttemptSessionTakeoverError still recurs on 2026.5.22 (post-#84250) — fresh sessions, long/tool-heavy turns (follow-up to #85306)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86202,
+          "url": "https://github.com/openclaw/openclaw/issues/86202",
+          "title": "sessionKey silently overrides sessionTarget=isolated, causing cron jobs to collide with WebUI dashboard sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86194,
+          "url": "https://github.com/openclaw/openclaw/issues/86194",
+          "title": "[Bug]: openclaw doctor becomes very slow in 2026.5.22"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86300,
+          "url": "https://github.com/openclaw/openclaw/issues/86300",
+          "title": "Slack: download-file results can leak into auto-reply media and duplicate final text"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86186,
+          "url": "https://github.com/openclaw/openclaw/issues/86186",
+          "title": "[Bug]: openai-codex provider encrypted reasoning retry storm causes false 429 rate limits and multi-minute turn delays"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 85953,
           "url": "https://github.com/openclaw/openclaw/issues/85953",
           "title": "Bug: sessions_yield can leave parent session transcript lock held, causing subagent completion callback timeout"
@@ -539,6 +635,198 @@
           "number": 86143,
           "url": "https://github.com/openclaw/openclaw/issues/86143",
           "title": "[v2026.5.22] PM cron job fails: synthetic-auth.runtime.js does not export 'r'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86201,
+          "url": "https://github.com/openclaw/openclaw/issues/86201",
+          "title": "2026.5.22: slow responses / high CPU after upgrade on WSL2, with event-loop delay, timeout warnings, and aborted transport requests"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86241,
+          "url": "https://github.com/openclaw/openclaw/issues/86241",
+          "title": "[Bug]:[Bug] preserveGatewayHookRunner causes handler stacking + N-fold delivery after subagent hot-reload cycles (2026.5.22 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86380,
+          "url": "https://github.com/openclaw/openclaw/issues/86380",
+          "title": "2026.5.22更新后会话在第二轮输入时提示interrupted不再响应"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86383,
+          "url": "https://github.com/openclaw/openclaw/issues/86383",
+          "title": "Telegram isolated polling spool can be blocked by stale .processing claim after PID reuse"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86239,
+          "url": "https://github.com/openclaw/openclaw/issues/86239",
+          "title": "[Bug]: MissingAgentHarnessError on inbound dispatch under event-loop starvation — harness IS registered (2026.5.22, distinct root cause from #86227)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86212,
+          "url": "https://github.com/openclaw/openclaw/issues/86212",
+          "title": "🔴 2026.5.22 Regression: Provider Auth Pre-warm blocks event loop (310s), Gateway becomes unusable"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86262,
+          "url": "https://github.com/openclaw/openclaw/issues/86262",
+          "title": "Telegram forum topic responses routed to DM instead of group (channel=webchat instead of channel=telegram)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86314,
+          "url": "https://github.com/openclaw/openclaw/issues/86314",
+          "title": "[Bug] openclaw-weixin channel not registered in gateway runtime - invalid channels.start channel on WSL2"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86214,
+          "url": "https://github.com/openclaw/openclaw/issues/86214",
+          "title": "[Bug]: Codex app-server client closes mid-turn during image/tool requests with large logs_2.sqlite"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86328,
+          "url": "https://github.com/openclaw/openclaw/issues/86328",
+          "title": "[Bug] Discord /users/@me probe self-starves event loop on startup, crashes gateway (Windows, v2026.5.22)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86354,
+          "url": "https://github.com/openclaw/openclaw/issues/86354",
+          "title": "v2026.5.22: Codex native code mode disabled on Node.js-hosted gateways — exec/read/write/edit stripped from all isolated sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86370,
+          "url": "https://github.com/openclaw/openclaw/issues/86370",
+          "title": "[Bug]: EmbeddedAttemptSessionTakeoverError still recurs on 2026.5.22 (post-#84250) — fresh sessions, long/tool-heavy turns (follow-up to #85306)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86202,
+          "url": "https://github.com/openclaw/openclaw/issues/86202",
+          "title": "sessionKey silently overrides sessionTarget=isolated, causing cron jobs to collide with WebUI dashboard sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86194,
+          "url": "https://github.com/openclaw/openclaw/issues/86194",
+          "title": "[Bug]: openclaw doctor becomes very slow in 2026.5.22"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86300,
+          "url": "https://github.com/openclaw/openclaw/issues/86300",
+          "title": "Slack: download-file results can leak into auto-reply media and duplicate final text"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86186,
+          "url": "https://github.com/openclaw/openclaw/issues/86186",
+          "title": "[Bug]: openai-codex provider encrypted reasoning retry storm causes false 429 rate limits and multi-minute turn delays"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86201,
+          "url": "https://github.com/openclaw/openclaw/issues/86201",
+          "title": "2026.5.22: slow responses / high CPU after upgrade on WSL2, with event-loop delay, timeout warnings, and aborted transport requests"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86241,
+          "url": "https://github.com/openclaw/openclaw/issues/86241",
+          "title": "[Bug]:[Bug] preserveGatewayHookRunner causes handler stacking + N-fold delivery after subagent hot-reload cycles (2026.5.22 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86380,
+          "url": "https://github.com/openclaw/openclaw/issues/86380",
+          "title": "2026.5.22更新后会话在第二轮输入时提示interrupted不再响应"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86383,
+          "url": "https://github.com/openclaw/openclaw/issues/86383",
+          "title": "Telegram isolated polling spool can be blocked by stale .processing claim after PID reuse"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86239,
+          "url": "https://github.com/openclaw/openclaw/issues/86239",
+          "title": "[Bug]: MissingAgentHarnessError on inbound dispatch under event-loop starvation — harness IS registered (2026.5.22, distinct root cause from #86227)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86212,
+          "url": "https://github.com/openclaw/openclaw/issues/86212",
+          "title": "🔴 2026.5.22 Regression: Provider Auth Pre-warm blocks event loop (310s), Gateway becomes unusable"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86262,
+          "url": "https://github.com/openclaw/openclaw/issues/86262",
+          "title": "Telegram forum topic responses routed to DM instead of group (channel=webchat instead of channel=telegram)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86314,
+          "url": "https://github.com/openclaw/openclaw/issues/86314",
+          "title": "[Bug] openclaw-weixin channel not registered in gateway runtime - invalid channels.start channel on WSL2"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86214,
+          "url": "https://github.com/openclaw/openclaw/issues/86214",
+          "title": "[Bug]: Codex app-server client closes mid-turn during image/tool requests with large logs_2.sqlite"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86328,
+          "url": "https://github.com/openclaw/openclaw/issues/86328",
+          "title": "[Bug] Discord /users/@me probe self-starves event loop on startup, crashes gateway (Windows, v2026.5.22)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86354,
+          "url": "https://github.com/openclaw/openclaw/issues/86354",
+          "title": "v2026.5.22: Codex native code mode disabled on Node.js-hosted gateways — exec/read/write/edit stripped from all isolated sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86370,
+          "url": "https://github.com/openclaw/openclaw/issues/86370",
+          "title": "[Bug]: EmbeddedAttemptSessionTakeoverError still recurs on 2026.5.22 (post-#84250) — fresh sessions, long/tool-heavy turns (follow-up to #85306)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86202,
+          "url": "https://github.com/openclaw/openclaw/issues/86202",
+          "title": "sessionKey silently overrides sessionTarget=isolated, causing cron jobs to collide with WebUI dashboard sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86194,
+          "url": "https://github.com/openclaw/openclaw/issues/86194",
+          "title": "[Bug]: openclaw doctor becomes very slow in 2026.5.22"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86300,
+          "url": "https://github.com/openclaw/openclaw/issues/86300",
+          "title": "Slack: download-file results can leak into auto-reply media and duplicate final text"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86186,
+          "url": "https://github.com/openclaw/openclaw/issues/86186",
+          "title": "[Bug]: openai-codex provider encrypted reasoning retry storm causes false 429 rate limits and multi-minute turn delays"
         }
       ],
       "stabilityScore": {
@@ -547,19 +835,19 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 117,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "evidencePenalty": 169,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 117,
+          "evidencePenalty": 169,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
           "score": 0
         },
@@ -567,6 +855,7 @@
           "codex",
           "cron-runtime",
           "discord",
+          "doctor",
           "feishu",
           "gateway",
           "linux-runtime",
@@ -579,12 +868,14 @@
           "provider-integration",
           "runtime",
           "sessions-management",
+          "slack",
           "telegram",
           "tool",
           "ui",
           "voice",
           "web_fetch",
           "webchat",
+          "wechat",
           "windows-runtime"
         ],
         "evidence": [
@@ -1071,6 +1362,182 @@
             "severity": 3,
             "penalty": 3,
             "reason": "2026.5.22 PM cron job can fail because synthetic-auth.runtime.js does not export the expected symbol"
+          },
+          {
+            "issue": "openclaw/openclaw#86201",
+            "repo": "openclaw/openclaw",
+            "number": 86201,
+            "url": "https://github.com/openclaw/openclaw/issues/86201",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "WSL2 and Windows reports show high CPU/event-loop delay after upgrading to 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86241",
+            "repo": "openclaw/openclaw",
+            "number": 86241,
+            "url": "https://github.com/openclaw/openclaw/issues/86241",
+            "area": "plugin-system",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "preserveGatewayHookRunner stacks handlers after subagent hot-reload, causing N-fold delivery and session corruption on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86380",
+            "repo": "openclaw/openclaw",
+            "number": 86380,
+            "url": "https://github.com/openclaw/openclaw/issues/86380",
+            "area": "sessions-management",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "After 2026.5.22 upgrade, sessions can become interrupted/unresponsive on the second turn"
+          },
+          {
+            "issue": "openclaw/openclaw#86383",
+            "repo": "openclaw/openclaw",
+            "number": 86383,
+            "url": "https://github.com/openclaw/openclaw/issues/86383",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Telegram isolated polling spool can block on stale .processing claims after PID reuse on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86239",
+            "repo": "openclaw/openclaw",
+            "number": 86239,
+            "url": "https://github.com/openclaw/openclaw/issues/86239",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "MissingAgentHarnessError appears on inbound dispatch under event-loop starvation despite registered harness on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86212",
+            "repo": "openclaw/openclaw",
+            "number": 86212,
+            "url": "https://github.com/openclaw/openclaw/issues/86212",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Provider auth pre-warm blocks the gateway event loop for minutes after 2026.5.22 upgrade"
+          },
+          {
+            "issue": "openclaw/openclaw#86262",
+            "repo": "openclaw/openclaw",
+            "number": 86262,
+            "url": "https://github.com/openclaw/openclaw/issues/86262",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Telegram forum topic responses route to DM/webchat instead of the group topic on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86314",
+            "repo": "openclaw/openclaw",
+            "number": 86314,
+            "url": "https://github.com/openclaw/openclaw/issues/86314",
+            "area": "wechat",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "openclaw-weixin channel is not registered in gateway runtime on 2026.5.22 WSL2 install"
+          },
+          {
+            "issue": "openclaw/openclaw#86214",
+            "repo": "openclaw/openclaw",
+            "number": 86214,
+            "url": "https://github.com/openclaw/openclaw/issues/86214",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Codex app-server client can close mid-turn during image/tool requests with large logs_2.sqlite on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86328",
+            "repo": "openclaw/openclaw",
+            "number": 86328,
+            "url": "https://github.com/openclaw/openclaw/issues/86328",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Discord /users/@me startup probe can self-starve the event loop and crash the gateway on Windows v2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86354",
+            "repo": "openclaw/openclaw",
+            "number": 86354,
+            "url": "https://github.com/openclaw/openclaw/issues/86354",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex native code mode is disabled on node-hosted gateways, stripping exec/read/write/edit from isolated sessions on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86370",
+            "repo": "openclaw/openclaw",
+            "number": 86370,
+            "url": "https://github.com/openclaw/openclaw/issues/86370",
+            "area": "sessions-management",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "EmbeddedAttemptSessionTakeoverError still recurs on long/tool-heavy 2026.5.22 turns after the prior fix"
+          },
+          {
+            "issue": "openclaw/openclaw#86202",
+            "repo": "openclaw/openclaw",
+            "number": 86202,
+            "url": "https://github.com/openclaw/openclaw/issues/86202",
+            "area": "cron-runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "sessionKey override can make interval cron jobs collide with WebUI dashboard sessions on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86194",
+            "repo": "openclaw/openclaw",
+            "number": 86194,
+            "url": "https://github.com/openclaw/openclaw/issues/86194",
+            "area": "doctor",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "openclaw doctor startup can become CPU-bound and very slow on 2026.5.22 installs"
+          },
+          {
+            "issue": "openclaw/openclaw#86300",
+            "repo": "openclaw/openclaw",
+            "number": 86300,
+            "url": "https://github.com/openclaw/openclaw/issues/86300",
+            "area": "slack",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Slack download-file results can leak into auto-reply media and duplicate final text on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86186",
+            "repo": "openclaw/openclaw",
+            "number": 86186,
+            "url": "https://github.com/openclaw/openclaw/issues/86186",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "OpenAI Codex encrypted-reasoning retry storm can trigger false 429s and multi-minute delays on 2026.5.22"
           }
         ]
       },
