@@ -1548,7 +1548,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🔴 **Backfill:** late reports added more channel, voice, and cron-runtime damage. The score bucket stays in the basement; bring a flashlight.",
+    "verdictComment": "🔴 **Backfill:** Discord pre-dispatch delay and a DeepSeek cron timeout joined the existing pile. The score bucket remains in the basement; the flashlight now needs batteries.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1820,6 +1820,18 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 85552,
+        "url": "https://github.com/openclaw/openclaw/issues/85552",
+        "title": "[Regression 2026.5.20] Discord typing indicator severely delayed (20-30s) — session write lock contention"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86208,
+        "url": "https://github.com/openclaw/openclaw/issues/86208",
+        "title": "DeepSeek V4 Pro: model-call-started timeout on isolated cron sessions (OpenClaw 2026.5.20)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 85202,
         "url": "https://github.com/openclaw/openclaw/issues/85202",
         "title": "[Bug]: Linux headless node exec fails with spawn /bin/sh ENOENT despite connected nodes and existing /bin/sh"
@@ -2085,6 +2097,30 @@
         "number": 86178,
         "url": "https://github.com/openclaw/openclaw/issues/86178",
         "title": "[Bug]: Managed Memory Dreaming Promotion cron silently NO_REPLY since 2026-05-09 (jobs.json lastRun stays null)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85552,
+        "url": "https://github.com/openclaw/openclaw/issues/85552",
+        "title": "[Regression 2026.5.20] Discord typing indicator severely delayed (20-30s) — session write lock contention"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86208,
+        "url": "https://github.com/openclaw/openclaw/issues/86208",
+        "title": "DeepSeek V4 Pro: model-call-started timeout on isolated cron sessions (OpenClaw 2026.5.20)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 85552,
+        "url": "https://github.com/openclaw/openclaw/issues/85552",
+        "title": "[Regression 2026.5.20] Discord typing indicator severely delayed (20-30s) — session write lock contention"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 86208,
+        "url": "https://github.com/openclaw/openclaw/issues/86208",
+        "title": "DeepSeek V4 Pro: model-call-started timeout on isolated cron sessions (OpenClaw 2026.5.20)"
       }
     ],
     "stabilityScore": {
@@ -2093,14 +2129,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 123,
+      "evidencePenalty": 127,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 123,
+        "evidencePenalty": 127,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
@@ -2121,6 +2157,7 @@
         "matrix",
         "mcp",
         "memory-wiki",
+        "model-routing",
         "plugin-system",
         "runtime",
         "sessions-management",
@@ -2626,6 +2663,28 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Managed Memory Dreaming Promotion cron silently NO_REPLYs on 2026.5.20 with jobs.json lastRun staying null"
+        },
+        {
+          "issue": "openclaw/openclaw#85552",
+          "repo": "openclaw/openclaw",
+          "number": 85552,
+          "url": "https://github.com/openclaw/openclaw/issues/85552",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Discord typing indicator is delayed 20-30s before model dispatch on v2026.5.20 due session lock contention"
+        },
+        {
+          "issue": "openclaw/openclaw#86208",
+          "repo": "openclaw/openclaw",
+          "number": 86208,
+          "url": "https://github.com/openclaw/openclaw/issues/86208",
+          "area": "model-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "DeepSeek V4 Pro isolated cron sessions hit model-call-started timeout on OpenClaw 2026.5.20"
         }
       ]
     },
