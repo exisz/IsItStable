@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "🔴 More 2026.5.22 evidence surfaced after the 24h window. The score bucket stays in the basement; the fire alarm has started asking for overtime.",
+      "verdictComment": "🔴 New late-breaking 2026.5.22 evidence landed. The score bucket remains underground; ops should bring a hard hat, not a clipboard.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -626,6 +626,30 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 86752,
+          "url": "https://github.com/openclaw/openclaw/issues/86752",
+          "title": "[Bug]: 2026.5.22 Docker/WSL2 gateway event-loop starvation, 284s provider-auth prewarm, slow Telegram turn, and local RPC timeouts"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86780,
+          "url": "https://github.com/openclaw/openclaw/issues/86780",
+          "title": "[Bug]: `openclaw status --json` infinite statx loop — 100% CPU, never exits (2026.5.18 & 5.22)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86779,
+          "url": "https://github.com/openclaw/openclaw/issues/86779",
+          "title": "[Bug]: Gateway startup fails — mergeScopedSearchConfig injects shape that validator rejects (tools.web.search.<plugin> legacy)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86435,
+          "url": "https://github.com/openclaw/openclaw/issues/86435",
+          "title": "macOS launchd: plugin/config maintenance can leave Control UI in broken partial-reload state; restart may require doctor --fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 85953,
           "url": "https://github.com/openclaw/openclaw/issues/85953",
           "title": "Bug: sessions_yield can leave parent session transcript lock held, causing subagent completion callback timeout"
@@ -1238,255 +1262,27 @@
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 86519,
-          "url": "https://github.com/openclaw/openclaw/issues/86519",
-          "title": "[Bug]: Agent repeats identical replies 2-10x on Telegram after 5.20 update"
+          "number": 86752,
+          "url": "https://github.com/openclaw/openclaw/issues/86752",
+          "title": "[Bug]: 2026.5.22 Docker/WSL2 gateway event-loop starvation, 284s provider-auth prewarm, slow Telegram turn, and local RPC timeouts"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 86457,
-          "url": "https://github.com/openclaw/openclaw/issues/86457",
-          "title": "npm-shrinkwrap.json vendors vulnerable qs@6.14.2 (GHSA-q8mj-m7cp-5q26)"
+          "number": 86780,
+          "url": "https://github.com/openclaw/openclaw/issues/86780",
+          "title": "[Bug]: `openclaw status --json` infinite statx loop — 100% CPU, never exits (2026.5.18 & 5.22)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 86616,
-          "url": "https://github.com/openclaw/openclaw/issues/86616",
-          "title": "v2026.5.22 regression: nativeHook.invoke 'native hook relay not found' breaks Telegram voice flow + downgrade blocked by forward-incompat config"
+          "number": 86779,
+          "url": "https://github.com/openclaw/openclaw/issues/86779",
+          "title": "[Bug]: Gateway startup fails — mergeScopedSearchConfig injects shape that validator rejects (tools.web.search.<plugin> legacy)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 86390,
-          "url": "https://github.com/openclaw/openclaw/issues/86390",
-          "title": "Bug: WhatsApp messageReceived hook opt-in docs/schema/runtime mismatch"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86546,
-          "url": "https://github.com/openclaw/openclaw/issues/86546",
-          "title": "[Bug]: cli、regression"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86236,
-          "url": "https://github.com/openclaw/openclaw/issues/86236",
-          "title": "Cron isolated main with Codex runtime exposes only message tool while manual main exposes bash"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86447,
-          "url": "https://github.com/openclaw/openclaw/issues/86447",
-          "title": "Slack channel subagent completion wake fails with source_reply_delivery_mode_mismatch while Slack remains healthy"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86505,
-          "url": "https://github.com/openclaw/openclaw/issues/86505",
-          "title": "Gateway leaks transient sessions when target session transcript is missing during polling"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86198,
-          "url": "https://github.com/openclaw/openclaw/issues/86198",
-          "title": "Bun: Cannot find module './dist/warning-filter.js' — isDirectModuleNotFoundError does not match Bun error format"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 85246,
-          "url": "https://github.com/openclaw/openclaw/issues/85246",
-          "title": "UI Update button breaks Gateway when npm global + launchd (handoff deadlock)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 83958,
-          "url": "https://github.com/openclaw/openclaw/issues/83958",
-          "title": "macOS app node regresses in 2026.5.18: flaps online/offline and gateway invokes time out"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86339,
-          "url": "https://github.com/openclaw/openclaw/issues/86339",
-          "title": "WebChat main conversation context can disappear after restart/abort; transcript only recoverable from .jsonl.reset files"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86320,
-          "url": "https://github.com/openclaw/openclaw/issues/86320",
-          "title": "Gateway silently skips channel initialization on plugin/runtime mismatch or missing module files"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86545,
-          "url": "https://github.com/openclaw/openclaw/issues/86545",
-          "title": "[Bug]: Cron isolated jobs fail Discord delivery with \"SecretRefs not resolved against runtime snapshot\" after v2026.5.22"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 54877,
-          "url": "https://github.com/openclaw/openclaw/issues/54877",
-          "title": "[Bug]: doctor suggests incomplete sessions cleanup preview for missing transcripts"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86218,
-          "url": "https://github.com/openclaw/openclaw/issues/86218",
-          "title": "Git updater on stable channel checked out alpha tag instead of npm latest"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86597,
-          "url": "https://github.com/openclaw/openclaw/issues/86597",
-          "title": "[Bug]: WebChat model picker displays default model after switching sessions, even though model override is persisted"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86610,
-          "url": "https://github.com/openclaw/openclaw/issues/86610",
-          "title": "Gmail watcher should honor 429 retry-after and avoid repeated history/message fetch retries"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86387,
-          "url": "https://github.com/openclaw/openclaw/issues/86387",
-          "title": "[Bug]: QQ Bot group chat replies silently lost — delivery routes to webchat instead of QQ"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86599,
-          "url": "https://github.com/openclaw/openclaw/issues/86599",
-          "title": "[Bug]: Local model provider calls thread block gateway event loop on Windows beta; trivial infer run takes ~4 minutes"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86508,
-          "url": "https://github.com/openclaw/openclaw/issues/86508",
-          "title": "[Bug]: EmbeddedAttemptSessionTakeoverError during Discord runs: session file changed while embedded prompt lock was released"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86514,
-          "url": "https://github.com/openclaw/openclaw/issues/86514",
-          "title": "Per-turn plugin re-resolution: ~28–30s pre-model stall every turn on 2026.5.22 (~1.7M fs stats/turn)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86459,
-          "url": "https://github.com/openclaw/openclaw/issues/86459",
-          "title": "[Bug]: image_generate callbacks from failed isolated cron runs are routed to subsequent runs of the same job"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86594,
-          "url": "https://github.com/openclaw/openclaw/issues/86594",
-          "title": "[Bug]: parseIdentityMarkdown rejects avatar paths wrapped in markdown code spans (backticks)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86451,
-          "url": "https://github.com/openclaw/openclaw/issues/86451",
-          "title": "Bug: openclaw update creates duplicate cron entries — no deduplication check on re-creation"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86395,
-          "url": "https://github.com/openclaw/openclaw/issues/86395",
-          "title": "Discord progress draft is deleted after final error reply"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86223,
-          "url": "https://github.com/openclaw/openclaw/issues/86223",
-          "title": "[Bug]: `openclaw docs` broken — docs.openclaw.ai/mcp returns text/html instead of text/event-stream (SSE routing conflict)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86543,
-          "url": "https://github.com/openclaw/openclaw/issues/86543",
-          "title": "[Bug]:Gateway event-loop starvation on 2026.5.22 with symptom signature of closed #82773 / #82884, after both fixes shipped"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86190,
-          "url": "https://github.com/openclaw/openclaw/issues/86190",
-          "title": "[Bug]: Plugin skills (~/.openclaw/plugin-skills/) unreadable in sandbox — read fails \"Path escapes sandbox root\"; core-skill sync (#46257) does not cover plugin skills"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86548,
-          "url": "https://github.com/openclaw/openclaw/issues/86548",
-          "title": "[Bug]: (regression) with complete, stock extensions directory per-turn delay back up to 8+ seconds"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86308,
-          "url": "https://github.com/openclaw/openclaw/issues/86308",
-          "title": "Gateway `update.run` handoff: child `openclaw update` exits with uv_cwd ENOENT, LaunchAgent left in bootout state"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 84002,
-          "url": "https://github.com/openclaw/openclaw/issues/84002",
-          "title": "Slack continuation can lose prior plan context and Responses continuation fails with thinking_signature_invalid"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86579,
-          "url": "https://github.com/openclaw/openclaw/issues/86579",
-          "title": "gateway install --force overwrites NODE_EXTRA_CA_CERTS, breaking TLS trust on update (macOS)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86444,
-          "url": "https://github.com/openclaw/openclaw/issues/86444",
-          "title": "[Bug] Plugin Bridge processes fail to start - All plugins affected"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 77707,
-          "url": "https://github.com/openclaw/openclaw/issues/77707",
-          "title": "Bug: Short-term memory promotion never works — rehydration fails and recall thresholds are unreachable"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86498,
-          "url": "https://github.com/openclaw/openclaw/issues/86498",
-          "title": "[Bug]: Discord event-loop starvation causes 30s+ message latency on 2026.5.22 (macOS Intel, multi-agent setup)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86373,
-          "url": "https://github.com/openclaw/openclaw/issues/86373",
-          "title": "Fix OpenAI Codex OAuth routing for embedded compaction fallback"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86215,
-          "url": "https://github.com/openclaw/openclaw/issues/86215",
-          "title": "Codex OAuth refresh failures can wedge an agent for hours without clear alerting or aggressive profile rotation"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86406,
-          "url": "https://github.com/openclaw/openclaw/issues/86406",
-          "title": "[Bug]: Discord typing indicator lingers after tool-only visible reply is already posted"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86506,
-          "url": "https://github.com/openclaw/openclaw/issues/86506",
-          "title": "[BUG] Auth pre-warming blocks event loop for 60-90s, causing cascading timeouts"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86332,
-          "url": "https://github.com/openclaw/openclaw/issues/86332",
-          "title": "[Bug]: Discord DM pairing identity mismatch breaks PluralKit users; extractDiscordSessionKind regex missing \"direct\" peer kind"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 86420,
-          "url": "https://github.com/openclaw/openclaw/issues/86420",
-          "title": "doctor command hangs with no output in v2026.5.22 on Windows"
+          "number": 86435,
+          "url": "https://github.com/openclaw/openclaw/issues/86435",
+          "title": "macOS launchd: plugin/config maintenance can leave Control UI in broken partial-reload state; restart may require doctor --fix"
         }
       ],
       "stabilityScore": {
@@ -1495,19 +1291,19 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 288,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 304,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 288,
+          "evidencePenalty": 304,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
           "score": 0
         },
@@ -1538,6 +1334,7 @@
           "security",
           "sessions-management",
           "slack",
+          "status",
           "telegram",
           "tool",
           "ui",
@@ -2671,6 +2468,50 @@
             "severity": 3,
             "penalty": 3,
             "reason": "openclaw doctor hangs with no output on Windows Server 2022 running 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86752",
+            "repo": "openclaw/openclaw",
+            "number": 86752,
+            "url": "https://github.com/openclaw/openclaw/issues/86752",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Docker/WSL2 gateway event-loop starvation, 284s provider-auth prewarm, slow Telegram turn, and local RPC timeouts on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86780",
+            "repo": "openclaw/openclaw",
+            "number": 86780,
+            "url": "https://github.com/openclaw/openclaw/issues/86780",
+            "area": "status",
+            "type": "tool",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "openclaw status --json enters an infinite statx loop / 100% CPU on 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#86779",
+            "repo": "openclaw/openclaw",
+            "number": 86779,
+            "url": "https://github.com/openclaw/openclaw/issues/86779",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Gateway cold start fails on 2026.5.22 when legacy web-search plugin config is merged into a validator-rejected shape"
+          },
+          {
+            "issue": "openclaw/openclaw#86435",
+            "repo": "openclaw/openclaw",
+            "number": 86435,
+            "url": "https://github.com/openclaw/openclaw/issues/86435",
+            "area": "macos",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "macOS launchd plugin/config maintenance can leave Control UI in partial-reload state; doctor --fix may be needed"
           }
         ]
       },
