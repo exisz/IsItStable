@@ -10,35 +10,300 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "The 5.22 surface is loud: runtime locks, plugin hot-reload, Windows startup, and channel edges all found the 3am deploy button.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86241,
+          "url": "https://github.com/openclaw/openclaw/issues/86241",
+          "title": "[Bug]:[Bug] preserveGatewayHookRunner causes handler stacking + N-fold delivery after subagent hot-reload cycles (2026.5.22 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86845,
+          "url": "https://github.com/openclaw/openclaw/issues/86845",
+          "title": "EmbeddedAttemptSessionTakeoverError cluster on 2026.5.22 — 13 events / 7 jobs / 42h"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86117,
+          "url": "https://github.com/openclaw/openclaw/issues/86117",
+          "title": "[Bug] Gateway crashes with \"Unable to resolve plugin runtime module\" after upgrade to 2026.5.22"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86044,
+          "url": "https://github.com/openclaw/openclaw/issues/86044",
+          "title": "2026.5.22: CLI hangs on Windows — provider auth-state pre-warm blocks all CLI commands"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86752,
+          "url": "https://github.com/openclaw/openclaw/issues/86752",
+          "title": "[Bug]: 2026.5.22 Docker/WSL2 gateway event-loop starvation, 284s provider-auth prewarm, slow Telegram turn, and local RPC timeouts"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86093,
+          "url": "https://github.com/openclaw/openclaw/issues/86093",
+          "title": "bug: Pi session event queue self-wait can hang Gateway at tool calls"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86779,
+          "url": "https://github.com/openclaw/openclaw/issues/86779",
+          "title": "[Bug]: Gateway startup fails — mergeScopedSearchConfig injects shape that validator rejects (tools.web.search.<plugin> legacy)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86047,
+          "url": "https://github.com/openclaw/openclaw/issues/86047",
+          "title": "[Regression] OpenClaw 2026.5.22: Codex app-server / plugin approval stalls cause interrupted turns and tool-execution timeouts in Nextcloud Talk agent sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86007,
+          "url": "https://github.com/openclaw/openclaw/issues/86007",
+          "title": "[Bug]: Windows 2026.5.22 gateway install writes gateway.cmd as self-recursive wrapper"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86616,
+          "url": "https://github.com/openclaw/openclaw/issues/86616",
+          "title": "v2026.5.22 regression: nativeHook.invoke 'native hook relay not found' breaks Telegram voice flow + downgrade blocked by forward-incompat config"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86780,
+          "url": "https://github.com/openclaw/openclaw/issues/86780",
+          "title": "[Bug]: `openclaw status --json` infinite statx loop — 100% CPU, never exits (2026.5.18 & 5.22)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86241,
+          "url": "https://github.com/openclaw/openclaw/issues/86241",
+          "title": "[Bug]:[Bug] preserveGatewayHookRunner causes handler stacking + N-fold delivery after subagent hot-reload cycles (2026.5.22 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86845,
+          "url": "https://github.com/openclaw/openclaw/issues/86845",
+          "title": "EmbeddedAttemptSessionTakeoverError cluster on 2026.5.22 — 13 events / 7 jobs / 42h"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86117,
+          "url": "https://github.com/openclaw/openclaw/issues/86117",
+          "title": "[Bug] Gateway crashes with \"Unable to resolve plugin runtime module\" after upgrade to 2026.5.22"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86044,
+          "url": "https://github.com/openclaw/openclaw/issues/86044",
+          "title": "2026.5.22: CLI hangs on Windows — provider auth-state pre-warm blocks all CLI commands"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86752,
+          "url": "https://github.com/openclaw/openclaw/issues/86752",
+          "title": "[Bug]: 2026.5.22 Docker/WSL2 gateway event-loop starvation, 284s provider-auth prewarm, slow Telegram turn, and local RPC timeouts"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86093,
+          "url": "https://github.com/openclaw/openclaw/issues/86093",
+          "title": "bug: Pi session event queue self-wait can hang Gateway at tool calls"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86779,
+          "url": "https://github.com/openclaw/openclaw/issues/86779",
+          "title": "[Bug]: Gateway startup fails — mergeScopedSearchConfig injects shape that validator rejects (tools.web.search.<plugin> legacy)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86047,
+          "url": "https://github.com/openclaw/openclaw/issues/86047",
+          "title": "[Regression] OpenClaw 2026.5.22: Codex app-server / plugin approval stalls cause interrupted turns and tool-execution timeouts in Nextcloud Talk agent sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86007,
+          "url": "https://github.com/openclaw/openclaw/issues/86007",
+          "title": "[Bug]: Windows 2026.5.22 gateway install writes gateway.cmd as self-recursive wrapper"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86616,
+          "url": "https://github.com/openclaw/openclaw/issues/86616",
+          "title": "v2026.5.22 regression: nativeHook.invoke 'native hook relay not found' breaks Telegram voice flow + downgrade blocked by forward-incompat config"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 86780,
+          "url": "https://github.com/openclaw/openclaw/issues/86780",
+          "title": "[Bug]: `openclaw status --json` infinite statx loop — 100% CPU, never exits (2026.5.18 & 5.22)"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 86,
+        "score": 40,
         "verdict": "pending",
-        "votePenalty": 0,
-        "evidencePenalty": 0,
+        "votePenalty": 2,
+        "evidencePenalty": 44,
         "survivalDays": 2,
         "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
-          "votePenalty": 0,
+          "evidencePenalty": 44,
+          "votePenalty": 2,
           "survivalDays": 2,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 2,
           "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 86
+          "score": 40
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "plugin-system",
+          "cron",
+          "gateway",
+          "windows",
+          "telegram",
+          "voice",
+          "status",
+          "codex",
+          "model-routing"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#86241",
+            "repo": "openclaw/openclaw",
+            "number": 86241,
+            "url": "https://github.com/openclaw/openclaw/issues/86241",
+            "area": "plugin-system",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Hot-reload handler stacking causes duplicate delivery and session corruption"
+          },
+          {
+            "issue": "openclaw/openclaw#86845",
+            "repo": "openclaw/openclaw",
+            "number": 86845,
+            "url": "https://github.com/openclaw/openclaw/issues/86845",
+            "area": "cron",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "EmbeddedAttemptSessionTakeoverError cluster across cron jobs"
+          },
+          {
+            "issue": "openclaw/openclaw#86117",
+            "repo": "openclaw/openclaw",
+            "number": 86117,
+            "url": "https://github.com/openclaw/openclaw/issues/86117",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Gateway startup crash after 2026.5.22 upgrade with plugin runtime resolution failure"
+          },
+          {
+            "issue": "openclaw/openclaw#86044",
+            "repo": "openclaw/openclaw",
+            "number": 86044,
+            "url": "https://github.com/openclaw/openclaw/issues/86044",
+            "area": "windows",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Windows CLI commands hang or delay behind provider auth-state prewarm"
+          },
+          {
+            "issue": "openclaw/openclaw#86752",
+            "repo": "openclaw/openclaw",
+            "number": 86752,
+            "url": "https://github.com/openclaw/openclaw/issues/86752",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Docker/WSL2 event-loop starvation and local RPC timeouts"
+          },
+          {
+            "issue": "openclaw/openclaw#86093",
+            "repo": "openclaw/openclaw",
+            "number": 86093,
+            "url": "https://github.com/openclaw/openclaw/issues/86093",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Pi embedded session queue self-wait can hang tool-call boundary"
+          },
+          {
+            "issue": "openclaw/openclaw#86779",
+            "repo": "openclaw/openclaw",
+            "number": 86779,
+            "url": "https://github.com/openclaw/openclaw/issues/86779",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Fresh gateway startup fails on web-search legacy config shape"
+          },
+          {
+            "issue": "openclaw/openclaw#86047",
+            "repo": "openclaw/openclaw",
+            "number": 86047,
+            "url": "https://github.com/openclaw/openclaw/issues/86047",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex app-server approval stalls and tool-execution timeouts after upgrade"
+          },
+          {
+            "issue": "openclaw/openclaw#86007",
+            "repo": "openclaw/openclaw",
+            "number": 86007,
+            "url": "https://github.com/openclaw/openclaw/issues/86007",
+            "area": "windows",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Windows gateway install writes self-recursive gateway.cmd wrapper"
+          },
+          {
+            "issue": "openclaw/openclaw#86616",
+            "repo": "openclaw/openclaw",
+            "number": 86616,
+            "url": "https://github.com/openclaw/openclaw/issues/86616",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Telegram voice flow breaks with native hook relay not found"
+          },
+          {
+            "issue": "openclaw/openclaw#86780",
+            "repo": "openclaw/openclaw",
+            "number": 86780,
+            "url": "https://github.com/openclaw/openclaw/issues/86780",
+            "area": "status",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "openclaw status --json can spin in statx loop and never return"
+          }
+        ]
       },
       "thumbsUp": 0,
-      "thumbsDown": 0,
+      "thumbsDown": 1,
       "createdAt": "2026-05-24T03:20:32.592Z"
     }
   }
