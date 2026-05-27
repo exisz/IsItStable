@@ -10,32 +10,462 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "Early evidence pass (<24h): the release boots, but the runtime is already throwing enough gravel to wake up a 3am deploy room.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87320,
+          "url": "https://github.com/openclaw/openclaw/issues/87320",
+          "title": "\\`openclaw update\\` dry-run passes but apply fails with `ETARGET` when version not yet on npm registry"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87382,
+          "url": "https://github.com/openclaw/openclaw/issues/87382",
+          "title": "macOS app 2026.5.26 shows duplicate node approval prompts for already-paired node"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87395,
+          "url": "https://github.com/openclaw/openclaw/issues/87395",
+          "title": "Native hook relay intermittently becomes unavailable on 2026.5.26, blocking memory/filesystem tools"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87397,
+          "url": "https://github.com/openclaw/openclaw/issues/87397",
+          "title": "Stall detector aborts long tool-call chains that are actively making progress (2026.5.26)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87352,
+          "url": "https://github.com/openclaw/openclaw/issues/87352",
+          "title": "[Bug]: Skill Workshop autoCapture agent_end reviews time out and block hooks on routine sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87332,
+          "url": "https://github.com/openclaw/openclaw/issues/87332",
+          "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87387,
+          "url": "https://github.com/openclaw/openclaw/issues/87387",
+          "title": "[Bug]: Control UI webchat can leave false \"In progress\" / \"Stop\" state after completed response"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87359,
+          "url": "https://github.com/openclaw/openclaw/issues/87359",
+          "title": "[Bug]: GENERIC_EXTERNAL_RUN_FAILURE_TEXT delivered on success-path turn — model.completed.aborted=false + assistantTexts non-empty + messagingToolSentTexts empty (2026.5.26 / openai-codex / WhatsApp)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87302,
+          "url": "https://github.com/openclaw/openclaw/issues/87302",
+          "title": "[Bug]: Docker container broke after 2026.5.26 upgrae"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87321,
+          "url": "https://github.com/openclaw/openclaw/issues/87321",
+          "title": "WebChat replay drops user-visible sessions_yield messages stored only as tool results"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87392,
+          "url": "https://github.com/openclaw/openclaw/issues/87392",
+          "title": "Telegram message_tool_only replies bypass normal reply decorator, so /usage footer is not shown"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87217,
+          "url": "https://github.com/openclaw/openclaw/issues/87217",
+          "title": "Session transcript `file_lock_stale` persists on 2026.5.19 with no remaining lockfile or file holder"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87312,
+          "url": "https://github.com/openclaw/openclaw/issues/87312",
+          "title": "[Bug]: openclaw doctor reports \"Could not determine the installed Chrome version\" despite Chrome 148 installed at expected path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87368,
+          "url": "https://github.com/openclaw/openclaw/issues/87368",
+          "title": "ackReactionScope: \"all\" is silently overridden by isRoomEvent gate"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87326,
+          "url": "https://github.com/openclaw/openclaw/issues/87326",
+          "title": "Telegram streaming: intermediate text blocks between tool calls are silently lost (overwritten by final block)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87381,
+          "url": "https://github.com/openclaw/openclaw/issues/87381",
+          "title": "ACP runtime ignores per-agent model.primary override"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87329,
+          "url": "https://github.com/openclaw/openclaw/issues/87329",
+          "title": "Bug: Subagent announce-delivery echo messages inherit wrong provider/model metadata, causing persistent \"thinking blocks cannot be modified\" errors after gateway restart"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83184,
+          "url": "https://github.com/openclaw/openclaw/issues/83184",
+          "title": "[Bug]: Heartbeat-driven agent replies leave pendingFinalDelivery stuck, blocking subsequent heartbeats"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87320,
+          "url": "https://github.com/openclaw/openclaw/issues/87320",
+          "title": "\\`openclaw update\\` dry-run passes but apply fails with `ETARGET` when version not yet on npm registry"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87382,
+          "url": "https://github.com/openclaw/openclaw/issues/87382",
+          "title": "macOS app 2026.5.26 shows duplicate node approval prompts for already-paired node"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87395,
+          "url": "https://github.com/openclaw/openclaw/issues/87395",
+          "title": "Native hook relay intermittently becomes unavailable on 2026.5.26, blocking memory/filesystem tools"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87397,
+          "url": "https://github.com/openclaw/openclaw/issues/87397",
+          "title": "Stall detector aborts long tool-call chains that are actively making progress (2026.5.26)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87352,
+          "url": "https://github.com/openclaw/openclaw/issues/87352",
+          "title": "[Bug]: Skill Workshop autoCapture agent_end reviews time out and block hooks on routine sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87332,
+          "url": "https://github.com/openclaw/openclaw/issues/87332",
+          "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87387,
+          "url": "https://github.com/openclaw/openclaw/issues/87387",
+          "title": "[Bug]: Control UI webchat can leave false \"In progress\" / \"Stop\" state after completed response"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87359,
+          "url": "https://github.com/openclaw/openclaw/issues/87359",
+          "title": "[Bug]: GENERIC_EXTERNAL_RUN_FAILURE_TEXT delivered on success-path turn — model.completed.aborted=false + assistantTexts non-empty + messagingToolSentTexts empty (2026.5.26 / openai-codex / WhatsApp)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87302,
+          "url": "https://github.com/openclaw/openclaw/issues/87302",
+          "title": "[Bug]: Docker container broke after 2026.5.26 upgrae"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87321,
+          "url": "https://github.com/openclaw/openclaw/issues/87321",
+          "title": "WebChat replay drops user-visible sessions_yield messages stored only as tool results"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87392,
+          "url": "https://github.com/openclaw/openclaw/issues/87392",
+          "title": "Telegram message_tool_only replies bypass normal reply decorator, so /usage footer is not shown"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87217,
+          "url": "https://github.com/openclaw/openclaw/issues/87217",
+          "title": "Session transcript `file_lock_stale` persists on 2026.5.19 with no remaining lockfile or file holder"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87312,
+          "url": "https://github.com/openclaw/openclaw/issues/87312",
+          "title": "[Bug]: openclaw doctor reports \"Could not determine the installed Chrome version\" despite Chrome 148 installed at expected path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87368,
+          "url": "https://github.com/openclaw/openclaw/issues/87368",
+          "title": "ackReactionScope: \"all\" is silently overridden by isRoomEvent gate"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87326,
+          "url": "https://github.com/openclaw/openclaw/issues/87326",
+          "title": "Telegram streaming: intermediate text blocks between tool calls are silently lost (overwritten by final block)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87381,
+          "url": "https://github.com/openclaw/openclaw/issues/87381",
+          "title": "ACP runtime ignores per-agent model.primary override"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87329,
+          "url": "https://github.com/openclaw/openclaw/issues/87329",
+          "title": "Bug: Subagent announce-delivery echo messages inherit wrong provider/model metadata, causing persistent \"thinking blocks cannot be modified\" errors after gateway restart"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83184,
+          "url": "https://github.com/openclaw/openclaw/issues/83184",
+          "title": "[Bug]: Heartbeat-driven agent replies leave pendingFinalDelivery stuck, blocking subsequent heartbeats"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 36,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 44,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 44,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 36
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "upgrade",
+          "approval-boundary",
+          "tool-registration",
+          "runtime",
+          "plugin-tools",
+          "telegram",
+          "webchat",
+          "whatsapp",
+          "gateway",
+          "sessions-management",
+          "doctor",
+          "model-routing",
+          "heartbeat"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#87320",
+            "repo": "openclaw/openclaw",
+            "number": 87320,
+            "url": "https://github.com/openclaw/openclaw/issues/87320",
+            "area": "upgrade",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Update dry-run accepted v2026.5.26 while apply failed during npm propagation window"
+          },
+          {
+            "issue": "openclaw/openclaw#87382",
+            "repo": "openclaw/openclaw",
+            "number": 87382,
+            "url": "https://github.com/openclaw/openclaw/issues/87382",
+            "area": "approval-boundary",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "macOS app repeatedly showed duplicate node approval prompts for an already-paired node"
+          },
+          {
+            "issue": "openclaw/openclaw#87395",
+            "repo": "openclaw/openclaw",
+            "number": 87395,
+            "url": "https://github.com/openclaw/openclaw/issues/87395",
+            "area": "tool-registration",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Native hook relay intermittently unavailable, blocking memory/filesystem tools"
+          },
+          {
+            "issue": "openclaw/openclaw#87397",
+            "repo": "openclaw/openclaw",
+            "number": 87397,
+            "url": "https://github.com/openclaw/openclaw/issues/87397",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Stall detector aborts long tool-call chains that are still making progress"
+          },
+          {
+            "issue": "openclaw/openclaw#87352",
+            "repo": "openclaw/openclaw",
+            "number": 87352,
+            "url": "https://github.com/openclaw/openclaw/issues/87352",
+            "area": "plugin-tools",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Skill Workshop autoCapture agent_end reviews time out and block routine hooks"
+          },
+          {
+            "issue": "openclaw/openclaw#87332",
+            "repo": "openclaw/openclaw",
+            "number": 87332,
+            "url": "https://github.com/openclaw/openclaw/issues/87332",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Telegram plugin-state cache writes NULL expiries, hits live-row cap, and breaks migrations"
+          },
+          {
+            "issue": "openclaw/openclaw#87387",
+            "repo": "openclaw/openclaw",
+            "number": 87387,
+            "url": "https://github.com/openclaw/openclaw/issues/87387",
+            "area": "webchat",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Control UI webchat can leave false In progress / Stop state after completed response"
+          },
+          {
+            "issue": "openclaw/openclaw#87359",
+            "repo": "openclaw/openclaw",
+            "number": 87359,
+            "url": "https://github.com/openclaw/openclaw/issues/87359",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WhatsApp success-path turn can receive generic external-run failure text"
+          },
+          {
+            "issue": "openclaw/openclaw#87302",
+            "repo": "openclaw/openclaw",
+            "number": 87302,
+            "url": "https://github.com/openclaw/openclaw/issues/87302",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Docker upgrade could fail every message dispatch due to missing HEARTBEAT.md runtime template"
+          },
+          {
+            "issue": "openclaw/openclaw#87321",
+            "repo": "openclaw/openclaw",
+            "number": 87321,
+            "url": "https://github.com/openclaw/openclaw/issues/87321",
+            "area": "webchat",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat replay drops user-visible sessions_yield messages stored only as tool results"
+          },
+          {
+            "issue": "openclaw/openclaw#87392",
+            "repo": "openclaw/openclaw",
+            "number": 87392,
+            "url": "https://github.com/openclaw/openclaw/issues/87392",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram message_tool_only replies bypass normal reply decorator and omit usage footer"
+          },
+          {
+            "issue": "openclaw/openclaw#87217",
+            "repo": "openclaw/openclaw",
+            "number": 87217,
+            "url": "https://github.com/openclaw/openclaw/issues/87217",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Fresh v2026.5.26 evidence of session transcript file_lock_stale / lock takeover failures"
+          },
+          {
+            "issue": "openclaw/openclaw#87312",
+            "repo": "openclaw/openclaw",
+            "number": 87312,
+            "url": "https://github.com/openclaw/openclaw/issues/87312",
+            "area": "doctor",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Doctor reports Chrome version unavailable despite Chrome installed at expected path"
+          },
+          {
+            "issue": "openclaw/openclaw#87368",
+            "repo": "openclaw/openclaw",
+            "number": 87368,
+            "url": "https://github.com/openclaw/openclaw/issues/87368",
+            "area": "runtime",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "ackReactionScope all is silently overridden by room-event gate"
+          },
+          {
+            "issue": "openclaw/openclaw#87326",
+            "repo": "openclaw/openclaw",
+            "number": 87326,
+            "url": "https://github.com/openclaw/openclaw/issues/87326",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram streaming intermediate text blocks between tool calls are silently lost"
+          },
+          {
+            "issue": "openclaw/openclaw#87381",
+            "repo": "openclaw/openclaw",
+            "number": 87381,
+            "url": "https://github.com/openclaw/openclaw/issues/87381",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "ACP runtime ignores per-agent model.primary override"
+          },
+          {
+            "issue": "openclaw/openclaw#87329",
+            "repo": "openclaw/openclaw",
+            "number": 87329,
+            "url": "https://github.com/openclaw/openclaw/issues/87329",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Subagent announce-delivery echoes can poison provider/model metadata after restart"
+          },
+          {
+            "issue": "openclaw/openclaw#83184",
+            "repo": "openclaw/openclaw",
+            "number": 83184,
+            "url": "https://github.com/openclaw/openclaw/issues/83184",
+            "area": "heartbeat",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Heartbeat pendingFinalDelivery bug confirmed still live on v2026.5.26"
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
