@@ -10,32 +10,858 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "Fresh release, already loud: runtime and channel regressions are forming a small 3am deploy support group.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87650,
+          "url": "https://github.com/openclaw/openclaw/issues/87650",
+          "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87725,
+          "url": "https://github.com/openclaw/openclaw/issues/87725",
+          "title": "Codex missing-terminal fallback leaks into Discord channel on 2026.5.27 despite #87079"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87744,
+          "url": "https://github.com/openclaw/openclaw/issues/87744",
+          "title": "[Bug]: Codex-backed Telegram turns repeatedly time out waiting for turn/completed on 2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87711,
+          "url": "https://github.com/openclaw/openclaw/issues/87711",
+          "title": "[Bug]: Empty assistant delivery (footer-only, \"— out\" usage) on first turn after /new on Telegram-routed topic lane — 2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87646,
+          "url": "https://github.com/openclaw/openclaw/issues/87646",
+          "title": "【BUG】(feishu): cannot dispatch messages after v2026.5.27 upgrade — TypeError: read property 'run' of undefined"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87692,
+          "url": "https://github.com/openclaw/openclaw/issues/87692",
+          "title": "[Bug]: GitHub Copilot anthropic-messages transport silently hangs ~365s in isolated cron sessions (2026.5.27)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87756,
+          "url": "https://github.com/openclaw/openclaw/issues/87756",
+          "title": "[Bug]: Regression: prompt-launched Lobster workflow hangs on nested /tools/invoke, while curl-launched workflow works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87436,
+          "url": "https://github.com/openclaw/openclaw/issues/87436",
+          "title": "Codex harness runs recreate legacy openai-codex session route state after doctor --fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87395,
+          "url": "https://github.com/openclaw/openclaw/issues/87395",
+          "title": "Native hook relay intermittently becomes unavailable on 2026.5.26, blocking memory/filesystem tools"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87679,
+          "url": "https://github.com/openclaw/openclaw/issues/87679",
+          "title": "Native hook relay unavailable blocks post-image Codex shell/file operations on 2026.5.26"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87510,
+          "url": "https://github.com/openclaw/openclaw/issues/87510",
+          "title": "[Bug]: Codex PreToolUse hook fails with 'Native hook relay unavailable' intermittently"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87736,
+          "url": "https://github.com/openclaw/openclaw/issues/87736",
+          "title": "Regression: preflight compaction still surfaces missing Codex thread failure after #86602"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87721,
+          "url": "https://github.com/openclaw/openclaw/issues/87721",
+          "title": "[Bug]: Codex plugin binding slient replies when attaching an existing Codex CLI session on a paired node"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87740,
+          "url": "https://github.com/openclaw/openclaw/issues/87740",
+          "title": "Bug: Explicit thinkingLevel session override permanently reset to 'off' after each agent turn"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87699,
+          "url": "https://github.com/openclaw/openclaw/issues/87699",
+          "title": "[Bug]: [BUG] UI shows agent \"running\" after conversation ends — requires manual page refresh every time"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87649,
+          "url": "https://github.com/openclaw/openclaw/issues/87649",
+          "title": "WebChat \"In Progress\" indicator persists after reply is complete"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87728,
+          "url": "https://github.com/openclaw/openclaw/issues/87728",
+          "title": "WebChat duplicate messages after WebSocket reconnect"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87730,
+          "url": "https://github.com/openclaw/openclaw/issues/87730",
+          "title": "[Bug]: 2026.5.27 Refresh still says stale"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87732,
+          "url": "https://github.com/openclaw/openclaw/issues/87732",
+          "title": "[Bug]: 2026.5.27 npm install calls itself pnpm"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87641,
+          "url": "https://github.com/openclaw/openclaw/issues/87641",
+          "title": "`opencode-go/kimi-k2.6`: every multi-turn task rejected with opaque 400 \"Provider returned error\" (reason=format), rotates to fallback (2026.5.26+5.27)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87766,
+          "url": "https://github.com/openclaw/openclaw/issues/87766",
+          "title": "[Bug] Kimi web_search always returns \"ungrounded\" error — Moonshot API no longer returns search_results field[Bug]:"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87687,
+          "url": "https://github.com/openclaw/openclaw/issues/87687",
+          "title": "vllm openai-completions streaming parser drops tool_calls when reasoning_content streams first for gpt-oss-120b at large systemPrompt"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87689,
+          "url": "https://github.com/openclaw/openclaw/issues/87689",
+          "title": "Dreaming needs supported guard to disable session transcript ingestion during QMD migrations"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87708,
+          "url": "https://github.com/openclaw/openclaw/issues/87708",
+          "title": "[Bug]: message-tool Telegram replies skip auto=inbound TTS because inboundAudio is not passed"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87307,
+          "url": "https://github.com/openclaw/openclaw/issues/87307",
+          "title": "Matrix thread replies sent as normal replies on 2026.5.22; /status and /model silent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87391,
+          "url": "https://github.com/openclaw/openclaw/issues/87391",
+          "title": "Bug: 回覆 routing 到錯誤 channel (Telegram miss, Control UI only)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82002,
+          "url": "https://github.com/openclaw/openclaw/issues/82002",
+          "title": "Telegram group replies to bot messages can lose reply context under group allowlist"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87731,
+          "url": "https://github.com/openclaw/openclaw/issues/87731",
+          "title": "Discord streaming (tool progress icons) works in DMs but not guild channels"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87332,
+          "url": "https://github.com/openclaw/openclaw/issues/87332",
+          "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87357,
+          "url": "https://github.com/openclaw/openclaw/issues/87357",
+          "title": "Telegram plugin-state hits per-plugin cap and locks out new writes (v2026.5.26)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87045,
+          "url": "https://github.com/openclaw/openclaw/issues/87045",
+          "title": "appendSystemContext / prependSystemContext concatenation has no boundary marker, causing model to attribute injected rules to the last workspace file"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 72574,
+          "url": "https://github.com/openclaw/openclaw/issues/72574",
+          "title": "`btw spawn` with invalid bearer token triggers gateway/session disconnect"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79329,
+          "url": "https://github.com/openclaw/openclaw/issues/79329",
+          "title": "Cron model preflight skips entire run when local primary is unreachable, ignoring configured cloud fallbacks [AI]"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84376,
+          "url": "https://github.com/openclaw/openclaw/issues/84376",
+          "title": "[Bug]: secrets audit flags codex \"codex-app-server\" auth marker as PLAINTEXT_FOUND (isNonSecretApiKeyMarker should include it)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87690,
+          "url": "https://github.com/openclaw/openclaw/issues/87690",
+          "title": "secrets audit counts codex-app-server auth marker as plaintext"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87650,
+          "url": "https://github.com/openclaw/openclaw/issues/87650",
+          "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87725,
+          "url": "https://github.com/openclaw/openclaw/issues/87725",
+          "title": "Codex missing-terminal fallback leaks into Discord channel on 2026.5.27 despite #87079"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87744,
+          "url": "https://github.com/openclaw/openclaw/issues/87744",
+          "title": "[Bug]: Codex-backed Telegram turns repeatedly time out waiting for turn/completed on 2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87711,
+          "url": "https://github.com/openclaw/openclaw/issues/87711",
+          "title": "[Bug]: Empty assistant delivery (footer-only, \"— out\" usage) on first turn after /new on Telegram-routed topic lane — 2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87646,
+          "url": "https://github.com/openclaw/openclaw/issues/87646",
+          "title": "【BUG】(feishu): cannot dispatch messages after v2026.5.27 upgrade — TypeError: read property 'run' of undefined"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87692,
+          "url": "https://github.com/openclaw/openclaw/issues/87692",
+          "title": "[Bug]: GitHub Copilot anthropic-messages transport silently hangs ~365s in isolated cron sessions (2026.5.27)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87756,
+          "url": "https://github.com/openclaw/openclaw/issues/87756",
+          "title": "[Bug]: Regression: prompt-launched Lobster workflow hangs on nested /tools/invoke, while curl-launched workflow works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87436,
+          "url": "https://github.com/openclaw/openclaw/issues/87436",
+          "title": "Codex harness runs recreate legacy openai-codex session route state after doctor --fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87395,
+          "url": "https://github.com/openclaw/openclaw/issues/87395",
+          "title": "Native hook relay intermittently becomes unavailable on 2026.5.26, blocking memory/filesystem tools"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87679,
+          "url": "https://github.com/openclaw/openclaw/issues/87679",
+          "title": "Native hook relay unavailable blocks post-image Codex shell/file operations on 2026.5.26"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87510,
+          "url": "https://github.com/openclaw/openclaw/issues/87510",
+          "title": "[Bug]: Codex PreToolUse hook fails with 'Native hook relay unavailable' intermittently"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87736,
+          "url": "https://github.com/openclaw/openclaw/issues/87736",
+          "title": "Regression: preflight compaction still surfaces missing Codex thread failure after #86602"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87721,
+          "url": "https://github.com/openclaw/openclaw/issues/87721",
+          "title": "[Bug]: Codex plugin binding slient replies when attaching an existing Codex CLI session on a paired node"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87740,
+          "url": "https://github.com/openclaw/openclaw/issues/87740",
+          "title": "Bug: Explicit thinkingLevel session override permanently reset to 'off' after each agent turn"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87699,
+          "url": "https://github.com/openclaw/openclaw/issues/87699",
+          "title": "[Bug]: [BUG] UI shows agent \"running\" after conversation ends — requires manual page refresh every time"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87649,
+          "url": "https://github.com/openclaw/openclaw/issues/87649",
+          "title": "WebChat \"In Progress\" indicator persists after reply is complete"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87728,
+          "url": "https://github.com/openclaw/openclaw/issues/87728",
+          "title": "WebChat duplicate messages after WebSocket reconnect"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87730,
+          "url": "https://github.com/openclaw/openclaw/issues/87730",
+          "title": "[Bug]: 2026.5.27 Refresh still says stale"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87732,
+          "url": "https://github.com/openclaw/openclaw/issues/87732",
+          "title": "[Bug]: 2026.5.27 npm install calls itself pnpm"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87641,
+          "url": "https://github.com/openclaw/openclaw/issues/87641",
+          "title": "`opencode-go/kimi-k2.6`: every multi-turn task rejected with opaque 400 \"Provider returned error\" (reason=format), rotates to fallback (2026.5.26+5.27)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87766,
+          "url": "https://github.com/openclaw/openclaw/issues/87766",
+          "title": "[Bug] Kimi web_search always returns \"ungrounded\" error — Moonshot API no longer returns search_results field[Bug]:"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87687,
+          "url": "https://github.com/openclaw/openclaw/issues/87687",
+          "title": "vllm openai-completions streaming parser drops tool_calls when reasoning_content streams first for gpt-oss-120b at large systemPrompt"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87689,
+          "url": "https://github.com/openclaw/openclaw/issues/87689",
+          "title": "Dreaming needs supported guard to disable session transcript ingestion during QMD migrations"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87708,
+          "url": "https://github.com/openclaw/openclaw/issues/87708",
+          "title": "[Bug]: message-tool Telegram replies skip auto=inbound TTS because inboundAudio is not passed"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87307,
+          "url": "https://github.com/openclaw/openclaw/issues/87307",
+          "title": "Matrix thread replies sent as normal replies on 2026.5.22; /status and /model silent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87391,
+          "url": "https://github.com/openclaw/openclaw/issues/87391",
+          "title": "Bug: 回覆 routing 到錯誤 channel (Telegram miss, Control UI only)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 82002,
+          "url": "https://github.com/openclaw/openclaw/issues/82002",
+          "title": "Telegram group replies to bot messages can lose reply context under group allowlist"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87731,
+          "url": "https://github.com/openclaw/openclaw/issues/87731",
+          "title": "Discord streaming (tool progress icons) works in DMs but not guild channels"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87332,
+          "url": "https://github.com/openclaw/openclaw/issues/87332",
+          "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87357,
+          "url": "https://github.com/openclaw/openclaw/issues/87357",
+          "title": "Telegram plugin-state hits per-plugin cap and locks out new writes (v2026.5.26)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87045,
+          "url": "https://github.com/openclaw/openclaw/issues/87045",
+          "title": "appendSystemContext / prependSystemContext concatenation has no boundary marker, causing model to attribute injected rules to the last workspace file"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 72574,
+          "url": "https://github.com/openclaw/openclaw/issues/72574",
+          "title": "`btw spawn` with invalid bearer token triggers gateway/session disconnect"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79329,
+          "url": "https://github.com/openclaw/openclaw/issues/79329",
+          "title": "Cron model preflight skips entire run when local primary is unreachable, ignoring configured cloud fallbacks [AI]"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84376,
+          "url": "https://github.com/openclaw/openclaw/issues/84376",
+          "title": "[Bug]: secrets audit flags codex \"codex-app-server\" auth marker as PLAINTEXT_FOUND (isNonSecretApiKeyMarker should include it)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87690,
+          "url": "https://github.com/openclaw/openclaw/issues/87690",
+          "title": "secrets audit counts codex-app-server auth marker as plaintext"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 104,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 104,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 0
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "codex",
+          "compaction",
+          "discord",
+          "doctor",
+          "feishu",
+          "gateway",
+          "matrix",
+          "memory",
+          "model-routing",
+          "provider-integration",
+          "runtime",
+          "security",
+          "telegram",
+          "tool",
+          "ui",
+          "update-system",
+          "voice",
+          "webchat"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#87650",
+            "repo": "openclaw/openclaw",
+            "number": 87650,
+            "url": "https://github.com/openclaw/openclaw/issues/87650",
+            "area": "doctor/model-routing",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Onboard/doctor --fix did not recover Codex provider/runtime mismatch after update"
+          },
+          {
+            "issue": "openclaw/openclaw#87725",
+            "repo": "openclaw/openclaw",
+            "number": 87725,
+            "url": "https://github.com/openclaw/openclaw/issues/87725",
+            "area": "codex-discord",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Codex missing-terminal fallback leaks into Discord channel despite prior fix"
+          },
+          {
+            "issue": "openclaw/openclaw#87744",
+            "repo": "openclaw/openclaw",
+            "number": 87744,
+            "url": "https://github.com/openclaw/openclaw/issues/87744",
+            "area": "telegram-codex",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex-backed Telegram turns repeatedly time out waiting for completion"
+          },
+          {
+            "issue": "openclaw/openclaw#87711",
+            "repo": "openclaw/openclaw",
+            "number": 87711,
+            "url": "https://github.com/openclaw/openclaw/issues/87711",
+            "area": "telegram-delivery",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "First turn after /new can deliver footer-only empty assistant output"
+          },
+          {
+            "issue": "openclaw/openclaw#87646",
+            "repo": "openclaw/openclaw",
+            "number": 87646,
+            "url": "https://github.com/openclaw/openclaw/issues/87646",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Feishu dispatch broken after upgrade with run undefined TypeError"
+          },
+          {
+            "issue": "openclaw/openclaw#87692",
+            "repo": "openclaw/openclaw",
+            "number": 87692,
+            "url": "https://github.com/openclaw/openclaw/issues/87692",
+            "area": "cron-copilot",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "GitHub Copilot anthropic transport hangs for minutes in isolated cron sessions"
+          },
+          {
+            "issue": "openclaw/openclaw#87756",
+            "repo": "openclaw/openclaw",
+            "number": 87756,
+            "url": "https://github.com/openclaw/openclaw/issues/87756",
+            "area": "workflow-runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Prompt-launched Lobster workflow hangs on nested tool invocation"
+          },
+          {
+            "issue": "openclaw/openclaw#87436",
+            "repo": "openclaw/openclaw",
+            "number": 87436,
+            "url": "https://github.com/openclaw/openclaw/issues/87436",
+            "area": "codex-session-route",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Published package still recreates stale internal openai-codex session route state"
+          },
+          {
+            "issue": "openclaw/openclaw#87395",
+            "repo": "openclaw/openclaw",
+            "number": 87395,
+            "url": "https://github.com/openclaw/openclaw/issues/87395",
+            "area": "native-hook-relay",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Native hook relay intermittently unavailable, blocking memory/filesystem tools"
+          },
+          {
+            "issue": "openclaw/openclaw#87679",
+            "repo": "openclaw/openclaw",
+            "number": 87679,
+            "url": "https://github.com/openclaw/openclaw/issues/87679",
+            "area": "native-hook-relay",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Native hook relay unavailable blocks post-image Codex shell/file operations"
+          },
+          {
+            "issue": "openclaw/openclaw#87510",
+            "repo": "openclaw/openclaw",
+            "number": 87510,
+            "url": "https://github.com/openclaw/openclaw/issues/87510",
+            "area": "native-hook-relay",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Codex PreToolUse hook fails with Native hook relay unavailable"
+          },
+          {
+            "issue": "openclaw/openclaw#87736",
+            "repo": "openclaw/openclaw",
+            "number": 87736,
+            "url": "https://github.com/openclaw/openclaw/issues/87736",
+            "area": "compaction",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Preflight compaction still surfaces missing Codex thread failure after repair"
+          },
+          {
+            "issue": "openclaw/openclaw#87721",
+            "repo": "openclaw/openclaw",
+            "number": 87721,
+            "url": "https://github.com/openclaw/openclaw/issues/87721",
+            "area": "codex-plugin",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Codex plugin binding silently replies when attaching an existing CLI session on paired node"
+          },
+          {
+            "issue": "openclaw/openclaw#87740",
+            "repo": "openclaw/openclaw",
+            "number": 87740,
+            "url": "https://github.com/openclaw/openclaw/issues/87740",
+            "area": "thinking-level",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Explicit thinkingLevel session override is reset to off after each turn"
+          },
+          {
+            "issue": "openclaw/openclaw#87699",
+            "repo": "openclaw/openclaw",
+            "number": 87699,
+            "url": "https://github.com/openclaw/openclaw/issues/87699",
+            "area": "webchat-ui",
+            "type": "other",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "UI remains stuck in running state after conversation ends until refresh"
+          },
+          {
+            "issue": "openclaw/openclaw#87649",
+            "repo": "openclaw/openclaw",
+            "number": 87649,
+            "url": "https://github.com/openclaw/openclaw/issues/87649",
+            "area": "webchat-ui",
+            "type": "other",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat In Progress indicator persists after reply completion"
+          },
+          {
+            "issue": "openclaw/openclaw#87728",
+            "repo": "openclaw/openclaw",
+            "number": 87728,
+            "url": "https://github.com/openclaw/openclaw/issues/87728",
+            "area": "webchat",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat duplicate messages after WebSocket reconnect"
+          },
+          {
+            "issue": "openclaw/openclaw#87730",
+            "repo": "openclaw/openclaw",
+            "number": 87730,
+            "url": "https://github.com/openclaw/openclaw/issues/87730",
+            "area": "update-system",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Refresh still reports stale on 2026.5.27"
+          },
+          {
+            "issue": "openclaw/openclaw#87732",
+            "repo": "openclaw/openclaw",
+            "number": 87732,
+            "url": "https://github.com/openclaw/openclaw/issues/87732",
+            "area": "update-system",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "npm install path identifies itself as pnpm"
+          },
+          {
+            "issue": "openclaw/openclaw#87641",
+            "repo": "openclaw/openclaw",
+            "number": 87641,
+            "url": "https://github.com/openclaw/openclaw/issues/87641",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Kimi K2.6 multi-turn tasks rejected with opaque provider format errors"
+          },
+          {
+            "issue": "openclaw/openclaw#87766",
+            "repo": "openclaw/openclaw",
+            "number": 87766,
+            "url": "https://github.com/openclaw/openclaw/issues/87766",
+            "area": "provider-integration",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Kimi web_search always returns ungrounded after API search_results change"
+          },
+          {
+            "issue": "openclaw/openclaw#87687",
+            "repo": "openclaw/openclaw",
+            "number": 87687,
+            "url": "https://github.com/openclaw/openclaw/issues/87687",
+            "area": "local-model",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "vLLM streaming parser drops tool_calls when reasoning_content streams first"
+          },
+          {
+            "issue": "openclaw/openclaw#87689",
+            "repo": "openclaw/openclaw",
+            "number": 87689,
+            "url": "https://github.com/openclaw/openclaw/issues/87689",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Dreaming lacks supported guard to prevent session transcript ingestion during migrations"
+          },
+          {
+            "issue": "openclaw/openclaw#87708",
+            "repo": "openclaw/openclaw",
+            "number": 87708,
+            "url": "https://github.com/openclaw/openclaw/issues/87708",
+            "area": "telegram-tts",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram auto inbound TTS skipped because inboundAudio is not passed"
+          },
+          {
+            "issue": "openclaw/openclaw#87307",
+            "repo": "openclaw/openclaw",
+            "number": 87307,
+            "url": "https://github.com/openclaw/openclaw/issues/87307",
+            "area": "matrix",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Matrix thread replies sent as normal replies; status/model silent"
+          },
+          {
+            "issue": "openclaw/openclaw#87391",
+            "repo": "openclaw/openclaw",
+            "number": 87391,
+            "url": "https://github.com/openclaw/openclaw/issues/87391",
+            "area": "telegram-routing",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Reply routing can miss Telegram and land in Control UI only"
+          },
+          {
+            "issue": "openclaw/openclaw#82002",
+            "repo": "openclaw/openclaw",
+            "number": 82002,
+            "url": "https://github.com/openclaw/openclaw/issues/82002",
+            "area": "telegram-groups",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Telegram group replies to bot messages can lose reply context under allowlist"
+          },
+          {
+            "issue": "openclaw/openclaw#87731",
+            "repo": "openclaw/openclaw",
+            "number": 87731,
+            "url": "https://github.com/openclaw/openclaw/issues/87731",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Discord streaming tool progress icons work in DMs but not guild channels"
+          },
+          {
+            "issue": "openclaw/openclaw#87332",
+            "repo": "openclaw/openclaw",
+            "number": 87332,
+            "url": "https://github.com/openclaw/openclaw/issues/87332",
+            "area": "telegram-plugin-state",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Telegram plugin-state cache hits hard cap and migrations fail"
+          },
+          {
+            "issue": "openclaw/openclaw#87357",
+            "repo": "openclaw/openclaw",
+            "number": 87357,
+            "url": "https://github.com/openclaw/openclaw/issues/87357",
+            "area": "telegram-plugin-state",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Telegram plugin-state per-plugin cap locks out new writes"
+          },
+          {
+            "issue": "openclaw/openclaw#87045",
+            "repo": "openclaw/openclaw",
+            "number": 87045,
+            "url": "https://github.com/openclaw/openclaw/issues/87045",
+            "area": "context-injection",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "append/prepend system context lacks boundary marker and can misattribute injected rules"
+          },
+          {
+            "issue": "openclaw/openclaw#72574",
+            "repo": "openclaw/openclaw",
+            "number": 72574,
+            "url": "https://github.com/openclaw/openclaw/issues/72574",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Invalid bearer token can trigger gateway/session disconnect"
+          },
+          {
+            "issue": "openclaw/openclaw#79329",
+            "repo": "openclaw/openclaw",
+            "number": 79329,
+            "url": "https://github.com/openclaw/openclaw/issues/79329",
+            "area": "cron-model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Cron model preflight skips entire run when local primary is unreachable"
+          },
+          {
+            "issue": "openclaw/openclaw#84376",
+            "repo": "openclaw/openclaw",
+            "number": 84376,
+            "url": "https://github.com/openclaw/openclaw/issues/84376",
+            "area": "security-audit",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Secrets audit false-positive flags Codex app-server auth marker"
+          },
+          {
+            "issue": "openclaw/openclaw#87690",
+            "repo": "openclaw/openclaw",
+            "number": 87690,
+            "url": "https://github.com/openclaw/openclaw/issues/87690",
+            "area": "security-audit",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Secrets audit counts codex-app-server auth marker as plaintext"
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
