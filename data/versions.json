@@ -4638,253 +4638,6 @@
     "createdAt": "2026-05-05T08:11:28.661Z"
   },
   {
-    "issueNumber": 97,
-    "issueUrl": "https://github.com/exisz/IsItStable/issues/97",
-    "version": "2026.5.3-1",
-    "packageName": "openclaw",
-    "packageSlug": "openclaw",
-    "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
-    "stabilityScore": {
-      "schemaVersion": "isitstable:v1",
-      "baseScore": 80,
-      "score": 80,
-      "verdict": "pending",
-      "votePenalty": 0,
-      "evidencePenalty": 0,
-      "survivalDays": 0,
-      "survivalBonus": 0,
-      "curated": false,
-      "curatedBonus": 0,
-      "formula": {
-        "baseScore": 80,
-        "evidencePenalty": 0,
-        "votePenalty": 0,
-        "survivalDays": 0,
-        "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
-        "curatedBonus": 0,
-        "score": 80
-      },
-      "affected": [],
-      "evidence": []
-    },
-    "thumbsUp": 0,
-    "thumbsDown": 0,
-    "createdAt": "2026-05-04T09:34:57.121Z"
-  },
-  {
-    "issueNumber": 98,
-    "issueUrl": "https://github.com/exisz/IsItStable/issues/98",
-    "version": "2026.5.3",
-    "packageName": "openclaw",
-    "packageSlug": "openclaw",
-    "verdict": "pending",
-    "verdictComment": "Backfill pass: mostly channel/runtime paper cuts, but WhatsApp event-loop blocking is the kind of paper cut that needs a pager.",
-    "referencedIssues": [
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77666,
-        "url": "https://github.com/openclaw/openclaw/issues/77666",
-        "title": "Feishu group messages receive replies=0 after upgrading to 2026.5.3"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77503,
-        "url": "https://github.com/openclaw/openclaw/issues/77503",
-        "title": "[Bug]: iMessage channel polling broken in 2026.5.3-1 (regression from 2026.5.2)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77723,
-        "url": "https://github.com/openclaw/openclaw/issues/77723",
-        "title": "Bug: memory-core Dreaming cleanup still leaves narrative session trajectory residue on 2026.5.3-1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77443,
-        "url": "https://github.com/openclaw/openclaw/issues/77443",
-        "title": "[Bug]: WhatsApp event loop blocked (eventLoopDelayMaxMs=12088ms) on first inbound message — 2026.5.3-1 Windows"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77730,
-        "url": "https://github.com/openclaw/openclaw/issues/77730",
-        "title": "[Bug]: file-transfer plugin nodeHostCommands not advertised by Windows node host on live handshake (2026.5.3-1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77733,
-        "url": "https://github.com/openclaw/openclaw/issues/77733",
-        "title": "[Bug]: Bare `/new` and `/reset` no longer trigger the persona greeting in 2026.5.3 (regression vs 4.x)**"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77576,
-        "url": "https://github.com/openclaw/openclaw/issues/77576",
-        "title": "[Regression] Telegram group session responses route to webchat instead of back to Telegram (v2026.5.3-1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77666,
-        "url": "https://github.com/openclaw/openclaw/issues/77666",
-        "title": "Feishu group messages receive replies=0 after upgrading to 2026.5.3"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77503,
-        "url": "https://github.com/openclaw/openclaw/issues/77503",
-        "title": "[Bug]: iMessage channel polling broken in 2026.5.3-1 (regression from 2026.5.2)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77723,
-        "url": "https://github.com/openclaw/openclaw/issues/77723",
-        "title": "Bug: memory-core Dreaming cleanup still leaves narrative session trajectory residue on 2026.5.3-1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77443,
-        "url": "https://github.com/openclaw/openclaw/issues/77443",
-        "title": "[Bug]: WhatsApp event loop blocked (eventLoopDelayMaxMs=12088ms) on first inbound message — 2026.5.3-1 Windows"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77730,
-        "url": "https://github.com/openclaw/openclaw/issues/77730",
-        "title": "[Bug]: file-transfer plugin nodeHostCommands not advertised by Windows node host on live handshake (2026.5.3-1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77733,
-        "url": "https://github.com/openclaw/openclaw/issues/77733",
-        "title": "[Bug]: Bare `/new` and `/reset` no longer trigger the persona greeting in 2026.5.3 (regression vs 4.x)**"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77576,
-        "url": "https://github.com/openclaw/openclaw/issues/77576",
-        "title": "[Regression] Telegram group session responses route to webchat instead of back to Telegram (v2026.5.3-1)"
-      }
-    ],
-    "stabilityScore": {
-      "schemaVersion": "isitstable:v1",
-      "baseScore": 80,
-      "score": 70,
-      "verdict": "pending",
-      "votePenalty": 0,
-      "evidencePenalty": 10,
-      "survivalDays": 0,
-      "survivalBonus": 0,
-      "curated": false,
-      "curatedBonus": 0,
-      "formula": {
-        "baseScore": 80,
-        "evidencePenalty": 10,
-        "votePenalty": 0,
-        "survivalDays": 0,
-        "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
-        "curatedBonus": 0,
-        "score": 70
-      },
-      "affected": [
-        "feishu",
-        "imessage",
-        "memory",
-        "node-surface",
-        "telegram",
-        "webchat",
-        "whatsapp"
-      ],
-      "evidence": [
-        {
-          "issue": "openclaw/openclaw#77666",
-          "repo": "openclaw/openclaw",
-          "number": 77666,
-          "url": "https://github.com/openclaw/openclaw/issues/77666",
-          "area": "feishu",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Feishu group messages receive zero replies after 2026.5.3 upgrade."
-        },
-        {
-          "issue": "openclaw/openclaw#77503",
-          "repo": "openclaw/openclaw",
-          "number": 77503,
-          "url": "https://github.com/openclaw/openclaw/issues/77503",
-          "area": "imessage",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "iMessage polling broken in 2026.5.3-1 regression from 2026.5.2."
-        },
-        {
-          "issue": "openclaw/openclaw#77723",
-          "repo": "openclaw/openclaw",
-          "number": 77723,
-          "url": "https://github.com/openclaw/openclaw/issues/77723",
-          "area": "memory",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "memory-core Dreaming cleanup leaves narrative session residue."
-        },
-        {
-          "issue": "openclaw/openclaw#77443",
-          "repo": "openclaw/openclaw",
-          "number": 77443,
-          "url": "https://github.com/openclaw/openclaw/issues/77443",
-          "area": "whatsapp",
-          "type": "runtime",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "WhatsApp first inbound blocks event loop with high delay."
-        },
-        {
-          "issue": "openclaw/openclaw#77730",
-          "repo": "openclaw/openclaw",
-          "number": 77730,
-          "url": "https://github.com/openclaw/openclaw/issues/77730",
-          "area": "node-surface",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "file-transfer nodeHostCommands not advertised by Windows node host."
-        },
-        {
-          "issue": "openclaw/openclaw#77733",
-          "repo": "openclaw/openclaw",
-          "number": 77733,
-          "url": "https://github.com/openclaw/openclaw/issues/77733",
-          "area": "webchat",
-          "type": "runtime",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Bare /new and /reset no longer trigger persona greeting."
-        },
-        {
-          "issue": "openclaw/openclaw#77576",
-          "repo": "openclaw/openclaw",
-          "number": 77576,
-          "url": "https://github.com/openclaw/openclaw/issues/77576",
-          "area": "telegram",
-          "type": "channel-specific",
-          "severity": 2,
-          "penalty": 2,
-          "reason": "Telegram group responses route to webchat instead of Telegram."
-        }
-      ]
-    },
-    "thumbsUp": 0,
-    "thumbsDown": 0,
-    "createdAt": "2026-05-04T07:46:24.298Z"
-  },
-  {
     "issueNumber": 96,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/96",
     "version": "2026.5.2",
@@ -4896,24 +4649,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 83,
+      "score": 86,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 83
+        "score": 86
       },
       "affected": [],
       "evidence": []
