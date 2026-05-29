@@ -129,9 +129,14 @@ function parseBody(body: string | null, thumbsUp: number, thumbsDown: number, ve
   return result;
 }
 
-async function ghFetch(path: string) {
+function githubToken() {
   const token = process.env.GITHUB_TOKEN;
   if (!token) throw new Error("GITHUB_TOKEN is required");
+  return token;
+}
+
+async function ghFetch(path: string) {
+  const token = githubToken();
   const res = await fetch(`${GITHUB_API}${path}`, {
     headers: {
       Accept: "application/vnd.github+json",
@@ -141,6 +146,25 @@ async function ghFetch(path: string) {
   });
   if (!res.ok) throw new Error(`GitHub API ${res.status}: ${res.statusText} for ${path}`);
   return res.json();
+}
+
+async function ghGraphql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
+  const token = githubToken();
+  const res = await fetch(`${GITHUB_API}/graphql`, {
+    method: "POST",
+    headers: {
+      Accept: "application/vnd.github+json",
+      "Content-Type": "application/json",
+      "User-Agent": "IsItStable-Sync/1.0",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ query, variables }),
+  });
+  if (!res.ok) throw new Error(`GitHub GraphQL ${res.status}: ${res.statusText}`);
+  const json = await res.json() as { data?: T; errors?: { message: string }[] };
+  if (json.errors?.length) throw new Error(`GitHub GraphQL error: ${json.errors.map((e) => e.message).join("; ")}`);
+  if (!json.data) throw new Error("GitHub GraphQL returned no data");
+  return json.data;
 }
 
 async function fetchNpmPublishTimes(packageName: string): Promise<Record<string, string>> {
@@ -156,18 +180,53 @@ async function fetchNpmPublishTimes(packageName: string): Promise<Record<string,
 
 async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
   const issues: VersionIssue[] = [];
-  let page = 1;
+  let after: string | null = null;
+
+  // Do not use the REST issues list for version discovery. We observed REST
+  // `/issues` and label-filtered variants omit older open issues (#73/#74) while
+  // direct issue reads and GraphQL repository issues returned them correctly.
+  const query = `
+    query($owner:String!, $repo:String!, $after:String) {
+      repository(owner:$owner, name:$repo) {
+        issues(first:100, after:$after, states:OPEN, orderBy:{field:CREATED_AT, direction:DESC}) {
+          pageInfo { hasNextPage endCursor }
+          nodes {
+            number
+            title
+            body
+            url
+            createdAt
+            labels(first:50) { nodes { name } }
+            thumbsUp: reactions(first:1, content:THUMBS_UP) { totalCount }
+            thumbsDown: reactions(first:1, content:THUMBS_DOWN) { totalCount }
+          }
+        }
+      }
+    }
+  `;
 
   while (true) {
-    const data = await ghFetch(
-      `/repos/${REPO_OWNER}/${REPO_NAME}/issues?state=open&labels=version&per_page=100&page=${page}&sort=created&direction=desc`
-    );
-    if (!Array.isArray(data) || data.length === 0) break;
+    const data = await ghGraphql<{
+      repository: {
+        issues: {
+          pageInfo: { hasNextPage: boolean; endCursor: string | null };
+          nodes: {
+            number: number;
+            title: string;
+            body: string | null;
+            url: string;
+            createdAt: string;
+            labels: { nodes: { name: string }[] };
+            thumbsUp: { totalCount: number };
+            thumbsDown: { totalCount: number };
+          }[];
+        };
+      };
+    }>(query, { owner: REPO_OWNER, repo: REPO_NAME, after });
 
-    for (const issue of data) {
-      if (issue.pull_request) continue;
-
-      const labels: string[] = (issue.labels ?? []).map((l: any) => typeof l === "string" ? l : l.name);
+    const page = data.repository.issues;
+    for (const issue of page.nodes) {
+      const labels: string[] = (issue.labels?.nodes ?? []).map((l) => l.name);
       if (!labels.includes("version")) continue;
 
       // Version from title
@@ -181,8 +240,8 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
       // Score-only mode: verdict labels are legacy and intentionally ignored.
       const verdict = SCORE_ONLY_LEGACY_VERDICT;
 
-      const thumbsUp = issue.reactions?.["+1"] ?? 0;
-      const thumbsDown = issue.reactions?.["-1"] ?? 0;
+      const thumbsUp = issue.thumbsUp?.totalCount ?? 0;
+      const thumbsDown = issue.thumbsDown?.totalCount ?? 0;
 
       // Comment + refs + stability score from body
       const { verdictComment, referencedIssues, stabilityScore } = parseBody(issue.body, thumbsUp, thumbsDown, verdict);
@@ -190,7 +249,7 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
 
       issues.push({
         issueNumber: issue.number,
-        issueUrl: issue.html_url,
+        issueUrl: issue.url,
         version,
         packageName,
         packageSlug: slugify(packageName),
@@ -200,12 +259,12 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
         stabilityScore,
         thumbsUp,
         thumbsDown,
-        createdAt: issue.created_at,
+        createdAt: issue.createdAt,
       });
     }
 
-    if (data.length < 100) break;
-    page++;
+    if (!page.pageInfo.hasNextPage) break;
+    after = page.pageInfo.endCursor;
   }
 
   return issues;
@@ -236,13 +295,18 @@ async function main() {
     }
   }
   const titleCache = new Map<string, string>();
-  for (const [key, { repo, number }] of allRefs) {
-    try {
-      const data = await ghFetch(`/repos/${repo}/issues/${number}`);
-      if (data.title) titleCache.set(key, data.title);
-    } catch {
-      // graceful fallback: no title
-    }
+  const refEntries = [...allRefs.entries()];
+  const titleBatchSize = 20;
+  for (let i = 0; i < refEntries.length; i += titleBatchSize) {
+    const batch = refEntries.slice(i, i + titleBatchSize);
+    await Promise.all(batch.map(async ([key, { repo, number }]) => {
+      try {
+        const data = await ghFetch(`/repos/${repo}/issues/${number}`);
+        if (data.title) titleCache.set(key, data.title);
+      } catch {
+        // graceful fallback: no title
+      }
+    }));
   }
   for (const v of versions) {
     for (const ref of v.referencedIssues) {
