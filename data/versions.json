@@ -4644,226 +4644,32 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Backfill pass: one release, several channels, and WhatsApp brought enough chaos to make “works on my machine” sound like a threat.",
-    "referencedIssues": [
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77503,
-        "url": "https://github.com/openclaw/openclaw/issues/77503",
-        "title": "[Bug]: iMessage channel polling broken in 2026.5.3-1 (regression from 2026.5.2)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77723,
-        "url": "https://github.com/openclaw/openclaw/issues/77723",
-        "title": "Bug: memory-core Dreaming cleanup still leaves narrative session trajectory residue on 2026.5.3-1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77443,
-        "url": "https://github.com/openclaw/openclaw/issues/77443",
-        "title": "[Bug]: WhatsApp event loop blocked (eventLoopDelayMaxMs=12088ms) on first inbound message — 2026.5.3-1 Windows"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77730,
-        "url": "https://github.com/openclaw/openclaw/issues/77730",
-        "title": "[Bug]: file-transfer plugin nodeHostCommands not advertised by Windows node host on live handshake (2026.5.3-1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77576,
-        "url": "https://github.com/openclaw/openclaw/issues/77576",
-        "title": "[Regression] Telegram group session responses route to webchat instead of back to Telegram (v2026.5.3-1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78419,
-        "url": "https://github.com/openclaw/openclaw/issues/78419",
-        "title": "[Bug]: WhatsApp health-monitor re-starts channels stopped by terminal DisconnectReason (loggedOut, connectionReplaced) — 12-channel multi-tenant restart loop, 12.9GB heap, 24s RPC latency on 2026.5.3-1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77868,
-        "url": "https://github.com/openclaw/openclaw/issues/77868",
-        "title": "Discord delivery crashes with SyntaxError: Plugin/Core version mismatch (2026.5.4 plugin vs 2026.5.3 core)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77733,
-        "url": "https://github.com/openclaw/openclaw/issues/77733",
-        "title": "[Bug]: Bare `/new` and `/reset` no longer trigger the persona greeting in 2026.5.3 (regression vs 4.x)**"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77503,
-        "url": "https://github.com/openclaw/openclaw/issues/77503",
-        "title": "[Bug]: iMessage channel polling broken in 2026.5.3-1 (regression from 2026.5.2)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77723,
-        "url": "https://github.com/openclaw/openclaw/issues/77723",
-        "title": "Bug: memory-core Dreaming cleanup still leaves narrative session trajectory residue on 2026.5.3-1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77443,
-        "url": "https://github.com/openclaw/openclaw/issues/77443",
-        "title": "[Bug]: WhatsApp event loop blocked (eventLoopDelayMaxMs=12088ms) on first inbound message — 2026.5.3-1 Windows"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77730,
-        "url": "https://github.com/openclaw/openclaw/issues/77730",
-        "title": "[Bug]: file-transfer plugin nodeHostCommands not advertised by Windows node host on live handshake (2026.5.3-1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77576,
-        "url": "https://github.com/openclaw/openclaw/issues/77576",
-        "title": "[Regression] Telegram group session responses route to webchat instead of back to Telegram (v2026.5.3-1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78419,
-        "url": "https://github.com/openclaw/openclaw/issues/78419",
-        "title": "[Bug]: WhatsApp health-monitor re-starts channels stopped by terminal DisconnectReason (loggedOut, connectionReplaced) — 12-channel multi-tenant restart loop, 12.9GB heap, 24s RPC latency on 2026.5.3-1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77868,
-        "url": "https://github.com/openclaw/openclaw/issues/77868",
-        "title": "Discord delivery crashes with SyntaxError: Plugin/Core version mismatch (2026.5.4 plugin vs 2026.5.3 core)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77733,
-        "url": "https://github.com/openclaw/openclaw/issues/77733",
-        "title": "[Bug]: Bare `/new` and `/reset` no longer trigger the persona greeting in 2026.5.3 (regression vs 4.x)**"
-      }
-    ],
+    "verdictComment": "",
+    "referencedIssues": [],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 64,
+      "score": 80,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 16,
+      "evidencePenalty": 0,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 16,
+        "evidencePenalty": 0,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 64
+        "score": 80
       },
-      "affected": [
-        "discord",
-        "imessage",
-        "memory",
-        "node-surface",
-        "telegram",
-        "webchat",
-        "whatsapp"
-      ],
-      "evidence": [
-        {
-          "issue": "openclaw/openclaw#77503",
-          "repo": "openclaw/openclaw",
-          "number": 77503,
-          "url": "https://github.com/openclaw/openclaw/issues/77503",
-          "area": "imessage",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "iMessage polling broken in 2026.5.3-1 regression from 2026.5.2."
-        },
-        {
-          "issue": "openclaw/openclaw#77723",
-          "repo": "openclaw/openclaw",
-          "number": 77723,
-          "url": "https://github.com/openclaw/openclaw/issues/77723",
-          "area": "memory",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "memory-core Dreaming cleanup leaves narrative session trajectory residue."
-        },
-        {
-          "issue": "openclaw/openclaw#77443",
-          "repo": "openclaw/openclaw",
-          "number": 77443,
-          "url": "https://github.com/openclaw/openclaw/issues/77443",
-          "area": "whatsapp",
-          "type": "runtime",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "WhatsApp first inbound blocks the event loop with high delay on Windows."
-        },
-        {
-          "issue": "openclaw/openclaw#77730",
-          "repo": "openclaw/openclaw",
-          "number": 77730,
-          "url": "https://github.com/openclaw/openclaw/issues/77730",
-          "area": "node-surface",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "file-transfer nodeHostCommands not advertised by Windows node host live handshake."
-        },
-        {
-          "issue": "openclaw/openclaw#77576",
-          "repo": "openclaw/openclaw",
-          "number": 77576,
-          "url": "https://github.com/openclaw/openclaw/issues/77576",
-          "area": "telegram",
-          "type": "channel-specific",
-          "severity": 2,
-          "penalty": 2,
-          "reason": "Telegram group session responses route to webchat instead of Telegram."
-        },
-        {
-          "issue": "openclaw/openclaw#78419",
-          "repo": "openclaw/openclaw",
-          "number": 78419,
-          "url": "https://github.com/openclaw/openclaw/issues/78419",
-          "area": "whatsapp",
-          "type": "runtime",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "WhatsApp health-monitor restarts terminally stopped channels, causing multi-tenant restart loop and high heap/RPC latency."
-        },
-        {
-          "issue": "openclaw/openclaw#77868",
-          "repo": "openclaw/openclaw",
-          "number": 77868,
-          "url": "https://github.com/openclaw/openclaw/issues/77868",
-          "area": "discord",
-          "type": "channel-specific",
-          "severity": 2,
-          "penalty": 2,
-          "reason": "Discord plugin/core version mismatch makes assistant replies invisible on 2026.5.3-1 core."
-        },
-        {
-          "issue": "openclaw/openclaw#77733",
-          "repo": "openclaw/openclaw",
-          "number": 77733,
-          "url": "https://github.com/openclaw/openclaw/issues/77733",
-          "area": "webchat",
-          "type": "runtime",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Bare /new and /reset no longer trigger persona greeting on 2026.5.3-1."
-        }
-      ]
+      "affected": [],
+      "evidence": []
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
