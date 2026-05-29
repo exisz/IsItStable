@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Score bucket remains deep red: the newer evidence pile is now less “one bad deploy” and more “3am rollback archaeology.”",
+      "verdictComment": "Fresh evidence pile-on: channel dispatch, Codex delivery, and Control UI are still finding creative ways to turn 3am deploys into cardio.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -314,6 +314,42 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 88002,
+          "url": "https://github.com/openclaw/openclaw/issues/88002",
+          "title": "[Bug]: 2026.5.27version the running session of the cron job is incorrect"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88024,
+          "url": "https://github.com/openclaw/openclaw/issues/88024",
+          "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87990,
+          "url": "https://github.com/openclaw/openclaw/issues/87990",
+          "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88058,
+          "url": "https://github.com/openclaw/openclaw/issues/88058",
+          "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87953,
+          "url": "https://github.com/openclaw/openclaw/issues/87953",
+          "title": "[Bug]: Trusted Proxy auth still requires device pairing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88073,
+          "url": "https://github.com/openclaw/openclaw/issues/88073",
+          "title": "[Bug] Feishu dispatch fails: Cannot read properties of undefined (reading 'run') in v2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 87650,
           "url": "https://github.com/openclaw/openclaw/issues/87650",
           "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
@@ -611,6 +647,42 @@
           "number": 87875,
           "url": "https://github.com/openclaw/openclaw/issues/87875",
           "title": "[Bug]: WebChat UI: \"In progress\" status persists after model response generation"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88002,
+          "url": "https://github.com/openclaw/openclaw/issues/88002",
+          "title": "[Bug]: 2026.5.27version the running session of the cron job is incorrect"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88024,
+          "url": "https://github.com/openclaw/openclaw/issues/88024",
+          "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87990,
+          "url": "https://github.com/openclaw/openclaw/issues/87990",
+          "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88058,
+          "url": "https://github.com/openclaw/openclaw/issues/88058",
+          "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87953,
+          "url": "https://github.com/openclaw/openclaw/issues/87953",
+          "title": "[Bug]: Trusted Proxy auth still requires device pairing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88073,
+          "url": "https://github.com/openclaw/openclaw/issues/88073",
+          "title": "[Bug] Feishu dispatch fails: Cannot read properties of undefined (reading 'run') in v2026.5.27"
         }
       ],
       "stabilityScore": {
@@ -619,19 +691,19 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 141,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "evidencePenalty": 152,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 141,
+          "evidencePenalty": 152,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
           "score": 0
         },
@@ -642,6 +714,7 @@
           "codex-session-route",
           "compaction",
           "context-injection",
+          "cron",
           "cron-copilot",
           "cron-model-routing",
           "cron-runtime",
@@ -650,6 +723,7 @@
           "doctor/model-routing",
           "feishu",
           "gateway",
+          "identity",
           "local-model",
           "matrix",
           "memory",
@@ -658,8 +732,6 @@
           "plugin-system",
           "provider-integration",
           "qqbot",
-          "runtime",
-          "security",
           "security-audit",
           "service-management",
           "sessions-management",
@@ -671,7 +743,6 @@
           "telegram-routing",
           "telegram-tts",
           "thinking-level",
-          "tool",
           "ui",
           "update-system",
           "voice",
@@ -1229,6 +1300,72 @@
             "severity": 1,
             "penalty": 1,
             "reason": "WebChat in-progress status can persist after model response completes"
+          },
+          {
+            "issue": "openclaw/openclaw#88002",
+            "repo": "openclaw/openclaw",
+            "number": 88002,
+            "url": "https://github.com/openclaw/openclaw/issues/88002",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Cron run history Open Chat routes to the wrong session across 2026.5.6-2026.5.27."
+          },
+          {
+            "issue": "openclaw/openclaw#88024",
+            "repo": "openclaw/openclaw",
+            "number": 88024,
+            "url": "https://github.com/openclaw/openclaw/issues/88024",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Feishu WebSocket receives messages but dispatch fails with undefined inbound.run starting 2026.5.27."
+          },
+          {
+            "issue": "openclaw/openclaw#87990",
+            "repo": "openclaw/openclaw",
+            "number": 87990,
+            "url": "https://github.com/openclaw/openclaw/issues/87990",
+            "area": "matrix",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Matrix bridge install/runtime dependency gap reported across 2026.5.x including 2026.5.27."
+          },
+          {
+            "issue": "openclaw/openclaw#88058",
+            "repo": "openclaw/openclaw",
+            "number": 88058,
+            "url": "https://github.com/openclaw/openclaw/issues/88058",
+            "area": "ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Control UI messages and steer are silently queued/ignored during active long-running sessions."
+          },
+          {
+            "issue": "openclaw/openclaw#87953",
+            "repo": "openclaw/openclaw",
+            "number": 87953,
+            "url": "https://github.com/openclaw/openclaw/issues/87953",
+            "area": "identity",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Trusted-proxy Control UI auth still requires device pairing despite forwarded identity headers."
+          },
+          {
+            "issue": "openclaw/openclaw#88073",
+            "repo": "openclaw/openclaw",
+            "number": 88073,
+            "url": "https://github.com/openclaw/openclaw/issues/88073",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Independent Feishu report: inbound dispatch fails with undefined run on v2026.5.27."
           }
         ]
       },
