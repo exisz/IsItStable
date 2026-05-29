@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Fresh release, already loud: runtime and channel regressions are forming a small 3am deploy support group.",
+      "verdictComment": "Score bucket remains deep red: the newer evidence pile is now less “one bad deploy” and more “3am rollback archaeology.”",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -224,6 +224,96 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 87914,
+          "url": "https://github.com/openclaw/openclaw/issues/87914",
+          "title": "diagnostics-prometheus can spam log.record errors after rollback when plugin version remains newer than OpenClaw core"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87928,
+          "url": "https://github.com/openclaw/openclaw/issues/87928",
+          "title": "macOS update can leave manual-update loop and stale node host causing Gateway restart storm"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87821,
+          "url": "https://github.com/openclaw/openclaw/issues/87821",
+          "title": "[Bug]: Isolated cron runs can wedge gateway"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87889,
+          "url": "https://github.com/openclaw/openclaw/issues/87889",
+          "title": "Update from Dashboard skipped, works from CLI"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87894,
+          "url": "https://github.com/openclaw/openclaw/issues/87894",
+          "title": "sessions.usage and usage.cost still cause 16–48s event-loop stalls on 2026.5.27 (regression on #82773)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87921,
+          "url": "https://github.com/openclaw/openclaw/issues/87921",
+          "title": "[Bug]: Telegram progress mode tool progress preview not working in forum topics"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87860,
+          "url": "https://github.com/openclaw/openclaw/issues/87860",
+          "title": "QQ Bot: lane errors (rate limit, timeout) are silently swallowed with no user feedback"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87897,
+          "url": "https://github.com/openclaw/openclaw/issues/87897",
+          "title": "[Bug]: Web UI answers are truncated and channels.webchat config is rejected as unknown channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87768,
+          "url": "https://github.com/openclaw/openclaw/issues/87768",
+          "title": "[Bug]: push to talk mac os companion app hard codes thinking low"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87798,
+          "url": "https://github.com/openclaw/openclaw/issues/87798",
+          "title": "[Bug]: doctor emits repeated tool-policy removal audit lines at normal console level"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87854,
+          "url": "https://github.com/openclaw/openclaw/issues/87854",
+          "title": "Memory Dreaming Promotion: candidates found but applied=0 (rehydratePromotionCandidate returns null for all)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87877,
+          "url": "https://github.com/openclaw/openclaw/issues/87877",
+          "title": "Codex runtime persists openai-codex as session modelProvider, causing recurring legacy route doctor warning"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87801,
+          "url": "https://github.com/openclaw/openclaw/issues/87801",
+          "title": "supportsAdaptiveThinking() omits opus-4-8 → reasoning-enabled requests send thinking.type.enabled → 400 + silent fallback"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87808,
+          "url": "https://github.com/openclaw/openclaw/issues/87808",
+          "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs client closed before turn completed"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87875,
+          "url": "https://github.com/openclaw/openclaw/issues/87875",
+          "title": "[Bug]: WebChat UI: \"In progress\" status persists after model response generation"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 87650,
           "url": "https://github.com/openclaw/openclaw/issues/87650",
           "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
@@ -431,6 +521,96 @@
           "number": 87690,
           "url": "https://github.com/openclaw/openclaw/issues/87690",
           "title": "secrets audit counts codex-app-server auth marker as plaintext"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87914,
+          "url": "https://github.com/openclaw/openclaw/issues/87914",
+          "title": "diagnostics-prometheus can spam log.record errors after rollback when plugin version remains newer than OpenClaw core"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87928,
+          "url": "https://github.com/openclaw/openclaw/issues/87928",
+          "title": "macOS update can leave manual-update loop and stale node host causing Gateway restart storm"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87821,
+          "url": "https://github.com/openclaw/openclaw/issues/87821",
+          "title": "[Bug]: Isolated cron runs can wedge gateway"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87889,
+          "url": "https://github.com/openclaw/openclaw/issues/87889",
+          "title": "Update from Dashboard skipped, works from CLI"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87894,
+          "url": "https://github.com/openclaw/openclaw/issues/87894",
+          "title": "sessions.usage and usage.cost still cause 16–48s event-loop stalls on 2026.5.27 (regression on #82773)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87921,
+          "url": "https://github.com/openclaw/openclaw/issues/87921",
+          "title": "[Bug]: Telegram progress mode tool progress preview not working in forum topics"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87860,
+          "url": "https://github.com/openclaw/openclaw/issues/87860",
+          "title": "QQ Bot: lane errors (rate limit, timeout) are silently swallowed with no user feedback"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87897,
+          "url": "https://github.com/openclaw/openclaw/issues/87897",
+          "title": "[Bug]: Web UI answers are truncated and channels.webchat config is rejected as unknown channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87768,
+          "url": "https://github.com/openclaw/openclaw/issues/87768",
+          "title": "[Bug]: push to talk mac os companion app hard codes thinking low"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87798,
+          "url": "https://github.com/openclaw/openclaw/issues/87798",
+          "title": "[Bug]: doctor emits repeated tool-policy removal audit lines at normal console level"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87854,
+          "url": "https://github.com/openclaw/openclaw/issues/87854",
+          "title": "Memory Dreaming Promotion: candidates found but applied=0 (rehydratePromotionCandidate returns null for all)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87877,
+          "url": "https://github.com/openclaw/openclaw/issues/87877",
+          "title": "Codex runtime persists openai-codex as session modelProvider, causing recurring legacy route doctor warning"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87801,
+          "url": "https://github.com/openclaw/openclaw/issues/87801",
+          "title": "supportsAdaptiveThinking() omits opus-4-8 → reasoning-enabled requests send thinking.type.enabled → 400 + silent fallback"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87808,
+          "url": "https://github.com/openclaw/openclaw/issues/87808",
+          "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs client closed before turn completed"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87875,
+          "url": "https://github.com/openclaw/openclaw/issues/87875",
+          "title": "[Bug]: WebChat UI: \"In progress\" status persists after model response generation"
         }
       ],
       "stabilityScore": {
@@ -439,14 +619,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 104,
+        "evidencePenalty": 141,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 104,
+          "evidencePenalty": 141,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
@@ -457,23 +637,47 @@
         },
         "affected": [
           "codex",
+          "codex-discord",
+          "codex-plugin",
+          "codex-session-route",
           "compaction",
+          "context-injection",
+          "cron-copilot",
+          "cron-model-routing",
+          "cron-runtime",
           "discord",
           "doctor",
+          "doctor/model-routing",
           "feishu",
           "gateway",
+          "local-model",
           "matrix",
           "memory",
           "model-routing",
+          "native-hook-relay",
+          "plugin-system",
           "provider-integration",
+          "qqbot",
           "runtime",
           "security",
+          "security-audit",
+          "service-management",
+          "sessions-management",
           "telegram",
+          "telegram-codex",
+          "telegram-delivery",
+          "telegram-groups",
+          "telegram-plugin-state",
+          "telegram-routing",
+          "telegram-tts",
+          "thinking-level",
           "tool",
           "ui",
           "update-system",
           "voice",
-          "webchat"
+          "webchat",
+          "webchat-ui",
+          "workflow-runtime"
         ],
         "evidence": [
           {
@@ -860,6 +1064,171 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Secrets audit counts codex-app-server auth marker as plaintext"
+          },
+          {
+            "issue": "openclaw/openclaw#87914",
+            "repo": "openclaw/openclaw",
+            "number": 87914,
+            "url": "https://github.com/openclaw/openclaw/issues/87914",
+            "area": "plugin-system",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "diagnostics-prometheus 2026.5.27 can remain after rollback and spam log.record errors against older core"
+          },
+          {
+            "issue": "openclaw/openclaw#87928",
+            "repo": "openclaw/openclaw",
+            "number": 87928,
+            "url": "https://github.com/openclaw/openclaw/issues/87928",
+            "area": "service-management",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "macOS update can leave manual-update LaunchAgent loop plus stale node host, causing gateway restart storm"
+          },
+          {
+            "issue": "openclaw/openclaw#87821",
+            "repo": "openclaw/openclaw",
+            "number": 87821,
+            "url": "https://github.com/openclaw/openclaw/issues/87821",
+            "area": "cron-runtime",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "isolated cron runs can wedge gateway until manual restart"
+          },
+          {
+            "issue": "openclaw/openclaw#87889",
+            "repo": "openclaw/openclaw",
+            "number": 87889,
+            "url": "https://github.com/openclaw/openclaw/issues/87889",
+            "area": "update-system",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Dashboard update button can skip while CLI update succeeds"
+          },
+          {
+            "issue": "openclaw/openclaw#87894",
+            "repo": "openclaw/openclaw",
+            "number": 87894,
+            "url": "https://github.com/openclaw/openclaw/issues/87894",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "sessions.usage and usage.cost still cause 16–48s event-loop stalls"
+          },
+          {
+            "issue": "openclaw/openclaw#87921",
+            "repo": "openclaw/openclaw",
+            "number": 87921,
+            "url": "https://github.com/openclaw/openclaw/issues/87921",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram forum topic progress preview/tool progress is not visible"
+          },
+          {
+            "issue": "openclaw/openclaw#87860",
+            "repo": "openclaw/openclaw",
+            "number": 87860,
+            "url": "https://github.com/openclaw/openclaw/issues/87860",
+            "area": "qqbot",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "QQ Bot lane/rate-limit/timeout errors are swallowed with no user feedback"
+          },
+          {
+            "issue": "openclaw/openclaw#87897",
+            "repo": "openclaw/openclaw",
+            "number": 87897,
+            "url": "https://github.com/openclaw/openclaw/issues/87897",
+            "area": "webchat",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Web UI answers can truncate and channels.webchat config is rejected"
+          },
+          {
+            "issue": "openclaw/openclaw#87768",
+            "repo": "openclaw/openclaw",
+            "number": 87768,
+            "url": "https://github.com/openclaw/openclaw/issues/87768",
+            "area": "voice",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "macOS push-to-talk companion hard-codes thinking low"
+          },
+          {
+            "issue": "openclaw/openclaw#87798",
+            "repo": "openclaw/openclaw",
+            "number": 87798,
+            "url": "https://github.com/openclaw/openclaw/issues/87798",
+            "area": "doctor",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "doctor emits repeated tool-policy removal audit lines at normal console level"
+          },
+          {
+            "issue": "openclaw/openclaw#87854",
+            "repo": "openclaw/openclaw",
+            "number": 87854,
+            "url": "https://github.com/openclaw/openclaw/issues/87854",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Dreaming promotion finds candidates but applies none across 2026.5.26/2026.5.27"
+          },
+          {
+            "issue": "openclaw/openclaw#87877",
+            "repo": "openclaw/openclaw",
+            "number": 87877,
+            "url": "https://github.com/openclaw/openclaw/issues/87877",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Codex runtime persists openai-codex as session modelProvider, causing recurring route warnings"
+          },
+          {
+            "issue": "openclaw/openclaw#87801",
+            "repo": "openclaw/openclaw",
+            "number": 87801,
+            "url": "https://github.com/openclaw/openclaw/issues/87801",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "supportsAdaptiveThinking omits opus-4-8, causing 400s and silent fallback on reasoning-enabled requests"
+          },
+          {
+            "issue": "openclaw/openclaw#87808",
+            "repo": "openclaw/openclaw",
+            "number": 87808,
+            "url": "https://github.com/openclaw/openclaw/issues/87808",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Gateway restart during active embedded Codex WebChat turn drops final reply"
+          },
+          {
+            "issue": "openclaw/openclaw#87875",
+            "repo": "openclaw/openclaw",
+            "number": 87875,
+            "url": "https://github.com/openclaw/openclaw/issues/87875",
+            "area": "webchat",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WebChat in-progress status can persist after model response completes"
           }
         ]
       },
