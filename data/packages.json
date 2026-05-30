@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "New v2026.5.27 evidence added: a gateway crash loop joined the pile, plus Discord progress went quiet. The deploy treadmill remains undefeated.",
+      "verdictComment": "Afternoon sweep: more v2026.5.27 shrapnel landed — Feishu DMs, Codex turns, gateway service env, SIGTERM loops, and local model routing. This release is now mostly evidence storage with a version tag.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -368,6 +368,36 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 88216,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88216",
+          "title": "[Bug]: Feishu p2p DM dispatch crashes with TypeError: Cannot read properties of undefined (reading 'run') on 2026.5.27 (regression since 2026.5.22)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88196,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88196",
+          "title": "Codex cron agentTurn regression: app-server attempt/turn idle timeout after 2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88274,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88274",
+          "title": "Bug: gateway service env renders Supermemory API key as literal env reference"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88243,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88243",
+          "title": "SIGTERM loop after physical network migration — mDNS crash presents with no visible error in logs (2026.5.27, macOS arm64)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88267,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88267",
+          "title": "[Bug]:"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 87650,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/87650",
           "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
@@ -719,6 +749,36 @@
           "number": 88227,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/88227",
           "title": "Discord progress/partial streaming no longer shows visible in-progress updates"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88216,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88216",
+          "title": "[Bug]: Feishu p2p DM dispatch crashes with TypeError: Cannot read properties of undefined (reading 'run') on 2026.5.27 (regression since 2026.5.22)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88196,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88196",
+          "title": "Codex cron agentTurn regression: app-server attempt/turn idle timeout after 2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88274,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88274",
+          "title": "Bug: gateway service env renders Supermemory API key as literal env reference"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88243,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88243",
+          "title": "SIGTERM loop after physical network migration — mDNS crash presents with no visible error in logs (2026.5.27, macOS arm64)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88267,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88267",
+          "title": "[Bug]:"
         }
       ],
       "stabilityScore": {
@@ -727,14 +787,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 160,
+        "evidencePenalty": 174,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 160,
+          "evidencePenalty": 174,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
@@ -1436,6 +1496,61 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Discord progress/partial streaming no longer shows visible in-progress updates before final replies"
+          },
+          {
+            "issue": "openclaw/openclaw#88216",
+            "repo": "openclaw/openclaw",
+            "number": 88216,
+            "url": "https://github.com/openclaw/openclaw/issues/88216",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Feishu p2p DM dispatch crashes with undefined inbound.run on 2026.5.27, regressed from 2026.5.22"
+          },
+          {
+            "issue": "openclaw/openclaw#88196",
+            "repo": "openclaw/openclaw",
+            "number": 88196,
+            "url": "https://github.com/openclaw/openclaw/issues/88196",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex scheduled agentTurn and Discord turns hit app-server attempt/turn idle timeouts after 2026.5.27"
+          },
+          {
+            "issue": "openclaw/openclaw#88274",
+            "repo": "openclaw/openclaw",
+            "number": 88274,
+            "url": "https://github.com/openclaw/openclaw/issues/88274",
+            "area": "service-management",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Gateway LaunchAgent service env can persist a literal Supermemory API key reference instead of resolved value"
+          },
+          {
+            "issue": "openclaw/openclaw#88243",
+            "repo": "openclaw/openclaw",
+            "number": 88243,
+            "url": "https://github.com/openclaw/openclaw/issues/88243",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Gateway enters SIGTERM restart loop after network migration with mDNS crash hidden from logs"
+          },
+          {
+            "issue": "openclaw/openclaw#88267",
+            "repo": "openclaw/openclaw",
+            "number": 88267,
+            "url": "https://github.com/openclaw/openclaw/issues/88267",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Docker ARM64 runtime rejects configured Ollama model despite openclaw.json entry"
           }
         ]
       },
