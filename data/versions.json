@@ -12196,10 +12196,88 @@
       },
       "affected": [],
       "evidence": [],
-      "notes": "Initial Hermes Agent tracking entry. npm package hermes-agent@0.15.2 was published 2026-05-29T20:23:13.259Z."
+      "notes": "Current Hermes Agent tracking entry. npm package hermes-agent@0.15.2 was published 2026-05-29T20:23:13.259Z."
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-05-29T20:23:13.259Z"
+  },
+  {
+    "issueNumber": 830151,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/83",
+    "version": "0.15.1",
+    "packageName": "Hermes Agent",
+    "packageSlug": "hermes-agent",
+    "verdict": "pending",
+    "verdictComment": "Historical clean-slate Hermes Agent tracking point: no linked stability evidence yet.",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": [],
+      "notes": "Recent Hermes Agent historical release added for baseline trend tracking. No upstream stability evidence has been linked yet."
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-05-29T09:06:04.018Z"
+  },
+  {
+    "issueNumber": 830140,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/83",
+    "version": "0.14.0",
+    "packageName": "Hermes Agent",
+    "packageSlug": "hermes-agent",
+    "verdict": "pending",
+    "verdictComment": "Historical clean-slate Hermes Agent tracking point: no linked stability evidence yet.",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 89,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 3,
+      "survivalBonus": 9,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 3,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
+        "curatedBonus": 0,
+        "score": 89
+      },
+      "affected": [],
+      "evidence": [],
+      "notes": "Initial Hermes Agent npm release added as a historical clean-slate tracking point. No upstream stability evidence has been linked yet."
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-05-25T13:05:16.731Z"
   }
 ]
