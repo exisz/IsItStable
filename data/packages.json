@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Fresh evidence pile-on: BlueBubbles joined the channel-API conga line. The 3am deploy cardio continues.",
+      "verdictComment": "New v2026.5.27 evidence added: a gateway crash loop joined the pile, plus Discord progress went quiet. The deploy treadmill remains undefeated.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -356,6 +356,18 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 88242,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88242",
+          "title": "Gateway crash loop: 'Response timeout' unhandled rejection after upgrade to 2026.5.27 (stable from 2026.5.20)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88227,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88227",
+          "title": "Discord progress/partial streaming no longer shows visible in-progress updates"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 87650,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/87650",
           "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
@@ -695,6 +707,18 @@
           "number": 88139,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/88139",
           "title": "[Bug] BlueBubbles channel dispatch broken in v2026.5.27 — TypeError: Cannot read properties of undefined (reading 'run') (same regression as #87602)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88242,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88242",
+          "title": "Gateway crash loop: 'Response timeout' unhandled rejection after upgrade to 2026.5.27 (stable from 2026.5.20)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88227,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88227",
+          "title": "Discord progress/partial streaming no longer shows visible in-progress updates"
         }
       ],
       "stabilityScore": {
@@ -703,14 +727,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 154,
+        "evidencePenalty": 160,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 154,
+          "evidencePenalty": 160,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
@@ -1390,6 +1414,28 @@
             "severity": 2,
             "penalty": 2,
             "reason": "BlueBubbles/iMessage inbound dispatch breaks after v2026.5.27 channel API rename."
+          },
+          {
+            "issue": "openclaw/openclaw#88242",
+            "repo": "openclaw/openclaw",
+            "number": 88242,
+            "url": "https://github.com/openclaw/openclaw/issues/88242",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Gateway crash loop with unhandled Response timeout after upgrading from 2026.5.20 to 2026.5.27"
+          },
+          {
+            "issue": "openclaw/openclaw#88227",
+            "repo": "openclaw/openclaw",
+            "number": 88227,
+            "url": "https://github.com/openclaw/openclaw/issues/88227",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Discord progress/partial streaming no longer shows visible in-progress updates before final replies"
           }
         ]
       },
