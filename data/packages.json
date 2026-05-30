@@ -10,32 +10,320 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "New release fog: early evidence is already lighting up Feishu dispatch, Codex completion, Discord media handoff, plugin config, browser attach, cron isolation, and gateway/runtime edges. This is <24h evidence collection, not a final score call.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88024,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
+          "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88369,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88369",
+          "title": "[Bug]: isolated cron can still self-conflict on a dedicated cron agent with EmbeddedAttemptSessionTakeoverError"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88312,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88312",
+          "title": "[Bug]: [Regression] 2026.5.27: Codex app-server turn-completion stall returns (\"Codex stopped before confirming the turn was complete\") — regression of #84076 (fixed by #85107)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84256,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/84256",
+          "title": "[Bug]: openclaw plugins update --all downgrades manually-updated npm plugins to their originally-recorded install version"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87995,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87995",
+          "title": "[Bug]: image_generate still duplicate-sends Discord attachments after terminal guard"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88307,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88307",
+          "title": "[Bug]: generated image completions still double-send Discord attachments after media handoff fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88256,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88256",
+          "title": "Bug: Telegram polling TELEGRAM_POLL_RESTART_POLICY too aggressive — maxMs=30s causes restart storms"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88324,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88324",
+          "title": "Already-paired macOS node still requests approval on every app relaunch (2026.5.28-beta.4)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88195,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88195",
+          "title": "${ENV_VAR} refs in plugins.entries.*.config not resolved before passing to plugin (regression in 2026.5.28-beta.4)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88213,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88213",
+          "title": "Browser existing-session Chrome MCP tabs fail with 300ms attach timeout despite doctor passing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88255,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88255",
+          "title": "Bug: dist/export-html/template.js content.filter crash — missing Array.isArray guard in dist bundle"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88257,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88257",
+          "title": "Bug: WebSocket close before connection established causes uncaughtException crash — not covered by isBenignUncaughtExceptionError"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88024,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
+          "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88369,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88369",
+          "title": "[Bug]: isolated cron can still self-conflict on a dedicated cron agent with EmbeddedAttemptSessionTakeoverError"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88312,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88312",
+          "title": "[Bug]: [Regression] 2026.5.27: Codex app-server turn-completion stall returns (\"Codex stopped before confirming the turn was complete\") — regression of #84076 (fixed by #85107)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84256,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/84256",
+          "title": "[Bug]: openclaw plugins update --all downgrades manually-updated npm plugins to their originally-recorded install version"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87995,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87995",
+          "title": "[Bug]: image_generate still duplicate-sends Discord attachments after terminal guard"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88307,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88307",
+          "title": "[Bug]: generated image completions still double-send Discord attachments after media handoff fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88256,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88256",
+          "title": "Bug: Telegram polling TELEGRAM_POLL_RESTART_POLICY too aggressive — maxMs=30s causes restart storms"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88324,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88324",
+          "title": "Already-paired macOS node still requests approval on every app relaunch (2026.5.28-beta.4)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88195,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88195",
+          "title": "${ENV_VAR} refs in plugins.entries.*.config not resolved before passing to plugin (regression in 2026.5.28-beta.4)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88213,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88213",
+          "title": "Browser existing-session Chrome MCP tabs fail with 300ms attach timeout despite doctor passing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88255,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88255",
+          "title": "Bug: dist/export-html/template.js content.filter crash — missing Array.isArray guard in dist bundle"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88257,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88257",
+          "title": "Bug: WebSocket close before connection established causes uncaughtException crash — not covered by isBenignUncaughtExceptionError"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 51,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 29,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 29,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 51
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "feishu",
+          "codex",
+          "discord",
+          "plugin-system",
+          "browser",
+          "cron-runtime",
+          "node-surface",
+          "runtime",
+          "telegram"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#88024",
+            "repo": "openclaw/openclaw",
+            "number": 88024,
+            "url": "https://github.com/openclaw/openclaw/issues/88024",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Feishu WebSocket inbound dispatch throws TypeError on 2026.5.27+ / 2026.5.28 beta"
+          },
+          {
+            "issue": "openclaw/openclaw#88369",
+            "repo": "openclaw/openclaw",
+            "number": 88369,
+            "url": "https://github.com/openclaw/openclaw/issues/88369",
+            "area": "cron-runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Isolated cron can still self-conflict with EmbeddedAttemptSessionTakeoverError on 2026.5.28 beta"
+          },
+          {
+            "issue": "openclaw/openclaw#88312",
+            "repo": "openclaw/openclaw",
+            "number": 88312,
+            "url": "https://github.com/openclaw/openclaw/issues/88312",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex app-server turn-completion stall reproduced through 2026.5.28 beta builds"
+          },
+          {
+            "issue": "openclaw/openclaw#84256",
+            "repo": "openclaw/openclaw",
+            "number": 84256,
+            "url": "https://github.com/openclaw/openclaw/issues/84256",
+            "area": "plugin-system",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "plugins update --all can downgrade beta-channel official plugins to latest dist-tag versions"
+          },
+          {
+            "issue": "openclaw/openclaw#87995",
+            "repo": "openclaw/openclaw",
+            "number": 87995,
+            "url": "https://github.com/openclaw/openclaw/issues/87995",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "image_generate completion duplicate-sends Discord attachments on 2026.5.28 beta"
+          },
+          {
+            "issue": "openclaw/openclaw#88307",
+            "repo": "openclaw/openclaw",
+            "number": 88307,
+            "url": "https://github.com/openclaw/openclaw/issues/88307",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Generated image completion still double-sends Discord attachments after media handoff fix"
+          },
+          {
+            "issue": "openclaw/openclaw#88256",
+            "repo": "openclaw/openclaw",
+            "number": 88256,
+            "url": "https://github.com/openclaw/openclaw/issues/88256",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Telegram polling restart policy on v2026.5.28 can create restart storms"
+          },
+          {
+            "issue": "openclaw/openclaw#88324",
+            "repo": "openclaw/openclaw",
+            "number": 88324,
+            "url": "https://github.com/openclaw/openclaw/issues/88324",
+            "area": "node-surface",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Already-paired macOS node asks for approval again on every relaunch in 2026.5.28 beta"
+          },
+          {
+            "issue": "openclaw/openclaw#88195",
+            "repo": "openclaw/openclaw",
+            "number": 88195,
+            "url": "https://github.com/openclaw/openclaw/issues/88195",
+            "area": "plugin-system",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "${ENV_VAR} plugin config refs are passed literally to plugins on 2026.5.28 beta"
+          },
+          {
+            "issue": "openclaw/openclaw#88213",
+            "repo": "openclaw/openclaw",
+            "number": 88213,
+            "url": "https://github.com/openclaw/openclaw/issues/88213",
+            "area": "browser",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Existing-session Chrome MCP browser attach times out despite doctor passing on 2026.5.28 beta"
+          },
+          {
+            "issue": "openclaw/openclaw#88255",
+            "repo": "openclaw/openclaw",
+            "number": 88255,
+            "url": "https://github.com/openclaw/openclaw/issues/88255",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "dist export-html template can crash on non-array message content in v2026.5.28"
+          },
+          {
+            "issue": "openclaw/openclaw#88257",
+            "repo": "openclaw/openclaw",
+            "number": 88257,
+            "url": "https://github.com/openclaw/openclaw/issues/88257",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "WebSocket close before connect can surface as uncaughtException crash in v2026.5.28"
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
