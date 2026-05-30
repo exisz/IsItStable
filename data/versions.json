@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh evidence pile-on: channel dispatch, Codex delivery, and Control UI are still finding creative ways to turn 3am deploys into cardio.",
+    "verdictComment": "Fresh evidence pile-on: BlueBubbles joined the channel-API conga line. The 3am deploy cardio continues.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -346,6 +346,12 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 88139,
+        "url": "https://github.com/openclaw/openclaw/issues/88139",
+        "title": "[Bug] BlueBubbles channel dispatch broken in v2026.5.27 — TypeError: Cannot read properties of undefined (reading 'run') (same regression as #87602)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 87650,
         "url": "https://github.com/openclaw/openclaw/issues/87650",
         "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
@@ -679,6 +685,12 @@
         "number": 88073,
         "url": "https://github.com/openclaw/openclaw/issues/88073",
         "title": "[Bug] Feishu dispatch fails: Cannot read properties of undefined (reading 'run') in v2026.5.27"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88139,
+        "url": "https://github.com/openclaw/openclaw/issues/88139",
+        "title": "[Bug] BlueBubbles channel dispatch broken in v2026.5.27 — TypeError: Cannot read properties of undefined (reading 'run') (same regression as #87602)"
       }
     ],
     "stabilityScore": {
@@ -687,14 +699,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 152,
+      "evidencePenalty": 154,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 152,
+        "evidencePenalty": 154,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
@@ -704,6 +716,7 @@
         "score": 0
       },
       "affected": [
+        "bluebubbles",
         "codex",
         "codex-discord",
         "codex-plugin",
@@ -1362,6 +1375,17 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Independent Feishu report: inbound dispatch fails with undefined run on v2026.5.27."
+        },
+        {
+          "issue": "openclaw/openclaw#88139",
+          "repo": "openclaw/openclaw",
+          "number": 88139,
+          "url": "https://github.com/openclaw/openclaw/issues/88139",
+          "area": "bluebubbles",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "BlueBubbles/iMessage inbound dispatch breaks after v2026.5.27 channel API rename."
         }
       ]
     },
@@ -1376,7 +1400,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Follow-up evidence pass: the release has moved from gravel to a small rockslide across heartbeat, compaction, Discord, and WhatsApp.",
+    "verdictComment": "Backfill found Matrix packaging, node-host capabilities, and session-context rot. Small rockslide upgraded to landslide paperwork.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1524,6 +1548,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 87990,
+        "url": "https://github.com/openclaw/openclaw/issues/87990",
+        "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87604,
+        "url": "https://github.com/openclaw/openclaw/issues/87604",
+        "title": "Node host on macOS connects but never announces caps/commands (file-transfer plugin)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87651,
+        "url": "https://github.com/openclaw/openclaw/issues/87651",
+        "title": "Long-running tool results can poison persisted session context"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 87320,
         "url": "https://github.com/openclaw/openclaw/issues/87320",
         "title": "\\`openclaw update\\` dry-run passes but apply fails with `ETARGET` when version not yet on npm registry"
@@ -1665,29 +1707,47 @@
         "number": 87491,
         "url": "https://github.com/openclaw/openclaw/issues/87491",
         "title": "2026.5.26: upgrade can create phantom workdir directories; UI displays paths inconsistently across tools"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87990,
+        "url": "https://github.com/openclaw/openclaw/issues/87990",
+        "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87604,
+        "url": "https://github.com/openclaw/openclaw/issues/87604",
+        "title": "Node host on macOS connects but never announces caps/commands (file-transfer plugin)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87651,
+        "url": "https://github.com/openclaw/openclaw/issues/87651",
+        "title": "Long-running tool results can poison persisted session context"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 18,
+      "score": 9,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 62,
+      "evidencePenalty": 71,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 62,
+        "evidencePenalty": 71,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 18
+        "score": 9
       },
       "affected": [
         "approval-boundary",
@@ -1696,7 +1756,9 @@
         "doctor",
         "gateway",
         "heartbeat",
+        "matrix",
         "model-routing",
+        "node-host",
         "plugin-tools",
         "runtime",
         "sessions-management",
@@ -1970,6 +2032,39 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Upgrade can create phantom workdir directories and inconsistent UI paths"
+        },
+        {
+          "issue": "openclaw/openclaw#87990",
+          "repo": "openclaw/openclaw",
+          "number": 87990,
+          "url": "https://github.com/openclaw/openclaw/issues/87990",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Matrix bridge package misses @vector-im/matrix-bot-sdk across 2026.5.x including 2026.5.26."
+        },
+        {
+          "issue": "openclaw/openclaw#87604",
+          "repo": "openclaw/openclaw",
+          "number": 87604,
+          "url": "https://github.com/openclaw/openclaw/issues/87604",
+          "area": "node-host",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "macOS node host pairs but never announces file-transfer capabilities/commands on 2026.5.26."
+        },
+        {
+          "issue": "openclaw/openclaw#87651",
+          "repo": "openclaw/openclaw",
+          "number": 87651,
+          "url": "https://github.com/openclaw/openclaw/issues/87651",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Long-running tool results can poison persisted session context on 2026.5.26."
         }
       ]
     },
@@ -1984,7 +2079,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The 5.22 surface is now doing the full 3am deploy revue: CPU loops, launchd faceplants, channel drops, and Codex/WebChat hangs.",
+    "verdictComment": "Backfill added Matrix thread breakage, missing Matrix runtime deps, and session lock cleanup. Not a quiet release; more like a hallway full of smoke alarms.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -2132,6 +2227,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 87307,
+        "url": "https://github.com/openclaw/openclaw/issues/87307",
+        "title": "Matrix thread replies sent as normal replies on 2026.5.22; /status and /model silent"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87990,
+        "url": "https://github.com/openclaw/openclaw/issues/87990",
+        "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87483,
+        "url": "https://github.com/openclaw/openclaw/issues/87483",
+        "title": "[Bug]: Session file lock not released properly by watchdog"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 86241,
         "url": "https://github.com/openclaw/openclaw/issues/86241",
         "title": "[Bug]:[Bug] preserveGatewayHookRunner causes handler stacking + N-fold delivery after subagent hot-reload cycles (2026.5.22 regression)"
@@ -2273,6 +2386,24 @@
         "number": 86457,
         "url": "https://github.com/openclaw/openclaw/issues/86457",
         "title": "npm-shrinkwrap.json vendors vulnerable qs@6.14.2 (GHSA-q8mj-m7cp-5q26)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87307,
+        "url": "https://github.com/openclaw/openclaw/issues/87307",
+        "title": "Matrix thread replies sent as normal replies on 2026.5.22; /status and /model silent"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87990,
+        "url": "https://github.com/openclaw/openclaw/issues/87990",
+        "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87483,
+        "url": "https://github.com/openclaw/openclaw/issues/87483",
+        "title": "[Bug]: Session file lock not released properly by watchdog"
       }
     ],
     "stabilityScore": {
@@ -2281,14 +2412,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 2,
-      "evidencePenalty": 80,
+      "evidencePenalty": 87,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 80,
+        "evidencePenalty": 87,
         "votePenalty": 2,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
@@ -2298,21 +2429,23 @@
         "score": 0
       },
       "affected": [
-        "plugin-system",
-        "cron",
-        "gateway",
-        "windows",
-        "runtime",
         "codex",
-        "telegram",
-        "status",
-        "launchagent",
-        "discord",
         "compaction",
-        "webchat",
-        "memory-wiki",
+        "cron",
+        "discord",
         "feishu",
-        "security"
+        "gateway",
+        "launchagent",
+        "matrix",
+        "memory-wiki",
+        "plugin-system",
+        "runtime",
+        "security",
+        "sessions-management",
+        "status",
+        "telegram",
+        "webchat",
+        "windows"
       ],
       "evidence": [
         {
@@ -2578,6 +2711,39 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Published npm artifact vendors vulnerable qs@6.14.2 via shrinkwrap"
+        },
+        {
+          "issue": "openclaw/openclaw#87307",
+          "repo": "openclaw/openclaw",
+          "number": 87307,
+          "url": "https://github.com/openclaw/openclaw/issues/87307",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Matrix thread replies fall back to normal replies and /status /model go silent on 2026.5.22."
+        },
+        {
+          "issue": "openclaw/openclaw#87990",
+          "repo": "openclaw/openclaw",
+          "number": 87990,
+          "url": "https://github.com/openclaw/openclaw/issues/87990",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Matrix bridge package misses @vector-im/matrix-bot-sdk across 2026.5.x including 2026.5.22."
+        },
+        {
+          "issue": "openclaw/openclaw#87483",
+          "repo": "openclaw/openclaw",
+          "number": 87483,
+          "url": "https://github.com/openclaw/openclaw/issues/87483",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Watchdog can leave stale session file locks after crashes on 2026.5.22."
         }
       ]
     },
@@ -8917,7 +9083,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "High-score backfill found more grit: cron isolation and Claude CLI auth both had receipts, so the score bucket gets less smug.",
+    "verdictComment": "High-score backfill found Slack typing gaps, Zalo login hangs, and node protocol sharp edges. Still usable, but the polish is negotiating with gravity.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -8987,6 +9153,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 82886,
+        "url": "https://github.com/openclaw/openclaw/issues/82886",
+        "title": "[Bug]: Slack interactive reply clicks do not show assistant status/typing"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82543,
+        "url": "https://github.com/openclaw/openclaw/issues/82543",
+        "title": "Zalouser plugin hangs at start-account phase after re-login"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83736,
+        "url": "https://github.com/openclaw/openclaw/issues/83736",
+        "title": "[Bug]: Gateway should tolerate minor node version skew during subordinate node upgrades"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 84256,
         "url": "https://github.com/openclaw/openclaw/issues/84256",
         "title": "[Bug]: openclaw plugins update --all downgrades manually-updated npm plugins to their originally-recorded install version"
@@ -9050,41 +9234,62 @@
         "number": 83598,
         "url": "https://github.com/openclaw/openclaw/issues/83598",
         "title": "[Bug]: anthropic:claude-cli OAuth refresh still dead-ends main lane in 2026.5.12 despite #73682 fix"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82886,
+        "url": "https://github.com/openclaw/openclaw/issues/82886",
+        "title": "[Bug]: Slack interactive reply clicks do not show assistant status/typing"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 82543,
+        "url": "https://github.com/openclaw/openclaw/issues/82543",
+        "title": "Zalouser plugin hangs at start-account phase after re-login"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83736,
+        "url": "https://github.com/openclaw/openclaw/issues/83736",
+        "title": "[Bug]: Gateway should tolerate minor node version skew during subordinate node upgrades"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 50,
+      "score": 45,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 30,
+      "evidencePenalty": 35,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 30,
+        "evidencePenalty": 35,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 50
+        "score": 45
       },
       "affected": [
         "cron-runtime",
         "feishu",
         "heartbeat",
         "image-tool",
+        "node-protocol",
         "plugin-system",
         "provider-integration",
         "qqbot",
         "runtime",
         "security",
-        "sessions-management"
+        "sessions-management",
+        "slack",
+        "zalouser"
       ],
       "evidence": [
         {
@@ -9207,6 +9412,39 @@
           "severity": 3,
           "penalty": 3,
           "reason": "anthropic:claude-cli OAuth refresh still dead-ends main runtime lane on 2026.5.12"
+        },
+        {
+          "issue": "openclaw/openclaw#82886",
+          "repo": "openclaw/openclaw",
+          "number": 82886,
+          "url": "https://github.com/openclaw/openclaw/issues/82886",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Slack interactive follow-up turns do not show native assistant status/typing on 2026.5.12."
+        },
+        {
+          "issue": "openclaw/openclaw#82543",
+          "repo": "openclaw/openclaw",
+          "number": 82543,
+          "url": "https://github.com/openclaw/openclaw/issues/82543",
+          "area": "zalouser",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Zalo user plugin hangs at start-account after QR re-login on 2026.5.12."
+        },
+        {
+          "issue": "openclaw/openclaw#83736",
+          "repo": "openclaw/openclaw",
+          "number": 83736,
+          "url": "https://github.com/openclaw/openclaw/issues/83736",
+          "area": "node-protocol",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Gateway/node protocol skew after 2026.5.12 upgrade can strand subordinate nodes."
         }
       ]
     },
@@ -14260,7 +14498,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Evidence says this one deserves caution.",
+    "verdictComment": "Historical cleanup: more receipts landed for duplicate delivery, memory dreaming, browser CDP, and diagnostics config friction. It was not just one smoke alarm.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -14288,6 +14526,30 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 72176,
+        "url": "https://github.com/openclaw/openclaw/issues/72176",
+        "title": "[Bug]: Intermittent duplicate message delivery in 2026.4.24 across all channels"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72546,
+        "url": "https://github.com/openclaw/openclaw/issues/72546",
+        "title": "[Bug]: Memory dreaming cron reports ok with harness data but writes no artifacts on 2026.4.24"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72653,
+        "url": "https://github.com/openclaw/openclaw/issues/72653",
+        "title": "Bug: browser tool times out despite CDP connection working (Playwright can connect directly)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72883,
+        "url": "https://github.com/openclaw/openclaw/issues/72883",
+        "title": "gateway config.patch blocks `diagnostics.cacheTrace.*` even with content capture disabled"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 71915,
         "url": "https://github.com/openclaw/openclaw/issues/71915",
         "title": "[Bug]: Gateway 100% CPU / infinite loop with DeepSeek V4 models on 2026.4.24"
@@ -14309,33 +14571,61 @@
         "number": 72450,
         "url": "https://github.com/openclaw/openclaw/issues/72450",
         "title": "[Bug]: web ui日志界面无信息"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72176,
+        "url": "https://github.com/openclaw/openclaw/issues/72176",
+        "title": "[Bug]: Intermittent duplicate message delivery in 2026.4.24 across all channels"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72546,
+        "url": "https://github.com/openclaw/openclaw/issues/72546",
+        "title": "[Bug]: Memory dreaming cron reports ok with harness data but writes no artifacts on 2026.4.24"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72653,
+        "url": "https://github.com/openclaw/openclaw/issues/72653",
+        "title": "Bug: browser tool times out despite CDP connection working (Playwright can connect directly)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 72883,
+        "url": "https://github.com/openclaw/openclaw/issues/72883",
+        "title": "gateway config.patch blocks `diagnostics.cacheTrace.*` even with content capture disabled"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 75,
+      "score": 66,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 8,
+      "evidencePenalty": 17,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 8,
+        "evidencePenalty": 17,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 75
+        "score": 66
       },
       "affected": [
+        "browser-tool",
+        "diagnostics",
         "gateway",
-        "runtime"
+        "memory",
+        "runtime",
+        "sessions"
       ],
       "evidence": [
         {
@@ -14381,6 +14671,50 @@
           "severity": 1,
           "penalty": 1,
           "reason": "[Bug]: web ui日志界面无信息"
+        },
+        {
+          "issue": "openclaw/openclaw#72176",
+          "repo": "openclaw/openclaw",
+          "number": 72176,
+          "url": "https://github.com/openclaw/openclaw/issues/72176",
+          "area": "sessions",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Intermittent duplicate message delivery across channels on 2026.4.24."
+        },
+        {
+          "issue": "openclaw/openclaw#72546",
+          "repo": "openclaw/openclaw",
+          "number": 72546,
+          "url": "https://github.com/openclaw/openclaw/issues/72546",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Memory dreaming cron reports success but writes no artifacts on 2026.4.24."
+        },
+        {
+          "issue": "openclaw/openclaw#72653",
+          "repo": "openclaw/openclaw",
+          "number": 72653,
+          "url": "https://github.com/openclaw/openclaw/issues/72653",
+          "area": "browser-tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Browser tool times out despite working CDP connection on 2026.4.24."
+        },
+        {
+          "issue": "openclaw/openclaw#72883",
+          "repo": "openclaw/openclaw",
+          "number": 72883,
+          "url": "https://github.com/openclaw/openclaw/issues/72883",
+          "area": "diagnostics",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "gateway config.patch blocks safe diagnostics cacheTrace config on 2026.4.24."
         }
       ]
     },

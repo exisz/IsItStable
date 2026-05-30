@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Fresh evidence pile-on: channel dispatch, Codex delivery, and Control UI are still finding creative ways to turn 3am deploys into cardio.",
+      "verdictComment": "Fresh evidence pile-on: BlueBubbles joined the channel-API conga line. The 3am deploy cardio continues.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -350,6 +350,12 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 88139,
+          "url": "https://github.com/openclaw/openclaw/issues/88139",
+          "title": "[Bug] BlueBubbles channel dispatch broken in v2026.5.27 — TypeError: Cannot read properties of undefined (reading 'run') (same regression as #87602)"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 87650,
           "url": "https://github.com/openclaw/openclaw/issues/87650",
           "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
@@ -683,6 +689,12 @@
           "number": 88073,
           "url": "https://github.com/openclaw/openclaw/issues/88073",
           "title": "[Bug] Feishu dispatch fails: Cannot read properties of undefined (reading 'run') in v2026.5.27"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88139,
+          "url": "https://github.com/openclaw/openclaw/issues/88139",
+          "title": "[Bug] BlueBubbles channel dispatch broken in v2026.5.27 — TypeError: Cannot read properties of undefined (reading 'run') (same regression as #87602)"
         }
       ],
       "stabilityScore": {
@@ -691,14 +703,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 152,
+        "evidencePenalty": 154,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 152,
+          "evidencePenalty": 154,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
@@ -708,6 +720,7 @@
           "score": 0
         },
         "affected": [
+          "bluebubbles",
           "codex",
           "codex-discord",
           "codex-plugin",
@@ -1366,6 +1379,17 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Independent Feishu report: inbound dispatch fails with undefined run on v2026.5.27."
+          },
+          {
+            "issue": "openclaw/openclaw#88139",
+            "repo": "openclaw/openclaw",
+            "number": 88139,
+            "url": "https://github.com/openclaw/openclaw/issues/88139",
+            "area": "bluebubbles",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "BlueBubbles/iMessage inbound dispatch breaks after v2026.5.27 channel API rename."
           }
         ]
       },
