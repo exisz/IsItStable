@@ -12127,7 +12127,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Evidence backfill changed the verdict: v2026.5.3-1 shipped with packaging breakage plus channel/runtime regressions across Docker, Discord, WhatsApp, iMessage, Telegram, Matrix, Feishu, Browser, memory, and agent runtimes. Skip it.",
+    "verdictComment": "v2026.5.3-1 shipped with packaging breakage plus channel/runtime regressions across Docker, Discord, WhatsApp, iMessage, Telegram, Matrix, Feishu, Browser, memory, and agent runtimes.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
