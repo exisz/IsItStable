@@ -15,685 +15,685 @@
         {
           "repo": "openclaw/openclaw",
           "number": 87650,
-          "url": "https://github.com/openclaw/openclaw/issues/87650",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87650",
           "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87725,
-          "url": "https://github.com/openclaw/openclaw/issues/87725",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87725",
           "title": "Codex missing-terminal fallback leaks into Discord channel on 2026.5.27 despite #87079"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87744,
-          "url": "https://github.com/openclaw/openclaw/issues/87744",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87744",
           "title": "[Bug]: Codex-backed Telegram turns repeatedly time out waiting for turn/completed on 2026.5.27"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87711,
-          "url": "https://github.com/openclaw/openclaw/issues/87711",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87711",
           "title": "[Bug]: Empty assistant delivery (footer-only, \"— out\" usage) on first turn after /new on Telegram-routed topic lane — 2026.5.27"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87646,
-          "url": "https://github.com/openclaw/openclaw/issues/87646",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87646",
           "title": "【BUG】(feishu): cannot dispatch messages after v2026.5.27 upgrade — TypeError: read property 'run' of undefined"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87692,
-          "url": "https://github.com/openclaw/openclaw/issues/87692",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87692",
           "title": "[Bug]: GitHub Copilot anthropic-messages transport silently hangs ~365s in isolated cron sessions (2026.5.27)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87756,
-          "url": "https://github.com/openclaw/openclaw/issues/87756",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87756",
           "title": "[Bug]: Regression: prompt-launched Lobster workflow hangs on nested /tools/invoke, while curl-launched workflow works"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87436,
-          "url": "https://github.com/openclaw/openclaw/issues/87436",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87436",
           "title": "Codex harness runs recreate legacy openai-codex session route state after doctor --fix"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87395,
-          "url": "https://github.com/openclaw/openclaw/issues/87395",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87395",
           "title": "Native hook relay intermittently becomes unavailable on 2026.5.26, blocking memory/filesystem tools"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87679,
-          "url": "https://github.com/openclaw/openclaw/issues/87679",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87679",
           "title": "Native hook relay unavailable blocks post-image Codex shell/file operations on 2026.5.26"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87510,
-          "url": "https://github.com/openclaw/openclaw/issues/87510",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87510",
           "title": "[Bug]: Codex PreToolUse hook fails with 'Native hook relay unavailable' intermittently"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87736,
-          "url": "https://github.com/openclaw/openclaw/issues/87736",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87736",
           "title": "Regression: preflight compaction still surfaces missing Codex thread failure after #86602"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87721,
-          "url": "https://github.com/openclaw/openclaw/issues/87721",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87721",
           "title": "[Bug]: Codex plugin binding slient replies when attaching an existing Codex CLI session on a paired node"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87740,
-          "url": "https://github.com/openclaw/openclaw/issues/87740",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87740",
           "title": "Bug: Explicit thinkingLevel session override permanently reset to 'off' after each agent turn"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87699,
-          "url": "https://github.com/openclaw/openclaw/issues/87699",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87699",
           "title": "[Bug]: [BUG] UI shows agent \"running\" after conversation ends — requires manual page refresh every time"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87649,
-          "url": "https://github.com/openclaw/openclaw/issues/87649",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87649",
           "title": "WebChat \"In Progress\" indicator persists after reply is complete"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87728,
-          "url": "https://github.com/openclaw/openclaw/issues/87728",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87728",
           "title": "WebChat duplicate messages after WebSocket reconnect"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87730,
-          "url": "https://github.com/openclaw/openclaw/issues/87730",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87730",
           "title": "[Bug]: 2026.5.27 Refresh still says stale"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87732,
-          "url": "https://github.com/openclaw/openclaw/issues/87732",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87732",
           "title": "[Bug]: 2026.5.27 npm install calls itself pnpm"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87641,
-          "url": "https://github.com/openclaw/openclaw/issues/87641",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87641",
           "title": "`opencode-go/kimi-k2.6`: every multi-turn task rejected with opaque 400 \"Provider returned error\" (reason=format), rotates to fallback (2026.5.26+5.27)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87766,
-          "url": "https://github.com/openclaw/openclaw/issues/87766",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87766",
           "title": "[Bug] Kimi web_search always returns \"ungrounded\" error — Moonshot API no longer returns search_results field[Bug]:"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87687,
-          "url": "https://github.com/openclaw/openclaw/issues/87687",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87687",
           "title": "vllm openai-completions streaming parser drops tool_calls when reasoning_content streams first for gpt-oss-120b at large systemPrompt"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87689,
-          "url": "https://github.com/openclaw/openclaw/issues/87689",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87689",
           "title": "Dreaming needs supported guard to disable session transcript ingestion during QMD migrations"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87708,
-          "url": "https://github.com/openclaw/openclaw/issues/87708",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87708",
           "title": "[Bug]: message-tool Telegram replies skip auto=inbound TTS because inboundAudio is not passed"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87307,
-          "url": "https://github.com/openclaw/openclaw/issues/87307",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87307",
           "title": "Matrix thread replies sent as normal replies on 2026.5.22; /status and /model silent"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87391,
-          "url": "https://github.com/openclaw/openclaw/issues/87391",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87391",
           "title": "Bug: 回覆 routing 到錯誤 channel (Telegram miss, Control UI only)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 82002,
-          "url": "https://github.com/openclaw/openclaw/issues/82002",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/82002",
           "title": "Telegram group replies to bot messages can lose reply context under group allowlist"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87731,
-          "url": "https://github.com/openclaw/openclaw/issues/87731",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87731",
           "title": "Discord streaming (tool progress icons) works in DMs but not guild channels"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87332,
-          "url": "https://github.com/openclaw/openclaw/issues/87332",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87332",
           "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87357,
-          "url": "https://github.com/openclaw/openclaw/issues/87357",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87357",
           "title": "Telegram plugin-state hits per-plugin cap and locks out new writes (v2026.5.26)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87045,
-          "url": "https://github.com/openclaw/openclaw/issues/87045",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87045",
           "title": "appendSystemContext / prependSystemContext concatenation has no boundary marker, causing model to attribute injected rules to the last workspace file"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 72574,
-          "url": "https://github.com/openclaw/openclaw/issues/72574",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/72574",
           "title": "`btw spawn` with invalid bearer token triggers gateway/session disconnect"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 79329,
-          "url": "https://github.com/openclaw/openclaw/issues/79329",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79329",
           "title": "Cron model preflight skips entire run when local primary is unreachable, ignoring configured cloud fallbacks [AI]"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 84376,
-          "url": "https://github.com/openclaw/openclaw/issues/84376",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/84376",
           "title": "[Bug]: secrets audit flags codex \"codex-app-server\" auth marker as PLAINTEXT_FOUND (isNonSecretApiKeyMarker should include it)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87690,
-          "url": "https://github.com/openclaw/openclaw/issues/87690",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87690",
           "title": "secrets audit counts codex-app-server auth marker as plaintext"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87914,
-          "url": "https://github.com/openclaw/openclaw/issues/87914",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87914",
           "title": "diagnostics-prometheus can spam log.record errors after rollback when plugin version remains newer than OpenClaw core"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87928,
-          "url": "https://github.com/openclaw/openclaw/issues/87928",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87928",
           "title": "macOS update can leave manual-update loop and stale node host causing Gateway restart storm"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87821,
-          "url": "https://github.com/openclaw/openclaw/issues/87821",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87821",
           "title": "[Bug]: Isolated cron runs can wedge gateway"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87889,
-          "url": "https://github.com/openclaw/openclaw/issues/87889",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87889",
           "title": "Update from Dashboard skipped, works from CLI"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87894,
-          "url": "https://github.com/openclaw/openclaw/issues/87894",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87894",
           "title": "sessions.usage and usage.cost still cause 16–48s event-loop stalls on 2026.5.27 (regression on #82773)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87921,
-          "url": "https://github.com/openclaw/openclaw/issues/87921",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87921",
           "title": "[Bug]: Telegram progress mode tool progress preview not working in forum topics"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87860,
-          "url": "https://github.com/openclaw/openclaw/issues/87860",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87860",
           "title": "QQ Bot: lane errors (rate limit, timeout) are silently swallowed with no user feedback"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87897,
-          "url": "https://github.com/openclaw/openclaw/issues/87897",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87897",
           "title": "[Bug]: Web UI answers are truncated and channels.webchat config is rejected as unknown channel"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87768,
-          "url": "https://github.com/openclaw/openclaw/issues/87768",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87768",
           "title": "[Bug]: push to talk mac os companion app hard codes thinking low"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87798,
-          "url": "https://github.com/openclaw/openclaw/issues/87798",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87798",
           "title": "[Bug]: doctor emits repeated tool-policy removal audit lines at normal console level"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87854,
-          "url": "https://github.com/openclaw/openclaw/issues/87854",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87854",
           "title": "Memory Dreaming Promotion: candidates found but applied=0 (rehydratePromotionCandidate returns null for all)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87877,
-          "url": "https://github.com/openclaw/openclaw/issues/87877",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87877",
           "title": "Codex runtime persists openai-codex as session modelProvider, causing recurring legacy route doctor warning"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87801,
-          "url": "https://github.com/openclaw/openclaw/issues/87801",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87801",
           "title": "supportsAdaptiveThinking() omits opus-4-8 → reasoning-enabled requests send thinking.type.enabled → 400 + silent fallback"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87808,
-          "url": "https://github.com/openclaw/openclaw/issues/87808",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87808",
           "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs client closed before turn completed"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87875,
-          "url": "https://github.com/openclaw/openclaw/issues/87875",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87875",
           "title": "[Bug]: WebChat UI: \"In progress\" status persists after model response generation"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88002,
-          "url": "https://github.com/openclaw/openclaw/issues/88002",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88002",
           "title": "[Bug]: 2026.5.27version the running session of the cron job is incorrect"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88024,
-          "url": "https://github.com/openclaw/openclaw/issues/88024",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
           "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87990,
-          "url": "https://github.com/openclaw/openclaw/issues/87990",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87990",
           "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88058,
-          "url": "https://github.com/openclaw/openclaw/issues/88058",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88058",
           "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87953,
-          "url": "https://github.com/openclaw/openclaw/issues/87953",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87953",
           "title": "[Bug]: Trusted Proxy auth still requires device pairing"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88073,
-          "url": "https://github.com/openclaw/openclaw/issues/88073",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88073",
           "title": "[Bug] Feishu dispatch fails: Cannot read properties of undefined (reading 'run') in v2026.5.27"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88139,
-          "url": "https://github.com/openclaw/openclaw/issues/88139",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88139",
           "title": "[Bug] BlueBubbles channel dispatch broken in v2026.5.27 — TypeError: Cannot read properties of undefined (reading 'run') (same regression as #87602)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87650,
-          "url": "https://github.com/openclaw/openclaw/issues/87650",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87650",
           "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87725,
-          "url": "https://github.com/openclaw/openclaw/issues/87725",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87725",
           "title": "Codex missing-terminal fallback leaks into Discord channel on 2026.5.27 despite #87079"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87744,
-          "url": "https://github.com/openclaw/openclaw/issues/87744",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87744",
           "title": "[Bug]: Codex-backed Telegram turns repeatedly time out waiting for turn/completed on 2026.5.27"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87711,
-          "url": "https://github.com/openclaw/openclaw/issues/87711",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87711",
           "title": "[Bug]: Empty assistant delivery (footer-only, \"— out\" usage) on first turn after /new on Telegram-routed topic lane — 2026.5.27"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87646,
-          "url": "https://github.com/openclaw/openclaw/issues/87646",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87646",
           "title": "【BUG】(feishu): cannot dispatch messages after v2026.5.27 upgrade — TypeError: read property 'run' of undefined"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87692,
-          "url": "https://github.com/openclaw/openclaw/issues/87692",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87692",
           "title": "[Bug]: GitHub Copilot anthropic-messages transport silently hangs ~365s in isolated cron sessions (2026.5.27)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87756,
-          "url": "https://github.com/openclaw/openclaw/issues/87756",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87756",
           "title": "[Bug]: Regression: prompt-launched Lobster workflow hangs on nested /tools/invoke, while curl-launched workflow works"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87436,
-          "url": "https://github.com/openclaw/openclaw/issues/87436",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87436",
           "title": "Codex harness runs recreate legacy openai-codex session route state after doctor --fix"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87395,
-          "url": "https://github.com/openclaw/openclaw/issues/87395",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87395",
           "title": "Native hook relay intermittently becomes unavailable on 2026.5.26, blocking memory/filesystem tools"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87679,
-          "url": "https://github.com/openclaw/openclaw/issues/87679",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87679",
           "title": "Native hook relay unavailable blocks post-image Codex shell/file operations on 2026.5.26"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87510,
-          "url": "https://github.com/openclaw/openclaw/issues/87510",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87510",
           "title": "[Bug]: Codex PreToolUse hook fails with 'Native hook relay unavailable' intermittently"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87736,
-          "url": "https://github.com/openclaw/openclaw/issues/87736",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87736",
           "title": "Regression: preflight compaction still surfaces missing Codex thread failure after #86602"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87721,
-          "url": "https://github.com/openclaw/openclaw/issues/87721",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87721",
           "title": "[Bug]: Codex plugin binding slient replies when attaching an existing Codex CLI session on a paired node"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87740,
-          "url": "https://github.com/openclaw/openclaw/issues/87740",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87740",
           "title": "Bug: Explicit thinkingLevel session override permanently reset to 'off' after each agent turn"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87699,
-          "url": "https://github.com/openclaw/openclaw/issues/87699",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87699",
           "title": "[Bug]: [BUG] UI shows agent \"running\" after conversation ends — requires manual page refresh every time"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87649,
-          "url": "https://github.com/openclaw/openclaw/issues/87649",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87649",
           "title": "WebChat \"In Progress\" indicator persists after reply is complete"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87728,
-          "url": "https://github.com/openclaw/openclaw/issues/87728",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87728",
           "title": "WebChat duplicate messages after WebSocket reconnect"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87730,
-          "url": "https://github.com/openclaw/openclaw/issues/87730",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87730",
           "title": "[Bug]: 2026.5.27 Refresh still says stale"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87732,
-          "url": "https://github.com/openclaw/openclaw/issues/87732",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87732",
           "title": "[Bug]: 2026.5.27 npm install calls itself pnpm"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87641,
-          "url": "https://github.com/openclaw/openclaw/issues/87641",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87641",
           "title": "`opencode-go/kimi-k2.6`: every multi-turn task rejected with opaque 400 \"Provider returned error\" (reason=format), rotates to fallback (2026.5.26+5.27)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87766,
-          "url": "https://github.com/openclaw/openclaw/issues/87766",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87766",
           "title": "[Bug] Kimi web_search always returns \"ungrounded\" error — Moonshot API no longer returns search_results field[Bug]:"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87687,
-          "url": "https://github.com/openclaw/openclaw/issues/87687",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87687",
           "title": "vllm openai-completions streaming parser drops tool_calls when reasoning_content streams first for gpt-oss-120b at large systemPrompt"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87689,
-          "url": "https://github.com/openclaw/openclaw/issues/87689",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87689",
           "title": "Dreaming needs supported guard to disable session transcript ingestion during QMD migrations"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87708,
-          "url": "https://github.com/openclaw/openclaw/issues/87708",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87708",
           "title": "[Bug]: message-tool Telegram replies skip auto=inbound TTS because inboundAudio is not passed"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87307,
-          "url": "https://github.com/openclaw/openclaw/issues/87307",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87307",
           "title": "Matrix thread replies sent as normal replies on 2026.5.22; /status and /model silent"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87391,
-          "url": "https://github.com/openclaw/openclaw/issues/87391",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87391",
           "title": "Bug: 回覆 routing 到錯誤 channel (Telegram miss, Control UI only)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 82002,
-          "url": "https://github.com/openclaw/openclaw/issues/82002",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/82002",
           "title": "Telegram group replies to bot messages can lose reply context under group allowlist"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87731,
-          "url": "https://github.com/openclaw/openclaw/issues/87731",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87731",
           "title": "Discord streaming (tool progress icons) works in DMs but not guild channels"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87332,
-          "url": "https://github.com/openclaw/openclaw/issues/87332",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87332",
           "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87357,
-          "url": "https://github.com/openclaw/openclaw/issues/87357",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87357",
           "title": "Telegram plugin-state hits per-plugin cap and locks out new writes (v2026.5.26)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87045,
-          "url": "https://github.com/openclaw/openclaw/issues/87045",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87045",
           "title": "appendSystemContext / prependSystemContext concatenation has no boundary marker, causing model to attribute injected rules to the last workspace file"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 72574,
-          "url": "https://github.com/openclaw/openclaw/issues/72574",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/72574",
           "title": "`btw spawn` with invalid bearer token triggers gateway/session disconnect"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 79329,
-          "url": "https://github.com/openclaw/openclaw/issues/79329",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79329",
           "title": "Cron model preflight skips entire run when local primary is unreachable, ignoring configured cloud fallbacks [AI]"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 84376,
-          "url": "https://github.com/openclaw/openclaw/issues/84376",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/84376",
           "title": "[Bug]: secrets audit flags codex \"codex-app-server\" auth marker as PLAINTEXT_FOUND (isNonSecretApiKeyMarker should include it)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87690,
-          "url": "https://github.com/openclaw/openclaw/issues/87690",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87690",
           "title": "secrets audit counts codex-app-server auth marker as plaintext"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87914,
-          "url": "https://github.com/openclaw/openclaw/issues/87914",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87914",
           "title": "diagnostics-prometheus can spam log.record errors after rollback when plugin version remains newer than OpenClaw core"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87928,
-          "url": "https://github.com/openclaw/openclaw/issues/87928",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87928",
           "title": "macOS update can leave manual-update loop and stale node host causing Gateway restart storm"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87821,
-          "url": "https://github.com/openclaw/openclaw/issues/87821",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87821",
           "title": "[Bug]: Isolated cron runs can wedge gateway"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87889,
-          "url": "https://github.com/openclaw/openclaw/issues/87889",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87889",
           "title": "Update from Dashboard skipped, works from CLI"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87894,
-          "url": "https://github.com/openclaw/openclaw/issues/87894",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87894",
           "title": "sessions.usage and usage.cost still cause 16–48s event-loop stalls on 2026.5.27 (regression on #82773)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87921,
-          "url": "https://github.com/openclaw/openclaw/issues/87921",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87921",
           "title": "[Bug]: Telegram progress mode tool progress preview not working in forum topics"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87860,
-          "url": "https://github.com/openclaw/openclaw/issues/87860",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87860",
           "title": "QQ Bot: lane errors (rate limit, timeout) are silently swallowed with no user feedback"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87897,
-          "url": "https://github.com/openclaw/openclaw/issues/87897",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87897",
           "title": "[Bug]: Web UI answers are truncated and channels.webchat config is rejected as unknown channel"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87768,
-          "url": "https://github.com/openclaw/openclaw/issues/87768",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87768",
           "title": "[Bug]: push to talk mac os companion app hard codes thinking low"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87798,
-          "url": "https://github.com/openclaw/openclaw/issues/87798",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87798",
           "title": "[Bug]: doctor emits repeated tool-policy removal audit lines at normal console level"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87854,
-          "url": "https://github.com/openclaw/openclaw/issues/87854",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87854",
           "title": "Memory Dreaming Promotion: candidates found but applied=0 (rehydratePromotionCandidate returns null for all)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87877,
-          "url": "https://github.com/openclaw/openclaw/issues/87877",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87877",
           "title": "Codex runtime persists openai-codex as session modelProvider, causing recurring legacy route doctor warning"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87801,
-          "url": "https://github.com/openclaw/openclaw/issues/87801",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87801",
           "title": "supportsAdaptiveThinking() omits opus-4-8 → reasoning-enabled requests send thinking.type.enabled → 400 + silent fallback"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87808,
-          "url": "https://github.com/openclaw/openclaw/issues/87808",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87808",
           "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs client closed before turn completed"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87875,
-          "url": "https://github.com/openclaw/openclaw/issues/87875",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87875",
           "title": "[Bug]: WebChat UI: \"In progress\" status persists after model response generation"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88002,
-          "url": "https://github.com/openclaw/openclaw/issues/88002",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88002",
           "title": "[Bug]: 2026.5.27version the running session of the cron job is incorrect"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88024,
-          "url": "https://github.com/openclaw/openclaw/issues/88024",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
           "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87990,
-          "url": "https://github.com/openclaw/openclaw/issues/87990",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87990",
           "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88058,
-          "url": "https://github.com/openclaw/openclaw/issues/88058",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88058",
           "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 87953,
-          "url": "https://github.com/openclaw/openclaw/issues/87953",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87953",
           "title": "[Bug]: Trusted Proxy auth still requires device pairing"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88073,
-          "url": "https://github.com/openclaw/openclaw/issues/88073",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88073",
           "title": "[Bug] Feishu dispatch fails: Cannot read properties of undefined (reading 'run') in v2026.5.27"
         },
         {
           "repo": "openclaw/openclaw",
           "number": 88139,
-          "url": "https://github.com/openclaw/openclaw/issues/88139",
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88139",
           "title": "[Bug] BlueBubbles channel dispatch broken in v2026.5.27 — TypeError: Cannot read properties of undefined (reading 'run') (same regression as #87602)"
         }
       ],
