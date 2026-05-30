@@ -81,6 +81,36 @@ function loadScoreSettings(): StabilityScoreSettings {
   }
 }
 
+function evidenceCount(v: VersionIssue): number {
+  return v.stabilityScore?.evidence?.length ?? 0;
+}
+
+function canonicalVersionIssues(versions: VersionIssue[]): VersionIssue[] {
+  const byKey = new Map<string, VersionIssue[]>();
+  for (const v of versions) {
+    const key = `${v.packageSlug}:${v.version}`;
+    if (!byKey.has(key)) byKey.set(key, []);
+    byKey.get(key)!.push(v);
+  }
+
+  const canonical: VersionIssue[] = [];
+  for (const [key, candidates] of byKey) {
+    const sorted = [...candidates].sort((a, b) => {
+      const evidenceDiff = evidenceCount(b) - evidenceCount(a);
+      if (evidenceDiff !== 0) return evidenceDiff;
+      const scoreBlockDiff = Number(Boolean(b.stabilityScore?.schemaVersion)) - Number(Boolean(a.stabilityScore?.schemaVersion));
+      if (scoreBlockDiff !== 0) return scoreBlockDiff;
+      return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+    });
+    const winner = sorted[0];
+    if (sorted.length > 1) {
+      console.warn(`⚠️  Duplicate ${key}: using #${winner.issueNumber}, ignoring ${sorted.slice(1).map((v) => `#${v.issueNumber}`).join(", ")}`);
+    }
+    canonical.push(winner);
+  }
+  return canonical;
+}
+
 function applyScoreFormula(versions: VersionIssue[], settings: StabilityScoreSettings) {
   const byPkg = new Map<string, VersionIssue[]>();
   for (const v of versions) {
@@ -319,10 +349,11 @@ async function main() {
     }
   }
 
-  applyScoreFormula(versions, scoreSettings);
+  const canonicalVersions = canonicalVersionIssues(versions);
+  applyScoreFormula(canonicalVersions, scoreSettings);
 
   // Sort by version number descending (newest first)
-  versions.sort((a, b) => {
+  canonicalVersions.sort((a, b) => {
     const pa = a.version.split(/[.-]/).map(Number);
     const pb = b.version.split(/[.-]/).map(Number);
     for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
@@ -332,11 +363,11 @@ async function main() {
     return 0;
   });
 
-  console.log(`📦 Found ${versions.length} version issues`);
+  console.log(`📦 Found ${canonicalVersions.length} canonical version issues (${versions.length} raw)`);
 
   // Build packages summary
   const byPkg = new Map<string, VersionIssue[]>();
-  for (const v of versions) {
+  for (const v of canonicalVersions) {
     if (!byPkg.has(v.packageSlug)) byPkg.set(v.packageSlug, []);
     byPkg.get(v.packageSlug)!.push(v);
   }
@@ -359,10 +390,10 @@ async function main() {
     oldVersionCount = old.length;
   } catch {}
 
-  writeFileSync(versionsPath, JSON.stringify(versions, null, 2) + "\n");
+  writeFileSync(versionsPath, JSON.stringify(canonicalVersions, null, 2) + "\n");
   writeFileSync(packagesPath, JSON.stringify(packages, null, 2) + "\n");
 
-  console.log(`✅ Wrote ${versions.length} versions (was ${oldVersionCount}) and ${packages.length} packages`);
+  console.log(`✅ Wrote ${canonicalVersions.length} versions (was ${oldVersionCount}) and ${packages.length} packages`);
   for (const pkg of packages) {
     console.log(`  📦 ${pkg.displayName}: ${byPkg.get(pkg.slug)!.length} version(s)`);
   }

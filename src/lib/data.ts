@@ -51,6 +51,32 @@ function loadScoreSettings(): StabilityScoreSettings {
   return _settings;
 }
 
+function evidenceCount(v: VersionIssue): number {
+  return v.stabilityScore?.evidence?.length ?? 0;
+}
+
+function canonicalVersionIssues(versions: VersionIssue[]): VersionIssue[] {
+  const byKey = new Map<string, VersionIssue[]>();
+  for (const v of versions) {
+    const key = `${v.packageSlug}:${v.version}`;
+    if (!byKey.has(key)) byKey.set(key, []);
+    byKey.get(key)!.push(v);
+  }
+
+  const canonical: VersionIssue[] = [];
+  for (const candidates of byKey.values()) {
+    const sorted = [...candidates].sort((a, b) => {
+      const evidenceDiff = evidenceCount(b) - evidenceCount(a);
+      if (evidenceDiff !== 0) return evidenceDiff;
+      const scoreBlockDiff = Number(Boolean(b.stabilityScore?.schemaVersion)) - Number(Boolean(a.stabilityScore?.schemaVersion));
+      if (scoreBlockDiff !== 0) return scoreBlockDiff;
+      return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+    });
+    canonical.push(sorted[0]);
+  }
+  return canonical;
+}
+
 function applyScoreFormula(versions: VersionIssue[]): VersionIssue[] {
   const settings = loadScoreSettings();
   const byPkg = new Map<string, VersionIssue[]>();
@@ -81,10 +107,10 @@ function applyScoreFormula(versions: VersionIssue[]): VersionIssue[] {
 function loadVersions(): VersionIssue[] {
   if (!_versions) {
     const raw = JSON.parse(readFileSync(join(DATA_DIR, "versions.json"), "utf-8")) as VersionIssue[];
-    _versions = applyScoreFormula(raw.map((v) => ({
+    _versions = applyScoreFormula(canonicalVersionIssues(raw.map((v) => ({
       ...v,
       stabilityScore: v.stabilityScore ?? fallbackStabilityScore(v.thumbsUp ?? 0, v.thumbsDown ?? 0, "pending"),
-    })));
+    }))));
   }
   return _versions!;
 }
