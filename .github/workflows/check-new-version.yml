@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: read
+  contents: write
   issues: write
   actions: write
 
@@ -35,23 +35,38 @@ jobs:
             versions.forEach(x => console.log(x));
           ")
 
-          # Get existing version issues.
-          # Do NOT rely on label-filtered `gh issue list` for de-dupe: on 2026-05-26
-          # it failed to return older labeled version issues (#73/#74), causing duplicate
-          # version issues (#97/#98). Title scan across all issues is the safer source.
-          EXISTING=$(gh issue list --repo exisz/IsItStable --state all --limit 1000 --json title | node -e "
-            const d = require('fs').readFileSync('/dev/stdin','utf8');
-            JSON.parse(d).forEach(i => {
-              const m = i.title.match(/\[v([^\]]+)\]/);
-              if (m) console.log(m[1]);
-            });
-          ")
+          # Fast path: read local title-only cache. This avoids an hourly full GitHub scan.
+          # If npm shows a version missing from cache, refresh the title cache once via GraphQL
+          # before creating anything. Body/content is intentionally not cached here.
+          CACHE=data/version-title-cache.json
+          if [ -f "$CACHE" ]; then
+            EXISTING=$(node -e "const c=require('./data/version-title-cache.json'); for (const v of c.versions || []) console.log(v.version)")
+          else
+            EXISTING=""
+          fi
 
-          # Create issues for new versions
+          MISSING=$(for V in $VERSIONS; do
+            if ! echo "$EXISTING" | grep -qx "$V"; then echo "$V"; fi
+          done)
+
+          if [ -n "$MISSING" ]; then
+            echo "Cache miss for version(s): $MISSING"
+            node scripts/refresh-version-title-cache.mjs --print-versions > /tmp/existing_versions
+            EXISTING=$(cat /tmp/existing_versions)
+            if ! git diff --quiet -- "$CACHE"; then
+              git config user.name "github-actions[bot]"
+              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              git add "$CACHE"
+              git commit -m "data: refresh version title cache"
+              git push
+            fi
+          fi
+
+          # Create issues for versions still missing after cache refresh.
           CREATED=0
           for V in $VERSIONS; do
             if ! echo "$EXISTING" | grep -qx "$V"; then
-              echo "New version found: $V"
+              echo "New version found after cache refresh: $V"
               gh issue create --repo exisz/IsItStable \
                 --title "[v${V}] [OpenClaw] Is it stable?" \
                 --label version,pkg:openclaw \
@@ -70,6 +85,15 @@ jobs:
               CREATED=$((CREATED + 1))
             fi
           done
+
+          if [ $CREATED -gt 0 ]; then
+            node scripts/refresh-version-title-cache.mjs
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "$CACHE"
+            git commit -m "data: refresh version title cache" || true
+            git push || true
+          fi
 
           # Trigger sync if new versions were created
           if [ $CREATED -gt 0 ]; then
