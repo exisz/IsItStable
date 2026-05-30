@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { writeFileSync, readFileSync, mkdirSync, existsSync } from "fs";
+import { writeFileSync, readFileSync, mkdirSync, existsSync, readdirSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
 import { computeFormula, computeSurvivalDays, DEFAULT_STABILITY_SCORE_SETTINGS, fallbackStabilityScore, parseStabilityBlock, withFormula, type StabilityScore, type StabilityScoreSettings } from "../src/lib/stability";
@@ -10,6 +10,7 @@ const GITHUB_API = "https://api.github.com";
 const __dirname = typeof import.meta.dirname === "string" ? import.meta.dirname : join(fileURLToPath(import.meta.url), "..");
 const DATA_DIR = join(__dirname, "..", "data");
 const SETTINGS_PATH = join(DATA_DIR, "settings.json");
+const PACKAGE_OVERRIDES_DIR = join(DATA_DIR, "packages.d");
 const FIXED_SPONSORS = [
   {
     name: "Exis",
@@ -304,10 +305,21 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
   return issues;
 }
 
+function loadPackageOverrides(): VersionIssue[] {
+  if (!existsSync(PACKAGE_OVERRIDES_DIR)) return [];
+  const versions: VersionIssue[] = [];
+  for (const file of readdirSync(PACKAGE_OVERRIDES_DIR)) {
+    if (!file.endsWith(".json")) continue;
+    const raw = JSON.parse(readFileSync(join(PACKAGE_OVERRIDES_DIR, file), "utf-8"));
+    for (const version of raw.versions ?? []) versions.push(version as VersionIssue);
+  }
+  return versions;
+}
+
 async function main() {
   console.log("🔄 Syncing version data from GitHub...");
 
-  const versions = await fetchAllVersionIssues();
+  const versions = [...await fetchAllVersionIssues(), ...loadPackageOverrides()];
   const scoreSettings = loadScoreSettings();
 
   // Override createdAt with real npm publish times

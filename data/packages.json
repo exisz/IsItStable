@@ -1397,5 +1397,49 @@
       "thumbsDown": 0,
       "createdAt": "2026-05-28T11:41:30.934Z"
     }
+  },
+  {
+    "name": "hermes-agent",
+    "slug": "hermes-agent",
+    "displayName": "Hermes Agent",
+    "latestVersion": {
+      "issueNumber": 83,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/83",
+      "version": "0.15.2",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "verdict": "pending",
+      "verdictComment": "Freshly tracked from npm: Hermes Agent is moving fast, but the latest bridge has a clean IsItStable slate so far. Ship with normal new-agent caution.",
+      "referencedIssues": [],
+      "stabilityScore": {
+        "schemaVersion": "isitstable:v1",
+        "baseScore": 80,
+        "score": 82,
+        "verdict": "pending",
+        "votePenalty": 0,
+        "evidencePenalty": 0,
+        "survivalDays": 0,
+        "survivalBonus": 0,
+        "curated": true,
+        "curatedBonus": 2,
+        "formula": {
+          "baseScore": 80,
+          "evidencePenalty": 0,
+          "votePenalty": 0,
+          "survivalDays": 0,
+          "survivalPointsPerDay": 3,
+          "survivalCreditedDays": 0,
+          "survivalBonus": 0,
+          "curatedBonus": 2,
+          "score": 82
+        },
+        "affected": [],
+        "evidence": [],
+        "notes": "Initial Hermes Agent tracking entry. npm package hermes-agent@0.15.2 was published 2026-05-29T20:23:13.259Z."
+      },
+      "thumbsUp": 0,
+      "thumbsDown": 0,
+      "createdAt": "2026-05-29T20:23:13.259Z"
+    }
   }
 ]
