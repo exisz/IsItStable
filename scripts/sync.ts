@@ -45,6 +45,24 @@ interface PackageSummary {
   latestVersion?: VersionIssue;
 }
 
+interface VersionIssueQueryResult {
+  repository: {
+    issues: {
+      pageInfo: { hasNextPage: boolean; endCursor: string | null };
+      nodes: {
+        number: number;
+        title: string;
+        body: string | null;
+        url: string;
+        createdAt: string;
+        labels: { nodes: { name: string }[] };
+        thumbsUp: { totalCount: number };
+        thumbsDown: { totalCount: number };
+      }[];
+    };
+  };
+}
+
 function loadScoreSettings(): StabilityScoreSettings {
   try {
     const raw = JSON.parse(readFileSync(SETTINGS_PATH, "utf-8"));
@@ -208,23 +226,7 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
   `;
 
   while (true) {
-    const data = await ghGraphql<{
-      repository: {
-        issues: {
-          pageInfo: { hasNextPage: boolean; endCursor: string | null };
-          nodes: {
-            number: number;
-            title: string;
-            body: string | null;
-            url: string;
-            createdAt: string;
-            labels: { nodes: { name: string }[] };
-            thumbsUp: { totalCount: number };
-            thumbsDown: { totalCount: number };
-          }[];
-        };
-      };
-    }>(query, { owner: REPO_OWNER, repo: REPO_NAME, after });
+    const data: VersionIssueQueryResult = await ghGraphql<VersionIssueQueryResult>(query, { owner: REPO_OWNER, repo: REPO_NAME, after });
 
     const page = data.repository.issues;
     for (const issue of page.nodes) {

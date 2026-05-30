@@ -1397,5 +1397,10 @@
       "thumbsDown": 0,
       "createdAt": "2026-05-28T11:41:30.934Z"
     }
+  },
+  {
+    "name": "hermes-agent",
+    "slug": "hermes-agent",
+    "displayName": "Hermes Agent"
   }
 ]
