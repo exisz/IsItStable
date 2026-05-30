@@ -119,7 +119,9 @@ function parseBody(body: string | null, thumbsUp: number, thumbsDown: number, ve
   let m: RegExpExecArray | null;
   const re = new RegExp(ISSUE_LINK_RE.source, "g");
   while ((m = re.exec(body))) {
-    result.referencedIssues.push({ repo: m[1], number: parseInt(m[2]), url: `https://github.com/${m[1]}/issues/${m[2]}` });
+    // Use redirect.github.com so IsItStable's generated evidence links do not
+    // create noisy GitHub backlinks on every upstream issue we reference.
+    result.referencedIssues.push({ repo: m[1], number: parseInt(m[2]), url: `https://redirect.github.com/${m[1]}/issues/${m[2]}` });
   }
 
 
