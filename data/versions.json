@@ -6,7 +6,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "New release fog: early evidence is already lighting up Feishu dispatch, Codex completion, Discord media handoff, plugin config, browser attach, cron isolation, and gateway/runtime edges. This is <24h evidence collection, not a final score call.",
+    "verdictComment": "Budget-depleting chaos: Bedrock registration vaporized, event-loop collapse takes down Discord + Telegram simultaneously, the macOS updater enters a KeepAlive death spiral, and the approval boundary leaks. Eighteen evidence items; the website will tell you the number.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -16,6 +16,12 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 88475,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88475",
+        "title": "🐛 Feishu Channel: Messages received but not processed (runEmbeddedAgent undefined on first dispatch)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 88369,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88369",
         "title": "[Bug]: isolated cron can still self-conflict on a dedicated cron agent with EmbeddedAttemptSessionTakeoverError"
@@ -79,6 +85,48 @@
         "number": 88257,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88257",
         "title": "Bug: WebSocket close before connection established causes uncaughtException crash — not covered by isBenignUncaughtExceptionError"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88707,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88707",
+        "title": "[Bug] Regression 2026.5.27→2026.5.28: \"No API provider registered for api: bedrock-converse-stream\" — pi-ai removal breaks Bedrock provider registration; bearer token auth broken"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88728,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88728",
+        "title": "[Bug]:Discord WebSocket closes (1006) simultaneously with Telegram getUpdates stalls — isolation not working in         2026.5.28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88657,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88657",
+        "title": "Bug: DeepSeek V4 Flash incomplete turn (payloads=0, tools=2, replaySafe=no, stopReason=stop) in 2026.5.27/28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88694,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88694",
+        "title": "[Bug] Matrix channel dispatch broken in v2026.5.27/5.28 — TypeError: Cannot read properties of undefined (reading 'run')"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88736,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88736",
+        "title": "Updater submits manual-update job via `launchctl submit` → KeepAlive defaults true → infinite update loop that repeatedly stops the gateway"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88773,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88773",
+        "title": "[Bug]: Telegram DM exec requires approval despite allowlist + ask:off — works in webchat, not in Telegram"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88521,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88521",
+        "title": "[Bug]: Discord reply metadata is not exposed to before_dispatch hooks"
       },
       {
         "repo": "openclaw/openclaw",
@@ -88,6 +136,12 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 88475,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88475",
+        "title": "🐛 Feishu Channel: Messages received but not processed (runEmbeddedAgent undefined on first dispatch)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 88369,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88369",
         "title": "[Bug]: isolated cron can still self-conflict on a dedicated cron agent with EmbeddedAttemptSessionTakeoverError"
@@ -151,29 +205,71 @@
         "number": 88257,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88257",
         "title": "Bug: WebSocket close before connection established causes uncaughtException crash — not covered by isBenignUncaughtExceptionError"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88707,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88707",
+        "title": "[Bug] Regression 2026.5.27→2026.5.28: \"No API provider registered for api: bedrock-converse-stream\" — pi-ai removal breaks Bedrock provider registration; bearer token auth broken"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88728,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88728",
+        "title": "[Bug]:Discord WebSocket closes (1006) simultaneously with Telegram getUpdates stalls — isolation not working in         2026.5.28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88657,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88657",
+        "title": "Bug: DeepSeek V4 Flash incomplete turn (payloads=0, tools=2, replaySafe=no, stopReason=stop) in 2026.5.27/28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88694,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88694",
+        "title": "[Bug] Matrix channel dispatch broken in v2026.5.27/5.28 — TypeError: Cannot read properties of undefined (reading 'run')"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88736,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88736",
+        "title": "Updater submits manual-update job via `launchctl submit` → KeepAlive defaults true → infinite update loop that repeatedly stops the gateway"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88773,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88773",
+        "title": "[Bug]: Telegram DM exec requires approval despite allowlist + ask:off — works in webchat, not in Telegram"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88521,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88521",
+        "title": "[Bug]: Discord reply metadata is not exposed to before_dispatch hooks"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 51,
+      "score": 32,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 29,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "evidencePenalty": 51,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 29,
+        "evidencePenalty": 51,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 51
+        "score": 32
       },
       "affected": [
         "feishu",
@@ -184,7 +280,11 @@
         "cron-runtime",
         "node-surface",
         "runtime",
-        "telegram"
+        "telegram",
+        "matrix",
+        "provider-integration",
+        "update-system",
+        "approval-boundary"
       ],
       "evidence": [
         {
@@ -196,7 +296,18 @@
           "type": "channel-specific",
           "severity": 1,
           "penalty": 1,
-          "reason": "Feishu WebSocket inbound dispatch throws TypeError on 2026.5.27+ / 2026.5.28 beta"
+          "reason": "Feishu WebSocket inbound dispatch throws TypeError on 2026.5.27+ / 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#88475",
+          "repo": "openclaw/openclaw",
+          "number": 88475,
+          "url": "https://github.com/openclaw/openclaw/issues/88475",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Feishu messages received but not processed — runEmbeddedAgent undefined on first dispatch in 2026.5.28-beta.4"
         },
         {
           "issue": "openclaw/openclaw#88369",
@@ -207,7 +318,7 @@
           "type": "kernel",
           "severity": 4,
           "penalty": 4,
-          "reason": "Isolated cron can still self-conflict with EmbeddedAttemptSessionTakeoverError on 2026.5.28 beta"
+          "reason": "Isolated cron can still self-conflict with EmbeddedAttemptSessionTakeoverError on 2026.5.28"
         },
         {
           "issue": "openclaw/openclaw#88312",
@@ -218,7 +329,7 @@
           "type": "runtime",
           "severity": 4,
           "penalty": 4,
-          "reason": "Codex app-server turn-completion stall reproduced through 2026.5.28 beta builds"
+          "reason": "Codex app-server turn-completion stall reproduced through 2026.5.28 builds"
         },
         {
           "issue": "openclaw/openclaw#84256",
@@ -240,7 +351,7 @@
           "type": "channel-specific",
           "severity": 1,
           "penalty": 1,
-          "reason": "image_generate completion duplicate-sends Discord attachments on 2026.5.28 beta"
+          "reason": "image_generate completion duplicate-sends Discord attachments on 2026.5.28"
         },
         {
           "issue": "openclaw/openclaw#88307",
@@ -273,7 +384,7 @@
           "type": "runtime",
           "severity": 2,
           "penalty": 2,
-          "reason": "Already-paired macOS node asks for approval again on every relaunch in 2026.5.28 beta"
+          "reason": "Already-paired macOS node asks for approval again on every relaunch in 2026.5.28"
         },
         {
           "issue": "openclaw/openclaw#88195",
@@ -284,7 +395,7 @@
           "type": "tool-specific",
           "severity": 3,
           "penalty": 3,
-          "reason": "${ENV_VAR} plugin config refs are passed literally to plugins on 2026.5.28 beta"
+          "reason": "${ENV_VAR} plugin config refs are passed literally to plugins on 2026.5.28"
         },
         {
           "issue": "openclaw/openclaw#88213",
@@ -295,7 +406,7 @@
           "type": "tool-specific",
           "severity": 2,
           "penalty": 2,
-          "reason": "Existing-session Chrome MCP browser attach times out despite doctor passing on 2026.5.28 beta"
+          "reason": "Existing-session Chrome MCP browser attach times out despite doctor passing on 2026.5.28"
         },
         {
           "issue": "openclaw/openclaw#88255",
@@ -318,6 +429,83 @@
           "severity": 4,
           "penalty": 4,
           "reason": "WebSocket close before connect can surface as uncaughtException crash in v2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#88707",
+          "repo": "openclaw/openclaw",
+          "number": 88707,
+          "url": "https://github.com/openclaw/openclaw/issues/88707",
+          "area": "provider-integration",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Bedrock provider registration broken after pi-ai removal in 2026.5.28 — all Bedrock calls fail with No API provider registered"
+        },
+        {
+          "issue": "openclaw/openclaw#88728",
+          "repo": "openclaw/openclaw",
+          "number": 88728,
+          "url": "https://github.com/openclaw/openclaw/issues/88728",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Discord WebSocket 1006 drops and Telegram stalls happen simultaneously — single-threaded event loop collapse in 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#88657",
+          "repo": "openclaw/openclaw",
+          "number": 88657,
+          "url": "https://github.com/openclaw/openclaw/issues/88657",
+          "area": "provider-integration",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "DeepSeek V4 Flash incomplete turns (replaySafe=no) in 2026.5.28, regressed from 2026.5.26"
+        },
+        {
+          "issue": "openclaw/openclaw#88694",
+          "repo": "openclaw/openclaw",
+          "number": 88694,
+          "url": "https://github.com/openclaw/openclaw/issues/88694",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Matrix channel dispatch broken in v2026.5.27/5.28 — TypeError on runEmbeddedAgent (closed/fixed in main)"
+        },
+        {
+          "issue": "openclaw/openclaw#88736",
+          "repo": "openclaw/openclaw",
+          "number": 88736,
+          "url": "https://github.com/openclaw/openclaw/issues/88736",
+          "area": "update-system",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "macOS updater launchctl submit sets KeepAlive=true by default, creating infinite update loop that kills gateway on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#88773",
+          "repo": "openclaw/openclaw",
+          "number": 88773,
+          "url": "https://github.com/openclaw/openclaw/issues/88773",
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Telegram DM exec approval required despite allowlist + ask:off in 2026.5.28 — approval boundary leak for channel-scoped exec"
+        },
+        {
+          "issue": "openclaw/openclaw#88521",
+          "repo": "openclaw/openclaw",
+          "number": 88521,
+          "url": "https://github.com/openclaw/openclaw/issues/88521",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord reply metadata not exposed to before_dispatch hooks in 2026.5.28"
         }
       ]
     },
@@ -332,7 +520,7 @@
     "packageName": "openclaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Afternoon sweep: more v2026.5.27 shrapnel landed — Feishu DMs, Codex turns, gateway service env, SIGTERM loops, and local model routing. This release is now mostly evidence storage with a version tag.",
+    "verdictComment": "The graveyard keeps expanding: 67 evidence items with penalty -182. Your colleagues upgraded and are currently on hold with support.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -720,6 +908,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 88312,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88312",
+        "title": "[Bug]: [Regression] 2026.5.27: Codex app-server turn-completion stall returns (\"Codex stopped before confirming the turn was complete\") — regression of #84076 (fixed by #85107)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88657,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88657",
+        "title": "Bug: DeepSeek V4 Flash incomplete turn (payloads=0, tools=2, replaySafe=no, stopReason=stop) in 2026.5.27/28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88488,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88488",
+        "title": "[Bug]: Unable to remove the android node"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 87650,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/87650",
         "title": "OpenClaw 2026.5.27: onboard and doctor --fix did not recover Codex provider/runtime mismatch after update"
@@ -1101,6 +1307,24 @@
         "number": 88267,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88267",
         "title": "[Bug]:"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88312,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88312",
+        "title": "[Bug]: [Regression] 2026.5.27: Codex app-server turn-completion stall returns (\"Codex stopped before confirming the turn was complete\") — regression of #84076 (fixed by #85107)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88657,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88657",
+        "title": "Bug: DeepSeek V4 Flash incomplete turn (payloads=0, tools=2, replaySafe=no, stopReason=stop) in 2026.5.27/28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88488,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88488",
+        "title": "[Bug]: Unable to remove the android node"
       }
     ],
     "stabilityScore": {
@@ -1109,14 +1333,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 174,
+      "evidencePenalty": 182,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 174,
+        "evidencePenalty": 182,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
@@ -1873,6 +2097,39 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Docker ARM64 runtime rejects configured Ollama model despite openclaw.json entry"
+        },
+        {
+          "issue": "openclaw/openclaw#88312",
+          "repo": "openclaw/openclaw",
+          "number": 88312,
+          "url": "https://github.com/openclaw/openclaw/issues/88312",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex app-server turn-completion stall regressed in 2026.5.27 — Codex stopped before confirming turn complete"
+        },
+        {
+          "issue": "openclaw/openclaw#88657",
+          "repo": "openclaw/openclaw",
+          "number": 88657,
+          "url": "https://github.com/openclaw/openclaw/issues/88657",
+          "area": "provider-integration",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "DeepSeek V4 Flash incomplete turns (replaySafe=no) in 2026.5.27, regressed from 2026.5.26"
+        },
+        {
+          "issue": "openclaw/openclaw#88488",
+          "repo": "openclaw/openclaw",
+          "number": 88488,
+          "url": "https://github.com/openclaw/openclaw/issues/88488",
+          "area": "node-surface",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Android node cannot be removed via nodes remove command in 2026.5.27"
         }
       ]
     },
@@ -12504,24 +12761,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 79,
+      "score": 82,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 6,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": true,
       "curatedBonus": 2,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 6,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 2,
-        "score": 79
+        "score": 82
       },
       "affected": [
         "docker",
