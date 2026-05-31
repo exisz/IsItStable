@@ -12,7 +12,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Historical clean-slate Hermes Agent tracking point: no linked stability evidence yet.",
+      "verdictComment": "The one version that doesn't restart in a Docker loop. No reported stability issues — clean slate so far.",
       "referencedIssues": [],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
@@ -38,7 +38,7 @@
         },
         "affected": [],
         "evidence": [],
-        "notes": "Initial Hermes Agent npm release added as a historical clean-slate tracking point. No upstream stability evidence has been linked yet."
+        "notes": "Historical clean-slate tracking. No upstream issues linked yet. Docker users report v0.14.x as the stable baseline before v0.15.0 regressions."
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
@@ -51,33 +51,44 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Historical clean-slate Hermes Agent tracking point: no linked stability evidence yet.",
-      "referencedIssues": [],
+      "verdictComment": "Gateway enters a restart loop on Docker 28.5.2+ (s6-overlay signal=UNKNOWN). Workaround: HERMES_GATEWAY_NO_SUPERVISE=1. Non-Docker installs unaffected.",
+      "referencedIssues": [
+        "NousResearch/Hermes-Agent#35394"
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 76,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 4,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 4,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 76
         },
-        "affected": [],
-        "evidence": [],
-        "notes": "Recent Hermes Agent historical release added for baseline trend tracking. No upstream stability evidence has been linked yet."
+        "affected": ["docker", "gateway"],
+        "evidence": [
+          {
+            "issue": "NousResearch/Hermes-Agent#35394",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Gateway restart loop under s6-overlay on Docker 28.5.2+ (signal=UNKNOWN). Explicitly reproduced on v0.15.1. Workaround: HERMES_GATEWAY_NO_SUPERVISE=1."
+          }
+        ],
+        "notes": "Docker s6-overlay regression affecting all v0.15.x. Non-Docker (pipx/CLI) installs are unaffected by this issue."
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
@@ -90,33 +101,53 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Freshly tracked from npm: Hermes Agent is moving fast, but the latest bridge has a clean IsItStable slate so far. Ship with normal new-agent caution.",
-      "referencedIssues": [],
+      "verdictComment": "Gateway plays dead in Docker 28.5.2+ and speaks raw i18n key-salad from pip installs. CLI/non-Docker use is fine. Two known bugs, both with workarounds.",
+      "referencedIssues": [
+        "NousResearch/Hermes-Agent#35394",
+        "NousResearch/Hermes-Agent#35374"
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 82,
+        "score": 76,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 6,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": true,
         "curatedBonus": 2,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 6,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 2,
-          "score": 82
+          "score": 76
         },
-        "affected": [],
-        "evidence": [],
-        "notes": "Current Hermes Agent tracking entry. npm package hermes-agent@0.15.2 was published 2026-05-29T20:23:13.259Z."
+        "affected": ["docker", "gateway", "runtime"],
+        "evidence": [
+          {
+            "issue": "NousResearch/Hermes-Agent#35394",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Gateway restart loop under s6-overlay on Docker 28.5.2+ (signal=UNKNOWN). Explicitly reproduced on v0.15.2. Workaround: HERMES_GATEWAY_NO_SUPERVISE=1."
+          },
+          {
+            "issue": "NousResearch/Hermes-Agent#35374",
+            "area": "runtime",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "PyPI wheel omits locales/ directory, causing slash commands to display raw i18n keys (e.g. gateway.model.switched) instead of human-readable text. Explicitly confirmed on v0.15.2."
+          }
+        ],
+        "notes": "npm package hermes-agent@0.15.2 published 2026-05-29. Two active upstream regressions: s6-overlay gateway restart loop (Docker 28.5.2+) and missing locales in PyPI wheel. Fix PRs pending upstream."
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
