@@ -2,12 +2,12 @@
   {
     "name": "openclaw",
     "slug": "openclaw",
-    "displayName": "openclaw",
+    "displayName": "OpenClaw",
     "latestVersion": {
       "issueNumber": 113,
       "issueUrl": "https://github.com/exisz/IsItStable/issues/113",
       "version": "2026.5.28",
-      "packageName": "openclaw",
+      "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
       "verdictComment": "Twenty-seven cuts: provider registration, channel isolation, gateway crashes, update fallout, and message delivery weirdness. This release is doing a full 3am incident cosplay; the website owns the score.",
@@ -689,63 +689,38 @@
     "slug": "hermes-agent",
     "displayName": "Hermes Agent",
     "latestVersion": {
-      "issueNumber": 83,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/83",
+      "issueNumber": 117,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/117",
       "version": "0.15.2",
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Gateway plays dead in Docker 28.5.2+ and speaks raw i18n key-salad from pip installs. CLI/non-Docker use is fine. Two known bugs, both with workarounds.",
-      "referencedIssues": [
-        "NousResearch/Hermes-Agent#35393",
-        "NousResearch/Hermes-Agent#35374"
-      ],
+      "verdictComment": "",
+      "referencedIssues": [],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 85,
+        "score": 89,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 6,
+        "evidencePenalty": 0,
         "survivalDays": 3,
         "survivalBonus": 9,
-        "curated": true,
-        "curatedBonus": 2,
+        "curated": false,
+        "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 6,
+          "evidencePenalty": 0,
           "votePenalty": 0,
           "survivalDays": 3,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 3,
           "survivalBonus": 9,
-          "curatedBonus": 2,
-          "score": 85
+          "curatedBonus": 0,
+          "score": 89
         },
-        "affected": [
-          "docker",
-          "gateway",
-          "runtime"
-        ],
-        "evidence": [
-          {
-            "issue": "NousResearch/Hermes-Agent#35393",
-            "area": "gateway",
-            "type": "kernel",
-            "severity": 4,
-            "penalty": 4,
-            "reason": "Gateway restart loop under s6-overlay on Docker 28.5.2+ (signal=UNKNOWN). Explicitly reproduced on v0.15.2. Workaround: HERMES_GATEWAY_NO_SUPERVISE=1."
-          },
-          {
-            "issue": "NousResearch/Hermes-Agent#35374",
-            "area": "runtime",
-            "type": "tool",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "PyPI wheel omits locales/ directory, causing slash commands to display raw i18n keys (e.g. gateway.model.switched) instead of human-readable text. Explicitly confirmed on v0.15.2."
-          }
-        ],
-        "notes": "npm package hermes-agent@0.15.2 published 2026-05-29. Two active upstream regressions: s6-overlay gateway restart loop (Docker 28.5.2+) and missing locales in PyPI wheel. Fix PRs pending upstream. Canonical upstream report is closed as completed/duplicate; keep evidence until a post-fix npm version is published."
+        "affected": [],
+        "evidence": []
       },
       "thumbsUp": 0,
       "thumbsDown": 0,

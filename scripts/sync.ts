@@ -10,6 +10,7 @@ const GITHUB_API = "https://api.github.com";
 const __dirname = typeof import.meta.dirname === "string" ? import.meta.dirname : join(fileURLToPath(import.meta.url), "..");
 const DATA_DIR = join(__dirname, "..", "data");
 const SETTINGS_PATH = join(DATA_DIR, "settings.json");
+const PACKAGE_SOURCES_PATH = join(DATA_DIR, "package-sources.json");
 const PACKAGE_OVERRIDES_DIR = join(DATA_DIR, "packages.d");
 const FIXED_SPONSORS = [
   {
@@ -46,6 +47,14 @@ interface PackageSummary {
   latestVersion?: VersionIssue;
 }
 
+interface PackageSource {
+  slug: string;
+  displayName: string;
+  npmPackage: string;
+  titlePackage?: string;
+  upstreamRepo?: string;
+}
+
 interface VersionIssueQueryResult {
   repository: {
     issues: {
@@ -62,6 +71,15 @@ interface VersionIssueQueryResult {
       }[];
     };
   };
+}
+
+function loadPackageSources(): Map<string, PackageSource> {
+  try {
+    const raw = JSON.parse(readFileSync(PACKAGE_SOURCES_PATH, "utf-8")) as PackageSource[];
+    return new Map(raw.map((source) => [source.slug, source]));
+  } catch {
+    return new Map();
+  }
 }
 
 function loadScoreSettings(): StabilityScoreSettings {
@@ -143,8 +161,8 @@ function slugify(name: string): string {
 // Legacy API compatibility only. IsItStable is score-only; do not infer editorial verdicts from labels.
 const SCORE_ONLY_LEGACY_VERDICT = "pending" as const;
 
-/** Extract package name from labels. Label: pkg:openclaw */
-function getPackageFromLabels(labels: string[]): string | null {
+/** Extract package slug from labels. Label: pkg:openclaw */
+function getPackageSlugFromLabels(labels: string[]): string | null {
   for (const l of labels) {
     if (l.startsWith("pkg:")) return l.slice(4);
   }
@@ -269,8 +287,9 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
       if (!titleMatch) continue;
       const version = titleMatch[1];
 
-      // Package from label (pkg:xxx), fallback to title
-      const packageName = getPackageFromLabels(labels) ?? titleMatch[2].trim();
+      // Display package comes from title; canonical slug comes from pkg:* label.
+      const packageName = titleMatch[2].trim();
+      const packageSlug = getPackageSlugFromLabels(labels) ?? slugify(packageName);
 
       // Score-only mode: verdict labels are legacy and intentionally ignored.
       const verdict = SCORE_ONLY_LEGACY_VERDICT;
@@ -287,7 +306,7 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
         issueUrl: issue.url,
         version,
         packageName,
-        packageSlug: slugify(packageName),
+        packageSlug,
         verdict,
         verdictComment,
         referencedIssues,
@@ -322,14 +341,17 @@ async function main() {
   const versions = [...await fetchAllVersionIssues(), ...loadPackageOverrides()];
   const scoreSettings = loadScoreSettings();
 
-  // Override createdAt with real npm publish times
-  const npmPackages = new Set(versions.map((v) => v.packageName));
+  // Override createdAt with real npm publish times. Display names in issue titles
+  // may differ from npm package names, so package-sources.json is canonical.
+  const packageSources = loadPackageSources();
+  const npmPackageFor = (v: VersionIssue) => packageSources.get(v.packageSlug)?.npmPackage ?? v.packageSlug;
+  const npmPackages = new Set(versions.map(npmPackageFor));
   const allNpmTimes: Record<string, Record<string, string>> = {};
   for (const pkg of npmPackages) {
     allNpmTimes[pkg] = await fetchNpmPublishTimes(pkg);
   }
   for (const v of versions) {
-    const npmTime = allNpmTimes[v.packageName]?.[v.version];
+    const npmTime = allNpmTimes[npmPackageFor(v)]?.[v.version];
     if (npmTime) v.createdAt = npmTime;
   }
 

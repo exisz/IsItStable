@@ -5,7 +5,7 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-  group: check-versions
+  group: check-versions-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -18,85 +18,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check for new OpenClaw versions
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check configured npm packages for new versions
+        id: check_versions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/check-new-versions.mjs
+      - name: Commit version title cache
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/version-title-cache.json
+          git diff --cached --quiet || (git commit -m "data: refresh version title cache" && git pull --rebase --autostash && git push)
+      - name: Trigger sync if new versions were created
+        if: steps.check_versions.outputs.created != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Get versions >= 2026.4.23 from npm (cutoff)
-          VERSIONS=$(npm view openclaw versions --json | node -e "
-            const v = require('fs').readFileSync('/dev/stdin','utf8');
-            const cutoff = [2026, 4, 23];
-            const versions = JSON.parse(v)
-              .filter(x => !x.includes('beta') && !x.includes('alpha') && !x.includes('rc'))
-              .filter(x => {
-                const p = x.split('.').map(Number);
-                return p[0] > cutoff[0] || (p[0] === cutoff[0] && (p[1] > cutoff[1] || (p[1] === cutoff[1] && p[2] >= cutoff[2])));
-              });
-            versions.forEach(x => console.log(x));
-          ")
-
-          # Fast path: read local title-only cache. This avoids an hourly full GitHub scan.
-          # If npm shows a version missing from cache, refresh the title cache once via GraphQL
-          # before creating anything. Body/content is intentionally not cached here.
-          CACHE=data/version-title-cache.json
-          if [ -f "$CACHE" ]; then
-            EXISTING=$(node -e "const c=require('./data/version-title-cache.json'); for (const v of c.versions || []) console.log(v.version)")
-          else
-            EXISTING=""
-          fi
-
-          MISSING=$(for V in $VERSIONS; do
-            if ! echo "$EXISTING" | grep -qx "$V"; then echo "$V"; fi
-          done)
-
-          if [ -n "$MISSING" ]; then
-            echo "Cache miss for version(s): $MISSING"
-            node scripts/refresh-version-title-cache.mjs --print-versions > /tmp/existing_versions
-            EXISTING=$(cat /tmp/existing_versions)
-            if ! git diff --quiet -- "$CACHE"; then
-              git config user.name "github-actions[bot]"
-              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-              git add "$CACHE"
-              git commit -m "data: refresh version title cache"
-              git push
-            fi
-          fi
-
-          # Create issues for versions still missing after cache refresh.
-          CREATED=0
-          for V in $VERSIONS; do
-            if ! echo "$EXISTING" | grep -qx "$V"; then
-              echo "New version found after cache refresh: $V"
-              gh issue create --repo exisz/IsItStable \
-                --title "[v${V}] [OpenClaw] Is it stable?" \
-                --label version,pkg:openclaw \
-                --body "## Stability Score: pending ⏳
-          Awaiting evidence analysis. This version was auto-detected from npm.
-
-          ## Evidence
-          _No analysis yet. The operator will review GitHub issues and update the factual score._
-
-          ## Stats
-          - npm downloads: pending
-          - GitHub issues mentioning this version: pending
-
-          ---
-          _Auto-created by IsItStable version checker._"
-              CREATED=$((CREATED + 1))
-            fi
-          done
-
-          if [ $CREATED -gt 0 ]; then
-            node scripts/refresh-version-title-cache.mjs
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add "$CACHE"
-            git commit -m "data: refresh version title cache" || true
-            git push || true
-          fi
-
-          # Trigger sync if new versions were created
-          if [ $CREATED -gt 0 ]; then
-            echo "Triggering sync workflow ($CREATED new versions)..."
-            gh workflow run sync.yml --repo exisz/IsItStable
-          fi
+        run: gh workflow run sync.yml --repo exisz/IsItStable --ref "${GITHUB_REF_NAME}"
