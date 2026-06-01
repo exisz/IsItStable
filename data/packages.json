@@ -10,7 +10,7 @@
       "packageName": "openclaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Budget-depleting chaos: Bedrock registration vaporized, event-loop collapse takes down Discord + Telegram simultaneously, the macOS updater enters a KeepAlive death spiral, and the approval boundary leaks. Eighteen evidence items; the website will tell you the number.",
+      "verdictComment": "Twenty-seven cuts: provider registration, channel isolation, gateway crashes, update fallout, and message delivery weirdness. This release is doing a full 3am incident cosplay; the website owns the score.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -134,6 +134,48 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 88788,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88788",
+          "title": "GHCR 2026.5.28 image emits stale Discord progress commentary config schema"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88857,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88857",
+          "title": "Gateway crash: SyntaxError on bundled `provider-discovery.runtime.js` export `n` after in-place upgrade (2026.5.28)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 89184,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/89184",
+          "title": "[Bug] LINE channel webhook returns 404 after v2026.5.28 update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88951,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88951",
+          "title": "[Bug]: Duplicate message content"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88705,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88705",
+          "title": "Bug: npm updates drop node-llama-cpp, breaking local memory_search after every OpenClaw update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88457,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88457",
+          "title": "[Bug]: opencode-go works via direct infer but fails in embedded agent runtime with session takeover"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88929,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88929",
+          "title": "[Bug] Feishu streaming card: abnormal typewriter effect and final content truncated to last character"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 88024,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
           "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
@@ -251,29 +293,71 @@
           "number": 88521,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/88521",
           "title": "[Bug]: Discord reply metadata is not exposed to before_dispatch hooks"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88788,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88788",
+          "title": "GHCR 2026.5.28 image emits stale Discord progress commentary config schema"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88857,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88857",
+          "title": "Gateway crash: SyntaxError on bundled `provider-discovery.runtime.js` export `n` after in-place upgrade (2026.5.28)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 89184,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/89184",
+          "title": "[Bug] LINE channel webhook returns 404 after v2026.5.28 update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88951,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88951",
+          "title": "[Bug]: Duplicate message content"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88705,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88705",
+          "title": "Bug: npm updates drop node-llama-cpp, breaking local memory_search after every OpenClaw update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88457,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88457",
+          "title": "[Bug]: opencode-go works via direct infer but fails in embedded agent runtime with session takeover"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88929,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88929",
+          "title": "[Bug] Feishu streaming card: abnormal typewriter effect and final content truncated to last character"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 32,
+        "score": 19,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 51,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 67,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 51,
+          "evidencePenalty": 67,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 32
+          "score": 19
         },
         "affected": [
           "feishu",
@@ -288,7 +372,12 @@
           "matrix",
           "provider-integration",
           "update-system",
-          "approval-boundary"
+          "approval-boundary",
+          "line",
+          "message-delivery",
+          "memory",
+          "wechat",
+          "local-model"
         ],
         "evidence": [
           {
@@ -510,6 +599,83 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Discord reply metadata not exposed to before_dispatch hooks in 2026.5.28"
+          },
+          {
+            "issue": "openclaw/openclaw#88788",
+            "repo": "openclaw/openclaw",
+            "number": 88788,
+            "url": "https://github.com/openclaw/openclaw/issues/88788",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "GHCR 2026.5.28 image ships stale Discord progress commentary config schema that rejects a documented setting"
+          },
+          {
+            "issue": "openclaw/openclaw#88857",
+            "repo": "openclaw/openclaw",
+            "number": 88857,
+            "url": "https://github.com/openclaw/openclaw/issues/88857",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Gateway can crash after in-place 2026.5.28 upgrade on bundled provider-discovery runtime export SyntaxError"
+          },
+          {
+            "issue": "openclaw/openclaw#89184",
+            "repo": "openclaw/openclaw",
+            "number": 89184,
+            "url": "https://github.com/openclaw/openclaw/issues/89184",
+            "area": "line",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "LINE channel webhook returns 404 after v2026.5.28 update"
+          },
+          {
+            "issue": "openclaw/openclaw#88951",
+            "repo": "openclaw/openclaw",
+            "number": 88951,
+            "url": "https://github.com/openclaw/openclaw/issues/88951",
+            "area": "message-delivery",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Matrix/WeChat replies duplicate message content on 2026.5.28"
+          },
+          {
+            "issue": "openclaw/openclaw#88705",
+            "repo": "openclaw/openclaw",
+            "number": 88705,
+            "url": "https://github.com/openclaw/openclaw/issues/88705",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "npm updates drop node-llama-cpp, breaking local memory_search after every OpenClaw update to 2026.5.28"
+          },
+          {
+            "issue": "openclaw/openclaw#88457",
+            "repo": "openclaw/openclaw",
+            "number": 88457,
+            "url": "https://github.com/openclaw/openclaw/issues/88457",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Embedded agent runtime still fails with session takeover on 2026.5.28 even when direct provider inference works"
+          },
+          {
+            "issue": "openclaw/openclaw#88929",
+            "repo": "openclaw/openclaw",
+            "number": 88929,
+            "url": "https://github.com/openclaw/openclaw/issues/88929",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Feishu streaming card typewriter effect truncates final content to the last character on 2026.5.28"
           }
         ]
       },
@@ -537,24 +703,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 82,
+        "score": 85,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 6,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": true,
         "curatedBonus": 2,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 6,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 2,
-          "score": 82
+          "score": 85
         },
         "affected": [
           "docker",
