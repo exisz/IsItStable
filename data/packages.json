@@ -531,7 +531,7 @@
       "verdict": "pending",
       "verdictComment": "Gateway plays dead in Docker 28.5.2+ and speaks raw i18n key-salad from pip installs. CLI/non-Docker use is fine. Two known bugs, both with workarounds.",
       "referencedIssues": [
-        "NousResearch/Hermes-Agent#35394",
+        "NousResearch/Hermes-Agent#35393",
         "NousResearch/Hermes-Agent#35374"
       ],
       "stabilityScore": {
@@ -563,7 +563,7 @@
         ],
         "evidence": [
           {
-            "issue": "NousResearch/Hermes-Agent#35394",
+            "issue": "NousResearch/Hermes-Agent#35393",
             "area": "gateway",
             "type": "kernel",
             "severity": 4,
@@ -579,7 +579,7 @@
             "reason": "PyPI wheel omits locales/ directory, causing slash commands to display raw i18n keys (e.g. gateway.model.switched) instead of human-readable text. Explicitly confirmed on v0.15.2."
           }
         ],
-        "notes": "npm package hermes-agent@0.15.2 published 2026-05-29. Two active upstream regressions: s6-overlay gateway restart loop (Docker 28.5.2+) and missing locales in PyPI wheel. Fix PRs pending upstream."
+        "notes": "npm package hermes-agent@0.15.2 published 2026-05-29. Two active upstream regressions: s6-overlay gateway restart loop (Docker 28.5.2+) and missing locales in PyPI wheel. Fix PRs pending upstream. Canonical upstream report is closed as completed/duplicate; keep evidence until a post-fix npm version is published."
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
