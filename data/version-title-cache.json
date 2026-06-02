@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-02T07:31:35.386Z",
+  "generatedAt": "2026-06-02T09:22:02.475Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2331,6 +2331,7 @@
         "affected:feishu",
         "affected:runtime",
         "affected:telegram",
+        "affected:tool",
         "affected:matrix",
         "affected:wechat",
         "affected:browser",
@@ -2338,6 +2339,7 @@
         "affected:plugin-system",
         "affected:codex",
         "affected:cron-runtime",
+        "affected:macos",
         "affected:node-surface",
         "affected:provider-integration",
         "affected:local-model",
@@ -2350,7 +2352,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/113",
       "createdAt": "2026-05-30T20:09:41Z",
-      "updatedAt": "2026-06-01T20:33:23Z"
+      "updatedAt": "2026-06-02T08:31:24Z"
     }
   ],
   "duplicates": {
