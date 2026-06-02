@@ -687,65 +687,208 @@
   {
     "name": "hermes-agent",
     "slug": "hermes-agent",
-    "displayName": "Hermes Agent",
+    "displayName": "hermes-agent",
     "latestVersion": {
-      "issueNumber": 83,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/83",
+      "issueNumber": 117,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/117",
       "version": "0.15.2",
-      "packageName": "Hermes Agent",
+      "packageName": "hermes-agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Gateway plays dead in Docker 28.5.2+ and speaks raw i18n key-salad from pip installs. CLI/non-Docker use is fine. Two known bugs, both with workarounds.",
+      "verdictComment": "The fresh PyPI wheel is already showing packaging smoke. Dashboard auth is playing hide-and-seek at release time.",
       "referencedIssues": [
-        "NousResearch/Hermes-Agent#35393",
-        "NousResearch/Hermes-Agent#35374"
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36743,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
+          "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 34701,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34701",
+          "title": "[Bug]: Dashboard fails after updating to 0.15.2: missing hermes_cli.dashboard_auth module"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 34346,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34346",
+          "title": "v0.15.1 wheel installs hermes_cli/dashboard_auth/ to wrong path → dashboard ModuleNotFoundError"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36755,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36755",
+          "title": "bug(diagnostics): check_systemd_timing_alignment false-positive — systemctl show returns default 90s for nonexistent --user unit"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 35374,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35374",
+          "title": "PyPI wheel omits `locales/` catalogs, causing gateway slash commands to show raw i18n keys"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36813,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36813",
+          "title": "[Bug]: python3-venv (ensurepip) missing from Docker image — lazy deps installer fallback always broken"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36040,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36040",
+          "title": "[Bug]: Skins not fully loading in TUI"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36743,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
+          "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 34701,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34701",
+          "title": "[Bug]: Dashboard fails after updating to 0.15.2: missing hermes_cli.dashboard_auth module"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 34346,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34346",
+          "title": "v0.15.1 wheel installs hermes_cli/dashboard_auth/ to wrong path → dashboard ModuleNotFoundError"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36755,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36755",
+          "title": "bug(diagnostics): check_systemd_timing_alignment false-positive — systemctl show returns default 90s for nonexistent --user unit"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 35374,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35374",
+          "title": "PyPI wheel omits `locales/` catalogs, causing gateway slash commands to show raw i18n keys"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36813,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36813",
+          "title": "[Bug]: python3-venv (ensurepip) missing from Docker image — lazy deps installer fallback always broken"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36040,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36040",
+          "title": "[Bug]: Skins not fully loading in TUI"
+        }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 85,
+        "score": 72,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 6,
+        "evidencePenalty": 17,
         "survivalDays": 3,
         "survivalBonus": 9,
-        "curated": true,
-        "curatedBonus": 2,
+        "curated": false,
+        "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 6,
+          "evidencePenalty": 17,
           "votePenalty": 0,
           "survivalDays": 3,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 3,
           "survivalBonus": 9,
-          "curatedBonus": 2,
-          "score": 85
+          "curatedBonus": 0,
+          "score": 72
         },
         "affected": [
-          "docker",
-          "gateway",
-          "runtime"
+          "plugin-install",
+          "ui",
+          "service-management",
+          "upgrade"
         ],
         "evidence": [
           {
-            "issue": "NousResearch/Hermes-Agent#35393",
-            "area": "gateway",
-            "type": "kernel",
+            "issue": "NousResearch/hermes-agent#36743",
+            "repo": "NousResearch/hermes-agent",
+            "number": 36743,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/36743",
+            "area": "plugin-install",
+            "type": "runtime",
             "severity": 4,
             "penalty": 4,
-            "reason": "Gateway restart loop under s6-overlay on Docker 28.5.2+ (signal=UNKNOWN). Explicitly reproduced on v0.15.2. Workaround: HERMES_GATEWAY_NO_SUPERVISE=1."
+            "reason": "v0.15.2 PyPI wheel omits hermes_cli/dashboard_auth, crashing dashboard startup"
           },
           {
-            "issue": "NousResearch/Hermes-Agent#35374",
-            "area": "runtime",
-            "type": "tool",
+            "issue": "NousResearch/hermes-agent#34701",
+            "repo": "NousResearch/hermes-agent",
+            "number": 34701,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/34701",
+            "area": "ui",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Dashboard update to 0.15.2 reproduces ModuleNotFoundError for hermes_cli.dashboard_auth"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#34346",
+            "repo": "NousResearch/hermes-agent",
+            "number": 34346,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/34346",
+            "area": "plugin-install",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Maintainer thread confirms dashboard_auth packaging bug affects both 0.15.1 and 0.15.2 wheels"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#36755",
+            "repo": "NousResearch/hermes-agent",
+            "number": 36755,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/36755",
+            "area": "service-management",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.15.2 systemd timing diagnostics false-positive on system-level units"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#35374",
+            "repo": "NousResearch/hermes-agent",
+            "number": 35374,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/35374",
+            "area": "plugin-install",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.15.2 wheel omits locales catalogs, exposing raw i18n keys"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#36813",
+            "repo": "NousResearch/hermes-agent",
+            "number": 36813,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/36813",
+            "area": "upgrade",
+            "type": "runtime",
             "severity": 2,
             "penalty": 2,
-            "reason": "PyPI wheel omits locales/ directory, causing slash commands to display raw i18n keys (e.g. gateway.model.switched) instead of human-readable text. Explicitly confirmed on v0.15.2."
+            "reason": "0.15.2 Docker image lacks python3-venv/ensurepip, breaking lazy dependency installer fallback"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#36040",
+            "repo": "NousResearch/hermes-agent",
+            "number": 36040,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/36040",
+            "area": "ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.15.2/latest Docker image only partially loads custom TUI skins"
           }
-        ],
-        "notes": "npm package hermes-agent@0.15.2 published 2026-05-29. Two active upstream regressions: s6-overlay gateway restart loop (Docker 28.5.2+) and missing locales in PyPI wheel. Fix PRs pending upstream. Canonical upstream report is closed as completed/duplicate; keep evidence until a post-fix npm version is published."
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
