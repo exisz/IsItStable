@@ -14,7 +14,9 @@
     "npmPackage": "hermes-agent",
     "titlePackage": "Hermes Agent",
     "upstreamRepo": "NousResearch/hermes-agent",
-    "minVersion": "0.14.0",
+    "minVersion": "0.2.0",
+    "githubReleases": true,
+    "githubReleaseVersionPattern": "Hermes Agent v([0-9]+\\.[0-9]+\\.[0-9]+)",
     "labels": ["version", "pkg:hermes-agent"]
   }
 ]

@@ -1,9 +1,189 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-02T00:31:46.407Z",
+  "generatedAt": "2026-06-02T00:36:57.939Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
+    {
+      "version": "0.2.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 119,
+      "title": "[v0.2.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/119",
+      "createdAt": "2026-06-02T00:36:43Z",
+      "updatedAt": "2026-06-02T00:36:43Z"
+    },
+    {
+      "version": "0.3.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 120,
+      "title": "[v0.3.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/120",
+      "createdAt": "2026-06-02T00:36:44Z",
+      "updatedAt": "2026-06-02T00:36:44Z"
+    },
+    {
+      "version": "0.4.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 121,
+      "title": "[v0.4.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/121",
+      "createdAt": "2026-06-02T00:36:45Z",
+      "updatedAt": "2026-06-02T00:36:45Z"
+    },
+    {
+      "version": "0.5.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 122,
+      "title": "[v0.5.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/122",
+      "createdAt": "2026-06-02T00:36:46Z",
+      "updatedAt": "2026-06-02T00:36:46Z"
+    },
+    {
+      "version": "0.6.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 123,
+      "title": "[v0.6.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/123",
+      "createdAt": "2026-06-02T00:36:47Z",
+      "updatedAt": "2026-06-02T00:36:47Z"
+    },
+    {
+      "version": "0.7.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 124,
+      "title": "[v0.7.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/124",
+      "createdAt": "2026-06-02T00:36:48Z",
+      "updatedAt": "2026-06-02T00:36:48Z"
+    },
+    {
+      "version": "0.8.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 125,
+      "title": "[v0.8.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/125",
+      "createdAt": "2026-06-02T00:36:50Z",
+      "updatedAt": "2026-06-02T00:36:50Z"
+    },
+    {
+      "version": "0.9.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 126,
+      "title": "[v0.9.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/126",
+      "createdAt": "2026-06-02T00:36:51Z",
+      "updatedAt": "2026-06-02T00:36:51Z"
+    },
+    {
+      "version": "0.10.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 127,
+      "title": "[v0.10.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/127",
+      "createdAt": "2026-06-02T00:36:52Z",
+      "updatedAt": "2026-06-02T00:36:52Z"
+    },
+    {
+      "version": "0.11.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 128,
+      "title": "[v0.11.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/128",
+      "createdAt": "2026-06-02T00:36:53Z",
+      "updatedAt": "2026-06-02T00:36:53Z"
+    },
+    {
+      "version": "0.12.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 129,
+      "title": "[v0.12.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/129",
+      "createdAt": "2026-06-02T00:36:54Z",
+      "updatedAt": "2026-06-02T00:36:54Z"
+    },
+    {
+      "version": "0.13.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 130,
+      "title": "[v0.13.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/130",
+      "createdAt": "2026-06-02T00:36:55Z",
+      "updatedAt": "2026-06-02T00:36:55Z"
+    },
     {
       "version": "0.14.0",
       "packageName": "Hermes Agent",
@@ -29,6 +209,21 @@
       "url": "https://github.com/exisz/IsItStable/issues/115",
       "createdAt": "2026-06-01T23:54:21Z",
       "updatedAt": "2026-06-02T00:01:40Z"
+    },
+    {
+      "version": "0.15.0",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 131,
+      "title": "[v0.15.0] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/131",
+      "createdAt": "2026-06-02T00:36:56Z",
+      "updatedAt": "2026-06-02T00:36:56Z"
     },
     {
       "version": "0.15.1",

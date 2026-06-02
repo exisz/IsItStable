@@ -687,12 +687,12 @@
   {
     "name": "hermes-agent",
     "slug": "hermes-agent",
-    "displayName": "hermes-agent",
+    "displayName": "Hermes Agent",
     "latestVersion": {
       "issueNumber": 117,
       "issueUrl": "https://github.com/exisz/IsItStable/issues/117",
       "version": "0.15.2",
-      "packageName": "hermes-agent",
+      "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
       "verdictComment": "The fresh PyPI wheel is already showing packaging smoke. Dashboard auth is playing hide-and-seek at release time.",

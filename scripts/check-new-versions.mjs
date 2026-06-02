@@ -82,6 +82,21 @@ async function npmVersions(pkg) {
   return Object.keys(data.versions ?? {}).filter(stableVersion);
 }
 
+async function githubReleaseVersions(source) {
+  if (!source.githubReleases || !source.upstreamRepo) return [];
+  const releases = await gh(`/repos/${source.upstreamRepo}/releases?per_page=100`);
+  const pattern = source.githubReleaseVersionPattern
+    ? new RegExp(source.githubReleaseVersionPattern)
+    : /v([0-9]+\.[0-9]+\.[0-9]+)/;
+  const versions = [];
+  for (const release of releases) {
+    const text = `${release.name ?? ""} ${release.tag_name ?? ""}`;
+    const match = text.match(pattern);
+    if (match?.[1] && stableVersion(match[1])) versions.push(match[1]);
+  }
+  return versions;
+}
+
 async function fetchIssueTitleCache() {
   const query = `
     query($owner:String!, $repo:String!, $after:String) {
@@ -160,8 +175,10 @@ async function ensureLabel(name, color = '1D76DB', description = '') {
 }
 
 function issueBody(source) {
+  const sources = [`npm package \`${source.npmPackage}\``];
+  if (source.githubReleases && source.upstreamRepo) sources.push(`GitHub releases in \`${source.upstreamRepo}\``);
   return `## Stability Score: pending ⏳
-Awaiting evidence analysis. This version was auto-detected from npm package \`${source.npmPackage}\`.
+Awaiting evidence analysis. This version was auto-detected from ${sources.join(" and ")}.
 
 ## Evidence
 _No analysis yet. The operator will review upstream GitHub issues in \`${source.upstreamRepo}\` and update the factual score._
@@ -196,7 +213,10 @@ async function main() {
   let created = 0;
 
   for (const source of sources) {
-    const versions = (await npmVersions(source.npmPackage))
+    const versions = [...new Set([
+      ...(await npmVersions(source.npmPackage)),
+      ...(await githubReleaseVersions(source)),
+    ])]
       .filter((v) => !source.minVersion || gteVersion(v, source.minVersion))
       .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
     const existing = new Set(cache.versions.filter((v) => v.packageSlug === source.slug).map((v) => v.version));

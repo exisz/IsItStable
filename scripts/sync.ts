@@ -53,6 +53,8 @@ interface PackageSource {
   npmPackage: string;
   titlePackage?: string;
   upstreamRepo?: string;
+  githubReleases?: boolean;
+  githubReleaseVersionPattern?: string;
 }
 
 interface VersionIssueQueryResult {
@@ -247,6 +249,33 @@ async function fetchNpmPublishTimes(packageName: string): Promise<Record<string,
   }
 }
 
+async function fetchGithubReleaseTimes(source: PackageSource): Promise<Record<string, string>> {
+  if (!source.githubReleases || !source.upstreamRepo) return {};
+  try {
+    const res = await fetch(`https://api.github.com/repos/${source.upstreamRepo}/releases?per_page=100`, {
+      headers: {
+        Accept: "application/vnd.github+json",
+        "User-Agent": "IsItStable-Sync/1.0",
+        ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}),
+      },
+    });
+    if (!res.ok) return {};
+    const releases = await res.json() as Array<{ name?: string; tag_name?: string; published_at?: string }>;
+    const pattern = source.githubReleaseVersionPattern
+      ? new RegExp(source.githubReleaseVersionPattern)
+      : /v([0-9]+\.[0-9]+\.[0-9]+)/;
+    const times: Record<string, string> = {};
+    for (const release of releases) {
+      const text = `${release.name ?? ""} ${release.tag_name ?? ""}`;
+      const match = text.match(pattern);
+      if (match?.[1] && release.published_at) times[match[1]] = release.published_at;
+    }
+    return times;
+  } catch {
+    return {};
+  }
+}
+
 async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
   const issues: VersionIssue[] = [];
   let after: string | null = null;
@@ -350,9 +379,14 @@ async function main() {
   for (const pkg of npmPackages) {
     allNpmTimes[pkg] = await fetchNpmPublishTimes(pkg);
   }
+  const allReleaseTimes: Record<string, Record<string, string>> = {};
+  for (const source of packageSources.values()) {
+    allReleaseTimes[source.slug] = await fetchGithubReleaseTimes(source);
+  }
   for (const v of versions) {
     const npmTime = allNpmTimes[npmPackageFor(v)]?.[v.version];
-    if (npmTime) v.createdAt = npmTime;
+    const releaseTime = allReleaseTimes[v.packageSlug]?.[v.version];
+    if (npmTime || releaseTime) v.createdAt = npmTime ?? releaseTime;
   }
 
   // Fetch titles for referenced issues (batched, graceful fallback)
