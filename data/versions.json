@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Twenty-seven cuts: provider registration, channel isolation, gateway crashes, update fallout, and message delivery weirdness. This release is doing a full 3am incident cosplay; the website owns the score.",
+    "verdictComment": "Thirty-seven cuts now: provider registration, channel isolation, gateway crashes, update fallout, macOS/runtime wounds, and message delivery weirdness. This release is doing a full 3am incident cosplay; the website owns the score.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -172,6 +172,66 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 89376,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89376",
+        "title": "[Bug]: Install script detected node from mise, but Gateway use node global installed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89147,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89147",
+        "title": "Native hook relay starves mid-turn after long model-thinking gap (renewal loop tool-call-driven)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88528,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88528",
+        "title": "Gemini web_search provider returns malformed JSON response on plain searches"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89064,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89064",
+        "title": "[Bug]: Real-time logs of openclaw cron jobs are not displayed in the chat session of the webui"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87990,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/87990",
+        "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88909,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88909",
+        "title": "NSUserDefaults warning: app passes own bundle identifier as suite name"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89254,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89254",
+        "title": "Matrix channel: inbound DMs intermittently not dispatched to agent; no reply delivery; cross-user verification cannot complete (E2EE, self-hosted homeserver)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88615,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88615",
+        "title": "[Bug]: sqlite-vec fails to load on Node 22 Linux x64 (Vector store: unknown, distinct from #64776 and #65033)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89162,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89162",
+        "title": "[Bug]: Notarized macOS app auto-terminates ~0.5s after launch (no menu-bar icon) in remote mode — macOS 26"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89332,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89332",
+        "title": "[Bug]: exec spawn UNKNOWN after gateway restart — child_process pool not rebuilt"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 88024,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
         "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
@@ -331,29 +391,89 @@
         "number": 88929,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88929",
         "title": "[Bug] Feishu streaming card: abnormal typewriter effect and final content truncated to last character"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89376,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89376",
+        "title": "[Bug]: Install script detected node from mise, but Gateway use node global installed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89147,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89147",
+        "title": "Native hook relay starves mid-turn after long model-thinking gap (renewal loop tool-call-driven)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88528,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88528",
+        "title": "Gemini web_search provider returns malformed JSON response on plain searches"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89064,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89064",
+        "title": "[Bug]: Real-time logs of openclaw cron jobs are not displayed in the chat session of the webui"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87990,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/87990",
+        "title": "[Bug]: @vector-im/matrix-bot-sdk missing from dependencies in all 2026.5.x releases (Matrix bridge crash-loops on install)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88909,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88909",
+        "title": "NSUserDefaults warning: app passes own bundle identifier as suite name"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89254,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89254",
+        "title": "Matrix channel: inbound DMs intermittently not dispatched to agent; no reply delivery; cross-user verification cannot complete (E2EE, self-hosted homeserver)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88615,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88615",
+        "title": "[Bug]: sqlite-vec fails to load on Node 22 Linux x64 (Vector store: unknown, distinct from #64776 and #65033)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89162,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89162",
+        "title": "[Bug]: Notarized macOS app auto-terminates ~0.5s after launch (no menu-bar icon) in remote mode — macOS 26"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89332,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89332",
+        "title": "[Bug]: exec spawn UNKNOWN after gateway restart — child_process pool not rebuilt"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 19,
+      "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 67,
+      "evidencePenalty": 90,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 67,
+        "evidencePenalty": 90,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 19
+        "score": 0
       },
       "affected": [
         "feishu",
@@ -373,7 +493,11 @@
         "message-delivery",
         "memory",
         "wechat",
-        "local-model"
+        "local-model",
+        "install",
+        "native-hooks",
+        "macos-app",
+        "exec"
       ],
       "evidence": [
         {
@@ -672,6 +796,116 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Feishu streaming card typewriter effect truncates final content to the last character on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89376",
+          "repo": "openclaw/openclaw",
+          "number": 89376,
+          "url": "https://github.com/openclaw/openclaw/issues/89376",
+          "area": "install",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Install script detects mise Node, but Gateway launches global Node after v2026.5.28 update"
+        },
+        {
+          "issue": "openclaw/openclaw#89147",
+          "repo": "openclaw/openclaw",
+          "number": 89147,
+          "url": "https://github.com/openclaw/openclaw/issues/89147",
+          "area": "native-hooks",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Native hook relay starves mid-turn after long model-thinking gap on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#88528",
+          "repo": "openclaw/openclaw",
+          "number": 88528,
+          "url": "https://github.com/openclaw/openclaw/issues/88528",
+          "area": "provider-integration",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Gemini web_search provider returns malformed JSON on plain searches in 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89064",
+          "repo": "openclaw/openclaw",
+          "number": 89064,
+          "url": "https://github.com/openclaw/openclaw/issues/89064",
+          "area": "cron-runtime",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Cron real-time logs are not displayed in Web UI chat session on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#87990",
+          "repo": "openclaw/openclaw",
+          "number": 87990,
+          "url": "https://github.com/openclaw/openclaw/issues/87990",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Matrix bridge crash-loops because @vector-im/matrix-bot-sdk is missing from 2026.5.x dependencies"
+        },
+        {
+          "issue": "openclaw/openclaw#88909",
+          "repo": "openclaw/openclaw",
+          "number": 88909,
+          "url": "https://github.com/openclaw/openclaw/issues/88909",
+          "area": "macos-app",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "macOS app emits NSUserDefaults suite-name warning on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89254",
+          "repo": "openclaw/openclaw",
+          "number": 89254,
+          "url": "https://github.com/openclaw/openclaw/issues/89254",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Matrix inbound DMs intermittently fail to dispatch and no reply is delivered on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#88615",
+          "repo": "openclaw/openclaw",
+          "number": 88615,
+          "url": "https://github.com/openclaw/openclaw/issues/88615",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "sqlite-vec fails to load on Node 22 Linux x64, breaking vector store on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89162",
+          "repo": "openclaw/openclaw",
+          "number": 89162,
+          "url": "https://github.com/openclaw/openclaw/issues/89162",
+          "area": "macos-app",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Notarized macOS app auto-terminates shortly after launch in remote mode on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89332",
+          "repo": "openclaw/openclaw",
+          "number": 89332,
+          "url": "https://github.com/openclaw/openclaw/issues/89332",
+          "area": "exec",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "exec spawn UNKNOWN after gateway restart because child_process pool is not rebuilt on 2026.5.28"
         }
       ]
     },
