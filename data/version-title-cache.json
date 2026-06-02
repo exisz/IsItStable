@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-01T23:56:39.256Z",
+  "generatedAt": "2026-06-02T00:30:04.106Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -10,6 +10,17 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
+        "risk:tool",
+        "risk:kernel",
+        "risk:runtime",
+        "affected:gateway",
+        "affected:tool",
+        "affected:plugin-install",
+        "affected:codex",
+        "affected:ui",
+        "affected:cron",
+        "affected:windows",
+        "affected:local-model",
         "pkg:hermes-agent"
       ],
       "issueNumber": 115,
@@ -17,7 +28,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/115",
       "createdAt": "2026-06-01T23:54:21Z",
-      "updatedAt": "2026-06-01T23:54:21Z"
+      "updatedAt": "2026-06-02T00:01:40Z"
     },
     {
       "version": "0.15.1",
@@ -25,6 +36,17 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
+        "risk:channel",
+        "risk:tool",
+        "risk:runtime",
+        "affected:discord",
+        "affected:telegram",
+        "affected:gateway",
+        "affected:plugin-install",
+        "affected:upgrade",
+        "affected:cron",
+        "affected:openwebui",
+        "affected:windows",
         "pkg:hermes-agent"
       ],
       "issueNumber": 116,
@@ -32,7 +54,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/116",
       "createdAt": "2026-06-01T23:54:23Z",
-      "updatedAt": "2026-06-01T23:54:23Z"
+      "updatedAt": "2026-06-02T00:01:37Z"
     },
     {
       "version": "0.15.2",
@@ -40,6 +62,12 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
+        "risk:tool",
+        "risk:runtime",
+        "affected:plugin-install",
+        "affected:upgrade",
+        "affected:ui",
+        "affected:service-management",
         "pkg:hermes-agent"
       ],
       "issueNumber": 117,
@@ -47,7 +75,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/117",
       "createdAt": "2026-06-01T23:54:24Z",
-      "updatedAt": "2026-06-01T23:54:24Z"
+      "updatedAt": "2026-06-02T00:01:34Z"
     },
     {
       "version": "0.0.1",
