@@ -12919,32 +12919,200 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "The fresh PyPI wheel is already showing packaging smoke. Dashboard auth is playing hide-and-seek at release time.",
+    "referencedIssues": [
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36743,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
+        "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34701,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34701",
+        "title": "[Bug]: Dashboard fails after updating to 0.15.2: missing hermes_cli.dashboard_auth module"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34346,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34346",
+        "title": "v0.15.1 wheel installs hermes_cli/dashboard_auth/ to wrong path → dashboard ModuleNotFoundError"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36755,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36755",
+        "title": "bug(diagnostics): check_systemd_timing_alignment false-positive — systemctl show returns default 90s for nonexistent --user unit"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35374,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35374",
+        "title": "PyPI wheel omits `locales/` catalogs, causing gateway slash commands to show raw i18n keys"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36813,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36813",
+        "title": "[Bug]: python3-venv (ensurepip) missing from Docker image — lazy deps installer fallback always broken"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36040,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36040",
+        "title": "[Bug]: Skins not fully loading in TUI"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36743,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
+        "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34701,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34701",
+        "title": "[Bug]: Dashboard fails after updating to 0.15.2: missing hermes_cli.dashboard_auth module"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34346,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34346",
+        "title": "v0.15.1 wheel installs hermes_cli/dashboard_auth/ to wrong path → dashboard ModuleNotFoundError"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36755,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36755",
+        "title": "bug(diagnostics): check_systemd_timing_alignment false-positive — systemctl show returns default 90s for nonexistent --user unit"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35374,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35374",
+        "title": "PyPI wheel omits `locales/` catalogs, causing gateway slash commands to show raw i18n keys"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36813,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36813",
+        "title": "[Bug]: python3-venv (ensurepip) missing from Docker image — lazy deps installer fallback always broken"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36040,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36040",
+        "title": "[Bug]: Skins not fully loading in TUI"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 89,
+      "score": 72,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 17,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 17,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 89
+        "score": 72
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "plugin-install",
+        "ui",
+        "service-management",
+        "upgrade"
+      ],
+      "evidence": [
+        {
+          "issue": "NousResearch/hermes-agent#36743",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36743,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36743",
+          "area": "plugin-install",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.15.2 PyPI wheel omits hermes_cli/dashboard_auth, crashing dashboard startup"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#34701",
+          "repo": "NousResearch/hermes-agent",
+          "number": 34701,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/34701",
+          "area": "ui",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Dashboard update to 0.15.2 reproduces ModuleNotFoundError for hermes_cli.dashboard_auth"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#34346",
+          "repo": "NousResearch/hermes-agent",
+          "number": 34346,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/34346",
+          "area": "plugin-install",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Maintainer thread confirms dashboard_auth packaging bug affects both 0.15.1 and 0.15.2 wheels"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#36755",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36755,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36755",
+          "area": "service-management",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.15.2 systemd timing diagnostics false-positive on system-level units"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#35374",
+          "repo": "NousResearch/hermes-agent",
+          "number": 35374,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/35374",
+          "area": "plugin-install",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.15.2 wheel omits locales catalogs, exposing raw i18n keys"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#36813",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36813,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36813",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "0.15.2 Docker image lacks python3-venv/ensurepip, breaking lazy dependency installer fallback"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#36040",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36040,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36040",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.15.2/latest Docker image only partially loads custom TUI skins"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
@@ -12957,32 +13125,342 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "This release has a real packaging dent: adapters and dashboard pieces went missing. The 3am deploy goblin is awake.",
+    "referencedIssues": [
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34346,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34346",
+        "title": "v0.15.1 wheel installs hermes_cli/dashboard_auth/ to wrong path → dashboard ModuleNotFoundError"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34576,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34576",
+        "title": "Platform plugins (Discord, IRC, Teams, etc.) missing plugin.yaml in pip package — adapters cannot be discovered"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34511,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34511",
+        "title": "[Bug]: Discord gateway adapter not registered/discovered in PyPI v0.15.1"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36108,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36108",
+        "title": "[Bug]: Discord gateway adapter not registered/discovered for non-default profile"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34457,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34457",
+        "title": "[Bug]: s6-log lock collision loops endlessly in multi-container gateway + dashboard shared volume setups"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35026,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35026",
+        "title": "[Bug]: linux: update fails "
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35104,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35104",
+        "title": "[Bug]: windows v0.15.1 Executing the command `hermes update --force` has been stuck for a long time with no response."
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36109,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36109",
+        "title": "[BUG] v0.15.1 Windows: All LLM providers return empty HTTP 400 responses"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36867,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36867",
+        "title": "load_jobs() raises uncaught AttributeError on non-dict jobs.json, taking down the entire cron subsystem"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34491,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34491",
+        "title": "check_for_updates() cache not invalidated after pip upgrade, showing stale \"1 commit behind\""
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35472,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35472",
+        "title": "[Bug]: cwd is lost during docker init, making hermes effectively unusable"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36005,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36005",
+        "title": "[Bug]: Telegram voice/audio longer than ~4:50 shows 0:00 (duration not set on send)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 37044,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/37044",
+        "title": "[Bug]: API server gateway does not expose model reasoning/thinking blocks in /v1/chat/completions responses"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34346,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34346",
+        "title": "v0.15.1 wheel installs hermes_cli/dashboard_auth/ to wrong path → dashboard ModuleNotFoundError"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34576,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34576",
+        "title": "Platform plugins (Discord, IRC, Teams, etc.) missing plugin.yaml in pip package — adapters cannot be discovered"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34511,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34511",
+        "title": "[Bug]: Discord gateway adapter not registered/discovered in PyPI v0.15.1"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36108,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36108",
+        "title": "[Bug]: Discord gateway adapter not registered/discovered for non-default profile"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34457,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34457",
+        "title": "[Bug]: s6-log lock collision loops endlessly in multi-container gateway + dashboard shared volume setups"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35026,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35026",
+        "title": "[Bug]: linux: update fails "
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35104,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35104",
+        "title": "[Bug]: windows v0.15.1 Executing the command `hermes update --force` has been stuck for a long time with no response."
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36109,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36109",
+        "title": "[BUG] v0.15.1 Windows: All LLM providers return empty HTTP 400 responses"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36867,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36867",
+        "title": "load_jobs() raises uncaught AttributeError on non-dict jobs.json, taking down the entire cron subsystem"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34491,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34491",
+        "title": "check_for_updates() cache not invalidated after pip upgrade, showing stale \"1 commit behind\""
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35472,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35472",
+        "title": "[Bug]: cwd is lost during docker init, making hermes effectively unusable"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 36005,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36005",
+        "title": "[Bug]: Telegram voice/audio longer than ~4:50 shows 0:00 (duration not set on send)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 37044,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/37044",
+        "title": "[Bug]: API server gateway does not expose model reasoning/thinking blocks in /v1/chat/completions responses"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 50,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 30,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 30,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 50
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "plugin-install",
+        "discord",
+        "upgrade",
+        "windows",
+        "gateway",
+        "cron",
+        "telegram",
+        "openwebui"
+      ],
+      "evidence": [
+        {
+          "issue": "NousResearch/hermes-agent#34346",
+          "repo": "NousResearch/hermes-agent",
+          "number": 34346,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/34346",
+          "area": "plugin-install",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "0.15.1 wheel installs dashboard_auth to wrong path, dashboard crashes"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#34576",
+          "repo": "NousResearch/hermes-agent",
+          "number": 34576,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/34576",
+          "area": "plugin-install",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "0.15.1 PyPI package omits platform plugin.yaml manifests, adapters cannot load"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#34511",
+          "repo": "NousResearch/hermes-agent",
+          "number": 34511,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/34511",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord gateway adapter not discovered in PyPI v0.15.1"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#36108",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36108,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36108",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord gateway adapter unavailable for non-default profile on 0.15.1"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#34457",
+          "repo": "NousResearch/hermes-agent",
+          "number": 34457,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/34457",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Shared-volume gateway/dashboard stack can enter s6-log lock crash loop on 0.15.1"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#35026",
+          "repo": "NousResearch/hermes-agent",
+          "number": 35026,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/35026",
+          "area": "upgrade",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Linux hermes update fails on 0.15.1 environment"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#35104",
+          "repo": "NousResearch/hermes-agent",
+          "number": 35104,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/35104",
+          "area": "upgrade",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Windows hermes update --force hangs on 0.15.1"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#36109",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36109,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36109",
+          "area": "windows",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "0.15.1 Windows reports empty HTTP 400 responses across LLM providers"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#36867",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36867,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36867",
+          "area": "cron",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "0.15.1 load_jobs() uncaught AttributeError can take down cron subsystem"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#34491",
+          "repo": "NousResearch/hermes-agent",
+          "number": 34491,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/34491",
+          "area": "status",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Upgrade 0.14.0 → 0.15.1 leaves stale update-status cache"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#35472",
+          "repo": "NousResearch/hermes-agent",
+          "number": 35472,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/35472",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "0.15.1 Docker init loses cwd, making chat start in /opt/data"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#36005",
+          "repo": "NousResearch/hermes-agent",
+          "number": 36005,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/36005",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.15.1 Telegram voice/audio duration metadata missing for longer clips"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#37044",
+          "repo": "NousResearch/hermes-agent",
+          "number": 37044,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/37044",
+          "area": "openwebui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.15.1 API gateway omits reasoning/thinking blocks in Open WebUI chat completions"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
@@ -12995,32 +13473,273 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Older, but not quiet: Codex/provider, Windows tools, kanban, and terminal issues make this one noisy under load.",
+    "referencedIssues": [
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33578,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33578",
+        "title": "0.14.0 codex provider crashes with \"NoneType object is not iterable\" on chatgpt.com/backend-api/codex"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33932,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33932",
+        "title": "OpenAI Codex provider crashes with \"'NoneType' object is not iterable\" (HTTP None)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33439,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33439",
+        "title": "Release request: v0.14.0 broken on codex /responses (backend now requires stream:true → 'NoneType' object is not iterable); fix on main but unreleased"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 28920,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/28920",
+        "title": "[Bug]: Windows: All tools fail with multiple values for keyword argument 'creationflags' in 0.14.0"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 30010,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30010",
+        "title": "[Bug]: Kanban dashboard plugin missing manifest.json + dist/ in 0.14.0 wheel — Kanban tab never appears"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 30178,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30178",
+        "title": "[Bug]: LM Studio custom_providers per-model context_length broken in 0.14.0 — regressed to 64K"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33271,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33271",
+        "title": "[Bug]: Terminal becomes unresponsive with raw control sequences (e.g., ^[[19;1R) after interrupting a running agent with a new message  Version: Hermes CLI (latest)  Platform: macOS / Linux (observed on both)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 32207,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/32207",
+        "title": "[Bug]: /clear command freezes or bugs the terminal"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 28285,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/28285",
+        "title": "Bug: Kanban 数据库连接泄漏导致 Gateway 调度器崩溃"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 31962,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/31962",
+        "title": "Terminal UI: input field accumulates/duplicates when terminal window loses focus (Wayland + niri + Kitty)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33578,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33578",
+        "title": "0.14.0 codex provider crashes with \"NoneType object is not iterable\" on chatgpt.com/backend-api/codex"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33932,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33932",
+        "title": "OpenAI Codex provider crashes with \"'NoneType' object is not iterable\" (HTTP None)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33439,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33439",
+        "title": "Release request: v0.14.0 broken on codex /responses (backend now requires stream:true → 'NoneType' object is not iterable); fix on main but unreleased"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 28920,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/28920",
+        "title": "[Bug]: Windows: All tools fail with multiple values for keyword argument 'creationflags' in 0.14.0"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 30010,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30010",
+        "title": "[Bug]: Kanban dashboard plugin missing manifest.json + dist/ in 0.14.0 wheel — Kanban tab never appears"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 30178,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30178",
+        "title": "[Bug]: LM Studio custom_providers per-model context_length broken in 0.14.0 — regressed to 64K"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 33271,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/33271",
+        "title": "[Bug]: Terminal becomes unresponsive with raw control sequences (e.g., ^[[19;1R) after interrupting a running agent with a new message  Version: Hermes CLI (latest)  Platform: macOS / Linux (observed on both)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 32207,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/32207",
+        "title": "[Bug]: /clear command freezes or bugs the terminal"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 28285,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/28285",
+        "title": "Bug: Kanban 数据库连接泄漏导致 Gateway 调度器崩溃"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 31962,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/31962",
+        "title": "Terminal UI: input field accumulates/duplicates when terminal window loses focus (Wayland + niri + Kitty)"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 89,
+      "score": 57,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 32,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 32,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 89
+        "score": 57
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "codex",
+        "windows",
+        "plugin-install",
+        "ui",
+        "gateway",
+        "cron",
+        "local-model",
+        "tool"
+      ],
+      "evidence": [
+        {
+          "issue": "NousResearch/hermes-agent#33578",
+          "repo": "NousResearch/hermes-agent",
+          "number": 33578,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/33578",
+          "area": "codex",
+          "type": "provider-integration",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "0.14.0 Codex provider crashes with NoneType iterable error"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#33932",
+          "repo": "NousResearch/hermes-agent",
+          "number": 33932,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/33932",
+          "area": "codex",
+          "type": "provider-integration",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "0.14.0 OpenAI Codex provider reproducibly fails on HTTP None/parser shape"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#33439",
+          "repo": "NousResearch/hermes-agent",
+          "number": 33439,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/33439",
+          "area": "codex",
+          "type": "provider-integration",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Release request confirms latest 0.14.0 wheel remains broken for openai-codex"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#28920",
+          "repo": "NousResearch/hermes-agent",
+          "number": 28920,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/28920",
+          "area": "windows",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "0.14.0 Windows subprocess tools fail with duplicate creationflags"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#30010",
+          "repo": "NousResearch/hermes-agent",
+          "number": 30010,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/30010",
+          "area": "plugin-install",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "0.14.0 wheel misses Kanban dashboard manifest/dist, hiding Kanban tab"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#30178",
+          "repo": "NousResearch/hermes-agent",
+          "number": 30178,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/30178",
+          "area": "local-model",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "0.14.0 LM Studio custom provider context_length ignored/regressed"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#33271",
+          "repo": "NousResearch/hermes-agent",
+          "number": 33271,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/33271",
+          "area": "ui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "0.14.0 terminal can become unresponsive after interrupting running agent"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#32207",
+          "repo": "NousResearch/hermes-agent",
+          "number": 32207,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/32207",
+          "area": "ui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "0.14.0 /clear can freeze terminal across Windows/WSL and Debian reports"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#28285",
+          "repo": "NousResearch/hermes-agent",
+          "number": 28285,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/28285",
+          "area": "cron",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "0.14.0 kanban dispatcher DB leak crashes cron jobs"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#31962",
+          "repo": "NousResearch/hermes-agent",
+          "number": 31962,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/31962",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.14.0 terminal input duplicates after window loses focus"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
