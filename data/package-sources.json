@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "openclaw",
+    "displayName": "OpenClaw",
+    "npmPackage": "openclaw",
+    "titlePackage": "OpenClaw",
+    "upstreamRepo": "openclaw/openclaw",
+    "minVersion": "2026.4.23",
+    "labels": ["version", "pkg:openclaw"]
+  },
+  {
+    "slug": "hermes-agent",
+    "displayName": "Hermes Agent",
+    "npmPackage": "hermes-agent",
+    "titlePackage": "Hermes Agent",
+    "upstreamRepo": "NousResearch/hermes-agent",
+    "minVersion": "0.14.0",
+    "labels": ["version", "pkg:hermes-agent"]
+  }
+]

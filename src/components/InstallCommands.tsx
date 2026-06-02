@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export function InstallCommands({ packageName, version }: { packageName: string; version: string }) {
   const npmCmd = `npm install ${packageName}@${version}`;
+  const isOpenClaw = packageName === "openclaw";
   const clawCmd = `openclaw update --tag ${version}`;
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
 
@@ -20,12 +21,14 @@ export function InstallCommands({ packageName, version }: { packageName: string;
           {copiedIdx === 0 ? "Copied! ✅" : "Copy 📋"}
         </button>
       </div>
-      <div className="flex items-center justify-between gap-2 bg-[var(--color-background)] rounded-lg px-4 py-2 border border-[var(--color-border)]">
-        <code className="text-sm font-mono truncate">{clawCmd}</code>
-        <button onClick={() => copy(clawCmd, 1)} className="text-xs px-2 py-1 rounded border border-[var(--color-border)] hover:border-[var(--color-muted)] transition-colors cursor-pointer shrink-0">
-          {copiedIdx === 1 ? "Copied! ✅" : "Copy 📋"}
-        </button>
-      </div>
+      {isOpenClaw ? (
+        <div className="flex items-center justify-between gap-2 bg-[var(--color-background)] rounded-lg px-4 py-2 border border-[var(--color-border)]">
+          <code className="text-sm font-mono truncate">{clawCmd}</code>
+          <button onClick={() => copy(clawCmd, 1)} className="text-xs px-2 py-1 rounded border border-[var(--color-border)] hover:border-[var(--color-muted)] transition-colors cursor-pointer shrink-0">
+            {copiedIdx === 1 ? "Copied! ✅" : "Copy 📋"}
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

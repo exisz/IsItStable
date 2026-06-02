@@ -2,12 +2,12 @@
   {
     "name": "openclaw",
     "slug": "openclaw",
-    "displayName": "openclaw",
+    "displayName": "OpenClaw",
     "latestVersion": {
       "issueNumber": 113,
       "issueUrl": "https://github.com/exisz/IsItStable/issues/113",
       "version": "2026.5.28",
-      "packageName": "openclaw",
+      "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
       "verdictComment": "Twenty-seven cuts: provider registration, channel isolation, gateway crashes, update fallout, and message delivery weirdness. This release is doing a full 3am incident cosplay; the website owns the score.",
