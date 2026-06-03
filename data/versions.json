@@ -13295,7 +13295,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The wheel smoke turned into a small fog machine: packaging, desktop, memory, and channel edges are all leaving fingerprints.",
+    "verdictComment": "The fog machine found four more buttons: release metadata, browser sessions, Desktop remote status, and provider streaming now join the 0.15.2 evidence pile.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -13413,6 +13413,30 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 38093,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38093",
+        "title": "[Bug]: main branch reports 0.15.1 after v2026.5.29.2 release"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 38000,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38000",
+        "title": "[Bug]: Hermes Agent Browser tool always shut down browser session after each run!"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 37869,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/37869",
+        "title": "[Bug]: Desktop app shows remote connection failure while logs say remote backend is ready"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 29418,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/29418",
+        "title": "[Bug]: Nous inference API streaming times out on agent-sized payloads — non-streaming works fine"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 36743,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
         "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
@@ -13524,29 +13548,53 @@
         "number": 35844,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35844",
         "title": "Mattermost: media attachments (generated images/files) post to channel root instead of threading under the triggering message"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 38093,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38093",
+        "title": "[Bug]: main branch reports 0.15.1 after v2026.5.29.2 release"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 38000,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38000",
+        "title": "[Bug]: Hermes Agent Browser tool always shut down browser session after each run!"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 37869,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/37869",
+        "title": "[Bug]: Desktop app shows remote connection failure while logs say remote backend is ready"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 29418,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/29418",
+        "title": "[Bug]: Nous inference API streaming times out on agent-sized payloads — non-streaming works fine"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 54,
+      "score": 46,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 41,
+      "evidencePenalty": 49,
       "survivalDays": 5,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 41,
+        "evidencePenalty": 49,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 54
+        "score": 46
       },
       "affected": [
         "plugin-install",
@@ -13560,7 +13608,10 @@
         "runtime",
         "provider-integration",
         "gateway",
-        "telegram"
+        "telegram",
+        "version-metadata",
+        "browser",
+        "desktop"
       ],
       "evidence": [
         {
@@ -13771,6 +13822,50 @@
           "severity": 1,
           "penalty": 1,
           "reason": "v2026.5.29.2 Mattermost generated media uploads post to channel root instead of the triggering thread"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#38093",
+          "repo": "NousResearch/hermes-agent",
+          "number": 38093,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/38093",
+          "area": "version-metadata",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.15.2 release tag is correct but main/Git installs still report 0.15.1 metadata"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#38000",
+          "repo": "NousResearch/hermes-agent",
+          "number": 38000,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/38000",
+          "area": "browser",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "0.15.2 Windows Desktop browser tool shuts down the browser session after each run"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#37869",
+          "repo": "NousResearch/hermes-agent",
+          "number": 37869,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/37869",
+          "area": "desktop",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "0.15.2 Desktop shows remote connection failure while backend logs report ready"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#29418",
+          "repo": "NousResearch/hermes-agent",
+          "number": 29418,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/29418",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "0.15.2 agent-sized streaming payloads time out while non-streaming requests work"
         }
       ]
     },
