@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Thirty-seven cuts now: provider registration, channel isolation, gateway crashes, update fallout, macOS/runtime wounds, and message delivery weirdness. This release is doing a full 3am incident cosplay; the website owns the score.",
+    "verdictComment": "Forty-three cuts now: provider registration, channel isolation, gateway crashes, packaging holes, Codex wedges, update fallout, and config/runtime wounds. This release is doing a full 3am incident cosplay; the website owns the score.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -232,6 +232,42 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 89425,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89425",
+        "title": "[Bug]: Missing extensions/speech-core/ in npm tarball (v2026.5.28) — \"Unable to resolve bundled plugin public surface speech-core/runtime-api.js\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89444,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89444",
+        "title": "Dreaming promotion still writes raw/junk data into MEMORY.md (regression from #67580)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89445,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89445",
+        "title": "[Bug]: OpenClaw 2026.5.28 (1panel/openclaw:latest) fails to start with \"agents.list.*: Invalid input\" - downgrade to 2026.5.27 works"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89742,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89742",
+        "title": "[Bug]: Codex app-server session wedges indefinitely after a 429 rate-limit burst — terminal-idle watchdog still gated by `activeAppServerTurnRequests > 0` (regression/incomplete fix of #82681)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89664,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89664",
+        "title": "[Bug] secrets audit / doctor falsely flags static routing header as plaintext secret"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89743,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89743",
+        "title": "[Bug]: Skill loader ignores configured workspace path and hardcodes fallback to ~/.openclaw/workspace"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 88024,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
         "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
@@ -451,6 +487,42 @@
         "number": 89332,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/89332",
         "title": "[Bug]: exec spawn UNKNOWN after gateway restart — child_process pool not rebuilt"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89425,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89425",
+        "title": "[Bug]: Missing extensions/speech-core/ in npm tarball (v2026.5.28) — \"Unable to resolve bundled plugin public surface speech-core/runtime-api.js\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89444,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89444",
+        "title": "Dreaming promotion still writes raw/junk data into MEMORY.md (regression from #67580)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89445,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89445",
+        "title": "[Bug]: OpenClaw 2026.5.28 (1panel/openclaw:latest) fails to start with \"agents.list.*: Invalid input\" - downgrade to 2026.5.27 works"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89742,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89742",
+        "title": "[Bug]: Codex app-server session wedges indefinitely after a 429 rate-limit burst — terminal-idle watchdog still gated by `activeAppServerTurnRequests > 0` (regression/incomplete fix of #82681)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89664,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89664",
+        "title": "[Bug] secrets audit / doctor falsely flags static routing header as plaintext secret"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89743,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89743",
+        "title": "[Bug]: Skill loader ignores configured workspace path and hardcodes fallback to ~/.openclaw/workspace"
       }
     ],
     "stabilityScore": {
@@ -459,14 +531,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 90,
+      "evidencePenalty": 108,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 90,
+        "evidencePenalty": 108,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
@@ -497,7 +569,11 @@
         "install",
         "native-hooks",
         "macos-app",
-        "exec"
+        "exec",
+        "speech-core",
+        "config-validation",
+        "secrets-audit",
+        "skill-loader"
       ],
       "evidence": [
         {
@@ -906,6 +982,72 @@
           "severity": 3,
           "penalty": 3,
           "reason": "exec spawn UNKNOWN after gateway restart because child_process pool is not rebuilt on 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89425",
+          "repo": "openclaw/openclaw",
+          "number": 89425,
+          "url": "https://github.com/openclaw/openclaw/issues/89425",
+          "area": "speech-core",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v2026.5.28 npm tarball misses speech-core runtime surface, causing incoming messages to fail before replies"
+        },
+        {
+          "issue": "openclaw/openclaw#89444",
+          "repo": "openclaw/openclaw",
+          "number": 89444,
+          "url": "https://github.com/openclaw/openclaw/issues/89444",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Dreaming promotion still writes raw/junk MEMORY.md residue on OpenClaw 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89445",
+          "repo": "openclaw/openclaw",
+          "number": 89445,
+          "url": "https://github.com/openclaw/openclaw/issues/89445",
+          "area": "config-validation",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "OpenClaw 2026.5.28 startup can fail config validation with agents.list.* invalid input; downgrade to 2026.5.27 works"
+        },
+        {
+          "issue": "openclaw/openclaw#89742",
+          "repo": "openclaw/openclaw",
+          "number": 89742,
+          "url": "https://github.com/openclaw/openclaw/issues/89742",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Codex app-server sessions can wedge indefinitely after 429 bursts because terminal-idle watchdog remains gated"
+        },
+        {
+          "issue": "openclaw/openclaw#89664",
+          "repo": "openclaw/openclaw",
+          "number": 89664,
+          "url": "https://github.com/openclaw/openclaw/issues/89664",
+          "area": "secrets-audit",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Secrets audit/doctor falsely flags static routing request headers as plaintext secrets on v2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#89743",
+          "repo": "openclaw/openclaw",
+          "number": 89743,
+          "url": "https://github.com/openclaw/openclaw/issues/89743",
+          "area": "skill-loader",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Skill loader ignores configured workspace path and probes the wrong fallback path on OpenClaw 2026.5.28"
         }
       ]
     },
