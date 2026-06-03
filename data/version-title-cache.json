@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-03T19:13:58.636Z",
+  "generatedAt": "2026-06-03T20:59:58.219Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -123,6 +123,7 @@
         "risk:channel",
         "risk:kernel",
         "risk:runtime",
+        "score:70-79",
         "affected:telegram",
         "affected:gateway",
         "affected:approval-boundary",
@@ -138,7 +139,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/123",
       "createdAt": "2026-06-02T00:36:47Z",
-      "updatedAt": "2026-06-02T20:31:25Z"
+      "updatedAt": "2026-06-03T20:29:28Z"
     },
     {
       "version": "0.7.0",
@@ -150,6 +151,7 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
+        "score:60-69",
         "affected:discord",
         "affected:telegram",
         "affected:gateway",
@@ -167,7 +169,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/124",
       "createdAt": "2026-06-02T00:36:48Z",
-      "updatedAt": "2026-06-02T20:31:22Z"
+      "updatedAt": "2026-06-03T20:29:27Z"
     },
     {
       "version": "0.8.0",
@@ -310,6 +312,7 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
+        "score:40-49",
         "affected:discord",
         "affected:feishu",
         "affected:security",
@@ -328,7 +331,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/130",
       "createdAt": "2026-06-02T00:36:55Z",
-      "updatedAt": "2026-06-02T20:31:12Z"
+      "updatedAt": "2026-06-03T20:29:25Z"
     },
     {
       "version": "0.14.0",
@@ -432,11 +435,12 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:50-59",
+        "score:40-49",
         "affected:feishu",
         "affected:runtime",
         "affected:telegram",
         "affected:gateway",
+        "affected:browser",
         "affected:plugin-install",
         "affected:upgrade",
         "affected:ui",
@@ -445,14 +449,16 @@
         "affected:windows",
         "affected:memory",
         "affected:message-delivery",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "affected:desktop",
+        "affected:version-metadata"
       ],
       "issueNumber": 117,
       "title": "[v0.15.2] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/117",
       "createdAt": "2026-06-01T23:54:24Z",
-      "updatedAt": "2026-06-02T20:33:03Z"
+      "updatedAt": "2026-06-03T20:31:03Z"
     },
     {
       "version": "0.0.1",
@@ -2376,6 +2382,21 @@
       "url": "https://github.com/exisz/IsItStable/issues/113",
       "createdAt": "2026-05-30T20:09:41Z",
       "updatedAt": "2026-06-03T08:30:05Z"
+    },
+    {
+      "version": "2026.6.1",
+      "packageName": "OpenClaw",
+      "packageSlug": "openclaw",
+      "labels": [
+        "version",
+        "pkg:openclaw"
+      ],
+      "issueNumber": 133,
+      "title": "[v2026.6.1] [OpenClaw] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/133",
+      "createdAt": "2026-06-03T20:59:56Z",
+      "updatedAt": "2026-06-03T20:59:56Z"
     }
   ],
   "duplicates": {
