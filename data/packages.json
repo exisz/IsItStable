@@ -58,7 +58,7 @@
           "repo": "openclaw/openclaw",
           "number": 90185,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/90185",
-          "title": "[Regression] /compact reply still silently dropped on 2026.6.1 (reopens #87107)"
+          "title": "[Core bug] /compact reply silently dropped (replies=0) on all channels in 2026.6.1"
         },
         {
           "repo": "openclaw/openclaw",
@@ -112,7 +112,7 @@
           "repo": "openclaw/openclaw",
           "number": 90185,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/90185",
-          "title": "[Regression] /compact reply still silently dropped on 2026.6.1 (reopens #87107)"
+          "title": "[Core bug] /compact reply silently dropped (replies=0) on all channels in 2026.6.1"
         },
         {
           "repo": "openclaw/openclaw",
@@ -124,24 +124,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 54,
+        "score": 57,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 26,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 26,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 54
+          "score": 57
         },
         "affected": [
           "codex",
@@ -261,7 +261,7 @@
           }
         ]
       },
-      "thumbsUp": 0,
+      "thumbsUp": 1,
       "thumbsDown": 0,
       "createdAt": "2026-06-03T19:35:05.903Z"
     }
@@ -277,7 +277,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "The fog machine found four more buttons: release metadata, browser sessions, Desktop remote status, and provider streaming now join the 0.15.2 evidence pile.",
+      "verdictComment": "More gremlins came out of the 0.15.2 attic: remote desktop packaging, QQ approval buttons, and ACP completion now add to the deploy-night fog.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -419,6 +419,24 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 38949,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38949",
+          "title": "[Bug]: PyPI release (0.15.2) silently lacks the documented remote-desktop feature (token env ignored, WS loopback-only); + missing-websocket-lib fails silently"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39110,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39110",
+          "title": "[Bug]: Hermes QQ bot session_key"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39245,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39245",
+          "title": "ACP prompt can hang after final text response when usage_update/session update does not return"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 36743,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
           "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
@@ -554,29 +572,47 @@
           "number": 29418,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/29418",
           "title": "[Bug]: Nous inference API streaming times out on agent-sized payloads — non-streaming works fine"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 38949,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38949",
+          "title": "[Bug]: PyPI release (0.15.2) silently lacks the documented remote-desktop feature (token env ignored, WS loopback-only); + missing-websocket-lib fails silently"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39110,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39110",
+          "title": "[Bug]: Hermes QQ bot session_key"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39245,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39245",
+          "title": "ACP prompt can hang after final text response when usage_update/session update does not return"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 46,
+        "score": 39,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 49,
-        "survivalDays": 5,
+        "evidencePenalty": 56,
+        "survivalDays": 6,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 49,
+          "evidencePenalty": 56,
           "votePenalty": 0,
-          "survivalDays": 5,
+          "survivalDays": 6,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": 46
+          "score": 39
         },
         "affected": [
           "plugin-install",
@@ -593,7 +629,8 @@
           "telegram",
           "version-metadata",
           "browser",
-          "desktop"
+          "desktop",
+          "qqbot"
         ],
         "evidence": [
           {
@@ -848,6 +885,39 @@
             "severity": 3,
             "penalty": 3,
             "reason": "0.15.2 agent-sized streaming payloads time out while non-streaming requests work"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#38949",
+            "repo": "NousResearch/hermes-agent",
+            "number": 38949,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/38949",
+            "area": "desktop",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "0.15.2 PyPI release lacks documented remote-desktop token/WebSocket behavior, making remote desktop fail silently"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#39110",
+            "repo": "NousResearch/hermes-agent",
+            "number": 39110,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/39110",
+            "area": "qqbot",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.15.2 QQ bot approval buttons reject private-chat pairing because dm chat_type is not authorized"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#39245",
+            "repo": "NousResearch/hermes-agent",
+            "number": 39245,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/39245",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "0.15.2 ACP mode can hang after final text response when usage/session updates do not return"
           }
         ]
       },
