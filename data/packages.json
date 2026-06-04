@@ -10,32 +10,256 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "Fresh release, still inside the 24h monitoring window. The early evidence is already wearing production boots at 3am.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90047,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
+          "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90083,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90083",
+          "title": "[Bug]: 2026.6.1 OpenAI ChatGPT Responses transport fails with invalid_provider_content_type for gpt-5.4/gpt-5.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90082,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90082",
+          "title": "[Bug] active-memory circuit breaker too aggressive; fallback prompt pollutes main session (v2026.6.1)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90113,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90113",
+          "title": "Regression: OpenClaw 2026.6.1 misdetects root systemd user gateway service after update/doctor"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90240,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90240",
+          "title": "[Bug]: Session embedded-run counter stays pinned after a single ~48k-output-token opus-4-7 turn; subsequent Slack DM inbound silently queued for ~30 min until manual gateway restart (2026.6.1)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90162,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90162",
+          "title": "[Bug]: Discord final replies can still lose outbound adapter on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90164,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90164",
+          "title": "[Bug]:  2026.6.1 飞书流式回复仅显示最后一个字符（卡片被 update 而非 patch）"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90185,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90185",
+          "title": "[Regression] /compact reply still silently dropped on 2026.6.1 (reopens #87107)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90213,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90213",
+          "title": "[Bug]: After updating to OpenClaw 2026.6.1, legacy state migration warnings keep appearing even after running `openclaw doctor --fix`."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90047,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
+          "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90083,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90083",
+          "title": "[Bug]: 2026.6.1 OpenAI ChatGPT Responses transport fails with invalid_provider_content_type for gpt-5.4/gpt-5.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90082,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90082",
+          "title": "[Bug] active-memory circuit breaker too aggressive; fallback prompt pollutes main session (v2026.6.1)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90113,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90113",
+          "title": "Regression: OpenClaw 2026.6.1 misdetects root systemd user gateway service after update/doctor"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90240,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90240",
+          "title": "[Bug]: Session embedded-run counter stays pinned after a single ~48k-output-token opus-4-7 turn; subsequent Slack DM inbound silently queued for ~30 min until manual gateway restart (2026.6.1)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90162,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90162",
+          "title": "[Bug]: Discord final replies can still lose outbound adapter on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90164,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90164",
+          "title": "[Bug]:  2026.6.1 飞书流式回复仅显示最后一个字符（卡片被 update 而非 patch）"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90185,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90185",
+          "title": "[Regression] /compact reply still silently dropped on 2026.6.1 (reopens #87107)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90213,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90213",
+          "title": "[Bug]: After updating to OpenClaw 2026.6.1, legacy state migration warnings keep appearing even after running `openclaw doctor --fix`."
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 54,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 26,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 26,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 54
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "codex",
+          "discord",
+          "feishu",
+          "memory",
+          "migration",
+          "model-routing",
+          "plugin-system",
+          "provider-integration",
+          "runtime",
+          "service-management",
+          "sessions-management",
+          "slack",
+          "update-system",
+          "webchat"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#90047",
+            "repo": "openclaw/openclaw",
+            "number": 90047,
+            "url": "https://github.com/openclaw/openclaw/issues/90047",
+            "area": "codex",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "2026.6.1 Codex migration can drop the configured gpt-5.5 model, leaving agents silent"
+          },
+          {
+            "issue": "openclaw/openclaw#90083",
+            "repo": "openclaw/openclaw",
+            "number": 90083,
+            "url": "https://github.com/openclaw/openclaw/issues/90083",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "2026.6.1 OpenAI/ChatGPT Responses transport fails for gpt-5.4/gpt-5.5 inference"
+          },
+          {
+            "issue": "openclaw/openclaw#90082",
+            "repo": "openclaw/openclaw",
+            "number": 90082,
+            "url": "https://github.com/openclaw/openclaw/issues/90082",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v2026.6.1 active-memory circuit breaker can inject fallback prompt text into the main session"
+          },
+          {
+            "issue": "openclaw/openclaw#90113",
+            "repo": "openclaw/openclaw",
+            "number": 90113,
+            "url": "https://github.com/openclaw/openclaw/issues/90113",
+            "area": "service-management",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "OpenClaw 2026.6.1 can misdetect an active root systemd user gateway service after update/doctor"
+          },
+          {
+            "issue": "openclaw/openclaw#90240",
+            "repo": "openclaw/openclaw",
+            "number": 90240,
+            "url": "https://github.com/openclaw/openclaw/issues/90240",
+            "area": "sessions-management",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "2026.6.1 session embedded-run counter can stay pinned after a huge turn, silently queueing Slack DM inbound until restart"
+          },
+          {
+            "issue": "openclaw/openclaw#90162",
+            "repo": "openclaw/openclaw",
+            "number": 90162,
+            "url": "https://github.com/openclaw/openclaw/issues/90162",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Discord final replies can still lose the outbound adapter on 2026.6.1 until gateway restart"
+          },
+          {
+            "issue": "openclaw/openclaw#90164",
+            "repo": "openclaw/openclaw",
+            "number": 90164,
+            "url": "https://github.com/openclaw/openclaw/issues/90164",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 Feishu streaming replies can display only the final character"
+          },
+          {
+            "issue": "openclaw/openclaw#90185",
+            "repo": "openclaw/openclaw",
+            "number": 90185,
+            "url": "https://github.com/openclaw/openclaw/issues/90185",
+            "area": "feishu",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "2026.6.1 still silently drops /compact replies on Feishu DM and WebChat"
+          },
+          {
+            "issue": "openclaw/openclaw#90213",
+            "repo": "openclaw/openclaw",
+            "number": 90213,
+            "url": "https://github.com/openclaw/openclaw/issues/90213",
+            "area": "migration",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "2026.6.1 legacy state migration warnings can persist after doctor --fix"
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
