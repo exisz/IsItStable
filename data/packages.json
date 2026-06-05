@@ -524,18 +524,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 119,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 119,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
           "score": 0
         },
@@ -1044,7 +1044,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "More gremlins came out of the 0.15.2 attic: remote desktop packaging, QQ approval buttons, and ACP completion now add to the deploy-night fog.",
+      "verdictComment": "The 0.15.2 gremlin list now includes desktop loops, dead Telegram polling, and an update path that trips over its own virtualenv at 3am.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1204,6 +1204,36 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 39512,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39512",
+          "title": "[Bug] Long conversation content loops after switching sessions, latest response unreachable"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39444,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39444",
+          "title": "fix: `hermes update` fails with 'No virtual environment found' when using uv"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39904,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39904",
+          "title": "Bug Report: Local `file://` Images Not Rendering in Hermes Desktop App"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 25221,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/25221",
+          "title": "Telegram gateway can stay alive with dead polling after conflict retry start_polling failure"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 35404,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35404",
+          "title": "Test suite opens a real browser / xAI OAuth flow + reads the dev's macOS Keychain on local runs"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 36743,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
           "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
@@ -1357,29 +1387,59 @@
           "number": 39245,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39245",
           "title": "ACP prompt can hang after final text response when usage_update/session update does not return"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39512,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39512",
+          "title": "[Bug] Long conversation content loops after switching sessions, latest response unreachable"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39444,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39444",
+          "title": "fix: `hermes update` fails with 'No virtual environment found' when using uv"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39904,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39904",
+          "title": "Bug Report: Local `file://` Images Not Rendering in Hermes Desktop App"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 25221,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/25221",
+          "title": "Telegram gateway can stay alive with dead polling after conflict retry start_polling failure"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 35404,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35404",
+          "title": "Test suite opens a real browser / xAI OAuth flow + reads the dev's macOS Keychain on local runs"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 39,
+        "score": 29,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 56,
-        "survivalDays": 6,
+        "evidencePenalty": 66,
+        "survivalDays": 7,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 56,
+          "evidencePenalty": 66,
           "votePenalty": 0,
-          "survivalDays": 6,
+          "survivalDays": 7,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": 39
+          "score": 29
         },
         "affected": [
           "plugin-install",
@@ -1397,7 +1457,8 @@
           "version-metadata",
           "browser",
           "desktop",
-          "qqbot"
+          "qqbot",
+          "security"
         ],
         "evidence": [
           {
@@ -1685,6 +1746,61 @@
             "severity": 3,
             "penalty": 3,
             "reason": "0.15.2 ACP mode can hang after final text response when usage/session updates do not return"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#39512",
+            "repo": "NousResearch/hermes-agent",
+            "number": 39512,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/39512",
+            "area": "desktop",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "0.15.2 Windows Desktop long conversations loop after switching sessions, making the latest response unreachable"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#39444",
+            "repo": "NousResearch/hermes-agent",
+            "number": 39444,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/39444",
+            "area": "upgrade",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "0.15.2 PyPI install can make `hermes update` fail under uv with no virtual environment detected"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#39904",
+            "repo": "NousResearch/hermes-agent",
+            "number": 39904,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/39904",
+            "area": "desktop",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.15.2 Desktop on Linux fails to render local file:// images"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#25221",
+            "repo": "NousResearch/hermes-agent",
+            "number": 25221,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/25221",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "0.15.2 Telegram gateway can remain active while polling is dead after start_polling conflict retry"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#35404",
+            "repo": "NousResearch/hermes-agent",
+            "number": 35404,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/35404",
+            "area": "security",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "0.15.2 local test runs can open a real browser/xAI OAuth flow and read macOS Keychain during tests"
           }
         ]
       },
