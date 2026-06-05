@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh release, still inside the 24h monitoring window. The early evidence is already wearing production boots at 3am.",
+    "verdictComment": "Forty-two cuts on day two: migrations, Codex, memory, providers, Docker, and channel delivery are all raising hands. This is not a calm release; the website owns the score.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -64,6 +64,204 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 90134,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90134",
+        "title": "[Bug]: Stable Docker images missing from alpine/openclaw since v2026.5.28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90244,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90244",
+        "title": "[Bug]: Workshop files missing from OpenClaw 2026.6.1 npm package"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90418,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90418",
+        "title": "[Bug]: Upgrade leaves repeated shared SQLite plugin install metadata conflict warnings for codex/discord"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90295,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90295",
+        "title": "memory-lancedb 2026.6.1 fails to install: apache-arrow 21.1.0 conflicts with @lancedb/lancedb 0.30.0 peer range"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90007,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90007",
+        "title": "[Bug]: 2026.6.1 — plugin install index + task registry/flow sidecar migrations fail with \"statement.columns is not a function\" after upgrade from 2026.5.7"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90072,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90072",
+        "title": "Cron state silently wiped during SQLite migration on upgrade to 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90413,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90413",
+        "title": "memory status always reports \"Vector search: paused\" with blank expected model (2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90452,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90452",
+        "title": "Regression: Heartbeat exec completion still shows generic fallback text instead of actual output"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90456,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90456",
+        "title": "[Bug]: OpenAI OAuth Realtime Talk sessions fail /v1/realtime/calls with HTTP 500"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90448,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90448",
+        "title": "Codex context override can fall back to 272k after 2026.6.1 OpenAI route unification"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90368,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90368",
+        "title": "2026.6.1: agent_model_catalogs / model_capability_cache tables defined but never written; models list takes 25–53s"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90536,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90536",
+        "title": "OpenAI OAuth missing 'model.request' scope — GPT-5.5 falls back silently"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90378,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90378",
+        "title": "[Bug] Upgrading from 5.28 → 6.1: cron store migrated to SQLite silently, but new jobs default to delivery.mode=announce causing channel errors"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90086,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90086",
+        "title": "Pi/native runtime routes openai-chatgpt-responses to boundary-aware transport and fails on ChatGPT Codex endpoint"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90506,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90506",
+        "title": "[Bug]: [Bug]: google-vertex models fail with model_not_found at runtime on 2026.5.28 and 2026.6.1 — direct Vertex API calls succeed with same credentials"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90509,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90509",
+        "title": "@openclaw/bluebubbles 2026.5.7 — `core.channel.turn` undefined at runtime (host 2026.5.28 and 2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90340,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90340",
+        "title": "[Bug]: Auto-compaction does not resolve compaction model aliases before dispatch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90281,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90281",
+        "title": "[Bug] 6.1 Control UI chat stream rendering regression breaks markdown tables / bold in long replies (visible in Feishu DM)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90466,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90466",
+        "title": "[Bug]:memory-core dreaming on 2026.6.1: session-corpus contains .jsonl.deleted.* paths; narrative phase writes fallback despite valid prose responses"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90528,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90528",
+        "title": "[Bug]: OpenAI/Codex OAuth Profile Not Attached to Inference Requests"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90518,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90518",
+        "title": "macOS update/reinstall can overwrite generated gateway env wrapper and make status misleading for secret-provider setups"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90372,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90372",
+        "title": "[Bug]: Ollama cloud model received a 14M-token prompt before OpenClaw detected context overflow"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90496,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90496",
+        "title": "Discord channel remains trapped in oversized session after /new; compaction fails provider_error_4xx and model drifts from codex/gpt-5.5 to gpt-5.4"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90093,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90093",
+        "title": "openai-chatgpt-responses native replay sends encrypted reasoning and breaks next turn with invalid_encrypted_content"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90491,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90491",
+        "title": "[Bug]: GatewayRequestError: Error: file is not a database: code=ERR_SQLITE_ERROR"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90254,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90254",
+        "title": "[Bug]: webhookUrl configured but long-polling transport still runs getUpdates, continuously wiping the registered webhook"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90424,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90424",
+        "title": "Codex subagents fail with network connection error (stdio transport)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90404,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90404",
+        "title": "[Bug] acpx TypeError: Cannot use in operator to search for method in 1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90359,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90359",
+        "title": "Regression: “Workspace Files” right sidebar is shown by default in chat after upgrading to v2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90414,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90414",
+        "title": "agentmemory__memory_search returns \"index metadata is missing\" persistently (memory-core manager state cache)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90508,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90508",
+        "title": "memory-core main reindex thrashes, leaks main.sqlite.tmp files, and leaves memory_search paused after repair"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90443,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90443",
+        "title": "[Bug]: Cross-agent orchestration can be blocked by default session visibility after upgrade"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90277,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90277",
+        "title": "gateway install --force drops MINIMAX_API_KEY from service-env despite managed keys list"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 90047,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
         "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
@@ -115,45 +313,251 @@
         "number": 90213,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90213",
         "title": "[Bug]: After updating to OpenClaw 2026.6.1, legacy state migration warnings keep appearing even after running `openclaw doctor --fix`."
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90134,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90134",
+        "title": "[Bug]: Stable Docker images missing from alpine/openclaw since v2026.5.28"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90244,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90244",
+        "title": "[Bug]: Workshop files missing from OpenClaw 2026.6.1 npm package"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90418,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90418",
+        "title": "[Bug]: Upgrade leaves repeated shared SQLite plugin install metadata conflict warnings for codex/discord"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90295,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90295",
+        "title": "memory-lancedb 2026.6.1 fails to install: apache-arrow 21.1.0 conflicts with @lancedb/lancedb 0.30.0 peer range"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90007,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90007",
+        "title": "[Bug]: 2026.6.1 — plugin install index + task registry/flow sidecar migrations fail with \"statement.columns is not a function\" after upgrade from 2026.5.7"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90072,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90072",
+        "title": "Cron state silently wiped during SQLite migration on upgrade to 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90413,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90413",
+        "title": "memory status always reports \"Vector search: paused\" with blank expected model (2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90452,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90452",
+        "title": "Regression: Heartbeat exec completion still shows generic fallback text instead of actual output"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90456,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90456",
+        "title": "[Bug]: OpenAI OAuth Realtime Talk sessions fail /v1/realtime/calls with HTTP 500"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90448,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90448",
+        "title": "Codex context override can fall back to 272k after 2026.6.1 OpenAI route unification"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90368,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90368",
+        "title": "2026.6.1: agent_model_catalogs / model_capability_cache tables defined but never written; models list takes 25–53s"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90536,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90536",
+        "title": "OpenAI OAuth missing 'model.request' scope — GPT-5.5 falls back silently"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90378,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90378",
+        "title": "[Bug] Upgrading from 5.28 → 6.1: cron store migrated to SQLite silently, but new jobs default to delivery.mode=announce causing channel errors"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90086,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90086",
+        "title": "Pi/native runtime routes openai-chatgpt-responses to boundary-aware transport and fails on ChatGPT Codex endpoint"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90506,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90506",
+        "title": "[Bug]: [Bug]: google-vertex models fail with model_not_found at runtime on 2026.5.28 and 2026.6.1 — direct Vertex API calls succeed with same credentials"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90509,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90509",
+        "title": "@openclaw/bluebubbles 2026.5.7 — `core.channel.turn` undefined at runtime (host 2026.5.28 and 2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90340,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90340",
+        "title": "[Bug]: Auto-compaction does not resolve compaction model aliases before dispatch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90281,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90281",
+        "title": "[Bug] 6.1 Control UI chat stream rendering regression breaks markdown tables / bold in long replies (visible in Feishu DM)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90466,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90466",
+        "title": "[Bug]:memory-core dreaming on 2026.6.1: session-corpus contains .jsonl.deleted.* paths; narrative phase writes fallback despite valid prose responses"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90528,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90528",
+        "title": "[Bug]: OpenAI/Codex OAuth Profile Not Attached to Inference Requests"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90518,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90518",
+        "title": "macOS update/reinstall can overwrite generated gateway env wrapper and make status misleading for secret-provider setups"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90372,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90372",
+        "title": "[Bug]: Ollama cloud model received a 14M-token prompt before OpenClaw detected context overflow"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90496,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90496",
+        "title": "Discord channel remains trapped in oversized session after /new; compaction fails provider_error_4xx and model drifts from codex/gpt-5.5 to gpt-5.4"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90093,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90093",
+        "title": "openai-chatgpt-responses native replay sends encrypted reasoning and breaks next turn with invalid_encrypted_content"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90491,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90491",
+        "title": "[Bug]: GatewayRequestError: Error: file is not a database: code=ERR_SQLITE_ERROR"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90254,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90254",
+        "title": "[Bug]: webhookUrl configured but long-polling transport still runs getUpdates, continuously wiping the registered webhook"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90424,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90424",
+        "title": "Codex subagents fail with network connection error (stdio transport)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90404,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90404",
+        "title": "[Bug] acpx TypeError: Cannot use in operator to search for method in 1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90359,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90359",
+        "title": "Regression: “Workspace Files” right sidebar is shown by default in chat after upgrading to v2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90414,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90414",
+        "title": "agentmemory__memory_search returns \"index metadata is missing\" persistently (memory-core manager state cache)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90508,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90508",
+        "title": "memory-core main reindex thrashes, leaks main.sqlite.tmp files, and leaves memory_search paused after repair"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90443,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90443",
+        "title": "[Bug]: Cross-agent orchestration can be blocked by default session visibility after upgrade"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90277,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90277",
+        "title": "gateway install --force drops MINIMAX_API_KEY from service-env despite managed keys list"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 57,
+      "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 26,
+      "evidencePenalty": 119,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 26,
+        "evidencePenalty": 119,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 57
+        "score": 0
       },
       "affected": [
         "codex",
-        "discord",
-        "feishu",
-        "memory",
-        "migration",
-        "model-routing",
-        "plugin-system",
         "provider-integration",
-        "runtime",
+        "memory",
         "service-management",
         "sessions-management",
-        "slack",
+        "discord",
+        "feishu",
+        "migration",
+        "upgrade",
+        "version-metadata",
+        "plugin-install",
+        "cron-runtime",
+        "heartbeat",
+        "voice",
+        "model-routing",
+        "message-delivery",
+        "compaction",
+        "ui",
         "update-system",
-        "webchat"
+        "telegram",
+        "mcp",
+        "launchagent"
       ],
       "evidence": [
         {
@@ -254,6 +658,369 @@
           "severity": 2,
           "penalty": 2,
           "reason": "2026.6.1 legacy state migration warnings can persist after doctor --fix"
+        },
+        {
+          "issue": "openclaw/openclaw#90134",
+          "repo": "openclaw/openclaw",
+          "number": 90134,
+          "url": "https://github.com/openclaw/openclaw/issues/90134",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Stable Docker image tag is missing for 2026.6.1, blocking Docker upgrades/pulls"
+        },
+        {
+          "issue": "openclaw/openclaw#90244",
+          "repo": "openclaw/openclaw",
+          "number": 90244,
+          "url": "https://github.com/openclaw/openclaw/issues/90244",
+          "area": "version-metadata",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "OpenClaw 2026.6.1 npm package is missing workshop files"
+        },
+        {
+          "issue": "openclaw/openclaw#90418",
+          "repo": "openclaw/openclaw",
+          "number": 90418,
+          "url": "https://github.com/openclaw/openclaw/issues/90418",
+          "area": "plugin-install",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Shared SQLite plugin install metadata conflicts repeat for codex/discord after upgrade"
+        },
+        {
+          "issue": "openclaw/openclaw#90295",
+          "repo": "openclaw/openclaw",
+          "number": 90295,
+          "url": "https://github.com/openclaw/openclaw/issues/90295",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "memory-lancedb fails to install on 2026.6.1 because apache-arrow conflicts with @lancedb/lancedb peer range"
+        },
+        {
+          "issue": "openclaw/openclaw#90007",
+          "repo": "openclaw/openclaw",
+          "number": 90007,
+          "url": "https://github.com/openclaw/openclaw/issues/90007",
+          "area": "migration",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.6.1 plugin install index plus task registry/flow sidecar migrations fail after upgrade"
+        },
+        {
+          "issue": "openclaw/openclaw#90072",
+          "repo": "openclaw/openclaw",
+          "number": 90072,
+          "url": "https://github.com/openclaw/openclaw/issues/90072",
+          "area": "cron-runtime",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Cron state can be silently wiped during SQLite migration on upgrade to 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90413",
+          "repo": "openclaw/openclaw",
+          "number": 90413,
+          "url": "https://github.com/openclaw/openclaw/issues/90413",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "memory status reports vector search paused with blank expected model on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90452",
+          "repo": "openclaw/openclaw",
+          "number": 90452,
+          "url": "https://github.com/openclaw/openclaw/issues/90452",
+          "area": "heartbeat",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Heartbeat exec completion still shows generic fallback text instead of actual output"
+        },
+        {
+          "issue": "openclaw/openclaw#90456",
+          "repo": "openclaw/openclaw",
+          "number": 90456,
+          "url": "https://github.com/openclaw/openclaw/issues/90456",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "OpenAI OAuth Realtime Talk sessions fail /v1/realtime/calls with HTTP 500 on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90448",
+          "repo": "openclaw/openclaw",
+          "number": 90448,
+          "url": "https://github.com/openclaw/openclaw/issues/90448",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Codex context override can fall back to 272k after 2026.6.1 route unification"
+        },
+        {
+          "issue": "openclaw/openclaw#90368",
+          "repo": "openclaw/openclaw",
+          "number": 90368,
+          "url": "https://github.com/openclaw/openclaw/issues/90368",
+          "area": "model-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Model catalog/cache tables are defined but unwritten, making model lists take 25–53s"
+        },
+        {
+          "issue": "openclaw/openclaw#90536",
+          "repo": "openclaw/openclaw",
+          "number": 90536,
+          "url": "https://github.com/openclaw/openclaw/issues/90536",
+          "area": "provider-integration",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "OpenAI OAuth missing model.request scope can make GPT-5.5 silently fall back"
+        },
+        {
+          "issue": "openclaw/openclaw#90378",
+          "repo": "openclaw/openclaw",
+          "number": 90378,
+          "url": "https://github.com/openclaw/openclaw/issues/90378",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Upgrade from 5.28 to 6.1 migrates cron store but new jobs default to delivery.mode=announce, causing channel errors"
+        },
+        {
+          "issue": "openclaw/openclaw#90086",
+          "repo": "openclaw/openclaw",
+          "number": 90086,
+          "url": "https://github.com/openclaw/openclaw/issues/90086",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Pi/native runtime routes openai-chatgpt-responses to a transport that fails on the ChatGPT Codex endpoint"
+        },
+        {
+          "issue": "openclaw/openclaw#90506",
+          "repo": "openclaw/openclaw",
+          "number": 90506,
+          "url": "https://github.com/openclaw/openclaw/issues/90506",
+          "area": "provider-integration",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "google-vertex models fail with model_not_found at runtime on 2026.6.1 despite direct Vertex API success"
+        },
+        {
+          "issue": "openclaw/openclaw#90509",
+          "repo": "openclaw/openclaw",
+          "number": 90509,
+          "url": "https://github.com/openclaw/openclaw/issues/90509",
+          "area": "message-delivery",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "BlueBubbles runtime sees core.channel.turn undefined with host 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90340",
+          "repo": "openclaw/openclaw",
+          "number": 90340,
+          "url": "https://github.com/openclaw/openclaw/issues/90340",
+          "area": "compaction",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Auto-compaction does not resolve model aliases before dispatch on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90281",
+          "repo": "openclaw/openclaw",
+          "number": 90281,
+          "url": "https://github.com/openclaw/openclaw/issues/90281",
+          "area": "ui",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Control UI chat stream rendering regression breaks markdown tables/bold in long replies"
+        },
+        {
+          "issue": "openclaw/openclaw#90466",
+          "repo": "openclaw/openclaw",
+          "number": 90466,
+          "url": "https://github.com/openclaw/openclaw/issues/90466",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "memory-core dreaming includes deleted session-corpus paths and writes fallback despite valid prose"
+        },
+        {
+          "issue": "openclaw/openclaw#90528",
+          "repo": "openclaw/openclaw",
+          "number": 90528,
+          "url": "https://github.com/openclaw/openclaw/issues/90528",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "OpenAI/Codex OAuth profile is not attached to inference requests"
+        },
+        {
+          "issue": "openclaw/openclaw#90518",
+          "repo": "openclaw/openclaw",
+          "number": 90518,
+          "url": "https://github.com/openclaw/openclaw/issues/90518",
+          "area": "update-system",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "macOS update/reinstall can overwrite gateway env wrapper and mislead secret-provider status"
+        },
+        {
+          "issue": "openclaw/openclaw#90372",
+          "repo": "openclaw/openclaw",
+          "number": 90372,
+          "url": "https://github.com/openclaw/openclaw/issues/90372",
+          "area": "model-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Ollama cloud received a 14M-token prompt before OpenClaw detected context overflow"
+        },
+        {
+          "issue": "openclaw/openclaw#90496",
+          "repo": "openclaw/openclaw",
+          "number": 90496,
+          "url": "https://github.com/openclaw/openclaw/issues/90496",
+          "area": "discord",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Discord channel can remain trapped in oversized session after /new while compaction fails provider_error_4xx"
+        },
+        {
+          "issue": "openclaw/openclaw#90093",
+          "repo": "openclaw/openclaw",
+          "number": 90093,
+          "url": "https://github.com/openclaw/openclaw/issues/90093",
+          "area": "provider-integration",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "openai-chatgpt-responses native replay sends encrypted reasoning and breaks next turn"
+        },
+        {
+          "issue": "openclaw/openclaw#90491",
+          "repo": "openclaw/openclaw",
+          "number": 90491,
+          "url": "https://github.com/openclaw/openclaw/issues/90491",
+          "area": "migration",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.6.1 container restart can surface GatewayRequestError: file is not a database"
+        },
+        {
+          "issue": "openclaw/openclaw#90254",
+          "repo": "openclaw/openclaw",
+          "number": 90254,
+          "url": "https://github.com/openclaw/openclaw/issues/90254",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Telegram webhookUrl still runs long-polling getUpdates, continuously wiping the webhook"
+        },
+        {
+          "issue": "openclaw/openclaw#90424",
+          "repo": "openclaw/openclaw",
+          "number": 90424,
+          "url": "https://github.com/openclaw/openclaw/issues/90424",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex subagents fail with network connection error in stdio transport on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90404",
+          "repo": "openclaw/openclaw",
+          "number": 90404,
+          "url": "https://github.com/openclaw/openclaw/issues/90404",
+          "area": "mcp",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "acpx sessions_spawn fails with TypeError when processing ACP adapter messages"
+        },
+        {
+          "issue": "openclaw/openclaw#90359",
+          "repo": "openclaw/openclaw",
+          "number": 90359,
+          "url": "https://github.com/openclaw/openclaw/issues/90359",
+          "area": "ui",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "WebChat shows Workspace Files sidebar by default after upgrading to v2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90414",
+          "repo": "openclaw/openclaw",
+          "number": 90414,
+          "url": "https://github.com/openclaw/openclaw/issues/90414",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "agentmemory__memory_search persistently returns index metadata is missing on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90508",
+          "repo": "openclaw/openclaw",
+          "number": 90508,
+          "url": "https://github.com/openclaw/openclaw/issues/90508",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "memory-core reindex thrashes, leaks main.sqlite.tmp files, and leaves memory_search paused after repair"
+        },
+        {
+          "issue": "openclaw/openclaw#90443",
+          "repo": "openclaw/openclaw",
+          "number": 90443,
+          "url": "https://github.com/openclaw/openclaw/issues/90443",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Cross-agent orchestration can be blocked by default session visibility after upgrade to 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90277",
+          "repo": "openclaw/openclaw",
+          "number": 90277,
+          "url": "https://github.com/openclaw/openclaw/issues/90277",
+          "area": "launchagent",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "gateway install --force can drop MINIMAX_API_KEY from macOS service-env and crash gateway startup"
         }
       ]
     },
