@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-06T08:00:44.831Z",
+  "generatedAt": "2026-06-06T09:39:10.106Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2418,8 +2418,12 @@
         "affected:discord",
         "affected:feishu",
         "affected:heartbeat",
+        "affected:qqbot",
         "affected:telegram",
         "affected:voice",
+        "affected:whatsapp",
+        "affected:tool",
+        "affected:browser",
         "affected:plugin-install",
         "affected:upgrade",
         "affected:launchagent",
@@ -2442,7 +2446,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-05T08:33:12Z"
+      "updatedAt": "2026-06-06T08:36:22Z"
     }
   ],
   "duplicates": {
