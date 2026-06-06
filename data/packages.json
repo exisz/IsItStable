@@ -764,18 +764,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 169,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 169,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 0,
           "score": 0
         },
@@ -1510,32 +1510,204 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "Fresh release, real smoke already visible: desktop polish, gateway edges, and one small VPS doing the 3am OOM cosplay.",
+      "referencedIssues": [
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40364,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
+          "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40503,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40503",
+          "title": "Missing `packaging` module in Docker image causes Hindsight version comparison to fail"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40383,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40383",
+          "title": "[Bug]: Yuanbao adapter adds a fixed ~5 second delay during gateway shutdown"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40334,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40334",
+          "title": "Desktop: profile switch ignores terminal.cwd, uses wrong profile's working directory"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40601,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40601",
+          "title": "[Bug]: /model TUI picker hard-caps results at 50 entries, blocking NVIDIA (and other) providers with 100+"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40715,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40715",
+          "title": "[Bug]: Email gateway: blank-but-present EMAIL_* env vars enable the platform and retry IMAP against an empty host forever (host OOM on small VPS)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40677,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40677",
+          "title": "[Bug]: Profile-local skills are unavailable in Dashboard/TUI/Desktop GUI because child processes use the root HERMES_HOME"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40364,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
+          "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40503,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40503",
+          "title": "Missing `packaging` module in Docker image causes Hindsight version comparison to fail"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40383,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40383",
+          "title": "[Bug]: Yuanbao adapter adds a fixed ~5 second delay during gateway shutdown"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40334,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40334",
+          "title": "Desktop: profile switch ignores terminal.cwd, uses wrong profile's working directory"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40601,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40601",
+          "title": "[Bug]: /model TUI picker hard-caps results at 50 entries, blocking NVIDIA (and other) providers with 100+"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40715,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40715",
+          "title": "[Bug]: Email gateway: blank-but-present EMAIL_* env vars enable the platform and retry IMAP against an empty host forever (host OOM on small VPS)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40677,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40677",
+          "title": "[Bug]: Profile-local skills are unavailable in Dashboard/TUI/Desktop GUI because child processes use the root HERMES_HOME"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 66,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 14,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 14,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 66
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "desktop",
+          "docker",
+          "gateway",
+          "model-picker",
+          "profile-runtime",
+          "skills",
+          "yuanbao",
+          "email"
+        ],
+        "evidence": [
+          {
+            "issue": "NousResearch/hermes-agent#40364",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40364,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40364",
+            "area": "desktop",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop on v0.16.0 does not render emoji correctly due to missing emoji font fallback."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40503",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40503,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40503",
+            "area": "docker",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Official v2026.6.5 / v0.16.0 Docker image misses the packaging module, disabling Hindsight version comparison."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40383",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40383,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40383",
+            "area": "yuanbao",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Yuanbao adapter on v0.16.0 adds a fixed ~5s delay during clean gateway shutdown."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40334",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40334,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40334",
+            "area": "desktop",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes Desktop v0.16.0 profile switch can reuse the wrong terminal working directory."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40601",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40601,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40601",
+            "area": "model-picker",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 /model picker hard-caps provider results at 50, hiding large model catalogs."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40715",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40715,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40715",
+            "area": "email",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Blank EMAIL_* env vars can enable email gateway retries against an empty host until a small VPS OOMs."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40677",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40677,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40677",
+            "area": "skills",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Dashboard/TUI/Desktop child processes can resolve the wrong HERMES_HOME, hiding profile-local skills."
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
