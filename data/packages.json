@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Forty-two cuts on day two: migrations, Codex, memory, providers, Docker, and channel delivery are all raising hands. This is not a calm release; the website owns the score.",
+      "verdictComment": "Fifty-plus cuts now: fresh memory, Codex, CLI, channel-delivery, and update-loop regressions joined the pile. The score was already on the floor; the evidence backlog is catching up.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -266,6 +266,126 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 90743,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90743",
+          "title": "Browser screenshot fails MCP content validation after 2026.6.1 upgrade"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90787,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90787",
+          "title": "[Bug]: memorySearch provider silently resets to \"openai\" after upgrade to 2026.6.1, causing permanent Dirty index and vector search outage"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90762,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90762",
+          "title": "Native Codex subagents hit `Native hook relay unavailable` on 2026.6.1 while parent session works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90801,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90801",
+          "title": "[Bug]: memory status shows inconsistent Dirty state, watcher stops auto-indexing, and --deep required to confirm health on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90786,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90786",
+          "title": "[Bug]: memory status --index and --deep fail with \"Unknown memory embedding provider: google\" on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90822,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90822",
+          "title": "[Bug]: Discord bot not delivering responses to channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90865,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90865",
+          "title": "Discord plugin: channels added to channels.discord.guilds.*.channels.* post-startup are never subscribed (requires full gateway restart)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90881,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90881",
+          "title": "doctor --fix migrates codex/gpt-5.5 to openai/gpt-5.5, then Codex app-server startup times out on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90843,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90843",
+          "title": "Bug: /export-session crashes with ENOENT — export-html template assets shipped under wrong dist path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90654,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90654",
+          "title": "[Bug]: CLI write commands (message send/broadcast/probe) crash gateway handshake with TypeError reading 'trim' -> closed before connect (1000)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90704,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90704",
+          "title": "[Bug]: WhatsApp media auto-reply generates assistant response but does not dispatch outbound message"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90557,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90557",
+          "title": "[Bug]: Telegram outbound rejects trusted generated HTML after staging strips trusted-root marker (PR #87982 missed e2e case)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90629,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90629",
+          "title": "[Bug]: Heartbeat poll session: direct text reply not delivered to QQ user"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90520,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90520",
+          "title": "Microsoft Foundry DeepSeek V4 alias providers still inject `thinking` after #87737 fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90446,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90446",
+          "title": "doctor: talk.provider/providers normalize is a no-op but re-suggested on every run"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90338,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90338",
+          "title": "Memory index meta never written when gateway auto-sync finds identity missing with existing chunks"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90214,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90214",
+          "title": "WhatsApp replies silently dropped — routeReplyRuntime never loaded when originatingChannel === currentSurface"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87928,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87928",
+          "title": "macOS update can leave manual-update loop and stale node host causing Gateway restart storm"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90673,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90673",
+          "title": "Codex app-server stalls after inter-session sessions_send timeout"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90675,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90675",
+          "title": "[Bug]: Dashboard/agent fake tool calls with dmxapi model; native claude route returns incomplete terminal response"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 90047,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
           "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
@@ -515,6 +635,126 @@
           "number": 90277,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/90277",
           "title": "gateway install --force drops MINIMAX_API_KEY from service-env despite managed keys list"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90743,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90743",
+          "title": "Browser screenshot fails MCP content validation after 2026.6.1 upgrade"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90787,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90787",
+          "title": "[Bug]: memorySearch provider silently resets to \"openai\" after upgrade to 2026.6.1, causing permanent Dirty index and vector search outage"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90762,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90762",
+          "title": "Native Codex subagents hit `Native hook relay unavailable` on 2026.6.1 while parent session works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90801,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90801",
+          "title": "[Bug]: memory status shows inconsistent Dirty state, watcher stops auto-indexing, and --deep required to confirm health on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90786,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90786",
+          "title": "[Bug]: memory status --index and --deep fail with \"Unknown memory embedding provider: google\" on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90822,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90822",
+          "title": "[Bug]: Discord bot not delivering responses to channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90865,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90865",
+          "title": "Discord plugin: channels added to channels.discord.guilds.*.channels.* post-startup are never subscribed (requires full gateway restart)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90881,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90881",
+          "title": "doctor --fix migrates codex/gpt-5.5 to openai/gpt-5.5, then Codex app-server startup times out on 2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90843,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90843",
+          "title": "Bug: /export-session crashes with ENOENT — export-html template assets shipped under wrong dist path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90654,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90654",
+          "title": "[Bug]: CLI write commands (message send/broadcast/probe) crash gateway handshake with TypeError reading 'trim' -> closed before connect (1000)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90704,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90704",
+          "title": "[Bug]: WhatsApp media auto-reply generates assistant response but does not dispatch outbound message"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90557,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90557",
+          "title": "[Bug]: Telegram outbound rejects trusted generated HTML after staging strips trusted-root marker (PR #87982 missed e2e case)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90629,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90629",
+          "title": "[Bug]: Heartbeat poll session: direct text reply not delivered to QQ user"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90520,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90520",
+          "title": "Microsoft Foundry DeepSeek V4 alias providers still inject `thinking` after #87737 fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90446,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90446",
+          "title": "doctor: talk.provider/providers normalize is a no-op but re-suggested on every run"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90338,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90338",
+          "title": "Memory index meta never written when gateway auto-sync finds identity missing with existing chunks"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90214,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90214",
+          "title": "WhatsApp replies silently dropped — routeReplyRuntime never loaded when originatingChannel === currentSurface"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87928,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87928",
+          "title": "macOS update can leave manual-update loop and stale node host causing Gateway restart storm"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90673,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90673",
+          "title": "Codex app-server stalls after inter-session sessions_send timeout"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 90675,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/90675",
+          "title": "[Bug]: Dashboard/agent fake tool calls with dmxapi model; native claude route returns incomplete terminal response"
         }
       ],
       "stabilityScore": {
@@ -523,14 +763,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 119,
+        "evidencePenalty": 169,
         "survivalDays": 2,
         "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 119,
+          "evidencePenalty": 169,
           "votePenalty": 0,
           "survivalDays": 2,
           "survivalPointsPerDay": 3,
@@ -561,7 +801,13 @@
           "update-system",
           "telegram",
           "mcp",
-          "launchagent"
+          "launchagent",
+          "browser",
+          "export-session",
+          "cli",
+          "whatsapp",
+          "qqbot",
+          "config"
         ],
         "evidence": [
           {
@@ -1025,6 +1271,226 @@
             "severity": 4,
             "penalty": 4,
             "reason": "gateway install --force can drop MINIMAX_API_KEY from macOS service-env and crash gateway startup"
+          },
+          {
+            "issue": "openclaw/openclaw#90743",
+            "repo": "openclaw/openclaw",
+            "number": 90743,
+            "url": "https://github.com/openclaw/openclaw/issues/90743",
+            "area": "browser",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Browser screenshot returns MCP content validation errors after 2026.6.1 upgrade"
+          },
+          {
+            "issue": "openclaw/openclaw#90787",
+            "repo": "openclaw/openclaw",
+            "number": 90787,
+            "url": "https://github.com/openclaw/openclaw/issues/90787",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "memorySearch provider can reset to OpenAI after 2026.6.1 upgrade, leaving vector search permanently dirty"
+          },
+          {
+            "issue": "openclaw/openclaw#90762",
+            "repo": "openclaw/openclaw",
+            "number": 90762,
+            "url": "https://github.com/openclaw/openclaw/issues/90762",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Native Codex subagents on 2026.6.1 can lose hook relay and fail every native tool call"
+          },
+          {
+            "issue": "openclaw/openclaw#90801",
+            "repo": "openclaw/openclaw",
+            "number": 90801,
+            "url": "https://github.com/openclaw/openclaw/issues/90801",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "memory status shows inconsistent dirty state and watcher stops auto-indexing on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90786",
+            "repo": "openclaw/openclaw",
+            "number": 90786,
+            "url": "https://github.com/openclaw/openclaw/issues/90786",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "memory status --index/--deep can fail with unknown Google embedding provider on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90822",
+            "repo": "openclaw/openclaw",
+            "number": 90822,
+            "url": "https://github.com/openclaw/openclaw/issues/90822",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Discord bot can generate responses on 2026.6.1 without delivering them to the channel"
+          },
+          {
+            "issue": "openclaw/openclaw#90865",
+            "repo": "openclaw/openclaw",
+            "number": 90865,
+            "url": "https://github.com/openclaw/openclaw/issues/90865",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Discord guild channel additions after startup are not subscribed until full gateway restart"
+          },
+          {
+            "issue": "openclaw/openclaw#90881",
+            "repo": "openclaw/openclaw",
+            "number": 90881,
+            "url": "https://github.com/openclaw/openclaw/issues/90881",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "doctor --fix can migrate Codex model config then leave Codex app-server startup timing out on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90843",
+            "repo": "openclaw/openclaw",
+            "number": 90843,
+            "url": "https://github.com/openclaw/openclaw/issues/90843",
+            "area": "export-session",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "/export-session can crash with ENOENT because HTML template assets are shipped under the wrong dist path"
+          },
+          {
+            "issue": "openclaw/openclaw#90654",
+            "repo": "openclaw/openclaw",
+            "number": 90654,
+            "url": "https://github.com/openclaw/openclaw/issues/90654",
+            "area": "cli",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "CLI write commands can crash the gateway handshake on 2026.6.1 while read paths still work"
+          },
+          {
+            "issue": "openclaw/openclaw#90704",
+            "repo": "openclaw/openclaw",
+            "number": 90704,
+            "url": "https://github.com/openclaw/openclaw/issues/90704",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WhatsApp media auto-reply can generate an assistant response but fail outbound dispatch on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90557",
+            "repo": "openclaw/openclaw",
+            "number": 90557,
+            "url": "https://github.com/openclaw/openclaw/issues/90557",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram outbound can reject trusted generated HTML after staging strips the trusted-root marker"
+          },
+          {
+            "issue": "openclaw/openclaw#90629",
+            "repo": "openclaw/openclaw",
+            "number": 90629,
+            "url": "https://github.com/openclaw/openclaw/issues/90629",
+            "area": "qqbot",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Heartbeat poll session direct text replies can fail to deliver to QQ users on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90520",
+            "repo": "openclaw/openclaw",
+            "number": 90520,
+            "url": "https://github.com/openclaw/openclaw/issues/90520",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Microsoft Foundry DeepSeek aliases can still inject unsupported thinking parameters on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90446",
+            "repo": "openclaw/openclaw",
+            "number": 90446,
+            "url": "https://github.com/openclaw/openclaw/issues/90446",
+            "area": "config",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "doctor talk provider normalization is a no-op but keeps being suggested on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90338",
+            "repo": "openclaw/openclaw",
+            "number": 90338,
+            "url": "https://github.com/openclaw/openclaw/issues/90338",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Memory index metadata may never be written when gateway auto-sync finds identity missing with existing chunks"
+          },
+          {
+            "issue": "openclaw/openclaw#90214",
+            "repo": "openclaw/openclaw",
+            "number": 90214,
+            "url": "https://github.com/openclaw/openclaw/issues/90214",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WhatsApp-origin replies can appear in webchat but never deliver to the external channel on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#87928",
+            "repo": "openclaw/openclaw",
+            "number": 87928,
+            "url": "https://github.com/openclaw/openclaw/issues/87928",
+            "area": "update-system",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "macOS update can still leave concurrent manual-update loops and gateway restart storms on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90673",
+            "repo": "openclaw/openclaw",
+            "number": 90673,
+            "url": "https://github.com/openclaw/openclaw/issues/90673",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex app-server can stall after an inter-session sessions_send timeout on 2026.6.1"
+          },
+          {
+            "issue": "openclaw/openclaw#90675",
+            "repo": "openclaw/openclaw",
+            "number": 90675,
+            "url": "https://github.com/openclaw/openclaw/issues/90675",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Dashboard agents can emit fake tool calls and native Claude route can fail on 2026.6.1 with dmxapi aliases"
           }
         ]
       },
