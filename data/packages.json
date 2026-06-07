@@ -824,18 +824,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 178,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "survivalDays": 4,
+        "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 178,
           "votePenalty": 0,
-          "survivalDays": 3,
+          "survivalDays": 4,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 4,
+          "survivalBonus": 12,
           "curatedBonus": 0,
           "score": 0
         },
@@ -1610,7 +1610,7 @@
           }
         ]
       },
-      "thumbsUp": 1,
+      "thumbsUp": 2,
       "thumbsDown": 0,
       "createdAt": "2026-06-03T19:35:05.903Z"
     }
@@ -1626,7 +1626,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Fresh release, real smoke already visible: desktop polish, gateway edges, and one small VPS doing the 3am OOM cosplay.",
+      "verdictComment": "v0.16.0 is past the first-smoke window now: config rewrite risk, remote Desktop rough edges, and cron/model routing doing trust-fall exercises at 3am.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1672,6 +1672,54 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 39447,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39447",
+          "title": "[Bug] Desktop drag-and-drop images fail with remote gateway (local path sent instead of uploading)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40821,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40821",
+          "title": "0.16.0: first config write after upgrade rewrites config.yaml to expanded defaults, dropping custom_providers (distinct from #17876)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41445,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41445",
+          "title": "hermes prompt-size over-counts tools by not respecting enabled/disabled toolsets"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41323,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41323",
+          "title": "bug(desktop): /goal with newline returns empty slash command"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 38412,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
+          "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron client"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41392,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41392",
+          "title": "[Bug]: hermes cron list crashes with TypeError: can only join an iterable when any job has deliver: null"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40944,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40944",
+          "title": "Banner shows stale \"commits behind\" count after manual git pull in source installs"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41377,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41377",
+          "title": "[Bug]: Cron job main model silently falls back on 404 (tool-use unsupported) — run recorded as ok, no disclosure of substitution in last_error, audit log, or any surfaced event"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 40364,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
           "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -1711,39 +1759,93 @@
           "number": 40677,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40677",
           "title": "[Bug]: Profile-local skills are unavailable in Dashboard/TUI/Desktop GUI because child processes use the root HERMES_HOME"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39447,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39447",
+          "title": "[Bug] Desktop drag-and-drop images fail with remote gateway (local path sent instead of uploading)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40821,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40821",
+          "title": "0.16.0: first config write after upgrade rewrites config.yaml to expanded defaults, dropping custom_providers (distinct from #17876)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41445,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41445",
+          "title": "hermes prompt-size over-counts tools by not respecting enabled/disabled toolsets"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41323,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41323",
+          "title": "bug(desktop): /goal with newline returns empty slash command"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 38412,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
+          "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron client"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41392,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41392",
+          "title": "[Bug]: hermes cron list crashes with TypeError: can only join an iterable when any job has deliver: null"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40944,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40944",
+          "title": "Banner shows stale \"commits behind\" count after manual git pull in source installs"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41377,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41377",
+          "title": "[Bug]: Cron job main model silently falls back on 404 (tool-use unsupported) — run recorded as ok, no disclosure of substitution in last_error, audit log, or any surfaced event"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 69,
+        "score": 50,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 14,
+        "evidencePenalty": 33,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 14,
+          "evidencePenalty": 33,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 1,
           "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 69
+          "score": 50
         },
         "affected": [
           "desktop",
           "docker",
-          "gateway",
-          "model-picker",
-          "profile-runtime",
-          "skills",
           "yuanbao",
-          "email"
+          "model-picker",
+          "email",
+          "skills",
+          "desktop-remote-upload",
+          "config-migration",
+          "prompt-size",
+          "desktop-slash-command",
+          "desktop-remote-gateway",
+          "cron",
+          "update-banner",
+          "cron-model-routing"
         ],
         "evidence": [
           {
@@ -1822,6 +1924,94 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Dashboard/TUI/Desktop child processes can resolve the wrong HERMES_HOME, hiding profile-local skills."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#39447",
+            "repo": "NousResearch/hermes-agent",
+            "number": 39447,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/39447",
+            "area": "desktop-remote-upload",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes Desktop v0.16.0 remote gateway image drag/drop sends a local path instead of uploading bytes, so the remote backend cannot read the image."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40821",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40821,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40821",
+            "area": "config-migration",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "After upgrading to v0.16.0, the first config write can rewrite config.yaml to expanded defaults and drop custom_providers."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41445",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41445,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41445",
+            "area": "prompt-size",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 prompt-size over-counts tools because it ignores enabled/disabled toolsets for the selected platform."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41323",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41323,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41323",
+            "area": "desktop-slash-command",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop connected to a v0.16.0 backend treats multi-line /goal input as an empty slash command."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#38412",
+            "repo": "NousResearch/hermes-agent",
+            "number": 38412,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/38412",
+            "area": "desktop-remote-gateway",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes 0.16.0 remote gateway WebSocket admission still rejects packaged Electron desktop clients, leaving remote Desktop unable to connect."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41392",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41392,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41392",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 hermes cron list crashes with TypeError when any job has deliver: null, hiding all scheduled jobs."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#40944",
+            "repo": "NousResearch/hermes-agent",
+            "number": 40944,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/40944",
+            "area": "update-banner",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 source installs can keep showing a stale commits-behind banner after a manual git pull."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41377",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41377,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41377",
+            "area": "cron-model-routing",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.16.0 cron jobs can silently fall back after a main-model 404 and record the run as ok without surfacing the substitution in errors or audit logs."
           }
         ]
       },
