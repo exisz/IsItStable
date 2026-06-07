@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-07T20:24:10.918Z",
+  "generatedAt": "2026-06-07T21:24:26.613Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -234,9 +234,11 @@
         "version",
         "risk:channel",
         "risk:tool",
+        "risk:kernel",
         "risk:runtime",
         "score:70-79",
         "affected:discord",
+        "affected:runtime",
         "affected:whatsapp",
         "affected:browser",
         "affected:plugin-install",
@@ -249,7 +251,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/127",
       "createdAt": "2026-06-02T00:36:52Z",
-      "updatedAt": "2026-06-02T20:31:17Z"
+      "updatedAt": "2026-06-07T20:39:24Z"
     },
     {
       "version": "0.11.0",
@@ -287,11 +289,13 @@
         "risk:tool",
         "risk:runtime",
         "score:70-79",
+        "affected:runtime",
         "affected:whatsapp",
         "affected:gateway",
         "affected:plugin-install",
         "affected:codex",
         "affected:ui",
+        "affected:provider-integration",
         "affected:windows",
         "affected:memory",
         "pkg:hermes-agent"
@@ -301,7 +305,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/129",
       "createdAt": "2026-06-02T00:36:54Z",
-      "updatedAt": "2026-06-02T20:31:13Z"
+      "updatedAt": "2026-06-07T20:39:21Z"
     },
     {
       "version": "0.13.0",
@@ -473,13 +477,17 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:60-69",
+        "score:40-49",
         "affected:runtime",
         "affected:gateway",
         "affected:tool",
+        "affected:browser",
+        "affected:update-system",
         "affected:plugin-system",
         "affected:ui",
+        "affected:cron",
         "affected:model-routing",
+        "affected:provider-integration",
         "pkg:hermes-agent",
         "affected:desktop"
       ],
@@ -488,7 +496,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/135",
       "createdAt": "2026-06-06T01:36:26Z",
-      "updatedAt": "2026-06-06T20:34:24Z"
+      "updatedAt": "2026-06-07T20:38:12Z"
     },
     {
       "version": "0.0.1",
