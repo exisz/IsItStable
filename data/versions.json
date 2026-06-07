@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fifty-plus cuts now: fresh memory, Codex, CLI, channel-delivery, and update-loop regressions joined the pile. The score was already on the floor; the evidence backlog is catching up.",
+    "verdictComment": "Sixty-plus paper cuts now include doctor drift blind spots, prompt-cache cost burn, and UI/plugin regressions. This release is still a 3am deploy story with receipts.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -382,6 +382,36 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 90891,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90891",
+        "title": "[Bug]: Doctor does not report official managed plugin version drift after core upgrade"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91018,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91018",
+        "title": "⚠️ Upgrade 2026.6.1 broke DeepSeek prompt cache - $6 burned in one hour"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90890,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90890",
+        "title": "[Bug]: You cannot give an avatar to a specific agent in settings"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90756,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90756",
+        "title": "[Bug]: Skill workshop does not show anything in the GUI but command line does show it."
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90701,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90701",
+        "title": "Feature Request: Toggle to hide/show the right-side Workspace panel in Control UI"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 90047,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
         "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
@@ -751,6 +781,36 @@
         "number": 90675,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90675",
         "title": "[Bug]: Dashboard/agent fake tool calls with dmxapi model; native claude route returns incomplete terminal response"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90891,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90891",
+        "title": "[Bug]: Doctor does not report official managed plugin version drift after core upgrade"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91018,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91018",
+        "title": "⚠️ Upgrade 2026.6.1 broke DeepSeek prompt cache - $6 burned in one hour"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90890,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90890",
+        "title": "[Bug]: You cannot give an avatar to a specific agent in settings"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90756,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90756",
+        "title": "[Bug]: Skill workshop does not show anything in the GUI but command line does show it."
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90701,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90701",
+        "title": "Feature Request: Toggle to hide/show the right-side Workspace panel in Control UI"
       }
     ],
     "stabilityScore": {
@@ -759,14 +819,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 169,
+      "evidencePenalty": 178,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 169,
+        "evidencePenalty": 178,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
@@ -803,7 +863,8 @@
         "cli",
         "whatsapp",
         "qqbot",
-        "config"
+        "config",
+        "doctor"
       ],
       "evidence": [
         {
@@ -1487,6 +1548,61 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Dashboard agents can emit fake tool calls and native Claude route can fail on 2026.6.1 with dmxapi aliases"
+        },
+        {
+          "issue": "openclaw/openclaw#90891",
+          "repo": "openclaw/openclaw",
+          "number": 90891,
+          "url": "https://github.com/openclaw/openclaw/issues/90891",
+          "area": "doctor",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Doctor misses official managed plugin version drift after a 2026.6.1 core upgrade"
+        },
+        {
+          "issue": "openclaw/openclaw#91018",
+          "repo": "openclaw/openclaw",
+          "number": 91018,
+          "url": "https://github.com/openclaw/openclaw/issues/91018",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "DeepSeek prompt cache can fail after upgrading to 2026.6.1, causing severe token-cost regression"
+        },
+        {
+          "issue": "openclaw/openclaw#90890",
+          "repo": "openclaw/openclaw",
+          "number": 90890,
+          "url": "https://github.com/openclaw/openclaw/issues/90890",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Agent avatar settings are not scoped per agent on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90756",
+          "repo": "openclaw/openclaw",
+          "number": 90756,
+          "url": "https://github.com/openclaw/openclaw/issues/90756",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Skill Workshop items can appear in CLI but not in the GUI on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90701",
+          "repo": "openclaw/openclaw",
+          "number": 90701,
+          "url": "https://github.com/openclaw/openclaw/issues/90701",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Workspace panel added in 2026.6.1 cannot be collapsed or hidden in Control UI"
         }
       ]
     },
@@ -1501,7 +1617,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Forty-three cuts now: provider registration, channel isolation, gateway crashes, packaging holes, Codex wedges, update fallout, and config/runtime wounds. This release is doing a full 3am incident cosplay; the website owns the score.",
+    "verdictComment": "The 5.28 trail picked up a Feishu/core API compatibility break. The score was already low; the backlog found another sharp edge.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1763,6 +1879,12 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 91122,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91122",
+        "title": "[core/runtime] Backward-compat shim missing: core.channel.turn.* renamed to core.channel.inbound.* on 2026-06-03"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 88024,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
         "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
@@ -2018,6 +2140,12 @@
         "number": 89743,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/89743",
         "title": "[Bug]: Skill loader ignores configured workspace path and hardcodes fallback to ~/.openclaw/workspace"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91122,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91122",
+        "title": "[core/runtime] Backward-compat shim missing: core.channel.turn.* renamed to core.channel.inbound.* on 2026-06-03"
       }
     ],
     "stabilityScore": {
@@ -2026,14 +2154,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 108,
+      "evidencePenalty": 112,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 108,
+        "evidencePenalty": 112,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
@@ -2543,6 +2671,17 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Skill loader ignores configured workspace path and probes the wrong fallback path on OpenClaw 2026.5.28"
+        },
+        {
+          "issue": "openclaw/openclaw#91122",
+          "repo": "openclaw/openclaw",
+          "number": 91122,
+          "url": "https://github.com/openclaw/openclaw/issues/91122",
+          "area": "feishu",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Feishu 2026.5.28 still calls the old core.channel.turn API after the core inbound rename, leaving the channel stuck in SETUP"
         }
       ]
     },
@@ -14880,24 +15019,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 66,
+      "score": 69,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 14,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 14,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 66
+        "score": 69
       },
       "affected": [
         "desktop",
