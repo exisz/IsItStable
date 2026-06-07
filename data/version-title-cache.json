@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-07T07:18:13.159Z",
+  "generatedAt": "2026-06-07T08:59:54.833Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2411,7 +2411,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/113",
       "createdAt": "2026-05-30T20:09:41Z",
-      "updatedAt": "2026-06-03T08:30:05Z"
+      "updatedAt": "2026-06-07T08:37:40Z"
     },
     {
       "version": "2026.6.1",
@@ -2443,6 +2443,7 @@
         "affected:update-system",
         "affected:codex",
         "affected:ui",
+        "affected:doctor",
         "affected:model-routing",
         "affected:sessions-management",
         "affected:cron-runtime",
@@ -2458,7 +2459,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-06T08:36:22Z"
+      "updatedAt": "2026-06-07T08:37:38Z"
     }
   ],
   "duplicates": {
