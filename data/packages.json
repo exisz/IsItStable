@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Sixty-plus paper cuts now include doctor drift blind spots, prompt-cache cost burn, and UI/plugin regressions. This release is still a 3am deploy story with receipts.",
+      "verdictComment": "Score-first evidence refresh: browser, cli, codex, compaction is doing the 3am deploy goblin dance. Evidence updated; website owns the final math.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -416,6 +416,18 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 91363,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91363",
+          "title": "Isolated cron consistently fails with \"LLM request failed\" on model-call-started phase"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91159,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91159",
+          "title": "Feishu channel: streaming card text truncation / 飞书流式卡片文字显示不全"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 90047,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
           "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
@@ -815,6 +827,18 @@
           "number": 90701,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/90701",
           "title": "Feature Request: Toggle to hide/show the right-side Workspace panel in Control UI"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91363,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91363",
+          "title": "Isolated cron consistently fails with \"LLM request failed\" on model-call-started phase"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91159,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91159",
+          "title": "Feishu channel: streaming card text truncation / 飞书流式卡片文字显示不全"
         }
       ],
       "stabilityScore": {
@@ -823,14 +847,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 178,
+        "evidencePenalty": 184,
         "survivalDays": 4,
         "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 178,
+          "evidencePenalty": 184,
           "votePenalty": 0,
           "survivalDays": 4,
           "survivalPointsPerDay": 3,
@@ -840,35 +864,35 @@
           "score": 0
         },
         "affected": [
+          "browser",
+          "cli",
           "codex",
-          "provider-integration",
+          "compaction",
+          "config",
+          "cron-runtime",
+          "discord",
+          "doctor",
+          "export-session",
+          "feishu",
+          "heartbeat",
+          "launchagent",
+          "mcp",
           "memory",
+          "message-delivery",
+          "migration",
+          "model-routing",
+          "plugin-install",
+          "provider-integration",
+          "qqbot",
           "service-management",
           "sessions-management",
-          "discord",
-          "feishu",
-          "migration",
-          "upgrade",
-          "version-metadata",
-          "plugin-install",
-          "cron-runtime",
-          "heartbeat",
-          "voice",
-          "model-routing",
-          "message-delivery",
-          "compaction",
+          "telegram",
           "ui",
           "update-system",
-          "telegram",
-          "mcp",
-          "launchagent",
-          "browser",
-          "export-session",
-          "cli",
-          "whatsapp",
-          "qqbot",
-          "config",
-          "doctor"
+          "upgrade",
+          "version-metadata",
+          "voice",
+          "whatsapp"
         ],
         "evidence": [
           {
@@ -1607,6 +1631,28 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Workspace panel added in 2026.6.1 cannot be collapsed or hidden in Control UI"
+          },
+          {
+            "issue": "openclaw/openclaw#91363",
+            "repo": "openclaw/openclaw",
+            "number": 91363,
+            "url": "https://github.com/openclaw/openclaw/issues/91363",
+            "area": "cron-runtime",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Isolated cron fails at model-call-started with LLM request failure on 2026.6.1."
+          },
+          {
+            "issue": "openclaw/openclaw#91159",
+            "repo": "openclaw/openclaw",
+            "number": 91159,
+            "url": "https://github.com/openclaw/openclaw/issues/91159",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Feishu streaming card truncates long responses after 2026.6.1 upgrade."
           }
         ]
       },
@@ -1812,24 +1858,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 50,
+        "score": 53,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 33,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 33,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 50
+          "score": 53
         },
         "affected": [
           "desktop",
