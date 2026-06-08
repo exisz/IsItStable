@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-08T07:33:26.337Z",
+  "generatedAt": "2026-06-08T09:30:24.217Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -1436,13 +1436,16 @@
         "version",
         "pkg:openclaw",
         "risk:channel",
+        "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:60-69",
+        "score:50-59",
+        "affected:image-tool",
         "affected:runtime",
         "affected:whatsapp",
         "affected:gateway",
         "affected:plugin-system",
+        "affected:cron-runtime",
         "affected:windows"
       ],
       "issueNumber": 1,
@@ -1450,7 +1453,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/1",
       "createdAt": "2026-04-28T01:01:46Z",
-      "updatedAt": "2026-05-28T08:08:46Z"
+      "updatedAt": "2026-06-08T08:41:01Z"
     },
     {
       "version": "2026.4.24",
@@ -1486,18 +1489,24 @@
         "pkg:openclaw",
         "risk:channel",
         "risk:kernel",
+        "risk:runtime",
         "risk:other",
-        "score:60-69",
+        "score:40-49",
         "affected:runtime",
         "affected:telegram",
-        "affected:gateway"
+        "affected:whatsapp",
+        "affected:gateway",
+        "affected:update-system",
+        "affected:sessions-management",
+        "affected:migration",
+        "affected:memory"
       ],
       "issueNumber": 3,
       "title": "[v2026.4.25] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/3",
       "createdAt": "2026-04-28T01:02:04Z",
-      "updatedAt": "2026-05-22T23:06:30Z"
+      "updatedAt": "2026-06-08T08:40:57Z"
     },
     {
       "version": "2026.4.26",
@@ -1702,19 +1711,23 @@
         "pkg:openclaw",
         "risk:channel",
         "risk:tool",
+        "risk:runtime",
         "risk:other",
-        "score:70-79",
+        "score:60-69",
         "affected:discord",
+        "affected:feishu",
         "affected:runtime",
         "affected:telegram",
-        "affected:tool"
+        "affected:tool",
+        "affected:sessions-management",
+        "affected:provider-integration"
       ],
       "issueNumber": 73,
       "title": "[v2026.5.3] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/73",
       "createdAt": "2026-05-04T07:57:31Z",
-      "updatedAt": "2026-05-30T03:31:03Z"
+      "updatedAt": "2026-06-08T08:40:53Z"
     },
     {
       "version": "2026.5.3-1",
@@ -1844,19 +1857,25 @@
       "labels": [
         "version",
         "pkg:openclaw",
+        "risk:channel",
+        "risk:tool",
         "risk:kernel",
-        "score:60-69",
+        "score:40-49",
+        "affected:heartbeat",
         "affected:runtime",
         "affected:security",
+        "affected:telegram",
         "affected:tool",
-        "affected:approval-boundary"
+        "affected:browser",
+        "affected:approval-boundary",
+        "affected:ui"
       ],
       "issueNumber": 77,
       "title": "[v2026.5.5] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/77",
       "createdAt": "2026-05-06T09:44:54Z",
-      "updatedAt": "2026-05-30T03:31:05Z"
+      "updatedAt": "2026-06-08T08:40:49Z"
     },
     {
       "version": "2026.5.6",
@@ -1894,19 +1913,25 @@
         "risk:channel",
         "risk:tool",
         "risk:kernel",
+        "risk:runtime",
         "risk:other",
-        "score:60-69",
+        "score:50-59",
+        "affected:discord",
         "affected:feishu",
+        "affected:qqbot",
         "affected:runtime",
+        "affected:telegram",
         "affected:gateway",
-        "affected:web_fetch"
+        "affected:web_fetch",
+        "affected:cron-runtime",
+        "affected:provider-integration"
       ],
       "issueNumber": 78,
       "title": "[v2026.5.6] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/78",
       "createdAt": "2026-05-06T18:29:33Z",
-      "updatedAt": "2026-05-30T03:31:06Z"
+      "updatedAt": "2026-06-08T08:40:45Z"
     },
     {
       "version": "2026.5.7",
@@ -2467,7 +2492,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-07T08:37:38Z"
+      "updatedAt": "2026-06-08T08:40:41Z"
     }
   ],
   "duplicates": {
@@ -2907,19 +2932,25 @@
           "risk:channel",
           "risk:tool",
           "risk:kernel",
+          "risk:runtime",
           "risk:other",
-          "score:60-69",
+          "score:50-59",
+          "affected:discord",
           "affected:feishu",
+          "affected:qqbot",
           "affected:runtime",
+          "affected:telegram",
           "affected:gateway",
-          "affected:web_fetch"
+          "affected:web_fetch",
+          "affected:cron-runtime",
+          "affected:provider-integration"
         ],
         "issueNumber": 78,
         "title": "[v2026.5.6] [OpenClaw] Is it stable?",
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/78",
         "createdAt": "2026-05-06T18:29:33Z",
-        "updatedAt": "2026-05-30T03:31:06Z"
+        "updatedAt": "2026-06-08T08:40:45Z"
       }
     ],
     "openclaw:2026.5.5": [
@@ -2955,19 +2986,25 @@
         "labels": [
           "version",
           "pkg:openclaw",
+          "risk:channel",
+          "risk:tool",
           "risk:kernel",
-          "score:60-69",
+          "score:40-49",
+          "affected:heartbeat",
           "affected:runtime",
           "affected:security",
+          "affected:telegram",
           "affected:tool",
-          "affected:approval-boundary"
+          "affected:browser",
+          "affected:approval-boundary",
+          "affected:ui"
         ],
         "issueNumber": 77,
         "title": "[v2026.5.5] [OpenClaw] Is it stable?",
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/77",
         "createdAt": "2026-05-06T09:44:54Z",
-        "updatedAt": "2026-05-30T03:31:05Z"
+        "updatedAt": "2026-06-08T08:40:49Z"
       }
     ],
     "openclaw:2026.5.4": [
@@ -3106,19 +3143,23 @@
           "pkg:openclaw",
           "risk:channel",
           "risk:tool",
+          "risk:runtime",
           "risk:other",
-          "score:70-79",
+          "score:60-69",
           "affected:discord",
+          "affected:feishu",
           "affected:runtime",
           "affected:telegram",
-          "affected:tool"
+          "affected:tool",
+          "affected:sessions-management",
+          "affected:provider-integration"
         ],
         "issueNumber": 73,
         "title": "[v2026.5.3] [OpenClaw] Is it stable?",
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/73",
         "createdAt": "2026-05-04T07:57:31Z",
-        "updatedAt": "2026-05-30T03:31:03Z"
+        "updatedAt": "2026-06-08T08:40:53Z"
       }
     ],
     "openclaw:2026.5.2": [
