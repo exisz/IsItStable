@@ -848,18 +848,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 184,
-        "survivalDays": 4,
-        "survivalBonus": 12,
+        "survivalDays": 5,
+        "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 184,
           "votePenalty": 0,
-          "survivalDays": 4,
+          "survivalDays": 5,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 4,
-          "survivalBonus": 12,
+          "survivalCreditedDays": 5,
+          "survivalBonus": 15,
           "curatedBonus": 0,
           "score": 0
         },
@@ -1672,7 +1672,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.16.0 is past the first-smoke window now: config rewrite risk, remote Desktop rough edges, and cron/model routing doing trust-fall exercises at 3am.",
+      "verdictComment": "v0.16.0 picked up fresh post-smoke evidence: Desktop preview duplication, Discord Windows connect timeouts, zombie cron sessions, and an installer edge case. Not a fire, but definitely smoke in the deploy room.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1766,6 +1766,30 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 41793,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41793",
+          "title": "Bug Report — Hermes Desktop 0.16.0 (Windows)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41539,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41539",
+          "title": "[Bug]: Discord connect timed out after 30s on Windows"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41935,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41935",
+          "title": "[Bug]: no_agent cron sessions not closed — state.db accumulates zombie sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42074,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42074",
+          "title": "[Bug]: ModuleNotFoundError: No module named '_ctypes'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 40364,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
           "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -1853,29 +1877,53 @@
           "number": 41377,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41377",
           "title": "[Bug]: Cron job main model silently falls back on 404 (tool-use unsupported) — run recorded as ok, no disclosure of substitution in last_error, audit log, or any surfaced event"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41793,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41793",
+          "title": "Bug Report — Hermes Desktop 0.16.0 (Windows)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41539,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41539",
+          "title": "[Bug]: Discord connect timed out after 30s on Windows"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41935,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41935",
+          "title": "[Bug]: no_agent cron sessions not closed — state.db accumulates zombie sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42074,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42074",
+          "title": "[Bug]: ModuleNotFoundError: No module named '_ctypes'"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 53,
+        "score": 46,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 33,
+        "evidencePenalty": 40,
         "survivalDays": 2,
         "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 33,
+          "evidencePenalty": 40,
           "votePenalty": 0,
           "survivalDays": 2,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 2,
           "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 53
+          "score": 46
         },
         "affected": [
           "desktop",
@@ -1891,7 +1939,9 @@
           "desktop-remote-gateway",
           "cron",
           "update-banner",
-          "cron-model-routing"
+          "cron-model-routing",
+          "discord",
+          "installer"
         ],
         "evidence": [
           {
@@ -2058,6 +2108,50 @@
             "severity": 5,
             "penalty": 5,
             "reason": "v0.16.0 cron jobs can silently fall back after a main-model 404 and record the run as ok without surfacing the substitution in errors or audit logs."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41793",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41793,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41793",
+            "area": "desktop",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop 0.16.0 on Windows duplicates file preview links every time the session is reopened."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41539",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41539,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41539",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 Discord gateway on Windows times out after 30 seconds and the bot never comes online."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41935",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41935,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41935",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "hermes 0.16.0 no_agent cron sessions are not closed, accumulating zombie rows in state.db."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42074",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42074,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42074",
+            "area": "installer",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "0.16.0 installer can finish with ModuleNotFoundError for _ctypes during process-title setup on Ubuntu/Python 3.11."
           }
         ]
       },
