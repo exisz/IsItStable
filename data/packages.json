@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Score-first evidence refresh: browser, cli, codex, compaction is doing the 3am deploy goblin dance. Evidence updated; website owns the final math.",
+      "verdictComment": "Score-first evidence refresh: v2026.6.1 picked up another wave of cron, memory, provider, channel, and service-management regressions. Works-on-my-machine is filing for witness protection.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -428,6 +428,168 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 91396,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91396",
+          "title": "Memory embedding fails with HTTP 400 when using SiliconFlow (fetchWithSsrFGuard incompatibility)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91401,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91401",
+          "title": "[BUG] Feishu streaming card overwrites text instead of appending (#87896 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91412,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91412",
+          "title": "Cron isolated agentTurn delivers `[object Object]` to LLM on 2026.6.1 (regression of #54579)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91420,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91420",
+          "title": "[Bug]: Delivery retry loop corrupts active sessions (R-004) — retry selector bypasses delivery.mode=none"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91432,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91432",
+          "title": "[Bug]: Tool stdout leaks to chat + reply generation interrupted"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91433,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91433",
+          "title": "MCP remote OAuth: two bugs block streamable-http servers (regex `\\:` under /u; OAuth errors surfaced as [object Response])"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91435,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91435",
+          "title": "Cron jobs not migrated from JSON file to SQLite on update (2026.6.1+)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91456,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91456",
+          "title": "Telegram DM lane can remain guarded after send timeout, delaying or dropping direct messages"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91482,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91482",
+          "title": "[Bug]:  dir_list is exposed without usable node context and is mistaken for local directory listing."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91485,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91485",
+          "title": "[Bug]: Inter-session messages are leaked in the main session"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91513,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91513",
+          "title": "ACP: model prefix not stripped when dispatching to Claude ACP adapter — Cannot replay saved model \"anthropic/claude-sonnet-4-6\""
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91517,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91517",
+          "title": "getSubagentRunsSnapshotForRead does an uncached full SQLite re-read on every call; many consumers drive it to ~22 Hz and pin a CPU core"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91522,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91522",
+          "title": "member-info fails with \"fetch failed\" on WSL2 in 2026.6.1 (SSRF fetch guard / undici dispatcher regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91527,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91527",
+          "title": "[Bug]: Subagent announce 3x duplicate still reproduces on 2026.6.1 release + Telegram — #89812 only fixes outbound/deliver path, not subagent-announce-delivery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91537,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91537",
+          "title": "[Bug]: Codex yolo mode leaks app-server processes and binding files"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91539,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91539",
+          "title": "[Bug]: document-extract plugin loads but registers zero capabilities (bundled, 2026.6.1)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91542,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91542",
+          "title": "[Bug] Gemini (jjcc/openai-compat) rejects cron tool schema: anyOf properties missing type field in v2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91554,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91554",
+          "title": "systemd gateway service can fail to restart after update when env-backed gateway auth token is not loaded"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91558,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91558",
+          "title": "Kimi Code thinking/tool replay fails: missing reasoning_content in assistant tool-call replay"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91562,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91562",
+          "title": "[Bug]: Feishu streaming replies only show latest token in 6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91564,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91564",
+          "title": "Telegram: specific forum topic becomes permanent inbound black hole after stuck-session recovery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91569,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91569",
+          "title": "[Bug]: Desktop app stuck on old version after gateway auto-update → \"protocol mismatch\" with no in-app prompt"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91588,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91588",
+          "title": "Critical: Gateway Memory Leak — RSS grows from 350MB to 15.5GB over days, causing repeated OOM crashes"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91592,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91592",
+          "title": "memory_search broken with \"index scope changed\" after --force rebuild — scopeHash mismatch persists"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91613,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91613",
+          "title": "[Bug] Gateway reply-queue state not flushed on restart — stale queued replies drain to wrong Matrix room after restart"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91645,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91645",
+          "title": "[Bug]: In-turn reasoning dropped on multi-turn tool replay for non-400 openai models (gemma4/vLLM) — silent agentic-quality regression"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91662,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91662",
+          "title": "Bug: native Codex responses backend returns valid SSE without content-type, causing invalid_provider_content_type for openai/gpt-5.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 90047,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
           "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
@@ -839,6 +1001,330 @@
           "number": 91159,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/91159",
           "title": "Feishu channel: streaming card text truncation / 飞书流式卡片文字显示不全"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91396,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91396",
+          "title": "Memory embedding fails with HTTP 400 when using SiliconFlow (fetchWithSsrFGuard incompatibility)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91401,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91401",
+          "title": "[BUG] Feishu streaming card overwrites text instead of appending (#87896 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91412,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91412",
+          "title": "Cron isolated agentTurn delivers `[object Object]` to LLM on 2026.6.1 (regression of #54579)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91420,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91420",
+          "title": "[Bug]: Delivery retry loop corrupts active sessions (R-004) — retry selector bypasses delivery.mode=none"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91432,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91432",
+          "title": "[Bug]: Tool stdout leaks to chat + reply generation interrupted"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91433,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91433",
+          "title": "MCP remote OAuth: two bugs block streamable-http servers (regex `\\:` under /u; OAuth errors surfaced as [object Response])"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91435,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91435",
+          "title": "Cron jobs not migrated from JSON file to SQLite on update (2026.6.1+)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91456,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91456",
+          "title": "Telegram DM lane can remain guarded after send timeout, delaying or dropping direct messages"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91482,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91482",
+          "title": "[Bug]:  dir_list is exposed without usable node context and is mistaken for local directory listing."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91485,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91485",
+          "title": "[Bug]: Inter-session messages are leaked in the main session"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91513,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91513",
+          "title": "ACP: model prefix not stripped when dispatching to Claude ACP adapter — Cannot replay saved model \"anthropic/claude-sonnet-4-6\""
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91517,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91517",
+          "title": "getSubagentRunsSnapshotForRead does an uncached full SQLite re-read on every call; many consumers drive it to ~22 Hz and pin a CPU core"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91522,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91522",
+          "title": "member-info fails with \"fetch failed\" on WSL2 in 2026.6.1 (SSRF fetch guard / undici dispatcher regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91527,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91527",
+          "title": "[Bug]: Subagent announce 3x duplicate still reproduces on 2026.6.1 release + Telegram — #89812 only fixes outbound/deliver path, not subagent-announce-delivery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91537,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91537",
+          "title": "[Bug]: Codex yolo mode leaks app-server processes and binding files"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91539,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91539",
+          "title": "[Bug]: document-extract plugin loads but registers zero capabilities (bundled, 2026.6.1)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91542,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91542",
+          "title": "[Bug] Gemini (jjcc/openai-compat) rejects cron tool schema: anyOf properties missing type field in v2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91554,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91554",
+          "title": "systemd gateway service can fail to restart after update when env-backed gateway auth token is not loaded"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91558,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91558",
+          "title": "Kimi Code thinking/tool replay fails: missing reasoning_content in assistant tool-call replay"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91562,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91562",
+          "title": "[Bug]: Feishu streaming replies only show latest token in 6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91564,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91564",
+          "title": "Telegram: specific forum topic becomes permanent inbound black hole after stuck-session recovery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91569,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91569",
+          "title": "[Bug]: Desktop app stuck on old version after gateway auto-update → \"protocol mismatch\" with no in-app prompt"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91588,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91588",
+          "title": "Critical: Gateway Memory Leak — RSS grows from 350MB to 15.5GB over days, causing repeated OOM crashes"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91592,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91592",
+          "title": "memory_search broken with \"index scope changed\" after --force rebuild — scopeHash mismatch persists"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91613,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91613",
+          "title": "[Bug] Gateway reply-queue state not flushed on restart — stale queued replies drain to wrong Matrix room after restart"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91645,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91645",
+          "title": "[Bug]: In-turn reasoning dropped on multi-turn tool replay for non-400 openai models (gemma4/vLLM) — silent agentic-quality regression"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91662,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91662",
+          "title": "Bug: native Codex responses backend returns valid SSE without content-type, causing invalid_provider_content_type for openai/gpt-5.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91396,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91396",
+          "title": "Memory embedding fails with HTTP 400 when using SiliconFlow (fetchWithSsrFGuard incompatibility)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91401,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91401",
+          "title": "[BUG] Feishu streaming card overwrites text instead of appending (#87896 regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91412,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91412",
+          "title": "Cron isolated agentTurn delivers `[object Object]` to LLM on 2026.6.1 (regression of #54579)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91420,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91420",
+          "title": "[Bug]: Delivery retry loop corrupts active sessions (R-004) — retry selector bypasses delivery.mode=none"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91432,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91432",
+          "title": "[Bug]: Tool stdout leaks to chat + reply generation interrupted"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91433,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91433",
+          "title": "MCP remote OAuth: two bugs block streamable-http servers (regex `\\:` under /u; OAuth errors surfaced as [object Response])"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91435,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91435",
+          "title": "Cron jobs not migrated from JSON file to SQLite on update (2026.6.1+)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91456,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91456",
+          "title": "Telegram DM lane can remain guarded after send timeout, delaying or dropping direct messages"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91482,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91482",
+          "title": "[Bug]:  dir_list is exposed without usable node context and is mistaken for local directory listing."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91485,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91485",
+          "title": "[Bug]: Inter-session messages are leaked in the main session"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91513,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91513",
+          "title": "ACP: model prefix not stripped when dispatching to Claude ACP adapter — Cannot replay saved model \"anthropic/claude-sonnet-4-6\""
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91517,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91517",
+          "title": "getSubagentRunsSnapshotForRead does an uncached full SQLite re-read on every call; many consumers drive it to ~22 Hz and pin a CPU core"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91522,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91522",
+          "title": "member-info fails with \"fetch failed\" on WSL2 in 2026.6.1 (SSRF fetch guard / undici dispatcher regression)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91527,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91527",
+          "title": "[Bug]: Subagent announce 3x duplicate still reproduces on 2026.6.1 release + Telegram — #89812 only fixes outbound/deliver path, not subagent-announce-delivery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91537,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91537",
+          "title": "[Bug]: Codex yolo mode leaks app-server processes and binding files"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91539,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91539",
+          "title": "[Bug]: document-extract plugin loads but registers zero capabilities (bundled, 2026.6.1)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91542,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91542",
+          "title": "[Bug] Gemini (jjcc/openai-compat) rejects cron tool schema: anyOf properties missing type field in v2026.6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91554,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91554",
+          "title": "systemd gateway service can fail to restart after update when env-backed gateway auth token is not loaded"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91558,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91558",
+          "title": "Kimi Code thinking/tool replay fails: missing reasoning_content in assistant tool-call replay"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91562,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91562",
+          "title": "[Bug]: Feishu streaming replies only show latest token in 6.1"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91564,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91564",
+          "title": "Telegram: specific forum topic becomes permanent inbound black hole after stuck-session recovery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91569,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91569",
+          "title": "[Bug]: Desktop app stuck on old version after gateway auto-update → \"protocol mismatch\" with no in-app prompt"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91588,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91588",
+          "title": "Critical: Gateway Memory Leak — RSS grows from 350MB to 15.5GB over days, causing repeated OOM crashes"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91592,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91592",
+          "title": "memory_search broken with \"index scope changed\" after --force rebuild — scopeHash mismatch persists"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91613,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91613",
+          "title": "[Bug] Gateway reply-queue state not flushed on restart — stale queued replies drain to wrong Matrix room after restart"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91645,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91645",
+          "title": "[Bug]: In-turn reasoning dropped on multi-turn tool replay for non-400 openai models (gemma4/vLLM) — silent agentic-quality regression"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91662,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91662",
+          "title": "Bug: native Codex responses backend returns valid SSE without content-type, causing invalid_provider_content_type for openai/gpt-5.5"
         }
       ],
       "stabilityScore": {
@@ -847,14 +1333,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 184,
+        "evidencePenalty": 259,
         "survivalDays": 5,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 184,
+          "evidencePenalty": 259,
           "votePenalty": 0,
           "survivalDays": 5,
           "survivalPointsPerDay": 3,
@@ -876,6 +1362,7 @@
           "feishu",
           "heartbeat",
           "launchagent",
+          "matrix",
           "mcp",
           "memory",
           "message-delivery",
@@ -887,6 +1374,7 @@
           "service-management",
           "sessions-management",
           "telegram",
+          "tool",
           "ui",
           "update-system",
           "upgrade",
@@ -1653,6 +2141,303 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Feishu streaming card truncates long responses after 2026.6.1 upgrade."
+          },
+          {
+            "issue": "openclaw/openclaw#91396",
+            "repo": "openclaw/openclaw",
+            "number": 91396,
+            "url": "https://github.com/openclaw/openclaw/issues/91396",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 memory embeddings can fail against SiliconFlow through fetchWithSsrFGuard incompatibility"
+          },
+          {
+            "issue": "openclaw/openclaw#91401",
+            "repo": "openclaw/openclaw",
+            "number": 91401,
+            "url": "https://github.com/openclaw/openclaw/issues/91401",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 Feishu streaming cards overwrite text instead of appending"
+          },
+          {
+            "issue": "openclaw/openclaw#91412",
+            "repo": "openclaw/openclaw",
+            "number": 91412,
+            "url": "https://github.com/openclaw/openclaw/issues/91412",
+            "area": "cron-runtime",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "2026.6.1 isolated cron agentTurn can deliver literal [object Object] to the LLM"
+          },
+          {
+            "issue": "openclaw/openclaw#91420",
+            "repo": "openclaw/openclaw",
+            "number": 91420,
+            "url": "https://github.com/openclaw/openclaw/issues/91420",
+            "area": "message-delivery",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "2026.6.1 delivery retry loop can corrupt active sessions by bypassing delivery.mode=none"
+          },
+          {
+            "issue": "openclaw/openclaw#91432",
+            "repo": "openclaw/openclaw",
+            "number": 91432,
+            "url": "https://github.com/openclaw/openclaw/issues/91432",
+            "area": "tool",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 tool stdout can leak to chat and interrupt final reply generation"
+          },
+          {
+            "issue": "openclaw/openclaw#91433",
+            "repo": "openclaw/openclaw",
+            "number": 91433,
+            "url": "https://github.com/openclaw/openclaw/issues/91433",
+            "area": "mcp",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 remote MCP OAuth has streamable-http blockers for public servers"
+          },
+          {
+            "issue": "openclaw/openclaw#91435",
+            "repo": "openclaw/openclaw",
+            "number": 91435,
+            "url": "https://github.com/openclaw/openclaw/issues/91435",
+            "area": "cron-runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "2026.6.1 JSON-to-SQLite cron migration can leave existing jobs invisible"
+          },
+          {
+            "issue": "openclaw/openclaw#91456",
+            "repo": "openclaw/openclaw",
+            "number": 91456,
+            "url": "https://github.com/openclaw/openclaw/issues/91456",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 Telegram DM lane can stay guarded after send timeout"
+          },
+          {
+            "issue": "openclaw/openclaw#91482",
+            "repo": "openclaw/openclaw",
+            "number": 91482,
+            "url": "https://github.com/openclaw/openclaw/issues/91482",
+            "area": "tool",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 dir_list can be exposed without usable node context"
+          },
+          {
+            "issue": "openclaw/openclaw#91485",
+            "repo": "openclaw/openclaw",
+            "number": 91485,
+            "url": "https://github.com/openclaw/openclaw/issues/91485",
+            "area": "sessions-management",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "2026.6.1 inter-session messages can leak into the main session transcript"
+          },
+          {
+            "issue": "openclaw/openclaw#91513",
+            "repo": "openclaw/openclaw",
+            "number": 91513,
+            "url": "https://github.com/openclaw/openclaw/issues/91513",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 Claude ACP model prefix replay can fail on saved anthropic model ids"
+          },
+          {
+            "issue": "openclaw/openclaw#91517",
+            "repo": "openclaw/openclaw",
+            "number": 91517,
+            "url": "https://github.com/openclaw/openclaw/issues/91517",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "2026.6.1 subagent snapshot reads can pin a CPU core via repeated SQLite scans"
+          },
+          {
+            "issue": "openclaw/openclaw#91522",
+            "repo": "openclaw/openclaw",
+            "number": 91522,
+            "url": "https://github.com/openclaw/openclaw/issues/91522",
+            "area": "message-delivery",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 member-info can fail on WSL2 through SSRF/undici dispatcher regression"
+          },
+          {
+            "issue": "openclaw/openclaw#91527",
+            "repo": "openclaw/openclaw",
+            "number": 91527,
+            "url": "https://github.com/openclaw/openclaw/issues/91527",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 Telegram subagent announce delivery can still duplicate sends"
+          },
+          {
+            "issue": "openclaw/openclaw#91537",
+            "repo": "openclaw/openclaw",
+            "number": 91537,
+            "url": "https://github.com/openclaw/openclaw/issues/91537",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 Codex yolo mode can leak app-server processes and binding files"
+          },
+          {
+            "issue": "openclaw/openclaw#91539",
+            "repo": "openclaw/openclaw",
+            "number": 91539,
+            "url": "https://github.com/openclaw/openclaw/issues/91539",
+            "area": "tool",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "2026.6.1 bundled document-extract plugin can register zero capabilities"
+          },
+          {
+            "issue": "openclaw/openclaw#91542",
+            "repo": "openclaw/openclaw",
+            "number": 91542,
+            "url": "https://github.com/openclaw/openclaw/issues/91542",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 Gemini via jjcc OpenAI-compatible provider can reject cron tool schemas"
+          },
+          {
+            "issue": "openclaw/openclaw#91554",
+            "repo": "openclaw/openclaw",
+            "number": 91554,
+            "url": "https://github.com/openclaw/openclaw/issues/91554",
+            "area": "service-management",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "2026.6.1 systemd gateway restart can fail when env-backed auth token is not loaded"
+          },
+          {
+            "issue": "openclaw/openclaw#91558",
+            "repo": "openclaw/openclaw",
+            "number": 91558,
+            "url": "https://github.com/openclaw/openclaw/issues/91558",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 Kimi Code thinking/tool replay can fail with missing reasoning_content"
+          },
+          {
+            "issue": "openclaw/openclaw#91562",
+            "repo": "openclaw/openclaw",
+            "number": 91562,
+            "url": "https://github.com/openclaw/openclaw/issues/91562",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 Feishu streaming replies can show only the latest token"
+          },
+          {
+            "issue": "openclaw/openclaw#91564",
+            "repo": "openclaw/openclaw",
+            "number": 91564,
+            "url": "https://github.com/openclaw/openclaw/issues/91564",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 Telegram forum topic can become a permanent inbound black hole after recovery"
+          },
+          {
+            "issue": "openclaw/openclaw#91569",
+            "repo": "openclaw/openclaw",
+            "number": 91569,
+            "url": "https://github.com/openclaw/openclaw/issues/91569",
+            "area": "upgrade",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 desktop app can remain on an old version after gateway auto-update"
+          },
+          {
+            "issue": "openclaw/openclaw#91588",
+            "repo": "openclaw/openclaw",
+            "number": 91588,
+            "url": "https://github.com/openclaw/openclaw/issues/91588",
+            "area": "service-management",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "2026.6.1 gateway RSS can grow from hundreds of MB to OOM scale over days"
+          },
+          {
+            "issue": "openclaw/openclaw#91592",
+            "repo": "openclaw/openclaw",
+            "number": 91592,
+            "url": "https://github.com/openclaw/openclaw/issues/91592",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 memory_search can stay broken after --force rebuild via scopeHash mismatch"
+          },
+          {
+            "issue": "openclaw/openclaw#91613",
+            "repo": "openclaw/openclaw",
+            "number": 91613,
+            "url": "https://github.com/openclaw/openclaw/issues/91613",
+            "area": "matrix",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "2026.6.1 gateway reply queue can drain stale replies to the wrong Matrix room after restart"
+          },
+          {
+            "issue": "openclaw/openclaw#91645",
+            "repo": "openclaw/openclaw",
+            "number": 91645,
+            "url": "https://github.com/openclaw/openclaw/issues/91645",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "2026.6.1 in-turn reasoning can be dropped on multi-turn tool replay for local/OpenAI-compatible models"
+          },
+          {
+            "issue": "openclaw/openclaw#91662",
+            "repo": "openclaw/openclaw",
+            "number": 91662,
+            "url": "https://github.com/openclaw/openclaw/issues/91662",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "2026.6.1 native Codex responses backend can fail on valid SSE without content-type"
           }
         ]
       },
@@ -1906,24 +2691,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 46,
+        "score": 49,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 40,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 40,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": 46
+          "score": 49
         },
         "affected": [
           "desktop",
