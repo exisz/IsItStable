@@ -16291,7 +16291,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.16.0 picked up fresh post-smoke evidence: Desktop preview duplication, Discord Windows connect timeouts, zombie cron sessions, and an installer edge case. Not a fire, but definitely smoke in the deploy room.",
+    "verdictComment": "0.16.0 is carrying a desktop/gateway bug parade: restarts, cron UI, remote auth, and Discord voice are all asking for coffee at 3am.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -16409,6 +16409,42 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 42675,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42675",
+        "title": "Gateway does not auto-start after container restart/upgrade — signal-initiated shutdown persists `gateway_state=stopped`"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42780,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42780",
+        "title": "[Bug]: HERMES_DASHBOARD_PUBLIC_URL not respected for self-hosted OIDC callback in Docker / reverse proxy setup"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42433,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42433",
+        "title": "Desktop Cron view doesn't render script/no_agent jobs (blank prompt, script never shown, empty run history despite completed runs)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42709,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42709",
+        "title": "Voice-only Discord message crashes handler: bare `return prefix` in _enrich_message_with_transcription (too many values to unpack)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42777,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42777",
+        "title": "[Bug]: The Desktop App chat scrollbar no longer follows the chat when new messages are displayed"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43071,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43071",
+        "title": "Title attribute not passed to statusbar elements — no hover tooltips"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 40364,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
         "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -16520,29 +16556,65 @@
         "number": 42074,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42074",
         "title": "[Bug]: ModuleNotFoundError: No module named '_ctypes'"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42675,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42675",
+        "title": "Gateway does not auto-start after container restart/upgrade — signal-initiated shutdown persists `gateway_state=stopped`"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42780,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42780",
+        "title": "[Bug]: HERMES_DASHBOARD_PUBLIC_URL not respected for self-hosted OIDC callback in Docker / reverse proxy setup"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42433,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42433",
+        "title": "Desktop Cron view doesn't render script/no_agent jobs (blank prompt, script never shown, empty run history despite completed runs)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42709,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42709",
+        "title": "Voice-only Discord message crashes handler: bare `return prefix` in _enrich_message_with_transcription (too many values to unpack)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42777,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42777",
+        "title": "[Bug]: The Desktop App chat scrollbar no longer follows the chat when new messages are displayed"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43071,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43071",
+        "title": "Title attribute not passed to statusbar elements — no hover tooltips"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 49,
+      "score": 39,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 40,
+      "evidencePenalty": 50,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 40,
+        "evidencePenalty": 50,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 49
+        "score": 39
       },
       "affected": [
         "desktop",
@@ -16560,7 +16632,12 @@
         "update-banner",
         "cron-model-routing",
         "discord",
-        "installer"
+        "installer",
+        "gateway",
+        "dashboard-oidc",
+        "desktop-cron",
+        "discord-voice",
+        "desktop-ui"
       ],
       "evidence": [
         {
@@ -16771,6 +16848,72 @@
           "severity": 2,
           "penalty": 2,
           "reason": "0.16.0 installer can finish with ModuleNotFoundError for _ctypes during process-title setup on Ubuntu/Python 3.11."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#42675",
+          "repo": "NousResearch/hermes-agent",
+          "number": 42675,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/42675",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes Agent 0.16.0 Docker/container restarts can persist gateway_state=stopped after signal shutdown, so the gateway refuses to auto-start after upgrade/restart."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#42780",
+          "repo": "NousResearch/hermes-agent",
+          "number": 42780,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/42780",
+          "area": "dashboard-oidc",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 Docker reverse-proxy/OIDC login can ignore HERMES_DASHBOARD_PUBLIC_URL, breaking callback URL construction unless dashboard.public_url is set in config.yaml."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#42433",
+          "repo": "NousResearch/hermes-agent",
+          "number": 42433,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/42433",
+          "area": "desktop-cron",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes Desktop 0.16.0 Cron view does not render script/no_agent jobs, leaving prompts blank and hiding run history for completed script jobs."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#42709",
+          "repo": "NousResearch/hermes-agent",
+          "number": 42709,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/42709",
+          "area": "discord-voice",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes 0.16.0 Discord voice-only messages can crash the handler because transcription enrichment returns a bare prefix instead of the expected tuple."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#42777",
+          "repo": "NousResearch/hermes-agent",
+          "number": 42777,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/42777",
+          "area": "desktop",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.16.0 chat scrollbar can stop following new messages during streaming, forcing manual scrolling to see latest output."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43071",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43071,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43071",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.16.0 statusbar items do not pass title attributes, so expected hover tooltips are missing."
         }
       ]
     },
