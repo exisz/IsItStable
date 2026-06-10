@@ -542,6 +542,12 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 91183,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91183",
+          "title": "[Bug]: memorySearch index metadata lost after upgrade to 2026.6.5-beta.2, vector search paused despite 2272 cache entries"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 91007,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/91007",
           "title": "[Bug]: iOS Talk realtime session closes before audio append and ignores server stt-tts routing"
