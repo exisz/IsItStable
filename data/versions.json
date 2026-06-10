@@ -556,18 +556,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 137,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 137,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
         "score": 0
       },
@@ -17341,7 +17341,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "0.16.0 is carrying a desktop/gateway bug parade: restarts, cron UI, remote auth, and Discord voice are all asking for coffee at 3am.",
+    "verdictComment": "0.16.0 is now a desktop/gateway minefield: prompt loss, WSL path confusion, media 403s, and policy hooks are all paging the 3am crew.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -17495,6 +17495,48 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 43737,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43737",
+        "title": "Hermes Desktop: Prompt text lost when navigating to Settings before submit"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43744,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43744",
+        "title": "Hermes Desktop: Change working directory picker only shows Windows paths (WSL backend)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43630,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43630",
+        "title": "Desktop: Repeated 'Path outside media roots' 403 errors in hermes:api handler"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43748,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43748",
+        "title": "[Bug]: hermes-gateway does not start automatically if installed as user"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43713,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43713",
+        "title": "Bug: profile config providers dict replaces/clears default providers instead of inheriting"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43823,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43823",
+        "title": "[Bug]: Shell hooks (config.yaml hooks:) are never registered in the desktop TUI entry point"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43827,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43827",
+        "title": "[Bug]: Chinese reasoning tags ( 思考 / 反思 / 推理 / 推敲) from MiniMax-M3 leak to user output in streaming + final response"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 40364,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
         "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -17642,29 +17684,71 @@
         "number": 43071,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43071",
         "title": "Title attribute not passed to statusbar elements — no hover tooltips"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43737,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43737",
+        "title": "Hermes Desktop: Prompt text lost when navigating to Settings before submit"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43744,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43744",
+        "title": "Hermes Desktop: Change working directory picker only shows Windows paths (WSL backend)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43630,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43630",
+        "title": "Desktop: Repeated 'Path outside media roots' 403 errors in hermes:api handler"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43748,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43748",
+        "title": "[Bug]: hermes-gateway does not start automatically if installed as user"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43713,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43713",
+        "title": "Bug: profile config providers dict replaces/clears default providers instead of inheriting"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43823,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43823",
+        "title": "[Bug]: Shell hooks (config.yaml hooks:) are never registered in the desktop TUI entry point"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43827,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43827",
+        "title": "[Bug]: Chinese reasoning tags ( 思考 / 反思 / 推理 / 推敲) from MiniMax-M3 leak to user output in streaming + final response"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 42,
+      "score": 25,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 50,
+      "evidencePenalty": 67,
       "survivalDays": 4,
       "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 50,
+        "evidencePenalty": 67,
         "votePenalty": 0,
         "survivalDays": 4,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 4,
         "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": 42
+        "score": 25
       },
       "affected": [
         "desktop",
@@ -17687,7 +17771,13 @@
         "dashboard-oidc",
         "desktop-cron",
         "discord-voice",
-        "desktop-ui"
+        "desktop-ui",
+        "desktop-wsl",
+        "desktop-media",
+        "gateway-service",
+        "config-profiles",
+        "hooks",
+        "provider-minimax"
       ],
       "evidence": [
         {
@@ -17964,6 +18054,83 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Hermes Desktop 0.16.0 statusbar items do not pass title attributes, so expected hover tooltips are missing."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43737",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43737,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43737",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.16.0 on Windows clears unsent prompt text when navigating to Settings before submit."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43744",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43744,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43744",
+          "area": "desktop-wsl",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes Desktop 0.16.0 with a WSL backend only offers Windows paths in the working-directory picker, producing unreadable backend folders."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43630",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43630,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43630",
+          "area": "desktop-media",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes Desktop 0.16.0 repeatedly throws Path outside media roots 403 errors in hermes:api during image/media operations."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43748",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43748,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43748",
+          "area": "gateway-service",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.16.0 user-installed hermes-gateway service can fail to start after reboot because systemd --user has no session bus."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43713",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43713,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43713",
+          "area": "config-profiles",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.16.0 profile config provider blocks can replace defaults entirely, dropping inherited providers and custom_providers for worker profiles."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43823",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43823,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43823",
+          "area": "hooks",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Desktop/TUI v0.16.0 silently ignores config.yaml shell hooks, so pre_tool_call policy hooks do not run for desktop sessions."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43827",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43827,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43827",
+          "area": "provider-minimax",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 can leak MiniMax-M3 Chinese reasoning tags into streaming and final user-visible responses."
         }
       ]
     },
