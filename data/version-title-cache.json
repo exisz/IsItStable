@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-11T11:28:41.749Z",
+  "generatedAt": "2026-06-11T13:09:46.283Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2421,8 +2421,10 @@
         "score:0-9",
         "affected:discord",
         "affected:feishu",
+        "affected:image-tool",
         "affected:runtime",
         "affected:telegram",
+        "affected:whatsapp",
         "affected:tool",
         "affected:matrix",
         "affected:wechat",
@@ -2445,7 +2447,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/113",
       "createdAt": "2026-05-30T20:09:41Z",
-      "updatedAt": "2026-06-07T08:37:40Z"
+      "updatedAt": "2026-06-11T11:44:35Z"
     },
     {
       "version": "2026.6.1",
@@ -2487,14 +2489,15 @@
         "affected:service-management",
         "affected:memory",
         "affected:message-delivery",
-        "affected:version-metadata"
+        "affected:version-metadata",
+        "affected:skill-workshop"
       ],
       "issueNumber": 133,
       "title": "[v2026.6.1] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-09T08:48:43Z"
+      "updatedAt": "2026-06-11T11:44:32Z"
     },
     {
       "version": "2026.6.5",
@@ -2508,11 +2511,15 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
+        "score:0-9",
         "affected:compaction",
         "affected:discord",
         "affected:feishu",
+        "affected:heartbeat",
+        "affected:image-tool",
         "affected:qqbot",
         "affected:runtime",
+        "affected:imessage",
         "affected:plugin-install",
         "affected:upgrade",
         "affected:mcp",
@@ -2529,14 +2536,16 @@
         "affected:service-management",
         "affected:slack",
         "affected:memory",
-        "affected:message-delivery"
+        "affected:message-delivery",
+        "affected:local-extensions",
+        "affected:opencode"
       ],
       "issueNumber": 136,
       "title": "[v2026.6.5] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/136",
       "createdAt": "2026-06-09T18:39:59Z",
-      "updatedAt": "2026-06-10T08:56:16Z"
+      "updatedAt": "2026-06-11T11:44:30Z"
     }
   ],
   "duplicates": {
