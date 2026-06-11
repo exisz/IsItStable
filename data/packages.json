@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "The release is less than 24h old and already has smoke coming from memory, cron, channels, update, and hook paths. The rollback goblin has entered the chat.",
+      "verdictComment": "The release has crossed the 24h line and found fresh cron, provider, hook, iMessage, and heartbeat traps. The 3am deploy goblin brought receipts.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -278,6 +278,78 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 91971,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91971",
+          "title": "[Bug]: @openclaw/llama-cpp-provider documented but not published to npm/ClawHub"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92058,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92058",
+          "title": "failureAlert (after=1) never fires on 2026.6.5 — every errored run stuck at delivery_status 'not-requested'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91944,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91944",
+          "title": "v2026.6.5: Cron doctor preflight overwrites API-updated schedules with stale legacy JSON data"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91920,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91920",
+          "title": "[Bug]: Cron jobs failing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92097,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92097",
+          "title": "[Bug] Custom providers with secretref-managed apiKey fail with 503 auth_unavailable after update to 2026.6.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92009,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92009",
+          "title": "[Bug]: Resolved default model google/gemini-3.1-pro-preview cannot be inspected or executed in 2026.6.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91918,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91918",
+          "title": "2026.6.5: before_tool_call/after_tool_call hooks of local extensions register but never fire (regression from 2026.5.27)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91930,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91930",
+          "title": "Docs feedback: /providers/opencode"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91916,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91916",
+          "title": "[Bug]: Feishu card streaming truncates long responses and error messages overwrite correct replies"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92148,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92148",
+          "title": "[Bug]: 2026.6.5 routes DeepSeek (custom OpenAI-compatible provider) to the OpenAI Responses API → 401, now affecting non-reasoning deepseek-v4-pro"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92142,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92142",
+          "title": "iMessage final replies fail under SIP because outbound delivery passes reply_to even when reply actions are disabled"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92038,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92038",
+          "title": "NO_REPLY silence reply counted as empty turn - retry + candidate_failed(format) + full fallback cascade on heartbeats (2026.6.5)"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 91804,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/91804",
           "title": "[Bug]: Internal Reasoning Leakage in 2026.6.5"
@@ -542,15 +614,93 @@
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 91183,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/91183",
-          "title": "[Bug]: memorySearch index metadata lost after upgrade to 2026.6.5-beta.2, vector search paused despite 2272 cache entries"
+          "number": 91971,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91971",
+          "title": "[Bug]: @openclaw/llama-cpp-provider documented but not published to npm/ClawHub"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 91007,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/91007",
-          "title": "[Bug]: iOS Talk realtime session closes before audio append and ignores server stt-tts routing"
+          "number": 92058,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92058",
+          "title": "failureAlert (after=1) never fires on 2026.6.5 — every errored run stuck at delivery_status 'not-requested'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91944,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91944",
+          "title": "v2026.6.5: Cron doctor preflight overwrites API-updated schedules with stale legacy JSON data"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91920,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91920",
+          "title": "[Bug]: Cron jobs failing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92097,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92097",
+          "title": "[Bug] Custom providers with secretref-managed apiKey fail with 503 auth_unavailable after update to 2026.6.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92009,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92009",
+          "title": "[Bug]: Resolved default model google/gemini-3.1-pro-preview cannot be inspected or executed in 2026.6.5"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91918,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91918",
+          "title": "2026.6.5: before_tool_call/after_tool_call hooks of local extensions register but never fire (regression from 2026.5.27)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91930,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91930",
+          "title": "Docs feedback: /providers/opencode"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91916,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91916",
+          "title": "[Bug]: Feishu card streaming truncates long responses and error messages overwrite correct replies"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92148,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92148",
+          "title": "[Bug]: 2026.6.5 routes DeepSeek (custom OpenAI-compatible provider) to the OpenAI Responses API → 401, now affecting non-reasoning deepseek-v4-pro"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92142,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92142",
+          "title": "iMessage final replies fail under SIP because outbound delivery passes reply_to even when reply actions are disabled"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92038,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92038",
+          "title": "NO_REPLY silence reply counted as empty turn - retry + candidate_failed(format) + full fallback cascade on heartbeats (2026.6.5)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91971,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91971",
+          "title": "[Bug]: @openclaw/llama-cpp-provider documented but not published to npm/ClawHub"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91983,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91983",
+          "title": "[2026.6.5-beta.2] Oversized/corrupted thinkingSignature written to session jsonl (8KB–134KB) → Anthropic rejects replay with \"Invalid `signature` in `thinking` block\""
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91183,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91183",
+          "title": "[Bug]: memorySearch index metadata lost after upgrade to 2026.6.5-beta.2, vector search paused despite 2272 cache entries"
         }
       ],
       "stabilityScore": {
@@ -559,14 +709,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 137,
+        "evidencePenalty": 174,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 137,
+          "evidencePenalty": 174,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
@@ -576,29 +726,33 @@
           "score": 0
         },
         "affected": [
-          "codex",
-          "compaction",
-          "cron",
-          "cron-runtime",
-          "discord",
-          "feishu",
-          "mcp",
-          "memory",
-          "memory-wiki",
-          "message-delivery",
-          "model-routing",
-          "node-surface",
-          "plugin-install",
-          "plugin-system",
-          "provider-integration",
-          "qqbot",
           "reasoning",
-          "runtime",
-          "service-management",
-          "sessions-management",
           "slack",
           "update-system",
-          "upgrade"
+          "provider-integration",
+          "plugin-install",
+          "memory",
+          "cron",
+          "plugin-system",
+          "node-surface",
+          "runtime",
+          "upgrade",
+          "mcp",
+          "model-routing",
+          "feishu",
+          "message-delivery",
+          "codex",
+          "cron-runtime",
+          "qqbot",
+          "memory-wiki",
+          "sessions-management",
+          "service-management",
+          "discord",
+          "compaction",
+          "local-extensions",
+          "opencode",
+          "imessage",
+          "heartbeat"
         ],
         "evidence": [
           {
@@ -1084,6 +1238,138 @@
             "severity": 4,
             "penalty": 4,
             "reason": "Session write-lock timeouts block subagent delivery lanes"
+          },
+          {
+            "issue": "openclaw/openclaw#91971",
+            "repo": "openclaw/openclaw",
+            "number": 91971,
+            "url": "https://github.com/openclaw/openclaw/issues/91971",
+            "area": "plugin-install",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Documented @openclaw/llama-cpp-provider cannot be installed from npm or ClawHub on 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#92058",
+            "repo": "openclaw/openclaw",
+            "number": 92058,
+            "url": "https://github.com/openclaw/openclaw/issues/92058",
+            "area": "cron-runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "failureAlert.after=1 never fires; errored cron runs stay delivery_status=not-requested on 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#91944",
+            "repo": "openclaw/openclaw",
+            "number": 91944,
+            "url": "https://github.com/openclaw/openclaw/issues/91944",
+            "area": "cron-runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Cron doctor preflight can restore stale legacy JSON schedules after 2026.6.5 upgrade"
+          },
+          {
+            "issue": "openclaw/openclaw#91920",
+            "repo": "openclaw/openclaw",
+            "number": 91920,
+            "url": "https://github.com/openclaw/openclaw/issues/91920",
+            "area": "cron-runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Cron jobs fail on 2026.6.5 with fallback-summary/provider failure cascade"
+          },
+          {
+            "issue": "openclaw/openclaw#92097",
+            "repo": "openclaw/openclaw",
+            "number": 92097,
+            "url": "https://github.com/openclaw/openclaw/issues/92097",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "SecretRef-managed custom providers fail auth with 503 after update to 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#92009",
+            "repo": "openclaw/openclaw",
+            "number": 92009,
+            "url": "https://github.com/openclaw/openclaw/issues/92009",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Configured google/gemini-3.1-pro-preview default model cannot be inspected or executed in 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#91918",
+            "repo": "openclaw/openclaw",
+            "number": 91918,
+            "url": "https://github.com/openclaw/openclaw/issues/91918",
+            "area": "local-extensions",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "before_tool_call/after_tool_call hooks register but never fire on 2026.6.5, bypassing safety hooks"
+          },
+          {
+            "issue": "openclaw/openclaw#91930",
+            "repo": "openclaw/openclaw",
+            "number": 91930,
+            "url": "https://github.com/openclaw/openclaw/issues/91930",
+            "area": "opencode",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "OpenCode provider model catalog misses live Zen models on OpenClaw 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#91916",
+            "repo": "openclaw/openclaw",
+            "number": 91916,
+            "url": "https://github.com/openclaw/openclaw/issues/91916",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Feishu card streaming truncates long responses and can overwrite correct replies on 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#92148",
+            "repo": "openclaw/openclaw",
+            "number": 92148,
+            "url": "https://github.com/openclaw/openclaw/issues/92148",
+            "area": "provider-integration",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "DeepSeek custom OpenAI-compatible provider misroutes to OpenAI Responses API and fails with 401 on 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#92142",
+            "repo": "openclaw/openclaw",
+            "number": 92142,
+            "url": "https://github.com/openclaw/openclaw/issues/92142",
+            "area": "imessage",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "iMessage final replies fail under SIP because reply_to is passed despite reply actions disabled on 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#92038",
+            "repo": "openclaw/openclaw",
+            "number": 92038,
+            "url": "https://github.com/openclaw/openclaw/issues/92038",
+            "area": "heartbeat",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "NO_REPLY heartbeat silence is counted as empty output, cascading retries and fallback failures on 2026.6.5"
           }
         ]
       },
@@ -1493,24 +1779,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 25,
+        "score": 28,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 67,
-        "survivalDays": 4,
-        "survivalBonus": 12,
+        "survivalDays": 5,
+        "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 67,
           "votePenalty": 0,
-          "survivalDays": 4,
+          "survivalDays": 5,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 4,
-          "survivalBonus": 12,
+          "survivalCreditedDays": 5,
+          "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": 25
+          "score": 28
         },
         "affected": [
           "desktop",
