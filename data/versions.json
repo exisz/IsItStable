@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The release has crossed the 24h line and found fresh cron, provider, hook, iMessage, and heartbeat traps. The 3am deploy goblin brought receipts.",
+    "verdictComment": "The release has crossed the 24h line and found fresh cron, provider, hook, iMessage, heartbeat, and image-tool traps. The 3am deploy goblin brought receipts.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -346,6 +346,12 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 92104,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+        "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 91804,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/91804",
         "title": "[Bug]: Internal Reasoning Leakage in 2026.6.5"
@@ -682,21 +688,15 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91971,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91971",
-        "title": "[Bug]: @openclaw/llama-cpp-provider documented but not published to npm/ClawHub"
+        "number": 92104,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+        "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91983,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91983",
-        "title": "[2026.6.5-beta.2] Oversized/corrupted thinkingSignature written to session jsonl (8KB–134KB) → Anthropic rejects replay with \"Invalid `signature` in `thinking` block\""
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91183,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91183",
-        "title": "[Bug]: memorySearch index metadata lost after upgrade to 2026.6.5-beta.2, vector search paused despite 2272 cache entries"
+        "number": 92104,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+        "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
       }
     ],
     "stabilityScore": {
@@ -705,14 +705,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 174,
+      "evidencePenalty": 176,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 174,
+        "evidencePenalty": 176,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
@@ -748,7 +748,8 @@
         "local-extensions",
         "opencode",
         "imessage",
-        "heartbeat"
+        "heartbeat",
+        "image-tool"
       ],
       "evidence": [
         {
@@ -1366,6 +1367,17 @@
           "severity": 5,
           "penalty": 5,
           "reason": "NO_REPLY heartbeat silence is counted as empty output, cascading retries and fallback failures on 2026.6.5"
+        },
+        {
+          "issue": "openclaw/openclaw#92104",
+          "repo": "openclaw/openclaw",
+          "number": 92104,
+          "url": "https://github.com/openclaw/openclaw/issues/92104",
+          "area": "image-tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Image/PDF tools report Unknown model for every provider on 2026.6.5 while agent models work"
         }
       ]
     },
@@ -1380,7 +1392,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Score-first evidence refresh: v2026.6.1 picked up another wave of cron, memory, provider, channel, and service-management regressions. Works-on-my-machine is filing for witness protection.",
+    "verdictComment": "Score-first refresh: v2026.6.1 picked up UI, WhatsApp, and skill-workshop regressions. The 3am deploy goblin is still checking the receipts.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1960,6 +1972,24 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 92041,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92041",
+        "title": "Add toggle to collapse/hide workspace files sidebar in WebChat/Control UI"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91998",
+        "title": "WhatsApp DM burst (3–4 messages within seconds) hangs embedded_run at `started` and poisons the session; on 2026.6.1 completed replies are also silently never delivered"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92080,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92080",
+        "title": "feishu: skill_workshop apply returns 'Plugin approval unavailable' even though approvalCapability is registered (2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 90047,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
         "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
@@ -2536,165 +2566,39 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91396,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91396",
-        "title": "Memory embedding fails with HTTP 400 when using SiliconFlow (fetchWithSsrFGuard incompatibility)"
+        "number": 92041,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92041",
+        "title": "Add toggle to collapse/hide workspace files sidebar in WebChat/Control UI"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91401,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91401",
-        "title": "[BUG] Feishu streaming card overwrites text instead of appending (#87896 regression)"
+        "number": 91998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91998",
+        "title": "WhatsApp DM burst (3–4 messages within seconds) hangs embedded_run at `started` and poisons the session; on 2026.6.1 completed replies are also silently never delivered"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91412,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91412",
-        "title": "Cron isolated agentTurn delivers `[object Object]` to LLM on 2026.6.1 (regression of #54579)"
+        "number": 92080,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92080",
+        "title": "feishu: skill_workshop apply returns 'Plugin approval unavailable' even though approvalCapability is registered (2026.6.1)"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91420,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91420",
-        "title": "[Bug]: Delivery retry loop corrupts active sessions (R-004) — retry selector bypasses delivery.mode=none"
+        "number": 92041,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92041",
+        "title": "Add toggle to collapse/hide workspace files sidebar in WebChat/Control UI"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91432,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91432",
-        "title": "[Bug]: Tool stdout leaks to chat + reply generation interrupted"
+        "number": 91998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91998",
+        "title": "WhatsApp DM burst (3–4 messages within seconds) hangs embedded_run at `started` and poisons the session; on 2026.6.1 completed replies are also silently never delivered"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 91433,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91433",
-        "title": "MCP remote OAuth: two bugs block streamable-http servers (regex `\\:` under /u; OAuth errors surfaced as [object Response])"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91435,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91435",
-        "title": "Cron jobs not migrated from JSON file to SQLite on update (2026.6.1+)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91456,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91456",
-        "title": "Telegram DM lane can remain guarded after send timeout, delaying or dropping direct messages"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91482,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91482",
-        "title": "[Bug]:  dir_list is exposed without usable node context and is mistaken for local directory listing."
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91485,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91485",
-        "title": "[Bug]: Inter-session messages are leaked in the main session"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91513,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91513",
-        "title": "ACP: model prefix not stripped when dispatching to Claude ACP adapter — Cannot replay saved model \"anthropic/claude-sonnet-4-6\""
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91517,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91517",
-        "title": "getSubagentRunsSnapshotForRead does an uncached full SQLite re-read on every call; many consumers drive it to ~22 Hz and pin a CPU core"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91522,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91522",
-        "title": "member-info fails with \"fetch failed\" on WSL2 in 2026.6.1 (SSRF fetch guard / undici dispatcher regression)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91527,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91527",
-        "title": "[Bug]: Subagent announce 3x duplicate still reproduces on 2026.6.1 release + Telegram — #89812 only fixes outbound/deliver path, not subagent-announce-delivery"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91537,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91537",
-        "title": "[Bug]: Codex yolo mode leaks app-server processes and binding files"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91539,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91539",
-        "title": "[Bug]: document-extract plugin loads but registers zero capabilities (bundled, 2026.6.1)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91542,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91542",
-        "title": "[Bug] Gemini (jjcc/openai-compat) rejects cron tool schema: anyOf properties missing type field in v2026.6.1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91554,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91554",
-        "title": "systemd gateway service can fail to restart after update when env-backed gateway auth token is not loaded"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91558,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91558",
-        "title": "Kimi Code thinking/tool replay fails: missing reasoning_content in assistant tool-call replay"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91562,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91562",
-        "title": "[Bug]: Feishu streaming replies only show latest token in 6.1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91564,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91564",
-        "title": "Telegram: specific forum topic becomes permanent inbound black hole after stuck-session recovery"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91569,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91569",
-        "title": "[Bug]: Desktop app stuck on old version after gateway auto-update → \"protocol mismatch\" with no in-app prompt"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91588,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91588",
-        "title": "Critical: Gateway Memory Leak — RSS grows from 350MB to 15.5GB over days, causing repeated OOM crashes"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91592,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91592",
-        "title": "memory_search broken with \"index scope changed\" after --force rebuild — scopeHash mismatch persists"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91613,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91613",
-        "title": "[Bug] Gateway reply-queue state not flushed on restart — stale queued replies drain to wrong Matrix room after restart"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91645,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91645",
-        "title": "[Bug]: In-turn reasoning dropped on multi-turn tool replay for non-400 openai models (gemma4/vLLM) — silent agentic-quality regression"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91662,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91662",
-        "title": "Bug: native Codex responses backend returns valid SSE without content-type, causing invalid_provider_content_type for openai/gpt-5.5"
+        "number": 92080,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92080",
+        "title": "feishu: skill_workshop apply returns 'Plugin approval unavailable' even though approvalCapability is registered (2026.6.1)"
       }
     ],
     "stabilityScore": {
@@ -2703,14 +2607,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 259,
+      "evidencePenalty": 265,
       "survivalDays": 5,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 259,
+        "evidencePenalty": 265,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalPointsPerDay": 3,
@@ -2720,37 +2624,38 @@
         "score": 0
       },
       "affected": [
-        "browser",
-        "cli",
         "codex",
-        "compaction",
-        "config",
-        "cron-runtime",
-        "discord",
-        "doctor",
-        "export-session",
-        "feishu",
-        "heartbeat",
-        "launchagent",
-        "matrix",
-        "mcp",
-        "memory",
-        "message-delivery",
-        "migration",
-        "model-routing",
-        "plugin-install",
         "provider-integration",
-        "qqbot",
+        "memory",
         "service-management",
         "sessions-management",
-        "telegram",
-        "tool",
-        "ui",
-        "update-system",
+        "discord",
+        "feishu",
+        "migration",
         "upgrade",
         "version-metadata",
+        "plugin-install",
+        "cron-runtime",
+        "heartbeat",
         "voice",
-        "whatsapp"
+        "model-routing",
+        "message-delivery",
+        "compaction",
+        "ui",
+        "update-system",
+        "telegram",
+        "mcp",
+        "launchagent",
+        "browser",
+        "export-session",
+        "cli",
+        "whatsapp",
+        "qqbot",
+        "config",
+        "doctor",
+        "tool",
+        "matrix",
+        "skill-workshop"
       ],
       "evidence": [
         {
@@ -3808,6 +3713,39 @@
           "severity": 4,
           "penalty": 4,
           "reason": "2026.6.1 native Codex responses backend can fail on valid SSE without content-type"
+        },
+        {
+          "issue": "openclaw/openclaw#92041",
+          "repo": "openclaw/openclaw",
+          "number": 92041,
+          "url": "https://github.com/openclaw/openclaw/issues/92041",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Workspace files sidebar introduced in 2026.6.1 cannot be collapsed or hidden"
+        },
+        {
+          "issue": "openclaw/openclaw#91998",
+          "repo": "openclaw/openclaw",
+          "number": 91998,
+          "url": "https://github.com/openclaw/openclaw/issues/91998",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "WhatsApp DM bursts can hang embedded_run and silently drop completed replies on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#92080",
+          "repo": "openclaw/openclaw",
+          "number": 92080,
+          "url": "https://github.com/openclaw/openclaw/issues/92080",
+          "area": "skill-workshop",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Feishu skill_workshop apply returns Plugin approval unavailable despite approvalCapability on 2026.6.1"
         }
       ]
     },
@@ -3822,7 +3760,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The 5.28 trail picked up a Feishu/core API compatibility break. The score was already low; the backlog found another sharp edge.",
+    "verdictComment": "Score-first refresh: v2026.5.28 picked up WhatsApp burst and image-tool evidence during backfill. Old releases can still find new rakes.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -4090,6 +4028,18 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 91998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91998",
+        "title": "WhatsApp DM burst (3–4 messages within seconds) hangs embedded_run at `started` and poisons the session; on 2026.6.1 completed replies are also silently never delivered"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92104,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+        "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 88024,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/88024",
         "title": "Feishu channel broken since 5.27:  never called, dispatch fails with 'Cannot read properties of undefined (reading run)'"
@@ -4351,6 +4301,36 @@
         "number": 91122,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/91122",
         "title": "[core/runtime] Backward-compat shim missing: core.channel.turn.* renamed to core.channel.inbound.* on 2026-06-03"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91998",
+        "title": "WhatsApp DM burst (3–4 messages within seconds) hangs embedded_run at `started` and poisons the session; on 2026.6.1 completed replies are also silently never delivered"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92104,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+        "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91998",
+        "title": "WhatsApp DM burst (3–4 messages within seconds) hangs embedded_run at `started` and poisons the session; on 2026.6.1 completed replies are also silently never delivered"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92104,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+        "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92068,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92068",
+        "title": "bug(telegram): ingress-spool writer never writes after 2026.5.28 → 2026.6.1 in-place update"
       }
     ],
     "stabilityScore": {
@@ -4359,14 +4339,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 112,
+      "evidencePenalty": 117,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 112,
+        "evidencePenalty": 117,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
@@ -4377,23 +4357,21 @@
       },
       "affected": [
         "feishu",
-        "codex",
-        "discord",
-        "plugin-system",
-        "browser",
         "cron-runtime",
-        "node-surface",
-        "runtime",
+        "codex",
+        "plugin-system",
+        "discord",
         "telegram",
-        "matrix",
+        "node-surface",
+        "browser",
+        "runtime",
         "provider-integration",
+        "matrix",
         "update-system",
         "approval-boundary",
         "line",
         "message-delivery",
         "memory",
-        "wechat",
-        "local-model",
         "install",
         "native-hooks",
         "macos-app",
@@ -4401,7 +4379,9 @@
         "speech-core",
         "config-validation",
         "secrets-audit",
-        "skill-loader"
+        "skill-loader",
+        "whatsapp",
+        "image-tool"
       ],
       "evidence": [
         {
@@ -4887,6 +4867,28 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Feishu 2026.5.28 still calls the old core.channel.turn API after the core inbound rename, leaving the channel stuck in SETUP"
+        },
+        {
+          "issue": "openclaw/openclaw#91998",
+          "repo": "openclaw/openclaw",
+          "number": 91998,
+          "url": "https://github.com/openclaw/openclaw/issues/91998",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "WhatsApp DM bursts can hang embedded_run on 2026.5.28 and poison the session"
+        },
+        {
+          "issue": "openclaw/openclaw#92104",
+          "repo": "openclaw/openclaw",
+          "number": 92104,
+          "url": "https://github.com/openclaw/openclaw/issues/92104",
+          "area": "image-tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Image/PDF tools report Unknown model for every provider on 2026.5.28 while agent models work"
         }
       ]
     },

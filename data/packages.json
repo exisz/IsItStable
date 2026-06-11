@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "The release has crossed the 24h line and found fresh cron, provider, hook, iMessage, and heartbeat traps. The 3am deploy goblin brought receipts.",
+      "verdictComment": "The release has crossed the 24h line and found fresh cron, provider, hook, iMessage, heartbeat, and image-tool traps. The 3am deploy goblin brought receipts.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -350,6 +350,12 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 92104,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+          "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 91804,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/91804",
           "title": "[Bug]: Internal Reasoning Leakage in 2026.6.5"
@@ -686,21 +692,15 @@
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 91971,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/91971",
-          "title": "[Bug]: @openclaw/llama-cpp-provider documented but not published to npm/ClawHub"
+          "number": 92104,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+          "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 91983,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/91983",
-          "title": "[2026.6.5-beta.2] Oversized/corrupted thinkingSignature written to session jsonl (8KB–134KB) → Anthropic rejects replay with \"Invalid `signature` in `thinking` block\""
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 91183,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/91183",
-          "title": "[Bug]: memorySearch index metadata lost after upgrade to 2026.6.5-beta.2, vector search paused despite 2272 cache entries"
+          "number": 92104,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
+          "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
         }
       ],
       "stabilityScore": {
@@ -709,14 +709,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 174,
+        "evidencePenalty": 176,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 174,
+          "evidencePenalty": 176,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
@@ -752,7 +752,8 @@
           "local-extensions",
           "opencode",
           "imessage",
-          "heartbeat"
+          "heartbeat",
+          "image-tool"
         ],
         "evidence": [
           {
@@ -1370,6 +1371,17 @@
             "severity": 5,
             "penalty": 5,
             "reason": "NO_REPLY heartbeat silence is counted as empty output, cascading retries and fallback failures on 2026.6.5"
+          },
+          {
+            "issue": "openclaw/openclaw#92104",
+            "repo": "openclaw/openclaw",
+            "number": 92104,
+            "url": "https://github.com/openclaw/openclaw/issues/92104",
+            "area": "image-tool",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Image/PDF tools report Unknown model for every provider on 2026.6.5 while agent models work"
           }
         ]
       },
