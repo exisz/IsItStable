@@ -706,18 +706,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 176,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 176,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
         "score": 0
       },
@@ -17629,7 +17629,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "0.16.0 is now a desktop/gateway minefield: prompt loss, WSL path confusion, media 403s, and policy hooks are all paging the 3am crew.",
+    "verdictComment": "0.16.0 keeps collecting sharp edges: Desktop boot loops, provider failures, Discord chunk drops, and tool bridge socket pressure. The pager is not bored.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -17825,6 +17825,102 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 44468,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44468",
+        "title": "[Bug]: `hermes send` to Discord drops remaining chunks on a 429 — no retry in the standalone send path (Telegram has one)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44121,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44121",
+        "title": "[Bug]: npm ci fails on clean checkout under npm 11 — lock file @types/node@24.13.1 does not satisfy 24.13.2"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44285,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44285",
+        "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after client rebuild retry"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43913,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43913",
+        "title": "[Bug]: Desktop install loop on macOS — launcher uses system python3 (3.9) instead of bundled venv, hermes_cli import fails, gateway never starts"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43429,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43429",
+        "title": "[Bug]: Desktop backend reports ready but Electron API requests time out on WSL2"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 41693,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41693",
+        "title": "[Bug]: Hermes Desktop renderer crashes with \"tapClientLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44198,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44198",
+        "title": "npm ci fails on update — package-lock.json out of sync with @types/node"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44119,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44119",
+        "title": "[Bug]: `hermes status` omits plugin-registered platforms"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 41612,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41612",
+        "title": "[Bug]: Tool bridge creates excessive TIME_WAIT connections — need connection pooling for tcp://127.0.0.1:3003"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44116,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44116",
+        "title": "[Bug]: Remote dashboard Files tab forces /opt/data on non-Docker host installs"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43946,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43946",
+        "title": "[Bug]: Non-Claude Bedrock models fail with malformed tool/message payloads (Kimi, DeepSeek, Amazon Nova)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43617,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43617",
+        "title": "[Bug]:   kimi-coding provider uses wrong endpoint + User-Agent for sk-kimi-* keys, breaking all API calls including vision"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43800,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43800",
+        "title": "[Bug]: Honcho plugin ignores endpoint.baseUrl in ~/.honcho/config.json, silently routes to production cloud"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43627,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43627",
+        "title": "Desktop: Update notification shows pending update (204 changes) but 'See what's new' reports up to date"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43412,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43412",
+        "title": "[bug] memory tool remove action rejects valid old_text arg with \"old_text is required\" error"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42130,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42130",
+        "title": "[Setup]: OpenRouter credential configured but Hermes sends requests without Authentication header"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 40364,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
         "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -18014,29 +18110,125 @@
         "number": 43827,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43827",
         "title": "[Bug]: Chinese reasoning tags ( 思考 / 反思 / 推理 / 推敲) from MiniMax-M3 leak to user output in streaming + final response"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44468,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44468",
+        "title": "[Bug]: `hermes send` to Discord drops remaining chunks on a 429 — no retry in the standalone send path (Telegram has one)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44121,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44121",
+        "title": "[Bug]: npm ci fails on clean checkout under npm 11 — lock file @types/node@24.13.1 does not satisfy 24.13.2"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44285,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44285",
+        "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after client rebuild retry"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43913,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43913",
+        "title": "[Bug]: Desktop install loop on macOS — launcher uses system python3 (3.9) instead of bundled venv, hermes_cli import fails, gateway never starts"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43429,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43429",
+        "title": "[Bug]: Desktop backend reports ready but Electron API requests time out on WSL2"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 41693,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41693",
+        "title": "[Bug]: Hermes Desktop renderer crashes with \"tapClientLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44198,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44198",
+        "title": "npm ci fails on update — package-lock.json out of sync with @types/node"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44119,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44119",
+        "title": "[Bug]: `hermes status` omits plugin-registered platforms"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 41612,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41612",
+        "title": "[Bug]: Tool bridge creates excessive TIME_WAIT connections — need connection pooling for tcp://127.0.0.1:3003"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44116,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44116",
+        "title": "[Bug]: Remote dashboard Files tab forces /opt/data on non-Docker host installs"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43946,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43946",
+        "title": "[Bug]: Non-Claude Bedrock models fail with malformed tool/message payloads (Kimi, DeepSeek, Amazon Nova)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43617,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43617",
+        "title": "[Bug]:   kimi-coding provider uses wrong endpoint + User-Agent for sk-kimi-* keys, breaking all API calls including vision"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43800,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43800",
+        "title": "[Bug]: Honcho plugin ignores endpoint.baseUrl in ~/.honcho/config.json, silently routes to production cloud"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43627,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43627",
+        "title": "Desktop: Update notification shows pending update (204 changes) but 'See what's new' reports up to date"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43412,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43412",
+        "title": "[bug] memory tool remove action rejects valid old_text arg with \"old_text is required\" error"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 42130,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42130",
+        "title": "[Setup]: OpenRouter credential configured but Hermes sends requests without Authentication header"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 28,
+      "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 67,
+      "evidencePenalty": 110,
       "survivalDays": 5,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 67,
+        "evidencePenalty": 110,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 28
+        "score": 0
       },
       "affected": [
         "desktop",
@@ -18065,7 +18257,13 @@
         "gateway-service",
         "config-profiles",
         "hooks",
-        "provider-minimax"
+        "provider-minimax",
+        "provider-integration",
+        "update-system",
+        "tool",
+        "dashboard",
+        "plugin-system",
+        "memory"
       ],
       "evidence": [
         {
@@ -18419,6 +18617,182 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Hermes 0.16.0 can leak MiniMax-M3 Chinese reasoning tags into streaming and final user-visible responses."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44468",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44468,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44468",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes send on v0.16.0 can drop remaining Discord chunks after a 429 because the standalone Discord path has no retry."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44121",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44121,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44121",
+          "area": "installer",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Clean npm installs for the v0.16.0 checkout can fail under npm 11 because package-lock.json is out of sync with @types/node."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44285",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44285,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44285",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Long v0.16.0 CLI sessions using a custom provider can hit APITimeoutError after client rebuild/retry, interrupting active agent work."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43913",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43913,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43913",
+          "area": "desktop",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Desktop v0.16.0 on macOS can loop installation because the launcher probes system python3 and fails hermes_cli import before gateway startup."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43429",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43429,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43429",
+          "area": "desktop",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Desktop v0.16.0 on WSL2 reports backend ready while Electron API requests time out, leaving Desktop unusable."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#41693",
+          "repo": "NousResearch/hermes-agent",
+          "number": 41693,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/41693",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Desktop 0.16.0 renderer can crash with tapClientLookup index errors during session switches or streaming cancellation."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44198",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44198,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44198",
+          "area": "update-system",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "v0.16.0 update path emits npm ci lockfile mismatch noise before falling back to npm install."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44119",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44119,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44119",
+          "area": "gateway",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "hermes status on v0.16.0 can omit plugin-registered messaging platforms, hiding configured channels from status output."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#41612",
+          "repo": "NousResearch/hermes-agent",
+          "number": 41612,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/41612",
+          "area": "tool",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.16.0 tool bridge can create excessive TIME_WAIT TCP connections, eventually exhausting Windows sockets during high-frequency tool use."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44116",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44116,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44116",
+          "area": "dashboard",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Remote dashboard Files tab on v0.16.0 host installs can force /opt/data and return permission errors outside Docker."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43946",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43946,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43946",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes 0.16.0 Bedrock routing fails non-Claude models with malformed tool/message payload validation errors."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43617",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43617,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43617",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes v0.16.0 kimi-coding provider uses the wrong endpoint/User-Agent for sk-kimi keys, breaking Kimi API calls including vision."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43800",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43800,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43800",
+          "area": "plugin-system",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 Honcho plugin ignores endpoint.baseUrl and silently routes self-hosted configs to production cloud."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43627",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43627,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43627",
+          "area": "update-system",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop v0.16.0 can show a pending update banner while the changelog modal says the backend is already up to date."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43412",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43412,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43412",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.16.0 memory remove can reject valid old_text because the tool schema omits old_text from required arguments."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#42130",
+          "repo": "NousResearch/hermes-agent",
+          "number": 42130,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/42130",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Agent v0.16.0 can send OpenRouter requests without Authorization headers despite a configured credential."
         }
       ]
     },
