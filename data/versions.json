@@ -6,32 +6,84 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Fresh stable: one tool-planner papercut and a still-live steer queue regression. The control room is mostly lit, but one button still sticks.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92361,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
+        "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88058,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88058",
+        "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92361,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
+        "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88058,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88058",
+        "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 75,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 5,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 5,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 75
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "tool",
+        "sessions-management",
+        "runtime"
+      ],
+      "evidence": [
+        {
+          "issue": "openclaw/openclaw#92361",
+          "repo": "openclaw/openclaw",
+          "number": 92361,
+          "url": "https://github.com/openclaw/openclaw/issues/92361",
+          "area": "tool",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Tool availability diagnostics for empty allOf/anyOf groups are silently hidden on 2026.6.6"
+        },
+        {
+          "issue": "openclaw/openclaw#88058",
+          "repo": "openclaw/openclaw",
+          "number": 88058,
+          "url": "https://github.com/openclaw/openclaw/issues/88058",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Control UI steer/queued messages still wait behind active long-running sessions on 2026.6.6"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
