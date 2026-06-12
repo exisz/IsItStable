@@ -18099,7 +18099,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "0.16.0 keeps collecting sharp edges: Desktop boot loops, provider failures, Discord chunk drops, and tool bridge socket pressure. The pager is not bored.",
+    "verdictComment": "0.16.0 keeps collecting sharp edges: provider auth, Desktop/dashboard boot paths, session metadata, and prompt durability all joined the incident review. The pager is very employed.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -18391,6 +18391,96 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 44692,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44692",
+        "title": "[Bug]: dev extra's setuptools==82.0.1 pin is unsatisfiable alongside torch (setuptools<82 cap)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45250,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45250",
+        "title": "Anthropic OAuth login (auth add anthropic --type oauth) fails with 404 — login flow uses stale token endpoint"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45242,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45242",
+        "title": "auxiliary_client.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45236,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45236",
+        "title": "sessions.message_count column not maintained for api_server and tui sources"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45183,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45183",
+        "title": "[Bug]: on MacOS - failed to install"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45175,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45175",
+        "title": "[Bug]: /voice is invisible in the Telegram command menu (not in _TELEGRAM_MENU_PRIORITY, ranks below the 30-command cap)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45155,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45155",
+        "title": "Doctor reports Anthropic OK while real invocation fails; oneshot hides provider error"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45140,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45140",
+        "title": "[Bug]: UnicodeDecodeError in copilot_acp_client.py _stdout_reader on Windows"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45139,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45139",
+        "title": "[Bug]: Tool execution fails silently with Copilot ACP --context long_context (Claude outputs <tool_use>)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45125,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45125",
+        "title": "Dashboard crashes on load with React error #520 (all tabs, not just Chat)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45110,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45110",
+        "title": "Prompt is lost entirely when a turn's first response never completes (stall or client disconnect)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45107,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45107",
+        "title": "hermes chat --source <name>` does not persist — sessions always recorded as `source=cli"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45106,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45106",
+        "title": "[Bug]: SELinux breaks Docker Backend"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45072,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45072",
+        "title": "Dashboard backend blocks its event loop with synchronous work, starving HTTP/WS during desktop boot"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45059,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45059",
+        "title": "bug: /goal lost after context compression rotates session_id"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 40364,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
         "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -18676,6 +18766,96 @@
         "number": 42130,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42130",
         "title": "[Setup]: OpenRouter credential configured but Hermes sends requests without Authentication header"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44692,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44692",
+        "title": "[Bug]: dev extra's setuptools==82.0.1 pin is unsatisfiable alongside torch (setuptools<82 cap)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45250,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45250",
+        "title": "Anthropic OAuth login (auth add anthropic --type oauth) fails with 404 — login flow uses stale token endpoint"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45242,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45242",
+        "title": "auxiliary_client.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45236,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45236",
+        "title": "sessions.message_count column not maintained for api_server and tui sources"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45183,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45183",
+        "title": "[Bug]: on MacOS - failed to install"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45175,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45175",
+        "title": "[Bug]: /voice is invisible in the Telegram command menu (not in _TELEGRAM_MENU_PRIORITY, ranks below the 30-command cap)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45155,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45155",
+        "title": "Doctor reports Anthropic OK while real invocation fails; oneshot hides provider error"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45140,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45140",
+        "title": "[Bug]: UnicodeDecodeError in copilot_acp_client.py _stdout_reader on Windows"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45139,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45139",
+        "title": "[Bug]: Tool execution fails silently with Copilot ACP --context long_context (Claude outputs <tool_use>)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45125,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45125",
+        "title": "Dashboard crashes on load with React error #520 (all tabs, not just Chat)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45110,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45110",
+        "title": "Prompt is lost entirely when a turn's first response never completes (stall or client disconnect)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45107,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45107",
+        "title": "hermes chat --source <name>` does not persist — sessions always recorded as `source=cli"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45106,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45106",
+        "title": "[Bug]: SELinux breaks Docker Backend"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45072,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45072",
+        "title": "Dashboard backend blocks its event loop with synchronous work, starving HTTP/WS during desktop boot"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45059,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45059",
+        "title": "bug: /goal lost after context compression rotates session_id"
       }
     ],
     "stabilityScore": {
@@ -18684,14 +18864,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 110,
+      "evidencePenalty": 142,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 110,
+        "evidencePenalty": 142,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
@@ -18733,7 +18913,15 @@
         "tool",
         "dashboard",
         "plugin-system",
-        "memory"
+        "memory",
+        "dependency-resolution",
+        "sessions-management",
+        "macos",
+        "telegram",
+        "doctor",
+        "ui",
+        "runtime",
+        "linux-runtime"
       ],
       "evidence": [
         {
@@ -19263,6 +19451,171 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Hermes Agent v0.16.0 can send OpenRouter requests without Authorization headers despite a configured credential."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44692",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44692,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44692",
+          "area": "dependency-resolution",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Agent 0.16.0 dev extra pins setuptools==82.0.1, making torch-compatible dev dependency resolution unsatisfiable."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45250",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45250,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45250",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes v0.16.0 Anthropic OAuth login uses a stale token endpoint and fails with 404 for Claude subscription auth."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45242",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45242,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45242",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 auxiliary_client.py does not handle oauth_minimax, breaking auxiliary tasks for MiniMax OAuth users."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45236",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45236,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45236",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes v0.16.0 does not maintain sessions.message_count for api_server and tui sources, skewing session metadata."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45183",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45183,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45183",
+          "area": "macos",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes v0.16.0 macOS install can fail during dependency/bootstrap resolution, leaving the app unavailable."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45175",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45175,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45175",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "v0.16.0-era Telegram command menu hides /voice below the 30-command cap, making voice mode effectively invisible."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45155",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45155,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45155",
+          "area": "doctor",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 doctor reports Anthropic OK while a real invocation fails, hiding provider/runtime breakage."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45140",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45140,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45140",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes v0.16.0 Copilot ACP can hit UnicodeDecodeError on Windows stdout handling, breaking provider use."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45139",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45139,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45139",
+          "area": "tool",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes v0.16.0 Copilot ACP with long_context can silently fail tool execution when Claude emits tool_use blocks."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45125",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45125,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45125",
+          "area": "ui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes v0.16.0 dashboard can crash on load with React error #520 across tabs."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45110",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45110,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45110",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes v0.16.0 can lose the prompt entirely when the first response never completes after a stall or disconnect."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45107",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45107,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45107",
+          "area": "sessions-management",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes v0.16.0 `hermes chat --source <name>` does not persist and records sessions as source=cli."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45106",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45106,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45106",
+          "area": "linux-runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 Docker backend can break under SELinux policy on OpenSUSE/Tumbleweed style environments."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45072",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45072,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45072",
+          "area": "dashboard",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes v0.16.0 dashboard backend can block its event loop with synchronous work, starving HTTP/WebSocket during desktop boot."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45059",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45059,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45059",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes v0.16.0 can lose /goal after context compression rotates session_id."
         }
       ]
     },
