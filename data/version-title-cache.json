@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-11T23:29:17.067Z",
+  "generatedAt": "2026-06-12T00:32:24.325Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -477,7 +477,7 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:20-29",
+        "score:0-9",
         "affected:discord",
         "affected:runtime",
         "affected:gateway",
@@ -488,7 +488,11 @@
         "affected:ui",
         "affected:cron",
         "affected:model-routing",
+        "affected:macos",
         "affected:provider-integration",
+        "affected:service-management",
+        "affected:windows",
+        "affected:memory",
         "pkg:hermes-agent",
         "affected:desktop"
       ],
@@ -497,7 +501,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/135",
       "createdAt": "2026-06-06T01:36:26Z",
-      "updatedAt": "2026-06-10T23:17:00Z"
+      "updatedAt": "2026-06-11T23:40:30Z"
     },
     {
       "version": "0.0.1",
