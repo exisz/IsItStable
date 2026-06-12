@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-12T11:14:24.229Z",
+  "generatedAt": "2026-06-12T13:01:25.910Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2471,6 +2471,7 @@
         "affected:feishu",
         "affected:heartbeat",
         "affected:qqbot",
+        "affected:runtime",
         "affected:telegram",
         "affected:voice",
         "affected:whatsapp",
@@ -2482,6 +2483,7 @@
         "affected:launchagent",
         "affected:mcp",
         "affected:update-system",
+        "affected:plugin-system",
         "affected:codex",
         "affected:ui",
         "affected:doctor",
@@ -2501,7 +2503,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-11T11:44:32Z"
+      "updatedAt": "2026-06-12T11:42:00Z"
     },
     {
       "version": "2026.6.5",
@@ -2526,6 +2528,7 @@
         "affected:imessage",
         "affected:plugin-install",
         "affected:upgrade",
+        "affected:webchat",
         "affected:mcp",
         "affected:memory-wiki",
         "affected:update-system",
@@ -2549,7 +2552,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/136",
       "createdAt": "2026-06-09T18:39:59Z",
-      "updatedAt": "2026-06-11T11:44:30Z"
+      "updatedAt": "2026-06-12T11:40:54Z"
     },
     {
       "version": "2026.6.6",
@@ -2557,14 +2560,20 @@
       "packageSlug": "openclaw",
       "labels": [
         "version",
-        "pkg:openclaw"
+        "pkg:openclaw",
+        "risk:tool",
+        "risk:runtime",
+        "score:70-79",
+        "affected:runtime",
+        "affected:tool",
+        "affected:sessions-management"
       ],
       "issueNumber": 137,
       "title": "[v2026.6.6] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/137",
       "createdAt": "2026-06-12T11:14:22Z",
-      "updatedAt": "2026-06-12T11:14:22Z"
+      "updatedAt": "2026-06-12T11:39:26Z"
     }
   ],
   "duplicates": {
