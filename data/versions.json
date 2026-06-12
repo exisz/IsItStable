@@ -442,6 +442,54 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 92366,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92366",
+        "title": "[Bug]: OpenClaw Upgrade Bug Report: 2026.5.27 → 2026.6.5"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92344,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92344",
+        "title": "[Bug]: npm latest 2026.6.5 still lacks #90212 /compact reply delivery fix"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92189,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92189",
+        "title": "[Bug] sessions_spawn zeroes target agent tools by intersecting requester's effective deny (2026.6.5 regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92182,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92182",
+        "title": "[Bug]: 2026.6.5 ignores Slack account-level streaming.mode=off; partial draft snapshots posted as new messages instead of coalesced edits"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92327,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92327",
+        "title": "[v2026.6.5] WebChat UI: sessions_send inter-session messages render alongside assistant messages without visual separation (regression of #89191)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92406,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92406",
+        "title": "[Bug]: streamMode field in 3.x config blocks upgrade to 6.x (schema rejects unknown field)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92242,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92242",
+        "title": "[regression] delivery bundle emits message_sent hooks but never calls recordSentMessage"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92201,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92201",
+        "title": "Embedded runner: freshly streamed thinking signatures intermittently invalid on replay (Anthropic); recovery wrapper never fires because error text is genericized"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 91804,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/91804",
         "title": "[Bug]: Internal Reasoning Leakage in 2026.6.5"
@@ -784,9 +832,105 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 92366,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92366",
+        "title": "[Bug]: OpenClaw Upgrade Bug Report: 2026.5.27 → 2026.6.5"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92344,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92344",
+        "title": "[Bug]: npm latest 2026.6.5 still lacks #90212 /compact reply delivery fix"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92189,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92189",
+        "title": "[Bug] sessions_spawn zeroes target agent tools by intersecting requester's effective deny (2026.6.5 regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92182,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92182",
+        "title": "[Bug]: 2026.6.5 ignores Slack account-level streaming.mode=off; partial draft snapshots posted as new messages instead of coalesced edits"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92327,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92327",
+        "title": "[v2026.6.5] WebChat UI: sessions_send inter-session messages render alongside assistant messages without visual separation (regression of #89191)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92406,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92406",
+        "title": "[Bug]: streamMode field in 3.x config blocks upgrade to 6.x (schema rejects unknown field)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92242,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92242",
+        "title": "[regression] delivery bundle emits message_sent hooks but never calls recordSentMessage"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92201,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92201",
+        "title": "Embedded runner: freshly streamed thinking signatures intermittently invalid on replay (Anthropic); recovery wrapper never fires because error text is genericized"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 92104,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
         "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92366,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92366",
+        "title": "[Bug]: OpenClaw Upgrade Bug Report: 2026.5.27 → 2026.6.5"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92344,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92344",
+        "title": "[Bug]: npm latest 2026.6.5 still lacks #90212 /compact reply delivery fix"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92189,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92189",
+        "title": "[Bug] sessions_spawn zeroes target agent tools by intersecting requester's effective deny (2026.6.5 regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92182,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92182",
+        "title": "[Bug]: 2026.6.5 ignores Slack account-level streaming.mode=off; partial draft snapshots posted as new messages instead of coalesced edits"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92327,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92327",
+        "title": "[v2026.6.5] WebChat UI: sessions_send inter-session messages render alongside assistant messages without visual separation (regression of #89191)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92406,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92406",
+        "title": "[Bug]: streamMode field in 3.x config blocks upgrade to 6.x (schema rejects unknown field)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92242,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92242",
+        "title": "[regression] delivery bundle emits message_sent hooks but never calls recordSentMessage"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92201,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92201",
+        "title": "Embedded runner: freshly streamed thinking signatures intermittently invalid on replay (Anthropic); recovery wrapper never fires because error text is genericized"
       }
     ],
     "stabilityScore": {
@@ -795,14 +939,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 176,
+      "evidencePenalty": 204,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 176,
+        "evidencePenalty": 204,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
@@ -839,7 +983,8 @@
         "opencode",
         "imessage",
         "heartbeat",
-        "image-tool"
+        "image-tool",
+        "webchat"
       ],
       "evidence": [
         {
@@ -1468,6 +1613,94 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Image/PDF tools report Unknown model for every provider on 2026.6.5 while agent models work"
+        },
+        {
+          "issue": "openclaw/openclaw#92366",
+          "repo": "openclaw/openclaw",
+          "number": 92366,
+          "url": "https://github.com/openclaw/openclaw/issues/92366",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Upgrade from 2026.5.27 to 2026.6.5 causes broken service/config path and rollback"
+        },
+        {
+          "issue": "openclaw/openclaw#92344",
+          "repo": "openclaw/openclaw",
+          "number": 92344,
+          "url": "https://github.com/openclaw/openclaw/issues/92344",
+          "area": "compaction",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "npm latest 2026.6.5 lacks the /compact reply delivery fix from #90212"
+        },
+        {
+          "issue": "openclaw/openclaw#92189",
+          "repo": "openclaw/openclaw",
+          "number": 92189,
+          "url": "https://github.com/openclaw/openclaw/issues/92189",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "sessions_spawn can zero target agent tools by intersecting requester deny rules on 2026.6.5"
+        },
+        {
+          "issue": "openclaw/openclaw#92182",
+          "repo": "openclaw/openclaw",
+          "number": 92182,
+          "url": "https://github.com/openclaw/openclaw/issues/92182",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Slack account-level streaming.mode=off is ignored and partial drafts post as new messages on 2026.6.5"
+        },
+        {
+          "issue": "openclaw/openclaw#92327",
+          "repo": "openclaw/openclaw",
+          "number": 92327,
+          "url": "https://github.com/openclaw/openclaw/issues/92327",
+          "area": "webchat",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "WebChat sessions_send inter-session messages render without visual separation on v2026.6.5"
+        },
+        {
+          "issue": "openclaw/openclaw#92406",
+          "repo": "openclaw/openclaw",
+          "number": 92406,
+          "url": "https://github.com/openclaw/openclaw/issues/92406",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Legacy streamMode field can block 3.x-to-6.x config upgrade on 2026.6.5"
+        },
+        {
+          "issue": "openclaw/openclaw#92242",
+          "repo": "openclaw/openclaw",
+          "number": 92242,
+          "url": "https://github.com/openclaw/openclaw/issues/92242",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Delivery bundle emits message_sent hooks but never records sent messages on 2026.6.5"
+        },
+        {
+          "issue": "openclaw/openclaw#92201",
+          "repo": "openclaw/openclaw",
+          "number": 92201,
+          "url": "https://github.com/openclaw/openclaw/issues/92201",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Anthropic thinking signatures can be invalid on replay and recovery does not catch the genericized error on 2026.6.5"
         }
       ]
     },
