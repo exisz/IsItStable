@@ -2313,6 +2313,36 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 90420,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90420",
+        "title": "Codex runtime route is hard to verify after the 2026.6.1 openai-codex migration"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92240,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92240",
+        "title": "[Bug]: unable to resolve bundled plugin public surface speech-core/runtime-api.js after upgrade to 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92374,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92374",
+        "title": "Plugin `message_sending` hooks silently bypassed on channel agent-reply delivery paths (2026.5.26, still present in 2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91016,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91016",
+        "title": "⚠️ 升级 2026.6.1 后 DeepSeek Prompt Cache 完全失效，一小时烧掉约 $6"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92169,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92169",
+        "title": "[Bug]: Embedded runtime: agent ends turn after interstitial \"one moment\" message without performing the promised work; failure rate doubled on 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 90047,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90047",
         "title": "Codex migration (2026.6.1) drops the gpt-5.5 model when a canonical `openai` provider exists for embeddings — agents go silent"
@@ -2907,6 +2937,36 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 90420,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90420",
+        "title": "Codex runtime route is hard to verify after the 2026.6.1 openai-codex migration"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92240,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92240",
+        "title": "[Bug]: unable to resolve bundled plugin public surface speech-core/runtime-api.js after upgrade to 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92374,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92374",
+        "title": "Plugin `message_sending` hooks silently bypassed on channel agent-reply delivery paths (2026.5.26, still present in 2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91016,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91016",
+        "title": "⚠️ 升级 2026.6.1 后 DeepSeek Prompt Cache 完全失效，一小时烧掉约 $6"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92169,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92169",
+        "title": "[Bug]: Embedded runtime: agent ends turn after interstitial \"one moment\" message without performing the promised work; failure rate doubled on 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 92041,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92041",
         "title": "Add toggle to collapse/hide workspace files sidebar in WebChat/Control UI"
@@ -2922,6 +2982,36 @@
         "number": 92080,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92080",
         "title": "feishu: skill_workshop apply returns 'Plugin approval unavailable' even though approvalCapability is registered (2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90420,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90420",
+        "title": "Codex runtime route is hard to verify after the 2026.6.1 openai-codex migration"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92240,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92240",
+        "title": "[Bug]: unable to resolve bundled plugin public surface speech-core/runtime-api.js after upgrade to 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92374,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92374",
+        "title": "Plugin `message_sending` hooks silently bypassed on channel agent-reply delivery paths (2026.5.26, still present in 2026.6.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 91016,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91016",
+        "title": "⚠️ 升级 2026.6.1 后 DeepSeek Prompt Cache 完全失效，一小时烧掉约 $6"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92169,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92169",
+        "title": "[Bug]: Embedded runtime: agent ends turn after interstitial \"one moment\" message without performing the promised work; failure rate doubled on 2026.6.1"
       }
     ],
     "stabilityScore": {
@@ -2930,14 +3020,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 265,
+      "evidencePenalty": 280,
       "survivalDays": 5,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 265,
+        "evidencePenalty": 280,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalPointsPerDay": 3,
@@ -2978,7 +3068,9 @@
         "doctor",
         "tool",
         "matrix",
-        "skill-workshop"
+        "skill-workshop",
+        "plugin-system",
+        "runtime"
       ],
       "evidence": [
         {
@@ -4069,6 +4161,61 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Feishu skill_workshop apply returns Plugin approval unavailable despite approvalCapability on 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#90420",
+          "repo": "openclaw/openclaw",
+          "number": 90420,
+          "url": "https://github.com/openclaw/openclaw/issues/90420",
+          "area": "codex",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Codex runtime route is hard to verify after the 2026.6.1 openai-codex migration"
+        },
+        {
+          "issue": "openclaw/openclaw#92240",
+          "repo": "openclaw/openclaw",
+          "number": 92240,
+          "url": "https://github.com/openclaw/openclaw/issues/92240",
+          "area": "plugin-system",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Bundled plugin public surface speech-core/runtime-api.js cannot be resolved after upgrade to 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#92374",
+          "repo": "openclaw/openclaw",
+          "number": 92374,
+          "url": "https://github.com/openclaw/openclaw/issues/92374",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Plugin message_sending hooks are bypassed on channel agent-reply delivery paths, still present in 2026.6.1"
+        },
+        {
+          "issue": "openclaw/openclaw#91016",
+          "repo": "openclaw/openclaw",
+          "number": 91016,
+          "url": "https://github.com/openclaw/openclaw/issues/91016",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "DeepSeek prompt cache can collapse after upgrade to 2026.6.1, causing large token/cost spikes"
+        },
+        {
+          "issue": "openclaw/openclaw#92169",
+          "repo": "openclaw/openclaw",
+          "number": 92169,
+          "url": "https://github.com/openclaw/openclaw/issues/92169",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Embedded runtime agents often end after interstitial progress messages without doing promised work on 2026.6.1"
         }
       ]
     },
