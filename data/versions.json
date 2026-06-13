@@ -4873,7 +4873,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The graveyard keeps expanding: 67 evidence items with penalty -182. Your colleagues upgraded and are currently on hold with support.",
+    "verdictComment": "The graveyard keeps expanding: 62 evidence items with penalty -168. Your colleagues upgraded and are currently on hold with support.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -5045,30 +5045,6 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 87332,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87332",
-        "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 87357,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87357",
-        "title": "Telegram plugin-state hits per-plugin cap and locks out new writes (v2026.5.26)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 87045,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87045",
-        "title": "appendSystemContext / prependSystemContext concatenation has no boundary marker, causing model to attribute injected rules to the last workspace file"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 72574,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/72574",
-        "title": "`btw spawn` with invalid bearer token triggers gateway/session disconnect"
-      },
-      {
-        "repo": "openclaw/openclaw",
         "number": 79329,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/79329",
         "title": "Cron model preflight skips entire run when local primary is unreachable, ignoring configured cloud fallbacks [AI]"
@@ -5078,12 +5054,6 @@
         "number": 84376,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/84376",
         "title": "[Bug]: secrets audit flags codex \"codex-app-server\" auth marker as PLAINTEXT_FOUND (isNonSecretApiKeyMarker should include it)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 87690,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87690",
-        "title": "secrets audit counts codex-app-server auth marker as plaintext"
       },
       {
         "repo": "openclaw/openclaw",
@@ -5447,30 +5417,6 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 87332,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87332",
-        "title": "Telegram plugin-state cache writes rows with `expires_at = NULL`, hits 1000-row hard cap, migrations fail"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 87357,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87357",
-        "title": "Telegram plugin-state hits per-plugin cap and locks out new writes (v2026.5.26)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 87045,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87045",
-        "title": "appendSystemContext / prependSystemContext concatenation has no boundary marker, causing model to attribute injected rules to the last workspace file"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 72574,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/72574",
-        "title": "`btw spawn` with invalid bearer token triggers gateway/session disconnect"
-      },
-      {
-        "repo": "openclaw/openclaw",
         "number": 79329,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/79329",
         "title": "Cron model preflight skips entire run when local primary is unreachable, ignoring configured cloud fallbacks [AI]"
@@ -5480,12 +5426,6 @@
         "number": 84376,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/84376",
         "title": "[Bug]: secrets audit flags codex \"codex-app-server\" auth marker as PLAINTEXT_FOUND (isNonSecretApiKeyMarker should include it)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 87690,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/87690",
-        "title": "secrets audit counts codex-app-server auth marker as plaintext"
       },
       {
         "repo": "openclaw/openclaw",
@@ -5686,14 +5626,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 182,
+      "evidencePenalty": 168,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 182,
+        "evidencePenalty": 168,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
@@ -5709,7 +5649,6 @@
         "codex-plugin",
         "codex-session-route",
         "compaction",
-        "context-injection",
         "cron",
         "cron-copilot",
         "cron-model-routing",
@@ -5725,6 +5664,7 @@
         "memory",
         "model-routing",
         "native-hook-relay",
+        "node-surface",
         "plugin-system",
         "provider-integration",
         "qqbot",
@@ -5735,7 +5675,6 @@
         "telegram-codex",
         "telegram-delivery",
         "telegram-groups",
-        "telegram-plugin-state",
         "telegram-routing",
         "telegram-tts",
         "thinking-level",
@@ -6056,50 +5995,6 @@
           "reason": "Discord streaming tool progress icons work in DMs but not guild channels"
         },
         {
-          "issue": "openclaw/openclaw#87332",
-          "repo": "openclaw/openclaw",
-          "number": 87332,
-          "url": "https://github.com/openclaw/openclaw/issues/87332",
-          "area": "telegram-plugin-state",
-          "type": "runtime",
-          "severity": 4,
-          "penalty": 4,
-          "reason": "Telegram plugin-state cache hits hard cap and migrations fail"
-        },
-        {
-          "issue": "openclaw/openclaw#87357",
-          "repo": "openclaw/openclaw",
-          "number": 87357,
-          "url": "https://github.com/openclaw/openclaw/issues/87357",
-          "area": "telegram-plugin-state",
-          "type": "runtime",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "Telegram plugin-state per-plugin cap locks out new writes"
-        },
-        {
-          "issue": "openclaw/openclaw#87045",
-          "repo": "openclaw/openclaw",
-          "number": 87045,
-          "url": "https://github.com/openclaw/openclaw/issues/87045",
-          "area": "context-injection",
-          "type": "runtime",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "append/prepend system context lacks boundary marker and can misattribute injected rules"
-        },
-        {
-          "issue": "openclaw/openclaw#72574",
-          "repo": "openclaw/openclaw",
-          "number": 72574,
-          "url": "https://github.com/openclaw/openclaw/issues/72574",
-          "area": "gateway",
-          "type": "runtime",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "Invalid bearer token can trigger gateway/session disconnect"
-        },
-        {
           "issue": "openclaw/openclaw#79329",
           "repo": "openclaw/openclaw",
           "number": 79329,
@@ -6120,17 +6015,6 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Secrets audit false-positive flags Codex app-server auth marker"
-        },
-        {
-          "issue": "openclaw/openclaw#87690",
-          "repo": "openclaw/openclaw",
-          "number": 87690,
-          "url": "https://github.com/openclaw/openclaw/issues/87690",
-          "area": "security-audit",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Secrets audit counts codex-app-server auth marker as plaintext"
         },
         {
           "issue": "openclaw/openclaw#87914",
@@ -18365,7 +18249,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 142,
-      "survivalDays": 6,
+      "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -18373,7 +18257,7 @@
         "baseScore": 80,
         "evidencePenalty": 142,
         "votePenalty": 0,
-        "survivalDays": 6,
+        "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
