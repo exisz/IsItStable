@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-13T00:32:28.629Z",
+  "generatedAt": "2026-06-13T01:41:08.395Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2436,14 +2436,11 @@
         "affected:tool",
         "affected:matrix",
         "affected:wechat",
-        "affected:browser",
         "affected:approval-boundary",
         "affected:update-system",
-        "affected:plugin-system",
         "affected:codex",
         "affected:cron-runtime",
         "affected:macos",
-        "affected:node-surface",
         "affected:provider-integration",
         "affected:local-model",
         "affected:memory",
@@ -2455,7 +2452,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/113",
       "createdAt": "2026-05-30T20:09:41Z",
-      "updatedAt": "2026-06-11T11:44:35Z"
+      "updatedAt": "2026-06-13T01:03:38Z"
     },
     {
       "version": "2026.6.1",
@@ -2507,7 +2504,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-12T11:42:00Z"
+      "updatedAt": "2026-06-13T00:58:01Z"
     },
     {
       "version": "2026.6.5",
@@ -2520,23 +2517,19 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "risk:other",
         "score:0-9",
         "affected:compaction",
         "affected:discord",
         "affected:feishu",
         "affected:heartbeat",
         "affected:image-tool",
-        "affected:qqbot",
         "affected:runtime",
         "affected:imessage",
         "affected:plugin-install",
         "affected:upgrade",
         "affected:webchat",
-        "affected:mcp",
         "affected:memory-wiki",
         "affected:update-system",
-        "affected:plugin-system",
         "affected:codex",
         "affected:cron",
         "affected:model-routing",
@@ -2544,19 +2537,19 @@
         "affected:cron-runtime",
         "affected:node-surface",
         "affected:provider-integration",
-        "affected:service-management",
         "affected:slack",
         "affected:memory",
         "affected:message-delivery",
         "affected:local-extensions",
-        "affected:opencode"
+        "affected:opencode",
+        "affected:reasoning"
       ],
       "issueNumber": 136,
       "title": "[v2026.6.5] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/136",
       "createdAt": "2026-06-09T18:39:59Z",
-      "updatedAt": "2026-06-12T11:40:54Z"
+      "updatedAt": "2026-06-13T00:43:16Z"
     },
     {
       "version": "2026.6.6",
