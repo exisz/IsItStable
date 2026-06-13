@@ -12,9 +12,14 @@ export function ScoreTrend({ versions, packageSlug }: { versions: VersionIssue[]
   const padY = 30;
   const plotW = width - padX * 2;
   const plotH = height - padY * 2;
+  const scores = points.map((v) => v.stabilityScore.score);
+  const minScore = Math.min(0, ...scores);
+  const maxScore = Math.max(100, ...scores);
+  const scoreRange = Math.max(1, maxScore - minScore);
+  const yForScore = (score: number) => padY + (1 - (score - minScore) / scoreRange) * plotH;
   const coords = points.map((v, index) => {
     const x = points.length === 1 ? width / 2 : padX + (index / (points.length - 1)) * plotW;
-    const y = padY + (1 - v.stabilityScore.score / 100) * plotH;
+    const y = yForScore(v.stabilityScore.score);
     return { v, x, y };
   });
   const line = coords.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
@@ -29,8 +34,8 @@ export function ScoreTrend({ versions, packageSlug }: { versions: VersionIssue[]
       </div>
       <div className="overflow-x-auto">
         <svg viewBox={`0 0 ${width} ${height}`} className="min-w-[760px] w-full h-52" role="img" aria-label="Version score trend">
-          {[0, 20, 40, 60, 80].map((tick) => {
-            const y = padY + (1 - tick / 100) * plotH;
+          {[minScore, 0, 20, 40, 60, 80, 100].filter((tick, index, ticks) => tick >= minScore && tick <= maxScore && ticks.indexOf(tick) === index).map((tick) => {
+            const y = yForScore(tick);
             return (
               <g key={tick}>
                 <line x1={padX} x2={width - padX} y1={y} y2={y} stroke="currentColor" className="text-[var(--color-border)]" strokeDasharray="4 6" />

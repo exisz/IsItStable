@@ -12,7 +12,7 @@ export function ScoreBadge({ score, size = "md", mutedMax = false }: { score: nu
     <span
       className={`inline-flex items-baseline rounded-xl border font-black tabular-nums ${sizeClass}`}
       style={scoreStyle(score)}
-      title={`${score} out of 100`}
+      title={`${score} stability score (capped at 100, no lower floor)`}
     >
       {score}
       {mutedMax && <span className="ml-1 text-sm font-bold opacity-45">/100</span>}
