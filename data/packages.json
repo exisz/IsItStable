@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Fresh stable: one tool-planner papercut and a still-live steer queue regression. The control room is mostly lit, but one button still sticks.",
+      "verdictComment": "Fresh stable, but the gremlins found the utility closet: status usage, memory search, doctor checks, and heartbeat flow control all have sharp edges. Not a rollback siren; definitely a 3am-dashboard stare.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -26,6 +26,42 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 92506,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92506",
+          "title": "[Bug]: /status usage missing for OpenAI Codex synthetic auth after 2026.6.6"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92633,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92633",
+          "title": "memory_search corpus=all times out while individual corpora succeed"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92523,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92523",
+          "title": "Bug: Orphaned TaskFlows in `waiting` status permanently block agent heartbeats (requests-in-flight deadlock)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92582,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92582",
+          "title": "Bug: doctor falsely warns local memory embeddings are not ready"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92562,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92562",
+          "title": "[Bug]: Implicit daily/idle session rollover does not preserve user-set behavior overrides"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92563,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92563",
+          "title": "session-memory hook duplicates assistant messages when thinking is stripped"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 92361,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
           "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
@@ -35,34 +71,74 @@
           "number": 88058,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/88058",
           "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92506,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92506",
+          "title": "[Bug]: /status usage missing for OpenAI Codex synthetic auth after 2026.6.6"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92633,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92633",
+          "title": "memory_search corpus=all times out while individual corpora succeed"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92523,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92523",
+          "title": "Bug: Orphaned TaskFlows in `waiting` status permanently block agent heartbeats (requests-in-flight deadlock)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92582,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92582",
+          "title": "Bug: doctor falsely warns local memory embeddings are not ready"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92562,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92562",
+          "title": "[Bug]: Implicit daily/idle session rollover does not preserve user-set behavior overrides"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92563,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92563",
+          "title": "session-memory hook duplicates assistant messages when thinking is stripped"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 75,
+        "score": 65,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 5,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "evidencePenalty": 18,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 5,
+          "evidencePenalty": 18,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 75
+          "score": 65
         },
         "affected": [
           "tool",
           "sessions-management",
-          "runtime"
+          "runtime",
+          "status",
+          "memory",
+          "doctor",
+          "heartbeat"
         ],
         "evidence": [
           {
@@ -86,6 +162,72 @@
             "severity": 4,
             "penalty": 4,
             "reason": "Control UI steer/queued messages still wait behind active long-running sessions on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92506",
+            "repo": "openclaw/openclaw",
+            "number": 92506,
+            "url": "https://github.com/openclaw/openclaw/issues/92506",
+            "area": "status",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "/status usage is missing for OpenAI Codex synthetic auth after upgrading to 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92633",
+            "repo": "openclaw/openclaw",
+            "number": 92633,
+            "url": "https://github.com/openclaw/openclaw/issues/92633",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "memory_search corpus=all times out on 2026.6.6 while individual corpora succeed"
+          },
+          {
+            "issue": "openclaw/openclaw#92523",
+            "repo": "openclaw/openclaw",
+            "number": 92523,
+            "url": "https://github.com/openclaw/openclaw/issues/92523",
+            "area": "heartbeat",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Orphaned TaskFlows in waiting status can deadlock agent heartbeat dispatch on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92582",
+            "repo": "openclaw/openclaw",
+            "number": 92582,
+            "url": "https://github.com/openclaw/openclaw/issues/92582",
+            "area": "doctor",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "doctor falsely warns local memory embeddings are not ready on 2026.6.6 despite healthy memory status"
+          },
+          {
+            "issue": "openclaw/openclaw#92562",
+            "repo": "openclaw/openclaw",
+            "number": 92562,
+            "url": "https://github.com/openclaw/openclaw/issues/92562",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Implicit daily/idle session rollover does not preserve user-set behavior overrides on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92563",
+            "repo": "openclaw/openclaw",
+            "number": 92563,
+            "url": "https://github.com/openclaw/openclaw/issues/92563",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "session-memory hook duplicates assistant messages when thinking is stripped on 2026.6.6"
           }
         ]
       },
