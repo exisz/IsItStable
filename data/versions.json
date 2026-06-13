@@ -1708,12 +1708,6 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 90822,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/90822",
-        "title": "[Bug]: Discord bot not delivering responses to channel"
-      },
-      {
-        "repo": "openclaw/openclaw",
         "number": 90865,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90865",
         "title": "Discord plugin: channels added to channels.discord.guilds.*.channels.* post-startup are never subscribed (requires full gateway restart)"
@@ -2332,12 +2326,6 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 90822,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/90822",
-        "title": "[Bug]: Discord bot not delivering responses to channel"
-      },
-      {
-        "repo": "openclaw/openclaw",
         "number": 90865,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/90865",
         "title": "Discord plugin: channels added to channels.discord.guilds.*.channels.* post-startup are never subscribed (requires full gateway restart)"
@@ -2719,6 +2707,12 @@
         "number": 92169,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92169",
         "title": "[Bug]: Embedded runtime: agent ends turn after interstitial \"one moment\" message without performing the promised work; failure rate doubled on 2026.6.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 90822,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/90822",
+        "title": "[Bug]: Discord bot not delivering responses to channel"
       }
     ],
     "stabilityScore": {
@@ -2727,14 +2721,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 280,
+      "evidencePenalty": 279,
       "survivalDays": 5,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 280,
+        "evidencePenalty": 279,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalPointsPerDay": 3,
@@ -2744,40 +2738,40 @@
         "score": 0
       },
       "affected": [
+        "browser",
+        "cli",
         "codex",
-        "provider-integration",
+        "compaction",
+        "config",
+        "cron-runtime",
+        "discord",
+        "doctor",
+        "export-session",
+        "feishu",
+        "heartbeat",
+        "launchagent",
+        "matrix",
+        "mcp",
         "memory",
+        "message-delivery",
+        "migration",
+        "model-routing",
+        "plugin-install",
+        "plugin-system",
+        "provider-integration",
+        "qqbot",
+        "runtime",
         "service-management",
         "sessions-management",
-        "discord",
-        "feishu",
-        "migration",
-        "upgrade",
-        "version-metadata",
-        "plugin-install",
-        "cron-runtime",
-        "heartbeat",
-        "voice",
-        "model-routing",
-        "message-delivery",
-        "compaction",
+        "skill-workshop",
+        "telegram",
+        "tool",
         "ui",
         "update-system",
-        "telegram",
-        "mcp",
-        "launchagent",
-        "browser",
-        "export-session",
-        "cli",
-        "whatsapp",
-        "qqbot",
-        "config",
-        "doctor",
-        "tool",
-        "matrix",
-        "skill-workshop",
-        "plugin-system",
-        "runtime"
+        "upgrade",
+        "version-metadata",
+        "voice",
+        "whatsapp"
       ],
       "evidence": [
         {
@@ -3296,17 +3290,6 @@
           "severity": 3,
           "penalty": 3,
           "reason": "memory status --index/--deep can fail with unknown Google embedding provider on 2026.6.1"
-        },
-        {
-          "issue": "openclaw/openclaw#90822",
-          "repo": "openclaw/openclaw",
-          "number": 90822,
-          "url": "https://github.com/openclaw/openclaw/issues/90822",
-          "area": "discord",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Discord bot can generate responses on 2026.6.1 without delivering them to the channel"
         },
         {
           "issue": "openclaw/openclaw#90865",
