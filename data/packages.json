@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Fresh stable, but the gremlins found the utility closet: status usage, memory search, doctor checks, and heartbeat flow control all have sharp edges. Not a rollback siren; definitely a 3am-dashboard stare.",
+      "verdictComment": "Latest stable is carrying a proper gremlin parade: auth, subagent announce delivery, workspace bootstrap, memory, sandboxed files, and channel/plugin edges all have receipts. The dashboard is doing that 3am stare again.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -62,6 +62,78 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 92838,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92838",
+          "title": "[OAuth] Client ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92433,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92433",
+          "title": "[Bug]: Subagent completion silently dropped when announce steers into a requester run that ends before processing it"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92903,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92903",
+          "title": "[Bug]: Multi-Agent Workspace Bootstrap Files Injected from Default Workspace Instead of Per-Agent Workspace"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92808,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92808",
+          "title": "[Bug]: Title: Local embedding provider breaks on upgrade (two consecutive releases) — no migration path, misleading error"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92546,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92546",
+          "title": "[Bug]: `openclaw plugins update whatsapp` silently wipes Baileys session — full QR re-pair required after every minor plugin update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92516,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92516",
+          "title": "Containerized/self-hosted deploys can't use externalized channel plugins: openKeyedStore is gated to trusted plugins, with no supported way to trust a self-hosted channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92827,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92827",
+          "title": "[Bug]: 如果启用沙箱，agent无法将文件发送到webchat和QQBot"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92875,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92875",
+          "title": "[Bug]: Managed skill prompt paths can resolve to stale .openclaw locations in AlphaClaw Docker"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92884,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92884",
+          "title": "config validate rejects plugin-owned channel schema extensions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92888,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92888",
+          "title": "Control UI model auth badge still shows expired on 2026.6.6 while runtime auth is usable"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92874,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92874",
+          "title": "Builtin memory backend leaks orphaned *.sqlite.tmp-<uuid> reindex files on hard restart (no startup sweep)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92655,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92655",
+          "title": "[Bug]: Telegram: /models provider buttons do nothing when clicked in a forum topic group"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 92361,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
           "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
@@ -107,38 +179,117 @@
           "number": 92563,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/92563",
           "title": "session-memory hook duplicates assistant messages when thinking is stripped"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92838,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92838",
+          "title": "[OAuth] Client ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92433,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92433",
+          "title": "[Bug]: Subagent completion silently dropped when announce steers into a requester run that ends before processing it"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92903,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92903",
+          "title": "[Bug]: Multi-Agent Workspace Bootstrap Files Injected from Default Workspace Instead of Per-Agent Workspace"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92808,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92808",
+          "title": "[Bug]: Title: Local embedding provider breaks on upgrade (two consecutive releases) — no migration path, misleading error"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92546,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92546",
+          "title": "[Bug]: `openclaw plugins update whatsapp` silently wipes Baileys session — full QR re-pair required after every minor plugin update"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92516,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92516",
+          "title": "Containerized/self-hosted deploys can't use externalized channel plugins: openKeyedStore is gated to trusted plugins, with no supported way to trust a self-hosted channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92827,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92827",
+          "title": "[Bug]: 如果启用沙箱，agent无法将文件发送到webchat和QQBot"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92875,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92875",
+          "title": "[Bug]: Managed skill prompt paths can resolve to stale .openclaw locations in AlphaClaw Docker"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92884,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92884",
+          "title": "config validate rejects plugin-owned channel schema extensions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92888,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92888",
+          "title": "Control UI model auth badge still shows expired on 2026.6.6 while runtime auth is usable"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92874,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92874",
+          "title": "Builtin memory backend leaks orphaned *.sqlite.tmp-<uuid> reindex files on hard restart (no startup sweep)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 92655,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/92655",
+          "title": "[Bug]: Telegram: /models provider buttons do nothing when clicked in a forum topic group"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 65,
+        "score": 36,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 18,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 50,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 18,
+          "evidencePenalty": 50,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 65
+          "score": 36
         },
         "affected": [
           "tool",
           "sessions-management",
-          "runtime",
           "status",
           "memory",
+          "heartbeat",
           "doctor",
-          "heartbeat"
+          "auth",
+          "skills",
+          "whatsapp",
+          "plugin-system",
+          "sandbox",
+          "config-migration",
+          "ui",
+          "telegram"
         ],
         "evidence": [
           {
@@ -228,6 +379,138 @@
             "severity": 2,
             "penalty": 2,
             "reason": "session-memory hook duplicates assistant messages when thinking is stripped on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92838",
+            "repo": "openclaw/openclaw",
+            "number": 92838,
+            "url": "https://github.com/openclaw/openclaw/issues/92838",
+            "area": "auth",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Fresh ChatGPT/Codex OAuth logins fail on 2026.6.6 because the bundled OpenAI client ID is revoked"
+          },
+          {
+            "issue": "openclaw/openclaw#92433",
+            "repo": "openclaw/openclaw",
+            "number": 92433,
+            "url": "https://github.com/openclaw/openclaw/issues/92433",
+            "area": "sessions-management",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Subagent completion can be silently dropped when the requester run ends before announce steering on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92903",
+            "repo": "openclaw/openclaw",
+            "number": 92903,
+            "url": "https://github.com/openclaw/openclaw/issues/92903",
+            "area": "skills",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Multi-agent workspace bootstrap can inject default-workspace files instead of the routed agent workspace on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92808",
+            "repo": "openclaw/openclaw",
+            "number": 92808,
+            "url": "https://github.com/openclaw/openclaw/issues/92808",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Local embedding provider upgrade path breaks memory_search on 2026.6.6 with no clear migration path"
+          },
+          {
+            "issue": "openclaw/openclaw#92546",
+            "repo": "openclaw/openclaw",
+            "number": 92546,
+            "url": "https://github.com/openclaw/openclaw/issues/92546",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Updating the WhatsApp plugin on 2026.6.6 can wipe the Baileys session and force QR re-pairing"
+          },
+          {
+            "issue": "openclaw/openclaw#92516",
+            "repo": "openclaw/openclaw",
+            "number": 92516,
+            "url": "https://github.com/openclaw/openclaw/issues/92516",
+            "area": "plugin-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Self-hosted external channel plugins cannot be trusted to open keyed stores on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92827",
+            "repo": "openclaw/openclaw",
+            "number": 92827,
+            "url": "https://github.com/openclaw/openclaw/issues/92827",
+            "area": "sandbox",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Sandboxed agents cannot send files through WebChat/QQBot paths outside the mounted workspace on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92875",
+            "repo": "openclaw/openclaw",
+            "number": 92875,
+            "url": "https://github.com/openclaw/openclaw/issues/92875",
+            "area": "skills",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Managed skill prompt paths can resolve to stale .openclaw locations in Dockerized 2026.6.6 environments"
+          },
+          {
+            "issue": "openclaw/openclaw#92884",
+            "repo": "openclaw/openclaw",
+            "number": 92884,
+            "url": "https://github.com/openclaw/openclaw/issues/92884",
+            "area": "config-migration",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "config validate rejects plugin-owned channel schema extensions on 2026.6.6 despite config schema exposing them"
+          },
+          {
+            "issue": "openclaw/openclaw#92888",
+            "repo": "openclaw/openclaw",
+            "number": 92888,
+            "url": "https://github.com/openclaw/openclaw/issues/92888",
+            "area": "ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Control UI auth badge can remain expired on 2026.6.6 while runtime auth is usable"
+          },
+          {
+            "issue": "openclaw/openclaw#92874",
+            "repo": "openclaw/openclaw",
+            "number": 92874,
+            "url": "https://github.com/openclaw/openclaw/issues/92874",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Builtin memory backend can leak orphaned temporary reindex SQLite files after hard restart on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#92655",
+            "repo": "openclaw/openclaw",
+            "number": 92655,
+            "url": "https://github.com/openclaw/openclaw/issues/92655",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram /models provider buttons do nothing in forum topic groups on 2026.6.6"
           }
         ]
       },
