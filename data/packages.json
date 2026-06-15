@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Latest stable is carrying a proper gremlin parade: auth, subagent announce delivery, workspace bootstrap, memory, sandboxed files, and channel/plugin edges all have receipts. The dashboard is doing that 3am stare again.",
+      "verdictComment": "Latest stable picked up more receipts: auth migration, plugin loading, WebChat session/render weirdness, browser downloads, Feishu edits, and provider-policy edges. The 3am dashboard stare is now making eye contact.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -134,6 +134,66 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 93041,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93041",
+          "title": "[Bug]: After 2026.6.6 no Codex usage\\limit UI present in the Control UI Chat interface"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93145,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93145",
+          "title": "Agent auth migration to SQLite leaves default agent with empty auth store (v2026.6.6)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93219,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93219",
+          "title": "[Bug]: Gateway never loads externally-installed npm plugins (installed-plugin load stage skipped) — version/layout/clean-rebuild independent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93081,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93081",
+          "title": "[Bug]: Ctrl+C not working in Windows install on foreground"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93162,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93162",
+          "title": "[Bug]: WebChat generates isolated sessions despite dmScope='main'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93250,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93250",
+          "title": "[Bug]: No notification when browser click triggers a download – agent keeps retrying"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93044,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93044",
+          "title": "control-ui webchat double-renders agent replies when dmScope=main (one copy carries channel-relay envelope)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93043,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93043",
+          "title": "[Bug]: Cannot retrieve SecretRef-managed gateway token to log into dashboard (config get returns ref, not plaintext)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93197,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93197",
+          "title": "[Bug]: Feishu message.edit fails with 'parse card json err' when presentation has empty blocks"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93259,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93259",
+          "title": "claude-cli subagents silently cap thinking at \"high\" — provider-policy surface not resolved for plugin CLI backends"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 92361,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
           "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
@@ -251,29 +311,89 @@
           "number": 92655,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/92655",
           "title": "[Bug]: Telegram: /models provider buttons do nothing when clicked in a forum topic group"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93041,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93041",
+          "title": "[Bug]: After 2026.6.6 no Codex usage\\limit UI present in the Control UI Chat interface"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93145,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93145",
+          "title": "Agent auth migration to SQLite leaves default agent with empty auth store (v2026.6.6)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93219,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93219",
+          "title": "[Bug]: Gateway never loads externally-installed npm plugins (installed-plugin load stage skipped) — version/layout/clean-rebuild independent"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93081,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93081",
+          "title": "[Bug]: Ctrl+C not working in Windows install on foreground"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93162,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93162",
+          "title": "[Bug]: WebChat generates isolated sessions despite dmScope='main'"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93250,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93250",
+          "title": "[Bug]: No notification when browser click triggers a download – agent keeps retrying"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93044,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93044",
+          "title": "control-ui webchat double-renders agent replies when dmScope=main (one copy carries channel-relay envelope)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93043,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93043",
+          "title": "[Bug]: Cannot retrieve SecretRef-managed gateway token to log into dashboard (config get returns ref, not plaintext)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93197,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93197",
+          "title": "[Bug]: Feishu message.edit fails with 'parse card json err' when presentation has empty blocks"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 93259,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93259",
+          "title": "claude-cli subagents silently cap thinking at \"high\" — provider-policy surface not resolved for plugin CLI backends"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 36,
+        "score": 19,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 50,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "evidencePenalty": 70,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 50,
+          "evidencePenalty": 70,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": 36
+          "score": 19
         },
         "affected": [
           "tool",
@@ -289,7 +409,14 @@
           "sandbox",
           "config-migration",
           "ui",
-          "telegram"
+          "telegram",
+          "codex",
+          "plugin-install",
+          "windows",
+          "webchat",
+          "browser",
+          "feishu",
+          "provider-routing"
         ],
         "evidence": [
           {
@@ -511,6 +638,116 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Telegram /models provider buttons do nothing in forum topic groups on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93041",
+            "repo": "openclaw/openclaw",
+            "number": 93041,
+            "url": "https://github.com/openclaw/openclaw/issues/93041",
+            "area": "codex",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Control UI no longer shows Codex/OpenAI usage limit surface after 2026.6.6 upgrade"
+          },
+          {
+            "issue": "openclaw/openclaw#93145",
+            "repo": "openclaw/openclaw",
+            "number": 93145,
+            "url": "https://github.com/openclaw/openclaw/issues/93145",
+            "area": "auth",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Agent auth migration to SQLite can leave the default agent with an empty auth store on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93219",
+            "repo": "openclaw/openclaw",
+            "number": 93219,
+            "url": "https://github.com/openclaw/openclaw/issues/93219",
+            "area": "plugin-install",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Gateway can skip loading externally installed npm plugins on 2026.6.6 even after clean reinstall"
+          },
+          {
+            "issue": "openclaw/openclaw#93081",
+            "repo": "openclaw/openclaw",
+            "number": 93081,
+            "url": "https://github.com/openclaw/openclaw/issues/93081",
+            "area": "windows",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Foreground gateway does not respond cleanly to Ctrl+C on Windows with 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93162",
+            "repo": "openclaw/openclaw",
+            "number": 93162,
+            "url": "https://github.com/openclaw/openclaw/issues/93162",
+            "area": "webchat",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat can create isolated sessions despite dmScope=main on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93250",
+            "repo": "openclaw/openclaw",
+            "number": 93250,
+            "url": "https://github.com/openclaw/openclaw/issues/93250",
+            "area": "browser",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Browser downloads provide no completion signal, causing agents to retry download actions on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93044",
+            "repo": "openclaw/openclaw",
+            "number": 93044,
+            "url": "https://github.com/openclaw/openclaw/issues/93044",
+            "area": "webchat",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Control UI webchat can double-render agent replies when dmScope=main on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93043",
+            "repo": "openclaw/openclaw",
+            "number": 93043,
+            "url": "https://github.com/openclaw/openclaw/issues/93043",
+            "area": "auth",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "SecretRef-managed gateway tokens are not discoverable for dashboard login on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93197",
+            "repo": "openclaw/openclaw",
+            "number": 93197,
+            "url": "https://github.com/openclaw/openclaw/issues/93197",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Feishu message.edit can fail when presentation payload has empty blocks on 2026.6.6"
+          },
+          {
+            "issue": "openclaw/openclaw#93259",
+            "repo": "openclaw/openclaw",
+            "number": 93259,
+            "url": "https://github.com/openclaw/openclaw/issues/93259",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "claude-cli subagents can silently cap thinking at high because provider-policy ownership is unresolved on 2026.6.6"
           }
         ]
       },
