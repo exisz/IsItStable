@@ -1044,6 +1044,18 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 45921,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45921",
+          "title": "[Bug]: The button to select a directory as the current workspace doesn't appear if there are too many directories"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 43122,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43122",
+          "title": "[Bug]: Messaging provider icons are not all dark UI theme-friendly"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 40364,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
           "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -1551,6 +1563,18 @@
           "number": 39901,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39901",
           "title": "[Bug]: TUI/CLI startup banner shows MCP servers as \"failed\" while async connection is still in progress"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45921,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45921",
+          "title": "[Bug]: The button to select a directory as the current workspace doesn't appear if there are too many directories"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 43122,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43122",
+          "title": "[Bug]: Messaging provider icons are not all dark UI theme-friendly"
         }
       ],
       "stabilityScore": {
@@ -1559,14 +1583,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 196,
+        "evidencePenalty": 198,
         "survivalDays": 8,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 196,
+          "evidencePenalty": 198,
           "votePenalty": 0,
           "survivalDays": 8,
           "survivalPointsPerDay": 3,
@@ -2565,6 +2589,28 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Hermes 0.16.0 TUI/CLI banner can mark MCP servers failed while they are still connecting, leaving tools unavailable until /new."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45921",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45921,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45921",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop 0.16.0 workspace directory picker can disappear when directory lists are long"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#43122",
+            "repo": "NousResearch/hermes-agent",
+            "number": 43122,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/43122",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop 0.16.0 messaging provider icons are hard to read in dark theme"
           }
         ]
       },

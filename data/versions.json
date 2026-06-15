@@ -18422,6 +18422,18 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 45921,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45921",
+        "title": "[Bug]: The button to select a directory as the current workspace doesn't appear if there are too many directories"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43122,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43122",
+        "title": "[Bug]: Messaging provider icons are not all dark UI theme-friendly"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 40364,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
         "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -18929,6 +18941,18 @@
         "number": 39901,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39901",
         "title": "[Bug]: TUI/CLI startup banner shows MCP servers as \"failed\" while async connection is still in progress"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45921,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45921",
+        "title": "[Bug]: The button to select a directory as the current workspace doesn't appear if there are too many directories"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 43122,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43122",
+        "title": "[Bug]: Messaging provider icons are not all dark UI theme-friendly"
       }
     ],
     "stabilityScore": {
@@ -18937,14 +18961,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 196,
+      "evidencePenalty": 198,
       "survivalDays": 8,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 196,
+        "evidencePenalty": 198,
         "votePenalty": 0,
         "survivalDays": 8,
         "survivalPointsPerDay": 3,
@@ -19943,6 +19967,28 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Hermes 0.16.0 TUI/CLI banner can mark MCP servers failed while they are still connecting, leaving tools unavailable until /new."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45921",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45921,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45921",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.16.0 workspace directory picker can disappear when directory lists are long"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#43122",
+          "repo": "NousResearch/hermes-agent",
+          "number": 43122,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/43122",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.16.0 messaging provider icons are hard to read in dark theme"
         }
       ]
     },
@@ -20147,6 +20193,12 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 45050,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45050",
+        "title": "Desktop artifact timestamps display incorrect date (Jan 21 instead of actual date)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 36743,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36743",
         "title": "[Bug]: v0.15.2 wheel missing hermes_cli/dashboard_auth — dashboard crashes on startup"
@@ -20330,29 +20382,35 @@
         "number": 35404,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35404",
         "title": "Test suite opens a real browser / xAI OAuth flow + reads the dev's macOS Keychain on local runs"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45050,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45050",
+        "title": "Desktop artifact timestamps display incorrect date (Jan 21 instead of actual date)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 29,
+      "score": 28,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 66,
+      "evidencePenalty": 67,
       "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 66,
+        "evidencePenalty": 67,
         "votePenalty": 0,
         "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 29
+        "score": 28
       },
       "affected": [
         "plugin-install",
@@ -20371,7 +20429,8 @@
         "browser",
         "desktop",
         "qqbot",
-        "security"
+        "security",
+        "desktop-ui"
       ],
       "evidence": [
         {
@@ -20714,6 +20773,17 @@
           "severity": 3,
           "penalty": 3,
           "reason": "0.15.2 local test runs can open a real browser/xAI OAuth flow and read macOS Keychain during tests"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45050",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45050,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45050",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.15.2 can display artifact timestamps as Jan 21 instead of the actual date"
         }
       ]
     },
@@ -20810,6 +20880,18 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 40187,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40187",
+        "title": "[Bug]: hermes update / hermes desktop fails to compile desktop app in macOS"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44580,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44580",
+        "title": "hermes update reports success when desktop rebuild silently fails"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 34346,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34346",
         "title": "v0.15.1 wheel installs hermes_cli/dashboard_auth/ to wrong path → dashboard ModuleNotFoundError"
@@ -20885,29 +20967,41 @@
         "number": 37044,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/37044",
         "title": "[Bug]: API server gateway does not expose model reasoning/thinking blocks in /v1/chat/completions responses"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 40187,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40187",
+        "title": "[Bug]: hermes update / hermes desktop fails to compile desktop app in macOS"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 44580,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44580",
+        "title": "hermes update reports success when desktop rebuild silently fails"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 50,
+      "score": 45,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 30,
+      "evidencePenalty": 35,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 30,
+        "evidencePenalty": 35,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 50
+        "score": 45
       },
       "affected": [
         "plugin-install",
@@ -20917,7 +21011,9 @@
         "gateway",
         "cron",
         "telegram",
-        "openwebui"
+        "openwebui",
+        "desktop-macos",
+        "update-system"
       ],
       "evidence": [
         {
@@ -21062,6 +21158,28 @@
           "severity": 1,
           "penalty": 1,
           "reason": "0.15.1 API gateway omits reasoning/thinking blocks in Open WebUI chat completions"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#40187",
+          "repo": "NousResearch/hermes-agent",
+          "number": 40187,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/40187",
+          "area": "desktop-macos",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.15.1 desktop build can fail on macOS during Electron packaging"
+        },
+        {
+          "issue": "NousResearch/hermes-agent#44580",
+          "repo": "NousResearch/hermes-agent",
+          "number": 44580,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/44580",
+          "area": "update-system",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes Desktop 0.15.1 update can report success while the desktop rebuild silently fails"
         }
       ]
     },
