@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-14T23:25:27.221Z",
+  "generatedAt": "2026-06-15T00:30:35.709Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -418,17 +418,19 @@
         "affected:gateway",
         "affected:plugin-install",
         "affected:upgrade",
+        "affected:update-system",
         "affected:cron",
         "affected:openwebui",
         "affected:windows",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "affected:desktop-macos"
       ],
       "issueNumber": 116,
       "title": "[v0.15.1] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/116",
       "createdAt": "2026-06-01T23:54:23Z",
-      "updatedAt": "2026-06-02T20:31:06Z"
+      "updatedAt": "2026-06-15T00:27:53Z"
     },
     {
       "version": "0.15.2",
@@ -458,14 +460,15 @@
         "affected:message-delivery",
         "pkg:hermes-agent",
         "affected:desktop",
-        "affected:version-metadata"
+        "affected:version-metadata",
+        "affected:desktop-ui"
       ],
       "issueNumber": 117,
       "title": "[v0.15.2] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/117",
       "createdAt": "2026-06-01T23:54:24Z",
-      "updatedAt": "2026-06-05T20:32:34Z"
+      "updatedAt": "2026-06-15T00:27:51Z"
     },
     {
       "version": "0.16.0",
@@ -522,7 +525,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/135",
       "createdAt": "2026-06-06T01:36:26Z",
-      "updatedAt": "2026-06-13T23:42:38Z"
+      "updatedAt": "2026-06-15T00:26:59Z"
     },
     {
       "version": "0.0.1",
