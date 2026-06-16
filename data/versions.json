@@ -8243,7 +8243,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 86223,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/86223"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/86223",
+        "title": "[Bug]: `openclaw docs` broken — docs.openclaw.ai/mcp returns text/html instead of text/event-stream (SSE routing conflict)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -8878,7 +8879,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 86223,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/86223"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/86223",
+        "title": "[Bug]: `openclaw docs` broken — docs.openclaw.ai/mcp returns text/html instead of text/event-stream (SSE routing conflict)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -10389,7 +10391,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85626,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/85626"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/85626",
+        "title": "MissingAgentHarnessError on resumed sessions: selectAgentHarnessDecision missing CLI-runtime short-circuit"
       },
       {
         "repo": "openclaw/openclaw",
@@ -10692,7 +10695,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85626,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/85626"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/85626",
+        "title": "MissingAgentHarnessError on resumed sessions: selectAgentHarnessDecision missing CLI-runtime short-circuit"
       },
       {
         "repo": "openclaw/openclaw",
@@ -19295,7 +19299,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 218,
-      "survivalDays": 9,
+      "survivalDays": 10,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -19303,7 +19307,7 @@
         "baseScore": 80,
         "evidencePenalty": 218,
         "votePenalty": 0,
-        "survivalDays": 9,
+        "survivalDays": 10,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
