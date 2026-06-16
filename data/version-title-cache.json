@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-16T11:43:59.012Z",
+  "generatedAt": "2026-06-16T13:32:37.976Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2552,20 +2552,22 @@
         "affected:doctor",
         "affected:sessions-management",
         "affected:status",
+        "affected:node-surface",
         "affected:windows",
         "affected:sandbox",
         "affected:memory",
         "affected:auth",
         "affected:config-migration",
         "affected:provider-routing",
-        "affected:skills"
+        "affected:skills",
+        "score:20-29"
       ],
       "issueNumber": 137,
       "title": "[v2026.6.6] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/137",
       "createdAt": "2026-06-12T11:14:22Z",
-      "updatedAt": "2026-06-16T04:37:14Z"
+      "updatedAt": "2026-06-16T12:25:48Z"
     }
   ],
   "duplicates": {
