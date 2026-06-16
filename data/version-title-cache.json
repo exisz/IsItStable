@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-16T03:03:02.512Z",
+  "generatedAt": "2026-06-16T05:46:27.046Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -13,7 +13,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:50-59",
         "affected:runtime",
         "affected:gateway",
         "affected:approval-boundary",
@@ -30,7 +29,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/119",
       "createdAt": "2026-06-02T00:36:43Z",
-      "updatedAt": "2026-06-02T20:31:32Z"
+      "updatedAt": "2026-06-16T04:37:43Z"
     },
     {
       "version": "0.3.0",
@@ -40,7 +39,6 @@
         "version",
         "risk:tool",
         "risk:runtime",
-        "score:60-69",
         "affected:runtime",
         "affected:gateway",
         "affected:tool",
@@ -57,7 +55,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/120",
       "createdAt": "2026-06-02T00:36:44Z",
-      "updatedAt": "2026-06-02T20:31:30Z"
+      "updatedAt": "2026-06-16T04:37:41Z"
     },
     {
       "version": "0.4.0",
@@ -68,7 +66,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:20-29",
         "affected:runtime",
         "affected:gateway",
         "affected:matrix",
@@ -86,7 +83,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/121",
       "createdAt": "2026-06-02T00:36:45Z",
-      "updatedAt": "2026-06-02T20:31:28Z"
+      "updatedAt": "2026-06-16T04:37:40Z"
     },
     {
       "version": "0.5.0",
@@ -96,7 +93,6 @@
         "version",
         "risk:tool",
         "risk:runtime",
-        "score:60-69",
         "affected:telegram",
         "affected:gateway",
         "affected:tool",
@@ -112,7 +108,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/122",
       "createdAt": "2026-06-02T00:36:46Z",
-      "updatedAt": "2026-06-02T20:31:27Z"
+      "updatedAt": "2026-06-16T04:37:38Z"
     },
     {
       "version": "0.6.0",
@@ -123,7 +119,6 @@
         "risk:channel",
         "risk:kernel",
         "risk:runtime",
-        "score:70-79",
         "affected:telegram",
         "affected:gateway",
         "affected:approval-boundary",
@@ -139,7 +134,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/123",
       "createdAt": "2026-06-02T00:36:47Z",
-      "updatedAt": "2026-06-03T20:29:28Z"
+      "updatedAt": "2026-06-16T04:37:36Z"
     },
     {
       "version": "0.7.0",
@@ -151,7 +146,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:60-69",
         "affected:discord",
         "affected:telegram",
         "affected:gateway",
@@ -169,7 +163,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/124",
       "createdAt": "2026-06-02T00:36:48Z",
-      "updatedAt": "2026-06-03T20:29:27Z"
+      "updatedAt": "2026-06-16T04:37:34Z"
     },
     {
       "version": "0.8.0",
@@ -180,7 +174,6 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:60-69",
         "affected:discord",
         "affected:telegram",
         "affected:gateway",
@@ -196,7 +189,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/125",
       "createdAt": "2026-06-02T00:36:50Z",
-      "updatedAt": "2026-06-02T20:31:21Z"
+      "updatedAt": "2026-06-16T04:37:33Z"
     },
     {
       "version": "0.9.0",
@@ -208,7 +201,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:60-69",
         "affected:feishu",
         "affected:gateway",
         "affected:approval-boundary",
@@ -224,7 +216,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/126",
       "createdAt": "2026-06-02T00:36:51Z",
-      "updatedAt": "2026-06-02T20:31:19Z"
+      "updatedAt": "2026-06-16T04:37:31Z"
     },
     {
       "version": "0.10.0",
@@ -236,7 +228,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:70-79",
         "affected:discord",
         "affected:runtime",
         "affected:whatsapp",
@@ -251,7 +242,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/127",
       "createdAt": "2026-06-02T00:36:52Z",
-      "updatedAt": "2026-06-07T20:39:24Z"
+      "updatedAt": "2026-06-16T04:37:29Z"
     },
     {
       "version": "0.11.0",
@@ -262,7 +253,6 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:70-79",
         "affected:wechat",
         "affected:plugin-install",
         "affected:ui",
@@ -277,7 +267,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/128",
       "createdAt": "2026-06-02T00:36:53Z",
-      "updatedAt": "2026-06-02T20:31:15Z"
+      "updatedAt": "2026-06-16T04:37:27Z"
     },
     {
       "version": "0.12.0",
@@ -288,7 +278,6 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:70-79",
         "affected:runtime",
         "affected:whatsapp",
         "affected:gateway",
@@ -305,7 +294,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/129",
       "createdAt": "2026-06-02T00:36:54Z",
-      "updatedAt": "2026-06-07T20:39:21Z"
+      "updatedAt": "2026-06-16T04:37:25Z"
     },
     {
       "version": "0.13.0",
@@ -316,7 +305,6 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:40-49",
         "affected:discord",
         "affected:feishu",
         "affected:security",
@@ -335,7 +323,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/130",
       "createdAt": "2026-06-02T00:36:55Z",
-      "updatedAt": "2026-06-03T20:29:25Z"
+      "updatedAt": "2026-06-16T04:37:24Z"
     },
     {
       "version": "0.14.0",
@@ -346,7 +334,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:50-59",
         "affected:gateway",
         "affected:tool",
         "affected:plugin-install",
@@ -362,7 +349,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/115",
       "createdAt": "2026-06-01T23:54:21Z",
-      "updatedAt": "2026-06-02T20:31:10Z"
+      "updatedAt": "2026-06-16T04:37:49Z"
     },
     {
       "version": "0.15.0",
@@ -374,7 +361,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:feishu",
         "affected:runtime",
         "affected:telegram",
@@ -401,7 +387,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/131",
       "createdAt": "2026-06-02T00:36:56Z",
-      "updatedAt": "2026-06-02T20:31:08Z"
+      "updatedAt": "2026-06-16T04:37:22Z"
     },
     {
       "version": "0.15.1",
@@ -412,7 +398,6 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:50-59",
         "affected:discord",
         "affected:telegram",
         "affected:gateway",
@@ -430,7 +415,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/116",
       "createdAt": "2026-06-01T23:54:23Z",
-      "updatedAt": "2026-06-15T00:27:53Z"
+      "updatedAt": "2026-06-16T04:37:47Z"
     },
     {
       "version": "0.15.2",
@@ -442,7 +427,6 @@
         "risk:tool",
         "risk:runtime",
         "risk:other",
-        "score:20-29",
         "affected:feishu",
         "affected:qqbot",
         "affected:runtime",
@@ -468,7 +452,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/117",
       "createdAt": "2026-06-01T23:54:24Z",
-      "updatedAt": "2026-06-15T00:27:51Z"
+      "updatedAt": "2026-06-16T04:37:45Z"
     },
     {
       "version": "0.16.0",
@@ -480,7 +464,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:compaction",
         "affected:runtime",
         "affected:matrix",
@@ -530,7 +513,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/135",
       "createdAt": "2026-06-06T01:36:26Z",
-      "updatedAt": "2026-06-16T00:10:17Z"
+      "updatedAt": "2026-06-16T04:37:18Z"
     },
     {
       "version": "0.0.1",
@@ -1473,7 +1456,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:50-59",
         "affected:image-tool",
         "affected:runtime",
         "affected:whatsapp",
@@ -1487,7 +1469,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/1",
       "createdAt": "2026-04-28T01:01:46Z",
-      "updatedAt": "2026-06-08T08:41:01Z"
+      "updatedAt": "2026-06-16T04:38:47Z"
     },
     {
       "version": "2026.4.24",
@@ -1499,7 +1481,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:other",
-        "score:40-49",
         "affected:runtime",
         "affected:gateway",
         "affected:tool",
@@ -1512,7 +1493,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/2",
       "createdAt": "2026-04-28T01:01:55Z",
-      "updatedAt": "2026-05-30T01:52:49Z"
+      "updatedAt": "2026-06-16T04:38:45Z"
     },
     {
       "version": "2026.4.25",
@@ -1525,7 +1506,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:40-49",
         "affected:runtime",
         "affected:telegram",
         "affected:whatsapp",
@@ -1540,7 +1520,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/3",
       "createdAt": "2026-04-28T01:02:04Z",
-      "updatedAt": "2026-06-08T08:40:57Z"
+      "updatedAt": "2026-06-16T04:38:43Z"
     },
     {
       "version": "2026.4.26",
@@ -1568,7 +1548,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:other",
-        "score:30-39",
         "affected:runtime",
         "affected:telegram",
         "affected:whatsapp",
@@ -1580,7 +1559,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/66",
       "createdAt": "2026-04-28T06:49:04Z",
-      "updatedAt": "2026-05-30T03:31:01Z"
+      "updatedAt": "2026-06-16T04:38:41Z"
     },
     {
       "version": "2026.4.27",
@@ -1609,7 +1588,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:60-69",
         "affected:feishu",
         "affected:runtime",
         "affected:telegram",
@@ -1622,7 +1600,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/68",
       "createdAt": "2026-04-29T23:17:13Z",
-      "updatedAt": "2026-05-22T23:06:26Z"
+      "updatedAt": "2026-06-16T04:38:40Z"
     },
     {
       "version": "2026.4.29",
@@ -1650,7 +1628,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:60-69",
         "affected:discord",
         "affected:runtime",
         "affected:whatsapp",
@@ -1662,7 +1639,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/69",
       "createdAt": "2026-04-30T21:19:38Z",
-      "updatedAt": "2026-05-22T23:06:25Z"
+      "updatedAt": "2026-06-16T04:38:38Z"
     },
     {
       "version": "2026.5.2",
@@ -1690,7 +1667,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:40-49",
         "affected:compaction",
         "affected:discord",
         "affected:feishu",
@@ -1708,7 +1684,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/72",
       "createdAt": "2026-05-03T01:32:28Z",
-      "updatedAt": "2026-05-22T23:06:23Z"
+      "updatedAt": "2026-06-16T04:38:36Z"
     },
     {
       "version": "2026.5.3",
@@ -1720,7 +1696,6 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:50-59",
         "affected:feishu",
         "affected:telegram",
         "affected:whatsapp",
@@ -1734,7 +1709,7 @@
       "state": "closed",
       "url": "https://github.com/exisz/IsItStable/issues/98",
       "createdAt": "2026-05-26T12:52:33Z",
-      "updatedAt": "2026-05-29T23:38:35Z"
+      "updatedAt": "2026-06-16T04:38:13Z"
     },
     {
       "version": "2026.5.3",
@@ -1747,7 +1722,6 @@
         "risk:tool",
         "risk:runtime",
         "risk:other",
-        "score:60-69",
         "affected:discord",
         "affected:feishu",
         "affected:runtime",
@@ -1761,7 +1735,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/73",
       "createdAt": "2026-05-04T07:57:31Z",
-      "updatedAt": "2026-06-08T08:40:53Z"
+      "updatedAt": "2026-06-16T04:38:34Z"
     },
     {
       "version": "2026.5.3-1",
@@ -1790,7 +1764,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:20-29",
         "affected:discord",
         "affected:feishu",
         "affected:runtime",
@@ -1807,7 +1780,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/74",
       "createdAt": "2026-05-04T09:45:08Z",
-      "updatedAt": "2026-05-30T03:33:05Z"
+      "updatedAt": "2026-06-16T04:38:32Z"
     },
     {
       "version": "2026.5.4",
@@ -1819,7 +1792,6 @@
         "risk:channel",
         "risk:kernel",
         "risk:runtime",
-        "score:40-49",
         "affected:discord",
         "affected:runtime",
         "affected:webchat",
@@ -1832,7 +1804,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/99",
       "createdAt": "2026-05-26T12:52:34Z",
-      "updatedAt": "2026-05-28T08:08:38Z"
+      "updatedAt": "2026-06-16T04:38:11Z"
     },
     {
       "version": "2026.5.4",
@@ -1842,7 +1814,6 @@
         "version",
         "pkg:openclaw",
         "risk:kernel",
-        "score:60-69",
         "affected:discord",
         "affected:feishu",
         "affected:image-tool",
@@ -1857,7 +1828,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/76",
       "createdAt": "2026-05-05T08:41:02Z",
-      "updatedAt": "2026-05-22T23:06:18Z"
+      "updatedAt": "2026-06-16T04:38:30Z"
     },
     {
       "version": "2026.5.5",
@@ -1869,7 +1840,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:50-59",
         "affected:browser",
         "affected:approval-boundary",
         "affected:upgrade",
@@ -1882,7 +1852,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/100",
       "createdAt": "2026-05-26T12:52:35Z",
-      "updatedAt": "2026-05-28T08:08:34Z"
+      "updatedAt": "2026-06-16T04:38:09Z"
     },
     {
       "version": "2026.5.5",
@@ -1894,7 +1864,6 @@
         "risk:channel",
         "risk:tool",
         "risk:kernel",
-        "score:40-49",
         "affected:heartbeat",
         "affected:runtime",
         "affected:security",
@@ -1909,7 +1878,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/77",
       "createdAt": "2026-05-06T09:44:54Z",
-      "updatedAt": "2026-06-08T08:40:49Z"
+      "updatedAt": "2026-06-16T04:38:28Z"
     },
     {
       "version": "2026.5.6",
@@ -1921,7 +1890,6 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
-        "score:50-59",
         "affected:qqbot",
         "affected:telegram",
         "affected:gateway",
@@ -1935,7 +1903,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/101",
       "createdAt": "2026-05-26T12:52:37Z",
-      "updatedAt": "2026-05-28T08:08:30Z"
+      "updatedAt": "2026-06-16T04:38:07Z"
     },
     {
       "version": "2026.5.6",
@@ -1949,7 +1917,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:50-59",
         "affected:discord",
         "affected:feishu",
         "affected:qqbot",
@@ -1965,7 +1932,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/78",
       "createdAt": "2026-05-06T18:29:33Z",
-      "updatedAt": "2026-06-08T08:40:45Z"
+      "updatedAt": "2026-06-16T04:38:27Z"
     },
     {
       "version": "2026.5.7",
@@ -1977,7 +1944,6 @@
         "risk:channel",
         "risk:kernel",
         "risk:runtime",
-        "score:40-49",
         "affected:compaction",
         "affected:discord",
         "affected:runtime",
@@ -1990,7 +1956,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/102",
       "createdAt": "2026-05-26T12:52:38Z",
-      "updatedAt": "2026-05-28T08:08:25Z"
+      "updatedAt": "2026-06-16T04:38:06Z"
     },
     {
       "version": "2026.5.7",
@@ -2004,7 +1970,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:50-59",
         "affected:compaction",
         "affected:discord",
         "affected:docs-command",
@@ -2025,7 +1990,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/79",
       "createdAt": "2026-05-07T21:18:49Z",
-      "updatedAt": "2026-05-30T03:31:07Z"
+      "updatedAt": "2026-06-16T04:38:25Z"
     },
     {
       "version": "2026.5.12",
@@ -2038,7 +2003,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:60-69",
         "affected:feishu",
         "affected:heartbeat",
         "affected:image-tool",
@@ -2058,7 +2022,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/103",
       "createdAt": "2026-05-26T12:52:39Z",
-      "updatedAt": "2026-05-30T01:52:43Z"
+      "updatedAt": "2026-06-16T04:38:04Z"
     },
     {
       "version": "2026.5.12",
@@ -2070,7 +2034,6 @@
         "risk:channel",
         "risk:tool",
         "risk:kernel",
-        "score:0-9",
         "affected:docs-command",
         "affected:heartbeat",
         "affected:whatsapp"
@@ -2080,7 +2043,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/82",
       "createdAt": "2026-05-14T18:33:07Z",
-      "updatedAt": "2026-05-23T19:49:59Z"
+      "updatedAt": "2026-06-16T04:38:23Z"
     },
     {
       "version": "2026.5.18",
@@ -2093,7 +2056,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:50-59",
         "affected:compaction",
         "affected:telegram",
         "affected:whatsapp",
@@ -2110,7 +2072,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/104",
       "createdAt": "2026-05-26T12:52:40Z",
-      "updatedAt": "2026-05-27T08:08:11Z"
+      "updatedAt": "2026-06-16T04:38:02Z"
     },
     {
       "version": "2026.5.18",
@@ -2123,7 +2085,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:compaction",
         "affected:feishu",
         "affected:heartbeat",
@@ -2150,7 +2111,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/88",
       "createdAt": "2026-05-18T19:31:20Z",
-      "updatedAt": "2026-05-26T08:07:40Z"
+      "updatedAt": "2026-06-16T04:38:21Z"
     },
     {
       "version": "2026.5.19",
@@ -2162,7 +2123,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:40-49",
         "affected:runtime",
         "affected:gateway",
         "affected:launchagent",
@@ -2179,7 +2139,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/105",
       "createdAt": "2026-05-26T12:52:42Z",
-      "updatedAt": "2026-05-27T08:08:34Z"
+      "updatedAt": "2026-06-16T04:38:00Z"
     },
     {
       "version": "2026.5.19",
@@ -2192,7 +2152,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:discord",
         "affected:telegram",
         "affected:gateway",
@@ -2203,7 +2162,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/89",
       "createdAt": "2026-05-20T20:40:06Z",
-      "updatedAt": "2026-05-26T08:07:38Z"
+      "updatedAt": "2026-06-16T04:38:19Z"
     },
     {
       "version": "2026.5.20",
@@ -2216,7 +2175,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:40-49",
         "affected:compaction",
         "affected:discord",
         "affected:heartbeat",
@@ -2235,7 +2193,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/106",
       "createdAt": "2026-05-26T12:52:43Z",
-      "updatedAt": "2026-05-27T08:09:13Z"
+      "updatedAt": "2026-06-16T04:37:58Z"
     },
     {
       "version": "2026.5.20",
@@ -2248,7 +2206,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:voice",
         "affected:tool",
         "affected:wechat",
@@ -2260,7 +2217,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/90",
       "createdAt": "2026-05-21T21:29:28Z",
-      "updatedAt": "2026-05-26T08:07:36Z"
+      "updatedAt": "2026-06-16T04:38:17Z"
     },
     {
       "version": "2026.5.22",
@@ -2273,7 +2230,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:compaction",
         "affected:discord",
         "affected:feishu",
@@ -2297,7 +2253,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/107",
       "createdAt": "2026-05-26T12:52:44Z",
-      "updatedAt": "2026-05-30T01:52:21Z"
+      "updatedAt": "2026-06-16T04:37:57Z"
     },
     {
       "version": "2026.5.22",
@@ -2310,7 +2266,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:discord",
         "affected:docs-command",
         "affected:feishu",
@@ -2352,7 +2307,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/92",
       "createdAt": "2026-05-24T05:17:09Z",
-      "updatedAt": "2026-05-26T10:27:01Z"
+      "updatedAt": "2026-06-16T04:38:15Z"
     },
     {
       "version": "2026.5.26",
@@ -2365,7 +2320,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:20-29",
         "affected:compaction",
         "affected:discord",
         "affected:heartbeat",
@@ -2389,7 +2343,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/109",
       "createdAt": "2026-05-27T13:00:44Z",
-      "updatedAt": "2026-06-13T05:47:03Z"
+      "updatedAt": "2026-06-16T04:37:55Z"
     },
     {
       "version": "2026.5.27",
@@ -2403,7 +2357,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:0-9",
         "affected:compaction",
         "affected:discord",
         "affected:feishu",
@@ -2437,7 +2390,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/111",
       "createdAt": "2026-05-28T13:05:04Z",
-      "updatedAt": "2026-06-13T05:47:28Z"
+      "updatedAt": "2026-06-16T04:37:53Z"
     },
     {
       "version": "2026.5.28",
@@ -2451,7 +2404,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:0-9",
         "affected:discord",
         "affected:feishu",
         "affected:image-tool",
@@ -2477,7 +2429,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/113",
       "createdAt": "2026-05-30T20:09:41Z",
-      "updatedAt": "2026-06-13T01:03:38Z"
+      "updatedAt": "2026-06-16T04:37:51Z"
     },
     {
       "version": "2026.6.1",
@@ -2491,7 +2443,6 @@
         "risk:kernel",
         "risk:runtime",
         "risk:other",
-        "score:0-9",
         "affected:compaction",
         "affected:discord",
         "affected:feishu",
@@ -2529,7 +2480,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-13T00:58:01Z"
+      "updatedAt": "2026-06-16T04:37:20Z"
     },
     {
       "version": "2026.6.5",
@@ -2542,7 +2493,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:0-9",
         "affected:compaction",
         "affected:discord",
         "affected:feishu",
@@ -2574,7 +2524,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/136",
       "createdAt": "2026-06-09T18:39:59Z",
-      "updatedAt": "2026-06-13T00:43:16Z"
+      "updatedAt": "2026-06-16T04:37:16Z"
     },
     {
       "version": "2026.6.6",
@@ -2587,7 +2537,6 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
-        "score:10-19",
         "affected:feishu",
         "affected:heartbeat",
         "affected:runtime",
@@ -2616,7 +2565,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/137",
       "createdAt": "2026-06-12T11:14:22Z",
-      "updatedAt": "2026-06-15T12:06:29Z"
+      "updatedAt": "2026-06-16T04:37:14Z"
     }
   ],
   "duplicates": {
@@ -2632,7 +2581,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:0-9",
           "affected:compaction",
           "affected:discord",
           "affected:feishu",
@@ -2656,7 +2604,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/107",
         "createdAt": "2026-05-26T12:52:44Z",
-        "updatedAt": "2026-05-30T01:52:21Z"
+        "updatedAt": "2026-06-16T04:37:57Z"
       },
       {
         "version": "2026.5.22",
@@ -2669,7 +2617,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:0-9",
           "affected:discord",
           "affected:docs-command",
           "affected:feishu",
@@ -2711,7 +2658,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/92",
         "createdAt": "2026-05-24T05:17:09Z",
-        "updatedAt": "2026-05-26T10:27:01Z"
+        "updatedAt": "2026-06-16T04:38:15Z"
       }
     ],
     "openclaw:2026.5.20": [
@@ -2726,7 +2673,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:40-49",
           "affected:compaction",
           "affected:discord",
           "affected:heartbeat",
@@ -2745,7 +2691,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/106",
         "createdAt": "2026-05-26T12:52:43Z",
-        "updatedAt": "2026-05-27T08:09:13Z"
+        "updatedAt": "2026-06-16T04:37:58Z"
       },
       {
         "version": "2026.5.20",
@@ -2758,7 +2704,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:0-9",
           "affected:voice",
           "affected:tool",
           "affected:wechat",
@@ -2770,7 +2715,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/90",
         "createdAt": "2026-05-21T21:29:28Z",
-        "updatedAt": "2026-05-26T08:07:36Z"
+        "updatedAt": "2026-06-16T04:38:17Z"
       }
     ],
     "openclaw:2026.5.19": [
@@ -2784,7 +2729,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:40-49",
           "affected:runtime",
           "affected:gateway",
           "affected:launchagent",
@@ -2801,7 +2745,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/105",
         "createdAt": "2026-05-26T12:52:42Z",
-        "updatedAt": "2026-05-27T08:08:34Z"
+        "updatedAt": "2026-06-16T04:38:00Z"
       },
       {
         "version": "2026.5.19",
@@ -2814,7 +2758,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:0-9",
           "affected:discord",
           "affected:telegram",
           "affected:gateway",
@@ -2825,7 +2768,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/89",
         "createdAt": "2026-05-20T20:40:06Z",
-        "updatedAt": "2026-05-26T08:07:38Z"
+        "updatedAt": "2026-06-16T04:38:19Z"
       }
     ],
     "openclaw:2026.5.18": [
@@ -2840,7 +2783,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:50-59",
           "affected:compaction",
           "affected:telegram",
           "affected:whatsapp",
@@ -2857,7 +2799,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/104",
         "createdAt": "2026-05-26T12:52:40Z",
-        "updatedAt": "2026-05-27T08:08:11Z"
+        "updatedAt": "2026-06-16T04:38:02Z"
       },
       {
         "version": "2026.5.18",
@@ -2870,7 +2812,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:0-9",
           "affected:compaction",
           "affected:feishu",
           "affected:heartbeat",
@@ -2897,7 +2838,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/88",
         "createdAt": "2026-05-18T19:31:20Z",
-        "updatedAt": "2026-05-26T08:07:40Z"
+        "updatedAt": "2026-06-16T04:38:21Z"
       }
     ],
     "openclaw:2026.5.12": [
@@ -2912,7 +2853,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:60-69",
           "affected:feishu",
           "affected:heartbeat",
           "affected:image-tool",
@@ -2932,7 +2872,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/103",
         "createdAt": "2026-05-26T12:52:39Z",
-        "updatedAt": "2026-05-30T01:52:43Z"
+        "updatedAt": "2026-06-16T04:38:04Z"
       },
       {
         "version": "2026.5.12",
@@ -2944,7 +2884,6 @@
           "risk:channel",
           "risk:tool",
           "risk:kernel",
-          "score:0-9",
           "affected:docs-command",
           "affected:heartbeat",
           "affected:whatsapp"
@@ -2954,7 +2893,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/82",
         "createdAt": "2026-05-14T18:33:07Z",
-        "updatedAt": "2026-05-23T19:49:59Z"
+        "updatedAt": "2026-06-16T04:38:23Z"
       }
     ],
     "openclaw:2026.5.7": [
@@ -2968,7 +2907,6 @@
           "risk:channel",
           "risk:kernel",
           "risk:runtime",
-          "score:40-49",
           "affected:compaction",
           "affected:discord",
           "affected:runtime",
@@ -2981,7 +2919,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/102",
         "createdAt": "2026-05-26T12:52:38Z",
-        "updatedAt": "2026-05-28T08:08:25Z"
+        "updatedAt": "2026-06-16T04:38:06Z"
       },
       {
         "version": "2026.5.7",
@@ -2995,7 +2933,6 @@
           "risk:kernel",
           "risk:runtime",
           "risk:other",
-          "score:50-59",
           "affected:compaction",
           "affected:discord",
           "affected:docs-command",
@@ -3016,7 +2953,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/79",
         "createdAt": "2026-05-07T21:18:49Z",
-        "updatedAt": "2026-05-30T03:31:07Z"
+        "updatedAt": "2026-06-16T04:38:25Z"
       }
     ],
     "openclaw:2026.5.6": [
@@ -3030,7 +2967,6 @@
           "risk:channel",
           "risk:tool",
           "risk:runtime",
-          "score:50-59",
           "affected:qqbot",
           "affected:telegram",
           "affected:gateway",
@@ -3044,7 +2980,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/101",
         "createdAt": "2026-05-26T12:52:37Z",
-        "updatedAt": "2026-05-28T08:08:30Z"
+        "updatedAt": "2026-06-16T04:38:07Z"
       },
       {
         "version": "2026.5.6",
@@ -3058,7 +2994,6 @@
           "risk:kernel",
           "risk:runtime",
           "risk:other",
-          "score:50-59",
           "affected:discord",
           "affected:feishu",
           "affected:qqbot",
@@ -3074,7 +3009,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/78",
         "createdAt": "2026-05-06T18:29:33Z",
-        "updatedAt": "2026-06-08T08:40:45Z"
+        "updatedAt": "2026-06-16T04:38:27Z"
       }
     ],
     "openclaw:2026.5.5": [
@@ -3088,7 +3023,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:50-59",
           "affected:browser",
           "affected:approval-boundary",
           "affected:upgrade",
@@ -3101,7 +3035,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/100",
         "createdAt": "2026-05-26T12:52:35Z",
-        "updatedAt": "2026-05-28T08:08:34Z"
+        "updatedAt": "2026-06-16T04:38:09Z"
       },
       {
         "version": "2026.5.5",
@@ -3113,7 +3047,6 @@
           "risk:channel",
           "risk:tool",
           "risk:kernel",
-          "score:40-49",
           "affected:heartbeat",
           "affected:runtime",
           "affected:security",
@@ -3128,7 +3061,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/77",
         "createdAt": "2026-05-06T09:44:54Z",
-        "updatedAt": "2026-06-08T08:40:49Z"
+        "updatedAt": "2026-06-16T04:38:28Z"
       }
     ],
     "openclaw:2026.5.4": [
@@ -3142,7 +3075,6 @@
           "risk:channel",
           "risk:kernel",
           "risk:runtime",
-          "score:40-49",
           "affected:discord",
           "affected:runtime",
           "affected:webchat",
@@ -3155,7 +3087,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/99",
         "createdAt": "2026-05-26T12:52:34Z",
-        "updatedAt": "2026-05-28T08:08:38Z"
+        "updatedAt": "2026-06-16T04:38:11Z"
       },
       {
         "version": "2026.5.4",
@@ -3165,7 +3097,6 @@
           "version",
           "pkg:openclaw",
           "risk:kernel",
-          "score:60-69",
           "affected:discord",
           "affected:feishu",
           "affected:image-tool",
@@ -3180,7 +3111,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/76",
         "createdAt": "2026-05-05T08:41:02Z",
-        "updatedAt": "2026-05-22T23:06:18Z"
+        "updatedAt": "2026-06-16T04:38:30Z"
       }
     ],
     "openclaw:2026.5.3-1": [
@@ -3211,7 +3142,6 @@
           "risk:kernel",
           "risk:runtime",
           "risk:other",
-          "score:20-29",
           "affected:discord",
           "affected:feishu",
           "affected:runtime",
@@ -3228,7 +3158,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/74",
         "createdAt": "2026-05-04T09:45:08Z",
-        "updatedAt": "2026-05-30T03:33:05Z"
+        "updatedAt": "2026-06-16T04:38:32Z"
       }
     ],
     "openclaw:2026.5.3": [
@@ -3242,7 +3172,6 @@
           "risk:channel",
           "risk:tool",
           "risk:runtime",
-          "score:50-59",
           "affected:feishu",
           "affected:telegram",
           "affected:whatsapp",
@@ -3256,7 +3185,7 @@
         "state": "closed",
         "url": "https://github.com/exisz/IsItStable/issues/98",
         "createdAt": "2026-05-26T12:52:33Z",
-        "updatedAt": "2026-05-29T23:38:35Z"
+        "updatedAt": "2026-06-16T04:38:13Z"
       },
       {
         "version": "2026.5.3",
@@ -3269,7 +3198,6 @@
           "risk:tool",
           "risk:runtime",
           "risk:other",
-          "score:60-69",
           "affected:discord",
           "affected:feishu",
           "affected:runtime",
@@ -3283,7 +3211,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/73",
         "createdAt": "2026-05-04T07:57:31Z",
-        "updatedAt": "2026-06-08T08:40:53Z"
+        "updatedAt": "2026-06-16T04:38:34Z"
       }
     ],
     "openclaw:2026.5.2": [
@@ -3313,7 +3241,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:runtime",
-          "score:40-49",
           "affected:compaction",
           "affected:discord",
           "affected:feishu",
@@ -3331,7 +3258,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/72",
         "createdAt": "2026-05-03T01:32:28Z",
-        "updatedAt": "2026-05-22T23:06:23Z"
+        "updatedAt": "2026-06-16T04:38:36Z"
       }
     ],
     "openclaw:2026.4.29": [
@@ -3361,7 +3288,6 @@
           "risk:kernel",
           "risk:runtime",
           "risk:other",
-          "score:60-69",
           "affected:discord",
           "affected:runtime",
           "affected:whatsapp",
@@ -3373,7 +3299,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/69",
         "createdAt": "2026-04-30T21:19:38Z",
-        "updatedAt": "2026-05-22T23:06:25Z"
+        "updatedAt": "2026-06-16T04:38:38Z"
       }
     ],
     "openclaw:2026.4.27": [
@@ -3404,7 +3330,6 @@
           "risk:kernel",
           "risk:runtime",
           "risk:other",
-          "score:60-69",
           "affected:feishu",
           "affected:runtime",
           "affected:telegram",
@@ -3417,7 +3342,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/68",
         "createdAt": "2026-04-29T23:17:13Z",
-        "updatedAt": "2026-05-22T23:06:26Z"
+        "updatedAt": "2026-06-16T04:38:40Z"
       }
     ],
     "openclaw:2026.4.26": [
@@ -3447,7 +3372,6 @@
           "risk:tool",
           "risk:kernel",
           "risk:other",
-          "score:30-39",
           "affected:runtime",
           "affected:telegram",
           "affected:whatsapp",
@@ -3459,7 +3383,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/66",
         "createdAt": "2026-04-28T06:49:04Z",
-        "updatedAt": "2026-05-30T03:31:01Z"
+        "updatedAt": "2026-06-16T04:38:41Z"
       }
     ]
   }
