@@ -1,5 +1,5 @@
 export function scoreHue(score: number): number {
-  return Math.round(Math.max(0, Math.min(100, score)) * 1.2);
+  return Math.round(60 + (120 / Math.PI) * Math.atan((score - 50) / 35));
 }
 
 export function scoreStyle(score: number): { color: string; backgroundColor: string; borderColor: string } {

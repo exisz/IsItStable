@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!v) return {};
   return {
     title: `${v.packageName} v${version} Stability Score | IsItStable.com`,
-    description: `${v.packageName} v${version}: stability score ${v.stabilityScore.score}/100. ${v.verdictComment}`,
+    description: `${v.packageName} v${version}: stability score ${v.stabilityScore.score}. ${v.verdictComment}`,
   };
 }
 
@@ -45,7 +45,7 @@ export default async function VersionPage({ params }: Props) {
         </p>
         <ScoreBadge score={v.stabilityScore.score} size="xl" mutedMax />
         <p className="mt-4 text-sm uppercase tracking-widest text-[var(--color-muted)]">
-          Fact score: {v.stabilityScore.score}/100 · evidence-based, not a YES/NO verdict
+          Fact score: {v.stabilityScore.score} · evidence-based, not a YES/NO verdict
         </p>
       </div>
 

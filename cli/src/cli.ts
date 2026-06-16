@@ -102,7 +102,7 @@ async function main() {
     const emoji = scoreEmoji(score);
 
     console.log();
-    console.log(`  ${emoji} ${data.package}@${data.version} — stability score ${score}/100`);
+    console.log(`  ${emoji} ${data.package}@${data.version} — stability score ${score}`);
     if (data.comment) {
       console.log(`  "${data.comment}"`);
     }

@@ -105,7 +105,7 @@ export function computeFormula(input: {
     ? Math.floor(survivalBonus / settings.survivalBonus.pointsPerDay)
     : 0;
   const curatedBonus = input.curated ? settings.curatedBonus.points : 0;
-  const score = Math.min(100, settings.baseScore - input.evidencePenalty - input.votePenalty + survivalBonus + curatedBonus);
+  const score = settings.baseScore - input.evidencePenalty - input.votePenalty + survivalBonus + curatedBonus;
   return {
     baseScore: settings.baseScore,
     evidencePenalty: input.evidencePenalty,
