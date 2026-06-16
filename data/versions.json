@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Latest stable picked up more receipts: auth migration, plugin loading, WebChat session/render weirdness, browser downloads, Feishu edits, and provider-policy edges. The 3am dashboard stare is now making eye contact.",
+    "verdictComment": "Latest stable picked up fresh status/model and node-policy receipts on top of the existing auth, plugin, WebChat, browser, Feishu, and provider-policy evidence. The 3am dashboard stare is now making eye contact.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -190,6 +190,18 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 93322,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93322",
+        "title": "[Bug]: /status usage should follow session-selected model after /model switch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93518,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93518",
+        "title": "exec host=node denied by Companion App policy despite correct config"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 92361,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
         "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
@@ -367,6 +379,18 @@
         "number": 93259,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/93259",
         "title": "claude-cli subagents silently cap thinking at \"high\" — provider-policy surface not resolved for plugin CLI backends"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93322,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93322",
+        "title": "[Bug]: /status usage should follow session-selected model after /model switch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93518,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93518",
+        "title": "exec host=node denied by Companion App policy despite correct config"
       }
     ],
     "stabilityScore": {
@@ -375,19 +399,19 @@
       "score": 19,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 70,
-      "survivalDays": 3,
-      "survivalBonus": 9,
+      "evidencePenalty": 73,
+      "survivalDays": 4,
+      "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 70,
+        "evidencePenalty": 73,
         "votePenalty": 0,
-        "survivalDays": 3,
+        "survivalDays": 4,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 3,
-        "survivalBonus": 9,
+        "survivalCreditedDays": 4,
+        "survivalBonus": 12,
         "curatedBonus": 0,
         "score": 19
       },
@@ -412,7 +436,8 @@
         "webchat",
         "browser",
         "feishu",
-        "provider-routing"
+        "provider-routing",
+        "node-surface"
       ],
       "evidence": [
         {
@@ -744,6 +769,28 @@
           "severity": 2,
           "penalty": 2,
           "reason": "claude-cli subagents can silently cap thinking at high because provider-policy ownership is unresolved on 2026.6.6"
+        },
+        {
+          "issue": "openclaw/openclaw#93322",
+          "repo": "openclaw/openclaw",
+          "number": 93322,
+          "url": "https://github.com/openclaw/openclaw/issues/93322",
+          "area": "status",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "/status usage can show the configured default provider instead of the session-selected model on 2026.6.6"
+        },
+        {
+          "issue": "openclaw/openclaw#93518",
+          "repo": "openclaw/openclaw",
+          "number": 93518,
+          "url": "https://github.com/openclaw/openclaw/issues/93518",
+          "area": "node-surface",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "exec host=node can be denied by Companion App policy despite matching approvals config on 2026.6.6"
         }
       ]
     },
