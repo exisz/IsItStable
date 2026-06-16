@@ -1293,6 +1293,54 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 46800,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46800",
+          "title": "fix: _kanban_dispatcher_watcher fires false \"stuck\" alert when hook fills concurrency cap"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46797,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46797",
+          "title": "fix: add \"disk i/o error\" to _WAL_INCOMPAT_MARKERS so stale-SHM/EIO after unclean shutdown falls back to DELETE journal mode"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46776,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46776",
+          "title": "[Bug]: parseRichMarkup creates one Line per color tag, breaking multi-color banner_hero rows in the new TUI"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46709,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46709",
+          "title": "Exceptional agent failure: 9-hour tool loop without verified shortcut fix"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46696,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46696",
+          "title": "[Bug]: Desktop build broken on v0.16.0 (bee13817)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46692,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46692",
+          "title": "[Bug] Desktop build fails: \"./react-shim\" not exported from @assistant-ui/tap (macOS, v0.16.0)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46686,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46686",
+          "title": "TUI/Desktop: /compress doesn't show the before/after summary"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46651,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46651",
+          "title": "[Bug] Desktop (a376ca0): image upload fails on remote profile — \"image not found: <local_path>\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 40364,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
           "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -1812,6 +1860,54 @@
           "number": 43122,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/43122",
           "title": "[Bug]: Messaging provider icons are not all dark UI theme-friendly"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46800,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46800",
+          "title": "fix: _kanban_dispatcher_watcher fires false \"stuck\" alert when hook fills concurrency cap"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46797,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46797",
+          "title": "fix: add \"disk i/o error\" to _WAL_INCOMPAT_MARKERS so stale-SHM/EIO after unclean shutdown falls back to DELETE journal mode"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46776,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46776",
+          "title": "[Bug]: parseRichMarkup creates one Line per color tag, breaking multi-color banner_hero rows in the new TUI"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46709,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46709",
+          "title": "Exceptional agent failure: 9-hour tool loop without verified shortcut fix"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46696,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46696",
+          "title": "[Bug]: Desktop build broken on v0.16.0 (bee13817)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46692,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46692",
+          "title": "[Bug] Desktop build fails: \"./react-shim\" not exported from @assistant-ui/tap (macOS, v0.16.0)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46686,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46686",
+          "title": "TUI/Desktop: /compress doesn't show the before/after summary"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46651,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46651",
+          "title": "[Bug] Desktop (a376ca0): image upload fails on remote profile — \"image not found: <local_path>\""
         }
       ],
       "stabilityScore": {
@@ -1820,14 +1916,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 198,
+        "evidencePenalty": 218,
         "survivalDays": 9,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 198,
+          "evidencePenalty": 218,
           "votePenalty": 0,
           "survivalDays": 9,
           "survivalPointsPerDay": 3,
@@ -1889,7 +1985,8 @@
           "matrix",
           "provider-cerebras",
           "provider-routing",
-          "mcp"
+          "mcp",
+          "compaction"
         ],
         "evidence": [
           {
@@ -2848,6 +2945,94 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Hermes Desktop 0.16.0 messaging provider icons are hard to read in dark theme"
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46800",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46800,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46800",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Kanban dispatcher watcher can fire false stuck alerts when hooks only hit concurrency caps."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46797",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46797,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46797",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.16.0 can leave Kanban dispatch dead after stale SQLite SHM/EIO until manual WAL cleanup."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46776",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46776,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46776",
+            "area": "ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 TUI rich markup splits color tags into separate lines, breaking multi-color banner rows."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46709",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46709,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46709",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Hermes Desktop v0.16.0 report shows a 9-hour tool loop without verified task completion."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46696",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46696,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46696",
+            "area": "dependency-resolution",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes Desktop v0.16.0 build can fail on @assistant-ui/tap export mismatch after update."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46692",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46692,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46692",
+            "area": "dependency-resolution",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Fresh v0.16.0 Desktop build can fail on macOS because ./react-shim is not exported from @assistant-ui/tap."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46686",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46686,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46686",
+            "area": "compaction",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 TUI/Desktop /compress completes but hides the before/after summary from users."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46651",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46651,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46651",
+            "area": "desktop-remote-upload",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes Desktop v0.16.0 remote-profile image upload can send local paths and fail with image not found."
           }
         ]
       },
