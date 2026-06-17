@@ -53,7 +53,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "0.16.0 is still generating fresh papercuts across restart paths, Desktop state, providers, and encrypted messaging. The pager did not get Sunday off.",
+      "verdictComment": "v0.16.0 now has another stack of sharp edges: Desktop state, Telegram delivery, providers, cron, updater paths, and state.db all made noise. The 3am deploy goblin brought receipts.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -627,6 +627,180 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 47415,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47415",
+          "title": "[Bug]: Telegram group photos sent without an @mention are dropped (observed-context content stringified)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47363,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47363",
+          "title": "[BUG] /memory approve fails with \"memory store unavailable\" in TUI/dashboard chat"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47313,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47313",
+          "title": "[Bug]: Dashboard composer goes blank when resuming long sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47315,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47315",
+          "title": "[Bug]: Dashboard text rendering corruption during scroll and multi-line input"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46791,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46791",
+          "title": "Repository stage stash/local-changes handling is fragile and can leave the tree in unrecoverable dirty state after interrupted updates"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47258,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47258",
+          "title": "UI model picker shows 0 models for custom_providers entries"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46788,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46788",
+          "title": "fix: get_running_pid() skips PID check when virtiofs unlinks lock file behind gateway's FD"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46693,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46693",
+          "title": "[Bug]: Help - Can't rebuild desktop and icon disappear.  (can't even start the agent)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46645,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46645",
+          "title": "Windows sandbox: subprocess fails to find executables because sandbox env drops parent PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46606,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46606",
+          "title": "[Bug]: [Bug][Windows Desktop] Long assistant messages partially disappear from UI — first half truncated, restored on restart"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44580,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44580",
+          "title": "hermes update reports success when desktop rebuild silently fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45383,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45383",
+          "title": "state.db recurring B-tree corruption from WAL TRUNCATE checkpoint on large FTS5 databases"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46515,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46515",
+          "title": "Telegram: sendRichMessageDraft works but final message falls back to MarkdownV2 (expect_edits kills rich path)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46516,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46516",
+          "title": "[Bug]: [OpenAI API] HTTP 400 for gpt-4.1 and gpt-4o-mini on Hermes 0.16.0 (Windows) while direct API calls work"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46517,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46517",
+          "title": "[Bug]: TUI (Desktop App) shows \"Running Code...\" indicator indefinitely after session has completed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46506,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46506",
+          "title": "[Bug]: Cron job model unable to override profile model (Not sure if this is a bug or is a stand design)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46298,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46298",
+          "title": "Telegram gateway adapter times out connecting for valid bot tokens (Lynn/Stephen profiles)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45894,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45894",
+          "title": "[Bug] Hermes Desktop: right-sidebar file-tree refresh button disappears when cursor moves onto it"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45709,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45709",
+          "title": "Bug: Hermes Link fails to sync web-originated messages in existing conversations"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44771,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44771",
+          "title": "Curator LLM review enters multi-hour loop on symlinked skill clusters, consuming 91M input tokens"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45422,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45422",
+          "title": "[Bug]: `hermes tools disable memory` should disable the built-in memory, not the entire memory ecosystem"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44707,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44707",
+          "title": "Desktop boot race condition: retry doesn't kill previous backend process → EADDRINUSE on port 9120"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42851,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42851",
+          "title": "[Bug]: Inconsistent cron logs depending on whether no-agent script produces no output vs. wakeAgent=false"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42785,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42785",
+          "title": "cron no_agent script stdout decoded with platform default (cp1252 on Windows), mangling non-ASCII output before delivery"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42768,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42768",
+          "title": "[Bug]: Context compaction summaries leak into chat as assistant responses when inserted with role=\"assistant\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42177,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42177",
+          "title": "[Bug]: Goal loop reports opaque \"no auxiliary client configured\" when Nous auxiliary auth fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42167,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42167",
+          "title": "[Bug]: Proxy 403 \"reset after N\" soft-throttle aborts the session instead of retrying"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 16804,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/16804",
+          "title": "[Bug]: HTTP 400 empty body on all OpenRouter requests (Hermes 0.9.0); curl works with same key/model"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 30149,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
+          "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 40364,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
           "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -1194,6 +1368,180 @@
           "number": 46651,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46651",
           "title": "[Bug] Desktop (a376ca0): image upload fails on remote profile — \"image not found: <local_path>\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47415,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47415",
+          "title": "[Bug]: Telegram group photos sent without an @mention are dropped (observed-context content stringified)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47363,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47363",
+          "title": "[BUG] /memory approve fails with \"memory store unavailable\" in TUI/dashboard chat"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47313,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47313",
+          "title": "[Bug]: Dashboard composer goes blank when resuming long sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47315,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47315",
+          "title": "[Bug]: Dashboard text rendering corruption during scroll and multi-line input"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46791,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46791",
+          "title": "Repository stage stash/local-changes handling is fragile and can leave the tree in unrecoverable dirty state after interrupted updates"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47258,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47258",
+          "title": "UI model picker shows 0 models for custom_providers entries"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46788,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46788",
+          "title": "fix: get_running_pid() skips PID check when virtiofs unlinks lock file behind gateway's FD"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46693,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46693",
+          "title": "[Bug]: Help - Can't rebuild desktop and icon disappear.  (can't even start the agent)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46645,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46645",
+          "title": "Windows sandbox: subprocess fails to find executables because sandbox env drops parent PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46606,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46606",
+          "title": "[Bug]: [Bug][Windows Desktop] Long assistant messages partially disappear from UI — first half truncated, restored on restart"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44580,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44580",
+          "title": "hermes update reports success when desktop rebuild silently fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45383,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45383",
+          "title": "state.db recurring B-tree corruption from WAL TRUNCATE checkpoint on large FTS5 databases"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46515,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46515",
+          "title": "Telegram: sendRichMessageDraft works but final message falls back to MarkdownV2 (expect_edits kills rich path)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46516,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46516",
+          "title": "[Bug]: [OpenAI API] HTTP 400 for gpt-4.1 and gpt-4o-mini on Hermes 0.16.0 (Windows) while direct API calls work"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46517,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46517",
+          "title": "[Bug]: TUI (Desktop App) shows \"Running Code...\" indicator indefinitely after session has completed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46506,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46506",
+          "title": "[Bug]: Cron job model unable to override profile model (Not sure if this is a bug or is a stand design)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46298,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46298",
+          "title": "Telegram gateway adapter times out connecting for valid bot tokens (Lynn/Stephen profiles)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45894,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45894",
+          "title": "[Bug] Hermes Desktop: right-sidebar file-tree refresh button disappears when cursor moves onto it"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45709,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45709",
+          "title": "Bug: Hermes Link fails to sync web-originated messages in existing conversations"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44771,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44771",
+          "title": "Curator LLM review enters multi-hour loop on symlinked skill clusters, consuming 91M input tokens"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45422,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45422",
+          "title": "[Bug]: `hermes tools disable memory` should disable the built-in memory, not the entire memory ecosystem"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44707,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44707",
+          "title": "Desktop boot race condition: retry doesn't kill previous backend process → EADDRINUSE on port 9120"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42851,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42851",
+          "title": "[Bug]: Inconsistent cron logs depending on whether no-agent script produces no output vs. wakeAgent=false"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42785,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42785",
+          "title": "cron no_agent script stdout decoded with platform default (cp1252 on Windows), mangling non-ASCII output before delivery"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42768,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42768",
+          "title": "[Bug]: Context compaction summaries leak into chat as assistant responses when inserted with role=\"assistant\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42177,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42177",
+          "title": "[Bug]: Goal loop reports opaque \"no auxiliary client configured\" when Nous auxiliary auth fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42167,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42167",
+          "title": "[Bug]: Proxy 403 \"reset after N\" soft-throttle aborts the session instead of retrying"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 16804,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/16804",
+          "title": "[Bug]: HTTP 400 empty body on all OpenRouter requests (Hermes 0.9.0); curl works with same key/model"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 30149,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
+          "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
         }
       ],
       "stabilityScore": {
@@ -1202,14 +1550,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 218,
+        "evidencePenalty": 289,
         "survivalDays": 10,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 218,
+          "evidencePenalty": 289,
           "votePenalty": 0,
           "survivalDays": 10,
           "survivalPointsPerDay": 3,
@@ -1219,60 +1567,63 @@
           "score": 0
         },
         "affected": [
-          "desktop",
-          "docker",
-          "yuanbao",
-          "model-picker",
-          "email",
-          "skills",
-          "desktop-remote-upload",
+          "auth",
+          "compaction",
           "config-migration",
-          "prompt-size",
-          "desktop-slash-command",
-          "desktop-remote-gateway",
+          "config-profiles",
           "cron",
-          "update-banner",
           "cron-model-routing",
-          "discord",
-          "installer",
-          "gateway",
+          "dashboard",
           "dashboard-oidc",
+          "dependencies",
+          "dependency-resolution",
+          "desktop",
           "desktop-cron",
-          "discord-voice",
+          "desktop-macos",
+          "desktop-media",
+          "desktop-remote-gateway",
+          "desktop-remote-upload",
+          "desktop-slash-command",
           "desktop-ui",
           "desktop-wsl",
-          "desktop-media",
-          "gateway-service",
-          "config-profiles",
-          "hooks",
-          "provider-minimax",
-          "provider-integration",
-          "update-system",
-          "tool",
-          "dashboard",
-          "plugin-system",
-          "memory",
-          "dependency-resolution",
-          "sessions-management",
-          "macos",
-          "telegram",
+          "discord",
+          "discord-voice",
+          "docker",
           "doctor",
-          "ui",
-          "runtime",
+          "email",
+          "gateway",
+          "gateway-service",
+          "hooks",
+          "installer",
           "linux-runtime",
-          "dependencies",
-          "version-metadata",
-          "session-history",
-          "restart",
-          "auth",
-          "termux",
-          "desktop-macos",
-          "web-tools",
+          "macos",
           "matrix",
-          "provider-cerebras",
-          "provider-routing",
           "mcp",
-          "compaction"
+          "memory",
+          "message-delivery",
+          "model-picker",
+          "plugin-system",
+          "prompt-size",
+          "provider-cerebras",
+          "provider-integration",
+          "provider-minimax",
+          "provider-routing",
+          "restart",
+          "runtime",
+          "session-history",
+          "sessions-management",
+          "skills",
+          "telegram",
+          "termux",
+          "tool",
+          "ui",
+          "update-banner",
+          "update-system",
+          "upgrade",
+          "version-metadata",
+          "web-tools",
+          "windows",
+          "yuanbao"
         ],
         "evidence": [
           {
@@ -2319,6 +2670,325 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Hermes Desktop v0.16.0 remote-profile image upload can send local paths and fail with image not found."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47415",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47415,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47415",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 container drops Telegram group photos sent without an @mention."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47363",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47363,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47363",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 TUI/dashboard /memory approve can fail with memory store unavailable."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47313",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47313,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47313",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 dashboard composer can go blank when resuming long sessions."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47315",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47315,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47315",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 dashboard text rendering corrupts during scroll and multiline input."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46791",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46791,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46791",
+            "area": "upgrade",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.16.0 repository staging/stash handling can leave local trees unrecoverably dirty after interrupted updates."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47258",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47258,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47258",
+            "area": "model-picker",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 UI model picker can show zero models for custom_providers entries."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46788",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46788,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46788",
+            "area": "gateway-service",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 gateway PID detection can skip a live-process check when virtiofs unlinks the lock file."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46693",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46693,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46693",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.16.0 desktop rebuild can fail hard enough that the app cannot start and the icon disappears."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46645",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46645,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46645",
+            "area": "windows",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 Windows sandbox can drop parent PATH, preventing subprocess executable discovery."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46606",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46606,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46606",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Windows Desktop can truncate the first half of long assistant messages until restart."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#44580",
+            "repo": "NousResearch/hermes-agent",
+            "number": 44580,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/44580",
+            "area": "upgrade",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 hermes update can report success even when the desktop rebuild silently fails."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45383",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45383,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45383",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.16.0 state.db can hit recurring B-tree corruption from WAL TRUNCATE checkpointing on large FTS5 databases."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46515",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46515,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46515",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 Telegram rich message drafts can fall back to MarkdownV2 when expect_edits kills the rich path."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46516",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46516,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46516",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 Windows OpenAI API calls for gpt-4.1/gpt-4o-mini can return HTTP 400 while direct API calls work."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46517",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46517,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46517",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 TUI/Desktop can leave the Running Code indicator stuck after a session completed."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46506",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46506,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46506",
+            "area": "cron-model-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 cron profile model overrides can fail to take effect."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46298",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46298,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46298",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Telegram gateway adapter can time out connecting even for valid bot tokens."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45894",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45894,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45894",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 Desktop right-sidebar file-tree refresh button can disappear under cursor movement."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45709",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45709,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45709",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Hermes Link can fail to sync web-originated messages into existing conversations."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#44771",
+            "repo": "NousResearch/hermes-agent",
+            "number": 44771,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/44771",
+            "area": "skills",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.16.0 curator LLM review can enter a multi-hour loop on symlinked skill clusters, consuming 91M input tokens."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45422",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45422,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45422",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 hermes tools disable memory can disable the whole memory ecosystem instead of only built-in memory."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#44707",
+            "repo": "NousResearch/hermes-agent",
+            "number": 44707,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/44707",
+            "area": "desktop",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 Desktop boot retry can leave a previous backend alive and hit EADDRINUSE on port 9120."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42851",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42851,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42851",
+            "area": "cron",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 cron logs can be inconsistent when no-agent scripts emit no output versus wakeAgent=false."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42785",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42785,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42785",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 cron no_agent stdout can be decoded with the platform default, mangling non-ASCII output on Windows."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42768",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42768,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42768",
+            "area": "compaction",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 context compaction summaries can leak into chat as assistant responses."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42177",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42177,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42177",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 goal loop can fail opaquely when Nous auxiliary auth has no configured client."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42167",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42167,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42167",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 proxy soft-throttle 403 reset-after responses can abort sessions instead of retrying."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#16804",
+            "repo": "NousResearch/hermes-agent",
+            "number": 16804,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/16804",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 still surfaces OpenRouter failures as empty HTTP 400 bodies, hiding actionable provider errors."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#30149",
+            "repo": "NousResearch/hermes-agent",
+            "number": 30149,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/30149",
+            "area": "dependencies",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 startup can fail when the anthropic package dependency is missing."
           }
         ]
       },
