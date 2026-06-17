@@ -6,32 +6,485 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Fresh release, fresh bruises: the first 24h evidence is already noisy across memory, cron/runtime, plugin loading, and Telegram. No binary verdict yet — just the receipts.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94125,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94125",
+        "title": "[Bug]: Memory search completely broken — FTS-only hangs, embeddings hang, --force corrupts meta (Ollama/bge-m3, Linux, 2026.6.8)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94053,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94053",
+        "title": "[Bug]: Heartbeat runner leaks private final replies to Telegram in message_tool_only mode"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 43367,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/43367",
+        "title": "Multi-agent orchestration is unstable: concurrent agents add/config overwrites, session-lock failures, and detached child work"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93886,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93886",
+        "title": "[Bug]: @openclaw/codex 2026.6.8 fails strict plugin-load boundary check during subagent spawns, aborting unrelated runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94033,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94033",
+        "title": "Bug: Cron isolated agent timeout during long tool execution"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84583,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/84583",
+        "title": "cron announce delivery triggers EmbeddedAttemptSessionTakeoverError when user is actively chatting"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93831,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93831",
+        "title": "foreground reply fence in 2026.6.8 still cancels older in-flight reply after newer visible delivery"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94127,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94127",
+        "title": "[Bug]: openclaw gateway call <plugin-method> returns \"unknown method\" for plugin-registered RPC methods, even though plugins inspect --runtime confirms the registration"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94083,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94083",
+        "title": "plugins update --all leaves exact beta official plugins pinned after stable upgrade"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93781,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93781",
+        "title": "azure-openai-responses probe/agent route uses OpenAI auth profile instead of Azure credentials"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94102,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94102",
+        "title": "memory_search ranks filename/date-token queries poorly despite clean index and working content search"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 73148,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/73148",
+        "title": "Image tool: opaque \"Failed to optimize image\" when sharp is not installed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 68596,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/68596",
+        "title": "Feature Request: Configurable streaming watchdog timeout threshold"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93908,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93908",
+        "title": "[Bug]: [Bug]: Feishu plugin skipping discovery - host reports 2026.5.28 despite 2026.6.8 install"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93905,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93905",
+        "title": "[Bug]: /usage no longer works in Telegram"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93835,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93835",
+        "title": "[Bug]: Telegram /think menu shows only off for live-discovered Ollama thinking models, but /think <level> accepts them"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93824,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93824",
+        "title": "Telegram rich messages: blockquote 'expandable' attribute parsed but never emitted (no collapse on long quotes)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93875,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93875",
+        "title": "[Bug]: Discord message_tool_only turns can append stale tool-failed warning after successful message send"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94117,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94117",
+        "title": "Telegram rich final reply fails with RICH_MESSAGE_URL_INVALID for local Markdown link hrefs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94125,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94125",
+        "title": "[Bug]: Memory search completely broken — FTS-only hangs, embeddings hang, --force corrupts meta (Ollama/bge-m3, Linux, 2026.6.8)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94053,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94053",
+        "title": "[Bug]: Heartbeat runner leaks private final replies to Telegram in message_tool_only mode"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 43367,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/43367",
+        "title": "Multi-agent orchestration is unstable: concurrent agents add/config overwrites, session-lock failures, and detached child work"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93886,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93886",
+        "title": "[Bug]: @openclaw/codex 2026.6.8 fails strict plugin-load boundary check during subagent spawns, aborting unrelated runs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94033,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94033",
+        "title": "Bug: Cron isolated agent timeout during long tool execution"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84583,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/84583",
+        "title": "cron announce delivery triggers EmbeddedAttemptSessionTakeoverError when user is actively chatting"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93831,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93831",
+        "title": "foreground reply fence in 2026.6.8 still cancels older in-flight reply after newer visible delivery"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94127,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94127",
+        "title": "[Bug]: openclaw gateway call <plugin-method> returns \"unknown method\" for plugin-registered RPC methods, even though plugins inspect --runtime confirms the registration"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94083,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94083",
+        "title": "plugins update --all leaves exact beta official plugins pinned after stable upgrade"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93781,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93781",
+        "title": "azure-openai-responses probe/agent route uses OpenAI auth profile instead of Azure credentials"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94102,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94102",
+        "title": "memory_search ranks filename/date-token queries poorly despite clean index and working content search"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 73148,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/73148",
+        "title": "Image tool: opaque \"Failed to optimize image\" when sharp is not installed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 68596,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/68596",
+        "title": "Feature Request: Configurable streaming watchdog timeout threshold"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93908,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93908",
+        "title": "[Bug]: [Bug]: Feishu plugin skipping discovery - host reports 2026.5.28 despite 2026.6.8 install"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93905,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93905",
+        "title": "[Bug]: /usage no longer works in Telegram"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93835,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93835",
+        "title": "[Bug]: Telegram /think menu shows only off for live-discovered Ollama thinking models, but /think <level> accepts them"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93824,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93824",
+        "title": "Telegram rich messages: blockquote 'expandable' attribute parsed but never emitted (no collapse on long quotes)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93875,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93875",
+        "title": "[Bug]: Discord message_tool_only turns can append stale tool-failed warning after successful message send"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94117,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94117",
+        "title": "Telegram rich final reply fails with RICH_MESSAGE_URL_INVALID for local Markdown link hrefs"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 30,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 50,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 50,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 30
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "codex",
+        "cron-runtime",
+        "discord",
+        "feishu",
+        "heartbeat",
+        "image-tool",
+        "memory",
+        "plugin-install",
+        "plugin-system",
+        "provider-routing",
+        "runtime",
+        "sessions-management",
+        "telegram"
+      ],
+      "evidence": [
+        {
+          "issue": "openclaw/openclaw#94125",
+          "repo": "openclaw/openclaw",
+          "number": 94125,
+          "url": "https://github.com/openclaw/openclaw/issues/94125",
+          "area": "memory",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Memory search hangs/corrupts metadata paths reported on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94053",
+          "repo": "openclaw/openclaw",
+          "number": 94053,
+          "url": "https://github.com/openclaw/openclaw/issues/94053",
+          "area": "heartbeat",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Heartbeat runner can leak private final replies to Telegram in message_tool_only mode."
+        },
+        {
+          "issue": "openclaw/openclaw#43367",
+          "repo": "openclaw/openclaw",
+          "number": 43367,
+          "url": "https://github.com/openclaw/openclaw/issues/43367",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Multi-agent/session write-lock and subagent delivery instability still reproduces through 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#93886",
+          "repo": "openclaw/openclaw",
+          "number": 93886,
+          "url": "https://github.com/openclaw/openclaw/issues/93886",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex plugin-load boundary check aborts unrelated subagent runs on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94033",
+          "repo": "openclaw/openclaw",
+          "number": 94033,
+          "url": "https://github.com/openclaw/openclaw/issues/94033",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Isolated cron agents can time out during long tool execution across 2026.6.5–2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#84583",
+          "repo": "openclaw/openclaw",
+          "number": 84583,
+          "url": "https://github.com/openclaw/openclaw/issues/84583",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Cron announce delivery can hit session takeover when a user is actively chatting; confirmed on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#93831",
+          "repo": "openclaw/openclaw",
+          "number": 93831,
+          "url": "https://github.com/openclaw/openclaw/issues/93831",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Foreground reply fence can cancel older in-flight replies after newer visible delivery."
+        },
+        {
+          "issue": "openclaw/openclaw#94127",
+          "repo": "openclaw/openclaw",
+          "number": 94127,
+          "url": "https://github.com/openclaw/openclaw/issues/94127",
+          "area": "plugin-system",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Plugin-registered RPC methods return unknown method despite runtime registration on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94083",
+          "repo": "openclaw/openclaw",
+          "number": 94083,
+          "url": "https://github.com/openclaw/openclaw/issues/94083",
+          "area": "plugin-install",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "plugins update --all can leave exact beta official plugins pinned after stable upgrade."
+        },
+        {
+          "issue": "openclaw/openclaw#93781",
+          "repo": "openclaw/openclaw",
+          "number": 93781,
+          "url": "https://github.com/openclaw/openclaw/issues/93781",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Azure OpenAI Responses probe/agent route can use OpenAI auth instead of Azure credentials."
+        },
+        {
+          "issue": "openclaw/openclaw#94102",
+          "repo": "openclaw/openclaw",
+          "number": 94102,
+          "url": "https://github.com/openclaw/openclaw/issues/94102",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "memory_search ranks filename/date-token queries poorly despite clean index on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#73148",
+          "repo": "openclaw/openclaw",
+          "number": 73148,
+          "url": "https://github.com/openclaw/openclaw/issues/73148",
+          "area": "image-tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "openclaw@2026.6.8 package still lacks sharp optional dependency for image optimization path."
+        },
+        {
+          "issue": "openclaw/openclaw#68596",
+          "repo": "openclaw/openclaw",
+          "number": 68596,
+          "url": "https://github.com/openclaw/openclaw/issues/68596",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Streaming watchdog timeout remains unconfigurable in the 2026.6.8 release surface."
+        },
+        {
+          "issue": "openclaw/openclaw#93908",
+          "repo": "openclaw/openclaw",
+          "number": 93908,
+          "url": "https://github.com/openclaw/openclaw/issues/93908",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Feishu plugin discovery can report stale host version after 2026.6.8 install."
+        },
+        {
+          "issue": "openclaw/openclaw#93905",
+          "repo": "openclaw/openclaw",
+          "number": 93905,
+          "url": "https://github.com/openclaw/openclaw/issues/93905",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram /usage command no longer works on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#93835",
+          "repo": "openclaw/openclaw",
+          "number": 93835,
+          "url": "https://github.com/openclaw/openclaw/issues/93835",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram /think menu omits discovered Ollama thinking levels though direct command works."
+        },
+        {
+          "issue": "openclaw/openclaw#93824",
+          "repo": "openclaw/openclaw",
+          "number": 93824,
+          "url": "https://github.com/openclaw/openclaw/issues/93824",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram expandable blockquote attribute is parsed but not emitted for long quotes."
+        },
+        {
+          "issue": "openclaw/openclaw#93875",
+          "repo": "openclaw/openclaw",
+          "number": 93875,
+          "url": "https://github.com/openclaw/openclaw/issues/93875",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord message_tool_only turns can append stale tool-failed warning after successful send."
+        },
+        {
+          "issue": "openclaw/openclaw#94117",
+          "repo": "openclaw/openclaw",
+          "number": 94117,
+          "url": "https://github.com/openclaw/openclaw/issues/94117",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram rich final reply can fail with RICH_MESSAGE_URL_INVALID for local Markdown hrefs."
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
@@ -10406,7 +10859,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85333,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/85333"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/85333",
+        "title": "[Bug]: openclaw doctor --fix 4-5x slower on 2026.5.20 vs 2026.5.19 (55s → 229s+) — session snapshot path traversal bottleneck"
       },
       {
         "repo": "openclaw/openclaw",
@@ -10435,7 +10889,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85334,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/85334"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/85334",
+        "title": "[Bug]: openclaw doctor --fix automatically injects plugins.load.paths entry pointing at bundled plugin dir, causing circular warning"
       },
       {
         "repo": "openclaw/openclaw",
@@ -10710,7 +11165,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85333,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/85333"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/85333",
+        "title": "[Bug]: openclaw doctor --fix 4-5x slower on 2026.5.20 vs 2026.5.19 (55s → 229s+) — session snapshot path traversal bottleneck"
       },
       {
         "repo": "openclaw/openclaw",
@@ -10739,7 +11195,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 85334,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/85334"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/85334",
+        "title": "[Bug]: openclaw doctor --fix automatically injects plugins.load.paths entry pointing at bundled plugin dir, causing circular warning"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13283,7 +13740,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 82462,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/82462"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/82462",
+        "title": "[Bug]: model-fetch streaming response processing starves the event loop (SocketError, 30s+ freeze)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13516,7 +13974,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 82462,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/82462"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/82462",
+        "title": "[Bug]: model-fetch streaming response processing starves the event loop (SocketError, 30s+ freeze)"
       },
       {
         "repo": "openclaw/openclaw",
