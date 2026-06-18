@@ -240,24 +240,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 30,
+      "score": 33,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 50,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 50,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 30
+        "score": 33
       },
       "affected": [
         "codex",
@@ -18693,7 +18693,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.16.0 now has another stack of sharp edges: Desktop state, Telegram delivery, providers, cron, updater paths, and state.db all made noise. The 3am deploy goblin brought receipts.",
+    "verdictComment": "v0.16.0 has fresh late-cycle smoke: provider routing, installers, tool schemas, SQLite session storage, and message boundaries all added receipts. The 3am deploy goblin is now doing paperwork.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -19441,6 +19441,84 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 48061,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48061",
+        "title": "[Bug]: Hermes Agent v0.16.0 still sends empty runtime model/provider on Linux pipx install."
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47762,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47762",
+        "title": "send_message tool does not render Rich Messages (tables, checklists) — only cron auto-delivery works"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 48071,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48071",
+        "title": "[Bug]: Nix level-1 gateway install generates systemd unit that bypasses Hermes wrapper"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 48083,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48083",
+        "title": "[Bug]: Web/core toolsets not registered in default/config/--toolsets all path for local Ollama models; only explicit --toolsets web works"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 48100,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48100",
+        "title": "[Bug]: Windows installer fails with \"Access Denied\" on pythonw.exe during auto-update"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47708,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47708",
+        "title": "Copilot provider auto-derived from a classic `ghp_*` GITHUB_TOKEN creates a permanently-failing fallback in the credential pool"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47707,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47707",
+        "title": "Context-engine/memory-provider tool schemas are wrapped without validating a top-level `name` — one malformed schema 400s the entire request"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47318,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47318",
+        "title": "local: null / edge: null in config.yaml crashes STT/TTS with 'NoneType' object has no attribute 'get'"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47002,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47002",
+        "title": "SessionDB.__init__ crashes on SQLite without trigram tokenizer (v0.16.0 regression)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 46979,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46979",
+        "title": "[Bug]: Desktop Run History empty for agent cron jobs despite /api/cron/jobs/{id}/runs returning runs (v0.16.0 regression)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45560,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45560",
+        "title": "repair_message_sequence aggressively merges separate user messages (v0.16.0+)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 41293,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41293",
+        "title": "GPT-5.5 (openai-codex): pre-tool-call preamble text leaks as visible assistant content to chat gateways since v0.16.0"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 39609,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39609",
+        "title": "[Bug]: Tasks created with --initial-status blocked auto-promote to ready ~1s later with no actor — human approval gate bypassed"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 40364,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
         "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -20182,6 +20260,84 @@
         "number": 30149,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
         "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 48061,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48061",
+        "title": "[Bug]: Hermes Agent v0.16.0 still sends empty runtime model/provider on Linux pipx install."
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47762,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47762",
+        "title": "send_message tool does not render Rich Messages (tables, checklists) — only cron auto-delivery works"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 48071,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48071",
+        "title": "[Bug]: Nix level-1 gateway install generates systemd unit that bypasses Hermes wrapper"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 48083,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48083",
+        "title": "[Bug]: Web/core toolsets not registered in default/config/--toolsets all path for local Ollama models; only explicit --toolsets web works"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 48100,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48100",
+        "title": "[Bug]: Windows installer fails with \"Access Denied\" on pythonw.exe during auto-update"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47708,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47708",
+        "title": "Copilot provider auto-derived from a classic `ghp_*` GITHUB_TOKEN creates a permanently-failing fallback in the credential pool"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47707,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47707",
+        "title": "Context-engine/memory-provider tool schemas are wrapped without validating a top-level `name` — one malformed schema 400s the entire request"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47318,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47318",
+        "title": "local: null / edge: null in config.yaml crashes STT/TTS with 'NoneType' object has no attribute 'get'"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 47002,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47002",
+        "title": "SessionDB.__init__ crashes on SQLite without trigram tokenizer (v0.16.0 regression)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 46979,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46979",
+        "title": "[Bug]: Desktop Run History empty for agent cron jobs despite /api/cron/jobs/{id}/runs returning runs (v0.16.0 regression)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 45560,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45560",
+        "title": "repair_message_sequence aggressively merges separate user messages (v0.16.0+)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 41293,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41293",
+        "title": "GPT-5.5 (openai-codex): pre-tool-call preamble text leaks as visible assistant content to chat gateways since v0.16.0"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 39609,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39609",
+        "title": "[Bug]: Tasks created with --initial-status blocked auto-promote to ready ~1s later with no actor — human approval gate bypassed"
       }
     ],
     "stabilityScore": {
@@ -20190,14 +20346,14 @@
       "score": 0,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 289,
+      "evidencePenalty": 325,
       "survivalDays": 11,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 289,
+        "evidencePenalty": 325,
         "votePenalty": 0,
         "survivalDays": 11,
         "survivalPointsPerDay": 3,
@@ -20207,6 +20363,7 @@
         "score": 0
       },
       "affected": [
+        "approval-boundary",
         "auth",
         "compaction",
         "config-migration",
@@ -20256,11 +20413,13 @@
         "telegram",
         "termux",
         "tool",
+        "tool-registration",
         "ui",
         "update-banner",
         "update-system",
         "upgrade",
         "version-metadata",
+        "voice",
         "web-tools",
         "windows",
         "yuanbao"
@@ -21629,6 +21788,149 @@
           "severity": 3,
           "penalty": 3,
           "reason": "v0.16.0 startup can fail when the anthropic package dependency is missing."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#48061",
+          "repo": "NousResearch/hermes-agent",
+          "number": 48061,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/48061",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes Agent v0.16.0 on Linux pipx still sends empty runtime model/provider after upgrade and fresh-session retries."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#47762",
+          "repo": "NousResearch/hermes-agent",
+          "number": 47762,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/47762",
+          "area": "message-delivery",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "v0.16.0 send_message renders rich Telegram messages as plain markdown even when rich_messages is enabled."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#48071",
+          "repo": "NousResearch/hermes-agent",
+          "number": 48071,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/48071",
+          "area": "installer",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.16.0 Nix level-1 gateway install can generate a systemd unit that bypasses the Hermes wrapper and fails to import hermes_agent."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#48083",
+          "repo": "NousResearch/hermes-agent",
+          "number": 48083,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/48083",
+          "area": "web-tools",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 local Ollama sessions miss web/core toolsets unless --toolsets web is passed explicitly."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#48100",
+          "repo": "NousResearch/hermes-agent",
+          "number": 48100,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/48100",
+          "area": "installer",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.16.0 Windows auto-update can fail with Access Denied on pythonw.exe, blocking installer completion."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#47708",
+          "repo": "NousResearch/hermes-agent",
+          "number": 47708,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/47708",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "hermes-agent 0.16.0 can auto-derive a Copilot provider from classic ghp_* GITHUB_TOKEN and create a permanently failing fallback."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#47707",
+          "repo": "NousResearch/hermes-agent",
+          "number": 47707,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/47707",
+          "area": "tool-registration",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "hermes-agent 0.16.0 can forward malformed tool schemas without validating top-level name, causing provider-wide HTTP 400 failures."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#47318",
+          "repo": "NousResearch/hermes-agent",
+          "number": 47318,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/47318",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes Agent v0.16.0 crashes STT/TTS config loading when stt.local or tts.edge is null."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#47002",
+          "repo": "NousResearch/hermes-agent",
+          "number": 47002,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/47002",
+          "area": "session-history",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "v0.16.0 SessionDB can crash on SQLite builds without trigram tokenizer, making session DB operations unusable."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#46979",
+          "repo": "NousResearch/hermes-agent",
+          "number": 46979,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/46979",
+          "area": "desktop-cron",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.16.0 Desktop Run History can show no runs for agent cron jobs even when the backend returns completed runs."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#45560",
+          "repo": "NousResearch/hermes-agent",
+          "number": 45560,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/45560",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.16.0+ repair_message_sequence can aggressively merge separate user messages, corrupting chat sequence boundaries."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#41293",
+          "repo": "NousResearch/hermes-agent",
+          "number": 41293,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/41293",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Since v0.16.0, openai-codex pre-tool-call preamble text can leak as visible assistant content to chat gateways."
+        },
+        {
+          "issue": "NousResearch/hermes-agent#39609",
+          "repo": "NousResearch/hermes-agent",
+          "number": 39609,
+          "url": "https://github.com/NousResearch/hermes-agent/issues/39609",
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Hermes Agent v0.16.0 can auto-promote tasks created with --initial-status blocked, bypassing the intended human approval gate."
         }
       ]
     },
