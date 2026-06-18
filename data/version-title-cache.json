@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-18T11:20:25.652Z",
+  "generatedAt": "2026-06-18T13:01:56.489Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2519,14 +2519,15 @@
         "affected:message-delivery",
         "affected:local-extensions",
         "affected:opencode",
-        "affected:reasoning"
+        "affected:reasoning",
+        "score:0-9"
       ],
       "issueNumber": 136,
       "title": "[v2026.6.5] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/136",
       "createdAt": "2026-06-09T18:39:59Z",
-      "updatedAt": "2026-06-16T04:37:16Z"
+      "updatedAt": "2026-06-18T12:33:10Z"
     },
     {
       "version": "2026.6.6",
@@ -2588,20 +2589,24 @@
         "affected:image-tool",
         "affected:runtime",
         "affected:telegram",
+        "affected:gateway",
         "affected:plugin-install",
         "affected:plugin-system",
         "affected:codex",
         "affected:sessions-management",
         "affected:cron-runtime",
         "affected:memory",
-        "affected:provider-routing"
+        "affected:provider-routing",
+        "score:20-29",
+        "affected:exec",
+        "affected:copilot"
       ],
       "issueNumber": 141,
       "title": "[v2026.6.8] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/141",
       "createdAt": "2026-06-16T17:39:17Z",
-      "updatedAt": "2026-06-17T12:30:56Z"
+      "updatedAt": "2026-06-18T12:32:58Z"
     }
   ],
   "duplicates": {
