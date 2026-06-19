@@ -715,7 +715,7 @@
         "repo": "openclaw/openclaw",
         "number": 92838,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92838",
-        "title": "[OAuth] Client ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
+        "title": "[OAuth] App ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
       },
       {
         "repo": "openclaw/openclaw",
@@ -907,7 +907,7 @@
         "repo": "openclaw/openclaw",
         "number": 92838,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92838",
-        "title": "[OAuth] Client ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
+        "title": "[OAuth] App ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
       },
       {
         "repo": "openclaw/openclaw",
@@ -1192,7 +1192,7 @@
           "type": "kernel",
           "severity": 5,
           "penalty": 5,
-          "reason": "Fresh ChatGPT/Codex OAuth logins fail on 2026.6.6 because the bundled OpenAI client ID is revoked"
+          "reason": "Fresh ChatGPT/Codex OAuth logins fail on 2026.6.6 because the bundled OpenAI app ID is revoked"
         },
         {
           "issue": "openclaw/openclaw#92433",
@@ -2198,7 +2198,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -149,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 149,
@@ -2215,7 +2215,7 @@
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 0
+        "score": -149
       },
       "affected": [
         "codex",
@@ -4082,7 +4082,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -279,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 279,
@@ -4099,7 +4099,7 @@
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 0
+        "score": -279
       },
       "affected": [
         "browser",
@@ -5794,7 +5794,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -92,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 92,
@@ -5811,7 +5811,7 @@
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 0
+        "score": -92
       },
       "affected": [
         "telegram",
@@ -6501,7 +6501,7 @@
         "repo": "openclaw/openclaw",
         "number": 87808,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/87808",
-        "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs client closed before turn completed"
+        "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs app closed before turn completed"
       },
       {
         "repo": "openclaw/openclaw",
@@ -6873,7 +6873,7 @@
         "repo": "openclaw/openclaw",
         "number": 87808,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/87808",
-        "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs client closed before turn completed"
+        "title": "[Bug]: Gateway restart during active embedded Codex WebChat turn drops final reply and only logs app closed before turn completed"
       },
       {
         "repo": "openclaw/openclaw",
@@ -6987,7 +6987,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -168,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 168,
@@ -7004,7 +7004,7 @@
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 0
+        "score": -168
       },
       "affected": [
         "bluebubbles",
@@ -8742,7 +8742,7 @@
         "repo": "openclaw/openclaw",
         "number": 86214,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/86214",
-        "title": "[Bug]: Codex app-server client closes mid-turn during image/tool requests with large logs_2.sqlite"
+        "title": "[Bug]: Codex app-server app closes mid-turn during image/tool requests with large logs_2.sqlite"
       },
       {
         "repo": "openclaw/openclaw",
@@ -9378,7 +9378,7 @@
         "repo": "openclaw/openclaw",
         "number": 86214,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/86214",
-        "title": "[Bug]: Codex app-server client closes mid-turn during image/tool requests with large logs_2.sqlite"
+        "title": "[Bug]: Codex app-server app closes mid-turn during image/tool requests with large logs_2.sqlite"
       },
       {
         "repo": "openclaw/openclaw",
@@ -9702,7 +9702,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -304,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 304,
@@ -9719,7 +9719,7 @@
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 0
+        "score": -304
       },
       "affected": [
         "bun",
@@ -10342,7 +10342,7 @@
           "type": "runtime",
           "severity": 3,
           "penalty": 3,
-          "reason": "Codex app-server client can close mid-turn during image/tool requests with large logs_2.sqlite on 2026.5.22"
+          "reason": "Codex app-server app can close mid-turn during image/tool requests with large logs_2.sqlite on 2026.5.22"
         },
         {
           "issue": "openclaw/openclaw#86328",
@@ -11558,7 +11558,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -137,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 137,
@@ -11575,7 +11575,7 @@
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 0
+        "score": -137
       },
       "affected": [
         "codex",
@@ -13284,7 +13284,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -137,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 137,
@@ -13301,7 +13301,7 @@
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 0
+        "score": -137
       },
       "affected": [
         "codex",
@@ -14289,7 +14289,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -112,
       "verdict": "pending",
       "votePenalty": 2,
       "evidencePenalty": 110,
@@ -14306,7 +14306,7 @@
         "survivalCreditedDays": 4,
         "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": 0
+        "score": -112
       },
       "affected": [
         "authentication",
@@ -14408,7 +14408,7 @@
           "type": "kernel",
           "severity": 4,
           "penalty": 4,
-          "reason": "Protocol mismatch: v2026.5.7 clients fail to connect to v2026.5.12 gateway; handshake fails with minProtocol/maxProtocol negotiation error"
+          "reason": "Protocol mismatch: v2026.5.7 apps fail to connect to v2026.5.12 gateway; handshake fails with minProtocol/maxProtocol negotiation error"
         },
         {
           "issue": "openclaw/openclaw#82277",
@@ -15397,7 +15397,7 @@
         "repo": "openclaw/openclaw",
         "number": 78569,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/78569",
-        "title": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_CLIENT_MISMATCH) via Control UI"
+        "title": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_APP_MISMATCH) via Control UI"
       },
       {
         "repo": "openclaw/openclaw",
@@ -15451,7 +15451,7 @@
         "repo": "openclaw/openclaw",
         "number": 78569,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/78569",
-        "title": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_CLIENT_MISMATCH) via Control UI"
+        "title": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_APP_MISMATCH) via Control UI"
       },
       {
         "repo": "openclaw/openclaw",
@@ -15554,7 +15554,7 @@
           "type": "other",
           "severity": 2,
           "penalty": 2,
-          "reason": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_CLIENT_MISMATCH) via Control UI"
+          "reason": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_APP_MISMATCH) via Control UI"
         },
         {
           "issue": "openclaw/openclaw#78562",
@@ -16589,7 +16589,7 @@
         "repo": "openclaw/openclaw",
         "number": 77668,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/77668",
-        "title": "[Bug]: Discord gateway hang at 'awaiting gateway readiness' still reproduces on 2026.5.3-1 (macOS) — six closed dups, raw-ws test isolates failure to Carbon Client lifecycle"
+        "title": "[Bug]: Discord gateway hang at 'awaiting gateway readiness' still reproduces on 2026.5.3-1 (macOS) — six closed dups, raw-ws test isolates failure to Carbon App lifecycle"
       },
       {
         "repo": "openclaw/openclaw",
@@ -16637,7 +16637,7 @@
         "repo": "openclaw/openclaw",
         "number": 77668,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/77668",
-        "title": "[Bug]: Discord gateway hang at 'awaiting gateway readiness' still reproduces on 2026.5.3-1 (macOS) — six closed dups, raw-ws test isolates failure to Carbon Client lifecycle"
+        "title": "[Bug]: Discord gateway hang at 'awaiting gateway readiness' still reproduces on 2026.5.3-1 (macOS) — six closed dups, raw-ws test isolates failure to Carbon App lifecycle"
       },
       {
         "repo": "openclaw/openclaw",
@@ -17201,7 +17201,7 @@
         "repo": "openclaw/openclaw",
         "number": 75438,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/75438",
-        "title": "`IMessageRpcClient.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
+        "title": "`IMessageRpcApp.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
       },
       {
         "repo": "openclaw/openclaw",
@@ -17261,7 +17261,7 @@
         "repo": "openclaw/openclaw",
         "number": 75438,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/75438",
-        "title": "`IMessageRpcClient.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
+        "title": "`IMessageRpcApp.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
       },
       {
         "repo": "openclaw/openclaw",
@@ -17377,7 +17377,7 @@
           "type": "channel-specific",
           "severity": 1,
           "penalty": 1,
-          "reason": "`IMessageRpcClient.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
+          "reason": "`IMessageRpcApp.request()` does not handle async stdin write errors → uncaughtException → gateway crash"
         },
         {
           "issue": "openclaw/openclaw#75419",
@@ -18869,7 +18869,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 48201,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48201",
-        "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_client"
+        "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_app"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -18953,7 +18953,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 38412,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
-        "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron client"
+        "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron app"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19091,7 +19091,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 44285,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44285",
-        "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after client rebuild retry"
+        "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after app rebuild retry"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19109,7 +19109,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 41693,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41693",
-        "title": "[Bug]: Hermes Desktop renderer crashes with \"tapClientLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
+        "title": "[Bug]: Hermes Desktop renderer crashes with \"tapAppLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19187,7 +19187,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 45242,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45242",
-        "title": "auxiliary_client.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
+        "title": "auxiliary_app.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19217,7 +19217,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 45140,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45140",
-        "title": "[Bug]: UnicodeDecodeError in copilot_acp_client.py _stdout_reader on Windows"
+        "title": "[Bug]: UnicodeDecodeError in copilot_acp_app.py _stdout_reader on Windows"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19235,7 +19235,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 45110,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45110",
-        "title": "Prompt is lost entirely when a turn's first response never completes (stall or client disconnect)"
+        "title": "Prompt is lost entirely when a turn's first response never completes (stall or app disconnect)"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19361,7 +19361,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 44562,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44562",
-        "title": "[BUG] Frontend crash : tapClientLookup Index out of bounds when tool returns unexpected data"
+        "title": "[BUG] Frontend crash : tapAppLookup Index out of bounds when tool returns unexpected data"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19607,7 +19607,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 42177,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42177",
-        "title": "[Bug]: Goal loop reports opaque \"no auxiliary client configured\" when Nous auxiliary auth fails"
+        "title": "[Bug]: Goal loop reports opaque \"no auxiliary app configured\" when Nous auxiliary auth fails"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19715,7 +19715,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 48201,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48201",
-        "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_client"
+        "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_app"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19799,7 +19799,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 38412,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
-        "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron client"
+        "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron app"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19937,7 +19937,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 44285,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44285",
-        "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after client rebuild retry"
+        "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after app rebuild retry"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -19955,7 +19955,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 41693,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41693",
-        "title": "[Bug]: Hermes Desktop renderer crashes with \"tapClientLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
+        "title": "[Bug]: Hermes Desktop renderer crashes with \"tapAppLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20033,7 +20033,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 45242,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45242",
-        "title": "auxiliary_client.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
+        "title": "auxiliary_app.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20063,7 +20063,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 45140,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45140",
-        "title": "[Bug]: UnicodeDecodeError in copilot_acp_client.py _stdout_reader on Windows"
+        "title": "[Bug]: UnicodeDecodeError in copilot_acp_app.py _stdout_reader on Windows"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20081,7 +20081,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 45110,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45110",
-        "title": "Prompt is lost entirely when a turn's first response never completes (stall or client disconnect)"
+        "title": "Prompt is lost entirely when a turn's first response never completes (stall or app disconnect)"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20207,7 +20207,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 44562,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44562",
-        "title": "[BUG] Frontend crash : tapClientLookup Index out of bounds when tool returns unexpected data"
+        "title": "[BUG] Frontend crash : tapAppLookup Index out of bounds when tool returns unexpected data"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20453,7 +20453,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 42177,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42177",
-        "title": "[Bug]: Goal loop reports opaque \"no auxiliary client configured\" when Nous auxiliary auth fails"
+        "title": "[Bug]: Goal loop reports opaque \"no auxiliary app configured\" when Nous auxiliary auth fails"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20555,7 +20555,7 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 0,
+      "score": -331,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 331,
@@ -20572,7 +20572,7 @@
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 0
+        "score": -331
       },
       "affected": [
         "approval-boundary",
@@ -20660,7 +20660,7 @@
           "type": "tool-specific",
           "severity": 1,
           "penalty": 1,
-          "reason": "google-gemini-cli OAuth is not supported in auxiliary resolve_provider_client on Hermes 0.16.0, breaking that provider path."
+          "reason": "google-gemini-cli OAuth is not supported in auxiliary resolve_provider_app on Hermes 0.16.0, breaking that provider path."
         },
         {
           "issue": "NousResearch/hermes-agent#48139",
@@ -20814,7 +20814,7 @@
           "type": "runtime",
           "severity": 3,
           "penalty": 3,
-          "reason": "Hermes 0.16.0 remote gateway WebSocket admission still rejects packaged Electron desktop clients, leaving remote Desktop unable to connect."
+          "reason": "Hermes 0.16.0 remote gateway WebSocket admission still rejects packaged Electron desktop apps, leaving remote Desktop unable to connect."
         },
         {
           "issue": "NousResearch/hermes-agent#41392",
@@ -21067,7 +21067,7 @@
           "type": "runtime",
           "severity": 3,
           "penalty": 3,
-          "reason": "Long v0.16.0 CLI sessions using a custom provider can hit APITimeoutError after client rebuild/retry, interrupting active agent work."
+          "reason": "Long v0.16.0 CLI sessions using a custom provider can hit APITimeoutError after app rebuild/retry, interrupting active agent work."
         },
         {
           "issue": "NousResearch/hermes-agent#43913",
@@ -21100,7 +21100,7 @@
           "type": "runtime",
           "severity": 4,
           "penalty": 4,
-          "reason": "Hermes Desktop 0.16.0 renderer can crash with tapClientLookup index errors during session switches or streaming cancellation."
+          "reason": "Hermes Desktop 0.16.0 renderer can crash with tapAppLookup index errors during session switches or streaming cancellation."
         },
         {
           "issue": "NousResearch/hermes-agent#44198",
@@ -21243,7 +21243,7 @@
           "type": "runtime",
           "severity": 2,
           "penalty": 2,
-          "reason": "Hermes 0.16.0 auxiliary_client.py does not handle oauth_minimax, breaking auxiliary tasks for MiniMax OAuth users."
+          "reason": "Hermes 0.16.0 auxiliary_app.py does not handle oauth_minimax, breaking auxiliary tasks for MiniMax OAuth users."
         },
         {
           "issue": "NousResearch/hermes-agent#45236",
@@ -21562,7 +21562,7 @@
           "type": "runtime",
           "severity": 3,
           "penalty": 3,
-          "reason": "Hermes 0.16.0 Desktop can crash after compression/tool result rendering with tapClientLookup index errors."
+          "reason": "Hermes 0.16.0 Desktop can crash after compression/tool result rendering with tapAppLookup index errors."
         },
         {
           "issue": "NousResearch/hermes-agent#45676",
@@ -22013,7 +22013,7 @@
           "type": "runtime",
           "severity": 2,
           "penalty": 2,
-          "reason": "v0.16.0 goal loop can fail opaquely when Nous auxiliary auth has no configured client."
+          "reason": "v0.16.0 goal loop can fail opaquely when Nous auxiliary auth has no configured app."
         },
         {
           "issue": "NousResearch/hermes-agent#42167",
@@ -25367,7 +25367,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 9711,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/9711",
-        "title": "Named custom providers ignore api_mode, always create OpenAI client"
+        "title": "Named custom providers ignore api_mode, always create OpenAI app"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -25391,7 +25391,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 11249,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/11249",
-        "title": "# Bug Report: `APIConnectionError: Connection error.` on every API call — httpx.Client shared between primary and request clients due to dict mutation in `_create_openai_client()`"
+        "title": "# Bug Report: `APIConnectionError: Connection error.` on every API call — httpx.App shared between primary and request apps due to dict mutation in `_create_openai_app()`"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -25415,7 +25415,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 9711,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/9711",
-        "title": "Named custom providers ignore api_mode, always create OpenAI client"
+        "title": "Named custom providers ignore api_mode, always create OpenAI app"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -25439,7 +25439,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 11249,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/11249",
-        "title": "# Bug Report: `APIConnectionError: Connection error.` on every API call — httpx.Client shared between primary and request clients due to dict mutation in `_create_openai_client()`"
+        "title": "# Bug Report: `APIConnectionError: Connection error.` on every API call — httpx.App shared between primary and request apps due to dict mutation in `_create_openai_app()`"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -25507,7 +25507,7 @@
           "type": "runtime",
           "severity": 3,
           "penalty": 3,
-          "reason": "v0.9.0 named custom providers ignore api_mode and always create OpenAI client"
+          "reason": "v0.9.0 named custom providers ignore api_mode and always create OpenAI app"
         },
         {
           "issue": "NousResearch/hermes-agent#9973",
@@ -25551,7 +25551,7 @@
           "type": "runtime",
           "severity": 4,
           "penalty": 4,
-          "reason": "Hermes Agent v0.9.0 can fail every API call when shared httpx client is closed via dict mutation"
+          "reason": "Hermes Agent v0.9.0 can fail every API call when shared httpx app is closed via dict mutation"
         },
         {
           "issue": "NousResearch/hermes-agent#11600",
