@@ -432,24 +432,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 1,
+      "score": 4,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 85,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 85,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 1
+        "score": 4
       },
       "affected": [
         "codex",
@@ -19111,6 +19111,44 @@
     "thumbsUp": 9,
     "thumbsDown": 0,
     "createdAt": "2026-04-24T16:30:05.632Z"
+  },
+  {
+    "issueNumber": 143,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/143",
+    "version": "0.17.0",
+    "packageName": "Hermes Agent",
+    "packageSlug": "hermes-agent",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-06-19T19:39:06Z"
   },
   {
     "issueNumber": 135,
