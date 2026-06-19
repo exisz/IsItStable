@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Fresh release, fresh bruises: 2026.6.8 now has 26 gated receipts across gateway startup, memory, plugin loading, sessions, and channel tools. The 3am deploy dashboard is not blinking first.",
+      "verdictComment": "Fresh release, fresh bruises: 2026.6.8 now has fresh receipts across Telegram rich messages, channel-store migration, reasoning display, remote Ollama streaming, external-plugin sends, skill approvals, and Responses API context. The 3am deploy dashboard is blinking in several colors.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -170,6 +170,60 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 94885,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94885",
+          "title": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94939,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94939",
+          "title": "[Bug]: 6.x state migration leaves channel conversation-store SQLite empty (0 bytes) — orphans references, breaks proactive (Bot Framework) sends (MS Teams)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94655,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94655",
+          "title": "doctor: cron store issues finding persists after --fix and references migrated jobs.json"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94937,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94937",
+          "title": "/reasoning on drops the thinking lane on Telegram — renders under /reasoning stream, lost under on"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94251,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94251",
+          "title": "[Bug]: Ollama remote provider streaming not consumed — model_call:started never progresses in chat sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94936,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94936",
+          "title": "Reasoning-model thinking (type:\"thinking\") never rendered on Discord — /reasoning on shows no thoughts"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94597,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94597",
+          "title": "message(action=send) without to fails for plugin channels under message_tool_only"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94249,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94249",
+          "title": "skill_workshop apply times out (\"Approval timed out\") on large proposals (~28KB)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94908,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94908",
+          "title": "[Bug]: /v1/responses does not retain conversation context when using the same user value"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 94125,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/94125",
           "title": "[Bug]: Memory search completely broken — FTS-only hangs, embeddings hang, --force corrupts meta (Ollama/bge-m3, Linux, 2026.6.8)"
@@ -323,29 +377,83 @@
           "number": 94220,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/94220",
           "title": "session-medic: healed session auto-resumes its stale detached task → multi-session races & livelock (+ high thinking-signature poison rate on high-thinkingDefault Opus agents)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94885,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94885",
+          "title": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94939,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94939",
+          "title": "[Bug]: 6.x state migration leaves channel conversation-store SQLite empty (0 bytes) — orphans references, breaks proactive (Bot Framework) sends (MS Teams)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94655,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94655",
+          "title": "doctor: cron store issues finding persists after --fix and references migrated jobs.json"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94937,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94937",
+          "title": "/reasoning on drops the thinking lane on Telegram — renders under /reasoning stream, lost under on"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94251,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94251",
+          "title": "[Bug]: Ollama remote provider streaming not consumed — model_call:started never progresses in chat sessions"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94936,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94936",
+          "title": "Reasoning-model thinking (type:\"thinking\") never rendered on Discord — /reasoning on shows no thoughts"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94597,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94597",
+          "title": "message(action=send) without to fails for plugin channels under message_tool_only"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94249,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94249",
+          "title": "skill_workshop apply times out (\"Approval timed out\") on large proposals (~28KB)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94908,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94908",
+          "title": "[Bug]: /v1/responses does not retain conversation context when using the same user value"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 18,
+        "score": 1,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 68,
+        "evidencePenalty": 85,
         "survivalDays": 2,
         "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 68,
+          "evidencePenalty": 85,
           "votePenalty": 0,
           "survivalDays": 2,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 2,
           "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 18
+          "score": 1
         },
         "affected": [
           "codex",
@@ -358,11 +466,13 @@
           "heartbeat",
           "image-tool",
           "memory",
+          "message-delivery",
           "plugin-install",
           "plugin-system",
           "provider-routing",
           "runtime",
           "sessions-management",
+          "skill-workshop",
           "telegram"
         ],
         "evidence": [
@@ -651,6 +761,105 @@
             "severity": 4,
             "penalty": 4,
             "reason": "session-medic auto-heal can resume stale detached tasks into multi-session races/livelock on 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#94885",
+            "repo": "openclaw/openclaw",
+            "number": 94885,
+            "url": "https://github.com/openclaw/openclaw/issues/94885",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in."
+          },
+          {
+            "issue": "openclaw/openclaw#94939",
+            "repo": "openclaw/openclaw",
+            "number": 94939,
+            "url": "https://github.com/openclaw/openclaw/issues/94939",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "6.x state migration can leave channel conversation-store SQLite empty, breaking proactive sends after upgrade to 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#94655",
+            "repo": "openclaw/openclaw",
+            "number": 94655,
+            "url": "https://github.com/openclaw/openclaw/issues/94655",
+            "area": "cron-runtime",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "doctor cron-store finding persists after --fix on 2026.6.8 and references migrated jobs.json."
+          },
+          {
+            "issue": "openclaw/openclaw#94937",
+            "repo": "openclaw/openclaw",
+            "number": 94937,
+            "url": "https://github.com/openclaw/openclaw/issues/94937",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "/reasoning on drops the thinking lane on Telegram for 2026.6.8 reasoning-model sessions."
+          },
+          {
+            "issue": "openclaw/openclaw#94251",
+            "repo": "openclaw/openclaw",
+            "number": 94251,
+            "url": "https://github.com/openclaw/openclaw/issues/94251",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Remote Ollama provider streaming can stall at model_call:started on 2026.6.8 while terminal requests complete."
+          },
+          {
+            "issue": "openclaw/openclaw#94936",
+            "repo": "openclaw/openclaw",
+            "number": 94936,
+            "url": "https://github.com/openclaw/openclaw/issues/94936",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Reasoning-model thinking payloads are not rendered on Discord with /reasoning on in 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#94597",
+            "repo": "openclaw/openclaw",
+            "number": 94597,
+            "url": "https://github.com/openclaw/openclaw/issues/94597",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "message(action=send) without target can fail for external plugin channels under message_tool_only on 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#94249",
+            "repo": "openclaw/openclaw",
+            "number": 94249,
+            "url": "https://github.com/openclaw/openclaw/issues/94249",
+            "area": "skill-workshop",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "skill_workshop apply can time out on large proposals over chat approval paths in 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#94908",
+            "repo": "openclaw/openclaw",
+            "number": 94908,
+            "url": "https://github.com/openclaw/openclaw/issues/94908",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "/v1/responses can fail to retain conversation context when using the same user value on 2026.6.8."
           }
         ]
       },

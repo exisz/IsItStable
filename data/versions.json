@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh release, fresh bruises: 2026.6.8 now has 26 gated receipts across gateway startup, memory, plugin loading, sessions, and channel tools. The 3am deploy dashboard is not blinking first.",
+    "verdictComment": "Fresh release, fresh bruises: 2026.6.8 now has fresh receipts across Telegram rich messages, channel-store migration, reasoning display, remote Ollama streaming, external-plugin sends, skill approvals, and Responses API context. The 3am deploy dashboard is blinking in several colors.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -166,6 +166,60 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 94885,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94885",
+        "title": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94939,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94939",
+        "title": "[Bug]: 6.x state migration leaves channel conversation-store SQLite empty (0 bytes) — orphans references, breaks proactive (Bot Framework) sends (MS Teams)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94655,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94655",
+        "title": "doctor: cron store issues finding persists after --fix and references migrated jobs.json"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94937,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94937",
+        "title": "/reasoning on drops the thinking lane on Telegram — renders under /reasoning stream, lost under on"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94251,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94251",
+        "title": "[Bug]: Ollama remote provider streaming not consumed — model_call:started never progresses in chat sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94936,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94936",
+        "title": "Reasoning-model thinking (type:\"thinking\") never rendered on Discord — /reasoning on shows no thoughts"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94597,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94597",
+        "title": "message(action=send) without to fails for plugin channels under message_tool_only"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94249,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94249",
+        "title": "skill_workshop apply times out (\"Approval timed out\") on large proposals (~28KB)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94908,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94908",
+        "title": "[Bug]: /v1/responses does not retain conversation context when using the same user value"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 94125,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/94125",
         "title": "[Bug]: Memory search completely broken — FTS-only hangs, embeddings hang, --force corrupts meta (Ollama/bge-m3, Linux, 2026.6.8)"
@@ -319,29 +373,83 @@
         "number": 94220,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/94220",
         "title": "session-medic: healed session auto-resumes its stale detached task → multi-session races & livelock (+ high thinking-signature poison rate on high-thinkingDefault Opus agents)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94885,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94885",
+        "title": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94939,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94939",
+        "title": "[Bug]: 6.x state migration leaves channel conversation-store SQLite empty (0 bytes) — orphans references, breaks proactive (Bot Framework) sends (MS Teams)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94655,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94655",
+        "title": "doctor: cron store issues finding persists after --fix and references migrated jobs.json"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94937,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94937",
+        "title": "/reasoning on drops the thinking lane on Telegram — renders under /reasoning stream, lost under on"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94251,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94251",
+        "title": "[Bug]: Ollama remote provider streaming not consumed — model_call:started never progresses in chat sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94936,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94936",
+        "title": "Reasoning-model thinking (type:\"thinking\") never rendered on Discord — /reasoning on shows no thoughts"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94597,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94597",
+        "title": "message(action=send) without to fails for plugin channels under message_tool_only"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94249,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94249",
+        "title": "skill_workshop apply times out (\"Approval timed out\") on large proposals (~28KB)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94908,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94908",
+        "title": "[Bug]: /v1/responses does not retain conversation context when using the same user value"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 18,
+      "score": 1,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 68,
+      "evidencePenalty": 85,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 68,
+        "evidencePenalty": 85,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 18
+        "score": 1
       },
       "affected": [
         "codex",
@@ -354,11 +462,13 @@
         "heartbeat",
         "image-tool",
         "memory",
+        "message-delivery",
         "plugin-install",
         "plugin-system",
         "provider-routing",
         "runtime",
         "sessions-management",
+        "skill-workshop",
         "telegram"
       ],
       "evidence": [
@@ -647,6 +757,105 @@
           "severity": 4,
           "penalty": 4,
           "reason": "session-medic auto-heal can resume stale detached tasks into multi-session races/livelock on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94885",
+          "repo": "openclaw/openclaw",
+          "number": 94885,
+          "url": "https://github.com/openclaw/openclaw/issues/94885",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in."
+        },
+        {
+          "issue": "openclaw/openclaw#94939",
+          "repo": "openclaw/openclaw",
+          "number": 94939,
+          "url": "https://github.com/openclaw/openclaw/issues/94939",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "6.x state migration can leave channel conversation-store SQLite empty, breaking proactive sends after upgrade to 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94655",
+          "repo": "openclaw/openclaw",
+          "number": 94655,
+          "url": "https://github.com/openclaw/openclaw/issues/94655",
+          "area": "cron-runtime",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "doctor cron-store finding persists after --fix on 2026.6.8 and references migrated jobs.json."
+        },
+        {
+          "issue": "openclaw/openclaw#94937",
+          "repo": "openclaw/openclaw",
+          "number": 94937,
+          "url": "https://github.com/openclaw/openclaw/issues/94937",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "/reasoning on drops the thinking lane on Telegram for 2026.6.8 reasoning-model sessions."
+        },
+        {
+          "issue": "openclaw/openclaw#94251",
+          "repo": "openclaw/openclaw",
+          "number": 94251,
+          "url": "https://github.com/openclaw/openclaw/issues/94251",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Remote Ollama provider streaming can stall at model_call:started on 2026.6.8 while terminal requests complete."
+        },
+        {
+          "issue": "openclaw/openclaw#94936",
+          "repo": "openclaw/openclaw",
+          "number": 94936,
+          "url": "https://github.com/openclaw/openclaw/issues/94936",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Reasoning-model thinking payloads are not rendered on Discord with /reasoning on in 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94597",
+          "repo": "openclaw/openclaw",
+          "number": 94597,
+          "url": "https://github.com/openclaw/openclaw/issues/94597",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "message(action=send) without target can fail for external plugin channels under message_tool_only on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94249",
+          "repo": "openclaw/openclaw",
+          "number": 94249,
+          "url": "https://github.com/openclaw/openclaw/issues/94249",
+          "area": "skill-workshop",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "skill_workshop apply can time out on large proposals over chat approval paths in 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94908",
+          "repo": "openclaw/openclaw",
+          "number": 94908,
+          "url": "https://github.com/openclaw/openclaw/issues/94908",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "/v1/responses can fail to retain conversation context when using the same user value on 2026.6.8."
         }
       ]
     },
@@ -661,7 +870,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Latest stable picked up fresh status/model and node-policy receipts on top of the existing auth, plugin, WebChat, browser, Feishu, and provider-policy evidence. The 3am dashboard stare is now making eye contact.",
+    "verdictComment": "v2026.6.6 picked up proxy, cron-silence, Telegram ingress, Feishu footer, and Anthropic thinking-signature receipts. The 3am dashboard is now making sustained eye contact.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -857,6 +1066,36 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 93807,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93807",
+        "title": "web_fetch useTrustedEnvProxy ignores NO_PROXY env variable"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94224,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94224",
+        "title": "[Bug] Cron lane never opts into allowEmptyAssistantReplyAsSilent — intentionally-silent cron jobs fail with FailoverError \"empty response\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94571,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94571",
+        "title": "Telegram isolated ingress copies large process.env in queue hot path"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93667,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93667",
+        "title": "[Feishu] Built-in channel does not render footer (elapsed/status) — schema accepts footer config but no UI display"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94228,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94228",
+        "title": "Native Anthropic path: replaying historical `thinking` blocks bricks long tool-use threads (`Invalid signature in thinking block` 400)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 92361,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
         "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
@@ -1046,53 +1285,84 @@
         "number": 93518,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/93518",
         "title": "exec host=node denied by Companion App policy despite correct config"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93807,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93807",
+        "title": "web_fetch useTrustedEnvProxy ignores NO_PROXY env variable"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94224,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94224",
+        "title": "[Bug] Cron lane never opts into allowEmptyAssistantReplyAsSilent — intentionally-silent cron jobs fail with FailoverError \"empty response\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94571,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94571",
+        "title": "Telegram isolated ingress copies large process.env in queue hot path"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 93667,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/93667",
+        "title": "[Feishu] Built-in channel does not render footer (elapsed/status) — schema accepts footer config but no UI display"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94228,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94228",
+        "title": "Native Anthropic path: replaying historical `thinking` blocks bricks long tool-use threads (`Invalid signature in thinking block` 400)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 19,
+      "score": 6,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 73,
+      "evidencePenalty": 86,
       "survivalDays": 4,
       "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 73,
+        "evidencePenalty": 86,
         "votePenalty": 0,
         "survivalDays": 4,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 4,
         "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": 19
+        "score": 6
       },
       "affected": [
-        "tool",
-        "sessions-management",
-        "status",
-        "memory",
-        "heartbeat",
-        "doctor",
         "auth",
-        "skills",
-        "whatsapp",
-        "plugin-system",
-        "sandbox",
-        "config-migration",
-        "ui",
-        "telegram",
-        "codex",
-        "plugin-install",
-        "windows",
-        "webchat",
         "browser",
+        "codex",
+        "config-migration",
+        "cron-runtime",
+        "doctor",
         "feishu",
+        "heartbeat",
+        "memory",
+        "node-surface",
+        "plugin-install",
+        "plugin-system",
         "provider-routing",
-        "node-surface"
+        "sandbox",
+        "sessions-management",
+        "skills",
+        "status",
+        "telegram",
+        "tool",
+        "ui",
+        "webchat",
+        "whatsapp",
+        "windows"
       ],
       "evidence": [
         {
@@ -1446,6 +1716,61 @@
           "severity": 2,
           "penalty": 2,
           "reason": "exec host=node can be denied by Companion App policy despite matching approvals config on 2026.6.6"
+        },
+        {
+          "issue": "openclaw/openclaw#93807",
+          "repo": "openclaw/openclaw",
+          "number": 93807,
+          "url": "https://github.com/openclaw/openclaw/issues/93807",
+          "area": "tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "web_fetch trusted proxy support ignores NO_PROXY on 2026.6.6, routing local/private requests through proxy."
+        },
+        {
+          "issue": "openclaw/openclaw#94224",
+          "repo": "openclaw/openclaw",
+          "number": 94224,
+          "url": "https://github.com/openclaw/openclaw/issues/94224",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Cron lane fails intentionally silent jobs from 2026.6.6 onward because allowEmptyAssistantReplyAsSilent is not opted in."
+        },
+        {
+          "issue": "openclaw/openclaw#94571",
+          "repo": "openclaw/openclaw",
+          "number": 94571,
+          "url": "https://github.com/openclaw/openclaw/issues/94571",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Telegram isolated ingress copies large process.env in the queue hot path on 2026.6.6 deployments."
+        },
+        {
+          "issue": "openclaw/openclaw#93667",
+          "repo": "openclaw/openclaw",
+          "number": 93667,
+          "url": "https://github.com/openclaw/openclaw/issues/93667",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Built-in Feishu channel accepts footer config but does not render elapsed/status footer on 2026.6.6."
+        },
+        {
+          "issue": "openclaw/openclaw#94228",
+          "repo": "openclaw/openclaw",
+          "number": 94228,
+          "url": "https://github.com/openclaw/openclaw/issues/94228",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Native Anthropic path can replay historical thinking blocks with invalid signatures and brick long threads on 2026.6.6."
         }
       ]
     },
@@ -1460,7 +1785,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The release has crossed the 24h line and found fresh cron, provider, hook, iMessage, heartbeat, and image-tool traps. The 3am deploy goblin brought receipts. Operator audit on 2026-06-13 strict-applied the new evidence-scope rule (only explicit v2026.6.5 stable still-affects/reproduced proof), trimming beta-only and migration-candidate evidence.",
+    "verdictComment": "v2026.6.5 gained node-pairing, exec allowlist, model-fallback leak, and Windows QMD memory receipts. The rollback goblin brought a clipboard.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1752,6 +2077,30 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 94040,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94040",
+        "title": "[Bug]: nodes approve failed: GatewayAppRequestError: unknown requestId"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92843,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92843",
+        "title": "[Bug]: `security: \"allowlist\"` exec agents lose network and external-write access with no documented knob (2026.6.5)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92473,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92473",
+        "title": "Model fallback notice leaks to external user-facing channels"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 92302,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92302",
+        "title": "memory.qmd.command path mangled on Windows — QMD memory backend unusable despite working CLI (CommonJS path concatenation strips separators)"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 91804,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/91804",
         "title": "[Bug]: Internal Reasoning Leakage in 2026.6.5"
@@ -2040,182 +2389,50 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 92104,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92104",
-        "title": "image/pdf tool: 'Unknown model' for every provider, while the same models work as agent models (2026.5.28 and 2026.6.5)"
+        "number": 94040,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94040",
+        "title": "[Bug]: nodes approve failed: GatewayAppRequestError: unknown requestId"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 92366,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92366",
-        "title": "[Bug]: OpenClaw Upgrade Bug Report: 2026.5.27 → 2026.6.5"
+        "number": 92843,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92843",
+        "title": "[Bug]: `security: \"allowlist\"` exec agents lose network and external-write access with no documented knob (2026.6.5)"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 92344,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92344",
-        "title": "[Bug]: npm latest 2026.6.5 still lacks #90212 /compact reply delivery fix"
+        "number": 92473,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92473",
+        "title": "Model fallback notice leaks to external user-facing channels"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 92189,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92189",
-        "title": "[Bug] sessions_spawn zeroes target agent tools by intersecting requester's effective deny (2026.6.5 regression)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 92182,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92182",
-        "title": "[Bug]: 2026.6.5 ignores Slack account-level streaming.mode=off; partial draft snapshots posted as new messages instead of coalesced edits"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 92327,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92327",
-        "title": "[v2026.6.5] WebChat UI: sessions_send inter-session messages render alongside assistant messages without visual separation (regression of #89191)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 92406,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92406",
-        "title": "[Bug]: streamMode field in 3.x config blocks upgrade to 6.x (schema rejects unknown field)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 92242,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92242",
-        "title": "[regression] delivery bundle emits message_sent hooks but never calls recordSentMessage"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 92201,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92201",
-        "title": "Embedded runner: freshly streamed thinking signatures intermittently invalid on replay (Anthropic); recovery wrapper never fires because error text is genericized"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 90418,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/90418",
-        "title": "[Bug]: Upgrade leaves repeated shared SQLite plugin install metadata conflict warnings for codex/discord"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91433,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91433",
-        "title": "MCP remote OAuth: two bugs block streamable-http servers (regex `\\:` under /u; OAuth errors surfaced as [object Response])"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 85439,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/85439",
-        "title": "Regression: Feishu card delivery loses tool-call progress after v2026.5.19 (likely PR #83468)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 88233,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/88233",
-        "title": "Bug: Internal thinking process exposed to user via Feishu"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91645,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91645",
-        "title": "[Bug]: In-turn reasoning dropped on multi-turn tool replay for non-400 openai models (gemma4/vLLM) — silent agentic-quality regression"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91352,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91352",
-        "title": "[Bug]: OpenAI Codex OAuth migration leaves stale default profile and codexPlugins app inventory can fail Codex harness"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91890,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91890",
-        "title": "@openclaw/qqbot: missing approvalCapability + exec card omits command"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91238,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91238",
-        "title": "opencode-go provider: qwen3.7-max, qwen3.7-plus, minimax-m3 missing from static model catalog → \"Unknown model\" (model_not_found)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91355,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91355",
-        "title": "Managed restart shutdown can abort active main turns without restart-recovery state"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91330,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91330",
-        "title": "Current-session message-tool replies can be replaced by private bookkeeping finals"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 90974,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/90974",
-        "title": "[Feedback] Stop shipping features. Start shipping a product that works."
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91216,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91216",
-        "title": "[Bug]: gateway opens an empty memory database when main.sqlite is absent during the index swap, leaving memory_search paused with \"index metadata is missing\" until restart"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91517,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91517",
-        "title": "getSubagentRunsSnapshotForRead does an uncached full SQLite re-read on every call; many consumers drive it to ~22 Hz and pin a CPU core"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 90185,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/90185",
-        "title": "[Core bug] /compact reply silently dropped (replies=0) on all channels in 2026.6.1"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91454,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91454",
-        "title": "Codex Apps connector calls bypass pre-execution before_tool_call / PreToolUse hooks"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91067,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91067",
-        "title": "[Bug]: Regression 2026.6.1: orphan tool.call fail-closed handling silently discards the composed assistant reply (\"Embedded agent failed before reply\")"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 91401,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91401",
-        "title": "[BUG] Feishu streaming card overwrites text instead of appending (#87896 regression)"
+        "number": 92302,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92302",
+        "title": "memory.qmd.command path mangled on Windows — QMD memory backend unusable despite working CLI (CommonJS path concatenation strips separators)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -149,
+      "score": -158,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 149,
+      "evidencePenalty": 158,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 149,
+        "evidencePenalty": 158,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": -149
+        "score": -158
       },
       "affected": [
         "codex",
@@ -2223,6 +2440,7 @@
         "cron",
         "cron-runtime",
         "discord",
+        "exec",
         "feishu",
         "heartbeat",
         "image-tool",
@@ -2772,6 +2990,50 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Anthropic thinking signatures can be invalid on replay and recovery does not catch the genericized error on 2026.6.5"
+        },
+        {
+          "issue": "openclaw/openclaw#94040",
+          "repo": "openclaw/openclaw",
+          "number": 94040,
+          "url": "https://github.com/openclaw/openclaw/issues/94040",
+          "area": "node-surface",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "nodes approve can fail with unknown requestId on 2026.6.5 container/pairing flows."
+        },
+        {
+          "issue": "openclaw/openclaw#92843",
+          "repo": "openclaw/openclaw",
+          "number": 92843,
+          "url": "https://github.com/openclaw/openclaw/issues/92843",
+          "area": "exec",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "security: allowlist exec agents lose network and external-write access without documented escape hatch on 2026.6.5."
+        },
+        {
+          "issue": "openclaw/openclaw#92473",
+          "repo": "openclaw/openclaw",
+          "number": 92473,
+          "url": "https://github.com/openclaw/openclaw/issues/92473",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Model fallback notices can leak to external user-facing channels on 2026.6.5."
+        },
+        {
+          "issue": "openclaw/openclaw#92302",
+          "repo": "openclaw/openclaw",
+          "number": 92302,
+          "url": "https://github.com/openclaw/openclaw/issues/92302",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "QMD memory command path is mangled on Windows, making the backend unusable despite a working CLI on 2026.6.5."
         }
       ]
     },
