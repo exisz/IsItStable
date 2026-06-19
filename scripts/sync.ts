@@ -2,7 +2,7 @@
 import { writeFileSync, readFileSync, mkdirSync, existsSync, readdirSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
-import { computeFormula, computeSurvivalDays, DEFAULT_STABILITY_SCORE_SETTINGS, fallbackStabilityScore, parseStabilityBlock, withFormula, type StabilityScore, type StabilityScoreSettings } from "../src/lib/stability";
+import { computeFormula, computeSurvivalDays, DEFAULT_STABILITY_SCORE_SETTINGS, fallbackStabilityScore, parseStabilityBlock, sanitizePublicText, withFormula, type StabilityScore, type StabilityScoreSettings } from "../src/lib/stability";
 
 const REPO_OWNER = "exisz";
 const REPO_NAME = "IsItStable";
@@ -180,7 +180,7 @@ function parseBody(body: string | null, thumbsUp: number, thumbsDown: number, ve
 
   // First blockquote line = verdict comment
   const bqMatch = body.match(/^>\s*(.+)/m);
-  if (bqMatch) result.verdictComment = bqMatch[1].trim();
+  if (bqMatch) result.verdictComment = sanitizePublicText(bqMatch[1].trim());
 
   // Referenced issues
   let m: RegExpExecArray | null;
@@ -288,7 +288,7 @@ async function fetchAllVersionIssues(): Promise<VersionIssue[]> {
       const version = titleMatch[1];
 
       // Display package comes from title; canonical slug comes from pkg:* label.
-      const packageName = titleMatch[2].trim();
+      const packageName = sanitizePublicText(titleMatch[2].trim());
       const packageSlug = getPackageSlugFromLabels(labels) ?? slugify(packageName);
 
       // Score-only mode: verdict labels are legacy and intentionally ignored.
@@ -370,7 +370,7 @@ async function main() {
     await Promise.all(batch.map(async ([key, { repo, number }]) => {
       try {
         const data = await ghFetch(`/repos/${repo}/issues/${number}`);
-        if (data.title) titleCache.set(key, data.title);
+        if (data.title) titleCache.set(key, sanitizePublicText(data.title));
       } catch {
         // graceful fallback: no title
       }

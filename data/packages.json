@@ -4,756 +4,659 @@
     "slug": "openclaw",
     "displayName": "OpenClaw",
     "latestVersion": {
-      "issueNumber": 137,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/137",
-      "version": "2026.6.6",
+      "issueNumber": 141,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/141",
+      "version": "2026.6.8",
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Latest stable picked up more receipts: auth migration, plugin loading, WebChat session/render weirdness, browser downloads, Feishu edits, and provider-policy edges. The 3am dashboard stare is now making eye contact.",
+      "verdictComment": "Fresh release, fresh bruises: 2026.6.8 now has 26 gated receipts across gateway startup, memory, plugin loading, sessions, and channel tools. The 3am deploy dashboard is not blinking first.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
-          "number": 92361,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
-          "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
+          "number": 94125,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94125",
+          "title": "[Bug]: Memory search completely broken — FTS-only hangs, embeddings hang, --force corrupts meta (Ollama/bge-m3, Linux, 2026.6.8)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 88058,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/88058",
-          "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
+          "number": 94053,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94053",
+          "title": "[Bug]: Heartbeat runner leaks private final replies to Telegram in message_tool_only mode"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92506,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92506",
-          "title": "[Bug]: /status usage missing for OpenAI Codex synthetic auth after 2026.6.6"
+          "number": 43367,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/43367",
+          "title": "Multi-agent orchestration is unstable: concurrent agents add/config overwrites, session-lock failures, and detached child work"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92633,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92633",
-          "title": "memory_search corpus=all times out while individual corpora succeed"
+          "number": 93886,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93886",
+          "title": "[Bug]: @openclaw/codex 2026.6.8 fails strict plugin-load boundary check during subagent spawns, aborting unrelated runs"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92523,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92523",
-          "title": "Bug: Orphaned TaskFlows in `waiting` status permanently block agent heartbeats (requests-in-flight deadlock)"
+          "number": 94033,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94033",
+          "title": "Bug: Cron isolated agent timeout during long tool execution"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92582,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92582",
-          "title": "Bug: doctor falsely warns local memory embeddings are not ready"
+          "number": 84583,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/84583",
+          "title": "cron announce delivery triggers EmbeddedAttemptSessionTakeoverError when user is actively chatting"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92562,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92562",
-          "title": "[Bug]: Implicit daily/idle session rollover does not preserve user-set behavior overrides"
+          "number": 93831,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93831",
+          "title": "foreground reply fence in 2026.6.8 still cancels older in-flight reply after newer visible delivery"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92563,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92563",
-          "title": "session-memory hook duplicates assistant messages when thinking is stripped"
+          "number": 94127,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94127",
+          "title": "[Bug]: openclaw gateway call <plugin-method> returns \"unknown method\" for plugin-registered RPC methods, even though plugins inspect --runtime confirms the registration"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92838,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92838",
-          "title": "[OAuth] Client ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
+          "number": 94083,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94083",
+          "title": "plugins update --all leaves exact beta official plugins pinned after stable upgrade"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92433,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92433",
-          "title": "[Bug]: Subagent completion silently dropped when announce steers into a requester run that ends before processing it"
+          "number": 93781,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93781",
+          "title": "azure-openai-responses probe/agent route uses OpenAI auth profile instead of Azure credentials"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92903,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92903",
-          "title": "[Bug]: Multi-Agent Workspace Bootstrap Files Injected from Default Workspace Instead of Per-Agent Workspace"
+          "number": 94102,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94102",
+          "title": "memory_search ranks filename/date-token queries poorly despite clean index and working content search"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92808,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92808",
-          "title": "[Bug]: Title: Local embedding provider breaks on upgrade (two consecutive releases) — no migration path, misleading error"
+          "number": 73148,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/73148",
+          "title": "Image tool: opaque \"Failed to optimize image\" when sharp is not installed"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92546,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92546",
-          "title": "[Bug]: `openclaw plugins update whatsapp` silently wipes Baileys session — full QR re-pair required after every minor plugin update"
+          "number": 68596,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/68596",
+          "title": "Feature Request: Configurable streaming watchdog timeout threshold"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92516,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92516",
-          "title": "Containerized/self-hosted deploys can't use externalized channel plugins: openKeyedStore is gated to trusted plugins, with no supported way to trust a self-hosted channel"
+          "number": 93908,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93908",
+          "title": "[Bug]: [Bug]: Feishu plugin skipping discovery - host reports 2026.5.28 despite 2026.6.8 install"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92827,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92827",
-          "title": "[Bug]: 如果启用沙箱，agent无法将文件发送到webchat和QQBot"
+          "number": 93905,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93905",
+          "title": "[Bug]: /usage no longer works in Telegram"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92875,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92875",
-          "title": "[Bug]: Managed skill prompt paths can resolve to stale .openclaw locations in AlphaClaw Docker"
+          "number": 93835,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93835",
+          "title": "[Bug]: Telegram /think menu shows only off for live-discovered Ollama thinking models, but /think <level> accepts them"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92884,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92884",
-          "title": "config validate rejects plugin-owned channel schema extensions"
+          "number": 93824,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93824",
+          "title": "Telegram rich messages: blockquote 'expandable' attribute parsed but never emitted (no collapse on long quotes)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92888,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92888",
-          "title": "Control UI model auth badge still shows expired on 2026.6.6 while runtime auth is usable"
+          "number": 93875,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93875",
+          "title": "[Bug]: Discord message_tool_only turns can append stale tool-failed warning after successful message send"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92874,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92874",
-          "title": "Builtin memory backend leaks orphaned *.sqlite.tmp-<uuid> reindex files on hard restart (no startup sweep)"
+          "number": 94117,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94117",
+          "title": "Telegram rich final reply fails with RICH_MESSAGE_URL_INVALID for local Markdown link hrefs"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92655,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92655",
-          "title": "[Bug]: Telegram: /models provider buttons do nothing when clicked in a forum topic group"
+          "number": 94570,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94570",
+          "title": "[Bug]: Gateway startup fails after update to 2026.6.8 — ERR_MODULE_NOT_FOUND for server-chat-DVXWYmKw.js (regression of #72042)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93041,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93041",
-          "title": "[Bug]: After 2026.6.6 no Codex usage\\limit UI present in the Control UI Chat interface"
+          "number": 94547,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94547",
+          "title": "[Bug]: @openclaw/feishu bitable write tools emit invalid JSON Schema (empty patternProperties sub-schema) — breaks Anthropic via AWS Bedrock"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93145,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93145",
-          "title": "Agent auth migration to SQLite leaves default agent with empty auth store (v2026.6.6)"
+          "number": 94434,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94434",
+          "title": "[Bug]: exec workdir with leading ~ falls back and still executes command"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93219,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93219",
-          "title": "[Bug]: Gateway never loads externally-installed npm plugins (installed-plugin load stage skipped) — version/layout/clean-rebuild independent"
+          "number": 94316,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94316",
+          "title": "Memory search tool cannot find local embedding provider even though CLI shows it as ready"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93081,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93081",
-          "title": "[Bug]: Ctrl+C not working in Windows install on foreground"
+          "number": 94184,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94184",
+          "title": "Externalised @openclaw/codex (openai-codex OAuth) provider fails to register catalog on 2026.6.x (works on 2026.5.27)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93162,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93162",
-          "title": "[Bug]: WebChat generates isolated sessions despite dmScope='main'"
+          "number": 94516,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94516",
+          "title": "copilot 插件注册失败：openSyncKeyedStore is undefined"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93250,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93250",
-          "title": "[Bug]: No notification when browser click triggers a download – agent keeps retrying"
+          "number": 94220,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94220",
+          "title": "session-medic: healed session auto-resumes its stale detached task → multi-session races & livelock (+ high thinking-signature poison rate on high-thinkingDefault Opus agents)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93044,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93044",
-          "title": "control-ui webchat double-renders agent replies when dmScope=main (one copy carries channel-relay envelope)"
+          "number": 94125,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94125",
+          "title": "[Bug]: Memory search completely broken — FTS-only hangs, embeddings hang, --force corrupts meta (Ollama/bge-m3, Linux, 2026.6.8)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93043,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93043",
-          "title": "[Bug]: Cannot retrieve SecretRef-managed gateway token to log into dashboard (config get returns ref, not plaintext)"
+          "number": 94053,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94053",
+          "title": "[Bug]: Heartbeat runner leaks private final replies to Telegram in message_tool_only mode"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93197,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93197",
-          "title": "[Bug]: Feishu message.edit fails with 'parse card json err' when presentation has empty blocks"
+          "number": 43367,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/43367",
+          "title": "Multi-agent orchestration is unstable: concurrent agents add/config overwrites, session-lock failures, and detached child work"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93259,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93259",
-          "title": "claude-cli subagents silently cap thinking at \"high\" — provider-policy surface not resolved for plugin CLI backends"
+          "number": 93886,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93886",
+          "title": "[Bug]: @openclaw/codex 2026.6.8 fails strict plugin-load boundary check during subagent spawns, aborting unrelated runs"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92361,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92361",
-          "title": "[Bug]:  Tool availability evaluator silently ignores empty `allOf`/`anyOf` groups during expression normalization"
+          "number": 94033,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94033",
+          "title": "Bug: Cron isolated agent timeout during long tool execution"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 88058,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/88058",
-          "title": "[Bug]: 2026.5.27 regression — Control UI messages and steer ignored during active long-run sessions"
+          "number": 84583,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/84583",
+          "title": "cron announce delivery triggers EmbeddedAttemptSessionTakeoverError when user is actively chatting"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92506,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92506",
-          "title": "[Bug]: /status usage missing for OpenAI Codex synthetic auth after 2026.6.6"
+          "number": 93831,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93831",
+          "title": "foreground reply fence in 2026.6.8 still cancels older in-flight reply after newer visible delivery"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92633,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92633",
-          "title": "memory_search corpus=all times out while individual corpora succeed"
+          "number": 94127,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94127",
+          "title": "[Bug]: openclaw gateway call <plugin-method> returns \"unknown method\" for plugin-registered RPC methods, even though plugins inspect --runtime confirms the registration"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92523,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92523",
-          "title": "Bug: Orphaned TaskFlows in `waiting` status permanently block agent heartbeats (requests-in-flight deadlock)"
+          "number": 94083,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94083",
+          "title": "plugins update --all leaves exact beta official plugins pinned after stable upgrade"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92582,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92582",
-          "title": "Bug: doctor falsely warns local memory embeddings are not ready"
+          "number": 93781,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93781",
+          "title": "azure-openai-responses probe/agent route uses OpenAI auth profile instead of Azure credentials"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92562,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92562",
-          "title": "[Bug]: Implicit daily/idle session rollover does not preserve user-set behavior overrides"
+          "number": 94102,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94102",
+          "title": "memory_search ranks filename/date-token queries poorly despite clean index and working content search"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92563,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92563",
-          "title": "session-memory hook duplicates assistant messages when thinking is stripped"
+          "number": 73148,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/73148",
+          "title": "Image tool: opaque \"Failed to optimize image\" when sharp is not installed"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92838,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92838",
-          "title": "[OAuth] Client ID revoked `app_EMoamEEZ73f0CkXaXp7hrann` - fresh ChatGPT Plus logins completely broken"
+          "number": 68596,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/68596",
+          "title": "Feature Request: Configurable streaming watchdog timeout threshold"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92433,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92433",
-          "title": "[Bug]: Subagent completion silently dropped when announce steers into a requester run that ends before processing it"
+          "number": 93908,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93908",
+          "title": "[Bug]: [Bug]: Feishu plugin skipping discovery - host reports 2026.5.28 despite 2026.6.8 install"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92903,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92903",
-          "title": "[Bug]: Multi-Agent Workspace Bootstrap Files Injected from Default Workspace Instead of Per-Agent Workspace"
+          "number": 93905,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93905",
+          "title": "[Bug]: /usage no longer works in Telegram"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92808,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92808",
-          "title": "[Bug]: Title: Local embedding provider breaks on upgrade (two consecutive releases) — no migration path, misleading error"
+          "number": 93835,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93835",
+          "title": "[Bug]: Telegram /think menu shows only off for live-discovered Ollama thinking models, but /think <level> accepts them"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92546,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92546",
-          "title": "[Bug]: `openclaw plugins update whatsapp` silently wipes Baileys session — full QR re-pair required after every minor plugin update"
+          "number": 93824,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93824",
+          "title": "Telegram rich messages: blockquote 'expandable' attribute parsed but never emitted (no collapse on long quotes)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92516,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92516",
-          "title": "Containerized/self-hosted deploys can't use externalized channel plugins: openKeyedStore is gated to trusted plugins, with no supported way to trust a self-hosted channel"
+          "number": 93875,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/93875",
+          "title": "[Bug]: Discord message_tool_only turns can append stale tool-failed warning after successful message send"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92827,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92827",
-          "title": "[Bug]: 如果启用沙箱，agent无法将文件发送到webchat和QQBot"
+          "number": 94117,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94117",
+          "title": "Telegram rich final reply fails with RICH_MESSAGE_URL_INVALID for local Markdown link hrefs"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92875,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92875",
-          "title": "[Bug]: Managed skill prompt paths can resolve to stale .openclaw locations in AlphaClaw Docker"
+          "number": 94570,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94570",
+          "title": "[Bug]: Gateway startup fails after update to 2026.6.8 — ERR_MODULE_NOT_FOUND for server-chat-DVXWYmKw.js (regression of #72042)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92884,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92884",
-          "title": "config validate rejects plugin-owned channel schema extensions"
+          "number": 94547,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94547",
+          "title": "[Bug]: @openclaw/feishu bitable write tools emit invalid JSON Schema (empty patternProperties sub-schema) — breaks Anthropic via AWS Bedrock"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92888,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92888",
-          "title": "Control UI model auth badge still shows expired on 2026.6.6 while runtime auth is usable"
+          "number": 94434,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94434",
+          "title": "[Bug]: exec workdir with leading ~ falls back and still executes command"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92874,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92874",
-          "title": "Builtin memory backend leaks orphaned *.sqlite.tmp-<uuid> reindex files on hard restart (no startup sweep)"
+          "number": 94316,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94316",
+          "title": "Memory search tool cannot find local embedding provider even though CLI shows it as ready"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 92655,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/92655",
-          "title": "[Bug]: Telegram: /models provider buttons do nothing when clicked in a forum topic group"
+          "number": 94184,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94184",
+          "title": "Externalised @openclaw/codex (openai-codex OAuth) provider fails to register catalog on 2026.6.x (works on 2026.5.27)"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93041,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93041",
-          "title": "[Bug]: After 2026.6.6 no Codex usage\\limit UI present in the Control UI Chat interface"
+          "number": 94516,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94516",
+          "title": "copilot 插件注册失败：openSyncKeyedStore is undefined"
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 93145,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93145",
-          "title": "Agent auth migration to SQLite leaves default agent with empty auth store (v2026.6.6)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93219,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93219",
-          "title": "[Bug]: Gateway never loads externally-installed npm plugins (installed-plugin load stage skipped) — version/layout/clean-rebuild independent"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93081,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93081",
-          "title": "[Bug]: Ctrl+C not working in Windows install on foreground"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93162,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93162",
-          "title": "[Bug]: WebChat generates isolated sessions despite dmScope='main'"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93250,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93250",
-          "title": "[Bug]: No notification when browser click triggers a download – agent keeps retrying"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93044,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93044",
-          "title": "control-ui webchat double-renders agent replies when dmScope=main (one copy carries channel-relay envelope)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93043,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93043",
-          "title": "[Bug]: Cannot retrieve SecretRef-managed gateway token to log into dashboard (config get returns ref, not plaintext)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93197,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93197",
-          "title": "[Bug]: Feishu message.edit fails with 'parse card json err' when presentation has empty blocks"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 93259,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/93259",
-          "title": "claude-cli subagents silently cap thinking at \"high\" — provider-policy surface not resolved for plugin CLI backends"
+          "number": 94220,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94220",
+          "title": "session-medic: healed session auto-resumes its stale detached task → multi-session races & livelock (+ high thinking-signature poison rate on high-thinkingDefault Opus agents)"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 19,
+        "score": 18,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 70,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "evidencePenalty": 68,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 70,
+          "evidencePenalty": 68,
           "votePenalty": 0,
-          "survivalDays": 3,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 19
+          "score": 18
         },
         "affected": [
-          "tool",
-          "sessions-management",
-          "status",
-          "memory",
-          "heartbeat",
-          "doctor",
-          "auth",
-          "skills",
-          "whatsapp",
-          "plugin-system",
-          "sandbox",
-          "config-migration",
-          "ui",
-          "telegram",
           "codex",
-          "plugin-install",
-          "windows",
-          "webchat",
-          "browser",
+          "copilot",
+          "cron-runtime",
+          "discord",
+          "exec",
           "feishu",
-          "provider-routing"
+          "gateway",
+          "heartbeat",
+          "image-tool",
+          "memory",
+          "plugin-install",
+          "plugin-system",
+          "provider-routing",
+          "runtime",
+          "sessions-management",
+          "telegram"
         ],
         "evidence": [
           {
-            "issue": "openclaw/openclaw#92361",
+            "issue": "openclaw/openclaw#94125",
             "repo": "openclaw/openclaw",
-            "number": 92361,
-            "url": "https://github.com/openclaw/openclaw/issues/92361",
-            "area": "tool",
-            "type": "tool-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Tool availability diagnostics for empty allOf/anyOf groups are silently hidden on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#88058",
-            "repo": "openclaw/openclaw",
-            "number": 88058,
-            "url": "https://github.com/openclaw/openclaw/issues/88058",
-            "area": "sessions-management",
-            "type": "runtime",
-            "severity": 4,
-            "penalty": 4,
-            "reason": "Control UI steer/queued messages still wait behind active long-running sessions on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#92506",
-            "repo": "openclaw/openclaw",
-            "number": 92506,
-            "url": "https://github.com/openclaw/openclaw/issues/92506",
-            "area": "status",
-            "type": "tool-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "/status usage is missing for OpenAI Codex synthetic auth after upgrading to 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#92633",
-            "repo": "openclaw/openclaw",
-            "number": 92633,
-            "url": "https://github.com/openclaw/openclaw/issues/92633",
+            "number": 94125,
+            "url": "https://github.com/openclaw/openclaw/issues/94125",
             "area": "memory",
-            "type": "tool-specific",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "memory_search corpus=all times out on 2026.6.6 while individual corpora succeed"
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Memory search hangs/corrupts metadata paths reported on 2026.6.8."
           },
           {
-            "issue": "openclaw/openclaw#92523",
+            "issue": "openclaw/openclaw#94053",
             "repo": "openclaw/openclaw",
-            "number": 92523,
-            "url": "https://github.com/openclaw/openclaw/issues/92523",
+            "number": 94053,
+            "url": "https://github.com/openclaw/openclaw/issues/94053",
             "area": "heartbeat",
             "type": "kernel",
             "severity": 5,
             "penalty": 5,
-            "reason": "Orphaned TaskFlows in waiting status can deadlock agent heartbeat dispatch on 2026.6.6"
+            "reason": "Heartbeat runner can leak private final replies to Telegram in message_tool_only mode."
           },
           {
-            "issue": "openclaw/openclaw#92582",
+            "issue": "openclaw/openclaw#43367",
             "repo": "openclaw/openclaw",
-            "number": 92582,
-            "url": "https://github.com/openclaw/openclaw/issues/92582",
-            "area": "doctor",
-            "type": "tool-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "doctor falsely warns local memory embeddings are not ready on 2026.6.6 despite healthy memory status"
-          },
-          {
-            "issue": "openclaw/openclaw#92562",
-            "repo": "openclaw/openclaw",
-            "number": 92562,
-            "url": "https://github.com/openclaw/openclaw/issues/92562",
-            "area": "sessions-management",
-            "type": "runtime",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "Implicit daily/idle session rollover does not preserve user-set behavior overrides on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#92563",
-            "repo": "openclaw/openclaw",
-            "number": 92563,
-            "url": "https://github.com/openclaw/openclaw/issues/92563",
-            "area": "memory",
-            "type": "runtime",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "session-memory hook duplicates assistant messages when thinking is stripped on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#92838",
-            "repo": "openclaw/openclaw",
-            "number": 92838,
-            "url": "https://github.com/openclaw/openclaw/issues/92838",
-            "area": "auth",
-            "type": "kernel",
-            "severity": 5,
-            "penalty": 5,
-            "reason": "Fresh ChatGPT/Codex OAuth logins fail on 2026.6.6 because the bundled OpenAI client ID is revoked"
-          },
-          {
-            "issue": "openclaw/openclaw#92433",
-            "repo": "openclaw/openclaw",
-            "number": 92433,
-            "url": "https://github.com/openclaw/openclaw/issues/92433",
+            "number": 43367,
+            "url": "https://github.com/openclaw/openclaw/issues/43367",
             "area": "sessions-management",
             "type": "kernel",
             "severity": 5,
             "penalty": 5,
-            "reason": "Subagent completion can be silently dropped when the requester run ends before announce steering on 2026.6.6"
+            "reason": "Multi-agent/session write-lock and subagent delivery instability still reproduces through 2026.6.8."
           },
           {
-            "issue": "openclaw/openclaw#92903",
+            "issue": "openclaw/openclaw#93886",
             "repo": "openclaw/openclaw",
-            "number": 92903,
-            "url": "https://github.com/openclaw/openclaw/issues/92903",
-            "area": "skills",
+            "number": 93886,
+            "url": "https://github.com/openclaw/openclaw/issues/93886",
+            "area": "codex",
             "type": "runtime",
             "severity": 4,
             "penalty": 4,
-            "reason": "Multi-agent workspace bootstrap can inject default-workspace files instead of the routed agent workspace on 2026.6.6"
+            "reason": "Codex plugin-load boundary check aborts unrelated subagent runs on 2026.6.8."
           },
           {
-            "issue": "openclaw/openclaw#92808",
+            "issue": "openclaw/openclaw#94033",
             "repo": "openclaw/openclaw",
-            "number": 92808,
-            "url": "https://github.com/openclaw/openclaw/issues/92808",
-            "area": "memory",
+            "number": 94033,
+            "url": "https://github.com/openclaw/openclaw/issues/94033",
+            "area": "cron-runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Isolated cron agents can time out during long tool execution across 2026.6.5–2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#84583",
+            "repo": "openclaw/openclaw",
+            "number": 84583,
+            "url": "https://github.com/openclaw/openclaw/issues/84583",
+            "area": "cron-runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Cron announce delivery can hit session takeover when a user is actively chatting; confirmed on 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#93831",
+            "repo": "openclaw/openclaw",
+            "number": 93831,
+            "url": "https://github.com/openclaw/openclaw/issues/93831",
+            "area": "runtime",
             "type": "runtime",
             "severity": 3,
             "penalty": 3,
-            "reason": "Local embedding provider upgrade path breaks memory_search on 2026.6.6 with no clear migration path"
+            "reason": "Foreground reply fence can cancel older in-flight replies after newer visible delivery."
           },
           {
-            "issue": "openclaw/openclaw#92546",
+            "issue": "openclaw/openclaw#94127",
             "repo": "openclaw/openclaw",
-            "number": 92546,
-            "url": "https://github.com/openclaw/openclaw/issues/92546",
-            "area": "whatsapp",
-            "type": "channel-specific",
-            "severity": 3,
-            "penalty": 3,
-            "reason": "Updating the WhatsApp plugin on 2026.6.6 can wipe the Baileys session and force QR re-pairing"
-          },
-          {
-            "issue": "openclaw/openclaw#92516",
-            "repo": "openclaw/openclaw",
-            "number": 92516,
-            "url": "https://github.com/openclaw/openclaw/issues/92516",
+            "number": 94127,
+            "url": "https://github.com/openclaw/openclaw/issues/94127",
             "area": "plugin-system",
             "type": "runtime",
             "severity": 3,
             "penalty": 3,
-            "reason": "Self-hosted external channel plugins cannot be trusted to open keyed stores on 2026.6.6"
+            "reason": "Plugin-registered RPC methods return unknown method despite runtime registration on 2026.6.8."
           },
           {
-            "issue": "openclaw/openclaw#92827",
+            "issue": "openclaw/openclaw#94083",
             "repo": "openclaw/openclaw",
-            "number": 92827,
-            "url": "https://github.com/openclaw/openclaw/issues/92827",
-            "area": "sandbox",
-            "type": "tool-specific",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "Sandboxed agents cannot send files through WebChat/QQBot paths outside the mounted workspace on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#92875",
-            "repo": "openclaw/openclaw",
-            "number": 92875,
-            "url": "https://github.com/openclaw/openclaw/issues/92875",
-            "area": "skills",
-            "type": "tool-specific",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "Managed skill prompt paths can resolve to stale .openclaw locations in Dockerized 2026.6.6 environments"
-          },
-          {
-            "issue": "openclaw/openclaw#92884",
-            "repo": "openclaw/openclaw",
-            "number": 92884,
-            "url": "https://github.com/openclaw/openclaw/issues/92884",
-            "area": "config-migration",
-            "type": "runtime",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "config validate rejects plugin-owned channel schema extensions on 2026.6.6 despite config schema exposing them"
-          },
-          {
-            "issue": "openclaw/openclaw#92888",
-            "repo": "openclaw/openclaw",
-            "number": 92888,
-            "url": "https://github.com/openclaw/openclaw/issues/92888",
-            "area": "ui",
-            "type": "tool-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Control UI auth badge can remain expired on 2026.6.6 while runtime auth is usable"
-          },
-          {
-            "issue": "openclaw/openclaw#92874",
-            "repo": "openclaw/openclaw",
-            "number": 92874,
-            "url": "https://github.com/openclaw/openclaw/issues/92874",
-            "area": "memory",
-            "type": "runtime",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Builtin memory backend can leak orphaned temporary reindex SQLite files after hard restart on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#92655",
-            "repo": "openclaw/openclaw",
-            "number": 92655,
-            "url": "https://github.com/openclaw/openclaw/issues/92655",
-            "area": "telegram",
-            "type": "channel-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Telegram /models provider buttons do nothing in forum topic groups on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#93041",
-            "repo": "openclaw/openclaw",
-            "number": 93041,
-            "url": "https://github.com/openclaw/openclaw/issues/93041",
-            "area": "codex",
-            "type": "tool-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Control UI no longer shows Codex/OpenAI usage limit surface after 2026.6.6 upgrade"
-          },
-          {
-            "issue": "openclaw/openclaw#93145",
-            "repo": "openclaw/openclaw",
-            "number": 93145,
-            "url": "https://github.com/openclaw/openclaw/issues/93145",
-            "area": "auth",
-            "type": "kernel",
-            "severity": 4,
-            "penalty": 4,
-            "reason": "Agent auth migration to SQLite can leave the default agent with an empty auth store on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#93219",
-            "repo": "openclaw/openclaw",
-            "number": 93219,
-            "url": "https://github.com/openclaw/openclaw/issues/93219",
+            "number": 94083,
+            "url": "https://github.com/openclaw/openclaw/issues/94083",
             "area": "plugin-install",
-            "type": "runtime",
-            "severity": 4,
-            "penalty": 4,
-            "reason": "Gateway can skip loading externally installed npm plugins on 2026.6.6 even after clean reinstall"
-          },
-          {
-            "issue": "openclaw/openclaw#93081",
-            "repo": "openclaw/openclaw",
-            "number": 93081,
-            "url": "https://github.com/openclaw/openclaw/issues/93081",
-            "area": "windows",
-            "type": "runtime",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "Foreground gateway does not respond cleanly to Ctrl+C on Windows with 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#93162",
-            "repo": "openclaw/openclaw",
-            "number": 93162,
-            "url": "https://github.com/openclaw/openclaw/issues/93162",
-            "area": "webchat",
-            "type": "runtime",
-            "severity": 2,
-            "penalty": 2,
-            "reason": "WebChat can create isolated sessions despite dmScope=main on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#93250",
-            "repo": "openclaw/openclaw",
-            "number": 93250,
-            "url": "https://github.com/openclaw/openclaw/issues/93250",
-            "area": "browser",
-            "type": "tool-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Browser downloads provide no completion signal, causing agents to retry download actions on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#93044",
-            "repo": "openclaw/openclaw",
-            "number": 93044,
-            "url": "https://github.com/openclaw/openclaw/issues/93044",
-            "area": "webchat",
-            "type": "runtime",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Control UI webchat can double-render agent replies when dmScope=main on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#93043",
-            "repo": "openclaw/openclaw",
-            "number": 93043,
-            "url": "https://github.com/openclaw/openclaw/issues/93043",
-            "area": "auth",
             "type": "tool-specific",
             "severity": 2,
             "penalty": 2,
-            "reason": "SecretRef-managed gateway tokens are not discoverable for dashboard login on 2026.6.6"
+            "reason": "plugins update --all can leave exact beta official plugins pinned after stable upgrade."
           },
           {
-            "issue": "openclaw/openclaw#93197",
+            "issue": "openclaw/openclaw#93781",
             "repo": "openclaw/openclaw",
-            "number": 93197,
-            "url": "https://github.com/openclaw/openclaw/issues/93197",
-            "area": "feishu",
-            "type": "channel-specific",
-            "severity": 1,
-            "penalty": 1,
-            "reason": "Feishu message.edit can fail when presentation payload has empty blocks on 2026.6.6"
-          },
-          {
-            "issue": "openclaw/openclaw#93259",
-            "repo": "openclaw/openclaw",
-            "number": 93259,
-            "url": "https://github.com/openclaw/openclaw/issues/93259",
+            "number": 93781,
+            "url": "https://github.com/openclaw/openclaw/issues/93781",
             "area": "provider-routing",
             "type": "runtime",
             "severity": 2,
             "penalty": 2,
-            "reason": "claude-cli subagents can silently cap thinking at high because provider-policy ownership is unresolved on 2026.6.6"
+            "reason": "Azure OpenAI Responses probe/agent route can use OpenAI auth instead of Azure credentials."
+          },
+          {
+            "issue": "openclaw/openclaw#94102",
+            "repo": "openclaw/openclaw",
+            "number": 94102,
+            "url": "https://github.com/openclaw/openclaw/issues/94102",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "memory_search ranks filename/date-token queries poorly despite clean index on 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#73148",
+            "repo": "openclaw/openclaw",
+            "number": 73148,
+            "url": "https://github.com/openclaw/openclaw/issues/73148",
+            "area": "image-tool",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "openclaw@2026.6.8 package still lacks sharp optional dependency for image optimization path."
+          },
+          {
+            "issue": "openclaw/openclaw#68596",
+            "repo": "openclaw/openclaw",
+            "number": 68596,
+            "url": "https://github.com/openclaw/openclaw/issues/68596",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Streaming watchdog timeout remains unconfigurable in the 2026.6.8 release surface."
+          },
+          {
+            "issue": "openclaw/openclaw#93908",
+            "repo": "openclaw/openclaw",
+            "number": 93908,
+            "url": "https://github.com/openclaw/openclaw/issues/93908",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Feishu plugin discovery can report stale host version after 2026.6.8 install."
+          },
+          {
+            "issue": "openclaw/openclaw#93905",
+            "repo": "openclaw/openclaw",
+            "number": 93905,
+            "url": "https://github.com/openclaw/openclaw/issues/93905",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram /usage command no longer works on 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#93835",
+            "repo": "openclaw/openclaw",
+            "number": 93835,
+            "url": "https://github.com/openclaw/openclaw/issues/93835",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram /think menu omits discovered Ollama thinking levels though direct command works."
+          },
+          {
+            "issue": "openclaw/openclaw#93824",
+            "repo": "openclaw/openclaw",
+            "number": 93824,
+            "url": "https://github.com/openclaw/openclaw/issues/93824",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram expandable blockquote attribute is parsed but not emitted for long quotes."
+          },
+          {
+            "issue": "openclaw/openclaw#93875",
+            "repo": "openclaw/openclaw",
+            "number": 93875,
+            "url": "https://github.com/openclaw/openclaw/issues/93875",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Discord message_tool_only turns can append stale tool-failed warning after successful send."
+          },
+          {
+            "issue": "openclaw/openclaw#94117",
+            "repo": "openclaw/openclaw",
+            "number": 94117,
+            "url": "https://github.com/openclaw/openclaw/issues/94117",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram rich final reply can fail with RICH_MESSAGE_URL_INVALID for local Markdown hrefs."
+          },
+          {
+            "issue": "openclaw/openclaw#94570",
+            "repo": "openclaw/openclaw",
+            "number": 94570,
+            "url": "https://github.com/openclaw/openclaw/issues/94570",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Gateway startup crash after upgrade to 2026.6.8 reports missing server-chat chunk; open but tarball reproducibility is disputed."
+          },
+          {
+            "issue": "openclaw/openclaw#94547",
+            "repo": "openclaw/openclaw",
+            "number": 94547,
+            "url": "https://github.com/openclaw/openclaw/issues/94547",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Feishu bitable write tools emit invalid JSON Schema on 2026.6.8, blocking Bedrock/Anthropic tool use."
+          },
+          {
+            "issue": "openclaw/openclaw#94434",
+            "repo": "openclaw/openclaw",
+            "number": 94434,
+            "url": "https://github.com/openclaw/openclaw/issues/94434",
+            "area": "exec",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "exec workdir values beginning with ~ fall back and can execute from the wrong directory on 2026.6.8."
+          },
+          {
+            "issue": "openclaw/openclaw#94316",
+            "repo": "openclaw/openclaw",
+            "number": 94316,
+            "url": "https://github.com/openclaw/openclaw/issues/94316",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "memory_search cannot find the local embedding provider on 2026.6.8 even though CLI/status show it ready."
+          },
+          {
+            "issue": "openclaw/openclaw#94184",
+            "repo": "openclaw/openclaw",
+            "number": 94184,
+            "url": "https://github.com/openclaw/openclaw/issues/94184",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Externalized @openclaw/codex provider catalog fails to register on 2026.6.8 after upgrade from 2026.5.27."
+          },
+          {
+            "issue": "openclaw/openclaw#94516",
+            "repo": "openclaw/openclaw",
+            "number": 94516,
+            "url": "https://github.com/openclaw/openclaw/issues/94516",
+            "area": "copilot",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "@openclaw/copilot fails plugin registration on 2026.6.8 with openSyncKeyedStore undefined."
+          },
+          {
+            "issue": "openclaw/openclaw#94220",
+            "repo": "openclaw/openclaw",
+            "number": 94220,
+            "url": "https://github.com/openclaw/openclaw/issues/94220",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "session-medic auto-heal can resume stale detached tasks into multi-session races/livelock on 2026.6.8."
           }
         ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-06-12T11:03:39.456Z"
+      "createdAt": "2026-06-16T16:27:41.596Z"
     }
   },
   {
@@ -767,10 +670,34 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "0.16.0 is still generating fresh papercuts across restart paths, Desktop state, providers, and encrypted messaging. The pager did not get Sunday off.",
+      "verdictComment": "v0.16.0 picked up fresh receipts: Nix builds, ComfyUI workflows, Gemini OAuth, and desktop window state all joined the paperwork queue. The 3am deploy goblin found more forms.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 48539,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48539",
+          "title": "[Bug]: Desktop window doesn't remember its size or position — resets to default on every launch"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48201,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48201",
+          "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_app"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48139,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48139",
+          "title": "[bug] creative/comfyui: bundled workflow JSONs contain _comment key that causes HTTP 500 on every submission"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48318,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48318",
+          "title": "[Bug]: Nix messaging build fails due to stale workspace npmDepsHash"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 40364,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
           "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -839,7 +766,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 38412,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
-          "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron client"
+          "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron app"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -977,7 +904,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 44285,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44285",
-          "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after client rebuild retry"
+          "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after app rebuild retry"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -995,7 +922,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 41693,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41693",
-          "title": "[Bug]: Hermes Desktop renderer crashes with \"tapClientLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
+          "title": "[Bug]: Hermes Desktop renderer crashes with \"tapAppLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1073,7 +1000,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 45242,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45242",
-          "title": "auxiliary_client.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
+          "title": "auxiliary_app.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1103,7 +1030,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 45140,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45140",
-          "title": "[Bug]: UnicodeDecodeError in copilot_acp_client.py _stdout_reader on Windows"
+          "title": "[Bug]: UnicodeDecodeError in copilot_acp_app.py _stdout_reader on Windows"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1121,7 +1048,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 45110,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45110",
-          "title": "Prompt is lost entirely when a turn's first response never completes (stall or client disconnect)"
+          "title": "Prompt is lost entirely when a turn's first response never completes (stall or app disconnect)"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1247,7 +1174,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 44562,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44562",
-          "title": "[BUG] Frontend crash : tapClientLookup Index out of bounds when tool returns unexpected data"
+          "title": "[BUG] Frontend crash : tapAppLookup Index out of bounds when tool returns unexpected data"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1341,6 +1268,282 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 47415,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47415",
+          "title": "[Bug]: Telegram group photos sent without an @mention are dropped (observed-context content stringified)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47363,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47363",
+          "title": "[BUG] /memory approve fails with \"memory store unavailable\" in TUI/dashboard chat"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47313,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47313",
+          "title": "[Bug]: Dashboard composer goes blank when resuming long sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47315,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47315",
+          "title": "[Bug]: Dashboard text rendering corruption during scroll and multi-line input"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46791,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46791",
+          "title": "Repository stage stash/local-changes handling is fragile and can leave the tree in unrecoverable dirty state after interrupted updates"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47258,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47258",
+          "title": "UI model picker shows 0 models for custom_providers entries"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46788,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46788",
+          "title": "fix: get_running_pid() skips PID check when virtiofs unlinks lock file behind gateway's FD"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46693,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46693",
+          "title": "[Bug]: Help - Can't rebuild desktop and icon disappear.  (can't even start the agent)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46645,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46645",
+          "title": "Windows sandbox: subprocess fails to find executables because sandbox env drops parent PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46606,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46606",
+          "title": "[Bug]: [Bug][Windows Desktop] Long assistant messages partially disappear from UI — first half truncated, restored on restart"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44580,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44580",
+          "title": "hermes update reports success when desktop rebuild silently fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45383,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45383",
+          "title": "state.db recurring B-tree corruption from WAL TRUNCATE checkpoint on large FTS5 databases"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46515,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46515",
+          "title": "Telegram: sendRichMessageDraft works but final message falls back to MarkdownV2 (expect_edits kills rich path)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46516,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46516",
+          "title": "[Bug]: [OpenAI API] HTTP 400 for gpt-4.1 and gpt-4o-mini on Hermes 0.16.0 (Windows) while direct API calls work"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46517,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46517",
+          "title": "[Bug]: TUI (Desktop App) shows \"Running Code...\" indicator indefinitely after session has completed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46506,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46506",
+          "title": "[Bug]: Cron job model unable to override profile model (Not sure if this is a bug or is a stand design)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46298,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46298",
+          "title": "Telegram gateway adapter times out connecting for valid bot tokens (Lynn/Stephen profiles)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45894,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45894",
+          "title": "[Bug] Hermes Desktop: right-sidebar file-tree refresh button disappears when cursor moves onto it"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45709,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45709",
+          "title": "Bug: Hermes Link fails to sync web-originated messages in existing conversations"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44771,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44771",
+          "title": "Curator LLM review enters multi-hour loop on symlinked skill clusters, consuming 91M input tokens"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45422,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45422",
+          "title": "[Bug]: `hermes tools disable memory` should disable the built-in memory, not the entire memory ecosystem"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44707,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44707",
+          "title": "Desktop boot race condition: retry doesn't kill previous backend process → EADDRINUSE on port 9120"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42851,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42851",
+          "title": "[Bug]: Inconsistent cron logs depending on whether no-agent script produces no output vs. wakeAgent=false"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42785,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42785",
+          "title": "cron no_agent script stdout decoded with platform default (cp1252 on Windows), mangling non-ASCII output before delivery"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42768,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42768",
+          "title": "[Bug]: Context compaction summaries leak into chat as assistant responses when inserted with role=\"assistant\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42177,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42177",
+          "title": "[Bug]: Goal loop reports opaque \"no auxiliary app configured\" when Nous auxiliary auth fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42167,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42167",
+          "title": "[Bug]: Proxy 403 \"reset after N\" soft-throttle aborts the session instead of retrying"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 16804,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/16804",
+          "title": "[Bug]: HTTP 400 empty body on all OpenRouter requests (Hermes 0.9.0); curl works with same key/model"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 30149,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
+          "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48061,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48061",
+          "title": "[Bug]: Hermes Agent v0.16.0 still sends empty runtime model/provider on Linux pipx install."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47762,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47762",
+          "title": "send_message tool does not render Rich Messages (tables, checklists) — only cron auto-delivery works"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48071,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48071",
+          "title": "[Bug]: Nix level-1 gateway install generates systemd unit that bypasses Hermes wrapper"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48083,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48083",
+          "title": "[Bug]: Web/core toolsets not registered in default/config/--toolsets all path for local Ollama models; only explicit --toolsets web works"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48100,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48100",
+          "title": "[Bug]: Windows installer fails with \"Access Denied\" on pythonw.exe during auto-update"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47708,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47708",
+          "title": "Copilot provider auto-derived from a classic `ghp_*` GITHUB_TOKEN creates a permanently-failing fallback in the credential pool"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47707,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47707",
+          "title": "Context-engine/memory-provider tool schemas are wrapped without validating a top-level `name` — one malformed schema 400s the entire request"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47318,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47318",
+          "title": "local: null / edge: null in config.yaml crashes STT/TTS with 'NoneType' object has no attribute 'get'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47002,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47002",
+          "title": "SessionDB.__init__ crashes on SQLite without trigram tokenizer (v0.16.0 regression)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46979,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46979",
+          "title": "[Bug]: Desktop Run History empty for agent cron jobs despite /api/cron/jobs/{id}/runs returning runs (v0.16.0 regression)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45560,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45560",
+          "title": "repair_message_sequence aggressively merges separate user messages (v0.16.0+)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41293,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41293",
+          "title": "GPT-5.5 (openai-codex): pre-tool-call preamble text leaks as visible assistant content to chat gateways since v0.16.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39609,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39609",
+          "title": "[Bug]: Tasks created with --initial-status blocked auto-promote to ready ~1s later with no actor — human approval gate bypassed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48539,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48539",
+          "title": "[Bug]: Desktop window doesn't remember its size or position — resets to default on every launch"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48201,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48201",
+          "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_app"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48139,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48139",
+          "title": "[bug] creative/comfyui: bundled workflow JSONs contain _comment key that causes HTTP 500 on every submission"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48318,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48318",
+          "title": "[Bug]: Nix messaging build fails due to stale workspace npmDepsHash"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 40364,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40364",
           "title": "[Bug]: Emoji in Hermes Desktop not showing correctly"
@@ -1409,7 +1612,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 38412,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
-          "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron client"
+          "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron app"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1547,7 +1750,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 44285,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44285",
-          "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after client rebuild retry"
+          "title": "[Bug]: APITimeoutError on custom provider in long CLI sessions after app rebuild retry"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1565,7 +1768,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 41693,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41693",
-          "title": "[Bug]: Hermes Desktop renderer crashes with \"tapClientLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
+          "title": "[Bug]: Hermes Desktop renderer crashes with \"tapAppLookup: Index N out of bounds\" → root error-boundary forces \"Reload window\""
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1643,7 +1846,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 45242,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45242",
-          "title": "auxiliary_client.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
+          "title": "auxiliary_app.py: unhandled auth_type 'oauth_minimax' breaks all auxiliary tasks for minimax-oauth users"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1673,7 +1876,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 45140,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45140",
-          "title": "[Bug]: UnicodeDecodeError in copilot_acp_client.py _stdout_reader on Windows"
+          "title": "[Bug]: UnicodeDecodeError in copilot_acp_app.py _stdout_reader on Windows"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1691,7 +1894,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 45110,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45110",
-          "title": "Prompt is lost entirely when a turn's first response never completes (stall or client disconnect)"
+          "title": "Prompt is lost entirely when a turn's first response never completes (stall or app disconnect)"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1817,7 +2020,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 44562,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44562",
-          "title": "[BUG] Frontend crash : tapClientLookup Index out of bounds when tool returns unexpected data"
+          "title": "[BUG] Frontend crash : tapAppLookup Index out of bounds when tool returns unexpected data"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1908,87 +2111,392 @@
           "number": 46651,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46651",
           "title": "[Bug] Desktop (a376ca0): image upload fails on remote profile — \"image not found: <local_path>\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47415,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47415",
+          "title": "[Bug]: Telegram group photos sent without an @mention are dropped (observed-context content stringified)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47363,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47363",
+          "title": "[BUG] /memory approve fails with \"memory store unavailable\" in TUI/dashboard chat"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47313,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47313",
+          "title": "[Bug]: Dashboard composer goes blank when resuming long sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47315,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47315",
+          "title": "[Bug]: Dashboard text rendering corruption during scroll and multi-line input"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46791,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46791",
+          "title": "Repository stage stash/local-changes handling is fragile and can leave the tree in unrecoverable dirty state after interrupted updates"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47258,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47258",
+          "title": "UI model picker shows 0 models for custom_providers entries"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46788,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46788",
+          "title": "fix: get_running_pid() skips PID check when virtiofs unlinks lock file behind gateway's FD"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46693,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46693",
+          "title": "[Bug]: Help - Can't rebuild desktop and icon disappear.  (can't even start the agent)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46645,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46645",
+          "title": "Windows sandbox: subprocess fails to find executables because sandbox env drops parent PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46606,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46606",
+          "title": "[Bug]: [Bug][Windows Desktop] Long assistant messages partially disappear from UI — first half truncated, restored on restart"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44580,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44580",
+          "title": "hermes update reports success when desktop rebuild silently fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45383,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45383",
+          "title": "state.db recurring B-tree corruption from WAL TRUNCATE checkpoint on large FTS5 databases"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46515,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46515",
+          "title": "Telegram: sendRichMessageDraft works but final message falls back to MarkdownV2 (expect_edits kills rich path)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46516,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46516",
+          "title": "[Bug]: [OpenAI API] HTTP 400 for gpt-4.1 and gpt-4o-mini on Hermes 0.16.0 (Windows) while direct API calls work"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46517,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46517",
+          "title": "[Bug]: TUI (Desktop App) shows \"Running Code...\" indicator indefinitely after session has completed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46506,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46506",
+          "title": "[Bug]: Cron job model unable to override profile model (Not sure if this is a bug or is a stand design)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46298,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46298",
+          "title": "Telegram gateway adapter times out connecting for valid bot tokens (Lynn/Stephen profiles)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45894,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45894",
+          "title": "[Bug] Hermes Desktop: right-sidebar file-tree refresh button disappears when cursor moves onto it"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45709,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45709",
+          "title": "Bug: Hermes Link fails to sync web-originated messages in existing conversations"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44771,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44771",
+          "title": "Curator LLM review enters multi-hour loop on symlinked skill clusters, consuming 91M input tokens"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45422,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45422",
+          "title": "[Bug]: `hermes tools disable memory` should disable the built-in memory, not the entire memory ecosystem"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 44707,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44707",
+          "title": "Desktop boot race condition: retry doesn't kill previous backend process → EADDRINUSE on port 9120"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42851,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42851",
+          "title": "[Bug]: Inconsistent cron logs depending on whether no-agent script produces no output vs. wakeAgent=false"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42785,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42785",
+          "title": "cron no_agent script stdout decoded with platform default (cp1252 on Windows), mangling non-ASCII output before delivery"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42768,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42768",
+          "title": "[Bug]: Context compaction summaries leak into chat as assistant responses when inserted with role=\"assistant\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42177,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42177",
+          "title": "[Bug]: Goal loop reports opaque \"no auxiliary app configured\" when Nous auxiliary auth fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 42167,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/42167",
+          "title": "[Bug]: Proxy 403 \"reset after N\" soft-throttle aborts the session instead of retrying"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 16804,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/16804",
+          "title": "[Bug]: HTTP 400 empty body on all OpenRouter requests (Hermes 0.9.0); curl works with same key/model"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 30149,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
+          "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48061,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48061",
+          "title": "[Bug]: Hermes Agent v0.16.0 still sends empty runtime model/provider on Linux pipx install."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47762,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47762",
+          "title": "send_message tool does not render Rich Messages (tables, checklists) — only cron auto-delivery works"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48071,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48071",
+          "title": "[Bug]: Nix level-1 gateway install generates systemd unit that bypasses Hermes wrapper"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48083,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48083",
+          "title": "[Bug]: Web/core toolsets not registered in default/config/--toolsets all path for local Ollama models; only explicit --toolsets web works"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48100,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48100",
+          "title": "[Bug]: Windows installer fails with \"Access Denied\" on pythonw.exe during auto-update"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47708,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47708",
+          "title": "Copilot provider auto-derived from a classic `ghp_*` GITHUB_TOKEN creates a permanently-failing fallback in the credential pool"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47707,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47707",
+          "title": "Context-engine/memory-provider tool schemas are wrapped without validating a top-level `name` — one malformed schema 400s the entire request"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47318,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47318",
+          "title": "local: null / edge: null in config.yaml crashes STT/TTS with 'NoneType' object has no attribute 'get'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47002,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47002",
+          "title": "SessionDB.__init__ crashes on SQLite without trigram tokenizer (v0.16.0 regression)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46979,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46979",
+          "title": "[Bug]: Desktop Run History empty for agent cron jobs despite /api/cron/jobs/{id}/runs returning runs (v0.16.0 regression)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 45560,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/45560",
+          "title": "repair_message_sequence aggressively merges separate user messages (v0.16.0+)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 41293,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/41293",
+          "title": "GPT-5.5 (openai-codex): pre-tool-call preamble text leaks as visible assistant content to chat gateways since v0.16.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 39609,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39609",
+          "title": "[Bug]: Tasks created with --initial-status blocked auto-promote to ready ~1s later with no actor — human approval gate bypassed"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -123,
+        "score": -331,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 218,
-        "survivalDays": 10,
+        "evidencePenalty": 331,
+        "survivalDays": 13,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 218,
+          "evidencePenalty": 331,
           "votePenalty": 0,
-          "survivalDays": 10,
+          "survivalDays": 13,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -123
+          "score": -331
         },
         "affected": [
-          "desktop",
-          "docker",
-          "yuanbao",
-          "model-picker",
-          "email",
-          "skills",
-          "desktop-remote-upload",
+          "approval-boundary",
+          "auth",
+          "compaction",
           "config-migration",
-          "prompt-size",
-          "desktop-slash-command",
-          "desktop-remote-gateway",
+          "config-profiles",
+          "creative-comfyui",
           "cron",
-          "update-banner",
           "cron-model-routing",
-          "discord",
-          "installer",
-          "gateway",
+          "dashboard",
           "dashboard-oidc",
+          "dependencies",
+          "dependency-resolution",
+          "desktop",
           "desktop-cron",
-          "discord-voice",
+          "desktop-macos",
+          "desktop-media",
+          "desktop-remote-gateway",
+          "desktop-remote-upload",
+          "desktop-slash-command",
           "desktop-ui",
           "desktop-wsl",
-          "desktop-media",
-          "gateway-service",
-          "config-profiles",
-          "hooks",
-          "provider-minimax",
-          "provider-integration",
-          "update-system",
-          "tool",
-          "dashboard",
-          "plugin-system",
-          "memory",
-          "dependency-resolution",
-          "sessions-management",
-          "macos",
-          "telegram",
+          "discord",
+          "discord-voice",
+          "docker",
           "doctor",
-          "ui",
-          "runtime",
+          "email",
+          "gateway",
+          "gateway-service",
+          "hooks",
+          "installer",
           "linux-runtime",
-          "dependencies",
-          "version-metadata",
-          "session-history",
-          "restart",
-          "auth",
-          "termux",
-          "desktop-macos",
-          "web-tools",
+          "macos",
           "matrix",
-          "provider-cerebras",
-          "provider-routing",
           "mcp",
-          "compaction"
+          "memory",
+          "message-delivery",
+          "model-picker",
+          "nix",
+          "plugin-system",
+          "prompt-size",
+          "provider-cerebras",
+          "provider-gemini",
+          "provider-integration",
+          "provider-minimax",
+          "provider-routing",
+          "restart",
+          "runtime",
+          "session-history",
+          "sessions-management",
+          "skills",
+          "telegram",
+          "termux",
+          "tool",
+          "tool-registration",
+          "ui",
+          "update-banner",
+          "update-system",
+          "upgrade",
+          "version-metadata",
+          "voice",
+          "web-tools",
+          "windows",
+          "yuanbao"
         ],
         "evidence": [
+          {
+            "issue": "NousResearch/hermes-agent#48539",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48539,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48539",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop with agent 0.16.0 resets window size/position to defaults on every launch."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48201",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48201,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48201",
+            "area": "provider-gemini",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "google-gemini-cli OAuth is not supported in auxiliary resolve_provider_app on Hermes 0.16.0, breaking that provider path."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48139",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48139,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48139",
+            "area": "creative-comfyui",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Bundled ComfyUI workflow JSONs in 0.16.0 include _comment keys that cause HTTP 500 on every workflow submission."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48318",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48318,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48318",
+            "area": "nix",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes Agent 0.16.0 Nix build fails because the workspace npmDepsHash is stale, blocking package builds."
+          },
           {
             "issue": "NousResearch/hermes-agent#40364",
             "repo": "NousResearch/hermes-agent",
@@ -2119,7 +2627,7 @@
             "type": "runtime",
             "severity": 3,
             "penalty": 3,
-            "reason": "Hermes 0.16.0 remote gateway WebSocket admission still rejects packaged Electron desktop clients, leaving remote Desktop unable to connect."
+            "reason": "Hermes 0.16.0 remote gateway WebSocket admission still rejects packaged Electron desktop apps, leaving remote Desktop unable to connect."
           },
           {
             "issue": "NousResearch/hermes-agent#41392",
@@ -2372,7 +2880,7 @@
             "type": "runtime",
             "severity": 3,
             "penalty": 3,
-            "reason": "Long v0.16.0 CLI sessions using a custom provider can hit APITimeoutError after client rebuild/retry, interrupting active agent work."
+            "reason": "Long v0.16.0 CLI sessions using a custom provider can hit APITimeoutError after app rebuild/retry, interrupting active agent work."
           },
           {
             "issue": "NousResearch/hermes-agent#43913",
@@ -2405,7 +2913,7 @@
             "type": "runtime",
             "severity": 4,
             "penalty": 4,
-            "reason": "Hermes Desktop 0.16.0 renderer can crash with tapClientLookup index errors during session switches or streaming cancellation."
+            "reason": "Hermes Desktop 0.16.0 renderer can crash with tapAppLookup index errors during session switches or streaming cancellation."
           },
           {
             "issue": "NousResearch/hermes-agent#44198",
@@ -2548,7 +3056,7 @@
             "type": "runtime",
             "severity": 2,
             "penalty": 2,
-            "reason": "Hermes 0.16.0 auxiliary_client.py does not handle oauth_minimax, breaking auxiliary tasks for MiniMax OAuth users."
+            "reason": "Hermes 0.16.0 auxiliary_app.py does not handle oauth_minimax, breaking auxiliary tasks for MiniMax OAuth users."
           },
           {
             "issue": "NousResearch/hermes-agent#45236",
@@ -2867,7 +3375,7 @@
             "type": "runtime",
             "severity": 3,
             "penalty": 3,
-            "reason": "Hermes 0.16.0 Desktop can crash after compression/tool result rendering with tapClientLookup index errors."
+            "reason": "Hermes 0.16.0 Desktop can crash after compression/tool result rendering with tapAppLookup index errors."
           },
           {
             "issue": "NousResearch/hermes-agent#45676",
@@ -3033,6 +3541,468 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Hermes Desktop v0.16.0 remote-profile image upload can send local paths and fail with image not found."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47415",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47415,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47415",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 container drops Telegram group photos sent without an @mention."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47363",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47363,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47363",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 TUI/dashboard /memory approve can fail with memory store unavailable."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47313",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47313,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47313",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 dashboard composer can go blank when resuming long sessions."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47315",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47315,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47315",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 dashboard text rendering corrupts during scroll and multiline input."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46791",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46791,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46791",
+            "area": "upgrade",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.16.0 repository staging/stash handling can leave local trees unrecoverably dirty after interrupted updates."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47258",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47258,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47258",
+            "area": "model-picker",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 UI model picker can show zero models for custom_providers entries."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46788",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46788,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46788",
+            "area": "gateway-service",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 gateway PID detection can skip a live-process check when virtiofs unlinks the lock file."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46693",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46693,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46693",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.16.0 desktop rebuild can fail hard enough that the app cannot start and the icon disappears."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46645",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46645,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46645",
+            "area": "windows",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 Windows sandbox can drop parent PATH, preventing subprocess executable discovery."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46606",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46606,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46606",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Windows Desktop can truncate the first half of long assistant messages until restart."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#44580",
+            "repo": "NousResearch/hermes-agent",
+            "number": 44580,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/44580",
+            "area": "upgrade",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 hermes update can report success even when the desktop rebuild silently fails."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45383",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45383,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45383",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.16.0 state.db can hit recurring B-tree corruption from WAL TRUNCATE checkpointing on large FTS5 databases."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46515",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46515,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46515",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 Telegram rich message drafts can fall back to MarkdownV2 when expect_edits kills the rich path."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46516",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46516,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46516",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 Windows OpenAI API calls for gpt-4.1/gpt-4o-mini can return HTTP 400 while direct API calls work."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46517",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46517,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46517",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 TUI/Desktop can leave the Running Code indicator stuck after a session completed."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46506",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46506,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46506",
+            "area": "cron-model-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 cron profile model overrides can fail to take effect."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46298",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46298,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46298",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Telegram gateway adapter can time out connecting even for valid bot tokens."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45894",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45894,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45894",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 Desktop right-sidebar file-tree refresh button can disappear under cursor movement."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45709",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45709,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45709",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Hermes Link can fail to sync web-originated messages into existing conversations."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#44771",
+            "repo": "NousResearch/hermes-agent",
+            "number": 44771,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/44771",
+            "area": "skills",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.16.0 curator LLM review can enter a multi-hour loop on symlinked skill clusters, consuming 91M input tokens."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45422",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45422,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45422",
+            "area": "memory",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 hermes tools disable memory can disable the whole memory ecosystem instead of only built-in memory."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#44707",
+            "repo": "NousResearch/hermes-agent",
+            "number": 44707,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/44707",
+            "area": "desktop",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 Desktop boot retry can leave a previous backend alive and hit EADDRINUSE on port 9120."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42851",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42851,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42851",
+            "area": "cron",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 cron logs can be inconsistent when no-agent scripts emit no output versus wakeAgent=false."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42785",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42785,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42785",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 cron no_agent stdout can be decoded with the platform default, mangling non-ASCII output on Windows."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42768",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42768,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42768",
+            "area": "compaction",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 context compaction summaries can leak into chat as assistant responses."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42177",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42177,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42177",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 goal loop can fail opaquely when Nous auxiliary auth has no configured app."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#42167",
+            "repo": "NousResearch/hermes-agent",
+            "number": 42167,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/42167",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 proxy soft-throttle 403 reset-after responses can abort sessions instead of retrying."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#16804",
+            "repo": "NousResearch/hermes-agent",
+            "number": 16804,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/16804",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 still surfaces OpenRouter failures as empty HTTP 400 bodies, hiding actionable provider errors."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#30149",
+            "repo": "NousResearch/hermes-agent",
+            "number": 30149,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/30149",
+            "area": "dependencies",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0 startup can fail when the anthropic package dependency is missing."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48061",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48061,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48061",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes Agent v0.16.0 on Linux pipx still sends empty runtime model/provider after upgrade and fresh-session retries."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47762",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47762,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47762",
+            "area": "message-delivery",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.16.0 send_message renders rich Telegram messages as plain markdown even when rich_messages is enabled."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48071",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48071,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48071",
+            "area": "installer",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Nix level-1 gateway install can generate a systemd unit that bypasses the Hermes wrapper and fails to import hermes_agent."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48083",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48083,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48083",
+            "area": "web-tools",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes 0.16.0 local Ollama sessions miss web/core toolsets unless --toolsets web is passed explicitly."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48100",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48100,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48100",
+            "area": "installer",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes 0.16.0 Windows auto-update can fail with Access Denied on pythonw.exe, blocking installer completion."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47708",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47708,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47708",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "hermes-agent 0.16.0 can auto-derive a Copilot provider from classic ghp_* GITHUB_TOKEN and create a permanently failing fallback."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47707",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47707,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47707",
+            "area": "tool-registration",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "hermes-agent 0.16.0 can forward malformed tool schemas without validating top-level name, causing provider-wide HTTP 400 failures."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47318",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47318,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47318",
+            "area": "voice",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes Agent v0.16.0 crashes STT/TTS config loading when stt.local or tts.edge is null."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47002",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47002,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47002",
+            "area": "session-history",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.16.0 SessionDB can crash on SQLite builds without trigram tokenizer, making session DB operations unusable."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#46979",
+            "repo": "NousResearch/hermes-agent",
+            "number": 46979,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/46979",
+            "area": "desktop-cron",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.16.0 Desktop Run History can show no runs for agent cron jobs even when the backend returns completed runs."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#45560",
+            "repo": "NousResearch/hermes-agent",
+            "number": 45560,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/45560",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.16.0+ repair_message_sequence can aggressively merge separate user messages, corrupting chat sequence boundaries."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#41293",
+            "repo": "NousResearch/hermes-agent",
+            "number": 41293,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/41293",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Since v0.16.0, openai-codex pre-tool-call preamble text can leak as visible assistant content to chat gateways."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#39609",
+            "repo": "NousResearch/hermes-agent",
+            "number": 39609,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/39609",
+            "area": "approval-boundary",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Hermes Agent v0.16.0 can auto-promote tasks created with --initial-status blocked, bypassing the intended human approval gate."
           }
         ]
       },

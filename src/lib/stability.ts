@@ -66,6 +66,17 @@ export const DEFAULT_STABILITY_SCORE_SETTINGS: StabilityScoreSettings = {
 
 const SCORE_BLOCK_RE = /<!--\s*isitstable:v1\s*([\s\S]*?)\s*-->/m;
 
+function replacementCase(source: string, replacement: string): string {
+  if (source === source.toUpperCase()) return replacement.toUpperCase();
+  if (source[0] === source[0].toUpperCase()) return replacement[0].toUpperCase() + replacement.slice(1);
+  return replacement;
+}
+
+export function sanitizePublicText(text: string): string {
+  // Legacy upstream terminology: the public site should say app, never the old C-word.
+  return text.replace(/client/gi, (match) => replacementCase(match, "app"));
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
@@ -105,7 +116,9 @@ export function computeFormula(input: {
     ? Math.floor(survivalBonus / settings.survivalBonus.pointsPerDay)
     : 0;
   const curatedBonus = input.curated ? settings.curatedBonus.points : 0;
-  const score = settings.baseScore - input.evidencePenalty - input.votePenalty + survivalBonus + curatedBonus;
+  const totalPenalty = input.evidencePenalty + input.votePenalty;
+  const positiveScore = settings.baseScore - totalPenalty + survivalBonus + curatedBonus;
+  const score = positiveScore > 0 ? positiveScore : -totalPenalty;
   return {
     baseScore: settings.baseScore,
     evidencePenalty: input.evidencePenalty,
@@ -145,12 +158,12 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     return [{
       issue: item.issue,
       ...ref,
-      title: typeof item.title === "string" ? item.title : undefined,
-      area: typeof item.area === "string" ? item.area : "unknown",
+      title: typeof item.title === "string" ? sanitizePublicText(item.title) : undefined,
+      area: typeof item.area === "string" ? sanitizePublicText(item.area) : "unknown",
       type: typeof item.type === "string" ? item.type as StabilityEvidence["type"] : "other",
       severity,
       penalty,
-      reason: typeof item.reason === "string" ? item.reason : "Stability risk",
+      reason: typeof item.reason === "string" ? sanitizePublicText(item.reason) : "Stability risk",
     }];
   });
 
@@ -159,7 +172,7 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
   const curated = raw.curated === true;
   const formula = computeFormula({ evidencePenalty, votePenalty, curated });
   const affected = Array.isArray(raw.affected)
-    ? raw.affected.filter((item): item is string => typeof item === "string")
+    ? raw.affected.filter((item): item is string => typeof item === "string").map(sanitizePublicText)
     : Array.from(new Set(evidence.map((item) => item.area).filter(Boolean)));
 
   // Score-only mode: ignore any legacy verdict embedded in historical score blocks.
@@ -179,7 +192,7 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     formula,
     affected,
     evidence,
-    notes: typeof raw.notes === "string" ? raw.notes : undefined,
+    notes: typeof raw.notes === "string" ? sanitizePublicText(raw.notes) : undefined,
   };
 }
 
