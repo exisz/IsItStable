@@ -328,24 +328,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 15,
+        "score": 18,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 68,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 68,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 15
+          "score": 18
         },
         "affected": [
           "codex",
@@ -670,8 +670,32 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.16.0 has fresh late-cycle smoke: provider routing, installers, tool schemas, SQLite session storage, and message boundaries all added receipts. The 3am deploy goblin is now doing paperwork.",
+      "verdictComment": "v0.16.0 picked up fresh receipts: Nix builds, ComfyUI workflows, Gemini OAuth, and desktop window state all joined the paperwork queue. The 3am deploy goblin found more forms.",
       "referencedIssues": [
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48539,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48539",
+          "title": "[Bug]: Desktop window doesn't remember its size or position — resets to default on every launch"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48201,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48201",
+          "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_client"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48139,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48139",
+          "title": "[bug] creative/comfyui: bundled workflow JSONs contain _comment key that causes HTTP 500 on every submission"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48318,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48318",
+          "title": "[Bug]: Nix messaging build fails due to stale workspace npmDepsHash"
+        },
         {
           "repo": "NousResearch/hermes-agent",
           "number": 40364,
@@ -1493,6 +1517,30 @@
           "number": 39609,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/39609",
           "title": "[Bug]: Tasks created with --initial-status blocked auto-promote to ready ~1s later with no actor — human approval gate bypassed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48539,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48539",
+          "title": "[Bug]: Desktop window doesn't remember its size or position — resets to default on every launch"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48201,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48201",
+          "title": "google-gemini-cli OAuth provider not supported in auxiliary resolve_provider_client"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48139,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48139",
+          "title": "[bug] creative/comfyui: bundled workflow JSONs contain _comment key that causes HTTP 500 on every submission"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 48318,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/48318",
+          "title": "[Bug]: Nix messaging build fails due to stale workspace npmDepsHash"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -2323,14 +2371,14 @@
         "score": 0,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 325,
+        "evidencePenalty": 331,
         "survivalDays": 12,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 325,
+          "evidencePenalty": 331,
           "votePenalty": 0,
           "survivalDays": 12,
           "survivalPointsPerDay": 3,
@@ -2345,6 +2393,7 @@
           "compaction",
           "config-migration",
           "config-profiles",
+          "creative-comfyui",
           "cron",
           "cron-model-routing",
           "dashboard",
@@ -2376,9 +2425,11 @@
           "memory",
           "message-delivery",
           "model-picker",
+          "nix",
           "plugin-system",
           "prompt-size",
           "provider-cerebras",
+          "provider-gemini",
           "provider-integration",
           "provider-minimax",
           "provider-routing",
@@ -2402,6 +2453,50 @@
           "yuanbao"
         ],
         "evidence": [
+          {
+            "issue": "NousResearch/hermes-agent#48539",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48539,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48539",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop with agent 0.16.0 resets window size/position to defaults on every launch."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48201",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48201,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48201",
+            "area": "provider-gemini",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "google-gemini-cli OAuth is not supported in auxiliary resolve_provider_client on Hermes 0.16.0, breaking that provider path."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48139",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48139,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48139",
+            "area": "creative-comfyui",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Bundled ComfyUI workflow JSONs in 0.16.0 include _comment keys that cause HTTP 500 on every workflow submission."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#48318",
+            "repo": "NousResearch/hermes-agent",
+            "number": 48318,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/48318",
+            "area": "nix",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes Agent 0.16.0 Nix build fails because the workspace npmDepsHash is stale, blocking package builds."
+          },
           {
             "issue": "NousResearch/hermes-agent#40364",
             "repo": "NousResearch/hermes-agent",
