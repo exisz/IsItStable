@@ -3,6 +3,8 @@ import { ScoreBadge } from "@/components/ScoreBadge";
 
 export function StabilityScoreCard({ stabilityScore }: { stabilityScore: StabilityScore }) {
   const s = stabilityScore;
+  const totalPenalty = s.formula.evidencePenalty + s.formula.votePenalty;
+  const isEvidenceDebt = s.formula.score <= 0 && totalPenalty > 0;
   return (
     <div className="border border-[var(--color-border)] rounded-xl p-6 mb-8 bg-[var(--color-card)]">
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-5">
@@ -14,22 +16,31 @@ export function StabilityScoreCard({ stabilityScore }: { stabilityScore: Stabili
           <MiniStat label="Base" value={String(s.formula.baseScore)} />
           <MiniStat label="Evidence" value={`-${s.formula.evidencePenalty}`} />
           <MiniStat label="Votes" value={`-${s.formula.votePenalty}`} />
-          <MiniStat label="Survived" value={`+${s.formula.survivalBonus}`} />
-          <MiniStat label="Curated" value={`+${s.formula.curatedBonus}`} />
+          <MiniStat label="Survived" value={isEvidenceDebt ? "ignored" : `+${s.formula.survivalBonus}`} />
+          <MiniStat label="Curated" value={isEvidenceDebt ? "ignored" : `+${s.formula.curatedBonus}`} />
         </div>
       </div>
 
       <div className="rounded-lg border border-[var(--color-border)] bg-black/10 px-4 py-3 mb-5 font-mono text-sm text-[var(--color-muted)] overflow-x-auto">
-        <span className="text-[var(--color-foreground)]">{s.formula.baseScore}</span> base
-        <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.evidencePenalty}</span> evidence
-        <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.votePenalty}</span> votes
-        <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.survivalBonus}</span> ({s.formula.survivalPointsPerDay}×{s.formula.survivalCreditedDays} days survived)
-        {s.formula.curatedBonus > 0 && (
+        {isEvidenceDebt ? (
           <>
-            <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.curatedBonus}</span> curated
+            <span className="text-[var(--color-no)]">-{totalPenalty}</span> evidence debt
+            <span className="mx-2">=</span><span className="text-[var(--color-foreground)] font-bold">{s.formula.score}</span>
+          </>
+        ) : (
+          <>
+            <span className="text-[var(--color-foreground)]">{s.formula.baseScore}</span> base
+            <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.evidencePenalty}</span> evidence
+            <span className="mx-2">−</span><span className="text-[var(--color-no)]">{s.formula.votePenalty}</span> votes
+            <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.survivalBonus}</span> ({s.formula.survivalPointsPerDay}×{s.formula.survivalCreditedDays} days survived)
+            {s.formula.curatedBonus > 0 && (
+              <>
+                <span className="mx-2">+</span><span className="text-[var(--color-yes)]">{s.formula.curatedBonus}</span> curated
+              </>
+            )}
+            <span className="mx-2">=</span><span className="text-[var(--color-foreground)] font-bold">{s.formula.score}</span>
           </>
         )}
-        <span className="mx-2">=</span><span className="text-[var(--color-foreground)] font-bold">{s.formula.score}</span>
       </div>
 
       {s.affected.length > 0 && (

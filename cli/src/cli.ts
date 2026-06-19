@@ -98,7 +98,11 @@ async function main() {
     }
 
     const data = (await res.json()) as ScoreResponse;
-    const score = data.score ?? data.stabilityScore?.score ?? 0;
+    const score = data.score ?? data.stabilityScore?.score;
+    if (typeof score !== "number") {
+      console.error("Error: API response did not include a stability score");
+      process.exit(1);
+    }
     const emoji = scoreEmoji(score);
 
     console.log();

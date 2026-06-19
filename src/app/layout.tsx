@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
 import Link from "next/link";
 import "./globals.css";
 
@@ -53,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/api/v1/openclaw/verdict" className="hover:text-white transition-colors">API</Link>
           </p>
         </footer>
-        <Analytics />
       </body>
     </html>
   );

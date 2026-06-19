@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import { computeFormula, computeSurvivalDays, DEFAULT_STABILITY_SCORE_SETTINGS, fallbackStabilityScore, withFormula, type StabilityScore, type StabilityScoreSettings } from "./stability";
+import { computeFormula, computeSurvivalDays, DEFAULT_STABILITY_SCORE_SETTINGS, fallbackStabilityScore, sanitizePublicText, withFormula, type StabilityScore, type StabilityScoreSettings } from "./stability";
 
 export interface VersionIssue {
   issueNumber: number;
@@ -109,6 +109,12 @@ function loadVersions(): VersionIssue[] {
     const raw = JSON.parse(readFileSync(join(DATA_DIR, "versions.json"), "utf-8")) as VersionIssue[];
     _versions = applyScoreFormula(canonicalVersionIssues(raw.map((v) => ({
       ...v,
+      packageName: sanitizePublicText(v.packageName),
+      verdictComment: sanitizePublicText(v.verdictComment ?? ""),
+      referencedIssues: (v.referencedIssues ?? []).map((issue) => ({
+        ...issue,
+        title: issue.title ? sanitizePublicText(issue.title) : undefined,
+      })),
       stabilityScore: v.stabilityScore ?? fallbackStabilityScore(v.thumbsUp ?? 0, v.thumbsDown ?? 0, "pending"),
     }))));
   }
@@ -124,6 +130,7 @@ function loadPackages(): PackageSummary[] {
     const raw = JSON.parse(readFileSync(join(DATA_DIR, "packages.json"), "utf-8")) as PackageSummary[];
     _packages = raw.map((pkg) => ({
       ...pkg,
+      displayName: sanitizePublicText(pkg.displayName),
       latestVersion: latestBySlug.get(pkg.slug) ?? pkg.latestVersion,
     }));
   }

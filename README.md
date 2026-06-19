@@ -113,7 +113,6 @@ These legends help keep the lights on:
 | Sponsors |
 |--------|
 | [<img src="https://avatars.githubusercontent.com/u/38595828?v=4" width="40" />](https://github.com/exisz) |
-| [<img src="https://avatars.githubusercontent.com/u/33719983?u=8118f8645a1542a8b1320af8bb7c97567ef6b47d&v=4" width="40" />](https://github.com/Dts0) |
 <!-- /sponsors -->
 
 Want to join them? [Become a sponsor →](https://github.com/sponsors/exisz) 💛
