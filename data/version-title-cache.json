@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-19T11:29:15.020Z",
+  "generatedAt": "2026-06-19T13:05:14.825Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2520,14 +2520,14 @@
         "affected:local-extensions",
         "affected:opencode",
         "affected:reasoning",
-        "score:0-9"
+        "affected:exec"
       ],
       "issueNumber": 136,
       "title": "[v2026.6.5] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/136",
       "createdAt": "2026-06-09T18:39:59Z",
-      "updatedAt": "2026-06-18T12:33:10Z"
+      "updatedAt": "2026-06-19T12:33:22Z"
     },
     {
       "version": "2026.6.6",
@@ -2555,6 +2555,7 @@
         "affected:doctor",
         "affected:sessions-management",
         "affected:status",
+        "affected:cron-runtime",
         "affected:node-surface",
         "affected:windows",
         "affected:sandbox",
@@ -2563,14 +2564,14 @@
         "affected:config-migration",
         "affected:provider-routing",
         "affected:skills",
-        "score:20-29"
+        "score:0-9"
       ],
       "issueNumber": 137,
       "title": "[v2026.6.6] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/137",
       "createdAt": "2026-06-12T11:14:22Z",
-      "updatedAt": "2026-06-16T12:25:48Z"
+      "updatedAt": "2026-06-19T12:33:18Z"
     },
     {
       "version": "2026.6.8",
@@ -2596,17 +2597,19 @@
         "affected:sessions-management",
         "affected:cron-runtime",
         "affected:memory",
+        "affected:message-delivery",
+        "affected:skill-workshop",
         "affected:provider-routing",
-        "score:20-29",
         "affected:exec",
-        "affected:copilot"
+        "affected:copilot",
+        "score:0-9"
       ],
       "issueNumber": 141,
       "title": "[v2026.6.8] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/141",
       "createdAt": "2026-06-16T17:39:17Z",
-      "updatedAt": "2026-06-18T12:32:58Z"
+      "updatedAt": "2026-06-19T12:33:14Z"
     }
   ],
   "duplicates": {
