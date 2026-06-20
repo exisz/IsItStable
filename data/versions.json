@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh release, fresh bruises: 2026.6.8 now has fresh receipts across Telegram rich messages, channel-store migration, reasoning display, remote Ollama streaming, external-plugin sends, skill approvals, and Responses API context. The 3am deploy dashboard is blinking in several colors.",
+    "verdictComment": "Fresh release, louder receipts: 2026.6.8 now has crash-loop, permission-bridge, provider-routing, auth migration, UI protocol, and media-path evidence. The 3am dashboard has discovered jazz hands.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -220,6 +220,72 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 95057,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95057",
+        "title": "[macOS Apple Silicon] Gateway crash-loops on 2026.6.8: SyntaxError text-transforms.runtime.js"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95171,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95171",
+        "title": "[Bug]: canUseTool returns deprecated {behavior:\"allow\"} shape; Claude Code 2.1.156 rejects with ZodError"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95121,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95121",
+        "title": "[Regression] Codex OAuth/Appserver turns spend ~28s after prompt.submitted for tiny gpt-5.5 replies on 2026.6.8"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95145,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95145",
+        "title": "Bug: Darwin kernel version 25.x incorrectly mapped to macOS 15.x (should be macOS 26 / Tahoe)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95292,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95292",
+        "title": "Protocol Mismatch persists after update — no user-friendly fix for cloud deployments (Zeabur)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95198,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95198",
+        "title": "Bug: OpenRouter model prefix duplicated when using short model IDs (openrouter/deepseek-v4-flash → openrouter/openrouter/deepseek-v4-flash)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95136,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95136",
+        "title": "No migration path or warning when a model provider id is removed/renamed (openai-codex -> openai): OAuth profiles silently orphaned"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94998",
+        "title": "AbortError timeout not detected — fallback not triggered on provider transport timeout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94716,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94716",
+        "title": "[Bug]: Anthropic claude-cli provider sends stale user-agent (claude-cli/2.1.75) — bearer auth fails with authentication_error"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94266,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94266",
+        "title": "Image tool fails to resolve media:// protocol paths for inbound Discord media"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95131,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95131",
+        "title": "Official openai/* model selection auto-enables Codex plugin despite disabled/opt-out intent"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 94125,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/94125",
         "title": "[Bug]: Memory search completely broken — FTS-only hangs, embeddings hang, --force corrupts meta (Ollama/bge-m3, Linux, 2026.6.8)"
@@ -427,31 +493,110 @@
         "number": 94908,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/94908",
         "title": "[Bug]: /v1/responses does not retain conversation context when using the same user value"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95057,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95057",
+        "title": "[macOS Apple Silicon] Gateway crash-loops on 2026.6.8: SyntaxError text-transforms.runtime.js"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95171,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95171",
+        "title": "[Bug]: canUseTool returns deprecated {behavior:\"allow\"} shape; Claude Code 2.1.156 rejects with ZodError"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95121,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95121",
+        "title": "[Regression] Codex OAuth/Appserver turns spend ~28s after prompt.submitted for tiny gpt-5.5 replies on 2026.6.8"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95145,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95145",
+        "title": "Bug: Darwin kernel version 25.x incorrectly mapped to macOS 15.x (should be macOS 26 / Tahoe)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95292,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95292",
+        "title": "Protocol Mismatch persists after update — no user-friendly fix for cloud deployments (Zeabur)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95198,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95198",
+        "title": "Bug: OpenRouter model prefix duplicated when using short model IDs (openrouter/deepseek-v4-flash → openrouter/openrouter/deepseek-v4-flash)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95136,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95136",
+        "title": "No migration path or warning when a model provider id is removed/renamed (openai-codex -> openai): OAuth profiles silently orphaned"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94998,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94998",
+        "title": "AbortError timeout not detected — fallback not triggered on provider transport timeout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94716,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94716",
+        "title": "[Bug]: Anthropic claude-cli provider sends stale user-agent (claude-cli/2.1.75) — bearer auth fails with authentication_error"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 94266,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/94266",
+        "title": "Image tool fails to resolve media:// protocol paths for inbound Discord media"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95131,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95131",
+        "title": "Official openai/* model selection auto-enables Codex plugin despite disabled/opt-out intent"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95057,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95057",
+        "title": "[macOS Apple Silicon] Gateway crash-loops on 2026.6.8: SyntaxError text-transforms.runtime.js"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95042,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95042",
+        "title": "[Bug]: 2026.6.x regression cascade — memory search broken, then sessions lost on every reconnect (multi-agent deployment broken)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 4,
+      "score": -113,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 85,
+      "evidencePenalty": 113,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 85,
+        "evidencePenalty": 113,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 4
+        "score": -113
       },
       "affected": [
+        "auth",
         "codex",
         "copilot",
         "cron-runtime",
@@ -463,13 +608,15 @@
         "image-tool",
         "memory",
         "message-delivery",
+        "node-surface",
         "plugin-install",
         "plugin-system",
         "provider-routing",
         "runtime",
         "sessions-management",
         "skill-workshop",
-        "telegram"
+        "telegram",
+        "ui"
       ],
       "evidence": [
         {
@@ -856,6 +1003,127 @@
           "severity": 3,
           "penalty": 3,
           "reason": "/v1/responses can fail to retain conversation context when using the same user value on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#95057",
+          "repo": "openclaw/openclaw",
+          "number": 95057,
+          "url": "https://github.com/openclaw/openclaw/issues/95057",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "macOS Apple Silicon gateway crash-loops on 2026.6.8 with text-transforms runtime import failure."
+        },
+        {
+          "issue": "openclaw/openclaw#95171",
+          "repo": "openclaw/openclaw",
+          "number": 95171,
+          "url": "https://github.com/openclaw/openclaw/issues/95171",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Claude Code permission bridge returns deprecated allow shape; tool calls fail on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#95121",
+          "repo": "openclaw/openclaw",
+          "number": 95121,
+          "url": "https://github.com/openclaw/openclaw/issues/95121",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Codex OAuth/Appserver tiny turns regress to ~28s after prompt.submitted on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#95145",
+          "repo": "openclaw/openclaw",
+          "number": 95145,
+          "url": "https://github.com/openclaw/openclaw/issues/95145",
+          "area": "node-surface",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Darwin 25.x is mapped to the wrong macOS marketing version in 2026.6.8 status surface."
+        },
+        {
+          "issue": "openclaw/openclaw#95292",
+          "repo": "openclaw/openclaw",
+          "number": 95292,
+          "url": "https://github.com/openclaw/openclaw/issues/95292",
+          "area": "ui",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Cloud Control UI can remain stuck on protocol mismatch after 2026.6.8 update without user-friendly recovery."
+        },
+        {
+          "issue": "openclaw/openclaw#95198",
+          "repo": "openclaw/openclaw",
+          "number": 95198,
+          "url": "https://github.com/openclaw/openclaw/issues/95198",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "OpenRouter short model IDs can be rewritten with a duplicated provider prefix on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#95136",
+          "repo": "openclaw/openclaw",
+          "number": 95136,
+          "url": "https://github.com/openclaw/openclaw/issues/95136",
+          "area": "auth",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Provider id rename after 2026.6.8 can orphan OAuth profiles without a clear migration warning."
+        },
+        {
+          "issue": "openclaw/openclaw#94998",
+          "repo": "openclaw/openclaw",
+          "number": 94998,
+          "url": "https://github.com/openclaw/openclaw/issues/94998",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Provider transport timeout is not classified as fallback-triggering timeout on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#94716",
+          "repo": "openclaw/openclaw",
+          "number": 94716,
+          "url": "https://github.com/openclaw/openclaw/issues/94716",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Anthropic claude-cli path sends stale user-agent on 2026.6.8 and can fail bearer auth."
+        },
+        {
+          "issue": "openclaw/openclaw#94266",
+          "repo": "openclaw/openclaw",
+          "number": 94266,
+          "url": "https://github.com/openclaw/openclaw/issues/94266",
+          "area": "image-tool",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Discord inbound media:// paths fail to resolve for image tool use on 2026.6.8."
+        },
+        {
+          "issue": "openclaw/openclaw#95131",
+          "repo": "openclaw/openclaw",
+          "number": 95131,
+          "url": "https://github.com/openclaw/openclaw/issues/95131",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Official openai/* model selection can auto-enable Codex plugin despite disabled/opt-out intent on 2026.6.8."
         }
       ]
     },
