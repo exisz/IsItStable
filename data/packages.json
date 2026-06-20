@@ -879,36 +879,206 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "v0.17.0 is only a few hours old and already brought receipts: consent gates, Codex desktop persistence, provider metadata, Windows service restarts, and iMessage Unicode all got invited to the incident standup. Very 3am deploy energy.",
+      "referencedIssues": [
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49305,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49305",
+          "title": "[Bug]: Desktop messages disappear with profile + codex_app_server runtime"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49283,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49283",
+          "title": "execute_code consent gate does not recognize explicit chat consent in desktop GUI"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47868,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47868",
+          "title": "Strict chat-completions providers reject leaked messages[].timestamp metadata"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49242,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
+          "title": "[Bug]: Windows: WhatsApp gateway and Desktop updater should prefer Hermes-managed Node/npm over system PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49297,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49297",
+          "title": "[Bug]: Hermes fails to work using gemma4 with ollama backend"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49253,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
+          "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49294,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49294",
+          "title": "[Windows Desktop] Cmd+K Restart Gateway opens CMD window when gateway was installed as system service"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49305,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49305",
+          "title": "[Bug]: Desktop messages disappear with profile + codex_app_server runtime"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49283,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49283",
+          "title": "execute_code consent gate does not recognize explicit chat consent in desktop GUI"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 47868,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47868",
+          "title": "Strict chat-completions providers reject leaked messages[].timestamp metadata"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49242,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
+          "title": "[Bug]: Windows: WhatsApp gateway and Desktop updater should prefer Hermes-managed Node/npm over system PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49297,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49297",
+          "title": "[Bug]: Hermes fails to work using gemma4 with ollama backend"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49253,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
+          "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49294,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49294",
+          "title": "[Windows Desktop] Cmd+K Restart Gateway opens CMD window when gateway was installed as system service"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 64,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 16,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 16,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 64
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "approval-boundary",
+          "gateway-service",
+          "imessage",
+          "message-delivery",
+          "provider-routing",
+          "windows-runtime"
+        ],
+        "evidence": [
+          {
+            "issue": "NousResearch/hermes-agent#49305",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49305,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49305",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Hermes Desktop/TUI on v0.17.0 can lose a user message and persist no assistant response when an additional profile uses codex_app_server."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49283",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49283,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49283",
+            "area": "approval-boundary",
+            "type": "kernel",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 desktop execute_code consent gate still rejects an explicitly consented code execution request."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#47868",
+            "repo": "NousResearch/hermes-agent",
+            "number": 47868,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/47868",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Strict chat-completions providers on v0.17.0 reject leaked messages[].timestamp metadata with HTTP 400s."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49242",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49242,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49242",
+            "area": "windows-runtime",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Windows WhatsApp gateway and updater paths on v0.17.0 can use system Node/npm instead of Hermes-managed tooling."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49297",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49297,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49297",
+            "area": "provider-routing",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Gemma4 through the Ollama backend still hits near-immediate finish_reason=length truncation on v0.17.0."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49253",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49253,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49253",
+            "area": "imessage",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Photon iMessage on v0.17.0 corrupts Unicode when Markdown bold formatting is present."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49294",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49294,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49294",
+            "area": "gateway-service",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Windows Desktop restart gateway action on v0.17.0 opens a persistent CMD window instead of restarting the installed headless service."
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-06-19T19:39:06Z"
+      "createdAt": "2026-06-19T20:50:21.113Z"
     }
   }
 ]
