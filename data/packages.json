@@ -584,18 +584,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 113,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "survivalDays": 4,
+        "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 113,
           "votePenalty": 0,
-          "survivalDays": 3,
+          "survivalDays": 4,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 4,
+          "survivalBonus": 12,
           "curatedBonus": 0,
           "score": -113
         },
@@ -1147,13 +1147,37 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.17.0 is only a few hours old and already brought receipts: consent gates, Codex desktop persistence, provider metadata, Windows service restarts, and iMessage Unicode all got invited to the incident standup. Very 3am deploy energy.",
+      "verdictComment": "v0.17.0 has moved from “fresh release smell” to “bring a clipboard to the incident standup”: file-write boundaries, setup init, providers, secrets, Windows updates, and channel edges all have receipts.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 49578,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49578",
+          "title": "[Bug]: execute_code (Python) bypasses agent file edit restrictions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49627,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49627",
+          "title": "[Setup]: initializing agent... Failed to initialize agent: init_agent() got an unexpected keyword argument 'event_callback'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 49305,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49305",
           "title": "[Bug]: Desktop messages disappear with profile + codex_app_server runtime"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49590,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49590",
+          "title": "[BUG] 0.17 regression: .env op:// secret refs override resolved cache during gateway startup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49490,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49490",
+          "title": "[Bug]: OpenCode Zen provider does not work on v0.17.0"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1169,9 +1193,21 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
-          "number": 49242,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
-          "title": "[Bug]: Windows: WhatsApp gateway and Desktop updater should prefer Hermes-managed Node/npm over system PATH"
+          "number": 49606,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49606",
+          "title": "feat(desktop): detect failed in-app update and guide user to terminal fallback"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49561,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49561",
+          "title": "[Bug]: Regression - WhatsApp bridge cannot be installed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49529,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49529",
+          "title": "[Bug]: PyPI 0.17.0 wheel install: doctor false-positive venv entry point warning and optional-skills missing from wheel"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1181,9 +1217,33 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
-          "number": 49253,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
-          "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
+          "number": 49242,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
+          "title": "[Bug]: Windows: WhatsApp gateway and Desktop updater should prefer Hermes-managed Node/npm over system PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49745,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49745",
+          "title": "[Bug]: Cmd/Ctrl+Z skips paste in desktop composer — pastes have no contentEditable undo entry"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49732,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49732",
+          "title": "[Bug]: Dashboard \"Switch model?\" dialog — Cancel doesn't undo, fires with no active chat, badge flips before user decides"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49600,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49600",
+          "title": "[Bug]: UI Layout Issue – Audio Icon Clipping"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49536,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49536",
+          "title": "Bug: Telegram finalize message text overlap due to parse_mode mutation"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1193,9 +1253,39 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 49253,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
+          "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49578,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49578",
+          "title": "[Bug]: execute_code (Python) bypasses agent file edit restrictions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49627,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49627",
+          "title": "[Setup]: initializing agent... Failed to initialize agent: init_agent() got an unexpected keyword argument 'event_callback'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 49305,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49305",
           "title": "[Bug]: Desktop messages disappear with profile + codex_app_server runtime"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49590,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49590",
+          "title": "[BUG] 0.17 regression: .env op:// secret refs override resolved cache during gateway startup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49490,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49490",
+          "title": "[Bug]: OpenCode Zen provider does not work on v0.17.0"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1211,9 +1301,21 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
-          "number": 49242,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
-          "title": "[Bug]: Windows: WhatsApp gateway and Desktop updater should prefer Hermes-managed Node/npm over system PATH"
+          "number": 49606,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49606",
+          "title": "feat(desktop): detect failed in-app update and guide user to terminal fallback"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49561,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49561",
+          "title": "[Bug]: Regression - WhatsApp bridge cannot be installed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49529,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49529",
+          "title": "[Bug]: PyPI 0.17.0 wheel install: doctor false-positive venv entry point warning and optional-skills missing from wheel"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1223,48 +1325,109 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
-          "number": 49253,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
-          "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
+          "number": 49242,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
+          "title": "[Bug]: Windows: WhatsApp gateway and Desktop updater should prefer Hermes-managed Node/npm over system PATH"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49745,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49745",
+          "title": "[Bug]: Cmd/Ctrl+Z skips paste in desktop composer — pastes have no contentEditable undo entry"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49732,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49732",
+          "title": "[Bug]: Dashboard \"Switch model?\" dialog — Cancel doesn't undo, fires with no active chat, badge flips before user decides"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49600,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49600",
+          "title": "[Bug]: UI Layout Issue – Audio Icon Clipping"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49536,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49536",
+          "title": "Bug: Telegram finalize message text overlap due to parse_mode mutation"
         },
         {
           "repo": "NousResearch/hermes-agent",
           "number": 49294,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49294",
           "title": "[Windows Desktop] Cmd+K Restart Gateway opens CMD window when gateway was installed as system service"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49253,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
+          "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 64,
+        "score": 42,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 16,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "evidencePenalty": 41,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 16,
+          "evidencePenalty": 41,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 64
+          "score": 42
         },
         "affected": [
           "approval-boundary",
+          "auth",
+          "desktop-ui",
           "gateway-service",
           "imessage",
+          "installer",
           "message-delivery",
+          "model-routing",
+          "opencode",
           "provider-routing",
+          "runtime",
+          "telegram",
+          "update-system",
+          "whatsapp",
           "windows-runtime"
         ],
         "evidence": [
+          {
+            "issue": "NousResearch/hermes-agent#49578",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49578,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49578",
+            "area": "approval-boundary",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.17.0 execute_code can bypass agent file edit restrictions and write outside the allowed edit path."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49627",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49627,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49627",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.17.0 setup can fail during agent initialization with init_agent() receiving an unexpected event_callback argument."
+          },
           {
             "issue": "NousResearch/hermes-agent#49305",
             "repo": "NousResearch/hermes-agent",
@@ -1275,6 +1438,28 @@
             "severity": 4,
             "penalty": 4,
             "reason": "Hermes Desktop/TUI on v0.17.0 can lose a user message and persist no assistant response when an additional profile uses codex_app_server."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49590",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49590,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49590",
+            "area": "auth",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 gateway startup can prefer literal op:// secret references over resolved cached values, breaking secret-backed channels."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49490",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49490,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49490",
+            "area": "opencode",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "OpenCode Zen provider calls fail after updating to v0.17.0, breaking that provider path."
           },
           {
             "issue": "NousResearch/hermes-agent#49283",
@@ -1299,15 +1484,37 @@
             "reason": "Strict chat-completions providers on v0.17.0 reject leaked messages[].timestamp metadata with HTTP 400s."
           },
           {
-            "issue": "NousResearch/hermes-agent#49242",
+            "issue": "NousResearch/hermes-agent#49606",
             "repo": "NousResearch/hermes-agent",
-            "number": 49242,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49242",
-            "area": "windows-runtime",
+            "number": 49606,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49606",
+            "area": "update-system",
             "type": "runtime",
             "severity": 2,
             "penalty": 2,
-            "reason": "Windows WhatsApp gateway and updater paths on v0.17.0 can use system Node/npm instead of Hermes-managed tooling."
+            "reason": "Windows Desktop v0.17.0 update flow can leave users with a mismatched backend/desktop state after silent GUI update failure."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49561",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49561,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49561",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 regression can prevent installing the WhatsApp bridge in Docker environments."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49529",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49529,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49529",
+            "area": "installer",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "The v0.17.0 PyPI wheel install has a doctor false-positive and omits optional-skills from the wheel package."
           },
           {
             "issue": "NousResearch/hermes-agent#49297",
@@ -1321,15 +1528,59 @@
             "reason": "Gemma4 through the Ollama backend still hits near-immediate finish_reason=length truncation on v0.17.0."
           },
           {
-            "issue": "NousResearch/hermes-agent#49253",
+            "issue": "NousResearch/hermes-agent#49242",
             "repo": "NousResearch/hermes-agent",
-            "number": 49253,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49253",
-            "area": "imessage",
+            "number": 49242,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49242",
+            "area": "windows-runtime",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Windows WhatsApp gateway and updater paths on v0.17.0 can use system Node/npm instead of Hermes-managed tooling."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49745",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49745,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49745",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Desktop v0.17.0 composer undo skips pasted content because paste operations lack a contentEditable undo entry."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49732",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49732,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49732",
+            "area": "model-routing",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.17.0 dashboard model-switch dialog can fire with no active chat and flip the badge before the user decides."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49600",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49600,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49600",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.17.0 desktop UI can clip the audio icon on Windows."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49536",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49536,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49536",
+            "area": "telegram",
             "type": "channel-specific",
             "severity": 1,
             "penalty": 1,
-            "reason": "Photon iMessage on v0.17.0 corrupts Unicode when Markdown bold formatting is present."
+            "reason": "Telegram finalize messages on v0.17.0 can overlap text because parse_mode mutation falls back incorrectly."
           },
           {
             "issue": "NousResearch/hermes-agent#49294",
@@ -1341,6 +1592,17 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Windows Desktop restart gateway action on v0.17.0 opens a persistent CMD window instead of restarting the installed headless service."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49253",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49253,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49253",
+            "area": "imessage",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Photon iMessage on v0.17.0 corrupts Unicode when Markdown bold formatting is present."
           }
         ]
       },
