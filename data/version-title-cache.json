@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-21T00:29:54.330Z",
+  "generatedAt": "2026-06-21T01:46:53.792Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -527,21 +527,30 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
+        "affected:runtime",
+        "affected:telegram",
+        "affected:whatsapp",
         "affected:imessage",
         "affected:approval-boundary",
+        "affected:update-system",
+        "affected:model-routing",
         "affected:windows-runtime",
         "affected:message-delivery",
         "pkg:hermes-agent",
+        "affected:opencode",
+        "affected:auth",
+        "affected:desktop-ui",
         "affected:gateway-service",
+        "affected:installer",
         "affected:provider-routing",
-        "score:60-69"
+        "score:40-49"
       ],
       "issueNumber": 143,
       "title": "[v0.17.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/143",
       "createdAt": "2026-06-19T20:28:46Z",
-      "updatedAt": "2026-06-20T00:32:21Z"
+      "updatedAt": "2026-06-21T00:34:50Z"
     },
     {
       "version": "0.0.1",
@@ -2653,6 +2662,21 @@
       "url": "https://github.com/exisz/IsItStable/issues/141",
       "createdAt": "2026-06-16T17:39:17Z",
       "updatedAt": "2026-06-20T12:31:16Z"
+    },
+    {
+      "version": "2026.6.9",
+      "packageName": "OpenClaw",
+      "packageSlug": "openclaw",
+      "labels": [
+        "version",
+        "pkg:openclaw"
+      ],
+      "issueNumber": 144,
+      "title": "[v2026.6.9] [OpenClaw] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/144",
+      "createdAt": "2026-06-21T01:46:51Z",
+      "updatedAt": "2026-06-21T01:46:51Z"
     }
   ],
   "duplicates": {
