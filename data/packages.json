@@ -10,32 +10,256 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "Fresh off the press (<24h old): the email-config gremlin rewrites your `groupAllowFrom`, the memory store ghosts you to a new location and demands a full 1499-file re-embed, and Codex turns rage-quit mid-maintenance. Channel surfaces (Telegram /status, QQBot, WeCom) are throwing their usual confetti. Evidence is still landing — numbers will firm up as the dust settles.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95495,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95495",
+          "title": "[Bug]: 2026.6.9 silently relocates memory store with no migration, forcing a full re-embed (1499 files) with zero upgrade-time warning"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95547,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95547",
+          "title": "Codex app-server app closes before long maintenance turn completes; Gateway restart also terminates active turn without graceful recovery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95515,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
+          "title": "Upgrade 2026.6.8→2026.6.9 corrupts email channel config with spurious groupAllowFrom field"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95280,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95280",
+          "title": "deepseek reasoning: final answer merges into the thinking block under /reasoning on (no discrete thinking_end at the reasoning→content transition)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95500,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95500",
+          "title": "[Bug]: Plugin model provider (opencode-go) cannot be resolved by isolated cron sessions, even though openclaw models lists it correctly and session_status model=default resolves it for existing sessions."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95538,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95538",
+          "title": "Telegram rich messages: /status card collapses into one run-on line (newlines lost) on 2026.6.9"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95525,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95525",
+          "title": "Telegram /status slash command does not respond while Discord /status works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95526,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95526",
+          "title": "[Bug] v2026.6.9 QQBot: long markdown reply is split into N independent bubbles (one per chunk), not a single message"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95533,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95533",
+          "title": "WeCom: separated text+file dual-stream deadlock (regression 2026.5.2→2026.6.6, partial fix in 2026.6.9)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95495,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95495",
+          "title": "[Bug]: 2026.6.9 silently relocates memory store with no migration, forcing a full re-embed (1499 files) with zero upgrade-time warning"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95547,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95547",
+          "title": "Codex app-server app closes before long maintenance turn completes; Gateway restart also terminates active turn without graceful recovery"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95515,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
+          "title": "Upgrade 2026.6.8→2026.6.9 corrupts email channel config with spurious groupAllowFrom field"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95280,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95280",
+          "title": "deepseek reasoning: final answer merges into the thinking block under /reasoning on (no discrete thinking_end at the reasoning→content transition)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95500,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95500",
+          "title": "[Bug]: Plugin model provider (opencode-go) cannot be resolved by isolated cron sessions, even though openclaw models lists it correctly and session_status model=default resolves it for existing sessions."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95538,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95538",
+          "title": "Telegram rich messages: /status card collapses into one run-on line (newlines lost) on 2026.6.9"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95525,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95525",
+          "title": "Telegram /status slash command does not respond while Discord /status works"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95526,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95526",
+          "title": "[Bug] v2026.6.9 QQBot: long markdown reply is split into N independent bubbles (one per chunk), not a single message"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95533,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95533",
+          "title": "WeCom: separated text+file dual-stream deadlock (regression 2026.5.2→2026.6.6, partial fix in 2026.6.9)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 94885,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/94885",
+          "title": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 60,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 20,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 20,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 60
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "memory",
+          "runtime",
+          "config",
+          "reasoning",
+          "plugin",
+          "telegram",
+          "qqbot",
+          "wecom"
+        ],
+        "evidence": [
+          {
+            "issue": "openclaw/openclaw#95495",
+            "repo": "openclaw/openclaw",
+            "number": 95495,
+            "url": "https://github.com/openclaw/openclaw/issues/95495",
+            "area": "memory",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Memory store silently relocated on 6.8->6.9 with no migration, forcing a full re-embed (1499 files)"
+          },
+          {
+            "issue": "openclaw/openclaw#95547",
+            "repo": "openclaw/openclaw",
+            "number": 95547,
+            "url": "https://github.com/openclaw/openclaw/issues/95547",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex app-server app closes before long maintenance turn completes; Gateway restart also kills active turn without graceful recovery"
+          },
+          {
+            "issue": "openclaw/openclaw#95515",
+            "repo": "openclaw/openclaw",
+            "number": 95515,
+            "url": "https://github.com/openclaw/openclaw/issues/95515",
+            "area": "config",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Upgrade 6.8->6.9 corrupts email channel config with spurious groupAllowFrom field"
+          },
+          {
+            "issue": "openclaw/openclaw#95280",
+            "repo": "openclaw/openclaw",
+            "number": 95280,
+            "url": "https://github.com/openclaw/openclaw/issues/95280",
+            "area": "reasoning",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "OpenAI-completions reasoning merges into the answer; thinking_end only fires at end-of-stream (confirmed on v2026.6.9 c645ec4)"
+          },
+          {
+            "issue": "openclaw/openclaw#95500",
+            "repo": "openclaw/openclaw",
+            "number": 95500,
+            "url": "https://github.com/openclaw/openclaw/issues/95500",
+            "area": "plugin",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Plugin model provider (opencode-go) cannot be resolved by isolated cron runs; always falls back to deepseek"
+          },
+          {
+            "issue": "openclaw/openclaw#95538",
+            "repo": "openclaw/openclaw",
+            "number": 95538,
+            "url": "https://github.com/openclaw/openclaw/issues/95538",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram /status card collapses into one run-on line (newlines lost) with richMessages on"
+          },
+          {
+            "issue": "openclaw/openclaw#95525",
+            "repo": "openclaw/openclaw",
+            "number": 95525,
+            "url": "https://github.com/openclaw/openclaw/issues/95525",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram /status native command does not respond (polling) while Discord /status works on the same agent"
+          },
+          {
+            "issue": "openclaw/openclaw#95526",
+            "repo": "openclaw/openclaw",
+            "number": 95526,
+            "url": "https://github.com/openclaw/openclaw/issues/95526",
+            "area": "qqbot",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "QQBot splits a long markdown reply into N independent bubbles instead of one message"
+          },
+          {
+            "issue": "openclaw/openclaw#95533",
+            "repo": "openclaw/openclaw",
+            "number": 95533,
+            "url": "https://github.com/openclaw/openclaw/issues/95533",
+            "area": "wecom",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WeCom separated text+file dual-stream deadlock; 6.9 fixed the mixed branch but not the separated text+file branch"
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
