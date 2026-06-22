@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Fresh off the press (<24h old): the email-config gremlin rewrites your `groupAllowFrom`, the memory store ghosts you to a new location and demands a full 1499-file re-embed, and Codex turns rage-quit mid-maintenance. Channel surfaces (Telegram /status, QQBot, WeCom) are throwing their usual confetti. Evidence is still landing — numbers will firm up as the dust settles.",
+      "verdictComment": "2026.6.9 crossed from fresh-release smoke into a proper incident wall: memory migration, restart-recovery death loops, provider/plugin externalization, compaction model drift, and channel-tool regressions are all in the room. The 3am deploy goblin brought receipts.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -68,6 +68,48 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 95658,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95658",
+          "title": "[Bug]: 2026.6.9 breaks Groq voice transcription — \"Media provider not available: groq\" (externalized provider plugin not auto-installed)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95750,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95750",
+          "title": "[Bug]: Main-session restart-recovery has no cross-boot retry budget — wedged sessions death-loop the gateway across reboots (2026.6.9)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95765,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95765",
+          "title": "bug(onboard): external provider plugin install skips selected auth flow after DeepSeek install"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95696,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95696",
+          "title": "[Bug]: Compaction resets session model override to previous provider"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95740,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95740",
+          "title": "[Bug]: google-vertex model_not_found at runtime with authorized_user ADC — regression persists after #90609"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95685,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95685",
+          "title": "Session Workspace Rail marks non-workspace files as missing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95597,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95597",
+          "title": "Codex native post_tool_use relay skips agentToolResultMiddleware"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 95495,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/95495",
           "title": "[Bug]: 2026.6.9 silently relocates memory store with no migration, forcing a full re-embed (1499 files) with zero upgrade-time warning"
@@ -122,32 +164,68 @@
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 94885,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/94885",
-          "title": "Telegram richMessages regression still ships in v2026.6.8 stable while docs describe opt-in"
+          "number": 95658,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95658",
+          "title": "[Bug]: 2026.6.9 breaks Groq voice transcription — \"Media provider not available: groq\" (externalized provider plugin not auto-installed)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95750,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95750",
+          "title": "[Bug]: Main-session restart-recovery has no cross-boot retry budget — wedged sessions death-loop the gateway across reboots (2026.6.9)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95765,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95765",
+          "title": "bug(onboard): external provider plugin install skips selected auth flow after DeepSeek install"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95696,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95696",
+          "title": "[Bug]: Compaction resets session model override to previous provider"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95740,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95740",
+          "title": "[Bug]: google-vertex model_not_found at runtime with authorized_user ADC — regression persists after #90609"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95685,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95685",
+          "title": "Session Workspace Rail marks non-workspace files as missing"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95597,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95597",
+          "title": "Codex native post_tool_use relay skips agentToolResultMiddleware"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 60,
+        "score": 45,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 20,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "evidencePenalty": 38,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 20,
+          "evidencePenalty": 38,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 60
+          "score": 45
         },
         "affected": [
           "memory",
@@ -157,7 +235,13 @@
           "plugin",
           "telegram",
           "qqbot",
-          "wecom"
+          "wecom",
+          "voice",
+          "gateway",
+          "provider-routing",
+          "compaction",
+          "ui",
+          "codex"
         ],
         "evidence": [
           {
@@ -258,6 +342,83 @@
             "severity": 1,
             "penalty": 1,
             "reason": "WeCom separated text+file dual-stream deadlock; 6.9 fixed the mixed branch but not the separated text+file branch"
+          },
+          {
+            "issue": "openclaw/openclaw#95658",
+            "repo": "openclaw/openclaw",
+            "number": 95658,
+            "url": "https://github.com/openclaw/openclaw/issues/95658",
+            "area": "voice",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Groq voice transcription fails on 2026.6.9 after provider externalization; voice notes arrive empty unless external provider plugin path is repaired."
+          },
+          {
+            "issue": "openclaw/openclaw#95750",
+            "repo": "openclaw/openclaw",
+            "number": 95750,
+            "url": "https://github.com/openclaw/openclaw/issues/95750",
+            "area": "gateway",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Main-session restart recovery can death-loop the gateway across reboots with no persistent retry budget on 2026.6.9."
+          },
+          {
+            "issue": "openclaw/openclaw#95765",
+            "repo": "openclaw/openclaw",
+            "number": 95765,
+            "url": "https://github.com/openclaw/openclaw/issues/95765",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "First-time external provider setup installs DeepSeek plugin but skips the selected API-key/auth flow on 2026.6.9."
+          },
+          {
+            "issue": "openclaw/openclaw#95696",
+            "repo": "openclaw/openclaw",
+            "number": 95696,
+            "url": "https://github.com/openclaw/openclaw/issues/95696",
+            "area": "compaction",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Compaction resets a session model override to a previous provider, so UI model state diverges from actual calls on 2026.6.9."
+          },
+          {
+            "issue": "openclaw/openclaw#95740",
+            "repo": "openclaw/openclaw",
+            "number": 95740,
+            "url": "https://github.com/openclaw/openclaw/issues/95740",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Google Vertex authorized_user runtime routing remains broken on 2026.6.9 despite earlier catalog fixes."
+          },
+          {
+            "issue": "openclaw/openclaw#95685",
+            "repo": "openclaw/openclaw",
+            "number": 95685,
+            "url": "https://github.com/openclaw/openclaw/issues/95685",
+            "area": "ui",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Session Workspace Rail marks readable non-workspace files as missing on 2026.6.9."
+          },
+          {
+            "issue": "openclaw/openclaw#95597",
+            "repo": "openclaw/openclaw",
+            "number": 95597,
+            "url": "https://github.com/openclaw/openclaw/issues/95597",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Codex native post_tool_use relay skips agentToolResultMiddleware, so Tokenjuice artifact capture stops on 2026.6.9."
           }
         ]
       },
@@ -1132,7 +1293,7 @@
           }
         ]
       },
-      "thumbsUp": 0,
+      "thumbsUp": 1,
       "thumbsDown": 0,
       "createdAt": "2026-06-19T20:50:21.113Z"
     }
