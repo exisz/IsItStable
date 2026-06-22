@@ -277,7 +277,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.17.0 has moved from “fresh release smell” to “bring a clipboard to the incident standup”: file-write boundaries, setup init, providers, secrets, Windows updates, and channel edges all have receipts.",
+      "verdictComment": "v0.17.0 now has enough sharp edges to make the release manager sleep with the pager under the pillow: MCP/runtime churn, desktop boot/composer failures, provider routing, updates, installers, and channels all have receipts.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -389,6 +389,108 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 50394,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50394",
+          "title": "A single failing stdio MCP server churns the whole MCP bridge — healthy servers' tools become \"Unknown tool\" at runtime"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49903,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49903",
+          "title": "bug(desktop): v0.17.0 throws \"Uncaught Error: Composer is not available\" — input becomes unresponsive after upgrade"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50199,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50199",
+          "title": "[Bug]: delegation.base_url ignored at runtime — _load_config() returns empty CLI_CONFIG block over correct config.yaml"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49976,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49976",
+          "title": "hermes update: ZIP-fallback path drops Windows gateway resume, leaving stale gateway_state.json that bombs every restart with weixin-bot-token_lock for 5s"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49961,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49961",
+          "title": "[Bug]: Tool calls never invoked in conversation flow despite tools configured — reproduced with Mistral Nemotron and Qwen3-Next across NVIDIA NIM and OpenRouter"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50252,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50252",
+          "title": "[Bug]: GitHub Copilot provider returns \"empty base URL\" on every inference (v0.17.0, token valid, 12 models detected)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50209,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50209",
+          "title": "Desktop boot hangs at ~94%: waitForHermes /api/status probe times out -> backend respawn loop (native Windows + WSL2)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50395,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50395",
+          "title": "`hermes mcp test <server>` uses a different environment (PATH) than the gateway's MCP spawn — false \"healthy\" result"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50205,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50205",
+          "title": "Docker image missing lark-oapi — Feishu channel silently fails to connect"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50210,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50210",
+          "title": "Windows bootstrap installer produces unsigned Hermes.exe blocked by Smart App Control"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49982,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49982",
+          "title": "[Bug]: [Desktop] Windows: Timed out connecting to Hermes backend after 15000ms, CLI works fine"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50404,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50404",
+          "title": "[Bug]: Discord config is not profile-isolated"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50175,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50175",
+          "title": "[Bug]: Deleting a profile fails when dashboard/gateway child processes are alive; profile reappears after every restart until full reboot"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49870,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49870",
+          "title": "[Bug]: '→ ready' button on Done tasks triggers false diagnostic and respawn guard blocks dispatcher"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50229,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50229",
+          "title": "[Bug]: Silent fallback failover - buffered status dropped on success, agent runs as wrong model with no notification"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49955,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49955",
+          "title": "[Bug]: Kanban inline create form field labels truncated — \"specifier\" shows as \"specifi\", \"assignee\" as \"assigne\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49908,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49908",
+          "title": "[Bug]: Drag-and-drop to Done column on  tasks shows completion prompt then silently reverts"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 49578,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49578",
           "title": "[Bug]: execute_code (Python) bypasses agent file edit restrictions"
@@ -494,37 +596,144 @@
           "number": 49253,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
           "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50394,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50394",
+          "title": "A single failing stdio MCP server churns the whole MCP bridge — healthy servers' tools become \"Unknown tool\" at runtime"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49903,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49903",
+          "title": "bug(desktop): v0.17.0 throws \"Uncaught Error: Composer is not available\" — input becomes unresponsive after upgrade"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50199,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50199",
+          "title": "[Bug]: delegation.base_url ignored at runtime — _load_config() returns empty CLI_CONFIG block over correct config.yaml"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49976,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49976",
+          "title": "hermes update: ZIP-fallback path drops Windows gateway resume, leaving stale gateway_state.json that bombs every restart with weixin-bot-token_lock for 5s"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49961,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49961",
+          "title": "[Bug]: Tool calls never invoked in conversation flow despite tools configured — reproduced with Mistral Nemotron and Qwen3-Next across NVIDIA NIM and OpenRouter"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50252,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50252",
+          "title": "[Bug]: GitHub Copilot provider returns \"empty base URL\" on every inference (v0.17.0, token valid, 12 models detected)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50209,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50209",
+          "title": "Desktop boot hangs at ~94%: waitForHermes /api/status probe times out -> backend respawn loop (native Windows + WSL2)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50395,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50395",
+          "title": "`hermes mcp test <server>` uses a different environment (PATH) than the gateway's MCP spawn — false \"healthy\" result"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50205,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50205",
+          "title": "Docker image missing lark-oapi — Feishu channel silently fails to connect"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50210,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50210",
+          "title": "Windows bootstrap installer produces unsigned Hermes.exe blocked by Smart App Control"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49982,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49982",
+          "title": "[Bug]: [Desktop] Windows: Timed out connecting to Hermes backend after 15000ms, CLI works fine"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50404,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50404",
+          "title": "[Bug]: Discord config is not profile-isolated"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50175,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50175",
+          "title": "[Bug]: Deleting a profile fails when dashboard/gateway child processes are alive; profile reappears after every restart until full reboot"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49870,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49870",
+          "title": "[Bug]: '→ ready' button on Done tasks triggers false diagnostic and respawn guard blocks dispatcher"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50229,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50229",
+          "title": "[Bug]: Silent fallback failover - buffered status dropped on success, agent runs as wrong model with no notification"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49955,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49955",
+          "title": "[Bug]: Kanban inline create form field labels truncated — \"specifier\" shows as \"specifi\", \"assignee\" as \"assigne\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49908,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49908",
+          "title": "[Bug]: Drag-and-drop to Done column on  tasks shows completion prompt then silently reverts"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 42,
+        "score": 5,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 41,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 81,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 41,
+          "evidencePenalty": 81,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 42
+          "score": 5
         },
         "affected": [
           "approval-boundary",
           "auth",
+          "config-profiles",
+          "dashboard",
           "desktop-ui",
+          "discord",
+          "feishu",
           "gateway-service",
           "imessage",
           "installer",
+          "mcp",
           "message-delivery",
           "model-routing",
           "opencode",
@@ -733,6 +942,193 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Photon iMessage on v0.17.0 corrupts Unicode when Markdown bold formatting is present."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50394",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50394,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50394",
+            "area": "mcp",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.17.0 MCP bridge can churn after one failing stdio server, leaving healthy servers' tools as unknown at runtime."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49903",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49903,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49903",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 Desktop can throw Composer is not available after upgrade, making the composer input unresponsive."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50199",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50199,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50199",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 delegation.base_url can be ignored at runtime, forcing incorrect provider endpoint resolution."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49976",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49976,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49976",
+            "area": "update-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 Windows ZIP-fallback update path can drop gateway resume state and make restarts fail on stale gateway_state.json."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49961",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49961,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49961",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 reports configured tools not being invoked across NVIDIA NIM and OpenRouter conversation flows."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50252",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50252,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50252",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 GitHub Copilot provider can return an empty base URL on every inference despite a valid token and detected models."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50209",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50209,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50209",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 Desktop boot can hang around the backend status probe even while the CLI itself is healthy."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50395",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50395,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50395",
+            "area": "mcp",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 hermes mcp test can report a server healthy under a different PATH than the gateway MCP spawn actually uses."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50205",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50205,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50205",
+            "area": "feishu",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 Docker image can miss lark-oapi, causing the Feishu channel to fail at connect time."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50210",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50210,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50210",
+            "area": "installer",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 Windows bootstrap can produce an unsigned Hermes.exe blocked by Smart App Control."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49982",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49982,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49982",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 Windows Desktop can time out connecting to the backend while the CLI still works."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50404",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50404,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50404",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 Discord config is not profile-isolated, allowing channel state to bleed across profiles."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50175",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50175,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50175",
+            "area": "config-profiles",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 profile deletion can fail while dashboard/gateway child processes are alive, making profiles reappear until reboot."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49870",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49870,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49870",
+            "area": "dashboard",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 task Done/ready flow can trigger a false diagnostic and then get blocked by the respawn guard."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50229",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50229,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50229",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 silent fallback failover can run the agent as the wrong model without notifying the user."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49955",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49955,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49955",
+            "area": "dashboard",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.17.0 Kanban inline create form truncates field labels in the dashboard."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#49908",
+            "repo": "NousResearch/hermes-agent",
+            "number": 49908,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/49908",
+            "area": "dashboard",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "v0.17.0 drag-and-drop to Done can show a completion prompt and then silently revert the task."
           }
         ]
       },
