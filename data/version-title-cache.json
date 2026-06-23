@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-23T21:30:25.391Z",
+  "generatedAt": "2026-06-23T22:24:11.504Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -1514,7 +1514,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/1",
       "createdAt": "2026-04-28T01:01:46Z",
-      "updatedAt": "2026-06-16T04:38:47Z"
+      "updatedAt": "2026-06-23T22:11:53Z"
     },
     {
       "version": "2026.4.24",
@@ -1538,7 +1538,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/2",
       "createdAt": "2026-04-28T01:01:55Z",
-      "updatedAt": "2026-06-16T04:38:45Z"
+      "updatedAt": "2026-06-23T22:11:53Z"
     },
     {
       "version": "2026.4.25",
@@ -1565,7 +1565,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/3",
       "createdAt": "2026-04-28T01:02:04Z",
-      "updatedAt": "2026-06-16T04:38:43Z"
+      "updatedAt": "2026-06-23T22:11:52Z"
     },
     {
       "version": "2026.4.26",
@@ -1604,7 +1604,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/66",
       "createdAt": "2026-04-28T06:49:04Z",
-      "updatedAt": "2026-06-16T04:38:41Z"
+      "updatedAt": "2026-06-23T22:11:52Z"
     },
     {
       "version": "2026.4.27",
@@ -1645,7 +1645,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/68",
       "createdAt": "2026-04-29T23:17:13Z",
-      "updatedAt": "2026-06-16T04:38:40Z"
+      "updatedAt": "2026-06-23T22:11:51Z"
     },
     {
       "version": "2026.4.29",
@@ -1684,7 +1684,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/69",
       "createdAt": "2026-04-30T21:19:38Z",
-      "updatedAt": "2026-06-16T04:38:38Z"
+      "updatedAt": "2026-06-23T22:11:50Z"
     },
     {
       "version": "2026.5.2",
@@ -1729,7 +1729,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/72",
       "createdAt": "2026-05-03T01:32:28Z",
-      "updatedAt": "2026-06-16T04:38:36Z"
+      "updatedAt": "2026-06-23T22:11:49Z"
     },
     {
       "version": "2026.5.3",
@@ -1780,7 +1780,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/73",
       "createdAt": "2026-05-04T07:57:31Z",
-      "updatedAt": "2026-06-16T04:38:34Z"
+      "updatedAt": "2026-06-23T22:11:49Z"
     },
     {
       "version": "2026.5.3-1",
@@ -1825,7 +1825,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/74",
       "createdAt": "2026-05-04T09:45:08Z",
-      "updatedAt": "2026-06-16T04:38:32Z"
+      "updatedAt": "2026-06-23T22:11:48Z"
     },
     {
       "version": "2026.5.4",
@@ -1850,7 +1850,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/99",
       "createdAt": "2026-05-26T12:52:34Z",
-      "updatedAt": "2026-06-20T12:32:08Z"
+      "updatedAt": "2026-06-23T22:11:40Z"
     },
     {
       "version": "2026.5.4",
@@ -1874,7 +1874,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/76",
       "createdAt": "2026-05-05T08:41:02Z",
-      "updatedAt": "2026-06-16T04:38:30Z"
+      "updatedAt": "2026-06-23T22:11:47Z"
     },
     {
       "version": "2026.5.5",
@@ -1899,7 +1899,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/100",
       "createdAt": "2026-05-26T12:52:35Z",
-      "updatedAt": "2026-06-20T12:32:07Z"
+      "updatedAt": "2026-06-23T22:11:39Z"
     },
     {
       "version": "2026.5.5",
@@ -1925,7 +1925,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/77",
       "createdAt": "2026-05-06T09:44:54Z",
-      "updatedAt": "2026-06-16T04:38:28Z"
+      "updatedAt": "2026-06-23T22:11:47Z"
     },
     {
       "version": "2026.5.6",
@@ -1951,7 +1951,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/101",
       "createdAt": "2026-05-26T12:52:37Z",
-      "updatedAt": "2026-06-23T12:35:36Z"
+      "updatedAt": "2026-06-23T22:11:38Z"
     },
     {
       "version": "2026.5.6",
@@ -1980,7 +1980,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/78",
       "createdAt": "2026-05-06T18:29:33Z",
-      "updatedAt": "2026-06-16T04:38:27Z"
+      "updatedAt": "2026-06-23T22:11:46Z"
     },
     {
       "version": "2026.5.7",
@@ -2005,7 +2005,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/102",
       "createdAt": "2026-05-26T12:52:38Z",
-      "updatedAt": "2026-06-20T12:32:03Z"
+      "updatedAt": "2026-06-23T22:11:38Z"
     },
     {
       "version": "2026.5.7",
@@ -2039,7 +2039,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/79",
       "createdAt": "2026-05-07T21:18:49Z",
-      "updatedAt": "2026-06-16T04:38:25Z"
+      "updatedAt": "2026-06-23T22:11:45Z"
     },
     {
       "version": "2026.5.12",
@@ -2072,7 +2072,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/103",
       "createdAt": "2026-05-26T12:52:39Z",
-      "updatedAt": "2026-06-20T12:32:01Z"
+      "updatedAt": "2026-06-23T22:11:37Z"
     },
     {
       "version": "2026.5.12",
@@ -2093,7 +2093,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/82",
       "createdAt": "2026-05-14T18:33:07Z",
-      "updatedAt": "2026-06-16T04:38:23Z"
+      "updatedAt": "2026-06-23T22:11:45Z"
     },
     {
       "version": "2026.5.18",
@@ -2123,7 +2123,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/104",
       "createdAt": "2026-05-26T12:52:40Z",
-      "updatedAt": "2026-06-20T12:31:59Z"
+      "updatedAt": "2026-06-23T22:11:36Z"
     },
     {
       "version": "2026.5.18",
@@ -2162,7 +2162,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/88",
       "createdAt": "2026-05-18T19:31:20Z",
-      "updatedAt": "2026-06-16T04:38:21Z"
+      "updatedAt": "2026-06-23T22:11:44Z"
     },
     {
       "version": "2026.5.19",
@@ -2191,7 +2191,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/105",
       "createdAt": "2026-05-26T12:52:42Z",
-      "updatedAt": "2026-06-20T12:31:57Z"
+      "updatedAt": "2026-06-23T22:11:36Z"
     },
     {
       "version": "2026.5.19",
@@ -2214,7 +2214,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/89",
       "createdAt": "2026-05-20T20:40:06Z",
-      "updatedAt": "2026-06-16T04:38:19Z"
+      "updatedAt": "2026-06-23T22:11:43Z"
     },
     {
       "version": "2026.5.20",
@@ -2246,7 +2246,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/106",
       "createdAt": "2026-05-26T12:52:43Z",
-      "updatedAt": "2026-06-20T12:31:56Z"
+      "updatedAt": "2026-06-23T22:11:35Z"
     },
     {
       "version": "2026.5.20",
@@ -2270,7 +2270,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/90",
       "createdAt": "2026-05-21T21:29:28Z",
-      "updatedAt": "2026-06-16T04:38:17Z"
+      "updatedAt": "2026-06-23T22:11:42Z"
     },
     {
       "version": "2026.5.22",
@@ -2307,7 +2307,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/107",
       "createdAt": "2026-05-26T12:52:44Z",
-      "updatedAt": "2026-06-20T12:31:54Z"
+      "updatedAt": "2026-06-23T22:11:34Z"
     },
     {
       "version": "2026.5.22",
@@ -2361,7 +2361,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/92",
       "createdAt": "2026-05-24T05:17:09Z",
-      "updatedAt": "2026-06-16T04:38:15Z"
+      "updatedAt": "2026-06-23T22:11:41Z"
     },
     {
       "version": "2026.5.26",
@@ -2398,7 +2398,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/109",
       "createdAt": "2026-05-27T13:00:44Z",
-      "updatedAt": "2026-06-20T12:31:52Z"
+      "updatedAt": "2026-06-23T22:11:34Z"
     },
     {
       "version": "2026.5.27",
@@ -2446,7 +2446,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/111",
       "createdAt": "2026-05-28T13:05:04Z",
-      "updatedAt": "2026-06-20T12:31:50Z"
+      "updatedAt": "2026-06-23T22:11:33Z"
     },
     {
       "version": "2026.5.28",
@@ -2486,7 +2486,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/113",
       "createdAt": "2026-05-30T20:09:41Z",
-      "updatedAt": "2026-06-20T12:31:48Z"
+      "updatedAt": "2026-06-23T22:11:32Z"
     },
     {
       "version": "2026.6.1",
@@ -2538,7 +2538,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/133",
       "createdAt": "2026-06-03T20:59:56Z",
-      "updatedAt": "2026-06-20T12:31:46Z"
+      "updatedAt": "2026-06-23T22:11:31Z"
     },
     {
       "version": "2026.6.5",
@@ -2584,7 +2584,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/136",
       "createdAt": "2026-06-09T18:39:59Z",
-      "updatedAt": "2026-06-20T12:31:44Z"
+      "updatedAt": "2026-06-23T22:11:29Z"
     },
     {
       "version": "2026.6.6",
@@ -2628,7 +2628,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/137",
       "createdAt": "2026-06-12T11:14:22Z",
-      "updatedAt": "2026-06-19T12:33:18Z"
+      "updatedAt": "2026-06-23T22:11:28Z"
     },
     {
       "version": "2026.6.8",
@@ -2670,7 +2670,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/141",
       "createdAt": "2026-06-16T17:39:17Z",
-      "updatedAt": "2026-06-23T12:36:30Z"
+      "updatedAt": "2026-06-23T22:11:28Z"
     },
     {
       "version": "2026.6.9",
@@ -2706,7 +2706,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/144",
       "createdAt": "2026-06-21T01:46:51Z",
-      "updatedAt": "2026-06-23T12:33:16Z"
+      "updatedAt": "2026-06-23T22:11:27Z"
     }
   ],
   "duplicates": {
@@ -2746,7 +2746,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/107",
         "createdAt": "2026-05-26T12:52:44Z",
-        "updatedAt": "2026-06-20T12:31:54Z"
+        "updatedAt": "2026-06-23T22:11:34Z"
       },
       {
         "version": "2026.5.22",
@@ -2800,7 +2800,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/92",
         "createdAt": "2026-05-24T05:17:09Z",
-        "updatedAt": "2026-06-16T04:38:15Z"
+        "updatedAt": "2026-06-23T22:11:41Z"
       }
     ],
     "openclaw:2026.5.20": [
@@ -2834,7 +2834,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/106",
         "createdAt": "2026-05-26T12:52:43Z",
-        "updatedAt": "2026-06-20T12:31:56Z"
+        "updatedAt": "2026-06-23T22:11:35Z"
       },
       {
         "version": "2026.5.20",
@@ -2858,7 +2858,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/90",
         "createdAt": "2026-05-21T21:29:28Z",
-        "updatedAt": "2026-06-16T04:38:17Z"
+        "updatedAt": "2026-06-23T22:11:42Z"
       }
     ],
     "openclaw:2026.5.19": [
@@ -2889,7 +2889,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/105",
         "createdAt": "2026-05-26T12:52:42Z",
-        "updatedAt": "2026-06-20T12:31:57Z"
+        "updatedAt": "2026-06-23T22:11:36Z"
       },
       {
         "version": "2026.5.19",
@@ -2912,7 +2912,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/89",
         "createdAt": "2026-05-20T20:40:06Z",
-        "updatedAt": "2026-06-16T04:38:19Z"
+        "updatedAt": "2026-06-23T22:11:43Z"
       }
     ],
     "openclaw:2026.5.18": [
@@ -2944,7 +2944,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/104",
         "createdAt": "2026-05-26T12:52:40Z",
-        "updatedAt": "2026-06-20T12:31:59Z"
+        "updatedAt": "2026-06-23T22:11:36Z"
       },
       {
         "version": "2026.5.18",
@@ -2983,7 +2983,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/88",
         "createdAt": "2026-05-18T19:31:20Z",
-        "updatedAt": "2026-06-16T04:38:21Z"
+        "updatedAt": "2026-06-23T22:11:44Z"
       }
     ],
     "openclaw:2026.5.12": [
@@ -3018,7 +3018,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/103",
         "createdAt": "2026-05-26T12:52:39Z",
-        "updatedAt": "2026-06-20T12:32:01Z"
+        "updatedAt": "2026-06-23T22:11:37Z"
       },
       {
         "version": "2026.5.12",
@@ -3039,7 +3039,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/82",
         "createdAt": "2026-05-14T18:33:07Z",
-        "updatedAt": "2026-06-16T04:38:23Z"
+        "updatedAt": "2026-06-23T22:11:45Z"
       }
     ],
     "openclaw:2026.5.7": [
@@ -3066,7 +3066,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/102",
         "createdAt": "2026-05-26T12:52:38Z",
-        "updatedAt": "2026-06-20T12:32:03Z"
+        "updatedAt": "2026-06-23T22:11:38Z"
       },
       {
         "version": "2026.5.7",
@@ -3100,7 +3100,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/79",
         "createdAt": "2026-05-07T21:18:49Z",
-        "updatedAt": "2026-06-16T04:38:25Z"
+        "updatedAt": "2026-06-23T22:11:45Z"
       }
     ],
     "openclaw:2026.5.6": [
@@ -3128,7 +3128,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/101",
         "createdAt": "2026-05-26T12:52:37Z",
-        "updatedAt": "2026-06-23T12:35:36Z"
+        "updatedAt": "2026-06-23T22:11:38Z"
       },
       {
         "version": "2026.5.6",
@@ -3157,7 +3157,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/78",
         "createdAt": "2026-05-06T18:29:33Z",
-        "updatedAt": "2026-06-16T04:38:27Z"
+        "updatedAt": "2026-06-23T22:11:46Z"
       }
     ],
     "openclaw:2026.5.5": [
@@ -3184,7 +3184,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/100",
         "createdAt": "2026-05-26T12:52:35Z",
-        "updatedAt": "2026-06-20T12:32:07Z"
+        "updatedAt": "2026-06-23T22:11:39Z"
       },
       {
         "version": "2026.5.5",
@@ -3210,7 +3210,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/77",
         "createdAt": "2026-05-06T09:44:54Z",
-        "updatedAt": "2026-06-16T04:38:28Z"
+        "updatedAt": "2026-06-23T22:11:47Z"
       }
     ],
     "openclaw:2026.5.4": [
@@ -3237,7 +3237,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/99",
         "createdAt": "2026-05-26T12:52:34Z",
-        "updatedAt": "2026-06-20T12:32:08Z"
+        "updatedAt": "2026-06-23T22:11:40Z"
       },
       {
         "version": "2026.5.4",
@@ -3261,7 +3261,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/76",
         "createdAt": "2026-05-05T08:41:02Z",
-        "updatedAt": "2026-06-16T04:38:30Z"
+        "updatedAt": "2026-06-23T22:11:47Z"
       }
     ],
     "openclaw:2026.5.3-1": [
@@ -3308,7 +3308,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/74",
         "createdAt": "2026-05-04T09:45:08Z",
-        "updatedAt": "2026-06-16T04:38:32Z"
+        "updatedAt": "2026-06-23T22:11:48Z"
       }
     ],
     "openclaw:2026.5.3": [
@@ -3361,7 +3361,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/73",
         "createdAt": "2026-05-04T07:57:31Z",
-        "updatedAt": "2026-06-16T04:38:34Z"
+        "updatedAt": "2026-06-23T22:11:49Z"
       }
     ],
     "openclaw:2026.5.2": [
@@ -3408,7 +3408,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/72",
         "createdAt": "2026-05-03T01:32:28Z",
-        "updatedAt": "2026-06-16T04:38:36Z"
+        "updatedAt": "2026-06-23T22:11:49Z"
       }
     ],
     "openclaw:2026.4.29": [
@@ -3449,7 +3449,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/69",
         "createdAt": "2026-04-30T21:19:38Z",
-        "updatedAt": "2026-06-16T04:38:38Z"
+        "updatedAt": "2026-06-23T22:11:50Z"
       }
     ],
     "openclaw:2026.4.27": [
@@ -3492,7 +3492,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/68",
         "createdAt": "2026-04-29T23:17:13Z",
-        "updatedAt": "2026-06-16T04:38:40Z"
+        "updatedAt": "2026-06-23T22:11:51Z"
       }
     ],
     "openclaw:2026.4.26": [
@@ -3533,7 +3533,7 @@
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/66",
         "createdAt": "2026-04-28T06:49:04Z",
-        "updatedAt": "2026-06-16T04:38:41Z"
+        "updatedAt": "2026-06-23T22:11:52Z"
       }
     ]
   }
