@@ -93,9 +93,10 @@ function safeIssueLabel(repo: string, number: number): string {
 
 function parseIssueRef(raw: string): { repo: string; number: number; url: string; issue: string } | null {
   const shorthand = raw.match(/^([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)#(\d+)$/);
+  const safeLabel = raw.match(/^([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+) issue (\d+)$/);
   const redirectUrl = raw.match(/^https:\/\/redirect\.github\.com\/([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)\/issues\/(\d+)$/);
   const directUrl = raw.match(/^https:\/\/github\.com\/([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)\/issues\/(\d+)$/);
-  const match = shorthand ?? redirectUrl ?? directUrl;
+  const match = shorthand ?? safeLabel ?? redirectUrl ?? directUrl;
   if (!match) return null;
   const repo = match[1];
   const number = Number(match[2]);
