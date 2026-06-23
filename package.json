@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "npm run check:no-backlinks && eslint",
+    "check:no-backlinks": "node scripts/check-no-github-backlinks.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

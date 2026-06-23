@@ -81,13 +81,29 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-function parseIssueRef(raw: string): { repo: string; number: number; url: string } | null {
-  const match = raw.match(/^([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)#(\d+)$/);
+function redirectGithubIssueUrl(repo: string, number: number): string {
+  return `https://redirect.github.com/${repo}/issues/${number}`;
+}
+
+function safeIssueLabel(repo: string, number: number): string {
+  // Avoid owner/repo#123 in generated data because GitHub auto-links that syntax
+  // when it appears in issues/comments, creating noisy upstream backlinks.
+  return `${repo} issue ${number}`;
+}
+
+function parseIssueRef(raw: string): { repo: string; number: number; url: string; issue: string } | null {
+  const shorthand = raw.match(/^([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)#(\d+)$/);
+  const redirectUrl = raw.match(/^https:\/\/redirect\.github\.com\/([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)\/issues\/(\d+)$/);
+  const directUrl = raw.match(/^https:\/\/github\.com\/([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)\/issues\/(\d+)$/);
+  const match = shorthand ?? redirectUrl ?? directUrl;
   if (!match) return null;
+  const repo = match[1];
+  const number = Number(match[2]);
   return {
-    repo: match[1],
-    number: Number(match[2]),
-    url: `https://github.com/${match[1]}/issues/${match[2]}`,
+    repo,
+    number,
+    url: redirectGithubIssueUrl(repo, number),
+    issue: safeIssueLabel(repo, number),
   };
 }
 
@@ -156,7 +172,6 @@ function normalizeStabilityScore(raw: unknown, thumbsUp: number, thumbsDown: num
     const penalty = Math.abs(Number(item.penalty ?? 0));
     const severity = Math.max(1, Math.min(5, Number(item.severity ?? Math.min(5, Math.max(1, penalty))))) as 1 | 2 | 3 | 4 | 5;
     return [{
-      issue: item.issue,
       ...ref,
       title: typeof item.title === "string" ? sanitizePublicText(item.title) : undefined,
       area: typeof item.area === "string" ? sanitizePublicText(item.area) : "unknown",

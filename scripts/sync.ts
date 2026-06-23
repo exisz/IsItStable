@@ -24,6 +24,11 @@ const FIXED_SPONSORS = [
 // Title format: [v2026.4.26] [OpenClaw] Is it stable?
 const TITLE_RE = /^\[v([^\]]+)\]\s*\[([^\]]+)\]/;
 const ISSUE_LINK_RE = /([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)#(\d+)/g;
+const GITHUB_ISSUE_URL_RE = /https:\/\/(?:github\.com|redirect\.github\.com)\/([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)\/issues\/(\d+)/g;
+
+function redirectGithubIssueUrl(repo: string, number: number): string {
+  return `https://redirect.github.com/${repo}/issues/${number}`;
+}
 
 interface VersionIssue {
   issueNumber: number;
@@ -184,15 +189,23 @@ function parseBody(body: string | null, thumbsUp: number, thumbsDown: number, ve
   const bqMatch = body.match(/^>\s*(.+)/m);
   if (bqMatch) result.verdictComment = sanitizePublicText(bqMatch[1].trim());
 
-  // Referenced issues
-  let m: RegExpExecArray | null;
-  const re = new RegExp(ISSUE_LINK_RE.source, "g");
-  while ((m = re.exec(body))) {
-    // Use redirect.github.com so IsItStable's generated evidence links do not
-    // create noisy GitHub backlinks on every upstream issue we reference.
-    result.referencedIssues.push({ repo: m[1], number: parseInt(m[2]), url: `https://redirect.github.com/${m[1]}/issues/${m[2]}` });
-  }
+  // Referenced issues. Store redirect.github.com URLs so generated evidence
+  // links never create noisy GitHub backlinks on upstream issues.
+  const seenRefs = new Set<string>();
+  const addRef = (repo: string, rawNumber: string) => {
+    const number = parseInt(rawNumber, 10);
+    const key = `${repo}#${number}`;
+    if (seenRefs.has(key)) return;
+    seenRefs.add(key);
+    result.referencedIssues.push({ repo, number, url: redirectGithubIssueUrl(repo, number) });
+  };
 
+  let m: RegExpExecArray | null;
+  const shorthandRe = new RegExp(ISSUE_LINK_RE.source, "g");
+  while ((m = shorthandRe.exec(body))) addRef(m[1], m[2]);
+
+  const urlRe = new RegExp(GITHUB_ISSUE_URL_RE.source, "g");
+  while ((m = urlRe.exec(body))) addRef(m[1], m[2]);
 
   const stabilityScore = parseStabilityBlock(body, thumbsUp, thumbsDown, verdict);
   if (stabilityScore) result.stabilityScore = stabilityScore;

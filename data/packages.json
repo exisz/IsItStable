@@ -161,156 +161,6 @@
           "number": 96079,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/96079",
           "title": "Anthropic models on Discord: reasoning (/reasoning on) and pre-tool narration (/verbose on) are produced but never surfaced in the channel"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95495,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95495",
-          "title": "[Bug]: 2026.6.9 silently relocates memory store with no migration, forcing a full re-embed (1499 files) with zero upgrade-time warning"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95547,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95547",
-          "title": "Codex app-server app closes before long maintenance turn completes; Gateway restart also terminates active turn without graceful recovery"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95515,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
-          "title": "Upgrade 2026.6.8→2026.6.9 corrupts email channel config with spurious groupAllowFrom field"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95280,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95280",
-          "title": "deepseek reasoning: final answer merges into the thinking block under /reasoning on (no discrete thinking_end at the reasoning→content transition)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95500,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95500",
-          "title": "[Bug]: Plugin model provider (opencode-go) cannot be resolved by isolated cron sessions, even though openclaw models lists it correctly and session_status model=default resolves it for existing sessions."
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95538,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95538",
-          "title": "Telegram rich messages: /status card collapses into one run-on line (newlines lost) on 2026.6.9"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95525,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95525",
-          "title": "Telegram /status slash command does not respond while Discord /status works"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95526,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95526",
-          "title": "[Bug] v2026.6.9 QQBot: long markdown reply is split into N independent bubbles (one per chunk), not a single message"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95533,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95533",
-          "title": "WeCom: separated text+file dual-stream deadlock (regression 2026.5.2→2026.6.6, partial fix in 2026.6.9)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95658,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95658",
-          "title": "[Bug]: 2026.6.9 breaks Groq voice transcription — \"Media provider not available: groq\" (externalized provider plugin not auto-installed)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95750,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95750",
-          "title": "[Bug]: Main-session restart-recovery has no cross-boot retry budget — wedged sessions death-loop the gateway across reboots (2026.6.9)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95765,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95765",
-          "title": "bug(onboard): external provider plugin install loops and skips selected auth flow"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95696,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95696",
-          "title": "[Bug]: Compaction resets session model override to previous provider"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95740,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95740",
-          "title": "[Bug]: google-vertex model_not_found at runtime with authorized_user ADC — regression persists after #90609"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95685,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95685",
-          "title": "Session Workspace Rail marks non-workspace files as missing"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95597,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95597",
-          "title": "Codex native post_tool_use relay skips agentToolResultMiddleware"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95895,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95895",
-          "title": "[Security]: GEMINI_API_KEY written as a plaintext literal in the generated systemd service unit"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95915,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95915",
-          "title": "Heap not released on embedded run abort (released=0); session write lock persists after abort cleanup"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 96046,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/96046",
-          "title": "Gateway 'plugins.slots.memory: plugin not found' for an extensions/ plugin present in plugins list — 2026.6.9 regression"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95904,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95904",
-          "title": "[Bug]: Non-Codex fallback models fail code-mode tool calls with internal_error in 2026.6.9"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 96007,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/96007",
-          "title": "Discord: subsequent message content truncated after inline error text"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 96098,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/96098",
-          "title": "[Bug]: Telegram inline buttons stopped working after update to 2026.6.9"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95878,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95878",
-          "title": "[Bug]: Telegram long-message auto-split regression still present in 2026.6.9 — 5 truncations in a single session; default config; reproducible"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 95891,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/95891",
-          "title": "[Bug]: opencode-go/minimax-m3 thinking content leaks to channel via Anthropic Messages path"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 96079,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/96079",
-          "title": "Anthropic models on Discord: reasoning (/reasoning on) and pre-tool narration (/verbose on) are produced but never surfaced in the channel"
         }
       ],
       "stabilityScore": {
@@ -355,10 +205,10 @@
         ],
         "evidence": [
           {
-            "issue": "openclaw/openclaw#95495",
             "repo": "openclaw/openclaw",
             "number": 95495,
-            "url": "https://github.com/openclaw/openclaw/issues/95495",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95495",
+            "issue": "openclaw/openclaw issue 95495",
             "area": "memory",
             "type": "kernel",
             "severity": 5,
@@ -366,10 +216,10 @@
             "reason": "Memory store silently relocated on 6.8->6.9 with no migration, forcing a full re-embed (1499 files)"
           },
           {
-            "issue": "openclaw/openclaw#95547",
             "repo": "openclaw/openclaw",
             "number": 95547,
-            "url": "https://github.com/openclaw/openclaw/issues/95547",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95547",
+            "issue": "openclaw/openclaw issue 95547",
             "area": "runtime",
             "type": "kernel",
             "severity": 4,
@@ -377,10 +227,10 @@
             "reason": "Codex app-server app closes before long maintenance turn completes; Gateway restart also kills active turn without graceful recovery"
           },
           {
-            "issue": "openclaw/openclaw#95515",
             "repo": "openclaw/openclaw",
             "number": 95515,
-            "url": "https://github.com/openclaw/openclaw/issues/95515",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
+            "issue": "openclaw/openclaw issue 95515",
             "area": "config",
             "type": "runtime",
             "severity": 3,
@@ -388,10 +238,10 @@
             "reason": "Upgrade 6.8->6.9 corrupts email channel config with spurious groupAllowFrom field"
           },
           {
-            "issue": "openclaw/openclaw#95280",
             "repo": "openclaw/openclaw",
             "number": 95280,
-            "url": "https://github.com/openclaw/openclaw/issues/95280",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95280",
+            "issue": "openclaw/openclaw issue 95280",
             "area": "reasoning",
             "type": "tool",
             "severity": 2,
@@ -399,10 +249,10 @@
             "reason": "OpenAI-completions reasoning merges into the answer; thinking_end only fires at end-of-stream (confirmed on v2026.6.9 c645ec4)"
           },
           {
-            "issue": "openclaw/openclaw#95500",
             "repo": "openclaw/openclaw",
             "number": 95500,
-            "url": "https://github.com/openclaw/openclaw/issues/95500",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95500",
+            "issue": "openclaw/openclaw issue 95500",
             "area": "plugin",
             "type": "tool",
             "severity": 2,
@@ -410,10 +260,10 @@
             "reason": "Plugin model provider (opencode-go) cannot be resolved by isolated cron runs; always falls back to deepseek"
           },
           {
-            "issue": "openclaw/openclaw#95538",
             "repo": "openclaw/openclaw",
             "number": 95538,
-            "url": "https://github.com/openclaw/openclaw/issues/95538",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95538",
+            "issue": "openclaw/openclaw issue 95538",
             "area": "telegram",
             "type": "channel-specific",
             "severity": 1,
@@ -421,10 +271,10 @@
             "reason": "Telegram /status card collapses into one run-on line (newlines lost) with richMessages on"
           },
           {
-            "issue": "openclaw/openclaw#95525",
             "repo": "openclaw/openclaw",
             "number": 95525,
-            "url": "https://github.com/openclaw/openclaw/issues/95525",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95525",
+            "issue": "openclaw/openclaw issue 95525",
             "area": "telegram",
             "type": "channel-specific",
             "severity": 1,
@@ -432,10 +282,10 @@
             "reason": "Telegram /status native command does not respond (polling) while Discord /status works on the same agent"
           },
           {
-            "issue": "openclaw/openclaw#95526",
             "repo": "openclaw/openclaw",
             "number": 95526,
-            "url": "https://github.com/openclaw/openclaw/issues/95526",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95526",
+            "issue": "openclaw/openclaw issue 95526",
             "area": "qqbot",
             "type": "channel-specific",
             "severity": 1,
@@ -443,10 +293,10 @@
             "reason": "QQBot splits a long markdown reply into N independent bubbles instead of one message"
           },
           {
-            "issue": "openclaw/openclaw#95533",
             "repo": "openclaw/openclaw",
             "number": 95533,
-            "url": "https://github.com/openclaw/openclaw/issues/95533",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95533",
+            "issue": "openclaw/openclaw issue 95533",
             "area": "wecom",
             "type": "channel-specific",
             "severity": 1,
@@ -454,10 +304,10 @@
             "reason": "WeCom separated text+file dual-stream deadlock; 6.9 fixed the mixed branch but not the separated text+file branch"
           },
           {
-            "issue": "openclaw/openclaw#95658",
             "repo": "openclaw/openclaw",
             "number": 95658,
-            "url": "https://github.com/openclaw/openclaw/issues/95658",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95658",
+            "issue": "openclaw/openclaw issue 95658",
             "area": "voice",
             "type": "tool-specific",
             "severity": 2,
@@ -465,10 +315,10 @@
             "reason": "Groq voice transcription fails on 2026.6.9 after provider externalization; voice notes arrive empty unless external provider plugin path is repaired."
           },
           {
-            "issue": "openclaw/openclaw#95750",
             "repo": "openclaw/openclaw",
             "number": 95750,
-            "url": "https://github.com/openclaw/openclaw/issues/95750",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95750",
+            "issue": "openclaw/openclaw issue 95750",
             "area": "gateway",
             "type": "kernel",
             "severity": 5,
@@ -476,10 +326,10 @@
             "reason": "Main-session restart recovery can death-loop the gateway across reboots with no persistent retry budget on 2026.6.9."
           },
           {
-            "issue": "openclaw/openclaw#95765",
             "repo": "openclaw/openclaw",
             "number": 95765,
-            "url": "https://github.com/openclaw/openclaw/issues/95765",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95765",
+            "issue": "openclaw/openclaw issue 95765",
             "area": "provider-routing",
             "type": "runtime",
             "severity": 2,
@@ -487,10 +337,10 @@
             "reason": "First-time external provider setup installs DeepSeek plugin but skips the selected API-key/auth flow on 2026.6.9."
           },
           {
-            "issue": "openclaw/openclaw#95696",
             "repo": "openclaw/openclaw",
             "number": 95696,
-            "url": "https://github.com/openclaw/openclaw/issues/95696",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95696",
+            "issue": "openclaw/openclaw issue 95696",
             "area": "compaction",
             "type": "runtime",
             "severity": 3,
@@ -498,10 +348,10 @@
             "reason": "Compaction resets a session model override to a previous provider, so UI model state diverges from actual calls on 2026.6.9."
           },
           {
-            "issue": "openclaw/openclaw#95740",
             "repo": "openclaw/openclaw",
             "number": 95740,
-            "url": "https://github.com/openclaw/openclaw/issues/95740",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95740",
+            "issue": "openclaw/openclaw issue 95740",
             "area": "provider-routing",
             "type": "runtime",
             "severity": 3,
@@ -509,10 +359,10 @@
             "reason": "Google Vertex authorized_user runtime routing remains broken on 2026.6.9 despite earlier catalog fixes."
           },
           {
-            "issue": "openclaw/openclaw#95685",
             "repo": "openclaw/openclaw",
             "number": 95685,
-            "url": "https://github.com/openclaw/openclaw/issues/95685",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95685",
+            "issue": "openclaw/openclaw issue 95685",
             "area": "ui",
             "type": "runtime",
             "severity": 1,
@@ -520,10 +370,10 @@
             "reason": "Session Workspace Rail marks readable non-workspace files as missing on 2026.6.9."
           },
           {
-            "issue": "openclaw/openclaw#95597",
             "repo": "openclaw/openclaw",
             "number": 95597,
-            "url": "https://github.com/openclaw/openclaw/issues/95597",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95597",
+            "issue": "openclaw/openclaw issue 95597",
             "area": "codex",
             "type": "runtime",
             "severity": 2,
@@ -531,10 +381,10 @@
             "reason": "Codex native post_tool_use relay skips agentToolResultMiddleware, so Tokenjuice artifact capture stops on 2026.6.9."
           },
           {
-            "issue": "openclaw/openclaw#95895",
             "repo": "openclaw/openclaw",
             "number": 95895,
-            "url": "https://github.com/openclaw/openclaw/issues/95895",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95895",
+            "issue": "openclaw/openclaw issue 95895",
             "area": "security",
             "type": "kernel",
             "severity": 5,
@@ -542,10 +392,10 @@
             "reason": "GEMINI_API_KEY written as a plaintext literal in the generated systemd service unit on 2026.6.9, exposing it via systemctl show / process env / crash reporters while all other provider secrets use managed runtime injection."
           },
           {
-            "issue": "openclaw/openclaw#95915",
             "repo": "openclaw/openclaw",
             "number": 95915,
-            "url": "https://github.com/openclaw/openclaw/issues/95915",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95915",
+            "issue": "openclaw/openclaw issue 95915",
             "area": "runtime",
             "type": "kernel",
             "severity": 4,
@@ -553,10 +403,10 @@
             "reason": "Heap not released on embedded run abort (released=0) and the session write lock persists after abort cleanup on 2026.6.9, causing gradual memory exhaustion that requires periodic forced restarts."
           },
           {
-            "issue": "openclaw/openclaw#96046",
             "repo": "openclaw/openclaw",
             "number": 96046,
-            "url": "https://github.com/openclaw/openclaw/issues/96046",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96046",
+            "issue": "openclaw/openclaw issue 96046",
             "area": "gateway",
             "type": "runtime",
             "severity": 3,
@@ -564,10 +414,10 @@
             "reason": "Gateway rejects a valid config at startup with plugins.slots.memory: plugin not found for an extensions/ plugin present in the plugins list — 2026.6.9 regression; 2026.6.8 is unaffected."
           },
           {
-            "issue": "openclaw/openclaw#95904",
             "repo": "openclaw/openclaw",
             "number": 95904,
-            "url": "https://github.com/openclaw/openclaw/issues/95904",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95904",
+            "issue": "openclaw/openclaw issue 95904",
             "area": "runtime",
             "type": "runtime",
             "severity": 3,
@@ -575,10 +425,10 @@
             "reason": "Non-Codex fallback models enter code-mode but fail a trivial tool call with internal_error on 2026.6.9, breaking the automatic fallback chain instead of executing or falling through."
           },
           {
-            "issue": "openclaw/openclaw#96007",
             "repo": "openclaw/openclaw",
             "number": 96007,
-            "url": "https://github.com/openclaw/openclaw/issues/96007",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96007",
+            "issue": "openclaw/openclaw issue 96007",
             "area": "discord",
             "type": "channel-specific",
             "severity": 2,
@@ -586,10 +436,10 @@
             "reason": "Discord silently truncates all message content after an inline error line, dropping recommendations/next-steps on 2026.6.9."
           },
           {
-            "issue": "openclaw/openclaw#96098",
             "repo": "openclaw/openclaw",
             "number": 96098,
-            "url": "https://github.com/openclaw/openclaw/issues/96098",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96098",
+            "issue": "openclaw/openclaw issue 96098",
             "area": "telegram",
             "type": "channel-specific",
             "severity": 1,
@@ -597,10 +447,10 @@
             "reason": "Telegram inline buttons stopped working after update to 2026.6.9 (inlineQueries=false); buttons render as plain text."
           },
           {
-            "issue": "openclaw/openclaw#95878",
             "repo": "openclaw/openclaw",
             "number": 95878,
-            "url": "https://github.com/openclaw/openclaw/issues/95878",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95878",
+            "issue": "openclaw/openclaw issue 95878",
             "area": "telegram",
             "type": "channel-specific",
             "severity": 1,
@@ -608,10 +458,10 @@
             "reason": "Telegram long-message auto-split regression still present in 2026.6.9 — multiple truncations in a single session on default config."
           },
           {
-            "issue": "openclaw/openclaw#95891",
             "repo": "openclaw/openclaw",
             "number": 95891,
-            "url": "https://github.com/openclaw/openclaw/issues/95891",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95891",
+            "issue": "openclaw/openclaw issue 95891",
             "area": "provider-routing",
             "type": "channel-specific",
             "severity": 1,
@@ -619,10 +469,10 @@
             "reason": "opencode-go/minimax-m3 thinking content leaks to channel via the Anthropic Messages path on 2026.6.9."
           },
           {
-            "issue": "openclaw/openclaw#96079",
             "repo": "openclaw/openclaw",
             "number": 96079,
-            "url": "https://github.com/openclaw/openclaw/issues/96079",
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96079",
+            "issue": "openclaw/openclaw issue 96079",
             "area": "discord",
             "type": "channel-specific",
             "severity": 1,
@@ -912,270 +762,6 @@
           "number": 50775,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50775",
           "title": "[Bug]: Visual Ghosting/Text Overlapping on Telegram macOS App during Streaming Updates"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49578,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49578",
-          "title": "[Bug]: execute_code (Python) bypasses agent file edit restrictions"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49627,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49627",
-          "title": "[Setup]: initializing agent... Failed to initialize agent: init_agent() got an unexpected keyword argument 'event_callback'"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49305,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49305",
-          "title": "[Bug]: Desktop messages disappear with profile + codex_app_server runtime"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49590,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49590",
-          "title": "[BUG] 0.17 regression: .env op:// secret refs override resolved cache during gateway startup"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49490,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49490",
-          "title": "[Bug]: OpenCode Zen provider does not work on v0.17.0"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49283,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49283",
-          "title": "execute_code consent gate does not recognize explicit chat consent in desktop GUI"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 47868,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47868",
-          "title": "Strict chat-completions providers reject leaked messages[].timestamp metadata"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49606,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49606",
-          "title": "feat(desktop): detect failed in-app update and guide user to terminal fallback"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49561,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49561",
-          "title": "[Bug]: Regression - WhatsApp bridge cannot be installed"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49529,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49529",
-          "title": "[Bug]: PyPI 0.17.0 wheel install: doctor false-positive venv entry point warning and optional-skills missing from wheel"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49297,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49297",
-          "title": "[Bug]: Hermes fails to work using gemma4 with ollama backend"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49242,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
-          "title": "[Bug]: Windows: WhatsApp gateway and Desktop updater should prefer Hermes-managed Node/npm over system PATH"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49745,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49745",
-          "title": "[Bug]: Cmd/Ctrl+Z skips paste in desktop composer — pastes have no contentEditable undo entry"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49732,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49732",
-          "title": "[Bug]: Dashboard \"Switch model?\" dialog — Cancel doesn't undo, fires with no active chat, badge flips before user decides"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49600,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49600",
-          "title": "[Bug]: UI Layout Issue – Audio Icon Clipping"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49536,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49536",
-          "title": "Bug: Telegram finalize message text overlap due to parse_mode mutation"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49294,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49294",
-          "title": "[Windows Desktop] Cmd+K Restart Gateway opens CMD window when gateway was installed as system service"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49253,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
-          "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50394,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50394",
-          "title": "A single failing stdio MCP server churns the whole MCP bridge — healthy servers' tools become \"Unknown tool\" at runtime"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49903,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49903",
-          "title": "bug(desktop): v0.17.0 throws \"Uncaught Error: Composer is not available\" — input becomes unresponsive after upgrade"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50199,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50199",
-          "title": "[Bug]: delegation.base_url ignored at runtime — _load_config() returns empty CLI_CONFIG block over correct config.yaml"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49976,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49976",
-          "title": "hermes update: ZIP-fallback path drops Windows gateway resume, leaving stale gateway_state.json that bombs every restart with weixin-bot-token_lock for 5s"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49961,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49961",
-          "title": "[Bug]: Tool calls never invoked in conversation flow despite tools configured — reproduced with Mistral Nemotron and Qwen3-Next across NVIDIA NIM and OpenRouter"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50252,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50252",
-          "title": "[Bug]: GitHub Copilot provider returns \"empty base URL\" on every inference (v0.17.0, token valid, 12 models detected)"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50209,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50209",
-          "title": "Desktop boot hangs at ~94%: waitForHermes /api/status probe times out -> backend respawn loop (native Windows + WSL2)"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50395,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50395",
-          "title": "`hermes mcp test <server>` uses a different environment (PATH) than the gateway's MCP spawn — false \"healthy\" result"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50205,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50205",
-          "title": "Docker image missing lark-oapi — Feishu channel silently fails to connect"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50210,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50210",
-          "title": "Windows bootstrap installer produces unsigned Hermes.exe blocked by Smart App Control"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49982,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49982",
-          "title": "[Bug]: [Desktop] Windows: Timed out connecting to Hermes backend after 15000ms, CLI works fine"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50404,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50404",
-          "title": "[Bug]: Discord config is not profile-isolated"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50175,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50175",
-          "title": "[Bug]: Deleting a profile fails when dashboard/gateway child processes are alive; profile reappears after every restart until full reboot"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49870,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49870",
-          "title": "[Bug]: '→ ready' button on Done tasks triggers false diagnostic and respawn guard blocks dispatcher"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50229,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50229",
-          "title": "[Bug]: Silent fallback failover - buffered status dropped on success, agent runs as wrong model with no notification"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49955,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49955",
-          "title": "[Bug]: Kanban inline create form field labels truncated — \"specifier\" shows as \"specifi\", \"assignee\" as \"assigne\""
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 49908,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49908",
-          "title": "[Bug]: Drag-and-drop to Done column on  tasks shows completion prompt then silently reverts"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50765,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50765",
-          "title": "[Bug]:  ACP `session/prompt` hangs after `conversation turn` on Windows — 0.17.0 regression; 0.16.0 works"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50806,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50806",
-          "title": "[Bug]: Hermes Agent hangs after detached child-process tool call"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50734,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50734",
-          "title": "[Bug]: Agent ignores all safety directives and exfiltrates full .env credentials to LLM providers via read_file tool"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50807,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50807",
-          "title": "[Bug]: Hermes Agent forwards very large shell output to the provider"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50794,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50794",
-          "title": "[Bug]: Hermes Desktop crashes on launch with EXC_BREAKPOINT (SIGTRAP) in fontations_ffi on macOS 26.5"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50823,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50823",
-          "title": "[Bug]: Desktop build hard fails with \"could not determine git commit\" on non-git checkouts (Windows native)"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50966,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50966",
-          "title": "[Bug]: browser_vision tool in desktop GUI always routes to browser_scroll"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50769,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50769",
-          "title": "[Bug]: Installer detects Python 3.12 fallback but still uses 3.11 for venv creation (fails)"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 50775,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50775",
-          "title": "[Bug]: Visual Ghosting/Text Overlapping on Telegram macOS App during Streaming Updates"
         }
       ],
       "stabilityScore": {
@@ -1185,18 +771,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 107,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "survivalDays": 4,
+        "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 107,
           "votePenalty": 0,
-          "survivalDays": 3,
+          "survivalDays": 4,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 4,
+          "survivalBonus": 12,
           "curatedBonus": 0,
           "score": -107
         },
@@ -1227,10 +813,10 @@
         ],
         "evidence": [
           {
-            "issue": "NousResearch/hermes-agent#49578",
             "repo": "NousResearch/hermes-agent",
             "number": 49578,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49578",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49578",
+            "issue": "NousResearch/hermes-agent issue 49578",
             "area": "approval-boundary",
             "type": "kernel",
             "severity": 5,
@@ -1238,10 +824,10 @@
             "reason": "v0.17.0 execute_code can bypass agent file edit restrictions and write outside the allowed edit path."
           },
           {
-            "issue": "NousResearch/hermes-agent#49627",
             "repo": "NousResearch/hermes-agent",
             "number": 49627,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49627",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49627",
+            "issue": "NousResearch/hermes-agent issue 49627",
             "area": "runtime",
             "type": "runtime",
             "severity": 4,
@@ -1249,10 +835,10 @@
             "reason": "v0.17.0 setup can fail during agent initialization with init_agent() receiving an unexpected event_callback argument."
           },
           {
-            "issue": "NousResearch/hermes-agent#49305",
             "repo": "NousResearch/hermes-agent",
             "number": 49305,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49305",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49305",
+            "issue": "NousResearch/hermes-agent issue 49305",
             "area": "message-delivery",
             "type": "runtime",
             "severity": 4,
@@ -1260,10 +846,10 @@
             "reason": "Hermes Desktop/TUI on v0.17.0 can lose a user message and persist no assistant response when an additional profile uses codex_app_server."
           },
           {
-            "issue": "NousResearch/hermes-agent#49590",
             "repo": "NousResearch/hermes-agent",
             "number": 49590,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49590",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49590",
+            "issue": "NousResearch/hermes-agent issue 49590",
             "area": "auth",
             "type": "runtime",
             "severity": 3,
@@ -1271,10 +857,10 @@
             "reason": "v0.17.0 gateway startup can prefer literal op:// secret references over resolved cached values, breaking secret-backed channels."
           },
           {
-            "issue": "NousResearch/hermes-agent#49490",
             "repo": "NousResearch/hermes-agent",
             "number": 49490,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49490",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49490",
+            "issue": "NousResearch/hermes-agent issue 49490",
             "area": "opencode",
             "type": "runtime",
             "severity": 3,
@@ -1282,10 +868,10 @@
             "reason": "OpenCode Zen provider calls fail after updating to v0.17.0, breaking that provider path."
           },
           {
-            "issue": "NousResearch/hermes-agent#49283",
             "repo": "NousResearch/hermes-agent",
             "number": 49283,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49283",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49283",
+            "issue": "NousResearch/hermes-agent issue 49283",
             "area": "approval-boundary",
             "type": "kernel",
             "severity": 3,
@@ -1293,10 +879,10 @@
             "reason": "v0.17.0 desktop execute_code consent gate still rejects an explicitly consented code execution request."
           },
           {
-            "issue": "NousResearch/hermes-agent#47868",
             "repo": "NousResearch/hermes-agent",
             "number": 47868,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/47868",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/47868",
+            "issue": "NousResearch/hermes-agent issue 47868",
             "area": "provider-routing",
             "type": "runtime",
             "severity": 3,
@@ -1304,10 +890,10 @@
             "reason": "Strict chat-completions providers on v0.17.0 reject leaked messages[].timestamp metadata with HTTP 400s."
           },
           {
-            "issue": "NousResearch/hermes-agent#49606",
             "repo": "NousResearch/hermes-agent",
             "number": 49606,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49606",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49606",
+            "issue": "NousResearch/hermes-agent issue 49606",
             "area": "update-system",
             "type": "runtime",
             "severity": 2,
@@ -1315,10 +901,10 @@
             "reason": "Windows Desktop v0.17.0 update flow can leave users with a mismatched backend/desktop state after silent GUI update failure."
           },
           {
-            "issue": "NousResearch/hermes-agent#49561",
             "repo": "NousResearch/hermes-agent",
             "number": 49561,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49561",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49561",
+            "issue": "NousResearch/hermes-agent issue 49561",
             "area": "whatsapp",
             "type": "channel-specific",
             "severity": 2,
@@ -1326,10 +912,10 @@
             "reason": "v0.17.0 regression can prevent installing the WhatsApp bridge in Docker environments."
           },
           {
-            "issue": "NousResearch/hermes-agent#49529",
             "repo": "NousResearch/hermes-agent",
             "number": 49529,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49529",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49529",
+            "issue": "NousResearch/hermes-agent issue 49529",
             "area": "installer",
             "type": "tool-specific",
             "severity": 2,
@@ -1337,10 +923,10 @@
             "reason": "The v0.17.0 PyPI wheel install has a doctor false-positive and omits optional-skills from the wheel package."
           },
           {
-            "issue": "NousResearch/hermes-agent#49297",
             "repo": "NousResearch/hermes-agent",
             "number": 49297,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49297",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49297",
+            "issue": "NousResearch/hermes-agent issue 49297",
             "area": "provider-routing",
             "type": "tool-specific",
             "severity": 2,
@@ -1348,10 +934,10 @@
             "reason": "Gemma4 through the Ollama backend still hits near-immediate finish_reason=length truncation on v0.17.0."
           },
           {
-            "issue": "NousResearch/hermes-agent#49242",
             "repo": "NousResearch/hermes-agent",
             "number": 49242,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49242",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49242",
+            "issue": "NousResearch/hermes-agent issue 49242",
             "area": "windows-runtime",
             "type": "runtime",
             "severity": 2,
@@ -1359,10 +945,10 @@
             "reason": "Windows WhatsApp gateway and updater paths on v0.17.0 can use system Node/npm instead of Hermes-managed tooling."
           },
           {
-            "issue": "NousResearch/hermes-agent#49745",
             "repo": "NousResearch/hermes-agent",
             "number": 49745,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49745",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49745",
+            "issue": "NousResearch/hermes-agent issue 49745",
             "area": "desktop-ui",
             "type": "tool-specific",
             "severity": 1,
@@ -1370,10 +956,10 @@
             "reason": "Desktop v0.17.0 composer undo skips pasted content because paste operations lack a contentEditable undo entry."
           },
           {
-            "issue": "NousResearch/hermes-agent#49732",
             "repo": "NousResearch/hermes-agent",
             "number": 49732,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49732",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49732",
+            "issue": "NousResearch/hermes-agent issue 49732",
             "area": "model-routing",
             "type": "tool-specific",
             "severity": 1,
@@ -1381,10 +967,10 @@
             "reason": "v0.17.0 dashboard model-switch dialog can fire with no active chat and flip the badge before the user decides."
           },
           {
-            "issue": "NousResearch/hermes-agent#49600",
             "repo": "NousResearch/hermes-agent",
             "number": 49600,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49600",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49600",
+            "issue": "NousResearch/hermes-agent issue 49600",
             "area": "desktop-ui",
             "type": "tool-specific",
             "severity": 1,
@@ -1392,10 +978,10 @@
             "reason": "v0.17.0 desktop UI can clip the audio icon on Windows."
           },
           {
-            "issue": "NousResearch/hermes-agent#49536",
             "repo": "NousResearch/hermes-agent",
             "number": 49536,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49536",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49536",
+            "issue": "NousResearch/hermes-agent issue 49536",
             "area": "telegram",
             "type": "channel-specific",
             "severity": 1,
@@ -1403,10 +989,10 @@
             "reason": "Telegram finalize messages on v0.17.0 can overlap text because parse_mode mutation falls back incorrectly."
           },
           {
-            "issue": "NousResearch/hermes-agent#49294",
             "repo": "NousResearch/hermes-agent",
             "number": 49294,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49294",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49294",
+            "issue": "NousResearch/hermes-agent issue 49294",
             "area": "gateway-service",
             "type": "tool-specific",
             "severity": 1,
@@ -1414,10 +1000,10 @@
             "reason": "Windows Desktop restart gateway action on v0.17.0 opens a persistent CMD window instead of restarting the installed headless service."
           },
           {
-            "issue": "NousResearch/hermes-agent#49253",
             "repo": "NousResearch/hermes-agent",
             "number": 49253,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49253",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
+            "issue": "NousResearch/hermes-agent issue 49253",
             "area": "imessage",
             "type": "channel-specific",
             "severity": 1,
@@ -1425,10 +1011,10 @@
             "reason": "Photon iMessage on v0.17.0 corrupts Unicode when Markdown bold formatting is present."
           },
           {
-            "issue": "NousResearch/hermes-agent#50394",
             "repo": "NousResearch/hermes-agent",
             "number": 50394,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50394",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50394",
+            "issue": "NousResearch/hermes-agent issue 50394",
             "area": "mcp",
             "type": "runtime",
             "severity": 4,
@@ -1436,10 +1022,10 @@
             "reason": "v0.17.0 MCP bridge can churn after one failing stdio server, leaving healthy servers' tools as unknown at runtime."
           },
           {
-            "issue": "NousResearch/hermes-agent#49903",
             "repo": "NousResearch/hermes-agent",
             "number": 49903,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49903",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49903",
+            "issue": "NousResearch/hermes-agent issue 49903",
             "area": "desktop-ui",
             "type": "runtime",
             "severity": 3,
@@ -1447,10 +1033,10 @@
             "reason": "v0.17.0 Desktop can throw Composer is not available after upgrade, making the composer input unresponsive."
           },
           {
-            "issue": "NousResearch/hermes-agent#50199",
             "repo": "NousResearch/hermes-agent",
             "number": 50199,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50199",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50199",
+            "issue": "NousResearch/hermes-agent issue 50199",
             "area": "provider-routing",
             "type": "runtime",
             "severity": 3,
@@ -1458,10 +1044,10 @@
             "reason": "v0.17.0 delegation.base_url can be ignored at runtime, forcing incorrect provider endpoint resolution."
           },
           {
-            "issue": "NousResearch/hermes-agent#49976",
             "repo": "NousResearch/hermes-agent",
             "number": 49976,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49976",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49976",
+            "issue": "NousResearch/hermes-agent issue 49976",
             "area": "update-system",
             "type": "runtime",
             "severity": 3,
@@ -1469,10 +1055,10 @@
             "reason": "v0.17.0 Windows ZIP-fallback update path can drop gateway resume state and make restarts fail on stale gateway_state.json."
           },
           {
-            "issue": "NousResearch/hermes-agent#49961",
             "repo": "NousResearch/hermes-agent",
             "number": 49961,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49961",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49961",
+            "issue": "NousResearch/hermes-agent issue 49961",
             "area": "provider-routing",
             "type": "runtime",
             "severity": 3,
@@ -1480,10 +1066,10 @@
             "reason": "v0.17.0 reports configured tools not being invoked across NVIDIA NIM and OpenRouter conversation flows."
           },
           {
-            "issue": "NousResearch/hermes-agent#50252",
             "repo": "NousResearch/hermes-agent",
             "number": 50252,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50252",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50252",
+            "issue": "NousResearch/hermes-agent issue 50252",
             "area": "provider-routing",
             "type": "runtime",
             "severity": 3,
@@ -1491,10 +1077,10 @@
             "reason": "v0.17.0 GitHub Copilot provider can return an empty base URL on every inference despite a valid token and detected models."
           },
           {
-            "issue": "NousResearch/hermes-agent#50209",
             "repo": "NousResearch/hermes-agent",
             "number": 50209,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50209",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50209",
+            "issue": "NousResearch/hermes-agent issue 50209",
             "area": "desktop-ui",
             "type": "runtime",
             "severity": 3,
@@ -1502,10 +1088,10 @@
             "reason": "v0.17.0 Desktop boot can hang around the backend status probe even while the CLI itself is healthy."
           },
           {
-            "issue": "NousResearch/hermes-agent#50395",
             "repo": "NousResearch/hermes-agent",
             "number": 50395,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50395",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50395",
+            "issue": "NousResearch/hermes-agent issue 50395",
             "area": "mcp",
             "type": "tool-specific",
             "severity": 2,
@@ -1513,10 +1099,10 @@
             "reason": "v0.17.0 hermes mcp test can report a server healthy under a different PATH than the gateway MCP spawn actually uses."
           },
           {
-            "issue": "NousResearch/hermes-agent#50205",
             "repo": "NousResearch/hermes-agent",
             "number": 50205,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50205",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50205",
+            "issue": "NousResearch/hermes-agent issue 50205",
             "area": "feishu",
             "type": "channel-specific",
             "severity": 2,
@@ -1524,10 +1110,10 @@
             "reason": "v0.17.0 Docker image can miss lark-oapi, causing the Feishu channel to fail at connect time."
           },
           {
-            "issue": "NousResearch/hermes-agent#50210",
             "repo": "NousResearch/hermes-agent",
             "number": 50210,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50210",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50210",
+            "issue": "NousResearch/hermes-agent issue 50210",
             "area": "installer",
             "type": "runtime",
             "severity": 2,
@@ -1535,10 +1121,10 @@
             "reason": "v0.17.0 Windows bootstrap can produce an unsigned Hermes.exe blocked by Smart App Control."
           },
           {
-            "issue": "NousResearch/hermes-agent#49982",
             "repo": "NousResearch/hermes-agent",
             "number": 49982,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49982",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49982",
+            "issue": "NousResearch/hermes-agent issue 49982",
             "area": "desktop-ui",
             "type": "runtime",
             "severity": 2,
@@ -1546,10 +1132,10 @@
             "reason": "v0.17.0 Windows Desktop can time out connecting to the backend while the CLI still works."
           },
           {
-            "issue": "NousResearch/hermes-agent#50404",
             "repo": "NousResearch/hermes-agent",
             "number": 50404,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50404",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50404",
+            "issue": "NousResearch/hermes-agent issue 50404",
             "area": "discord",
             "type": "channel-specific",
             "severity": 2,
@@ -1557,10 +1143,10 @@
             "reason": "v0.17.0 Discord config is not profile-isolated, allowing channel state to bleed across profiles."
           },
           {
-            "issue": "NousResearch/hermes-agent#50175",
             "repo": "NousResearch/hermes-agent",
             "number": 50175,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50175",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50175",
+            "issue": "NousResearch/hermes-agent issue 50175",
             "area": "config-profiles",
             "type": "runtime",
             "severity": 2,
@@ -1568,10 +1154,10 @@
             "reason": "v0.17.0 profile deletion can fail while dashboard/gateway child processes are alive, making profiles reappear until reboot."
           },
           {
-            "issue": "NousResearch/hermes-agent#49870",
             "repo": "NousResearch/hermes-agent",
             "number": 49870,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49870",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49870",
+            "issue": "NousResearch/hermes-agent issue 49870",
             "area": "dashboard",
             "type": "tool-specific",
             "severity": 2,
@@ -1579,10 +1165,10 @@
             "reason": "v0.17.0 task Done/ready flow can trigger a false diagnostic and then get blocked by the respawn guard."
           },
           {
-            "issue": "NousResearch/hermes-agent#50229",
             "repo": "NousResearch/hermes-agent",
             "number": 50229,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50229",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50229",
+            "issue": "NousResearch/hermes-agent issue 50229",
             "area": "model-routing",
             "type": "runtime",
             "severity": 2,
@@ -1590,10 +1176,10 @@
             "reason": "v0.17.0 silent fallback failover can run the agent as the wrong model without notifying the user."
           },
           {
-            "issue": "NousResearch/hermes-agent#49955",
             "repo": "NousResearch/hermes-agent",
             "number": 49955,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49955",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49955",
+            "issue": "NousResearch/hermes-agent issue 49955",
             "area": "dashboard",
             "type": "tool-specific",
             "severity": 1,
@@ -1601,10 +1187,10 @@
             "reason": "v0.17.0 Kanban inline create form truncates field labels in the dashboard."
           },
           {
-            "issue": "NousResearch/hermes-agent#49908",
             "repo": "NousResearch/hermes-agent",
             "number": 49908,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/49908",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49908",
+            "issue": "NousResearch/hermes-agent issue 49908",
             "area": "dashboard",
             "type": "tool-specific",
             "severity": 1,
@@ -1612,10 +1198,10 @@
             "reason": "v0.17.0 drag-and-drop to Done can show a completion prompt and then silently revert the task."
           },
           {
-            "issue": "NousResearch/hermes-agent#50765",
             "repo": "NousResearch/hermes-agent",
             "number": 50765,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50765",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50765",
+            "issue": "NousResearch/hermes-agent issue 50765",
             "area": "runtime",
             "type": "runtime",
             "severity": 4,
@@ -1623,10 +1209,10 @@
             "reason": "Hermes ACP session/prompt hangs after conversation turn on Windows v0.17.0 while v0.16.0 works, blocking ACP apps."
           },
           {
-            "issue": "NousResearch/hermes-agent#50806",
             "repo": "NousResearch/hermes-agent",
             "number": 50806,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50806",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50806",
+            "issue": "NousResearch/hermes-agent issue 50806",
             "area": "runtime",
             "type": "runtime",
             "severity": 4,
@@ -1634,10 +1220,10 @@
             "reason": "v0.17.0 CLI can hang after a shell tool starts a detached child process, repeatedly submitting tool results instead of returning control."
           },
           {
-            "issue": "NousResearch/hermes-agent#50734",
             "repo": "NousResearch/hermes-agent",
             "number": 50734,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50734",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50734",
+            "issue": "NousResearch/hermes-agent issue 50734",
             "area": "approval-boundary",
             "type": "kernel",
             "severity": 5,
@@ -1645,10 +1231,10 @@
             "reason": "v0.17.0 read_file/tool path can ignore safety directives and exfiltrate full .env credentials to LLM providers."
           },
           {
-            "issue": "NousResearch/hermes-agent#50807",
             "repo": "NousResearch/hermes-agent",
             "number": 50807,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50807",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50807",
+            "issue": "NousResearch/hermes-agent issue 50807",
             "area": "runtime",
             "type": "runtime",
             "severity": 3,
@@ -1656,10 +1242,10 @@
             "reason": "v0.17.0 forwards very large shell tool output to providers without bounding the payload."
           },
           {
-            "issue": "NousResearch/hermes-agent#50794",
             "repo": "NousResearch/hermes-agent",
             "number": 50794,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50794",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50794",
+            "issue": "NousResearch/hermes-agent issue 50794",
             "area": "desktop-macos",
             "type": "runtime",
             "severity": 3,
@@ -1667,10 +1253,10 @@
             "reason": "Hermes Desktop v0.17.0 can crash on launch on macOS 26.5 with EXC_BREAKPOINT in fontations_ffi."
           },
           {
-            "issue": "NousResearch/hermes-agent#50823",
             "repo": "NousResearch/hermes-agent",
             "number": 50823,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50823",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50823",
+            "issue": "NousResearch/hermes-agent issue 50823",
             "area": "installer",
             "type": "runtime",
             "severity": 2,
@@ -1678,10 +1264,10 @@
             "reason": "Desktop build for v0.17.0 hard fails on Windows native non-git checkouts because build-stamp cannot determine a git commit."
           },
           {
-            "issue": "NousResearch/hermes-agent#50966",
             "repo": "NousResearch/hermes-agent",
             "number": 50966,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50966",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50966",
+            "issue": "NousResearch/hermes-agent issue 50966",
             "area": "browser",
             "type": "tool-specific",
             "severity": 2,
@@ -1689,10 +1275,10 @@
             "reason": "Desktop GUI on v0.17.0 routes browser_vision calls to browser_scroll instead of the requested vision tool."
           },
           {
-            "issue": "NousResearch/hermes-agent#50769",
             "repo": "NousResearch/hermes-agent",
             "number": 50769,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50769",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50769",
+            "issue": "NousResearch/hermes-agent issue 50769",
             "area": "installer",
             "type": "runtime",
             "severity": 2,
@@ -1700,10 +1286,10 @@
             "reason": "Windows installer for v0.17.0 detects a Python 3.12 fallback but still tries Python 3.11 for venv creation, failing install."
           },
           {
-            "issue": "NousResearch/hermes-agent#50775",
             "repo": "NousResearch/hermes-agent",
             "number": 50775,
-            "url": "https://github.com/NousResearch/hermes-agent/issues/50775",
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50775",
+            "issue": "NousResearch/hermes-agent issue 50775",
             "area": "telegram",
             "type": "channel-specific",
             "severity": 1,
