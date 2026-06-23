@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "2026.6.9 crossed from fresh-release smoke into a proper incident wall: memory migration, restart-recovery death loops, provider/plugin externalization, compaction model drift, and channel-tool regressions are all in the room. The 3am deploy goblin brought receipts.",
+      "verdictComment": "2026.6.9 keeps piling up receipts: now with a plaintext-API-key leak, an abort-time memory leak that demands restarts, a gateway config-rejection regression, broken non-Codex fallbacks, and a fresh stack of Telegram/Discord surfacing bugs. The 3am incident wall ran out of sticky notes.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -110,6 +110,60 @@
         },
         {
           "repo": "openclaw/openclaw",
+          "number": 95895,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95895",
+          "title": "[Security]: GEMINI_API_KEY written as a plaintext literal in the generated systemd service unit"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95915,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95915",
+          "title": "Heap not released on embedded run abort (released=0); session write lock persists after abort cleanup"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96046,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96046",
+          "title": "Gateway 'plugins.slots.memory: plugin not found' for an extensions/ plugin present in plugins list — 2026.6.9 regression"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95904,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95904",
+          "title": "[Bug]: Non-Codex fallback models fail code-mode tool calls with internal_error in 2026.6.9"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96007,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96007",
+          "title": "Discord: subsequent message content truncated after inline error text"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96098,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96098",
+          "title": "[Bug]: Telegram inline buttons stopped working after update to 2026.6.9"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95878,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95878",
+          "title": "[Bug]: Telegram long-message auto-split regression still present in 2026.6.9 — 5 truncations in a single session; default config; reproducible"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95891,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95891",
+          "title": "[Bug]: opencode-go/minimax-m3 thinking content leaks to channel via Anthropic Messages path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96079,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96079",
+          "title": "Anthropic models on Discord: reasoning (/reasoning on) and pre-tool narration (/verbose on) are produced but never surfaced in the channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
           "number": 95495,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/95495",
           "title": "[Bug]: 2026.6.9 silently relocates memory store with no migration, forcing a full re-embed (1499 files) with zero upgrade-time warning"
@@ -203,45 +257,101 @@
           "number": 95597,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/95597",
           "title": "Codex native post_tool_use relay skips agentToolResultMiddleware"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95895,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95895",
+          "title": "[Security]: GEMINI_API_KEY written as a plaintext literal in the generated systemd service unit"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95915,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95915",
+          "title": "Heap not released on embedded run abort (released=0); session write lock persists after abort cleanup"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96046,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96046",
+          "title": "Gateway 'plugins.slots.memory: plugin not found' for an extensions/ plugin present in plugins list — 2026.6.9 regression"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95904,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95904",
+          "title": "[Bug]: Non-Codex fallback models fail code-mode tool calls with internal_error in 2026.6.9"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96007,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96007",
+          "title": "Discord: subsequent message content truncated after inline error text"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96098,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96098",
+          "title": "[Bug]: Telegram inline buttons stopped working after update to 2026.6.9"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95878,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95878",
+          "title": "[Bug]: Telegram long-message auto-split regression still present in 2026.6.9 — 5 truncations in a single session; default config; reproducible"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95891,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95891",
+          "title": "[Bug]: opencode-go/minimax-m3 thinking content leaks to channel via Anthropic Messages path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96079,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96079",
+          "title": "Anthropic models on Discord: reasoning (/reasoning on) and pre-tool narration (/verbose on) are produced but never surfaced in the channel"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 45,
+        "score": 27,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 38,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 59,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 38,
+          "evidencePenalty": 59,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 45
+          "score": 27
         },
         "affected": [
-          "memory",
-          "runtime",
-          "config",
-          "reasoning",
-          "plugin",
-          "telegram",
-          "qqbot",
-          "wecom",
-          "voice",
-          "gateway",
-          "provider-routing",
+          "codex",
           "compaction",
+          "config",
+          "discord",
+          "gateway",
+          "memory",
+          "plugin",
+          "provider-routing",
+          "qqbot",
+          "reasoning",
+          "runtime",
+          "security",
+          "telegram",
           "ui",
-          "codex"
+          "voice",
+          "wecom"
         ],
         "evidence": [
           {
@@ -419,6 +529,105 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Codex native post_tool_use relay skips agentToolResultMiddleware, so Tokenjuice artifact capture stops on 2026.6.9."
+          },
+          {
+            "issue": "openclaw/openclaw#95895",
+            "repo": "openclaw/openclaw",
+            "number": 95895,
+            "url": "https://github.com/openclaw/openclaw/issues/95895",
+            "area": "security",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "GEMINI_API_KEY written as a plaintext literal in the generated systemd service unit on 2026.6.9, exposing it via systemctl show / process env / crash reporters while all other provider secrets use managed runtime injection."
+          },
+          {
+            "issue": "openclaw/openclaw#95915",
+            "repo": "openclaw/openclaw",
+            "number": 95915,
+            "url": "https://github.com/openclaw/openclaw/issues/95915",
+            "area": "runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Heap not released on embedded run abort (released=0) and the session write lock persists after abort cleanup on 2026.6.9, causing gradual memory exhaustion that requires periodic forced restarts."
+          },
+          {
+            "issue": "openclaw/openclaw#96046",
+            "repo": "openclaw/openclaw",
+            "number": 96046,
+            "url": "https://github.com/openclaw/openclaw/issues/96046",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Gateway rejects a valid config at startup with plugins.slots.memory: plugin not found for an extensions/ plugin present in the plugins list — 2026.6.9 regression; 2026.6.8 is unaffected."
+          },
+          {
+            "issue": "openclaw/openclaw#95904",
+            "repo": "openclaw/openclaw",
+            "number": 95904,
+            "url": "https://github.com/openclaw/openclaw/issues/95904",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Non-Codex fallback models enter code-mode but fail a trivial tool call with internal_error on 2026.6.9, breaking the automatic fallback chain instead of executing or falling through."
+          },
+          {
+            "issue": "openclaw/openclaw#96007",
+            "repo": "openclaw/openclaw",
+            "number": 96007,
+            "url": "https://github.com/openclaw/openclaw/issues/96007",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Discord silently truncates all message content after an inline error line, dropping recommendations/next-steps on 2026.6.9."
+          },
+          {
+            "issue": "openclaw/openclaw#96098",
+            "repo": "openclaw/openclaw",
+            "number": 96098,
+            "url": "https://github.com/openclaw/openclaw/issues/96098",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram inline buttons stopped working after update to 2026.6.9 (inlineQueries=false); buttons render as plain text."
+          },
+          {
+            "issue": "openclaw/openclaw#95878",
+            "repo": "openclaw/openclaw",
+            "number": 95878,
+            "url": "https://github.com/openclaw/openclaw/issues/95878",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram long-message auto-split regression still present in 2026.6.9 — multiple truncations in a single session on default config."
+          },
+          {
+            "issue": "openclaw/openclaw#95891",
+            "repo": "openclaw/openclaw",
+            "number": 95891,
+            "url": "https://github.com/openclaw/openclaw/issues/95891",
+            "area": "provider-routing",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "opencode-go/minimax-m3 thinking content leaks to channel via the Anthropic Messages path on 2026.6.9."
+          },
+          {
+            "issue": "openclaw/openclaw#96079",
+            "repo": "openclaw/openclaw",
+            "number": 96079,
+            "url": "https://github.com/openclaw/openclaw/issues/96079",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Anthropic models on Discord produce reasoning (/reasoning on) and pre-tool narration (/verbose on) that are recorded in the session log but never surfaced in the channel on 2026.6.9."
           }
         ]
       },
