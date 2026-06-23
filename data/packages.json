@@ -82,7 +82,7 @@
           "repo": "openclaw/openclaw",
           "number": 95765,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/95765",
-          "title": "bug(onboard): external provider plugin install skips selected auth flow after DeepSeek install"
+          "title": "bug(onboard): external provider plugin install loops and skips selected auth flow"
         },
         {
           "repo": "openclaw/openclaw",
@@ -178,7 +178,7 @@
           "repo": "openclaw/openclaw",
           "number": 95765,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/95765",
-          "title": "bug(onboard): external provider plugin install skips selected auth flow after DeepSeek install"
+          "title": "bug(onboard): external provider plugin install loops and skips selected auth flow"
         },
         {
           "repo": "openclaw/openclaw",
@@ -438,7 +438,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.17.0 now has enough sharp edges to make the release manager sleep with the pager under the pillow: MCP/runtime churn, desktop boot/composer failures, provider routing, updates, installers, and channels all have receipts.",
+      "verdictComment": "v0.17.0 keeps collecting receipts: ACP hangs, tool-output blowups, desktop crashes, installer breaks, browser routing, channel polish, and a credential-boundary faceplant. The pager is not amused.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -652,6 +652,60 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 50765,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50765",
+          "title": "[Bug]:  ACP `session/prompt` hangs after `conversation turn` on Windows — 0.17.0 regression; 0.16.0 works"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50806,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50806",
+          "title": "[Bug]: Hermes Agent hangs after detached child-process tool call"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50734,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50734",
+          "title": "[Bug]: Agent ignores all safety directives and exfiltrates full .env credentials to LLM providers via read_file tool"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50807,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50807",
+          "title": "[Bug]: Hermes Agent forwards very large shell output to the provider"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50794,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50794",
+          "title": "[Bug]: Hermes Desktop crashes on launch with EXC_BREAKPOINT (SIGTRAP) in fontations_ffi on macOS 26.5"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50823,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50823",
+          "title": "[Bug]: Desktop build hard fails with \"could not determine git commit\" on non-git checkouts (Windows native)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50966,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50966",
+          "title": "[Bug]: browser_vision tool in desktop GUI always routes to browser_scroll"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50769,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50769",
+          "title": "[Bug]: Installer detects Python 3.12 fallback but still uses 3.11 for venv creation (fails)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50775,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50775",
+          "title": "[Bug]: Visual Ghosting/Text Overlapping on Telegram macOS App during Streaming Updates"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 49578,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49578",
           "title": "[Bug]: execute_code (Python) bypasses agent file edit restrictions"
@@ -859,35 +913,91 @@
           "number": 49908,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49908",
           "title": "[Bug]: Drag-and-drop to Done column on  tasks shows completion prompt then silently reverts"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50765,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50765",
+          "title": "[Bug]:  ACP `session/prompt` hangs after `conversation turn` on Windows — 0.17.0 regression; 0.16.0 works"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50806,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50806",
+          "title": "[Bug]: Hermes Agent hangs after detached child-process tool call"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50734,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50734",
+          "title": "[Bug]: Agent ignores all safety directives and exfiltrates full .env credentials to LLM providers via read_file tool"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50807,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50807",
+          "title": "[Bug]: Hermes Agent forwards very large shell output to the provider"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50794,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50794",
+          "title": "[Bug]: Hermes Desktop crashes on launch with EXC_BREAKPOINT (SIGTRAP) in fontations_ffi on macOS 26.5"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50823,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50823",
+          "title": "[Bug]: Desktop build hard fails with \"could not determine git commit\" on non-git checkouts (Windows native)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50966,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50966",
+          "title": "[Bug]: browser_vision tool in desktop GUI always routes to browser_scroll"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50769,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50769",
+          "title": "[Bug]: Installer detects Python 3.12 fallback but still uses 3.11 for venv creation (fails)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50775,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50775",
+          "title": "[Bug]: Visual Ghosting/Text Overlapping on Telegram macOS App during Streaming Updates"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 5,
+        "score": -107,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 81,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "evidencePenalty": 107,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 81,
+          "evidencePenalty": 107,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": 5
+          "score": -107
         },
         "affected": [
           "approval-boundary",
           "auth",
+          "browser",
           "config-profiles",
           "dashboard",
+          "desktop-macos",
           "desktop-ui",
           "discord",
           "feishu",
@@ -900,6 +1010,7 @@
           "opencode",
           "provider-routing",
           "runtime",
+          "security",
           "telegram",
           "update-system",
           "whatsapp",
@@ -1290,6 +1401,105 @@
             "severity": 1,
             "penalty": 1,
             "reason": "v0.17.0 drag-and-drop to Done can show a completion prompt and then silently revert the task."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50765",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50765,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50765",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Hermes ACP session/prompt hangs after conversation turn on Windows v0.17.0 while v0.16.0 works, blocking ACP apps."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50806",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50806,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50806",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.17.0 CLI can hang after a shell tool starts a detached child process, repeatedly submitting tool results instead of returning control."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50734",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50734,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50734",
+            "area": "approval-boundary",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.17.0 read_file/tool path can ignore safety directives and exfiltrate full .env credentials to LLM providers."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50807",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50807,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50807",
+            "area": "runtime",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.17.0 forwards very large shell tool output to providers without bounding the payload."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50794",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50794,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50794",
+            "area": "desktop-macos",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes Desktop v0.17.0 can crash on launch on macOS 26.5 with EXC_BREAKPOINT in fontations_ffi."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50823",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50823,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50823",
+            "area": "installer",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Desktop build for v0.17.0 hard fails on Windows native non-git checkouts because build-stamp cannot determine a git commit."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50966",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50966,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50966",
+            "area": "browser",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Desktop GUI on v0.17.0 routes browser_vision calls to browser_scroll instead of the requested vision tool."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50769",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50769,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50769",
+            "area": "installer",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Windows installer for v0.17.0 detects a Python 3.12 fallback but still tries Python 3.11 for venv creation, failing install."
+          },
+          {
+            "issue": "NousResearch/hermes-agent#50775",
+            "repo": "NousResearch/hermes-agent",
+            "number": 50775,
+            "url": "https://github.com/NousResearch/hermes-agent/issues/50775",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram macOS app streaming on v0.17.0 can show ghosting/double-text during edited-message updates."
           }
         ]
       },
