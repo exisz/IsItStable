@@ -10,32 +10,181 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "2026.6.10 is young and already has receipts: provider output vanishing acts, plugin context-engine fallout, Telegram `/status` rich-send failures, stale ingress claims, and config-write danger. The release is still inside the first-24h window; this is evidence, not a victory lap.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78493,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78493",
+          "title": "sudo openclaw update can create mixed ownership, then doctor overwrites config after EACCES/read failure"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96374,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96374",
+          "title": "Stuck \"claimed\" rows in channel_ingress_events block all inbound delivery after restart (no stale-claim recovery)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96337,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96337",
+          "title": "[anthropic-vertex] route=native in 2026.6.10 causes non-visible-output for pure text responses (regression from proxy-like in 2026.6.8)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96335,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96335",
+          "title": "Bug: lossless-claw context engine fails with \"Engine initialization is disabled during read-only plugin registration\" on v2026.6.10"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95515,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
+          "title": "Upgrade 2026.6.8→2026.6.9 corrupts email channel config with spurious groupAllowFrom field"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95997,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95997",
+          "title": "CLI gateway calls can poison local device scopes after read probes"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 91266,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/91266",
+          "title": "[Bug]: Skill Workshop agent-tool apply times out because approval wait exceeds tool watchdog"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96363,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96363",
+          "title": "Telegram /status rich reply fails with RICH_MESSAGE_EMAIL_INVALID when richMessages=true"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 55,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 25,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 25,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 55
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "auth",
+          "config-migration",
+          "email",
+          "gateway",
+          "memory",
+          "message-delivery",
+          "provider-routing",
+          "runtime",
+          "skill-workshop",
+          "telegram"
+        ],
+        "evidence": [
+          {
+            "repo": "openclaw/openclaw",
+            "number": 78493,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/78493",
+            "issue": "openclaw/openclaw issue 78493",
+            "area": "config-migration",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Still reproducible on 2026.6.10: unreadable config/EACCES fallback can proceed to config writes, risking config clobber and crash-loop startup."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96374,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96374",
+            "issue": "openclaw/openclaw issue 96374",
+            "area": "message-delivery",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Telegram isolated ingress can leave stale claimed rows after restart, blocking all subsequent inbound delivery on 2026.6.10."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96337,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96337",
+            "issue": "openclaw/openclaw issue 96337",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "anthropic-vertex route=native on 2026.6.10 returns non-visible-output for pure text Claude responses; tool-call responses still work."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96335,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96335",
+            "issue": "openclaw/openclaw issue 96335",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "lossless-claw context engine fails during read-only plugin registration on 2026.6.10 and falls back to the legacy engine."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 95515,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
+            "issue": "openclaw/openclaw issue 95515",
+            "area": "config-migration",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Upgrade to 2026.6.10 still reproduces email channel config corruption with an invalid groupAllowFrom field."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 95997,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/95997",
+            "issue": "openclaw/openclaw issue 95997",
+            "area": "auth",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Gateway CLI read probes can poison local device scopes so later write-scoped agent calls hit scope-upgrade pending approval; path is present in current main/release line."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 91266,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/91266",
+            "issue": "openclaw/openclaw issue 91266",
+            "area": "skill-workshop",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "skill_workshop dynamic-tool apply still times out under approval wait on OpenClaw 2026.6.10 while the CLI path succeeds."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96363,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96363",
+            "issue": "openclaw/openclaw issue 96363",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram /status final reply fails with RICH_MESSAGE_EMAIL_INVALID when richMessages=true on stable 2026.6.10."
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
