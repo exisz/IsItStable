@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "2026.6.10 is young and already has receipts: provider output vanishing acts, plugin context-engine fallout, Telegram `/status` rich-send failures, stale ingress claims, and config-write danger. The release is still inside the first-24h window; this is evidence, not a victory lap.",
+    "verdictComment": "2026.6.10 has moved from “young with receipts” to “the receipts have receipts”: cross-tenant Feishu fallbacks, browser cookie amnesia, Discord delivery potholes, provider/tool-call regressions, and runtime continuity breaks. 3am deploy goggles recommended.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -55,41 +55,150 @@
         "number": 96363,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/96363",
         "title": "Telegram /status rich reply fails with RICH_MESSAGE_EMAIL_INVALID when richMessages=true"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96657,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96657",
+        "title": "Feishu plugin tool calls fall back to global `defaultAccount` (not the agent's bound account) on non-inbound turns (cron / inter-session relay / heartbeat) → cross-tenant 99991672 / 403"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96564,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96564",
+        "title": "[bug] claude-cli (headless warm-stdin) backend loses all conversation continuity — transcript-flush probe can never succeed, so the session binding is wiped every turn"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96704,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96704",
+        "title": "[Bug]: Managed browser cookies never persist to disk (in-memory only) — login sessions lost on every browser/gateway restart (reproduces on 2026.6.10; refile of #15645)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96585,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96585",
+        "title": "Crash: A FileHandle object was closed during garbage collection (Node.js v25)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96239,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96239",
+        "title": "[Bug] Gateway swallows user-visible reply when an agent's exec stdout matches \"configuration file\" — replies=2 puts ⚠️ 🛠️ first, the actual reply second"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96452,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96452",
+        "title": "[Bug]: Codex Computer Use get_app_state hangs awaiting tools/call from Discord-routed session"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96441,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96441",
+        "title": "[Bug]: Ollama Cloud tool_calls fail on 2nd turn — arguments sent as JSON object instead of string (400 from Go server) — regression in 2026.6.9"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96600,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96600",
+        "title": "[Bug]: Google vertex models cannot be overriden via openclaw.json"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96665,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96665",
+        "title": "[Bug] ACP thread-bound session: Claude Code replies not delivered to Discord thread"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96698,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96698",
+        "title": "Discord second message fails: false stale-snapshot from skillsSnapshot hydration mismatch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96716,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96716",
+        "title": "[Bug]: MCP tool call with an optional argument set to null fails via OpenClaw but succeeds via other MCP apps"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96732,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96732",
+        "title": "[Bug]: reasoning_content leaks into chat output with moonshot/kimi-k2.6, frontend reasoning status out of sync"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96773,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96773",
+        "title": "[Bug]: Turn-scoped developer instructions (SOUL.md/IDENTITY.md/USER.md) create different message prefixes between full-turn and tool-continuation calls, breaking DeepSeek KV cache (20%/99% oscillation)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96586,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96586",
+        "title": "[voice-call] get_status returns found:false for completed calls once evicted from in-memory manager — no fallback to persisted call store"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96535,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96535",
+        "title": "Slack: each outbound reply persists a new single-message delivery-mirror session instead of reusing the conversation's thread session"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96660,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96660",
+        "title": "[Workspace panel] Root path drops leading dot, false 'Missing' labels on existing folders, broken layout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96463,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96463",
+        "title": "[Bug]: Usage always 0 for custom OpenAI-compatible provider when using embedded runner (--local)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 55,
+      "score": 20,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 25,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "evidencePenalty": 63,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 25,
+        "evidencePenalty": 63,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 55
+        "score": 20
       },
       "affected": [
-        "auth",
         "config-migration",
-        "email",
-        "gateway",
-        "memory",
         "message-delivery",
         "provider-routing",
-        "runtime",
+        "memory",
+        "auth",
         "skill-workshop",
-        "telegram"
+        "telegram",
+        "feishu",
+        "runtime",
+        "browser",
+        "codex",
+        "discord",
+        "mcp",
+        "reasoning",
+        "voice",
+        "slack",
+        "ui"
       ],
       "evidence": [
         {
@@ -179,6 +288,193 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Telegram /status final reply fails with RICH_MESSAGE_EMAIL_INVALID when richMessages=true on stable 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96657,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96657",
+          "issue": "openclaw/openclaw issue 96657",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Feishu non-inbound tool calls can fall back to the global default account on 2026.6.10, causing cross-tenant 403/resource-access failures."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96564,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96564",
+          "issue": "openclaw/openclaw issue 96564",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "claude-cli headless warm-stdin loses conversation continuity on 2026.6.8–2026.6.10, wiping the session binding every turn."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96704,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96704",
+          "issue": "openclaw/openclaw issue 96704",
+          "area": "browser",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Managed browser cookies are in-memory only on 2026.6.10, so login sessions disappear after browser/gateway restart."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96585,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96585",
+          "issue": "openclaw/openclaw issue 96585",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows/Node 25 reports repeated FileHandle garbage-collection crashes against OpenClaw 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96239,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96239",
+          "issue": "openclaw/openclaw issue 96239",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Gateway reply ordering can surface the tool warning instead of the real answer on 2026.6.10-beta/current 6.10 path."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96452,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96452",
+          "issue": "openclaw/openclaw issue 96452",
+          "area": "codex",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Codex Computer Use get_app_state can hang for 120s awaiting tools/call on a 2026.6.10 build."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96441,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96441",
+          "issue": "openclaw/openclaw issue 96441",
+          "area": "provider-routing",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Ollama Cloud/OpenAI-compatible tool_calls can fail on second turn because function.arguments is sent as an object instead of a string in the 2026.6.10 line."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96600,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96600",
+          "issue": "openclaw/openclaw issue 96600",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Google Vertex model provider overrides via openclaw.json are not honored on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96665,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96665",
+          "issue": "openclaw/openclaw issue 96665",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "ACP thread-bound session replies can be generated but not delivered back to the Discord thread on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96698,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96698",
+          "issue": "openclaw/openclaw issue 96698",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Discord second message can fail from a false stale-snapshot caused by skillsSnapshot hydration mismatch on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96716,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96716",
+          "issue": "openclaw/openclaw issue 96716",
+          "area": "mcp",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "MCP tool calls with optional null arguments fail via OpenClaw on 2026.6.10 while other MCP apps succeed."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96732,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96732",
+          "issue": "openclaw/openclaw issue 96732",
+          "area": "reasoning",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Moonshot/Kimi reasoning_content can leak into user-visible chat output on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96773,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96773",
+          "issue": "openclaw/openclaw issue 96773",
+          "area": "runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Turn-scoped developer instructions create divergent message prefixes and break DeepSeek KV-cache reuse on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96586,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96586",
+          "issue": "openclaw/openclaw issue 96586",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "voice_call get_status returns found:false for completed calls after in-memory eviction on @openclaw/voice-call 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96535,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96535",
+          "issue": "openclaw/openclaw issue 96535",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Slack outbound replies persist new single-message delivery-mirror sessions instead of reusing the thread session through 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96660,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96660",
+          "issue": "openclaw/openclaw issue 96660",
+          "area": "ui",
+          "type": "other",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "The 2026.6.10 workspace side panel has reproducible root-path, false missing-label, and layout regressions."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96463,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96463",
+          "issue": "openclaw/openclaw issue 96463",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Custom OpenAI-compatible providers report usage as zero with the embedded runner on 2026.6.10."
         }
       ]
     },
