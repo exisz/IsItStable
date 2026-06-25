@@ -202,7 +202,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.17.0 added more receipts: Feishu startup crashes, ACP blocking, provider schema 400s, profile secret leaks, MCP misses, desktop build pain, and Docker web tools taking a smoke break. The pager has trust issues.",
+      "verdictComment": "v0.17.0 added more receipts: provider 400s, tenant-crossing kanban state, gateway memory loss, basic-auth desktop loops, approval stream gaps, plus the previous Feishu/ACP/MCP pile-up. The pager is now writing poetry in stack traces.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -581,29 +581,65 @@
           "number": 49253,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49253",
           "title": "Photon iMessage: Markdown Bold-Formatting corrupts Unicode (▉ replacement char)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52023,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52023",
+          "title": "[Bug]: GPT-4o-mini and GPT-4.1 (and more) fail with \"Encrypted content is not supported with this model\" after clean install"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 51864,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51864",
+          "title": "kanban: workspace allocator + board-view filter use global active-board state instead of task.tenant — tasks cross-route between tenants"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52013,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52013",
+          "title": "[Bug]: Chinese text garbled (mojibake) on Windows TUI"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 51646,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51646",
+          "title": "[Bug]: Gateway Memory Loss — INSERT omits `active` column in `hermes_state.py`"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 51873,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51873",
+          "title": "Hermes Desktop never shows sign-in UI when connecting to remote backend with basic auth"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 51871,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51871",
+          "title": "Legacy chat-completions stream does not emit approval events"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -161,
+        "score": -179,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 161,
-        "survivalDays": 4,
-        "survivalBonus": 12,
+        "evidencePenalty": 179,
+        "survivalDays": 5,
+        "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 161,
+          "evidencePenalty": 179,
           "votePenalty": 0,
-          "survivalDays": 4,
+          "survivalDays": 5,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 4,
-          "survivalBonus": 12,
+          "survivalCreditedDays": 5,
+          "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -161
+          "score": -179
         },
         "affected": [
           "approval-boundary",
@@ -1328,6 +1364,72 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Photon iMessage on v0.17.0 corrupts Unicode when Markdown bold formatting is present."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 52023,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52023",
+            "issue": "NousResearch/hermes-agent issue 52023",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes Desktop v0.17.0 on Windows returns OpenAI 400 errors for GPT-4o-mini, GPT-4.1 and related models because encrypted content is sent to models that do not support it."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 51864,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51864",
+            "issue": "NousResearch/hermes-agent issue 51864",
+            "area": "dashboard",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes v0.17.0 self-hosted kanban can route task workspaces and board filters through global active-board state instead of task tenant, mixing tenants."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 52013,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52013",
+            "issue": "NousResearch/hermes-agent issue 52013",
+            "area": "desktop-ui",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop v0.17.0 on Chinese Windows can render Chinese TUI/desktop text as mojibake, making non-ASCII output unreadable."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 51646,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51646",
+            "issue": "NousResearch/hermes-agent issue 51646",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Hermes v0.17.0 gateway memory writes can omit the active column, causing INSERT failures and lost persisted state."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 51873,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51873",
+            "issue": "NousResearch/hermes-agent issue 51873",
+            "area": "auth",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes Desktop v0.17.0 can loop on 401s and never show the documented sign-in UI when connecting to a remote backend with basic auth."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 51871,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51871",
+            "issue": "NousResearch/hermes-agent issue 51871",
+            "area": "approval-boundary",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Hermes v0.17.0 legacy chat-completions streaming can omit approval events, so apps see text deltas but no tool-approval boundary."
           }
         ]
       },
