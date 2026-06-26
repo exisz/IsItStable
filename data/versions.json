@@ -15610,7 +15610,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.17.0 added more receipts: provider 400s, tenant-crossing kanban state, gateway memory loss, basic-auth desktop loops, approval stream gaps, plus the previous Feishu/ACP/MCP pile-up. The pager is now writing poetry in stack traces.",
+    "verdictComment": "v0.17.0 keeps adding receipts: Windows desktop launch/update failures, broken browser navigation, custom-provider routing rewrites, Telegram unread inflation, voice-loop stalls, and the existing Feishu/ACP/MCP/runtime pile-up. The pager is now writing poetry in stack traces.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -16025,29 +16025,101 @@
         "number": 51871,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51871",
         "title": "Legacy chat-completions stream does not emit approval events"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52753,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52753",
+        "title": "[Bug]: Windows desktop app crashes after update — Cannot find module 'simple-git'"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52378,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52378",
+        "title": "Windows: 自动更新陷入无限循环，重复弹出管理员命令行窗口 (update loop)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52428,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52428",
+        "title": "## Bug Description  Calling `browser_navigate` tool fails with:"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52496,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52496",
+        "title": "[Dashboard] /api/model/set rewrites named custom provider custom:* to openrouter"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52492,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52492",
+        "title": "[Bug]:400 - 'gpt-5.3-codex' model is not supported when using Codex"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52363,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52363",
+        "title": "Telegram: outbound messages counted as incoming unread (regression 0.16 → 0.17)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52573,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52573",
+        "title": "Bug TUI Voice"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 51882,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51882",
+        "title": "[Bug]: Desktop Settings UI (Chat→Personality) writes only display.personality, never agent.system_prompt — personality overlay silently ignored"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 51684,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51684",
+        "title": "[Feishu] FEISHU_ALLOWED_USERS=* wildcard does not apply to approval card clicks"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52235,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52235",
+        "title": "Win桌面端最新版0.17.0（通过软件升级）在对话框中有内容的情况下按pagedown出现的问题"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52566,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52566",
+        "title": "Issue with voice"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 51321,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51321",
+        "title": "[Bug]: \"artifacts\" 视图BUG"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -179,
+      "score": -207,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 179,
-      "survivalDays": 5,
+      "evidencePenalty": 207,
+      "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 179,
+        "evidencePenalty": 207,
         "votePenalty": 0,
-        "survivalDays": 5,
+        "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -179
+        "score": -207
       },
       "affected": [
         "approval-boundary",
@@ -16075,6 +16147,7 @@
         "security",
         "telegram",
         "update-system",
+        "voice",
         "web-tools",
         "whatsapp",
         "windows-runtime"
@@ -16838,6 +16911,138 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Hermes v0.17.0 legacy chat-completions streaming can omit approval events, so apps see text deltas but no tool-approval boundary."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52753,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52753",
+          "issue": "NousResearch/hermes-agent issue 52753",
+          "area": "desktop-windows",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "v0.17.0 packaged Windows desktop can fail to launch after update because simple-git is missing from the Electron bundle."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52378,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52378",
+          "issue": "NousResearch/hermes-agent issue 52378",
+          "area": "update-system",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.17.0 Windows desktop auto-update can loop indefinitely, repeatedly spawning elevated updater processes even when behind=0."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52428,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52428",
+          "issue": "NousResearch/hermes-agent issue 52428",
+          "area": "browser",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.17.0 browser_navigate fails with missing _hermes_read_browser_output, breaking browser tool navigation on Windows."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52496,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52496",
+          "issue": "NousResearch/hermes-agent issue 52496",
+          "area": "model-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.17.0 dashboard model switcher can rewrite named custom providers to openrouter/bare custom, breaking local proxy routing."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52492,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52492",
+          "issue": "NousResearch/hermes-agent issue 52492",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.17.0 Codex model selection can persist an unsupported gpt-5.3-codex custom model and then fail prompts with HTTP 400."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52363,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52363",
+          "issue": "NousResearch/hermes-agent issue 52363",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.17.0 Telegram outbound messages can be stored as incoming unread items, making inbox badges grow on the agent's own replies."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52573,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52573",
+          "issue": "NousResearch/hermes-agent issue 52573",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.17.0 TUI continuous voice mode can fail to reopen the microphone after TTS playback on macOS."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 51882,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51882",
+          "issue": "NousResearch/hermes-agent issue 51882",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.17.0 Desktop Chat→Personality setting writes display.personality but not agent.system_prompt, so the persona is silently ignored."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 51684,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51684",
+          "issue": "NousResearch/hermes-agent issue 51684",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.17.0 Feishu approval-card clicks reject FEISHU_ALLOWED_USERS=* wildcard even though normal inbound messages are allowed."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52235,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52235",
+          "issue": "NousResearch/hermes-agent issue 52235",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "v0.17.0 Windows desktop composer can visually corrupt after PageDown while draft text is present."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52566,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52566",
+          "issue": "NousResearch/hermes-agent issue 52566",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "v0.17.0 desktop TTS playback can time out through the hermes-media:// protocol even when generated audio files are valid."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 51321,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51321",
+          "issue": "NousResearch/hermes-agent issue 51321",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "v0.17.0 Windows Artifacts view can display file/session timestamps months off from actual file and database times."
         }
       ]
     },
