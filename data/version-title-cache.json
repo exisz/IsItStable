@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-26T00:29:19.200Z",
+  "generatedAt": "2026-06-26T01:40:04.485Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -541,6 +541,7 @@
         "affected:runtime",
         "affected:security",
         "affected:telegram",
+        "affected:voice",
         "affected:whatsapp",
         "affected:imessage",
         "affected:browser",
@@ -571,7 +572,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/143",
       "createdAt": "2026-06-19T20:28:46Z",
-      "updatedAt": "2026-06-25T00:32:53Z"
+      "updatedAt": "2026-06-26T00:33:05Z"
     },
     {
       "version": "0.0.1",
