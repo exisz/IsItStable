@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "2026.6.10 has moved from “young with receipts” to “the receipts have receipts”: cross-tenant Feishu fallbacks, browser cookie amnesia, Discord delivery potholes, provider/tool-call regressions, and runtime continuity breaks. 3am deploy goggles recommended.",
+      "verdictComment": "2026.6.10 added more receipts: false Codex usage-limit alarms, ClawHub checkpoint walls, WhatsApp media lane wedges, provider-routing gotchas, duplicate TUI echoes, and prompt-cache busting. The 3am deploy goggles now come with a spare battery.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -161,29 +161,65 @@
           "number": 96463,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/96463",
           "title": "[Bug]: Usage always 0 for custom OpenAI-compatible provider when using embedded runner (--local)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96815,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96815",
+          "title": "[Bug]: OpenClaw Gateway incorrectly reports false \"Codex subscription usage limit\" while Codex CLI works with the same ChatGPT OAuth account"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96820,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96820",
+          "title": "[Bug]: ClawHub API returns Vercel Security Checkpoint (403) instead of JSON"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96967,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96967",
+          "title": "[Bug]: TUI displays assistant reply twice when triggered via Telegram channel"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96834,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96834",
+          "title": "WhatsApp 1:1: inbound image wedges main lane ~3min before processing — multimodal run strands active_reply_work/queued_work_without_active_run (repro on 2026.6.10, post-#95039)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96771,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96771",
+          "title": "OpenClaw 2026.6.10 provider-unification gotcha: openai/gpt-5.5 requires provider openai to route to the subscription backend"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96677,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96677",
+          "title": "[Bug]: 2026.6.9 re-busts prompt prefix caching — per-run :run:<UUID> injected into the system-prompt \"Runtime:\" line (regression of #43148)"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 20,
+        "score": 12,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 63,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 74,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 63,
+          "evidencePenalty": 74,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 20
+          "score": 12
         },
         "affected": [
           "config-migration",
@@ -202,7 +238,10 @@
           "reasoning",
           "voice",
           "slack",
-          "ui"
+          "ui",
+          "plugin-install",
+          "whatsapp",
+          "prompt-size"
         ],
         "evidence": [
           {
@@ -479,6 +518,72 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Custom OpenAI-compatible providers report usage as zero with the embedded runner on 2026.6.10."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96815,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96815",
+            "issue": "openclaw/openclaw issue 96815",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "OpenClaw Gateway reports a false Codex subscription usage-limit on 2026.6.10 while the same Codex CLI OAuth route succeeds."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96820,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96820",
+            "issue": "openclaw/openclaw issue 96820",
+            "area": "plugin-install",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "ClawHub search/install API returns a Vercel security checkpoint instead of JSON for 2026.6.10 CLI flows."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96967,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96967",
+            "issue": "openclaw/openclaw issue 96967",
+            "area": "ui",
+            "type": "other",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "TUI can display the assistant reply twice when a Telegram-triggered 2026.6.10 session reloads history after delivery."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96834,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96834",
+            "issue": "openclaw/openclaw issue 96834",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WhatsApp 1:1 inbound image on 2026.6.10 can wedge the main lane for about three minutes before processing."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96771,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96771",
+            "issue": "openclaw/openclaw issue 96771",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Provider unification in 2026.6.10 can leave openai/gpt-5.5 routed to the wrong backend unless provider-level routing is repaired."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 96677,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/96677",
+            "issue": "openclaw/openclaw issue 96677",
+            "area": "prompt-size",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "2026.6.10 still injects per-run UUIDs into the Runtime prompt line, rebusting prompt-prefix caching and inflating token use."
           }
         ]
       },
