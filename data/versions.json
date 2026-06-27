@@ -16211,7 +16211,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 207,
-      "survivalDays": 6,
+      "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -16219,7 +16219,7 @@
         "baseScore": 80,
         "evidencePenalty": 207,
         "votePenalty": 0,
-        "survivalDays": 6,
+        "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -20266,7 +20266,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "This release has a real packaging dent: adapters and dashboard pieces went missing. The 3am deploy goblin is awake.",
+    "verdictComment": "This release has a real packaging dent, plus remote desktop/gateway bruises. The 3am deploy goblin brought a WebSocket bat.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -20357,29 +20357,47 @@
         "number": 44580,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/44580",
         "title": "hermes update reports success when desktop rebuild silently fails"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 38412,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
+        "title": "[Bug]: Desktop \"Remote gateway\" can't connect over WebSocket — /api/ws always rejected (4403) for packaged Electron app"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 40215,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40215",
+        "title": "[Desktop]: error invoking remote method 'hermes:api': Error: net::ERR_INVALID_ARGUMENT"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 46677,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46677",
+        "title": "[Bug]: Impossible rebuild"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 45,
+      "score": 37,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 35,
+      "evidencePenalty": 43,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 35,
+        "evidencePenalty": 43,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 45
+        "score": 37
       },
       "affected": [
         "plugin-install",
@@ -20391,7 +20409,9 @@
         "telegram",
         "openwebui",
         "desktop-macos",
-        "update-system"
+        "update-system",
+        "desktop-remote-gateway",
+        "desktop-ui"
       ],
       "evidence": [
         {
@@ -20558,6 +20578,39 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Hermes Desktop 0.15.1 update can report success while the desktop rebuild silently fails"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 38412,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/38412",
+          "issue": "NousResearch/hermes-agent issue 38412",
+          "area": "desktop-remote-gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes Desktop 0.15.1 remote gateway WebSocket admission rejects /api/ws despite reachable status"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 40215,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40215",
+          "issue": "NousResearch/hermes-agent issue 40215",
+          "area": "desktop-remote-gateway",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.15.1 desktop remote method fails with net::ERR_INVALID_ARGUMENT on Linux gateway"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 46677,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/46677",
+          "issue": "NousResearch/hermes-agent issue 46677",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.15.1 Windows desktop rebuild fails on @assistant-ui/tap missing ./react-shim export"
         }
       ]
     },
