@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "2026.6.10 added more receipts: false Codex usage-limit alarms, ClawHub checkpoint walls, WhatsApp media lane wedges, provider-routing gotchas, duplicate TUI echoes, and prompt-cache busting. The 3am deploy goggles now come with a spare battery.",
+    "verdictComment": "2026.6.10 keeps adding receipts: provider registries vanish, WhatsApp talks to strangers, ACP sessions ghost themselves, and doctor --fix moonlights as a routing roulette wheel. The 3am deploy goggles are now prescription-only.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -193,29 +193,125 @@
         "number": 96677,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/96677",
         "title": "[Bug]: 2026.6.9 re-busts prompt prefix caching — per-run :run:<UUID> injected into the system-prompt \"Runtime:\" line (regression of #43148)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97180,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97180",
+        "title": "doctor --fix silently adds and enables the uninstalled `codex` plugin (routing-altering) when `openai` is enabled"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97241,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97241",
+        "title": "[Bug]: Amazon Bedrock provider plugin loads successfully but provider registry is never populated, causing \"Unknown model\" runtime failure"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97088,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97088",
+        "title": "WhatsApp plugin sends unsolicited pairing messages to random contacts on reconnect"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96836,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96836",
+        "title": "[Bug]: Slack inbound wedge after context overflow/compaction; Socket Mode remains connected but replies stop"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96835,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96835",
+        "title": "[Bug]: exec tool on Windows (v2026.6.10) pops visible cmd/PowerShell window for every command — regression from v2026.6.8"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97047,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97047",
+        "title": "[Bug]: DeepSeek V4 API returns usage.cost total as 0, causing Control UI Spend to show zero"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96910,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96910",
+        "title": "Auto-generated gateway TLS cert lacks subjectAltName, breaks strict-TLS CLI apps"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96878,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96878",
+        "title": "[Bug]: web_search providers, like searxng and tavily stopped working and the official plugins failed to install."
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97108,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97108",
+        "title": "[Bug]: Embedded/channel agent runtime rejected with Anthropic \"out of extra usage\" billing error on subscription (setup-token) auth — reproducible outside channel routing, with confirmed account usage headroom"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97060,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97060",
+        "title": "[Bug]:  WhatsApp Native Channel connects but registered state remains false (Silent Failure)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97176,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97176",
+        "title": "[Bug]: Bedrock adaptive-thinking models hard-capped at 4096 output tokens; model maxTokens ignored, no config override"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97186,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97186",
+        "title": "[Bug]: Binding type: acp sessions silently fail — session created, process spawned, but systemSent never delivered"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97237,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97237",
+        "title": "Inbound non-image attachments exposed to the model as unresolvable media://inbound/... URI (PDFs/docs unreadable)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97178,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97178",
+        "title": "[Bug]: openclaw gateway install adds a duplicate gui-domain LaunchAgent over an existing system LaunchDaemon (restart storm)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96947,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96947",
+        "title": "Bug: OpenRouter Anthropic cacheWrite drops to zero after v2026.6.10 upgrade (conversation cache regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96916,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96916",
+        "title": "[Bug]: MCP tool calls fail when LLMs serialize array/object parameters as strings (MiMo, Ollama, etc.)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 12,
+      "score": -123,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 74,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "evidencePenalty": 123,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 74,
+        "evidencePenalty": 123,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 12
+        "score": -123
       },
       "affected": [
         "config-migration",
@@ -237,7 +333,17 @@
         "ui",
         "plugin-install",
         "whatsapp",
-        "prompt-size"
+        "prompt-size",
+        "doctor",
+        "exec",
+        "usage-accounting",
+        "tls",
+        "web-search",
+        "provider-auth",
+        "acp",
+        "attachments",
+        "installer",
+        "provider-cache"
       ],
       "evidence": [
         {
@@ -580,6 +686,182 @@
           "severity": 2,
           "penalty": 2,
           "reason": "2026.6.10 still injects per-run UUIDs into the Runtime prompt line, rebusting prompt-prefix caching and inflating token use."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97180,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97180",
+          "issue": "openclaw/openclaw issue 97180",
+          "area": "doctor",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "On 2026.6.10, doctor --fix can silently add and enable the uninstalled codex plugin when openai is enabled, altering runtime routing instead of only repairing the requested plugin drift."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97241,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97241",
+          "issue": "openclaw/openclaw issue 97241",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Amazon Bedrock provider plugin loads on 2026.6.10 but never populates the provider registry, so Bedrock models fail at runtime as Unknown model."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97088,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97088",
+          "issue": "openclaw/openclaw issue 97088",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "WhatsApp reconnect on 2026.6.10 can send unsolicited pairing messages to unrelated contacts, crossing an external-message trust boundary."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96836,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96836",
+          "issue": "openclaw/openclaw issue 96836",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Slack Socket Mode can remain connected after context overflow/compaction on 2026.6.10 while inbound replies wedge silently."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96835,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96835",
+          "issue": "openclaw/openclaw issue 96835",
+          "area": "exec",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Windows exec on 2026.6.10 pops a visible cmd/PowerShell window for every command, a regression from v2026.6.8 headless behavior."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97047,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97047",
+          "issue": "openclaw/openclaw issue 97047",
+          "area": "usage-accounting",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "DeepSeek V4 usage.cost reports zero on 2026.6.10, causing Control UI spend/accounting to underreport actual model cost."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96910,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96910",
+          "issue": "openclaw/openclaw issue 96910",
+          "area": "tls",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Auto-generated gateway TLS certs on 2026.6.10 lack subjectAltName, breaking strict-TLS CLI apps."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96878,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96878",
+          "issue": "openclaw/openclaw issue 96878",
+          "area": "web-search",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "web_search providers such as SearXNG/Tavily and official plugin install flows are reported broken across the 2026.6.10 line."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97108,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97108",
+          "issue": "openclaw/openclaw issue 97108",
+          "area": "provider-auth",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Embedded/channel agent runtime can reject Anthropic subscription setup-token auth on 2026.6.10 with a false extra-usage billing error despite confirmed headroom."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97060,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97060",
+          "issue": "openclaw/openclaw issue 97060",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "WhatsApp Native Channel connects on 2026.6.10 but registered state remains false, producing a silent channel availability failure."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97176,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97176",
+          "issue": "openclaw/openclaw issue 97176",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Bedrock adaptive-thinking models on 2026.6.10 are hard-capped at 4096 output tokens and ignore model maxTokens/config overrides."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97186,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97186",
+          "issue": "openclaw/openclaw issue 97186",
+          "area": "acp",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "ACP binding sessions on 2026.6.10 can spawn a process but never deliver systemSent, leaving the session silently failed."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97237,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97237",
+          "issue": "openclaw/openclaw issue 97237",
+          "area": "attachments",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Inbound PDFs/docs and other non-image attachments are exposed as unresolvable media://inbound URIs on 2026.6.10, so the model cannot read them."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97178,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97178",
+          "issue": "openclaw/openclaw issue 97178",
+          "area": "installer",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "openclaw gateway install on 2026.6.10 can add a duplicate gui-domain LaunchAgent over an existing system LaunchDaemon, causing restart-storm risk."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96947,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96947",
+          "issue": "openclaw/openclaw issue 96947",
+          "area": "provider-cache",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "OpenRouter Anthropic cacheWrite drops to zero after a 2026.6.10 upgrade, regressing conversation cache behavior."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96916,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96916",
+          "issue": "openclaw/openclaw issue 96916",
+          "area": "mcp",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "MCP tool calls fail on 2026.6.10 when LLMs serialize array/object parameters as strings, affecting MiMo/Ollama-style routes."
         }
       ]
     },
