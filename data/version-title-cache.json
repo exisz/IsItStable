@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-27T12:22:28.152Z",
+  "generatedAt": "2026-06-27T13:29:52.916Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2747,6 +2747,7 @@
         "affected:mcp",
         "affected:codex",
         "affected:ui",
+        "affected:doctor",
         "affected:slack",
         "affected:memory",
         "affected:message-delivery",
@@ -2754,16 +2755,25 @@
         "affected:reasoning",
         "affected:auth",
         "affected:config-migration",
+        "affected:installer",
         "affected:prompt-size",
         "affected:provider-routing",
-        "score:10-19"
+        "affected:exec",
+        "score:0-9",
+        "affected:usage-accounting",
+        "affected:tls",
+        "affected:web-search",
+        "affected:provider-auth",
+        "affected:acp",
+        "affected:attachments",
+        "affected:provider-cache"
       ],
       "issueNumber": 145,
       "title": "[v2026.6.10] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/145",
       "createdAt": "2026-06-24T05:16:44Z",
-      "updatedAt": "2026-06-26T12:32:55Z"
+      "updatedAt": "2026-06-27T12:33:17Z"
     }
   ],
   "duplicates": {
