@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-28T12:22:59.490Z",
+  "generatedAt": "2026-06-28T13:30:10.549Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2750,12 +2750,15 @@
         "affected:whatsapp",
         "affected:browser",
         "affected:plugin-install",
+        "affected:webchat",
         "affected:mcp",
         "affected:codex",
         "affected:ui",
         "affected:doctor",
+        "affected:cron-runtime",
         "affected:slack",
         "affected:memory",
+        "affected:line",
         "affected:message-delivery",
         "affected:skill-workshop",
         "affected:reasoning",
@@ -2779,7 +2782,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/145",
       "createdAt": "2026-06-24T05:16:44Z",
-      "updatedAt": "2026-06-27T12:33:17Z"
+      "updatedAt": "2026-06-28T12:36:51Z"
     }
   ],
   "duplicates": {
