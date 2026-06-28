@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "2026.6.10 keeps adding receipts: provider registries vanish, WhatsApp talks to strangers, ACP sessions ghost themselves, and doctor --fix moonlights as a routing roulette wheel. The 3am deploy goggles are now prescription-only.",
+    "verdictComment": "2026.6.10 found more ways to make operators stare at logs: cron loses tools, WebChat forgets sessions, LINE time-travels, and Feishu still needs a manual kick. Works on my machine has entered witness protection.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -289,29 +289,83 @@
         "number": 96916,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/96916",
         "title": "[Bug]: MCP tool calls fail when LLMs serialize array/object parameters as strings (MiMo, Ollama, etc.)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97287,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97287",
+        "title": "[Bug]: Feishu plugin: token invalid error (99991663) does not trigger automatic retry — requires manual gateway restart"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97319,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97319",
+        "title": "[Bug]: exec tool failure message format makes framework labels indistinguishable from agent-typed commands"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97335,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97335",
+        "title": "Cron fallback model works in normal session but LLM request fails when triggered via cron"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97347,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97347",
+        "title": "[Bug]: 2026.6.10 isolated cron agentTurn loses exec when toolsAllow is exec/bash"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97435,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97435",
+        "title": "[Bug] LINE channel inbound events were delayed before agent run and later drained"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97457,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97457",
+        "title": "[Bug]: Webchat abort loses session context — reroutes to new session after compaction"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95323,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95323",
+        "title": "Inbound system event rendered twice per turn (runtime-context message + reply-body prepend) on Slack"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97055,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97055",
+        "title": "Provider resolution ignores memorySearch.provider config, routing to wrong Ollama instance"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97048,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97048",
+        "title": "Model catalog validation rejects audio/video input modalities produced by OpenClaw's own catalog fetch (MiniMax-M3, phi-4-multimodal dropped)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -123,
+      "score": -147,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 123,
-      "survivalDays": 3,
-      "survivalBonus": 9,
+      "evidencePenalty": 147,
+      "survivalDays": 4,
+      "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 123,
+        "evidencePenalty": 147,
         "votePenalty": 0,
-        "survivalDays": 3,
+        "survivalDays": 4,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 3,
-        "survivalBonus": 9,
+        "survivalCreditedDays": 4,
+        "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": -123
+        "score": -147
       },
       "affected": [
         "config-migration",
@@ -343,7 +397,10 @@
         "acp",
         "attachments",
         "installer",
-        "provider-cache"
+        "provider-cache",
+        "cron-runtime",
+        "line",
+        "webchat"
       ],
       "evidence": [
         {
@@ -862,6 +919,105 @@
           "severity": 3,
           "penalty": 3,
           "reason": "MCP tool calls fail on 2026.6.10 when LLMs serialize array/object parameters as strings, affecting MiMo/Ollama-style routes."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97287,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97287",
+          "issue": "openclaw/openclaw issue 97287",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Feishu invalid-token errors on 2026.6.10 do not trigger automatic token refresh/retry, requiring manual gateway restart to recover."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97319,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97319",
+          "issue": "openclaw/openclaw issue 97319",
+          "area": "exec",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "exec failure formatting on 2026.6.10 makes framework failure labels look like agent-typed shell commands, confusing operators during failures."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97335,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97335",
+          "issue": "openclaw/openclaw issue 97335",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Cron-triggered isolated sessions on 2026.6.10 can fail LLM requests even when the same fallback model works in normal sessions."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97347,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97347",
+          "issue": "openclaw/openclaw issue 97347",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Isolated cron agentTurn on 2026.6.10 can lose exec capability when toolsAllow narrows to exec/bash, breaking allowed automation paths."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97435,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97435",
+          "issue": "openclaw/openclaw issue 97435",
+          "area": "line",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "LINE inbound events on 2026.6.10 were delayed roughly 1.5–2 hours before the agent run and later drained, causing stale channel replies."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97457,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97457",
+          "issue": "openclaw/openclaw issue 97457",
+          "area": "webchat",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "WebChat RPC abort after compaction on 2026.6.10 can lose the original session context and reroute into restart-recovery/new-session state."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95323,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95323",
+          "issue": "openclaw/openclaw issue 95323",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Slack DM turns on a clean 2026.6.10 build can render the inbound system event twice, duplicating runtime context into the model-facing turn."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97055,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97055",
+          "issue": "openclaw/openclaw issue 97055",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "memorySearch.provider config on 2026.6.10 can be ignored, silently routing embeddings to the wrong Ollama instance."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97048,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97048",
+          "issue": "openclaw/openclaw issue 97048",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Model catalog validation on 2026.6.10 rejects audio/video modalities produced by OpenClaw catalog fetch, dropping multimodal models from routing."
         }
       ]
     },
