@@ -15997,7 +15997,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.17.0 keeps adding receipts: Windows desktop launch/update failures, broken browser navigation, custom-provider routing rewrites, Telegram unread inflation, voice-loop stalls, and the existing Feishu/ACP/MCP/runtime pile-up. The pager is now writing poetry in stack traces.",
+    "verdictComment": "v0.17.0 picked up fresh receipts: tool loading can collapse to cronjob-only, QQBot can fail on gateway startup, Matrix/table formatting still bites, and desktop/file-tool regressions joined the stack. The pager has started using footnotes.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -16484,29 +16484,77 @@
         "number": 51321,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/51321",
         "title": "[Bug]: \"artifacts\" 视图BUG"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 53514,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53514",
+        "title": "[Bug]: Linux desktop: no close button when titleBarStyle is hidden"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 53667,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53667",
+        "title": "[Bug]: Tool loader collapses to cronjob-only at runtime despite doctor reporting all toolsets available (v0.17.0)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 50928,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50928",
+        "title": "Desktop: Deleted sessions reappear after refresh due to race condition"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 53173,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53173",
+        "title": "[Windows] hermes update/doctor don't migrate pre-#45610 gateway autostart launchers — stale .cmd Scheduled Task/Startup entries respawn console windows & die at logon"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 53026,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53026",
+        "title": "[Bug]: Matrix adapter hardcoded message length is too conservative and breaks table formatting"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52823,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52823",
+        "title": "[Bug]: write_file tool: non-local terminal backend path resolved on macOS host"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 53659,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53659",
+        "title": "Desktop composer Ctrl+Enter can miss freshly typed steer text"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 53443,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53443",
+        "title": "fix(qqbot): QQAdapter.connect() missing is_reconnect kwarg causes TypeError on every gateway startup"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -207,
+      "score": -227,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 207,
-      "survivalDays": 7,
+      "evidencePenalty": 227,
+      "survivalDays": 8,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 207,
+        "evidencePenalty": 227,
         "votePenalty": 0,
-        "survivalDays": 7,
+        "survivalDays": 8,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -207
+        "score": -227
       },
       "affected": [
         "approval-boundary",
@@ -16515,29 +16563,35 @@
         "compaction",
         "config-profiles",
         "dashboard",
+        "desktop-linux",
         "desktop-macos",
         "desktop-ui",
         "desktop-windows",
         "discord",
         "email",
         "feishu",
+        "file-tools",
         "gateway-service",
         "imessage",
         "installer",
+        "matrix",
         "mcp",
         "memory",
         "message-delivery",
         "model-routing",
         "opencode",
         "provider-routing",
+        "qqbot",
         "runtime",
         "security",
         "telegram",
+        "tool-loader",
         "update-system",
         "voice",
         "web-tools",
         "whatsapp",
-        "windows-runtime"
+        "windows-runtime",
+        "windows-update"
       ],
       "evidence": [
         {
@@ -17430,6 +17484,94 @@
           "severity": 1,
           "penalty": 1,
           "reason": "v0.17.0 Windows Artifacts view can display file/session timestamps months off from actual file and database times."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 53514,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53514",
+          "issue": "NousResearch/hermes-agent issue 53514",
+          "area": "desktop-linux",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Linux desktop v0.17.0 hides the close button when titleBarStyle is hidden, leaving Alt+F4 as the exit path"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 53667,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53667",
+          "issue": "NousResearch/hermes-agent issue 53667",
+          "area": "tool-loader",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Fresh v0.17.0 install can collapse runtime tools to cronjob-only despite doctor reporting tools available"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50928,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50928",
+          "issue": "NousResearch/hermes-agent issue 50928",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.17.0 desktop deleted sessions can reappear after Load more/refresh due to state race"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 53173,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53173",
+          "issue": "NousResearch/hermes-agent issue 53173",
+          "area": "windows-update",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Machines updated to v0.17.0 can retain stale Windows gateway .cmd autostart launchers that respawn console windows"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 53026,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53026",
+          "issue": "NousResearch/hermes-agent issue 53026",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "v0.17.0 Matrix adapter splits messages at 4000 chars, breaking Markdown tables despite Matrix allowing larger events"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52823,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52823",
+          "issue": "NousResearch/hermes-agent issue 52823",
+          "area": "file-tools",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.17.0 write_file with non-local terminal backend resolves remote absolute paths on the macOS host"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 53659,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53659",
+          "issue": "NousResearch/hermes-agent issue 53659",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes Desktop v0.17.0 Ctrl/Cmd+Enter can miss freshly typed steer text before state flushes"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 53443,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53443",
+          "issue": "NousResearch/hermes-agent issue 53443",
+          "area": "qqbot",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.17.0 QQBot adapter connect signature rejects is_reconnect and fails every gateway startup"
         }
       ]
     },
@@ -20632,7 +20774,7 @@
         "repo": "NousResearch/hermes-agent",
         "number": 40187,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/40187",
-        "title": "[Bug]: hermes update / hermes desktop fails to compile desktop app in macOS"
+        "title": "[Bug]: Windows desktop app fails to compile during hermes update / hermes desktop"
       },
       {
         "repo": "NousResearch/hermes-agent",
