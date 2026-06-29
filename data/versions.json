@@ -352,18 +352,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 147,
-      "survivalDays": 4,
-      "survivalBonus": 12,
+      "survivalDays": 5,
+      "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 147,
         "votePenalty": 0,
-        "survivalDays": 4,
+        "survivalDays": 5,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 4,
-        "survivalBonus": 12,
+        "survivalCreditedDays": 5,
+        "survivalBonus": 15,
         "curatedBonus": 0,
         "score": -147
       },
@@ -12965,13 +12965,13 @@
     "createdAt": "2026-05-14T18:26:44.431Z"
   },
   {
-    "issueNumber": 79,
-    "issueUrl": "https://github.com/exisz/IsItStable/issues/79",
+    "issueNumber": 102,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/102",
     "version": "2026.5.7",
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "v2026.5.7 has substantial regression evidence across session routing, messaging, and runtime behavior.",
+    "verdictComment": "The middle looks calmer than the latest trainwrecks, but compaction, policy, and outbound media bugs are now on the board. Not a free pass.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -12981,45 +12981,21 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 80576,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/80576",
-        "title": "Bug: Main agent deleted when creating sub-agent in 2026.5.7"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 80844,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/80844",
-        "title": "Critical npm audit advisory via @mistralai/mistralai in openclaw 2026.5.7"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 81490,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/81490",
-        "title": "[Bug]: subagent completion spawns a fresh run on the parent's route instead of resuming the yielded session (supersedes #80310)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 81491,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/81491",
-        "title": "Gateway should self-SIGTERM after K=3 failed Slack reconnects (silent 15h outage in v2026.5.7)"
-      },
-      {
-        "repo": "openclaw/openclaw",
         "number": 81484,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/81484",
         "title": "[Bug]: OpenClaw 2026.5.7 Discord guild reply regression: malformed send payloads and repeated outbound loops"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 81281,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/81281",
-        "title": "[Bug]: OpenAI-completions prompt_cache_key regression — caching worked in 2026.3.x, broken in 2026.5.x"
+        "number": 79304,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79304",
+        "title": "OpenClaw 2026.5.7 regressions: Weixin runtime race, undici Content-Length failure, Codex Computer Use marketplace registration"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 80420,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/80420",
-        "title": "[Bug]: cron jobs once again failing with model idle timeout in 2026.5.7"
+        "number": 79308,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79308",
+        "title": "[Bug] Telegram group replies sent to wrong chat_id (DM instead of group) in 2026.5.7"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13029,41 +13005,85 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 80611,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/80611",
-        "title": "Non-deep `openclaw status` repeatedly loads plugin metadata and takes ~20s on 2026.5.7"
+        "number": 79752,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79752",
+        "title": "Discord (and other) HTTP responses fail with 'Unexpected token \\u001f' — gzip not decompressed under Node v26 on macOS (2026.5.7)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 79753,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79753",
+        "title": "[Bug]: Cron announce fallback delivery reports success but message never arrives (WeChat + Feishu) on 2026.5.7"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 84698,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/84698",
+        "title": "[Bug]: openclaw status hangs and times out — regression from 2026.5.7"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 79950,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79950",
+        "title": "Bug: async sessions_send results are not delivered cleanly to Telegram-bound requester session"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 79520,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79520",
+        "title": "Outbound channel media uploads silently fail with bare `500: Internal Server Error` for files at `0o600` (write-side leak in sandbox FS bridge + read-side hides the actual reason)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81178,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/81178",
+        "title": "[Bug]: repeated early preflight compactions after compaction due to stale transcript usage"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80933,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/80933",
+        "title": "[Bug]: CLI compaction never triggers for claude-cli runtime sessions, configured contextTokens budget silently ignored (companion to #78194)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 79451,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79451",
+        "title": "tools.deny not enforced for claude-cli backend MCP — agents can call denied MCP tools"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 55,
+      "score": 61,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 42,
+      "evidencePenalty": 34,
       "survivalDays": 6,
       "survivalBonus": 15,
-      "curated": true,
-      "curatedBonus": 2,
+      "curated": false,
+      "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 42,
+        "evidencePenalty": 34,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
-        "curatedBonus": 2,
-        "score": 55
+        "curatedBonus": 0,
+        "score": 61
       },
       "affected": [
-        "control-ui",
+        "compaction",
+        "cron",
         "discord",
+        "media-runtime",
         "runtime",
-        "security",
-        "approval-boundary",
-        "slack",
-        "subagent-runtime"
+        "status",
+        "telegram",
+        "tool-policy",
+        "wechat"
       ],
       "evidence": [
         {
@@ -13071,55 +13091,11 @@
           "number": 81214,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/81214",
           "issue": "openclaw/openclaw issue 81214",
-          "area": "subagent-runtime",
+          "area": "runtime",
           "type": "kernel",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "Subagent context engine regression — isolated lightweight spawns inject large payloads, crash Ollama hosts"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80576,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/80576",
-          "issue": "openclaw/openclaw issue 80576",
-          "area": "control-ui",
-          "type": "kernel",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "Main agent mysteriously deleted when creating subagents via Control UI — reproducible on every attempt"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 80844,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/80844",
-          "issue": "openclaw/openclaw issue 80844",
-          "area": "security",
-          "type": "security",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "Critical npm audit advisory via @mistralai/mistralai malware — blocks downstream package installs"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81490,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/81490",
-          "issue": "openclaw/openclaw issue 81490",
-          "area": "subagent-runtime",
-          "type": "kernel",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "Subagent completion never resumes yielded parent — spawns fresh run instead, orphans paused session"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 81491,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/81491",
-          "issue": "openclaw/openclaw issue 81491",
-          "area": "slack",
-          "type": "channel-specific",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "Silent Slack provider death — gateway health-monitor can't recover; caused 15h+ outage; self-SIGTERM needed"
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Subagent regression explicitly reported on 2026.5.7."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13128,31 +13104,31 @@
           "issue": "openclaw/openclaw issue 81484",
           "area": "discord",
           "type": "channel-specific",
-          "severity": 4,
-          "penalty": 4,
-          "reason": "Discord guild reply regression — malformed send payloads, duplicates, runaway loops; guild-only, DMs fine"
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Discord guild replies malformed/repeated on 2026.5.7."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 81281,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/81281",
-          "issue": "openclaw/openclaw issue 81281",
-          "area": "runtime",
-          "type": "kernel",
-          "severity": 4,
-          "penalty": 4,
-          "reason": "OpenAI-completions prompt_cache_key missing — caching regression broke prefix caching (3s → 60s TTFT impact)"
+          "number": 79304,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79304",
+          "issue": "openclaw/openclaw issue 79304",
+          "area": "wechat",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Weixin runtime race plus undici/Codex regressions on 2026.5.7."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 80420,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/80420",
-          "issue": "openclaw/openclaw issue 80420",
-          "area": "cron-runtime",
-          "type": "kernel",
-          "severity": 4,
-          "penalty": 4,
-          "reason": "Cron jobs failing with model idle timeout — recurring regression"
+          "number": 79308,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79308",
+          "issue": "openclaw/openclaw issue 79308",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram group replies routed to DM on 2026.5.7."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13161,65 +13137,118 @@
           "issue": "openclaw/openclaw issue 79794",
           "area": "discord",
           "type": "channel-specific",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "Discord gateway READY event never fires — bot online but guild messages not received"
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord gateway READY never fires."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 80611,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/80611",
-          "issue": "openclaw/openclaw issue 80611",
-          "area": "runtime",
-          "type": "tool",
+          "number": 79752,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79752",
+          "issue": "openclaw/openclaw issue 79752",
+          "area": "discord",
+          "type": "runtime",
           "severity": 2,
           "penalty": 2,
-          "reason": "openclaw status -q takes ~20s instead of instant, reports wrong model"
+          "reason": "Gzip response handling breaks Discord and similar HTTP responses."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79753,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79753",
+          "issue": "openclaw/openclaw issue 79753",
+          "area": "cron",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Cron announce fallback reports success while delivery disappears."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 84698,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/84698",
+          "issue": "openclaw/openclaw issue 84698",
+          "area": "status",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "openclaw status hangs/timeouts regressed from 2026.5.7."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79950,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79950",
+          "issue": "openclaw/openclaw issue 79950",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "async sessions_send results are not delivered cleanly to Telegram-bound requester sessions on 2026.5.7."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79520,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79520",
+          "issue": "openclaw/openclaw issue 79520",
+          "area": "media-runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Outbound channel media uploads fail with bare 500 for 0o600 files after the 2026.5.7 safe-FS rewrite."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 81178,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/81178",
+          "issue": "openclaw/openclaw issue 81178",
+          "area": "compaction",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Repeated early preflight compactions after compaction due to stale transcript usage on 2026.5.7."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80933,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/80933",
+          "issue": "openclaw/openclaw issue 80933",
+          "area": "compaction",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "claude-cli runtime sessions never trigger compaction because contextTokens budget is missing on 2026.5.7."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79451,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79451",
+          "issue": "openclaw/openclaw issue 79451",
+          "area": "tool-policy",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "tools.deny not enforced for claude-cli backend MCP; verified across 2026.5.4 and 2026.5.7."
         }
       ]
     },
-    "thumbsUp": 1,
+    "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-05-07T20:38:57.626Z"
   },
   {
-    "issueNumber": 78,
-    "issueUrl": "https://github.com/exisz/IsItStable/issues/78",
+    "issueNumber": 101,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/101",
     "version": "2026.5.6",
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Score-first evidence refresh: cron-runtime, discord, feishu, gateway is doing the 3am deploy goblin dance. Evidence updated; website owns the final math.",
+    "verdictComment": "This release had a nice coat of paint, then the runtime gremlins filed paperwork. Telegram, Discord, Slack, and loop control all left fingerprints.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
-        "number": 78601,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78601",
-        "title": "[Bug]: Gateway liveness watchdog restarting the gateway after every few minutes.  (2026.5.6)"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78669,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78669",
-        "title": "Webchat persistence regression still firing on 2026.5.6 — PR #77839 fix appears to have not shipped"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78702,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78702",
-        "title": "[v2026.5.6] Feishu channel silently offline after upgrade — plugin not auto-installed when built-in→external"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78804,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78804",
-        "title": "[Bug]: [Bug]: Module hash mismatch after npm install — sessions_send and web_fetch broken"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78805,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78805",
-        "title": "[Bug]: Severe Event Loop Blocking / Freezing due to Synchronous I/O (execSync, readFileSync)"
+        "number": 79099,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79099",
+        "title": "Windows gateway probe still reports unreachable while gateway health is OK on 2026.5.6"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13229,9 +13258,15 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 79099,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/79099",
-        "title": "Windows gateway probe still reports unreachable while gateway health is OK on 2026.5.6"
+        "number": 78622,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78622",
+        "title": "plugins update --dry-run reports npm plugin target versions as unknown"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78892,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78892",
+        "title": "QQBot: Official plugin not auto-updated when `npm install -g openclaw@latest` runs"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13241,129 +13276,83 @@
       },
       {
         "repo": "openclaw/openclaw",
+        "number": 78947,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78947",
+        "title": "Codex native runtime has very high latency for trivial turns and docs disagree on recommended model prefix"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88002,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88002",
+        "title": "[Bug]: 2026.5.27version the running session of the cron job is incorrect"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 87029,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/87029",
+        "title": "[Bug]: Hallucination Loop — Agent Generated Irrelevant Multi-Thousand-Word Responses Across 2 Simultaneous Sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
         "number": 79445,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/79445",
         "title": "Discord: 401 Unauthorized on send (read works)"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78838,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78838",
-        "title": "[Bug]: rawText empty on assistant_message_end  after tool call with response > ~150 tokens  (Google Gemini provider)"
+        "number": 79252,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79252",
+        "title": "globalCircuitBreakerThreshold is per-tool-type, not session-global — allows cross-tool loop evasion"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78890,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78890",
-        "title": "QQBot: RECONNECT(7) causes 4009 clearSession, always IDENTIFY instead of RESUME"
+        "number": 78805,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78805",
+        "title": "[Bug]: Severe Event Loop Blocking / Freezing due to Synchronous I/O (execSync, readFileSync)"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78893,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78893",
-        "title": "Cron: delivery.to format inconsistency across qqbot channel causes routing issues"
+        "number": 80346,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/80346",
+        "title": "[Bug]: Slack provider doesn't reliably reload after channels.slack.botToken rotation (cached singleAuthorization)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 51,
+      "score": 55,
       "verdict": "pending",
-      "votePenalty": 8,
-      "evidencePenalty": 24,
+      "votePenalty": 0,
+      "evidencePenalty": 28,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 24,
-        "votePenalty": 8,
+        "evidencePenalty": 28,
+        "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 51
+        "score": 55
       },
       "affected": [
-        "cron-runtime",
+        "codex",
+        "cron",
         "discord",
-        "feishu",
         "gateway",
-        "provider-integration",
+        "loop-control",
+        "plugin-system",
         "qqbot",
         "runtime",
+        "slack",
         "telegram",
-        "web_fetch"
+        "windows"
       ],
       "evidence": [
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78601,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78601",
-          "issue": "openclaw/openclaw issue 78601",
-          "area": "gateway",
-          "type": "kernel",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "[Bug]: Gateway liveness watchdog restarting the gateway after every few minutes.  (2026.5.6)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78669,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78669",
-          "issue": "openclaw/openclaw issue 78669",
-          "area": "runtime",
-          "type": "other",
-          "severity": 2,
-          "penalty": 2,
-          "reason": "Webchat persistence regression still firing on 2026.5.6 — PR #77839 fix appears to have not shipped"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78702,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78702",
-          "issue": "openclaw/openclaw issue 78702",
-          "area": "feishu",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[v2026.5.6] Feishu channel silently offline after upgrade — plugin not auto-installed when built-in→external"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78804,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78804",
-          "issue": "openclaw/openclaw issue 78804",
-          "area": "web_fetch",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug]: [Bug]: Module hash mismatch after npm install — sessions_send and web_fetch broken"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78805,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78805",
-          "issue": "openclaw/openclaw issue 78805",
-          "area": "gateway",
-          "type": "kernel",
-          "severity": 5,
-          "penalty": 5,
-          "reason": "[Bug]: Severe Event Loop Blocking / Freezing due to Synchronous I/O (execSync, readFileSync)"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78944,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78944",
-          "issue": "openclaw/openclaw issue 78944",
-          "area": "cron-runtime",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Cron Open Chat opens the wrong running-history session on 2026.5.6."
-        },
         {
           "repo": "openclaw/openclaw",
           "number": 79099,
@@ -13373,7 +13362,40 @@
           "type": "runtime",
           "severity": 2,
           "penalty": 2,
-          "reason": "Windows gateway probe reports unreachable while gateway health is OK on 2026.5.6."
+          "reason": "Windows gateway probe reports unreachable while health is OK on 2026.5.6."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78944,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78944",
+          "issue": "openclaw/openclaw issue 78944",
+          "area": "cron",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Cron job running-session/version metadata incorrect on 2026.5.6."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78622,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78622",
+          "issue": "openclaw/openclaw issue 78622",
+          "area": "plugin-system",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "plugins update dry-run reports npm plugin target versions as unknown."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78892,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78892",
+          "issue": "openclaw/openclaw issue 78892",
+          "area": "qqbot",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "QQBot official plugin not auto-updated by npm global update."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13384,7 +13406,40 @@
           "type": "channel-specific",
           "severity": 1,
           "penalty": 1,
-          "reason": "Telegram group/topic messages only trigger on @mentions despite requireMention=false."
+          "reason": "Telegram group topic ignores requireMention=false."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78947,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78947",
+          "issue": "openclaw/openclaw issue 78947",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Codex native runtime high latency and docs mismatch."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88002,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88002",
+          "issue": "openclaw/openclaw issue 88002",
+          "area": "cron",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Cron job 'Open Chat' button redirects to the wrong conversation history across the 2026.5.6–2026.5.27 range; cron session-history correlation is incorrect."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 87029,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/87029",
+          "issue": "openclaw/openclaw issue 87029",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Hallucination loop produced irrelevant multi-thousand-word responses across simultaneous sessions on 2026.5.6."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13393,81 +13448,63 @@
           "issue": "openclaw/openclaw issue 79445",
           "area": "discord",
           "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Discord sends fail with 401 Unauthorized while read/REST token checks work."
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Discord send returns 401 while read/direct REST still work; environment covers 2026.5.6/2026.5.7."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78838,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78838",
-          "issue": "openclaw/openclaw issue 78838",
-          "area": "provider-integration",
-          "type": "runtime",
-          "severity": 3,
-          "penalty": 3,
-          "reason": "Google/Gemini assistant_message_end rawText becomes empty after tool calls, causing embedded run timeouts."
+          "number": 79252,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79252",
+          "issue": "openclaw/openclaw issue 79252",
+          "area": "loop-control",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "globalCircuitBreakerThreshold is per-tool-type rather than session-global, allowing cross-tool loop evasion on 2026.5.6."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78890,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78890",
-          "issue": "openclaw/openclaw issue 78890",
-          "area": "qqbot",
+          "number": 78805,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78805",
+          "issue": "openclaw/openclaw issue 78805",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Synchronous I/O causes severe event-loop blocking/freezing on 2026.5.6."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80346,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/80346",
+          "issue": "openclaw/openclaw issue 80346",
+          "area": "slack",
           "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "QQBot RECONNECT(7) path clears session instead of resuming on 2026.5.6."
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78893,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78893",
-          "issue": "openclaw/openclaw issue 78893",
-          "area": "qqbot",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "QQBot cron delivery target format inconsistency causes routing issues."
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Slack provider does not reliably reload after botToken rotation on 2026.5.6."
         }
       ]
     },
-    "thumbsUp": 3,
-    "thumbsDown": 7,
+    "thumbsUp": 0,
+    "thumbsDown": 0,
     "createdAt": "2026-05-06T17:33:28.172Z"
   },
   {
-    "issueNumber": 77,
-    "issueUrl": "https://github.com/exisz/IsItStable/issues/77",
+    "issueNumber": 100,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/100",
     "version": "2026.5.5",
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Score-first evidence refresh: approval-boundary, browser, heartbeat, runtime is doing the 3am deploy goblin dance. Evidence updated; website owns the final math.",
+    "verdictComment": "Still usable in places, but the evidence pile is no longer pretending this is clean. Compaction, identity, and cron edges are showing up.",
     "referencedIssues": [
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78391,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78391",
-        "title": "Critical Regression: Direct Command Routing remains broken in v2026.5.5 (#77384 persists)"
-      },
       {
         "repo": "openclaw/openclaw",
         "number": 78415,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/78415",
         "title": "Exec approval-required command executes without explicit user approval on 2026.5.5"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78569,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78569",
-        "title": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_APP_MISMATCH) via Control UI"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 78562,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78562",
-        "title": "Repeated tool-loop context overflows cause successive auto-compactions after successful compaction (v2026.5.5)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13483,9 +13520,27 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78738,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78738",
-        "title": "Exec approval dispatch failure silently drops commands instead of returning error to agent"
+        "number": 78714,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78714",
+        "title": "[Bug]: Codex provider usage ignores proxy env and reports fetch failed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78481,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78481",
+        "title": "Update button silently no-ops when update.run is coalesced"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78451,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78451",
+        "title": "[Bug] Commitments extraction fails with MiniMax-M2.7-highspeed on non-highspeed plans"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78562,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78562",
+        "title": "Repeated tool-loop context overflows cause successive auto-compactions after successful compaction (v2026.5.5)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13495,55 +13550,52 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78571,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78571",
-        "title": "[Bug]: Telegram Connection Bot"
+        "number": 79069,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79069",
+        "title": "runEmbeddedPiAgent (cron path) does not pass `allowEmptyAssistantReplyAsSilent` for `delivery.mode === \"none\"` jobs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 81269,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/81269",
+        "title": "Runtime injects agent slot id instead of identity.name causing identity confusion"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 56,
+      "score": 55,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 24,
+      "evidencePenalty": 25,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 24,
+        "evidencePenalty": 25,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 56
+        "score": 55
       },
       "affected": [
         "approval-boundary",
         "browser",
+        "codex",
+        "compaction",
+        "cron-runtime",
         "heartbeat",
-        "runtime",
-        "security",
-        "telegram",
-        "tool",
-        "ui"
+        "identity",
+        "provider-integration",
+        "ui",
+        "upgrade"
       ],
       "evidence": [
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78391,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78391",
-          "issue": "openclaw/openclaw issue 78391",
-          "area": "security",
-          "type": "runtime",
-          "severity": 4,
-          "penalty": 4,
-          "reason": "Critical Regression: Direct Command Routing remains broken in v2026.5.5 (#77384 persists)"
-        },
         {
           "repo": "openclaw/openclaw",
           "number": 78415,
@@ -13553,29 +13605,7 @@
           "type": "kernel",
           "severity": 5,
           "penalty": 5,
-          "reason": "Approval-required exec runs without explicit user approval; body reproduces on both 2026.5.4 and 2026.5.5"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78569,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78569",
-          "issue": "openclaw/openclaw issue 78569",
-          "area": "runtime",
-          "type": "other",
-          "severity": 2,
-          "penalty": 2,
-          "reason": "[Bug]: exec host=node invoke-failed after approval (APPROVAL_APP_MISMATCH) via Control UI"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78562,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78562",
-          "issue": "openclaw/openclaw issue 78562",
-          "area": "tool",
-          "type": "tool-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Repeated tool-loop context overflows cause successive auto-compactions after successful compaction (v2026.5.5)"
+          "reason": "Approval-required command executes without explicit user approval on 2026.5.5."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13586,7 +13616,7 @@
           "type": "tool-specific",
           "severity": 2,
           "penalty": 2,
-          "reason": "Browser plugin chrome-mcp transport hits persistent targetId mismatch and AbortError on 2026.5.5."
+          "reason": "Browser plugin targetId/fill/AbortError regression."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13595,20 +13625,53 @@
           "issue": "openclaw/openclaw issue 78577",
           "area": "ui",
           "type": "runtime",
-          "severity": 2,
-          "penalty": 2,
-          "reason": "Control UI hard-codes frame-denying headers, breaking same-origin embed dashboards."
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Control UI framing has no same-origin opt-in regression."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78738,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78738",
-          "issue": "openclaw/openclaw issue 78738",
-          "area": "approval-boundary",
+          "number": 78714,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78714",
+          "issue": "openclaw/openclaw issue 78714",
+          "area": "codex",
+          "type": "provider-integration",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Codex provider ignores proxy env and reports fetch failed."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78481,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78481",
+          "issue": "openclaw/openclaw issue 78481",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Gate B INCLUDE: environment spans 2026.5.4 → 2026.5.5; update button silently no-ops when update.run is coalesced."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78451,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78451",
+          "issue": "openclaw/openclaw issue 78451",
+          "area": "provider-integration",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Commitments extraction fails with MiniMax highspeed plan mismatch."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78562,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78562",
+          "issue": "openclaw/openclaw issue 78562",
+          "area": "compaction",
           "type": "kernel",
           "severity": 5,
           "penalty": 5,
-          "reason": "Exec approval dispatch failure silently drops commands instead of returning an error to the agent."
+          "reason": "Repeated tool-loop context overflows cause successive auto-compactions after successful compaction on 2026.5.5."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13619,18 +13682,29 @@
           "type": "runtime",
           "severity": 2,
           "penalty": 2,
-          "reason": "Agent heartbeat defaults are silently ignored when an agent has explicit heartbeat config."
+          "reason": "agents.defaults.heartbeat is silently ignored when an agent has explicit heartbeat config."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78571,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78571",
-          "issue": "openclaw/openclaw issue 78571",
-          "area": "telegram",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Telegram messages are received but no assistant reply is delivered on 2026.5.5."
+          "number": 79069,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79069",
+          "issue": "openclaw/openclaw issue 79069",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Embedded cron execution path lacks allowEmptyAssistantReplyAsSilent; inspected range includes 2026.5.5."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 81269,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/81269",
+          "issue": "openclaw/openclaw issue 81269",
+          "area": "identity",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Runtime injects agent slot id instead of identity.name, causing identity confusion on 2026.5.5."
         }
       ]
     },
@@ -13639,25 +13713,19 @@
     "createdAt": "2026-05-06T08:46:22.905Z"
   },
   {
-    "issueNumber": 76,
-    "issueUrl": "https://github.com/exisz/IsItStable/issues/76",
+    "issueNumber": 99,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/99",
     "version": "2026.5.4",
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "\"Someone shipped a grenade and forgot to pull the pin. 19 different subsystems on fire.\"",
+    "verdictComment": "The quiet-looking release now has real 3am-deploy energy: auth scope, operator trust, channel liveness, and cron delivery all show teeth.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
-        "number": 77930,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/77930",
-        "title": "[Bug]: Discord channel not loaded in 2026.5.4 (and beta.2/beta.3), works in beta.1 and 2026.4.29"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "number": 77779,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/77779",
-        "title": "[Bug]: WeChat plugin fails to start — api.runtime undefined in 2026.5.4 causes runtime initialization timeout"
+        "number": 78360,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78360",
+        "title": "[Bug]: TUI stream watchdog marks quiet active runs idle in 2026.5.4"
       },
       {
         "repo": "openclaw/openclaw",
@@ -13667,113 +13735,111 @@
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78232,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78232",
-        "title": "[Bug]: openclaw-weixin plugin 2.4.1 incompatible with OpenClaw 2026.5.4 — channelRuntime API changes break inbound message processing"
+        "number": 78435,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78435",
+        "title": "[Bug]: `channels.slack.start-account` phase blocks event loop 5+ minutes while a model_call is in flight (Windows, 2026.5.4)"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 77838,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/77838",
-        "title": "sqlite-vec import fails after upgrade to 2026.5.4 (regression from 5.3)"
+        "number": 77930,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/77930",
+        "title": "[Bug]: Discord channel not loaded in 2026.5.4 (and beta.2/beta.3), works in beta.1 and 2026.4.29"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 77896,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/77896",
-        "title": "[Bug]: Matrix channel missing matrix-js-sdk after 2026.5.4 host npm update"
+        "number": 78674,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78674",
+        "title": "[Bug]: Control UI sends null app.id/app.mode through Cloudflare tunnel"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78141,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78141",
-        "title": "[Bug]: Bundled fal image generation provider not registered in 2026.5.4 — plugin loads but image_generate reports 'No provider registered'"
+        "number": 78008,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78008",
+        "title": "[Bug]:"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78070,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78070",
-        "title": "[Bug]: Telegram /verbose no longer streams thinking/tool progress into preview on 2026.5.4"
+        "number": 78301,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78301",
+        "title": "Plugin loader: silent failures on legacy/invalid plugin contracts cost hours of debugging"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78123,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78123",
-        "title": "[Bug] Feishu dispatch completes with replies=0 after upgrading to 2026.5.4 — replies not sent without streaming card"
+        "number": 79451,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79451",
+        "title": "tools.deny not enforced for claude-cli backend MCP — agents can call denied MCP tools"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 77960,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/77960",
-        "title": "[Bug]: ReplyRunAlreadyActiveError still fires on 5.4 for discrete sequential chat.send (follow-up to #77485)"
+        "number": 77807,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/77807",
+        "title": "[Bug]: sessions_spawn fails with missing scope operator.write despite full-scope operator token"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78204,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78204",
-        "title": "[Bug]: the bot frequently fails to reply to messages in Feishu group chats, while private messages work normally.When mentioned in the group, it shows the typing indicator after receiving the message"
+        "number": 78712,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78712",
+        "title": "[Bug]: `trusted-operator` plugin HTTP routes escalate shared-secret callers to implicit admin scopes"
       },
       {
         "repo": "openclaw/openclaw",
-        "number": 78415,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/78415",
-        "title": "Exec approval-required command executes without explicit user approval on 2026.5.5"
+        "number": 78165,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78165",
+        "title": "[Bug]: channels.whatsapp.start-account blocks event loop ~40s, triggering reconnect storm"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 79069,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/79069",
+        "title": "runEmbeddedPiAgent (cron path) does not pass `allowEmptyAssistantReplyAsSilent` for `delivery.mode === \"none\"` jobs"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 66,
+      "score": 48,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 17,
+      "evidencePenalty": 35,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 17,
+        "evidencePenalty": 35,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 66
+        "score": 48
       },
       "affected": [
-        "approval-boundary",
+        "cron-runtime",
         "discord",
-        "feishu",
-        "image-tool",
-        "matrix",
+        "plugin-system",
         "runtime",
-        "telegram",
-        "wechat"
+        "sessions-management",
+        "slack",
+        "tool-policy",
+        "trusted-operator",
+        "ui",
+        "webchat",
+        "whatsapp"
       ],
       "evidence": [
         {
           "repo": "openclaw/openclaw",
-          "number": 77930,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/77930",
-          "issue": "openclaw/openclaw issue 77930",
-          "area": "discord",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug]: Discord channel not loaded in 2026.5.4 (and beta.2/beta.3), works in beta.1 and 2026.4.29"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 77779,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/77779",
-          "issue": "openclaw/openclaw issue 77779",
-          "area": "wechat",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug]: WeChat plugin fails to start — api.runtime undefined in 2026.5.4 causes runtime initialization timeout"
+          "number": 78360,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78360",
+          "issue": "openclaw/openclaw issue 78360",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "TUI stream watchdog marks quiet active runs idle on 2026.5.4."
         },
         {
           "repo": "openclaw/openclaw",
@@ -13782,108 +13848,119 @@
           "issue": "openclaw/openclaw issue 77868",
           "area": "discord",
           "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "Discord delivery crashes with SyntaxError: Plugin/Core version mismatch (2026.5.4 plugin vs 2026.5.3 core)"
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Discord delivery crashes from plugin/core version mismatch."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78232,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78232",
-          "issue": "openclaw/openclaw issue 78232",
-          "area": "runtime",
-          "type": "other",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug]: openclaw-weixin plugin 2.4.1 incompatible with OpenClaw 2026.5.4 — channelRuntime API changes break inb"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 77838,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/77838",
-          "issue": "openclaw/openclaw issue 77838",
-          "area": "runtime",
-          "type": "other",
+          "number": 78435,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78435",
+          "issue": "openclaw/openclaw issue 78435",
+          "area": "slack",
+          "type": "channel-specific",
           "severity": 2,
           "penalty": 2,
-          "reason": "sqlite-vec import fails after upgrade to 2026.5.4 (regression from 5.3)"
+          "reason": "Slack start-account blocks event loop for minutes."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 77896,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/77896",
-          "issue": "openclaw/openclaw issue 77896",
-          "area": "matrix",
+          "number": 77930,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/77930",
+          "issue": "openclaw/openclaw issue 77930",
+          "area": "discord",
           "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug]: Matrix channel missing matrix-js-sdk after 2026.5.4 host npm update"
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Discord channel not loaded in 2026.5.4."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78141,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78141",
-          "issue": "openclaw/openclaw issue 78141",
-          "area": "image-tool",
-          "type": "tool-specific",
+          "number": 78674,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78674",
+          "issue": "openclaw/openclaw issue 78674",
+          "area": "webchat",
+          "type": "runtime",
           "severity": 1,
           "penalty": 1,
-          "reason": "[Bug]: Bundled fal image generation provider not registered in 2026.5.4 — plugin loads but image_generate repo"
+          "reason": "Control UI sends null app id/mode through Cloudflare tunnel."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78070,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78070",
-          "issue": "openclaw/openclaw issue 78070",
-          "area": "telegram",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug]: Telegram /verbose no longer streams thinking/tool progress into preview on 2026.5.4"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 78123,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78123",
-          "issue": "openclaw/openclaw issue 78123",
-          "area": "feishu",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug] Feishu dispatch completes with replies=0 after upgrading to 2026.5.4 — replies not sent without streamin"
-        },
-        {
-          "repo": "openclaw/openclaw",
-          "number": 77960,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/77960",
-          "issue": "openclaw/openclaw issue 77960",
+          "number": 78008,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78008",
+          "issue": "openclaw/openclaw issue 78008",
           "area": "runtime",
-          "type": "other",
+          "type": "runtime",
           "severity": 1,
           "penalty": 1,
-          "reason": "[Bug]: ReplyRunAlreadyActiveError still fires on 5.4 for discrete sequential chat.send (follow-up to #77485)"
+          "reason": "Open 2026.5.4 bug report with explicit version evidence."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78204,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78204",
-          "issue": "openclaw/openclaw issue 78204",
-          "area": "feishu",
-          "type": "channel-specific",
-          "severity": 1,
-          "penalty": 1,
-          "reason": "[Bug]: the bot frequently fails to reply to messages in Feishu group chats, while private messages work normal"
+          "number": 78301,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78301",
+          "issue": "openclaw/openclaw issue 78301",
+          "area": "plugin-system",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Plugin loader silent failures on legacy/invalid contracts."
         },
         {
           "repo": "openclaw/openclaw",
-          "number": 78415,
-          "url": "https://redirect.github.com/openclaw/openclaw/issues/78415",
-          "issue": "openclaw/openclaw issue 78415",
-          "area": "approval-boundary",
+          "number": 79451,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79451",
+          "issue": "openclaw/openclaw issue 79451",
+          "area": "tool-policy",
           "type": "kernel",
           "severity": 5,
           "penalty": 5,
-          "reason": "Approval-required exec runs without explicit user approval; body reproduces on both 2026.5.4 and 2026.5.5"
+          "reason": "tools.deny not enforced for claude-cli backend MCP; verified across 2026.5.4 and 2026.5.7."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 77807,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/77807",
+          "issue": "openclaw/openclaw issue 77807",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "sessions_spawn fails with missing operator.write scope despite full-scope operator token on 2026.5.4."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78712,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78712",
+          "issue": "openclaw/openclaw issue 78712",
+          "area": "trusted-operator",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "trusted-operator shared-secret routes can escalate callers to implicit admin scopes on 2026.5.4."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78165,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78165",
+          "issue": "openclaw/openclaw issue 78165",
+          "area": "whatsapp",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "WhatsApp start-account blocks the event loop for ~40s and can trigger reconnect storms on 2026.5.4."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 79069,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/79069",
+          "issue": "openclaw/openclaw issue 79069",
+          "area": "cron-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Embedded cron execution path lacks allowEmptyAssistantReplyAsSilent; inspected range includes 2026.5.4."
         }
       ]
     },
