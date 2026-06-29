@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-29T00:27:35.106Z",
+  "generatedAt": "2026-06-29T01:40:58.701Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -22,14 +22,15 @@
         "affected:provider-integration",
         "affected:tool-registration",
         "affected:message-delivery",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:50-59"
       ],
       "issueNumber": 119,
       "title": "[v0.2.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/119",
       "createdAt": "2026-06-02T00:36:43Z",
-      "updatedAt": "2026-06-16T04:37:43Z"
+      "updatedAt": "2026-06-29T00:39:20Z"
     },
     {
       "version": "0.3.0",
@@ -48,14 +49,15 @@
         "affected:ui",
         "affected:provider-integration",
         "affected:windows",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:60-69"
       ],
       "issueNumber": 120,
       "title": "[v0.3.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/120",
       "createdAt": "2026-06-02T00:36:44Z",
-      "updatedAt": "2026-06-16T04:37:41Z"
+      "updatedAt": "2026-06-29T00:39:18Z"
     },
     {
       "version": "0.4.0",
@@ -76,14 +78,15 @@
         "affected:cron",
         "affected:provider-integration",
         "affected:memory",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:30-39"
       ],
       "issueNumber": 121,
       "title": "[v0.4.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/121",
       "createdAt": "2026-06-02T00:36:45Z",
-      "updatedAt": "2026-06-16T04:37:40Z"
+      "updatedAt": "2026-06-29T00:39:17Z"
     },
     {
       "version": "0.5.0",
@@ -101,14 +104,15 @@
         "affected:ui",
         "affected:provider-integration",
         "affected:message-delivery",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:70-79"
       ],
       "issueNumber": 122,
       "title": "[v0.5.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/122",
       "createdAt": "2026-06-02T00:36:46Z",
-      "updatedAt": "2026-06-16T04:37:38Z"
+      "updatedAt": "2026-06-29T00:39:15Z"
     },
     {
       "version": "0.6.0",
@@ -157,14 +161,15 @@
         "affected:sessions-management",
         "affected:provider-integration",
         "affected:memory",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:60-69"
       ],
       "issueNumber": 124,
       "title": "[v0.7.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/124",
       "createdAt": "2026-06-02T00:36:48Z",
-      "updatedAt": "2026-06-16T04:37:34Z"
+      "updatedAt": "2026-06-29T00:39:13Z"
     },
     {
       "version": "0.8.0",
@@ -211,14 +216,15 @@
         "affected:provider-integration",
         "affected:local-model",
         "affected:memory",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:60-69"
       ],
       "issueNumber": 126,
       "title": "[v0.9.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/126",
       "createdAt": "2026-06-02T00:36:51Z",
-      "updatedAt": "2026-06-16T04:37:31Z"
+      "updatedAt": "2026-06-29T00:39:11Z"
     },
     {
       "version": "0.10.0",
@@ -321,14 +327,15 @@
         "affected:macos",
         "affected:provider-integration",
         "affected:windows",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:40-49"
       ],
       "issueNumber": 130,
       "title": "[v0.13.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/130",
       "createdAt": "2026-06-02T00:36:55Z",
-      "updatedAt": "2026-06-16T04:37:24Z"
+      "updatedAt": "2026-06-29T00:39:09Z"
     },
     {
       "version": "0.14.0",
@@ -386,14 +393,15 @@
         "affected:tool-registration",
         "affected:windows",
         "affected:message-delivery",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:20-29"
       ],
       "issueNumber": 131,
       "title": "[v0.15.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/131",
       "createdAt": "2026-06-02T00:36:56Z",
-      "updatedAt": "2026-06-16T04:37:22Z"
+      "updatedAt": "2026-06-29T00:39:07Z"
     },
     {
       "version": "0.15.1",
