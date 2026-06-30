@@ -1041,7 +1041,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.17.0 picked up fresh receipts: tool loading can collapse to cronjob-only, QQBot can fail on gateway startup, Matrix/table formatting still bites, and desktop/file-tool regressions joined the stack. The pager has started using footnotes.",
+      "verdictComment": "v0.17.0 picked up fresh receipts: tool loading can collapse to cronjob-only, QQBot can fail on gateway startup, Matrix/table formatting still bites, and desktop/file-tool/SimpleX regressions joined the stack. The pager has started using footnotes.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1275,7 +1275,7 @@
           "repo": "NousResearch/hermes-agent",
           "number": 50737,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50737",
-          "title": "bug(desktop): profile-scoped OpenRouter setup can leave gateway inference not ready"
+          "title": "bug(auth/profile): OpenRouter pool state can override or leak into selected profile readiness"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -1576,29 +1576,41 @@
           "number": 53443,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53443",
           "title": "fix(qqbot): QQAdapter.connect() missing is_reconnect kwarg causes TypeError on every gateway startup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 54077,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/54077",
+          "title": "hermes voice issue"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 55180,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/55180",
+          "title": "[Bug]:"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -227,
+        "score": -230,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 227,
-        "survivalDays": 9,
+        "evidencePenalty": 230,
+        "survivalDays": 10,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 227,
+          "evidencePenalty": 230,
           "votePenalty": 0,
-          "survivalDays": 9,
+          "survivalDays": 10,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -227
+          "score": -230
         },
         "affected": [
           "approval-boundary",
@@ -1628,6 +1640,7 @@
           "qqbot",
           "runtime",
           "security",
+          "simplex",
           "telegram",
           "tool-loader",
           "update-system",
@@ -2616,6 +2629,28 @@
             "severity": 3,
             "penalty": 3,
             "reason": "v0.17.0 QQBot adapter connect signature rejects is_reconnect and fails every gateway startup"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 54077,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/54077",
+            "issue": "NousResearch/hermes-agent issue 54077",
+            "area": "voice",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop v0.17.0 generates Windows SAPI TTS audio but opens it in Windows Media Player instead of inline playback"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 55180,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/55180",
+            "issue": "NousResearch/hermes-agent issue 55180",
+            "area": "simplex",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.17.0 SimpleX adapter silently drops non-audio XFTP attachments before completed downloads reach the agent"
           }
         ]
       },
