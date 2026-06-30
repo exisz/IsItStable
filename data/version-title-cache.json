@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-30T12:35:33.435Z",
+  "generatedAt": "2026-06-30T13:33:00.649Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -1919,19 +1919,31 @@
       "labels": [
         "version",
         "pkg:openclaw",
+        "risk:channel",
+        "risk:tool",
+        "risk:kernel",
+        "risk:runtime",
         "risk:other",
         "affected:compaction",
         "affected:heartbeat",
+        "affected:telegram",
+        "affected:gateway",
+        "affected:browser",
+        "affected:approval-boundary",
+        "affected:upgrade",
+        "affected:codex",
+        "affected:ui",
         "affected:cron-runtime",
+        "affected:provider-integration",
         "affected:identity",
-        "score:70-79"
+        "score:60-69"
       ],
       "issueNumber": 100,
       "title": "[v2026.5.5] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/100",
       "createdAt": "2026-05-26T12:52:35Z",
-      "updatedAt": "2026-06-29T12:41:53Z"
+      "updatedAt": "2026-06-30T12:47:10Z"
     },
     {
       "version": "2026.5.5",
@@ -3232,19 +3244,31 @@
         "labels": [
           "version",
           "pkg:openclaw",
+          "risk:channel",
+          "risk:tool",
+          "risk:kernel",
+          "risk:runtime",
           "risk:other",
           "affected:compaction",
           "affected:heartbeat",
+          "affected:telegram",
+          "affected:gateway",
+          "affected:browser",
+          "affected:approval-boundary",
+          "affected:upgrade",
+          "affected:codex",
+          "affected:ui",
           "affected:cron-runtime",
+          "affected:provider-integration",
           "affected:identity",
-          "score:70-79"
+          "score:60-69"
         ],
         "issueNumber": 100,
         "title": "[v2026.5.5] [OpenClaw] Is it stable?",
         "state": "open",
         "url": "https://github.com/exisz/IsItStable/issues/100",
         "createdAt": "2026-05-26T12:52:35Z",
-        "updatedAt": "2026-06-29T12:41:53Z"
+        "updatedAt": "2026-06-30T12:47:10Z"
       },
       {
         "version": "2026.5.5",
