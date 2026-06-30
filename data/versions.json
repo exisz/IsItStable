@@ -352,7 +352,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 147,
-      "survivalDays": 5,
+      "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -360,7 +360,7 @@
         "baseScore": 80,
         "evidencePenalty": 147,
         "votePenalty": 0,
-        "survivalDays": 5,
+        "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -13498,7 +13498,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Still usable in places, but the evidence pile is no longer pretending this is clean. Compaction, identity, and cron edges are showing up.",
+    "verdictComment": "The pile got heavier: approval-boundary, compaction, cron, gateway, and session-recovery evidence all show up. Works-on-my-machine is not a score bucket.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -13559,41 +13559,74 @@
         "number": 81269,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/81269",
         "title": "Runtime injects agent slot id instead of identity.name causing identity confusion"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 88870,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/88870",
+        "title": "Stuck-session recovery aborts long-but-active agent runs at warnMs×3 (~6min) with misleading \"Reply operation aborted by user\" reason"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 80186,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/80186",
+        "title": "[Bug]: Regression (2026.5.5): Plugin tools in tools.alsoAllow filtered out of cron isolated sessions"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78394,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78394",
+        "title": "[Bug]:  Many error gateway connect failed: Error: gateway closed (1000): in release 2026.5.5"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78519,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78519",
+        "title": "[Bug]: 2026.5.5 update switched OpenAI subscription to OpenAI API"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 78975,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/78975",
+        "title": "[Bug]: Update 2026.4.27 → 2026.5.5 breaks Telegram bot connection"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 55,
+      "score": 42,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 25,
+      "evidencePenalty": 38,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 25,
+        "evidencePenalty": 38,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 55
+        "score": 42
       },
       "affected": [
         "approval-boundary",
         "browser",
-        "codex",
-        "compaction",
-        "cron-runtime",
-        "heartbeat",
-        "identity",
-        "provider-integration",
         "ui",
-        "upgrade"
+        "codex",
+        "upgrade",
+        "provider-integration",
+        "compaction",
+        "heartbeat",
+        "cron-runtime",
+        "identity",
+        "session-recovery",
+        "gateway",
+        "telegram"
       ],
       "evidence": [
         {
@@ -13705,6 +13738,61 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Runtime injects agent slot id instead of identity.name, causing identity confusion on 2026.5.5."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 88870,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/88870",
+          "issue": "openclaw/openclaw issue 88870",
+          "area": "session-recovery",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Stuck-session recovery aborts long-but-active runs with a misleading user-aborted reason; gate includes 2026.5.5."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 80186,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/80186",
+          "issue": "openclaw/openclaw issue 80186",
+          "area": "cron-runtime",
+          "type": "tool-policy",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Cron isolated sessions filter plugin tools in tools.alsoAllow on 2026.5.5."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78394,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78394",
+          "issue": "openclaw/openclaw issue 78394",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Release 2026.5.5 reports repeated gateway connect failures / gateway closed errors."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78519,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78519",
+          "issue": "openclaw/openclaw issue 78519",
+          "area": "provider-integration",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "2026.5.5 update switched OpenAI subscription routing to OpenAI API for affected users."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 78975,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/78975",
+          "issue": "openclaw/openclaw issue 78975",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Upgrade to 2026.5.5 breaks Telegram bot connection for affected users."
         }
       ]
     },
