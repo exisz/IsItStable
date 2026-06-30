@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-30T00:27:18.717Z",
+  "generatedAt": "2026-06-30T01:38:13.112Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -581,14 +581,15 @@
         "affected:desktop-linux",
         "affected:tool-loader",
         "affected:file-tools",
-        "affected:windows-update"
+        "affected:windows-update",
+        "affected:simplex"
       ],
       "issueNumber": 143,
       "title": "[v0.17.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/143",
       "createdAt": "2026-06-19T20:28:46Z",
-      "updatedAt": "2026-06-28T00:32:23Z"
+      "updatedAt": "2026-06-30T00:38:55Z"
     },
     {
       "version": "0.0.1",
