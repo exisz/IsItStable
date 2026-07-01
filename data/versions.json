@@ -6,32 +6,493 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "This release has multiple fresh regressions across sessions, tools, plugins, and UI. Not a gentle 3am deploy companion.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98416,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98416",
+        "title": "[Bug] v2026.6.11 published dist missing reentrancy guard - reply session initialization conflicted"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98528,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98528",
+        "title": "[Bug]: Tool output (exec, web_fetch, web_search) returns empty after first call per turn [2026.6.11 regression]"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98614,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98614",
+        "title": "[Regression]: sessions_spawn missing scope operator.write — introduced between v2026.6.1 and v2026.6.11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98415,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98415",
+        "title": "sessions_send returns accepted but silently fails when target session file is locked (SessionWriteLockTimeoutError)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98565,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98565",
+        "title": "[Bug]: Container image upgrades skip openclaw upgrade migrations before gateway startup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98419,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98419",
+        "title": "plugins update rewrites config for install-record-only updates"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98409,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98409",
+        "title": "Deleted recurring cron job silently respawns with a new job_id on every gateway restart"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98379,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98379",
+        "title": "[Bug]: Control UI approval window closes with queued approvals pending"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98583,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98583",
+        "title": "@openclaw/acpx publishes workspace:* devDependency, breaking plugin install on npm gateways (EUNSUPPORTEDPROTOCOL)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96878,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96878",
+        "title": "[Bug]: web_search providers, like searxng and tavily stopped working and the official plugins failed to install."
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98557,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98557",
+        "title": "[Bug]:"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98448,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98448",
+        "title": "[Bug] Bonjour advertiser retries \"failed probing\" indefinitely on macOS 2026.6.11 instead of eventually disabling (per docs) — OPENCLAW_DISABLE_BONJOUR env var non-functional; discovery.mdns.mode=\"off\" works"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98232,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98232",
+        "title": "[Bug]: macOS LaunchAgent update can report managed-service-handoff-failed while replacement gateway is healthy"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97636,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97636",
+        "title": "[Bug]: Control UI can connect to the wrong gateway across base paths"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98392,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98392",
+        "title": "[Bug]: Control UI can show stale approval resolve errors on the wrong prompt"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98484,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98484",
+        "title": "[Bug]: ACPX plugin upgrade to 6.11 failed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98573,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98573",
+        "title": "[Bug]: spawn gemini ENOENT on Windows (missing .cmd extension handling)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98064,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98064",
+        "title": "iOS LAN pairing drops bootstrap handoff token before chat reconnect"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97680,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97680",
+        "title": "Beta-tagged update can leave official external plugins on latest instead of the requested beta tag"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98564,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98564",
+        "title": "[Bug]: Mattermost repair installs external plugin without enabling gateway startup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98382,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98382",
+        "title": "Bug: Talk mode Chat window WKWebView viewport collapses to ~30px width on macOS 2026.6.11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98295,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98295",
+        "title": "[Bug]: custom Xiaomi MiMo models generate invalid max_completion_tokens when maxTokens is not specified"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98540,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98540",
+        "title": "[Bug]: Composer shows idle state while agent is actively executing tools"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98566,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98566",
+        "title": "[Bug]: Chat workspace rail sections have no scrollbar, file list overflows"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 97021,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/97021",
+        "title": "bug(telegram): typing indicator stuck in group forum/topic mode — session abortable after completion (regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98282,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98282",
+        "title": "[Bug]: Telegram forum-topic long streamed assistant replies truncated in-place — 2026.6.11 (sibling to #95878, gap left by #97312)"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 14,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 66,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 66,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 14
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "approval-boundary",
+        "config-migration",
+        "cron",
+        "desktop-macos",
+        "launchagent",
+        "model-routing",
+        "node-surface",
+        "plugin-install",
+        "plugin-system",
+        "sessions-management",
+        "telegram",
+        "tools",
+        "ui",
+        "upgrade",
+        "web-search",
+        "windows-runtime"
+      ],
+      "evidence": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98416,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98416",
+          "issue": "openclaw/openclaw issue 98416",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Published release artifact lacks effective reply-session reentrancy guard, causing initialization conflicts."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98528,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98528",
+          "issue": "openclaw/openclaw issue 98528",
+          "area": "tools",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Tool result transport regresses after first tool call per turn for exec/web_fetch/web_search."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98614,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98614",
+          "issue": "openclaw/openclaw issue 98614",
+          "area": "sessions-management",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "sessions_spawn fails with missing operator.write scope after upgrade from 2026.6.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98415,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98415",
+          "issue": "openclaw/openclaw issue 98415",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "sessions_send can accept then silently fail on locked target session files."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98565,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98565",
+          "issue": "openclaw/openclaw issue 98565",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Container image upgrades can skip upgrade migrations before gateway startup."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98419,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98419",
+          "issue": "openclaw/openclaw issue 98419",
+          "area": "config-migration",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Plugin update path can rewrite projected config and trip size-drop protection."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98409,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98409",
+          "issue": "openclaw/openclaw issue 98409",
+          "area": "cron",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Deleted recurring cron jobs can silently respawn on every gateway restart."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98379,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98379",
+          "issue": "openclaw/openclaw issue 98379",
+          "area": "approval-boundary",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Control UI approval window can close while queued approvals remain pending."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98583,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98583",
+          "issue": "openclaw/openclaw issue 98583",
+          "area": "plugin-install",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "@openclaw/acpx published workspace:* devDependency breaks npm gateway plugin install."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96878,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96878",
+          "issue": "openclaw/openclaw issue 96878",
+          "area": "web-search",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "web_search providers and official plugin installation fail on the release train."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98557,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98557",
+          "issue": "openclaw/openclaw issue 98557",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Telegram rich delivery can leak standalone tool-call-shaped parameter wrappers."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98448,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98448",
+          "issue": "openclaw/openclaw issue 98448",
+          "area": "desktop-macos",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Bonjour advertiser retries failed probing indefinitely and env-var disable is ineffective."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98232,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98232",
+          "issue": "openclaw/openclaw issue 98232",
+          "area": "launchagent",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "macOS LaunchAgent update can report handoff failure while replacement gateway is healthy."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97636,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97636",
+          "issue": "openclaw/openclaw issue 97636",
+          "area": "ui",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Control UI can connect to the wrong gateway across base paths."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98392,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98392",
+          "issue": "openclaw/openclaw issue 98392",
+          "area": "approval-boundary",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Control UI can show stale approval resolve errors on the wrong prompt."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98484,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98484",
+          "issue": "openclaw/openclaw issue 98484",
+          "area": "plugin-install",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "ACPX plugin upgrade fails with blank/invalid npm-install path."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98573,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98573",
+          "issue": "openclaw/openclaw issue 98573",
+          "area": "windows-runtime",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Gemini CLI backend fails on Windows because bare command misses .cmd handling."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98064,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98064",
+          "issue": "openclaw/openclaw issue 98064",
+          "area": "node-surface",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "iOS LAN pairing can drop bootstrap handoff token before chat reconnect."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97680,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97680",
+          "issue": "openclaw/openclaw issue 97680",
+          "area": "plugin-system",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Beta-tagged update can leave official external plugins on latest instead of requested beta tag."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98564,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98564",
+          "issue": "openclaw/openclaw issue 98564",
+          "area": "plugin-system",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Mattermost repair installs external plugin but does not enable gateway startup."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98382,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98382",
+          "issue": "openclaw/openclaw issue 98382",
+          "area": "ui",
+          "type": "other",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Talk mode Chat WKWebView viewport can collapse to about 30px width on macOS."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98295,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98295",
+          "issue": "openclaw/openclaw issue 98295",
+          "area": "model-routing",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Custom Xiaomi MiMo models can generate invalid max_completion_tokens when maxTokens is omitted."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98540,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98540",
+          "issue": "openclaw/openclaw issue 98540",
+          "area": "ui",
+          "type": "other",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Composer can show idle state while an agent is still executing tools."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98566,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98566",
+          "issue": "openclaw/openclaw issue 98566",
+          "area": "ui",
+          "type": "other",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Chat workspace rail sections lack scrollbars and overflow long file lists."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 97021,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/97021",
+          "issue": "openclaw/openclaw issue 97021",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram typing indicator can remain stuck in group forum/topic mode."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98282,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98282",
+          "issue": "openclaw/openclaw issue 98282",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram forum-topic long streamed replies can be truncated in-place."
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
