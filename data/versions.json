@@ -16903,29 +16903,35 @@
         "number": 55180,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/55180",
         "title": "[Bug]:"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 55917,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/55917",
+        "title": "Dashboard rejects WebSocket connections when Origin header doesn't match bind address (blocks CF Tunnel access)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -230,
+      "score": -232,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 230,
-      "survivalDays": 10,
+      "evidencePenalty": 232,
+      "survivalDays": 11,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 230,
+        "evidencePenalty": 232,
         "votePenalty": 0,
-        "survivalDays": 10,
+        "survivalDays": 11,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -230
+        "score": -232
       },
       "affected": [
         "approval-boundary",
@@ -17966,6 +17972,17 @@
           "severity": 2,
           "penalty": 2,
           "reason": "v0.17.0 SimpleX adapter silently drops non-audio XFTP attachments before completed downloads reach the agent"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 55917,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/55917",
+          "issue": "NousResearch/hermes-agent issue 55917",
+          "area": "dashboard",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.17.0 dashboard PTY WebSocket Origin checks reject Cloudflare Tunnel/proxy access when Origin differs from the bind address."
         }
       ]
     },
@@ -22837,29 +22854,35 @@
         "number": 14036,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/14036",
         "title": "[--tui] gateway exits 0 mid-turn when memory.provider: byterover (SIGPIPE flood, then exit_group(0))"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 14583,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/14583",
+        "title": "Gateway hooks: `agent:end` event never dispatches to handler"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 72,
+      "score": 70,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 23,
+      "evidencePenalty": 25,
       "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 23,
+        "evidencePenalty": 25,
         "votePenalty": 0,
         "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 72
+        "score": 70
       },
       "affected": [
         "whatsapp",
@@ -22867,7 +22890,8 @@
         "memory",
         "discord",
         "provider-integration",
-        "browser"
+        "browser",
+        "hooks"
       ],
       "evidence": [
         {
@@ -22957,6 +22981,17 @@
           "severity": 5,
           "penalty": 5,
           "reason": "v0.10.0 TUI gateway can exit cleanly mid-turn when memory.provider is byterover after a SIGPIPE flood, making sessions unusable."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 14583,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/14583",
+          "issue": "NousResearch/hermes-agent issue 14583",
+          "area": "hooks",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.10.0 gateway agent:end hooks never dispatch, so lifecycle cleanup and integrations miss completion events."
         }
       ]
     },
