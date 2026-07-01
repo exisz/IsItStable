@@ -21593,29 +21593,59 @@
         "number": 37011,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/37011",
         "title": "[Bug]: File descriptor leak in platform reconnect loop — adapter sqlite3 connections never closed on failed reconnect - gateway dead after ~12h uptime"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34070,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34070",
+        "title": "Honcho memory prefetch hang on fresh CLI subprocess in v0.15.0 (regression from #27190)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34270,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34270",
+        "title": "Bug: send_message tool bypasses validate_media_delivery_path security check"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 34457,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34457",
+        "title": "[Bug]: s6-log lock collision loops endlessly in multi-container gateway + dashboard shared volume setups"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 35202,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35202",
+        "title": "bug(kanban): failure_limit circuit breaker bypassed when worker crashes before first heartbeat"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 32747,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/32747",
+        "title": "Protocol violations (rc=0 without complete/block) don't increment failure_limit counter"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 9,
+      "score": -86,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 71,
+      "evidencePenalty": 86,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 71,
+        "evidencePenalty": 86,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 9
+        "score": -86
       },
       "affected": [
         "plugin-system",
@@ -21636,7 +21666,10 @@
         "cron",
         "tool-registration",
         "message-delivery",
-        "wechat"
+        "wechat",
+        "memory",
+        "docker",
+        "kanban"
       ],
       "evidence": [
         {
@@ -21880,6 +21913,61 @@
           "severity": 4,
           "penalty": 4,
           "reason": "0.15.0/0.15.1 gateway reconnect loop leaked sqlite file descriptors until all platforms failed"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 34070,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34070",
+          "issue": "NousResearch/hermes-agent issue 34070",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.15.0 fresh hermes chat -q subprocesses can hang indefinitely in Honcho memory prefetch."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 34270,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34270",
+          "issue": "NousResearch/hermes-agent issue 34270",
+          "area": "message-delivery",
+          "type": "security",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes v0.15.0 send_message can bypass validate_media_delivery_path for Telegram media delivery."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 34457,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34457",
+          "issue": "NousResearch/hermes-agent issue 34457",
+          "area": "docker",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.15.0 multi-container gateway/dashboard shared volumes can trigger endless s6-log lock crash loops."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 35202,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/35202",
+          "issue": "NousResearch/hermes-agent issue 35202",
+          "area": "kanban",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes Agent v0.15.0 Docker kanban workers can bypass failure-limit circuit breakers when crashing before first heartbeat."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 32747,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/32747",
+          "issue": "NousResearch/hermes-agent issue 32747",
+          "area": "kanban",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.15.0 kanban protocol violations with rc=0 but rejected completion can fail to increment failure_limit."
         }
       ]
     },
