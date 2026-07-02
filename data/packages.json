@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "This release has multiple fresh regressions across sessions, tools, plugins, and UI. Not a gentle 3am deploy companion.",
+      "verdictComment": "🔴 2026.6.11 is now a full incident scrapbook: channel delivery, tool history, Codex hooks, OAuth, and compaction all brought receipts. The 3am deploy goblin is unionizing.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -167,46 +167,126 @@
           "number": 98282,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/98282",
           "title": "[Bug]: Telegram forum-topic long streamed assistant replies truncated in-place — 2026.6.11 (sibling to #95878, gap left by #97312)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99061,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99061",
+          "title": "[Bug]: WhatsApp channel outbound relay silently stops delivering replies mid-session (model turns complete, no send fires)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99068,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99068",
+          "title": "[Bug]: Discord: replyToMode \"first\" — chunked reply sends the native reply reference on every physical chunk (reply-notification spam)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99060,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99060",
+          "title": "Webchat orchestrator session deadlocks when subagent completion events trigger premature NO_REPLY"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98842,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98842",
+          "title": "Externalized plugins lose non-gateway-auth public artifacts (doctor/secret/message-tool/thread-binding/media/health) on packaged installs"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98799,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98799",
+          "title": "[Bug]: install.sh: config set channels --json overwrites existing channel configs (missing --merge)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98740,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98740",
+          "title": "[Bug]: Mattermost native slash commands return 401 on every callback after 6.11 plugin externalization, even after clean re-registration"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98702,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98702",
+          "title": "[Bug]: Inherited OpenAI OAuth (read-through from main) rejected at provider for built-in openclaw runtime on openai-chatgpt-responses transport, while main succeeds with the same profile"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98673,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98673",
+          "title": "[Bug] 6.11: sanitizeContentBlocksImages converts text tool results to image blocks"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98650,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98650",
+          "title": "Codex harness: \"native hook relay unavailable\" — bridge record written but every tool fail-closes (2026.6.11, isolated multi-agent gateway)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98588,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98588",
+          "title": "[Bug]: HTTP 400 — anthropic/claude-opus-4-8 rejects tools.profile=coding tool schemas (opus-4-7 accepts same profile; parallel of #60821 for Anthropic path)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98532,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98532",
+          "title": "Bug: replay_invalid thinking block error not retried — session permanently broken"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98426,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98426",
+          "title": "Irreversible context compaction when swapping to a model with a smaller context window"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 17,
+        "score": -108,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 66,
+        "evidencePenalty": 108,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 66,
+          "evidencePenalty": 108,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 1,
           "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 17
+          "score": -108
         },
         "affected": [
           "approval-boundary",
+          "auth-provider",
+          "codex",
+          "compaction",
           "config-migration",
           "cron",
           "desktop-macos",
+          "discord",
           "launchagent",
+          "mattermost",
           "model-routing",
           "node-surface",
           "plugin-install",
           "plugin-system",
+          "provider-auth",
           "sessions-management",
+          "subagent-runtime",
           "telegram",
           "tools",
           "ui",
           "upgrade",
           "web-search",
+          "whatsapp",
           "windows-runtime"
         ],
         "evidence": [
@@ -495,10 +575,142 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Telegram forum-topic long streamed replies can be truncated in-place."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99061,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99061",
+            "issue": "openclaw/openclaw issue 99061",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "WhatsApp outbound relay silently stops delivering replies mid-session on 2026.6.11 while model turns complete"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99068,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99068",
+            "issue": "openclaw/openclaw issue 99068",
+            "area": "discord",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Discord replyToMode first repeats the native reply reference on every chunk, causing notification spam on 2026.6.11"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99060,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99060",
+            "issue": "openclaw/openclaw issue 99060",
+            "area": "subagent-runtime",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Webchat orchestrator can deadlock after subagent completion events trigger premature NO_REPLY on 2026.6.11"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98842,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98842",
+            "issue": "openclaw/openclaw issue 98842",
+            "area": "plugin-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Externalized plugins lose non-gateway public artifacts on packaged 2026.6.11 installs"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98799,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98799",
+            "issue": "openclaw/openclaw issue 98799",
+            "area": "config-migration",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "install.sh config set channels --json overwrites existing channel configs without --merge on 2026.6.11"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98740,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98740",
+            "issue": "openclaw/openclaw issue 98740",
+            "area": "mattermost",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Mattermost native slash commands return 401 after 2026.6.11 plugin externalization despite clean re-registration"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98702,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98702",
+            "issue": "openclaw/openclaw issue 98702",
+            "area": "auth-provider",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Inherited OpenAI OAuth is rejected for built-in openclaw runtime on 2026.6.11 openai-chatgpt-responses transport"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98673,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98673",
+            "issue": "openclaw/openclaw issue 98673",
+            "area": "tools",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "2026.6.11 can convert text tool results into image blocks, poisoning readable session history"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98650,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98650",
+            "issue": "openclaw/openclaw issue 98650",
+            "area": "codex",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex harness native hook relay unavailable causes every tool to fail-close on 2026.6.11 isolated multi-agent gateways"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98588,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98588",
+            "issue": "openclaw/openclaw issue 98588",
+            "area": "auth-provider",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "anthropic/claude-opus-4-8 rejects tools.profile=coding schemas on 2026.6.11 while adjacent combos work"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98532,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98532",
+            "issue": "openclaw/openclaw issue 98532",
+            "area": "provider-auth",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Anthropic replay_invalid thinking block errors are not retried, leaving 2026.6.11 sessions permanently broken until /new"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98426,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98426",
+            "issue": "openclaw/openclaw issue 98426",
+            "area": "compaction",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Fallback to smaller-context models can irreversibly compact session context on 2026.6.11, silently losing data"
           }
         ]
       },
-      "thumbsUp": 0,
+      "thumbsUp": 1,
       "thumbsDown": 0,
       "createdAt": "2026-06-30T16:04:00.916Z"
     }
