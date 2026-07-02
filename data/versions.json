@@ -16817,32 +16817,115 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Fresh release, fresh papercuts: desktop packaging, Chat tab, iMessage, and Vertex GUI support are all trying to make this a 3am deploy story. Evidence collected while the release is still under the 24h freshness window.",
+    "referencedIssues": [
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 56665,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56665",
+        "title": "Chat tab fails with \"Chat unavailable: 1\" on pip/pipx install — ui-tui workspace check runs before bundled-wheel fallback"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 55416,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/55416",
+        "title": "Photon iMessage: persistent RST_STREAM code 2 (Internal server error) on free shared line — sidecar alive but stream dead"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 56687,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56687",
+        "title": "[Desktop/Web UI] Support 'vertex' provider and Service Account JSON upload in GUI"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52735,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52735",
+        "title": "[Bug]: Desktop app crashes on launch — Cannot find module 'simple-git' (git-review IPC dep not bundled)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 30149,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
+        "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 71,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 9,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 9,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 71
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "desktop",
+        "ui",
+        "imessage",
+        "provider-integration",
+        "installer",
+        "dependencies"
+      ],
+      "evidence": [
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 56665,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56665",
+          "issue": "NousResearch/hermes-agent issue 56665",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Chat tab fails on pip/pipx wheel installs because the workspace check exits before bundled TUI fallback"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 55416,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/55416",
+          "issue": "NousResearch/hermes-agent issue 55416",
+          "area": "imessage",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Photon/iMessage inbound delivery loss reproduced on hermes-agent v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 56687,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56687",
+          "issue": "NousResearch/hermes-agent issue 56687",
+          "area": "provider-integration",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop/Web UI cannot select or configure the new vertex provider despite v0.18.0 CLI support"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52735,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52735",
+          "issue": "NousResearch/hermes-agent issue 52735",
+          "area": "desktop",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Desktop app launch crash reproduced on v0.18.0 due to missing simple-git dependency closure in packaged runtime"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
