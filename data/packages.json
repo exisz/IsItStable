@@ -248,18 +248,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 108,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 108,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
           "score": -108
         },
@@ -726,7 +726,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Fresh release, fresh papercuts: desktop packaging, Chat tab, iMessage, and Vertex GUI support are all trying to make this a 3am deploy story. Evidence collected while the release is still under the 24h freshness window.",
+      "verdictComment": "The 0.18.0 train is moving, but the dashboard, desktop, MCP, Opencode, and resume paths are all standing on the tracks with clipboards. Very 3am-deploy coded.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -754,40 +754,145 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 56775,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56775",
+          "title": "[Bug]: Dashboard WebSocket/HTTP returns NS_ERROR_NET_EMPTY_RESPONSE"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57259,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57259",
+          "title": "[Bug]: Opencode go Only working with Minimax models"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57288,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57288",
+          "title": "[Bug]: Some OpenCode models (like GLM 5.2) fail with `HTTP 404 — Not Found | opencode`"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 56834,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56834",
+          "title": "Desktop build fails on Linux with electron error"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57031,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57031",
+          "title": "[Bug]: Installs from homebrew / linuxbrew cannot run TUI"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 56878,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56878",
+          "title": "[Bug]: MoA reference model failure triggers no fallback — session hangs and delivers no response"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57143,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57143",
+          "title": "Dashboard model switcher falls back to openrouter for custom_providers"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 56759,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56759",
+          "title": "[Bug]: TUI leaves terminal in corrupted state after clean /quit — breaks legacy ncurses apps (e.g. nano); survives stty sane and manual escape-sequence resets, requires full reset"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57269,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57269",
+          "title": "[Bug]: transform_llm_output plugin output silently dropped in CLI streaming mode"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57228,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57228",
+          "title": "MCP stdio subprocesses leak on reconnect in long-lived workers (orphans accumulate until DB contention)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57133,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57133",
+          "title": "[Bug]: /compact slash command name collision causes \"Duplicate slash command alias\" error"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57282,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57282",
+          "title": "[Bug]: transform_llm_output appended content leaks into Honcho external memory sync"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57056,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57056",
+          "title": "Gateway auto-resume on a non-interactive platform (webhook) acknowledges restoration instead of completing the interrupted turn"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 56920,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56920",
+          "title": "[Bug]: Codex OAuth can print shell JSON instead of executing tool calls"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 30149,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
           "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 56732,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56732",
+          "title": "hermes-api-server / hermes-acp lose the entire 'terminal' toolset (silent subset-check failure vs. read_terminal/close_terminal)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57076,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57076",
+          "title": "Slack rich_blocks: blank-line-separated ordered lists render every item as \"1.\""
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 71,
+        "score": 38,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 9,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "evidencePenalty": 45,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 9,
+          "evidencePenalty": 45,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 71
+          "score": 38
         },
         "affected": [
+          "dashboard",
           "desktop",
+          "desktop-linux",
           "ui",
           "imessage",
           "provider-integration",
+          "provider-routing",
           "installer",
-          "dependencies"
+          "dependencies",
+          "mcp",
+          "opencode",
+          "memory",
+          "gateway-service",
+          "codex",
+          "plugin-tools"
         ],
         "evidence": [
           {
@@ -833,6 +938,160 @@
             "severity": 5,
             "penalty": 5,
             "reason": "Desktop app launch crash reproduced on v0.18.0 due to missing simple-git dependency closure in packaged runtime"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 56775,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56775",
+            "issue": "NousResearch/hermes-agent issue 56775",
+            "area": "dashboard",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Dashboard WebSocket/API routes return empty responses after updating to Hermes Agent 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57259,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57259",
+            "issue": "NousResearch/hermes-agent issue 57259",
+            "area": "opencode",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Opencode Go works only with Minimax models on Hermes 0.18.0/0.17.0 while other models 404"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57288,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57288",
+            "issue": "NousResearch/hermes-agent issue 57288",
+            "area": "opencode",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "OpenCode GLM/Kimi model sessions fail at startup with HTTP 404 on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 56834,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56834",
+            "issue": "NousResearch/hermes-agent issue 56834",
+            "area": "desktop-linux",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Linux desktop app on Hermes 0.18.0 times out connecting to the backend"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57031,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57031",
+            "issue": "NousResearch/hermes-agent issue 57031",
+            "area": "installer",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Homebrew/Linuxbrew Hermes 0.18.0 installs cannot start the TUI because bundled ui-tui files are missing"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 56878,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56878",
+            "issue": "NousResearch/hermes-agent issue 56878",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "MoA reference model failure on Hermes 0.18.0 can hang the turn and deliver no response instead of falling back"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57143,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57143",
+            "issue": "NousResearch/hermes-agent issue 57143",
+            "area": "provider-integration",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Dashboard model switcher on Hermes 0.18.0 rewrites custom providers back to openrouter"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 56759,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56759",
+            "issue": "NousResearch/hermes-agent issue 56759",
+            "area": "ui",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "TUI clean /quit on Hermes 0.18.0 leaves terminal state corrupted until a full reset"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57269,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57269",
+            "issue": "NousResearch/hermes-agent issue 57269",
+            "area": "plugin-tools",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "transform_llm_output plugin content is silently dropped from CLI streaming output on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57228,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57228",
+            "issue": "NousResearch/hermes-agent issue 57228",
+            "area": "mcp",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "MCP stdio reconnects on Hermes 0.18.0 leak orphaned subprocesses until memory tool calls fail"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57133,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57133",
+            "issue": "NousResearch/hermes-agent issue 57133",
+            "area": "ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Duplicate /compact registrations on Hermes 0.18.0 can break startup in ACP/TUI contexts"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57282,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57282",
+            "issue": "NousResearch/hermes-agent issue 57282",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "transform_llm_output appended content leaks into Honcho external memory sync on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57056,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57056",
+            "issue": "NousResearch/hermes-agent issue 57056",
+            "area": "gateway-service",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Gateway resume on Hermes 0.18.0 can abandon interrupted webhook work by asking a non-interactive user what to do next"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 56920,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56920",
+            "issue": "NousResearch/hermes-agent issue 56920",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Codex OAuth on Hermes 0.18.0 can print shell JSON instead of executing structured tool calls"
           }
         ]
       },
