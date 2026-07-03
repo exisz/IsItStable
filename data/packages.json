@@ -835,24 +835,6 @@
           "number": 56920,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56920",
           "title": "[Bug]: Codex OAuth can print shell JSON instead of executing tool calls"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 30149,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/30149",
-          "title": "[Bug]: Failed to initialize agent: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 56732,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56732",
-          "title": "hermes-api-server / hermes-acp lose the entire 'terminal' toolset (silent subset-check failure vs. read_terminal/close_terminal)"
-        },
-        {
-          "repo": "NousResearch/hermes-agent",
-          "number": 57076,
-          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57076",
-          "title": "Slack rich_blocks: blank-line-separated ordered lists render every item as \"1.\""
         }
       ],
       "stabilityScore": {
