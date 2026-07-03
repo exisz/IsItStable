@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "🔴 2026.6.11 is now a full incident scrapbook: channel delivery, tool history, Codex hooks, OAuth, and compaction all brought receipts. The 3am deploy goblin is unionizing.",
+      "verdictComment": "🔴 2026.6.11 keeps collecting incident receipts: delivery stalls, restart misroutes, tool output loss, plugin trust gates, and desktop identity churn. The 3am deploy goblin has opened a help desk.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -239,29 +239,119 @@
           "number": 98426,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/98426",
           "title": "Irreversible context compaction when swapping to a model with a smaller context window"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99499,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99499",
+          "title": "[Bug]: Gateway / message delivery - (pendingFinalDelivery)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99346,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99346",
+          "title": "[Bug]: WebChat direct restart recovery can route new turns into agent:main:boot after gateway restart, leaving agent:main:main failing with reply session initialization conflicted"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99411,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99411",
+          "title": "exec tool output capture breaks after ~3 calls in same session (v2026.6.11)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99522,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99522",
+          "title": "[Bug] macOS app mints a new device identity on every gateway reconnect — group-container identity store unusable without app-groups entitlement"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99260,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99260",
+          "title": "acpx: openKeyedStore restricted to trusted plugins, no config escape hatch (plugins.allow insufficient)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99387,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99387",
+          "title": "LLM request failed: provider rejected request schema or tool payload — intermittent crash (Telegram + Anthropic)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99502,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99502",
+          "title": "Windows: openclaw gateway start opens visible terminal window (Scheduled Task LogonType=InteractiveToken)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99286,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99286",
+          "title": "[Bug]: macOS dashboard Web UI: deleting a selected session does nothing and no confirmation dialog appearsIn the Web UI opened from the macOS app dashboard"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99240,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99240",
+          "title": "[Bug]: /thinking levels not available for github-copilot provider models (e.g. claude-sonnet-4.6)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99239,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99239",
+          "title": "claude-sonnet-5 missing from bundled Anthropic model catalog / GA-1M-context prefix list"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99163,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99163",
+          "title": "RangeError: Maximum call stack size exceeded in chat.send attachment parse/stage for ~2MB clipboard screenshots"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99117,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99117",
+          "title": "[Bug]: Telegram prompt context includes duplicate assistant entries from session transcript + channel cache"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98753,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98753",
+          "title": "OpenClaw 2026.6.11 CLI health and cron list close gateway WebSocket with 1006 after doctor fix"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98685,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98685",
+          "title": "[Bug]: Diagnostic queueDepth remains positive after active embedded run accepts steered messages and ends"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98674,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98674",
+          "title": "[Bug]: cant click on mac app install icon"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -108,
+        "score": -150,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 108,
+        "evidencePenalty": 150,
         "survivalDays": 2,
         "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 108,
+          "evidencePenalty": 150,
           "votePenalty": 0,
           "survivalDays": 2,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 2,
           "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": -108
+          "score": -150
         },
         "affected": [
           "approval-boundary",
@@ -274,6 +364,7 @@
           "discord",
           "launchagent",
           "mattermost",
+          "message-delivery",
           "model-routing",
           "node-surface",
           "plugin-install",
@@ -286,6 +377,7 @@
           "ui",
           "upgrade",
           "web-search",
+          "webchat",
           "whatsapp",
           "windows-runtime"
         ],
@@ -707,6 +799,171 @@
             "severity": 4,
             "penalty": 4,
             "reason": "Fallback to smaller-context models can irreversibly compact session context on 2026.6.11, silently losing data"
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99499,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99499",
+            "issue": "openclaw/openclaw issue 99499",
+            "area": "message-delivery",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Completed local-provider/subagent work can remain stuck in pendingFinalDelivery and not reach the UI until a later message flushes it."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99346,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99346",
+            "issue": "openclaw/openclaw issue 99346",
+            "area": "webchat",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "WebChat direct restart recovery can route new turns into agent:main:boot while the main session remains conflicted."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99411,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99411",
+            "issue": "openclaw/openclaw issue 99411",
+            "area": "tools",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Repeated exec/read output can disappear after aggregate tool-result truncation in the published release."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99522,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99522",
+            "issue": "openclaw/openclaw issue 99522",
+            "area": "desktop-macos",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "macOS app can mint a fresh device identity on every gateway reconnect because the app-group identity store is unusable."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99260,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99260",
+            "issue": "openclaw/openclaw issue 99260",
+            "area": "plugin-system",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Official ACPX plugin cannot open keyed state because external trusted plugins are blocked by the release trust gate."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99387,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99387",
+            "issue": "openclaw/openclaw issue 99387",
+            "area": "provider-auth",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Anthropic/Telegram schema rejection remains plausible on the release due to older signed-thinking replay/recovery behavior."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99502,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99502",
+            "issue": "openclaw/openclaw issue 99502",
+            "area": "windows-runtime",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Windows gateway start can use a visible Scheduled Task terminal window despite the intended hidden launcher path."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99286,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99286",
+            "issue": "openclaw/openclaw issue 99286",
+            "area": "ui",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "macOS dashboard session deletion can do nothing because the embedded Web UI confirm dialog is not implemented."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99240,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99240",
+            "issue": "openclaw/openclaw issue 99240",
+            "area": "model-routing",
+            "type": "tool",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "GitHub Copilot Claude model metadata can collapse /thinking options to off-only in the release."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99239,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99239",
+            "issue": "openclaw/openclaw issue 99239",
+            "area": "model-routing",
+            "type": "tool",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Bundled Anthropic model catalog lacks the current Sonnet entry, confusing model discovery and routing diagnostics."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99163,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99163",
+            "issue": "openclaw/openclaw issue 99163",
+            "area": "tools",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Large chat.send attachment parse/stage payloads can hit Maximum call stack exceeded on the release."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99117,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99117",
+            "issue": "openclaw/openclaw issue 99117",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram prompt context can duplicate assistant messages from session transcript and channel cache."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98753,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98753",
+            "issue": "openclaw/openclaw issue 98753",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "CLI health and cron list commands can close the gateway WebSocket with 1006 after doctor repair."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98685,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98685",
+            "issue": "openclaw/openclaw issue 98685",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Diagnostic queueDepth can stay positive after queued embedded messages are accepted and the active run ends."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98674,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98674",
+            "issue": "openclaw/openclaw issue 98674",
+            "area": "desktop-macos",
+            "type": "ui",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "macOS app onboarding/install control can be unclickable for the reported release environment."
           }
         ]
       },
