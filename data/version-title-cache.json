@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-03T11:24:29.240Z",
+  "generatedAt": "2026-07-03T13:39:13.422Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2852,6 +2852,7 @@
         "affected:approval-boundary",
         "affected:plugin-install",
         "affected:upgrade",
+        "affected:webchat",
         "affected:launchagent",
         "affected:plugin-system",
         "affected:codex",
@@ -2862,6 +2863,7 @@
         "affected:windows-runtime",
         "affected:node-surface",
         "affected:tools",
+        "affected:message-delivery",
         "affected:config-migration",
         "affected:desktop-macos",
         "score:0-9",
@@ -2876,7 +2878,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/146",
       "createdAt": "2026-06-30T16:40:51Z",
-      "updatedAt": "2026-07-02T12:55:45Z"
+      "updatedAt": "2026-07-03T12:57:36Z"
     }
   ],
   "duplicates": {
