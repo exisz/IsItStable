@@ -325,29 +325,65 @@
         "number": 98674,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/98674",
         "title": "[Bug]: cant click on mac app install icon"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99951,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99951",
+        "title": "[Release blocker] Codex provider route can run stale vendored @openai/codex even when Codex CLI is current"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99704,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99704",
+        "title": "[Bug] openclaw-weixin: messages lost/duplicated; WebChat session list missing WeChat sessions (v2026.6.11)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99881,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99881",
+        "title": "[Bug]: All tool outputs display \"(see attached image)\" after uploading image to a non-multimodal model"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99603,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99603",
+        "title": "[Bug]: Hot-reload triggered by git update in production checkout can wipe dist/ mid-rebuild, crash-looping the gateway"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99550,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99550",
+        "title": "[Bug]: Codex OAuth gpt-5.5 waits ~118s on failed responses_websocket retries before fast HTTP fallback"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98618,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98618",
+        "title": "CLI still reports 2026.6.10 after update to 2026.6.11"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -150,
+      "score": -172,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 150,
+      "evidencePenalty": 172,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 150,
+        "evidencePenalty": 172,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": -150
+        "score": -172
       },
       "affected": [
         "approval-boundary",
@@ -358,6 +394,7 @@
         "cron",
         "desktop-macos",
         "discord",
+        "hot-reload",
         "launchagent",
         "mattermost",
         "message-delivery",
@@ -374,6 +411,7 @@
         "upgrade",
         "web-search",
         "webchat",
+        "wechat",
         "whatsapp",
         "windows-runtime"
       ],
@@ -960,6 +998,72 @@
           "severity": 1,
           "penalty": 1,
           "reason": "macOS app onboarding/install control can be unclickable for the reported release environment."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99951,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99951",
+          "issue": "openclaw/openclaw issue 99951",
+          "area": "codex",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Codex provider route can run stale vendored @openai/codex in v2026.6.11 even when the host Codex CLI is current."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99704,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99704",
+          "issue": "openclaw/openclaw issue 99704",
+          "area": "wechat",
+          "type": "channel-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "WeChat/openclaw-weixin messages can be lost or duplicated and WebChat can miss WeChat sessions on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99881,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99881",
+          "issue": "openclaw/openclaw issue 99881",
+          "area": "tools",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "After an image upload to a non-multimodal model, all later tool outputs can render as '(see attached image)' on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99603,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99603",
+          "issue": "openclaw/openclaw issue 99603",
+          "area": "hot-reload",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Git-update hot reload can wipe dist/ mid-rebuild and crash-loop the gateway on v2026.6.11 production checkouts."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99550,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99550",
+          "issue": "openclaw/openclaw issue 99550",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Codex OAuth gpt-5.5 turns can wait about 118s on failed responses_websocket retries before HTTP fallback succeeds."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98618,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98618",
+          "issue": "openclaw/openclaw issue 98618",
+          "area": "upgrade",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "After update to 2026.6.11, CLI/version metadata can still report 2026.6.10 and confuse doctor/plugin API checks."
         }
       ]
     },
@@ -976,6 +1080,30 @@
     "verdict": "pending",
     "verdictComment": "2026.6.10 found more ways to make operators stare at logs: cron loses tools, WebChat forgets sessions, LINE time-travels, and Feishu still needs a manual kick. Works on my machine has entered witness protection.",
     "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99128,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99128",
+        "title": "Bug: Telegram / Feishu / WeCom channels in Docker image 2026.6.10 do not expose multi-account configuration as documented"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99185,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99185",
+        "title": "Installing a managed npm plugin breaks resolution of all `plugins.load.paths` workspace plugins (\"plugin not found: stale config entry ignored\")"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98378,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98378",
+        "title": "Model switch in same session breaks all tool calls (2026.6.10 regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98081,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98081",
+        "title": "Discord turns can be missed or finish silently across gateway restart/recovery on 2026.6.10"
+      },
       {
         "repo": "openclaw/openclaw",
         "number": 78493,
@@ -1316,59 +1444,62 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -147,
+      "score": -161,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 147,
+      "evidencePenalty": 161,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 147,
+        "evidencePenalty": 161,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -147
+        "score": -161
       },
       "affected": [
-        "config-migration",
-        "message-delivery",
-        "provider-routing",
-        "memory",
-        "auth",
-        "skill-workshop",
-        "telegram",
-        "feishu",
-        "runtime",
-        "browser",
-        "codex",
-        "discord",
-        "mcp",
-        "reasoning",
-        "voice",
-        "slack",
-        "ui",
-        "plugin-install",
-        "whatsapp",
-        "prompt-size",
-        "doctor",
-        "exec",
-        "usage-accounting",
-        "tls",
-        "web-search",
-        "provider-auth",
         "acp",
         "attachments",
-        "installer",
-        "provider-cache",
+        "auth",
+        "browser",
+        "channel-config",
+        "codex",
+        "config-migration",
         "cron-runtime",
+        "discord",
+        "doctor",
+        "exec",
+        "feishu",
+        "installer",
         "line",
-        "webchat"
+        "mcp",
+        "memory",
+        "message-delivery",
+        "plugin-install",
+        "plugin-system",
+        "prompt-size",
+        "provider-auth",
+        "provider-cache",
+        "provider-routing",
+        "reasoning",
+        "runtime",
+        "skill-workshop",
+        "slack",
+        "telegram",
+        "tls",
+        "tools",
+        "ui",
+        "usage-accounting",
+        "voice",
+        "web-search",
+        "webchat",
+        "whatsapp"
       ],
       "evidence": [
         {
@@ -1986,6 +2117,50 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Model catalog validation on 2026.6.10 rejects audio/video modalities produced by OpenClaw catalog fetch, dropping multimodal models from routing."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99128,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99128",
+          "issue": "openclaw/openclaw issue 99128",
+          "area": "channel-config",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Docker image 2026.6.10 hides multi-account configuration for Telegram, Feishu, and WeCom despite documented support."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99185,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99185",
+          "issue": "openclaw/openclaw issue 99185",
+          "area": "plugin-system",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Installing a managed npm plugin can break resolution of every workspace plugin loaded via plugins.load.paths on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98378,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98378",
+          "issue": "openclaw/openclaw issue 98378",
+          "area": "tools",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Switching model within the same session can break all tool calls on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98081,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98081",
+          "issue": "openclaw/openclaw issue 98081",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Discord turns can be missed or finish silently across gateway restart/recovery on 2026.6.10."
         }
       ]
     },
@@ -2002,6 +2177,12 @@
     "verdict": "pending",
     "verdictComment": "2026.6.9 keeps piling up receipts: now with a plaintext-API-key leak, an abort-time memory leak that demands restarts, a gateway config-rejection regression, broken non-Codex fallbacks, and a fresh stack of Telegram/Discord surfacing bugs. The 3am incident wall ran out of sticky notes.",
     "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99910,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99910",
+        "title": "Memory dreaming run pegs the gateway event loop for ~10 min until killed; short-term recall store can never persist (2026.6.9, reproduces on unmodified dist)"
+      },
       {
         "repo": "openclaw/openclaw",
         "number": 95495,
@@ -2156,24 +2337,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 30,
+      "score": 25,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 59,
+      "evidencePenalty": 64,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 59,
+        "evidencePenalty": 64,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 30
+        "score": 25
       },
       "affected": [
         "codex",
@@ -2468,6 +2649,17 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Anthropic models on Discord produce reasoning (/reasoning on) and pre-tool narration (/verbose on) that are recorded in the session log but never surfaced in the channel on 2026.6.9."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99910,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99910",
+          "issue": "openclaw/openclaw issue 99910",
+          "area": "memory",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Memory dreaming promotion can peg the gateway event loop for about 10 minutes and prevent short-term recall persistence on v2026.6.9."
         }
       ]
     },

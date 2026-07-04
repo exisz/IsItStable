@@ -329,29 +329,65 @@
           "number": 98674,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/98674",
           "title": "[Bug]: cant click on mac app install icon"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99951,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99951",
+          "title": "[Release blocker] Codex provider route can run stale vendored @openai/codex even when Codex CLI is current"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99704,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99704",
+          "title": "[Bug] openclaw-weixin: messages lost/duplicated; WebChat session list missing WeChat sessions (v2026.6.11)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99881,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99881",
+          "title": "[Bug]: All tool outputs display \"(see attached image)\" after uploading image to a non-multimodal model"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99603,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99603",
+          "title": "[Bug]: Hot-reload triggered by git update in production checkout can wipe dist/ mid-rebuild, crash-looping the gateway"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99550,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99550",
+          "title": "[Bug]: Codex OAuth gpt-5.5 waits ~118s on failed responses_websocket retries before fast HTTP fallback"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98618,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98618",
+          "title": "CLI still reports 2026.6.10 after update to 2026.6.11"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -150,
+        "score": -172,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 150,
+        "evidencePenalty": 172,
         "survivalDays": 3,
         "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 150,
+          "evidencePenalty": 172,
           "votePenalty": 0,
           "survivalDays": 3,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 3,
           "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": -150
+          "score": -172
         },
         "affected": [
           "approval-boundary",
@@ -362,6 +398,7 @@
           "cron",
           "desktop-macos",
           "discord",
+          "hot-reload",
           "launchagent",
           "mattermost",
           "message-delivery",
@@ -378,6 +415,7 @@
           "upgrade",
           "web-search",
           "webchat",
+          "wechat",
           "whatsapp",
           "windows-runtime"
         ],
@@ -964,6 +1002,72 @@
             "severity": 1,
             "penalty": 1,
             "reason": "macOS app onboarding/install control can be unclickable for the reported release environment."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99951,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99951",
+            "issue": "openclaw/openclaw issue 99951",
+            "area": "codex",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Codex provider route can run stale vendored @openai/codex in v2026.6.11 even when the host Codex CLI is current."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99704,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99704",
+            "issue": "openclaw/openclaw issue 99704",
+            "area": "wechat",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "WeChat/openclaw-weixin messages can be lost or duplicated and WebChat can miss WeChat sessions on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99881,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99881",
+            "issue": "openclaw/openclaw issue 99881",
+            "area": "tools",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "After an image upload to a non-multimodal model, all later tool outputs can render as '(see attached image)' on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99603,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99603",
+            "issue": "openclaw/openclaw issue 99603",
+            "area": "hot-reload",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Git-update hot reload can wipe dist/ mid-rebuild and crash-loop the gateway on v2026.6.11 production checkouts."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 99550,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/99550",
+            "issue": "openclaw/openclaw issue 99550",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Codex OAuth gpt-5.5 turns can wait about 118s on failed responses_websocket retries before HTTP fallback succeeds."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 98618,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/98618",
+            "issue": "openclaw/openclaw issue 98618",
+            "area": "upgrade",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "After update to 2026.6.11, CLI/version metadata can still report 2026.6.10 and confuse doctor/plugin API checks."
           }
         ]
       },
