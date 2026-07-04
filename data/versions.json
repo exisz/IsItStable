@@ -334,18 +334,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 150,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 150,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
         "score": -150
       },
@@ -17286,7 +17286,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.0 train is moving, but the dashboard, desktop, MCP, Opencode, and resume paths are all standing on the tracks with clipboards. Very 3am-deploy coded.",
+    "verdictComment": "The 0.18.0 train found more tracks: agent loops, gateway loops, desktop config drift, cron/MCP gaps, and an approval-boundary pothole. Works-on-my-machine is not driving today.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -17395,29 +17395,149 @@
         "number": 56920,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/56920",
         "title": "[Bug]: Codex OAuth can print shell JSON instead of executing tool calls"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57863,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57863",
+        "title": "[Bug]: Intermittent Error with Litellm - Message: Malformed API Key passed in. Ensure Key has `Bearer ` prefix."
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57482,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57482",
+        "title": "LAN/local dashboard access requires password after June 2026 auth hardening"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57923,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57923",
+        "title": "[Bug]: got into loop AGAIN"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57671,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57671",
+        "title": "[Bug]: QQ Bot adapter connect() missing is_reconnect parameter"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57997,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57997",
+        "title": "[Bug]: Installing Hermes Desktop broke iTerm disk access and nvm usage"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57452,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57452",
+        "title": "[Bug]: Discord guild mentions ignore pairing-approved users unless the Discord allowlist is populated"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57986,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57986",
+        "title": "[Bug]: /journey crashes when a skill’s frontmatter metadata is not a dict"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57558,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57558",
+        "title": "Shell-hook allowlist keys on the command string, so an approved hook script can be edited and stays trusted"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57968,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57968",
+        "title": "bug(desktop): flat \"Sessions\" list missing from sidebar after update (only Pinned/Projects show, search still works)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57861,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57861",
+        "title": "Cron-triggered sessions never get Composio MCP tools attached (works fine in Telegram/TUI sessions)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57405,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57405",
+        "title": "Model selector crashes: 'dict' object has no attribute 'lower'"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57647,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57647",
+        "title": "no_agent cron 投递在 Telegram 上仍包含 \"Cronjob Response\" 封装层"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57474,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57474",
+        "title": "[Bug]: Weixin gateway death loop after upgrade — open policy without ALLOW_ALL_USERS opt-in"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57897,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57897",
+        "title": "[Bug]: [Desktop] GUI reads config from wrong directory on Windows"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57315,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57315",
+        "title": "[Bug]: Blank Slate Installation doesn't load the tools even after enabling"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57275,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57275",
+        "title": "[Bug]: always exceeds context limits, and then crash the models"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52470,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52470",
+        "title": "[Bug]: Dashboard auto-restart silently fails — _spawn_hermes_action inherits _HERMES_GATEWAY=1 from dashboard process"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57948,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57948",
+        "title": "bug: vision_analyze first call returns 400 when main model lacks vision support"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57911,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57911",
+        "title": "Desktop sessions land in wrong project with remote gateway"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 57845,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57845",
+        "title": "[Bug]: Envelope-layout cache breakpoints silently no-op during tool loops (tool messages skipped, empty-assistant markers ignored) — ~2x input cost on OpenRouter + Claude"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 38,
+      "score": -99,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 45,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "evidencePenalty": 99,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 45,
+        "evidencePenalty": 99,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 38
+        "score": -99
       },
       "affected": [
         "dashboard",
@@ -17434,7 +17554,21 @@
         "memory",
         "gateway-service",
         "codex",
-        "plugin-tools"
+        "plugin-tools",
+        "agent-core",
+        "qqbot",
+        "discord",
+        "journey",
+        "approval-boundary",
+        "desktop-ui",
+        "cron",
+        "telegram",
+        "weixin",
+        "desktop-windows",
+        "tool-loader",
+        "vision",
+        "desktop-remote-gateway",
+        "prompt-cache"
       ],
       "evidence": [
         {
@@ -17634,6 +17768,226 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Codex OAuth on Hermes 0.18.0 can print shell JSON instead of executing structured tool calls"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57863,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57863",
+          "issue": "NousResearch/hermes-agent issue 57863",
+          "area": "agent-core",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "LiteLLM receives malformed auth requests from Hermes 0.18.0 and sessions get stuck"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57482,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57482",
+          "issue": "NousResearch/hermes-agent issue 57482",
+          "area": "dashboard",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "LAN dashboard basic-auth hardening returns 500 / blocks local trusted access on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57923,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57923",
+          "issue": "NousResearch/hermes-agent issue 57923",
+          "area": "agent-core",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Agent conversation loop repeats failing searches/tool calls across 29 iterations on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57671,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57671",
+          "issue": "NousResearch/hermes-agent issue 57671",
+          "area": "qqbot",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "QQ Bot adapter cannot connect because connect() lacks the is_reconnect keyword on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57997,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57997",
+          "issue": "NousResearch/hermes-agent issue 57997",
+          "area": "installer",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Desktop install shadows nvm/node and disrupts terminal disk access on macOS 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57452,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57452",
+          "issue": "NousResearch/hermes-agent issue 57452",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Discord guild mentions ignore pairing-approved users unless Discord allowlist is also populated"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57986,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57986",
+          "issue": "NousResearch/hermes-agent issue 57986",
+          "area": "journey",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "/journey crashes when skill frontmatter metadata.hermes is null or malformed on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57558,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57558",
+          "issue": "NousResearch/hermes-agent issue 57558",
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Shell hook approval remains trusted after the approved script file changes on disk"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57968,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57968",
+          "issue": "NousResearch/hermes-agent issue 57968",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop sidebar loses the flat recent Sessions list after updating to 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57861,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57861",
+          "issue": "NousResearch/hermes-agent issue 57861",
+          "area": "cron",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Cron-triggered sessions do not attach configured Composio MCP tools on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57405,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57405",
+          "issue": "NousResearch/hermes-agent issue 57405",
+          "area": "provider-routing",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop model selector crashes with dict object has no attribute lower on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57647,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57647",
+          "issue": "NousResearch/hermes-agent issue 57647",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "no_agent cron Telegram delivery still wraps raw output in Cronjob Response boilerplate"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57474,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57474",
+          "issue": "NousResearch/hermes-agent issue 57474",
+          "area": "weixin",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Weixin open-policy validation causes gateway crash-restart loop after upgrading to 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57897,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57897",
+          "issue": "NousResearch/hermes-agent issue 57897",
+          "area": "desktop-windows",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows Desktop reads config from the wrong directory and ignores the installed Hermes config"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57315,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57315",
+          "issue": "NousResearch/hermes-agent issue 57315",
+          "area": "tool-loader",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Blank-slate install loads only cronjob tools even after tools are enabled on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57275,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57275",
+          "issue": "NousResearch/hermes-agent issue 57275",
+          "area": "memory",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Context compaction fails before model limits, causing sessions to exceed context and stop responding"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52470,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52470",
+          "issue": "NousResearch/hermes-agent issue 52470",
+          "area": "gateway-service",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Dashboard-triggered gateway restart inherits gateway loop guard and silently fails on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57948,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57948",
+          "issue": "NousResearch/hermes-agent issue 57948",
+          "area": "vision",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "vision_analyze first call returns 400 instead of using auxiliary vision fallback on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57911,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57911",
+          "issue": "NousResearch/hermes-agent issue 57911",
+          "area": "desktop-remote-gateway",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Remote Desktop new sessions can land in a stale/wrong project workspace on 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57845,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57845",
+          "issue": "NousResearch/hermes-agent issue 57845",
+          "area": "prompt-cache",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Envelope prompt-cache breakpoints no-op during tool loops, causing repeated full-price context sends"
         }
       ]
     },
