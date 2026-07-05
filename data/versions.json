@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "🔴 2026.6.11 keeps collecting incident receipts: delivery stalls, restart misroutes, tool output loss, plugin trust gates, and desktop identity churn. The 3am deploy goblin has opened a help desk.",
+    "verdictComment": "The dashboard is now less “works on my machine” and more “please check the fire exits”: fresh WhatsApp, auth, provider-routing, mobile pairing, and session-reset evidence landed.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -361,29 +361,65 @@
         "number": 98618,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/98618",
         "title": "CLI still reports 2026.6.10 after update to 2026.6.11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100324,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100324",
+        "title": "[Bug]: Official ClawHub WhatsApp plugin cannot start linked account due to openKeyedStore trust check"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100066,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100066",
+        "title": "[bug] Provider model registration error prescribes a config fix that the config validator rejects (contradictory guidance, gateway crash-loop)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100067,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100067",
+        "title": "[bug] 2026.6.x auth-store migration to SQLite silently strands existing JSON auth profiles — all OAuth/token providers lose auth, fallback chains die silently"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100280,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100280",
+        "title": "fix: mobile pairing should advertise usable LAN and Tailnet routes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99964,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99964",
+        "title": "Successful main sessions can roll over as .jsonl.reset when transcript mtime is newer than registry updatedAt"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95515,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
+        "title": "Upgrade 2026.6.8→2026.6.9 corrupts email channel config with spurious groupAllowFrom field"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -172,
+      "score": -195,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 172,
+      "evidencePenalty": 195,
       "survivalDays": 4,
       "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 172,
+        "evidencePenalty": 195,
         "votePenalty": 0,
         "survivalDays": 4,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 4,
         "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": -172
+        "score": -195
       },
       "affected": [
         "approval-boundary",
@@ -394,6 +430,7 @@
         "cron",
         "desktop-macos",
         "discord",
+        "email",
         "hot-reload",
         "launchagent",
         "mattermost",
@@ -403,6 +440,7 @@
         "plugin-install",
         "plugin-system",
         "provider-auth",
+        "provider-routing",
         "sessions-management",
         "subagent-runtime",
         "telegram",
@@ -1064,6 +1102,72 @@
           "severity": 2,
           "penalty": 2,
           "reason": "After update to 2026.6.11, CLI/version metadata can still report 2026.6.10 and confuse doctor/plugin API checks."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100324,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100324",
+          "issue": "openclaw/openclaw issue 100324",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Official ClawHub WhatsApp plugin cannot start linked accounts on v2026.6.11 due to openKeyedStore trust checks."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100066,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100066",
+          "issue": "openclaw/openclaw issue 100066",
+          "area": "provider-routing",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Provider model registration error gives a validator-rejected config fix, causing gateway crash-loop risk on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100067,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100067",
+          "issue": "openclaw/openclaw issue 100067",
+          "area": "auth-provider",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "2026.6.x auth-store migration can strand existing JSON OAuth/token profiles after upgrade to v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100280,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100280",
+          "issue": "openclaw/openclaw issue 100280",
+          "area": "node-surface",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Mobile pairing can advertise an unreachable LAN URL instead of usable Tailnet routes on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99964,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99964",
+          "issue": "openclaw/openclaw issue 99964",
+          "area": "sessions-management",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Main sessions can roll over into .jsonl.reset when transcript mtime is newer than registry updatedAt on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95515,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
+          "issue": "openclaw/openclaw issue 95515",
+          "area": "email",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Email channel config migration can still write invalid groupAllowFrom during upgrades; latest v2026.6.11 keeps the permissive path."
         }
       ]
     },
@@ -1078,7 +1182,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "2026.6.10 found more ways to make operators stare at logs: cron loses tools, WebChat forgets sessions, LINE time-travels, and Feishu still needs a manual kick. Works on my machine has entered witness protection.",
+    "verdictComment": "Fresh MCP loopback and container-upgrade evidence added. The score bucket was already in the basement; this just labels more stairs.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1103,6 +1207,18 @@
         "number": 98081,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/98081",
         "title": "Discord turns can be missed or finish silently across gateway restart/recovery on 2026.6.10"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100329,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100329",
+        "title": "HTTP MCP loopback still strips image/audio/resource fields on 2026.6.10 (normalizeToolCallContent) — real-behavior proof for #68037 / #68046"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 98565,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/98565",
+        "title": "[Bug]: Container image upgrades skip openclaw upgrade migrations before gateway startup"
       },
       {
         "repo": "openclaw/openclaw",
@@ -1444,24 +1560,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -161,
+      "score": -167,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 161,
+      "evidencePenalty": 167,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 161,
+        "evidencePenalty": 167,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -161
+        "score": -167
       },
       "affected": [
         "acp",
@@ -2161,6 +2277,28 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Discord turns can be missed or finish silently across gateway restart/recovery on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100329,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100329",
+          "issue": "openclaw/openclaw issue 100329",
+          "area": "mcp",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "HTTP MCP loopback strips image/audio/resource fields on v2026.6.10 by normalizing non-text tool content to text-only blocks."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 98565,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/98565",
+          "issue": "openclaw/openclaw issue 98565",
+          "area": "config-migration",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Container image upgrade from v2026.6.10 to v2026.6.11 can skip upgrade migrations before gateway startup, leaving stale version metadata and pending repair."
         }
       ]
     },
