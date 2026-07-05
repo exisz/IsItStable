@@ -374,18 +374,18 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 172,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "survivalDays": 4,
+        "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 172,
           "votePenalty": 0,
-          "survivalDays": 3,
+          "survivalDays": 4,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 4,
+          "survivalBonus": 12,
           "curatedBonus": 0,
           "score": -172
         },
@@ -1087,7 +1087,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "The 0.18.0 train found more tracks: agent loops, gateway loops, desktop config drift, cron/MCP gaps, and an approval-boundary pothole. Works-on-my-machine is not driving today.",
+      "verdictComment": "The 0.18.0 train found more tracks: agent loops, gateway loops, desktop config drift, cron/MCP gaps, provider-routing weirdness, and several security potholes. Works-on-my-machin<!-- isitstable:v1",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1316,29 +1316,143 @@
           "number": 57845,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57845",
           "title": "[Bug]: Envelope-layout cache breakpoints silently no-op during tool loops (tool messages skipped, empty-assistant markers ignored) — ~2x input cost on OpenRouter + Claude"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 36755,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36755",
+          "title": "bug(diagnostics): check_systemd_timing_alignment false-positive — systemctl show returns default 90s for nonexistent --user unit"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57076,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57076",
+          "title": "Slack rich_blocks: blank-line-separated ordered lists render every item as \"1.\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57505,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57505",
+          "title": "[Bug]: Security: Dashboard \"Files\" feature exposes .env containing API keys"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57581,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57581",
+          "title": "[Bug]: Plugin-registered web providers can't be selected via web.extract_backend"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 57909,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57909",
+          "title": "\"WARNING gateway.run: No adapter available for telegram\" showing suddenly after \"hermes update\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58071,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58071",
+          "title": "[Bug] zai provider ignores config.yaml base_url and always probes endpoints in hardcoded order — standard endpoint always wins over coding endpoint"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58072,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58072",
+          "title": "[Bug] Switching memory provider leaves stale sub-keys in merged config — causes gateway instability and crashes"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58073,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58073",
+          "title": "[Bug] BWS override_existing: true silently overwrites profile-specific secrets (e.g., FEISHU_APP_SECRET) across all profiles"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58075,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58075",
+          "title": "[Bug] Cron job delivery messages contain agent self-verification noise instead of task output"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58185,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58185",
+          "title": "[Bug]: /model picker for Bedrock offers bare foundation-model IDs that 400 on on-demand accounts (and persists them)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58237,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58237",
+          "title": "[Bug]: Dashboard auto-SSO redirect 500s when only basic auth provider is configured"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58248,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58248",
+          "title": "Delivered-text persistence surfaces bypass PII/redaction hooks (rich-sent index, delivery mirror, API error dumps)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58281,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58281",
+          "title": "[Bug]: [Bug]: Disabling the `coding` toolset silently strips explicitly-enabled `terminal`/`file` tools — model receives Tools: 0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58458,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58458",
+          "title": "lazy_deps: shared aiohttp pin marks never-enabled backends active; matrix refresh then fails on Windows (python-olm needs make)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58559,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58559",
+          "title": "Matrix bang commands bypass split batching and skill-command active-session dispatch"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58572,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58572",
+          "title": "[Bug]: Gateway crashes on Nous Portal token expiry with no remote recovery path"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58573,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58573",
+          "title": "Native Windows: main.py omits hermes_home in load_hermes_dotenv → .env never loaded"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58576,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58576",
+          "title": "web_server event loop stalls up to 51s under heavy agent work (GIL pressure) — desktop UI appears frozen"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58578,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58578",
+          "title": "hermes update (Windows) stops the dashboard server but only restarts the gateway — web UI chat left dead until manual relaunch"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -99,
+        "score": -151,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 99,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "evidencePenalty": 151,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 99,
+          "evidencePenalty": 151,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": -99
+          "score": -151
         },
         "affected": [
           "dashboard",
@@ -1369,7 +1483,13 @@
           "tool-loader",
           "vision",
           "desktop-remote-gateway",
-          "prompt-cache"
+          "prompt-cache",
+          "auth",
+          "matrix",
+          "security",
+          "slack",
+          "web-tools",
+          "windows-update"
         ],
         "evidence": [
           {
@@ -1789,6 +1909,215 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Envelope prompt-cache breakpoints no-op during tool loops, causing repeated full-price context sends"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 36755,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/36755",
+            "issue": "NousResearch/hermes-agent issue 36755",
+            "area": "gateway-service",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "systemd timing alignment diagnostics still false-positive on v0.18.0/root units, leaving noisy shutdown health checks"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57076,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57076",
+            "issue": "NousResearch/hermes-agent issue 57076",
+            "area": "slack",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Slack rich_blocks renders blank-line-separated ordered lists as repeated item 1 on hermes-agent 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57505,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57505",
+            "issue": "NousResearch/hermes-agent issue 57505",
+            "area": "security",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Dashboard Files exposure could read .env/API secrets on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57581,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57581",
+            "issue": "NousResearch/hermes-agent issue 57581",
+            "area": "web-tools",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Plugin-registered web providers cannot be selected via web.extract_backend on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 57909,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/57909",
+            "issue": "NousResearch/hermes-agent issue 57909",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes update can leave Telegram without an available adapter despite 0.18.0 diagnostics reporting healthy packages"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58071,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58071",
+            "issue": "NousResearch/hermes-agent issue 58071",
+            "area": "provider-routing",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "zai provider ignores configured base_url on Hermes 0.18.0 and probes hardcoded endpoints"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58072,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58072",
+            "issue": "NousResearch/hermes-agent issue 58072",
+            "area": "memory",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Switching memory providers leaves stale merged sub-keys that destabilize/crash the gateway on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58073,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58073",
+            "issue": "NousResearch/hermes-agent issue 58073",
+            "area": "security",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "BWS override_existing can overwrite profile-specific secrets across profiles on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58075,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58075",
+            "issue": "NousResearch/hermes-agent issue 58075",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Cron delivery messages can expose agent self-verification noise instead of the intended task output on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58185,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58185",
+            "issue": "NousResearch/hermes-agent issue 58185",
+            "area": "provider-routing",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Bedrock model picker offers and persists bare foundation-model IDs that fail on on-demand accounts in Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58237,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58237",
+            "issue": "NousResearch/hermes-agent issue 58237",
+            "area": "auth",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Dashboard auto-SSO redirect 500s when only basic auth is configured on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58248,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58248",
+            "issue": "NousResearch/hermes-agent issue 58248",
+            "area": "security",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Delivered-text persistence paths can bypass PII/redaction hooks on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58281,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58281",
+            "issue": "NousResearch/hermes-agent issue 58281",
+            "area": "tool-loader",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Disabling coding toolset can silently strip explicitly-enabled terminal/file tools, leaving Hermes 0.18.0 sessions with Tools: 0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58458,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58458",
+            "issue": "NousResearch/hermes-agent issue 58458",
+            "area": "matrix",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "lazy_deps marks never-enabled matrix backends active; Windows refresh then fails on python-olm build requirements"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58559,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58559",
+            "issue": "NousResearch/hermes-agent issue 58559",
+            "area": "matrix",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Matrix bang commands bypass split batching and skill-command active-session dispatch on v2026.7.1 / 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58572,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58572",
+            "issue": "NousResearch/hermes-agent issue 58572",
+            "area": "gateway-service",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Gateway crashes on Nous Portal token expiry with no remote recovery path on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58573,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58573",
+            "issue": "NousResearch/hermes-agent issue 58573",
+            "area": "desktop-windows",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Native Windows main.py omits hermes_home when loading .env, so Hermes 0.18.0 editable installs miss local environment"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58576,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58576",
+            "issue": "NousResearch/hermes-agent issue 58576",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "web_server event loop stalls up to 51s under heavy agent work, making the desktop UI appear frozen on Hermes 0.18.0"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 58578,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58578",
+            "issue": "NousResearch/hermes-agent issue 58578",
+            "area": "windows-update",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Windows hermes update restarts only the gateway, leaving dashboard/web UI chat dead until manual relaunch on Hermes 0.18.0"
           }
         ]
       },
