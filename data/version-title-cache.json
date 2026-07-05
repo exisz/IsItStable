@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-04T23:51:52.557Z",
+  "generatedAt": "2026-07-05T01:56:52.130Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -605,11 +605,13 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
+        "risk:other",
         "affected:discord",
         "affected:qqbot",
         "affected:runtime",
         "affected:security",
         "affected:telegram",
+        "affected:matrix",
         "affected:imessage",
         "affected:approval-boundary",
         "affected:plugin-tools",
@@ -618,6 +620,7 @@
         "affected:ui",
         "affected:cron",
         "affected:provider-integration",
+        "affected:slack",
         "affected:memory",
         "pkg:hermes-agent",
         "affected:desktop",
@@ -630,17 +633,19 @@
         "affected:gateway-service",
         "affected:installer",
         "affected:provider-routing",
+        "affected:web-tools",
         "score:0-9",
         "affected:desktop-windows",
         "affected:desktop-linux",
-        "affected:tool-loader"
+        "affected:tool-loader",
+        "affected:windows-update"
       ],
       "issueNumber": 147,
       "title": "[v0.18.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/147",
       "createdAt": "2026-07-01T20:32:17Z",
-      "updatedAt": "2026-07-04T00:57:15Z"
+      "updatedAt": "2026-07-05T00:57:11Z"
     },
     {
       "version": "0.0.1",
