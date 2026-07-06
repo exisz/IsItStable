@@ -3791,8 +3791,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 92516,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92516",
-        "title": "Containerized/self-hosted deploys can't use externalized channel plugins: openKeyedStore is gated to trusted plugins, with no supported way to trust a self-hosted channel"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92516"
       },
       {
         "repo": "openclaw/openclaw",
