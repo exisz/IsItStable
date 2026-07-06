@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The dashboard is now less “works on my machine” and more “please check the fire exits”: fresh WhatsApp, auth, provider-routing, mobile pairing, and session-reset evidence landed.",
+    "verdictComment": "The fire exits got four more warning lights: tool output truncation, stale cron locks, failed-open policy hooks, and compaction continuation poison on v2026.6.11.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -397,29 +397,53 @@
         "number": 95515,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/95515",
         "title": "Upgrade 2026.6.8→2026.6.9 corrupts email channel config with spurious groupAllowFrom field"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100458,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100458",
+        "title": "Skill and Read tools truncating output at ~600-700 chars in 2026.6.11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100471,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100471",
+        "title": "Cron running_at_ms not cleared after agentTurn run"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100427,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100427",
+        "title": "Policy plugins cannot see resolved/served model identity at any blocking-capable hook (security impact: our confidentiality guard failed open)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 100312,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/100312",
+        "title": "[Bug] Compaction-timeout recovery still leaves session assistant-last on 2026.6.11 (regression of #87472 / #88118) — and the continuation throw is scored as model candidate_failed"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -195,
+      "score": -212,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 195,
+      "evidencePenalty": 212,
       "survivalDays": 5,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 195,
+        "evidencePenalty": 212,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -195
+        "score": -212
       },
       "affected": [
         "approval-boundary",
@@ -442,6 +466,7 @@
         "provider-auth",
         "provider-routing",
         "sessions-management",
+        "skill-workshop",
         "subagent-runtime",
         "telegram",
         "tools",
@@ -1168,6 +1193,50 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Email channel config migration can still write invalid groupAllowFrom during upgrades; latest v2026.6.11 keeps the permissive path."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100458,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100458",
+          "issue": "openclaw/openclaw issue 100458",
+          "area": "skill-workshop",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Skill and core read/output tools can truncate or lose longer results, and Skill Workshop proposal state can disappear on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100471,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100471",
+          "issue": "openclaw/openclaw issue 100471",
+          "area": "cron",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "agentTurn cron jobs can leave running_at_ms uncleared after completion, causing later scheduled runs to be skipped on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100427,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100427",
+          "issue": "openclaw/openclaw issue 100427",
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Policy plugins cannot see resolved served-model identity at any blocking hook, creating a failed-open confidentiality enforcement gap observed on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100312,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100312",
+          "issue": "openclaw/openclaw issue 100312",
+          "area": "compaction",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Compaction-timeout recovery can still leave assistant-last session state on v2026.6.11, breaking continuation and misattributing infrastructure errors to model fallback."
         }
       ]
     },
@@ -3791,7 +3860,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 92516,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/92516"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/92516",
+        "title": "Containerized/self-hosted deploys can't use externalized channel plugins: openKeyedStore is gated to trusted plugins, with no supported way to trust a self-hosted channel"
       },
       {
         "repo": "openclaw/openclaw",
