@@ -430,7 +430,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 212,
-      "survivalDays": 5,
+      "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -438,7 +438,7 @@
         "baseScore": 80,
         "evidencePenalty": 212,
         "votePenalty": 0,
-        "survivalDays": 5,
+        "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -18058,29 +18058,47 @@
         "number": 59184,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59184",
         "title": "[Bug]: Memory replace with partial old_text on composite entry truncates everything after match"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 59850,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59850",
+        "title": "hermes update (Windows): dependency install runs at PROJECT_ROOT (running-CLI dir), not the extracted install root → `uv pip install -e .` exit 2"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 59397,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59397",
+        "title": "[Bug]: ANSI Code Broken Render in CLI"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 59286,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59286",
+        "title": "[Bug]: terminal env_passthrough not honored by Daytona backend — allowlisted env never reaches the sandbox"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -166,
+      "score": -173,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 166,
-      "survivalDays": 4,
-      "survivalBonus": 12,
+      "evidencePenalty": 173,
+      "survivalDays": 5,
+      "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 166,
+        "evidencePenalty": 173,
         "votePenalty": 0,
-        "survivalDays": 4,
+        "survivalDays": 5,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 4,
-        "survivalBonus": 12,
+        "survivalCreditedDays": 5,
+        "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -166
+        "score": -173
       },
       "affected": [
         "agent-core",
@@ -18089,6 +18107,7 @@
         "codex",
         "cron",
         "dashboard",
+        "daytona",
         "dependencies",
         "desktop",
         "desktop-linux",
@@ -18801,6 +18820,39 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Memory replace on Hermes 0.18.0 truncates composite entries instead of replacing only the matched text"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 59850,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59850",
+          "issue": "NousResearch/hermes-agent issue 59850",
+          "area": "windows-update",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows hermes update runs dependency install from the invoking project root instead of the extracted install root on Hermes 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 59397,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59397",
+          "issue": "NousResearch/hermes-agent issue 59397",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "CLI ANSI rendering is broken on Windows 10 with Hermes 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 59286,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59286",
+          "issue": "NousResearch/hermes-agent issue 59286",
+          "area": "daytona",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Daytona backend ignores env_passthrough allowlist, so required environment variables never reach the sandbox on Hermes 0.18.0"
         }
       ]
     },
