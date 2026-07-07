@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "The fire exits got four more warning lights: tool output truncation, stale cron locks, failed-open policy hooks, and compaction continuation poison on v2026.6.11.",
+      "verdictComment": "The scoreboard is already in the basement; today added cron wakes, compaction crashes, gateway fan-out, and model-routing drift to the v2026.6.11 warning wall.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -425,29 +425,131 @@
           "number": 100312,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/100312",
           "title": "[Bug] Compaction-timeout recovery still leaves session assistant-last on 2026.6.11 (regression of #87472 / #88118) — and the continuation throw is scored as model candidate_failed"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100566,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100566",
+          "title": "[Bug]: thought_signature 400 regression in 2026.6.11"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100677,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100677",
+          "title": "Compaction crash: late compaction count reconcile failed - TypeError: reconcile is not a function (2026.6.11)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100783,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100783",
+          "title": "[Bug]: exec tool output buffer accumulates across commands — causes truncation/hang     after a few invocations (Linux OpenClaw 2026.6.11)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100787,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100787",
+          "title": "[Bug]: WebChat channel renders all tool call results as screenshots in 2026.6.11"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100941,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100941",
+          "title": "Gateway drops concurrent in-process tool-to-gateway WebSocket connections (1006) under parallel tool fan-out; misleading Gateway-crashed error (2026.6.11)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100944,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100944",
+          "title": "[Bug]: Signal DM silently dropped on reply session initialization conflict (retry fix ported to Slack/Telegram but not Signal)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 100988,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/100988",
+          "title": "sessions_spawn from a CLI-harness parent (claude-cli) clamps subagents to gateway bridge tools — children lose exec/read/write"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101049,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101049",
+          "title": "[Bug]: msteams plugin npm install can leave an empty dependency tree — plugin loads, provider dies silently, Microsoft sees delivery errors"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101459,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101459",
+          "title": "[Bug]: openai-responses sends role=\"system\" instead of role=\"developer\" for reasoning models"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101467,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101467",
+          "title": "[TUI] All exec/tool output renders as images in WebChat after 2026.6.11 upgrade"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101537,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101537",
+          "title": "[Bug]:  cron scheduled wake to main session is skipped (status=skipped, error=\"disabled\"), so the main agent is never woken"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101570,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101570",
+          "title": "[Bug]: mimo-v2.5 / mimo-v2.5-pro thinking content leaked into text reply causing severe repetition"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101672,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101672",
+          "title": "Session→model/runtime binding drift persists across doctor --fix --deep because the repair's provider-ownership registry is missing the literal id \"openai\""
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101673,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101673",
+          "title": "OC-FRAMEWORKBUG01: plugin-registry workspace caching bug"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101674,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101674",
+          "title": "thinking.type.enabled rejected (400) for Sonnet 5 — silent retry with thinking off on every request"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101675,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101675",
+          "title": "Interrupted sessions marked unrecoverable after gateway restart (transcript tail is not resumable)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101676,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101676",
+          "title": "Live model switch mid-attempt terminates the run instead of retrying against the new model"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -212,
+        "score": -272,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 212,
+        "evidencePenalty": 272,
         "survivalDays": 6,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 212,
+          "evidencePenalty": 272,
           "votePenalty": 0,
           "survivalDays": 6,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -212
+          "score": -272
         },
         "affected": [
           "approval-boundary",
@@ -459,6 +561,8 @@
           "desktop-macos",
           "discord",
           "email",
+          "exec",
+          "gateway",
           "hot-reload",
           "launchagent",
           "mattermost",
@@ -469,6 +573,7 @@
           "plugin-system",
           "provider-auth",
           "provider-routing",
+          "reasoning",
           "sessions-management",
           "skill-workshop",
           "subagent-runtime",
@@ -1241,6 +1346,193 @@
             "severity": 5,
             "penalty": 5,
             "reason": "Compaction-timeout recovery can still leave assistant-last session state on v2026.6.11, breaking continuation and misattributing infrastructure errors to model fallback."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 100566,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/100566",
+            "issue": "openclaw/openclaw issue 100566",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "thought_signature 400 regression breaks reasoning-model requests on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 100677,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/100677",
+            "issue": "openclaw/openclaw issue 100677",
+            "area": "compaction",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Late compaction count reconcile throws TypeError repeatedly on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 100783,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/100783",
+            "issue": "openclaw/openclaw issue 100783",
+            "area": "exec",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "exec tool output buffer accumulates across commands, causing truncation or hangs on Linux v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 100787,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/100787",
+            "issue": "openclaw/openclaw issue 100787",
+            "area": "webchat",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "WebChat renders tool call results as screenshots/images, making output unreadable on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 100941,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/100941",
+            "issue": "openclaw/openclaw issue 100941",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Concurrent in-process tool-to-gateway WebSocket fan-out drops connections with 1006 on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 100944,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/100944",
+            "issue": "openclaw/openclaw issue 100944",
+            "area": "message-delivery",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Signal DMs can be silently dropped on reply-session initialization conflict in v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 100988,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/100988",
+            "issue": "openclaw/openclaw issue 100988",
+            "area": "subagent-runtime",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "sessions_spawn from a CLI-harness parent can clamp children to bridge tools, losing exec/read/write on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101049,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101049",
+            "issue": "openclaw/openclaw issue 101049",
+            "area": "plugin-install",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Microsoft Teams plugin install can leave an empty dependency tree while appearing loaded on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101459,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101459",
+            "issue": "openclaw/openclaw issue 101459",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "openai-responses sends system instead of developer role for reasoning models on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101467,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101467",
+            "issue": "openclaw/openclaw issue 101467",
+            "area": "webchat",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "TUI/WebChat tool output renders as images after v2026.6.11 upgrade."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101537,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101537",
+            "issue": "openclaw/openclaw issue 101537",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Scheduled cron wake can be skipped as disabled, leaving the main agent unwoken on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101570,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101570",
+            "issue": "openclaw/openclaw issue 101570",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Thinking content can leak into text replies with severe repetition on v2026.6.11 model paths."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101672,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101672",
+            "issue": "openclaw/openclaw issue 101672",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Session model/runtime binding drift persists across doctor repair because provider ownership misses literal openai id."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101673,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101673",
+            "issue": "openclaw/openclaw issue 101673",
+            "area": "plugin-system",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Plugin-registry workspace caching bug can expose stale plugin state on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101674,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101674",
+            "issue": "openclaw/openclaw issue 101674",
+            "area": "reasoning",
+            "type": "tool",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Sonnet 5 thinking.type.enabled is rejected and silently retried with thinking off on v2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101675,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101675",
+            "issue": "openclaw/openclaw issue 101675",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Interrupted sessions can become unrecoverable after gateway restart because transcript tail is not resumable."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101676,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101676",
+            "issue": "openclaw/openclaw issue 101676",
+            "area": "sessions-management",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Live model switch mid-attempt terminates the run instead of retrying against the new model."
           }
         ]
       },
