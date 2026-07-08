@@ -2726,13 +2726,25 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "2026.6.9 keeps piling up receipts: now with a plaintext-API-key leak, an abort-time memory leak that demands restarts, a gateway config-rejection regression, broken non-Codex fallbacks, and a fresh stack of Telegram/Discord surfacing bugs. The 3am incident wall ran out of sticky notes.",
+    "verdictComment": "2026.6.9 picked up fresh channel-progress and preflight-compaction evidence. The UI leaves receipts behind, and compaction brought a 60-second stopwatch to a 15-minute job.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
         "number": 99910,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/99910",
         "title": "Memory dreaming run pegs the gateway event loop for ~10 min until killed; short-term recall store can never persist (2026.6.9, reproduces on unmodified dist)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 96207,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/96207",
+        "title": "Tool-call progress messages not retired/collapsed after completion (2026.6.9)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 95553,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/95553",
+        "title": "Bug: preflight (budget-triggered) compaction hard-capped at ~60s, ignores compaction.timeoutSeconds"
       },
       {
         "repo": "openclaw/openclaw",
@@ -2888,24 +2900,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 25,
+      "score": 19,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 64,
+      "evidencePenalty": 70,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 64,
+        "evidencePenalty": 70,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 25
+        "score": 19
       },
       "affected": [
         "codex",
@@ -3211,6 +3223,28 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Memory dreaming promotion can peg the gateway event loop for about 10 minutes and prevent short-term recall persistence on v2026.6.9."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 96207,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/96207",
+          "issue": "openclaw/openclaw issue 96207",
+          "area": "ui",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram/Discord tool-call progress messages remain visible after successful tool completion on 2026.6.9."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 95553,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/95553",
+          "issue": "openclaw/openclaw issue 95553",
+          "area": "compaction",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Budget-triggered preflight compaction is hard-capped around 60s on 2026.6.9, ignoring configured compaction timeout."
         }
       ]
     },
