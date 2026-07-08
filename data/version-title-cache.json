@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-08T12:12:36.138Z",
+  "generatedAt": "2026-07-08T15:07:35.193Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -2826,7 +2826,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/144",
       "createdAt": "2026-06-21T01:46:51Z",
-      "updatedAt": "2026-07-04T12:57:34Z"
+      "updatedAt": "2026-07-08T13:18:42Z"
     },
     {
       "version": "2026.6.10",
@@ -2936,7 +2936,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/146",
       "createdAt": "2026-06-30T16:40:51Z",
-      "updatedAt": "2026-07-07T13:01:33Z"
+      "updatedAt": "2026-07-08T13:12:47Z"
     }
   ],
   "duplicates": {
