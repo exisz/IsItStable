@@ -1546,9 +1546,9 @@
     "slug": "hermes-agent",
     "displayName": "Hermes Agent",
     "latestVersion": {
-      "issueNumber": 148,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/148",
-      "version": "0.18.1",
+      "issueNumber": 149,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/149",
+      "version": "0.18.2",
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
@@ -1581,7 +1581,7 @@
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-07-08T01:15:00Z"
+      "createdAt": "2026-07-08T04:37:25.544Z"
     }
   }
 ]
