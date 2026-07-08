@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "The scoreboard is already in the basement; today added cron wakes, compaction crashes, gateway fan-out, and model-routing drift to the v2026.6.11 warning wall.",
+      "verdictComment": "The score was already underground; fresh v2026.6.11 evidence adds all-channel silence, long-session tool-result races, and exec wedges. The 3am deploy gremlins brought receipts.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -527,29 +527,47 @@
           "number": 101676,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/101676",
           "title": "Live model switch mid-attempt terminates the run instead of retrying against the new model"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101814,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101814",
+          "title": "[Bug]: All channels enter broken state after 2026.6.11 update — one message per session then permanent silence"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101850,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101850",
+          "title": "Race condition (missing tool result / synthetic errors) still reproducible on 2026.6.11 AND 2026.7.1-beta.2 — supersedes closed #31664/#6682/#15008/#13286"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102006,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102006",
+          "title": "[BUG] exec tool: aborted run wedges subsequent exec calls in same session (regression from PR #94412)"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -272,
+        "score": -287,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 272,
+        "evidencePenalty": 287,
         "survivalDays": 7,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 272,
+          "evidencePenalty": 287,
           "votePenalty": 0,
           "survivalDays": 7,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -272
+          "score": -287
         },
         "affected": [
           "approval-boundary",
@@ -574,6 +592,7 @@
           "provider-auth",
           "provider-routing",
           "reasoning",
+          "session-state",
           "sessions-management",
           "skill-workshop",
           "subagent-runtime",
@@ -1533,6 +1552,39 @@
             "severity": 3,
             "penalty": 3,
             "reason": "Live model switch mid-attempt terminates the run instead of retrying against the new model."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101814,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101814",
+            "issue": "openclaw/openclaw issue 101814",
+            "area": "message-delivery",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "All channels can enter a one-message-then-silence state on 2026.6.11, with duplicate replies and restart/session cleanup recovery."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 101850,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/101850",
+            "issue": "openclaw/openclaw issue 101850",
+            "area": "session-state",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Long-session missing tool-result race remains reproducible on 2026.6.11, producing synthetic errors and lost tool outputs."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 102006,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/102006",
+            "issue": "openclaw/openclaw issue 102006",
+            "area": "exec",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Exec/tool calls can wedge after aborts or rapid gateway-touching operations on 2026.6.11, requiring gateway restart or session surgery."
           }
         ]
       },
