@@ -532,7 +532,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 272,
-      "survivalDays": 6,
+      "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -540,7 +540,7 @@
         "baseScore": 80,
         "evidencePenalty": 272,
         "votePenalty": 0,
-        "survivalDays": 6,
+        "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -17977,7 +17977,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.0 train found more tracks: loops, desktop config drift, memory footguns, startup timeouts, provider weirdness, and security potholes. Works-on-my-machine has left the station.",
+    "verdictComment": "The 0.18.0 train found more tracks: loops, desktop config drift, memory footguns, startup timeouts, provider weirdness, security potholes, and fresh July 8 UI/tooling sparks. Works-on-my-machine has left the station.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -18368,29 +18368,89 @@
         "number": 59286,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59286",
         "title": "[Bug]: terminal env_passthrough not honored by Daytona backend — allowlisted env never reaches the sandbox"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60084,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60084",
+        "title": "[Bug]: Tool-loop guardrails miss loops where args vary but the result never changes (incl. repeated multimodal results)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60089,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60089",
+        "title": "[Bug]: memory replace → \"Multiple entries matched\" → fallback add creates duplicate entries with no signal"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60319,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60319",
+        "title": "agent_init.py prints credential prefix/suffix previews to stdout"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60505,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60505",
+        "title": "Approval gate: fail-closed option for non-interactive contexts + permanent allowlist bypasses cron_mode deny"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60525,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60525",
+        "title": "write_file() commits to disk before its own JSON/YAML/TOML syntax check runs — invalid content is written and reported as successful"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60556,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60556",
+        "title": "[Bug]: Telegram streaming + [[audio_as_voice]] causes TTS to render as plain audio attachment, not voice bubble"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60578,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60578",
+        "title": "[BUG] post_tool_call hook does not pass turn_id — turn-counting plugins silently no-op"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60583,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60583",
+        "title": "[Bug]: Status-bar tokens/sec is inaccurate for streaming / OpenAI-compatible (local) providers"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60596,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60596",
+        "title": "[Bug]:Chat UI alignment issue on Windows: Messages are centered instead of split left-right"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60597,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60597",
+        "title": "[Bug]: UI Wrapper Crash: Attempted to access streaming response content, without having called read()"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -173,
+      "score": -198,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 173,
-      "survivalDays": 5,
+      "evidencePenalty": 198,
+      "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 173,
+        "evidencePenalty": 198,
         "votePenalty": 0,
-        "survivalDays": 5,
+        "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -173
+        "score": -198
       },
       "affected": [
         "agent-core",
@@ -19145,6 +19205,116 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Daytona backend ignores env_passthrough allowlist, so required environment variables never reach the sandbox on Hermes 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60084,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60084",
+          "issue": "NousResearch/hermes-agent issue 60084",
+          "area": "agent-core",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Tool-loop guardrails can miss loops when args vary but repeated multimodal/tool results never change on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60089,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60089",
+          "issue": "NousResearch/hermes-agent issue 60089",
+          "area": "memory",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Memory replace can fall back to add after multiple matches, creating duplicate entries without signaling failure on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60319,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60319",
+          "issue": "NousResearch/hermes-agent issue 60319",
+          "area": "security",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "agent_init.py prints credential prefix/suffix previews to stdout in v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60505,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60505",
+          "issue": "NousResearch/hermes-agent issue 60505",
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Approval gate gaps allow non-interactive auto-approval and permanent allowlist bypass of cron_mode deny on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60525,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60525",
+          "issue": "NousResearch/hermes-agent issue 60525",
+          "area": "tool-loader",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "write_file commits invalid JSON/YAML/TOML before syntax validation and reports success in v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60556,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60556",
+          "issue": "NousResearch/hermes-agent issue 60556",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram streaming with audio_as_voice renders TTS as a plain audio attachment instead of a voice bubble on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60578,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60578",
+          "issue": "NousResearch/hermes-agent issue 60578",
+          "area": "plugin-tools",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "post_tool_call hook omits turn_id, causing turn-counting plugins to silently no-op on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60583,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60583",
+          "issue": "NousResearch/hermes-agent issue 60583",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop status-bar tokens/sec is inaccurate for streaming/OpenAI-compatible providers on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60596,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60596",
+          "issue": "NousResearch/hermes-agent issue 60596",
+          "area": "desktop-windows",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Windows desktop chat alignment centers messages instead of preserving user/assistant left-right split on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60597,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60597",
+          "issue": "NousResearch/hermes-agent issue 60597",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "UI wrapper can crash when accessing streaming response content before read() on v0.18.0"
         }
       ]
     },
