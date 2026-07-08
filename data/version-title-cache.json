@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-07T23:44:59.389Z",
+  "generatedAt": "2026-07-08T01:28:38.407Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -646,7 +646,22 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/147",
       "createdAt": "2026-07-01T20:32:17Z",
-      "updatedAt": "2026-07-07T01:00:19Z"
+      "updatedAt": "2026-07-08T01:01:27Z"
+    },
+    {
+      "version": "0.18.1",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 148,
+      "title": "[v0.18.1] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/148",
+      "createdAt": "2026-07-08T01:28:37Z",
+      "updatedAt": "2026-07-08T01:28:37Z"
     },
     {
       "version": "0.0.1",
