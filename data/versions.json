@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The score was already underground; fresh v2026.6.11 evidence adds all-channel silence, long-session tool-result races, and exec wedges. The 3am deploy gremlins brought receipts.",
+    "verdictComment": "The score was already underground; fresh v2026.6.11 evidence now adds macOS signing pain, WeCom stuck sessions, Telegram config crash loops, and Slack bot-message black holes. The 3am deploy gremlins brought receipts.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -541,29 +541,53 @@
         "number": 102006,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/102006",
         "title": "[BUG] exec tool: aborted run wedges subsequent exec calls in same session (regression from PR #94412)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102290,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102290",
+        "title": "[Bug]: macOS app 2026.6.11 fails codesign/spctl despite valid DMG checksum"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102401,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102401",
+        "title": "[Bug]: Openclaw with Wecom Channel: session get stucks while a instruction is processing, send another message to agent"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102580,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102580",
+        "title": "[Bug]: Documented channels.telegram.chunkMode / blockStreamingCoalesce rejected by plugin validator → gateway crash loop on restart — 2026.6.11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102295,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102295",
+        "title": "[Bug]: Slack `allowBots: true` silently drops all bot messages unless `allowFrom` contains an explicit owner user ID"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -287,
+      "score": -299,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 287,
+      "evidencePenalty": 299,
       "survivalDays": 8,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 287,
+        "evidencePenalty": 299,
         "votePenalty": 0,
         "survivalDays": 8,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -287
+        "score": -299
       },
       "affected": [
         "approval-boundary",
@@ -591,6 +615,7 @@
         "session-state",
         "sessions-management",
         "skill-workshop",
+        "slack",
         "subagent-runtime",
         "telegram",
         "tools",
@@ -599,6 +624,7 @@
         "web-search",
         "webchat",
         "wechat",
+        "wecom",
         "whatsapp",
         "windows-runtime"
       ],
@@ -1581,6 +1607,50 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Exec/tool calls can wedge after aborts or rapid gateway-touching operations on 2026.6.11, requiring gateway restart or session surgery."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102290,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102290",
+          "issue": "openclaw/openclaw issue 102290",
+          "area": "desktop-macos",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Official 2026.6.11 macOS DMG verifies but installed app fails codesign/spctl on Apple Silicon."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102401,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102401",
+          "issue": "openclaw/openclaw issue 102401",
+          "area": "wecom",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "WeCom group messages can wedge the session when consecutive instructions arrive on 2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102580,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102580",
+          "issue": "openclaw/openclaw issue 102580",
+          "area": "telegram",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Documented Telegram chunking keys are rejected by config validation, causing gateway crash loop on restart."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102295,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102295",
+          "issue": "openclaw/openclaw issue 102295",
+          "area": "slack",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Slack allowBots with wildcard allowFrom silently drops bot-authored messages on 2026.6.11."
         }
       ]
     },
@@ -18117,24 +18187,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 57,
+      "score": 60,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 23,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 23,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 57
+        "score": 60
       },
       "affected": [
         "desktop",
