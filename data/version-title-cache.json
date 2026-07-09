@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-08T23:01:57.564Z",
+  "generatedAt": "2026-07-09T01:50:38.565Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -654,14 +654,17 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
-        "pkg:hermes-agent"
+        "risk:runtime",
+        "pkg:hermes-agent",
+        "affected:lazy-deps",
+        "affected:hermes-link"
       ],
       "issueNumber": 148,
       "title": "[v0.18.1] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-08T01:28:37Z"
+      "updatedAt": "2026-07-09T01:11:36Z"
     },
     {
       "version": "0.18.2",
@@ -669,14 +672,23 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
-        "pkg:hermes-agent"
+        "risk:tool",
+        "risk:runtime",
+        "affected:security",
+        "affected:sandbox",
+        "pkg:hermes-agent",
+        "affected:desktop",
+        "affected:dependencies",
+        "affected:model-picker",
+        "affected:windows-update",
+        "affected:lazy-deps"
       ],
       "issueNumber": 149,
       "title": "[v0.18.2] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-08T04:57:32Z"
+      "updatedAt": "2026-07-09T01:11:33Z"
     },
     {
       "version": "0.0.1",
