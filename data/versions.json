@@ -550,7 +550,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 287,
-      "survivalDays": 7,
+      "survivalDays": 8,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -558,7 +558,7 @@
         "baseScore": 80,
         "evidencePenalty": 287,
         "votePenalty": 0,
-        "survivalDays": 7,
+        "survivalDays": 8,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -18063,32 +18063,178 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Fresh-release watch (<24h): lots of sharp edges already. The 3am deploy gremlins found Desktop, dependency pins, sandbox paths, and Windows update flows.",
+    "referencedIssues": [
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60954,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60954",
+        "title": "[Desktop 0.18.2] project_create writes to projects.db successfully but sidebar shows no project entry"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 58458,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58458",
+        "title": "lazy_deps: shared aiohttp pin marks never-enabled backends active; matrix refresh then fails on Windows (python-olm needs make)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61098,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61098",
+        "title": "Security: Remove pinned cryptography version 46.0.7"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61043,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61043",
+        "title": "execute_code sandbox fails with OSError: AF_UNIX path too long when TMPDIR is long on Linux"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60841,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60841",
+        "title": "CVEs survive pip-audit fix across reboots // uv.lock pins vulnerable versions of packages"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60742,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60742",
+        "title": "[Bug]: FileNotFoundError: [WinError 2] when running hermes update on Windows (npm.cmd not resolved)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61115,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61115",
+        "title": "[Bug]: Hermes Desktop does not appear to use the same profile terminal backend / sandbox as CLI profile command"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60827,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60827",
+        "title": "[Bug]: OpenRouter /model picker truncated to ~30 curated models instead of full tool-calling catalog"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 57,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 23,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 23,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 57
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "desktop",
+        "dependencies",
+        "security",
+        "sandbox",
+        "windows-update",
+        "model-picker",
+        "lazy-deps"
+      ],
+      "evidence": [
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60954,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60954",
+          "issue": "NousResearch/hermes-agent issue 60954",
+          "area": "desktop-projects",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop 0.18.2 project_create writes projects.db rows but the sidebar never shows the project"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58458,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58458",
+          "issue": "NousResearch/hermes-agent issue 58458",
+          "area": "lazy-deps",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "lazy_deps refresh still fails after updating to hermes-agent 0.18.2 because shared aiohttp pin activates never-enabled backends"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61098,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61098",
+          "issue": "NousResearch/hermes-agent issue 61098",
+          "area": "security",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "cryptography==46.0.7 pin blocks security updates for GHSA-537c-gmf6-5ccf"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61043,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61043",
+          "issue": "NousResearch/hermes-agent issue 61043",
+          "area": "sandbox",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "execute_code sandbox cannot start on Linux when TMPDIR makes the AF_UNIX socket path too long"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60841,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60841",
+          "issue": "NousResearch/hermes-agent issue 60841",
+          "area": "dependencies",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "pip-audit fixes for vulnerable packages are undone because uv.lock pins vulnerable versions across reboots"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60742,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60742",
+          "issue": "NousResearch/hermes-agent issue 60742",
+          "area": "windows-update",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "hermes update on Windows fails with FileNotFoundError because npm.cmd is not resolved"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61115,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61115",
+          "issue": "NousResearch/hermes-agent issue 61115",
+          "area": "desktop",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Desktop appears to bypass the CLI profile terminal backend/sandbox guarantees"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60827,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60827",
+          "issue": "NousResearch/hermes-agent issue 60827",
+          "area": "model-picker",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "OpenRouter model picker shows only a curated ~30-model subset instead of the live tool-calling catalog"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
@@ -18101,32 +18247,71 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Fresh-release watch (<24h): not enough bake time yet, but two gremlins already left fingerprints in lazy deps and Link daemon startup.",
+    "referencedIssues": [
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 58458,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58458",
+        "title": "lazy_deps: shared aiohttp pin marks never-enabled backends active; matrix refresh then fails on Windows (python-olm needs make)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60682,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60682",
+        "title": "[Bug] Hermes Link daemon crashes with \"Invalid URL\" when relayBaseUrl is empty"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 74,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 6,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 6,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 74
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "lazy-deps",
+        "hermes-link"
+      ],
+      "evidence": [
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58458,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58458",
+          "issue": "NousResearch/hermes-agent issue 58458",
+          "area": "lazy-deps",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Upgrade trace explicitly covers hermes-agent 0.18.1 -> 0.18.2 while lazy_deps refresh fails on never-enabled backend dependencies"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60682,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60682",
+          "issue": "NousResearch/hermes-agent issue 60682",
+          "area": "hermes-link",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Link daemon crashes with Invalid URL when documented relayBaseUrl disable path is used on Hermes Agent 0.18.1"
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
