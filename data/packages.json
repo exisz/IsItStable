@@ -578,7 +578,7 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 299,
-        "survivalDays": 8,
+        "survivalDays": 9,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
@@ -586,7 +586,7 @@
           "baseScore": 80,
           "evidencePenalty": 299,
           "votePenalty": 0,
-          "survivalDays": 8,
+          "survivalDays": 9,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
@@ -1674,7 +1674,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "Fresh-release watch (<24h): lots of sharp edges already. The 3am deploy gremlins found Desktop, dependency pins, sandbox paths, and Windows update flows.",
+      "verdictComment": "The 0.18.2 train is now past fresh-release watch and it brought a full gremlin car: dependency pins, security dents, Desktop misdelivery, Matrix cron delivery, local-model prompt bloat, sandbox paths, and provider routing noise. 3am deploys are filing witness statements.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1723,38 +1723,97 @@
           "number": 60827,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60827",
           "title": "[Bug]: OpenRouter /model picker truncated to ~30 curated models instead of full tool-calling catalog"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61495,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61495",
+          "title": "[Bug]: Matrix manual cron delivery fails with \"Timeout context manager should be used inside a task\""
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61409,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61409",
+          "title": "[Bug]: Log record injection via unescaped newlines in agent/tool-controlled log values"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61573,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61573",
+          "title": "Desktop: message queued in a busy session is delivered to an unrelated idle session"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61392,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61392",
+          "title": "[Bug]: Code blocks render Vietnamese (non-Latin) diacritics poorly — no font override option"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61265,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61265",
+          "title": "[Bug]: Hermes sends extremely large prompts to local OpenAI-compatible models, causing multi-minute stalls across model sizes"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61536,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61536",
+          "title": "[Bug]: Zed dark themes: `/skin default` is rendered as light-mode colors because Hermes trusts inherited COLORFGBG"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61421,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61421",
+          "title": "[Bug]: Hermes probes non‑OpenAI endpoints (/api/tags, /v1/props, /version) on api.openai.com, causing noisy 404s"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61343,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61343",
+          "title": "[Bug]: Stored XSS in HTML session export via unescaped tool-call name"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60821,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60821",
+          "title": "[Bug]: TypeError: Completions.create() got an unexpected keyword argument 'system' in chat_completions.py via _build_kwargs_from_profile"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 60,
+        "score": 33,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 23,
+        "evidencePenalty": 50,
         "survivalDays": 1,
         "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 23,
+          "evidencePenalty": 50,
           "votePenalty": 0,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 1,
           "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 60
+          "score": 33
         },
         "affected": [
           "desktop",
-          "dependencies",
+          "lazy-deps",
           "security",
           "sandbox",
+          "dependencies",
           "windows-update",
           "model-picker",
-          "lazy-deps"
+          "matrix",
+          "message-delivery",
+          "desktop-ui",
+          "prompt-size",
+          "provider-routing"
         ],
         "evidence": [
           {
@@ -1844,6 +1903,105 @@
             "severity": 1,
             "penalty": 1,
             "reason": "OpenRouter model picker shows only a curated ~30-model subset instead of the live tool-calling catalog"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61495,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61495",
+            "issue": "NousResearch/hermes-agent issue 61495",
+            "area": "matrix-cron",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Matrix manual cron delivery on Hermes 0.18.2 fails with Timeout context manager outside task"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61409,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61409",
+            "issue": "NousResearch/hermes-agent issue 61409",
+            "area": "security",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Log record injection via unescaped newlines reproduced on Hermes 0.18.2/current head"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61573,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61573",
+            "issue": "NousResearch/hermes-agent issue 61573",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Desktop can deliver a queued message from a busy session into an unrelated idle session on Hermes 0.18.2"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61392,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61392",
+            "issue": "NousResearch/hermes-agent issue 61392",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Desktop code blocks render Vietnamese/non-Latin diacritics poorly on Hermes 0.18.2 with no font override"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61265,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61265",
+            "issue": "NousResearch/hermes-agent issue 61265",
+            "area": "prompt-size",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes 0.18.2 sends extremely large prompts to local OpenAI-compatible models, causing multi-minute stalls"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61536,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61536",
+            "issue": "NousResearch/hermes-agent issue 61536",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Zed dark themes render /skin default as light-mode colors on Hermes 0.18.2"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61421,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61421",
+            "issue": "NousResearch/hermes-agent issue 61421",
+            "area": "provider-routing",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes 0.18.2 probes non-OpenAI endpoints on api.openai.com, creating noisy 404 egress logs"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 61343,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61343",
+            "issue": "NousResearch/hermes-agent issue 61343",
+            "area": "security",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Stored XSS in HTML session export reproduced on Hermes 0.18.2/current head"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 60821,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60821",
+            "issue": "NousResearch/hermes-agent issue 60821",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "chat_completions passes unexpected system kwarg; reporter notes 0.18.2 transport is still affected"
           }
         ]
       },
