@@ -26073,7 +26073,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.12.0 shows boot, tool, Codex, WhatsApp, Windows, and packaging failures; score remains website-calculated.",
+    "verdictComment": "Backfill refreshed: v0.12.0 picked up late-arriving, version-gated evidence. Not a catastrophe, just another gremlin with a timestamp.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -26257,7 +26257,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.11.0 has defensible Windows, channel, Docker, TUI, and auth regressions; score remains website-calculated.",
+    "verdictComment": "Backfill refreshed: v0.11.0 picked up late-arriving, version-gated evidence. Not a catastrophe, just another gremlin with a timestamp.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -26306,29 +26306,35 @@
         "number": 20586,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/20586",
         "title": "[Bug]: cron jobs fail with provider.sort: Invalid input after v0.11.0"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 17144,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/17144",
+        "title": "[Bug]: Docker agent/tool memory writes create root-owned files unreadable by gateway user"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 75,
+      "score": 72,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 20,
+      "evidencePenalty": 23,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 20,
+        "evidencePenalty": 23,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 75
+        "score": 72
       },
       "affected": [
         "windows",
@@ -26336,8 +26342,8 @@
         "ui",
         "identity",
         "plugin-install",
-        "provider-integration",
-        "cron"
+        "cron",
+        "docker"
       ],
       "evidence": [
         {
@@ -26427,6 +26433,17 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Issue reports cron jobs failing with provider.sort invalid input after v0.11.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 17144,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/17144",
+          "issue": "NousResearch/hermes-agent issue 17144",
+          "area": "docker",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Docker agent/tool memory writes create root-owned state unreadable by the gateway user on Hermes/dashboard 0.11.0"
         }
       ]
     },
