@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-09T23:01:11.606Z",
+  "generatedAt": "2026-07-10T01:49:30.350Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -271,6 +271,7 @@
         "affected:windows",
         "affected:identity",
         "pkg:hermes-agent",
+        "affected:docker",
         "score:70-79"
       ],
       "issueNumber": 128,
@@ -278,7 +279,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/128",
       "createdAt": "2026-06-02T00:36:53Z",
-      "updatedAt": "2026-06-25T00:34:35Z"
+      "updatedAt": "2026-07-10T01:16:52Z"
     },
     {
       "version": "0.12.0",
@@ -306,7 +307,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/129",
       "createdAt": "2026-06-02T00:36:54Z",
-      "updatedAt": "2026-06-25T00:34:33Z"
+      "updatedAt": "2026-07-10T01:16:50Z"
     },
     {
       "version": "0.13.0",
@@ -656,6 +657,7 @@
         "version",
         "risk:runtime",
         "pkg:hermes-agent",
+        "score:80-89",
         "affected:lazy-deps",
         "affected:hermes-link"
       ],
@@ -664,7 +666,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-09T01:11:36Z"
+      "updatedAt": "2026-07-10T01:15:19Z"
     },
     {
       "version": "0.18.2",
@@ -672,14 +674,21 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
+        "risk:channel",
         "risk:tool",
         "risk:runtime",
         "affected:security",
+        "affected:matrix",
         "affected:sandbox",
+        "affected:message-delivery",
         "pkg:hermes-agent",
         "affected:desktop",
         "affected:dependencies",
+        "affected:desktop-ui",
         "affected:model-picker",
+        "affected:prompt-size",
+        "affected:provider-routing",
+        "score:30-39",
         "affected:windows-update",
         "affected:lazy-deps"
       ],
@@ -688,7 +697,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-09T01:11:33Z"
+      "updatedAt": "2026-07-10T01:15:16Z"
     },
     {
       "version": "0.0.1",
