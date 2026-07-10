@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "The score was already underground; fresh v2026.6.11 evidence now adds macOS signing pain, WeCom stuck sessions, Telegram config crash loops, and Slack bot-message black holes. The 3am deploy gremlins brought receipts.",
+      "verdictComment": "The v2026.6.11 evidence pile grew again: Telegram tails disappear, browser calls hit invisible walls, WebChat drops image paths, auth loops, Meet localization fails, and model routing can spend money you did not ask to spend. Works on my machine is not a recovery plan.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -569,33 +569,76 @@
           "number": 102295,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/102295",
           "title": "[Bug]: Slack `allowBots: true` silently drops all bot messages unless `allowFrom` contains an explicit owner user ID"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102578,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102578",
+          "title": "[Bug]: Telegram DM block-streaming silently drops the tail of long replies (block-reply coalescer race) — 2026.6.11 (sibling to #95878/#98282, different code surface)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103137,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103137",
+          "title": "[Bug]: browser evaluate aborts at hardcoded ~15s on Windows/2026.6.11; --timeout-ms ignored"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103161,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103161",
+          "title": "Gateway does not log LLM provider rejection events to disk"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103198,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103198",
+          "title": "[Bug]: WebChat image attachments not mapped to media store path — image tool receives \"image_0\" instead of real file path"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103342,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103342",
+          "title": "[Bug]: Control UI triggers infinite redirect loop / forced logout on page refresh when using token auth mode behind Nginx reverse proxy"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103385,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103385",
+          "title": "[Bug]: google-meet Chrome transport silently fails on non-English Meet UI (English-only aria-label/page-text matching)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103520,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103520",
+          "title": "Silent, un-warned substitution to the paid catalog default when a configured model isn't in the allowlist"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -299,
+        "score": -321,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 299,
+        "evidencePenalty": 321,
         "survivalDays": 9,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 299,
+          "evidencePenalty": 321,
           "votePenalty": 0,
           "survivalDays": 9,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -299
+          "score": -321
         },
         "affected": [
           "approval-boundary",
           "auth-provider",
+          "browser",
           "codex",
           "compaction",
           "config-migration",
@@ -626,6 +669,7 @@
           "ui",
           "upgrade",
           "web-search",
+          "web-tools",
           "webchat",
           "wechat",
           "wecom",
@@ -1655,6 +1699,83 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Slack allowBots with wildcard allowFrom silently drops bot-authored messages on 2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 102578,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/102578",
+            "issue": "openclaw/openclaw issue 102578",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Telegram DM block-streaming can silently drop the tail of long replies on 2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 103137,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/103137",
+            "issue": "openclaw/openclaw issue 103137",
+            "area": "browser",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Browser evaluate aborts around 15s on Windows/2026.6.11 and ignores the requested timeout."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 103161,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/103161",
+            "issue": "openclaw/openclaw issue 103161",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "LLM provider rejection details are not persisted to disk on 2026.6.11, leaving failure diagnosis blind."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 103198,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/103198",
+            "issue": "openclaw/openclaw issue 103198",
+            "area": "webchat",
+            "type": "tool-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "WebChat image attachments pass placeholder IDs to image tooling instead of media-store file paths on 2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 103342,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/103342",
+            "issue": "openclaw/openclaw issue 103342",
+            "area": "auth-provider",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Control UI token-auth behind Nginx can enter an infinite redirect / forced logout loop on 2026.6.11."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 103385,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/103385",
+            "issue": "openclaw/openclaw issue 103385",
+            "area": "web-tools",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Google Meet browser transport fails silently on non-English Meet UI labels with the 2026.6.11 plugin."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 103520,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/103520",
+            "issue": "openclaw/openclaw issue 103520",
+            "area": "model-routing",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Configured disallowed models can be silently substituted with the first allowed catalog entry, creating unrequested paid-provider usage on 2026.6.11."
           }
         ]
       },
@@ -1782,24 +1903,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 33,
+        "score": 36,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 50,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 50,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 33
+          "score": 36
         },
         "affected": [
           "desktop",
