@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-10T23:46:20.019Z",
+  "generatedAt": "2026-07-11T01:28:22.185Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -640,14 +640,15 @@
         "affected:desktop-linux",
         "affected:tool-loader",
         "affected:windows-update",
-        "affected:daytona"
+        "affected:daytona",
+        "affected:vision"
       ],
       "issueNumber": 147,
       "title": "[v0.18.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/147",
       "createdAt": "2026-07-01T20:32:17Z",
-      "updatedAt": "2026-07-08T01:01:27Z"
+      "updatedAt": "2026-07-11T01:24:59Z"
     },
     {
       "version": "0.18.1",
@@ -655,18 +656,20 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
+        "risk:tool",
         "risk:runtime",
         "pkg:hermes-agent",
         "score:80-89",
         "affected:lazy-deps",
-        "affected:hermes-link"
+        "affected:hermes-link",
+        "affected:tui"
       ],
       "issueNumber": 148,
       "title": "[v0.18.1] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-10T01:15:19Z"
+      "updatedAt": "2026-07-11T01:24:46Z"
     },
     {
       "version": "0.18.2",
@@ -676,9 +679,12 @@
         "version",
         "risk:channel",
         "risk:tool",
+        "risk:kernel",
         "risk:runtime",
         "affected:security",
+        "affected:voice",
         "affected:matrix",
+        "affected:mcp",
         "affected:sandbox",
         "affected:message-delivery",
         "pkg:hermes-agent",
@@ -688,16 +694,20 @@
         "affected:model-picker",
         "affected:prompt-size",
         "affected:provider-routing",
-        "score:30-39",
+        "score:0-9",
         "affected:windows-update",
-        "affected:lazy-deps"
+        "affected:lazy-deps",
+        "affected:goal-continuation",
+        "affected:context-engine",
+        "affected:moa",
+        "affected:background-review"
       ],
       "issueNumber": 149,
       "title": "[v0.18.2] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-10T01:15:16Z"
+      "updatedAt": "2026-07-11T01:24:43Z"
     },
     {
       "version": "0.0.1",
