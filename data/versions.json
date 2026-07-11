@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The v2026.6.11 evidence pile grew again: Telegram tails disappear, browser calls hit invisible walls, WebChat drops image paths, auth loops, Meet localization fails, and model routing can spend money you did not ask to spend. Works on my machine is not a recovery plan.",
+    "verdictComment": "The v2026.6.11 pile grew again: final replies can block forever, ACP spawns trip on injected thinking config, web search forgets Exa secrets, and raw exec failure cards can leak to users. Works on my machine is now a historical document.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -607,31 +607,122 @@
         "number": 103520,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/103520",
         "title": "Silent, un-warned substitution to the paid catalog default when a configured model isn't in the allowlist"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104480,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104480",
+        "title": "message send: 10s CLI→Gateway RPC timeout reports \"Media failed\" on large media that actually delivers (false negative + duplicate retries)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104389,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104389",
+        "title": "[Bug]: Auto-backgrounded exec failure posts raw system card (internal agent id + command line) to end user"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103734,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103734",
+        "title": "Codex usage-limit surfaced as promptError, not thrown — model fallback never fires"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104320,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104320",
+        "title": "[Bug]: infer web search rejects installed Exa plugin SecretRef target as unknown"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104050,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104050",
+        "title": "[Bug] workboard claim() returns \"card dependencies are not done\" for already-claimed cards; claims are not idempotent"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102175,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102175",
+        "title": "[Bug]: embedded prompt cache breaks across room-event, policy, and Responses boundaries"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103802,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103802",
+        "title": "ACP: gateway force-injects default `thinking` config option that acpx does not advertise — every ACP spawn fails with ACP_BACKEND_UNSUPPORTED_CONTROL"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103804,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103804",
+        "title": "Bug: service-env generator double-quotes values, breaking AWS_REGION hostname"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103710,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103710",
+        "title": "Moonshot/Kimi provider: ECONNRESET/timeout through SSRF-guarded fetch (works with direct undici/curl)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103684,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103684",
+        "title": "Final reply is never delivered: `dispatcher.waitForIdle()` blocks forever on a `beforeDeliver` hook, and the lane stays blocked"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103636,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103636",
+        "title": "Backend loopback app loses operator scope when the relay forwards from the host's own interface IP (agent RPC fails: missing scope: operator.write)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103386,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103386",
+        "title": "[Bug]: googlemeet leave reports \"left\" but the Chrome participant stays in the meeting"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99947,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99947",
+        "title": "[Bug]: codex harness mirrored-session-history read fails for ephemeral sessions and on failover; one-shot cleanup retires shared app-server app while turns are in flight"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 89278,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/89278",
+        "title": "[Bug]: Codex OAuth refresh succeeds but cron/heartbeat fail with 10s auth refresh timeout"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99470,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99470",
+        "title": "# delivery-mirror transcript entries leak into model prompts as duplicate assistant messages → models repeat themselves"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -321,
+      "score": -369,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 321,
+      "evidencePenalty": 369,
       "survivalDays": 10,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 321,
+        "evidencePenalty": 369,
         "votePenalty": 0,
         "survivalDays": 10,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -321
+        "score": -369
       },
       "affected": [
+        "acp",
         "approval-boundary",
         "auth-provider",
         "browser",
@@ -652,9 +743,11 @@
         "node-surface",
         "plugin-install",
         "plugin-system",
+        "prompt-cache",
         "provider-auth",
         "provider-routing",
         "reasoning",
+        "service-env",
         "session-state",
         "sessions-management",
         "skill-workshop",
@@ -670,7 +763,8 @@
         "wechat",
         "wecom",
         "whatsapp",
-        "windows-runtime"
+        "windows-runtime",
+        "workboard"
       ],
       "evidence": [
         {
@@ -1772,6 +1866,171 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Configured disallowed models can be silently substituted with the first allowed catalog entry, creating unrequested paid-provider usage on 2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104480,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104480",
+          "issue": "openclaw/openclaw issue 104480",
+          "area": "message-delivery",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Large Telegram media sends can exceed the CLI-to-gateway RPC deadline, reporting false failure after successful delivery and encouraging duplicate retries."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104389,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104389",
+          "issue": "openclaw/openclaw issue 104389",
+          "area": "exec",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Auto-backgrounded exec failures can post raw internal system cards, agent ids, and command lines to end users."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103734,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103734",
+          "issue": "openclaw/openclaw issue 103734",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex usage-limit promptError is surfaced without triggering configured model fallback on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104320,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104320",
+          "issue": "openclaw/openclaw issue 104320",
+          "area": "web-search",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "infer web search rejects the installed Exa plugin SecretRef target as unknown on v2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104050,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104050",
+          "issue": "openclaw/openclaw issue 104050",
+          "area": "workboard",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "workboard claim() is not idempotent for already-claimed dependency-backed cards and blocks repeat claims."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102175,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102175",
+          "issue": "openclaw/openclaw issue 102175",
+          "area": "prompt-cache",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Embedded prompt cache can break across room-event, policy, and Responses boundaries, replaying full context instead of native continuation."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103802,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103802",
+          "issue": "openclaw/openclaw issue 103802",
+          "area": "acp",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Gateway force-injects default thinking config that ACP backends do not advertise, causing every ACP spawn to fail."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103804,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103804",
+          "issue": "openclaw/openclaw issue 103804",
+          "area": "service-env",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "launchd service-env generation double-quotes values, breaking AWS_REGION-derived Bedrock hostnames."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103710,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103710",
+          "issue": "openclaw/openclaw issue 103710",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Moonshot/Kimi requests can ECONNRESET or timeout through the SSRF-guarded fetch path while direct undici/curl works."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103684,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103684",
+          "issue": "openclaw/openclaw issue 103684",
+          "area": "message-delivery",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Final replies can never deliver because dispatcher.waitForIdle blocks forever on a beforeDeliver hook, leaving the lane blocked."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103636,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103636",
+          "issue": "openclaw/openclaw issue 103636",
+          "area": "gateway",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Backend loopback relay from the host interface can lose operator scope, rejecting agent RPC with missing operator.write."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103386,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103386",
+          "issue": "openclaw/openclaw issue 103386",
+          "area": "web-tools",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "googlemeet leave can report success while the Chrome participant remains in the meeting."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99947,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99947",
+          "issue": "openclaw/openclaw issue 99947",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex harness mirrored-session-history reads can fail for ephemeral sessions and app-server cleanup can retire shared apps mid-turn."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 89278,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/89278",
+          "issue": "openclaw/openclaw issue 89278",
+          "area": "provider-auth",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Revoked OpenAI refresh tokens on v2026.6.11 can surface as generic 10s auth-refresh timeouts, hiding the actionable reauth path."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99470,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99470",
+          "issue": "openclaw/openclaw issue 99470",
+          "area": "session-state",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Delivery-mirror transcript entries can leak into model prompts and duplicate prior user/assistant transcript content."
         }
       ]
     },
@@ -18428,24 +18687,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 5,
+      "score": 8,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 81,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 81,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 5
+        "score": 8
       },
       "affected": [
         "desktop",
