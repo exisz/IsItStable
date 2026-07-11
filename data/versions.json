@@ -2045,7 +2045,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh MCP loopback and container-upgrade evidence added. The score bucket was already in the basement; this just labels more stairs.",
+    "verdictComment": "v2026.6.10 picked up stale-session evidence: queued inbound messages can answer against yesterday’s brain and contradict themselves seconds later. Very avant-garde. Very bad for trust.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -2082,6 +2082,12 @@
         "number": 98565,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/98565",
         "title": "[Bug]: Container image upgrades skip openclaw upgrade migrations before gateway startup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103287,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103287",
+        "title": "Queued inbound message processed against stale session state — agent contradicts its own reply seconds later (2026.6.10)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -2423,24 +2429,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -167,
+      "score": -172,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 167,
+      "evidencePenalty": 172,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 167,
+        "evidencePenalty": 172,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -167
+        "score": -172
       },
       "affected": [
         "acp",
@@ -2468,6 +2474,7 @@
         "provider-routing",
         "reasoning",
         "runtime",
+        "session-state",
         "skill-workshop",
         "slack",
         "telegram",
@@ -3162,6 +3169,17 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Container image upgrade from v2026.6.10 to v2026.6.11 can skip upgrade migrations before gateway startup, leaving stale version metadata and pending repair."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103287,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103287",
+          "issue": "openclaw/openclaw issue 103287",
+          "area": "session-state",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Queued inbound iMessage can be processed against stale session state on v2026.6.10, producing contradictory replies seconds apart."
         }
       ]
     },
@@ -3176,7 +3194,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "2026.6.9 picked up fresh channel-progress and preflight-compaction evidence. The UI leaves receipts behind, and compaction brought a 60-second stopwatch to a 15-minute job.",
+    "verdictComment": "v2026.6.9 picked up fresh Codex heartbeat and video-generation evidence: internal turns wear the wrong channel badge, and Veo calls knock on the wrong Google door.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -3195,6 +3213,18 @@
         "number": 95553,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/95553",
         "title": "Bug: preflight (budget-triggered) compaction hard-capped at ~60s, ignores compaction.timeoutSeconds"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102206,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102206",
+        "title": "[Bug]: v2026.6.9 regression — Codex app-server runs stamp internal turns \"webchat\"-bound, so heartbeat notification sends to Discord are silently denied (cross-context)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 103291,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/103291",
+        "title": "video_generate: Google Veo provider sends wrong endpoint (generateContent instead of predictLongRunning)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -3350,24 +3380,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 19,
+      "score": 13,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 70,
+      "evidencePenalty": 76,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 70,
+        "evidencePenalty": 76,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 19
+        "score": 13
       },
       "affected": [
         "codex",
@@ -3384,6 +3414,7 @@
         "security",
         "telegram",
         "ui",
+        "video-generation",
         "voice",
         "wecom"
       ],
@@ -3695,6 +3726,28 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Budget-triggered preflight compaction is hard-capped around 60s on 2026.6.9, ignoring configured compaction timeout."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102206,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102206",
+          "issue": "openclaw/openclaw issue 102206",
+          "area": "codex",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Codex app-server internal/heartbeat turns are stamped webchat-bound since v2026.6.9, blocking cross-channel heartbeat notifications."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 103291,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/103291",
+          "issue": "openclaw/openclaw issue 103291",
+          "area": "video-generation",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Google Veo video generation sends generateContent instead of predictLongRunning on v2026.6.9, breaking video_generate."
         }
       ]
     },
