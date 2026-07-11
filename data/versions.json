@@ -616,7 +616,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 321,
-      "survivalDays": 9,
+      "survivalDays": 10,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -624,7 +624,7 @@
         "baseScore": 80,
         "evidencePenalty": 321,
         "votePenalty": 0,
-        "survivalDays": 9,
+        "survivalDays": 10,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -18254,7 +18254,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.2 train is now past fresh-release watch and it brought a full gremlin car: dependency pins, security dents, Desktop misdelivery, Matrix cron delivery, local-model prompt bloat, sandbox paths, and provider routing noise. 3am deploys are filing witness statements.",
+    "verdictComment": "The 0.18.2 train picked up another gremlin convoy: goal watchdog gaps, Desktop voice/cache weirdness, uninstall leftovers, MCP reconnect loops, MoA prompt stalls, and UI/provider drift. Works-on-my-machine is now a crime scene with receipts.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -18357,29 +18357,95 @@
         "number": 60821,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60821",
         "title": "[Bug]: TypeError: Completions.create() got an unexpected keyword argument 'system' in chat_completions.py via _build_kwargs_from_profile"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62213,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62213",
+        "title": "[Bug]: Local OpenAI-compatible providers are no longer configurable from Hermes Desktop"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62049,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62049",
+        "title": "Desktop: voice button re-sends cached recording instead of new audio"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61761,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61761",
+        "title": "Output-cap retry loop never converges when margin is erased by per-retry input-token drift"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62202,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62202",
+        "title": "[Bug] Gateway does not call _post_turn_goal_continuation after each turn, preventing goal evaluation"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61827,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61827",
+        "title": "False-positive 'Unsupported install method' banner for install.ps1/uv-based installs"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61839,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61839",
+        "title": "[Bug]: Context engine context_chunking not found during first auxiliary agent initialization despite plugin being available"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62209,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62209",
+        "title": "[Bug]: Full uninstall leaves Hermes data, Desktop state, LaunchAgents, and application files behind on macOS"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61999,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61999",
+        "title": "[Bug]: MoA + OpenRouter Free-Tier — model name gets silently shortened, encoded prompts > ~1000 chars arrive empty, and hermes-agent pins a vulnerable cryptography version"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61962,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61962",
+        "title": "[Bug]: Background review ignores terminal failed results and can end silently incomplete"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62212,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62212",
+        "title": "MCP stdio keepalive probe triggers infinite reconnect loop on empty exceptions"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62288,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62288",
+        "title": "[Bug]: pet animation daemon thread crashes with \"There is no current event loop\""
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 36,
+      "score": 5,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 50,
+      "evidencePenalty": 81,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 50,
+        "evidencePenalty": 81,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 36
+        "score": 5
       },
       "affected": [
         "desktop",
@@ -18393,7 +18459,13 @@
         "message-delivery",
         "desktop-ui",
         "prompt-size",
-        "provider-routing"
+        "provider-routing",
+        "voice",
+        "goal-continuation",
+        "context-engine",
+        "moa",
+        "background-review",
+        "mcp"
       ],
       "evidence": [
         {
@@ -18582,6 +18654,127 @@
           "severity": 4,
           "penalty": 4,
           "reason": "chat_completions passes unexpected system kwarg; reporter notes 0.18.2 transport is still affected"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62213,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62213",
+          "issue": "NousResearch/hermes-agent issue 62213",
+          "area": "provider-routing",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Local OpenAI-compatible providers are no longer configurable from Hermes Desktop on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62049,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62049",
+          "issue": "NousResearch/hermes-agent issue 62049",
+          "area": "voice",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop voice button can resend cached audio instead of the new recording on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61761,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61761",
+          "issue": "NousResearch/hermes-agent issue 61761",
+          "area": "prompt-size",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Output-cap retry loop does not converge when retry input-token drift erases the margin on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62202,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62202",
+          "issue": "NousResearch/hermes-agent issue 62202",
+          "area": "goal-continuation",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Gateway does not call post-turn goal continuation after each turn, preventing goal evaluation on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61827,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61827",
+          "issue": "NousResearch/hermes-agent issue 61827",
+          "area": "windows-update",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "install.ps1/uv installs can show a false unsupported-install-method banner on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61839,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61839",
+          "issue": "NousResearch/hermes-agent issue 61839",
+          "area": "context-engine",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "First auxiliary agent initialization can miss the context_chunking engine despite the plugin being available on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62209,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62209",
+          "issue": "NousResearch/hermes-agent issue 62209",
+          "area": "desktop",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Full uninstall leaves Hermes data, Desktop state, LaunchAgents, and app files behind on macOS for Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61999,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61999",
+          "issue": "NousResearch/hermes-agent issue 61999",
+          "area": "moa",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "MoA with OpenRouter free-tier on Hermes 0.18.2 silently shortens model names, sends empty large prompts, and preserves vulnerable cryptography pin evidence"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61962,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61962",
+          "issue": "NousResearch/hermes-agent issue 61962",
+          "area": "background-review",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Background review can ignore failed terminal results and end silently incomplete on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62212,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62212",
+          "issue": "NousResearch/hermes-agent issue 62212",
+          "area": "mcp",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "MCP stdio keepalive probe can trigger an infinite reconnect loop on empty exceptions on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62288,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62288",
+          "issue": "NousResearch/hermes-agent issue 62288",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Pet animation daemon thread can crash without an event loop on Hermes 0.18.2"
         }
       ]
     },
@@ -18596,7 +18789,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "Fresh-release watch (<24h): not enough bake time yet, but two gremlins already left fingerprints in lazy deps and Link daemon startup.",
+    "verdictComment": "v0.18.1 got a late TUI receipt: session switching can show stale content. Not a mass rollback siren, but definitely a 3am “why am I reading the wrong chat?” gremlin.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -18609,33 +18802,40 @@
         "number": 60682,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60682",
         "title": "[Bug] Hermes Link daemon crashes with \"Invalid URL\" when relayBaseUrl is empty"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62170,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62170",
+        "title": "[Bug]: TUI shows stale session content after switching sessions (v0.18.1)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 74,
+      "score": 72,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 6,
+      "evidencePenalty": 8,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 6,
+        "evidencePenalty": 8,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 74
+        "score": 72
       },
       "affected": [
         "lazy-deps",
-        "hermes-link"
+        "hermes-link",
+        "tui"
       ],
       "evidence": [
         {
@@ -18659,6 +18859,17 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Hermes Link daemon crashes with Invalid URL when documented relayBaseUrl disable path is used on Hermes Agent 0.18.1"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62170,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62170",
+          "issue": "NousResearch/hermes-agent issue 62170",
+          "area": "tui",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "TUI session browser can show stale session content after switching sessions on Hermes 0.18.1"
         }
       ]
     },
@@ -18673,7 +18884,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.0 train found more tracks: loops, desktop config drift, memory footguns, startup timeouts, provider weirdness, security potholes, and fresh July 8 UI/tooling sparks. Works-on-my-machine has left the station.",
+    "verdictComment": "v0.18.0 keeps collecting late receipts: stale gateway routing, image repair churn, custom-provider overrides, and OAuth refresh-token loss. The gremlin archive remains very well documented.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -19124,29 +19335,53 @@
         "number": 60597,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60597",
         "title": "[Bug]: UI Wrapper Crash: Attempted to access streaming response content, without having called read()"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61993,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61993",
+        "title": "Gateway resurrects ended session from stale sessions.json routing key — session reset silently undone"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61994,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61994",
+        "title": "image-shrink recovery re-encodes oversized images on every API call — repaired images never persisted to session history"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62240,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62240",
+        "title": "[Bug]: custom_providers model names overridden by hardcoded CURATED_MODELS, causing wrong base_url on /model switch"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62333,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62333",
+        "title": "[Bug]: OAuth refresh_token erased on every token refresh - MCP servers die ~1h after login"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -198,
+      "score": -214,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 198,
+      "evidencePenalty": 214,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 198,
+        "evidencePenalty": 214,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -198
+        "score": -214
       },
       "affected": [
         "agent-core",
@@ -20011,6 +20246,50 @@
           "severity": 3,
           "penalty": 3,
           "reason": "UI wrapper can crash when accessing streaming response content before read() on v0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61993,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61993",
+          "issue": "NousResearch/hermes-agent issue 61993",
+          "area": "gateway-service",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Gateway can resurrect an ended session from stale sessions.json routing keys on Hermes 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61994,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61994",
+          "issue": "NousResearch/hermes-agent issue 61994",
+          "area": "vision",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Image-shrink recovery can re-encode oversized images on every API call instead of persisting repaired history on Hermes 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62240,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62240",
+          "issue": "NousResearch/hermes-agent issue 62240",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "custom_providers model names can be overridden by hardcoded CURATED_MODELS, causing wrong base_url on Hermes 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62333,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62333",
+          "issue": "NousResearch/hermes-agent issue 62333",
+          "area": "mcp",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "OAuth refresh_token is erased on token refresh, killing MCP servers after about an hour on Hermes 0.18.0"
         }
       ]
     },
