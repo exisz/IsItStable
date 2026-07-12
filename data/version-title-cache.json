@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-12T01:29:56.039Z",
+  "generatedAt": "2026-07-12T05:14:57.504Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -684,6 +684,7 @@
         "pkg:hermes-agent",
         "affected:desktop-remote-gateway",
         "affected:docker",
+        "score:0-9",
         "affected:desktop-windows",
         "affected:kanban",
         "affected:vision",
@@ -694,7 +695,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-12T01:27:37Z"
+      "updatedAt": "2026-07-12T01:31:02Z"
     },
     {
       "version": "0.0.1",
