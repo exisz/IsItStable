@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-11T23:41:56.402Z",
+  "generatedAt": "2026-07-12T01:29:56.039Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -659,7 +659,7 @@
         "risk:tool",
         "risk:runtime",
         "pkg:hermes-agent",
-        "score:80-89",
+        "score:70-79",
         "affected:lazy-deps",
         "affected:hermes-link",
         "affected:tui"
@@ -669,7 +669,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-11T01:24:46Z"
+      "updatedAt": "2026-07-12T01:29:48Z"
     },
     {
       "version": "0.18.2",
@@ -677,37 +677,24 @@
       "packageSlug": "hermes-agent",
       "labels": [
         "version",
-        "risk:channel",
-        "risk:tool",
-        "risk:kernel",
-        "risk:runtime",
-        "affected:security",
-        "affected:voice",
-        "affected:matrix",
-        "affected:mcp",
-        "affected:sandbox",
-        "affected:message-delivery",
+        "affected:telegram",
+        "affected:gateway",
+        "affected:approval-boundary",
+        "affected:line",
         "pkg:hermes-agent",
-        "affected:desktop",
-        "affected:dependencies",
-        "affected:desktop-ui",
-        "affected:model-picker",
-        "affected:prompt-size",
-        "affected:provider-routing",
-        "score:0-9",
-        "affected:windows-update",
-        "affected:lazy-deps",
-        "affected:goal-continuation",
-        "affected:context-engine",
-        "affected:moa",
-        "affected:background-review"
+        "affected:desktop-remote-gateway",
+        "affected:docker",
+        "affected:desktop-windows",
+        "affected:kanban",
+        "affected:vision",
+        "affected:session-state"
       ],
       "issueNumber": 149,
       "title": "[v0.18.2] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-11T01:24:43Z"
+      "updatedAt": "2026-07-12T01:27:37Z"
     },
     {
       "version": "0.0.1",
