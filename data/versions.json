@@ -706,7 +706,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 369,
-      "survivalDays": 10,
+      "survivalDays": 11,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -714,7 +714,7 @@
         "baseScore": 80,
         "evidencePenalty": 369,
         "votePenalty": 0,
-        "survivalDays": 10,
+        "survivalDays": 11,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -18566,7 +18566,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.2 train picked up another gremlin convoy: goal watchdog gaps, Desktop voice/cache weirdness, uninstall leftovers, MCP reconnect loops, MoA prompt stalls, and UI/provider drift. Works-on-my-machine is now a crime scene with receipts.",
+    "verdictComment": "The 0.18.2 train found more loose bolts: approvals hide commands, Desktop sessions haunt each other, Matrix trips over unused crypto, and vision cache can literally collage reality. The 3am deploy goblin is well fed.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -18735,39 +18735,142 @@
         "number": 62288,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62288",
         "title": "[Bug]: pet animation daemon thread crashes with \"There is no current event loop\""
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62849,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62849",
+        "title": "[Bug]: Dockerfile fails to build on podman/buildah due to unsupported flag"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 53824,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53824",
+        "title": "fix(telegram): pipe table auto-rich bypasses rich_messages: false config"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62846,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62846",
+        "title": "[Bug]: LINE adapter uses cache_image_from_bytes for audio/video"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62768,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62768",
+        "title": "[Bug]: Desktop shows a per-profile \"Local gateway\" option that does not select a local gateway"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62512,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62512",
+        "title": "[Bug]: Gateway startup notification not sent."
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62574,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62574",
+        "title": "[Bug]: LMCache KV cache collision causes vision_analyze image concatenation hallucination when question text is identical across different images"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62402,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62402",
+        "title": "[Bug]: Desktop approval card shows a placeholder instead of the command for hook approvals"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62505,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62505",
+        "title": "[Bug]: MCP stdio watchdog kills live servers when psutil create_time changes"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 22926,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/22926",
+        "title": "[Bug]: Kanban stale claim locks from dead workers have no auto-cleanup — tasks permanently stuck until manual intervention"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62401,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62401",
+        "title": "[Bug]: [platform.matrix] Matrix gateway blocked on macOS arm64 with E2EE off — _is_satisfied() ignores the [encryption] extra, so a mautrix pin-drift forces an unneeded python-olm build"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62884,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62884",
+        "title": "Desktop: New sessions frozen/blank — infinite backend restart loop on Windows"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62823,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62823",
+        "title": "Bug: \"Session Zombie\" queue lock and UI state leaks during session switching in Desktop App"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61891,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61891",
+        "title": "MCP tools load in CLI sessions but not in desktop/TUI sessions (slash_worker subprocess)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 61889,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61889",
+        "title": "[Bug]: MoA presets disappear from desktop model pickers after explicit_only change (#37a4cf900)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62634,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62634",
+        "title": "[Bug]: UI scaling resets to 100% when switching profiles on Windows Desktop"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62774,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62774",
+        "title": "[Bug]: Desktop: severe text truncation/corruption during streaming with Portuguese (accented) text"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62446,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62446",
+        "title": "Bug Report: Hermes Desktop v0.18.x — Frontend WebSocket not connected to `hermes serve` backend"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 8,
+      "score": -129,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 81,
+      "evidencePenalty": 129,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 81,
+        "evidencePenalty": 129,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 8
+        "score": -129
       },
       "affected": [
-        "desktop",
+        "desktop-projects",
         "lazy-deps",
         "security",
         "sandbox",
         "dependencies",
         "windows-update",
+        "desktop",
         "model-picker",
-        "matrix",
+        "matrix-cron",
         "message-delivery",
         "desktop-ui",
         "prompt-size",
@@ -18777,7 +18880,18 @@
         "context-engine",
         "moa",
         "background-review",
-        "mcp"
+        "mcp",
+        "docker",
+        "telegram",
+        "line",
+        "desktop-remote-gateway",
+        "gateway",
+        "vision",
+        "approval-boundary",
+        "kanban",
+        "matrix",
+        "desktop-windows",
+        "session-state"
       ],
       "evidence": [
         {
@@ -19087,6 +19201,193 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Pet animation daemon thread can crash without an event loop on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62849,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62849",
+          "issue": "NousResearch/hermes-agent issue 62849",
+          "area": "docker",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.18.2 Dockerfile COPY flags fail on Podman/buildah, blocking rootless/container installs"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 53824,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/53824",
+          "issue": "NousResearch/hermes-agent issue 53824",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram pipe-table auto-rich path bypasses rich_messages:false on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62846,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62846",
+          "issue": "NousResearch/hermes-agent issue 62846",
+          "area": "line",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "LINE adapter caches audio/video through image-only cache path and rejects non-image media"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62768,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62768",
+          "issue": "NousResearch/hermes-agent issue 62768",
+          "area": "desktop-remote-gateway",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop local gateway option can inherit a remote default instead of selecting localhost on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62512,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62512",
+          "issue": "NousResearch/hermes-agent issue 62512",
+          "area": "gateway",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Gateway startup notification is not sent for ordinary successful starts"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62574,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62574",
+          "issue": "NousResearch/hermes-agent issue 62574",
+          "area": "vision",
+          "type": "tool-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "LMCache KV-key collision can splice different vision_analyze images into hallucinated output"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62402,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62402",
+          "issue": "NousResearch/hermes-agent issue 62402",
+          "area": "approval-boundary",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Desktop approval card hides the real hook command behind a placeholder, weakening review before approval"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62505,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62505",
+          "issue": "NousResearch/hermes-agent issue 62505",
+          "area": "mcp",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "MCP stdio watchdog can kill live servers when psutil create_time precision changes"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 22926,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/22926",
+          "issue": "NousResearch/hermes-agent issue 22926",
+          "area": "kanban",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Kanban stale claim locks from dead workers can leave tasks permanently stuck until manual cleanup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62401,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62401",
+          "issue": "NousResearch/hermes-agent issue 62401",
+          "area": "matrix",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Matrix gateway setup on macOS arm64 can be blocked by unnecessary python-olm build even with E2EE off"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62884,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62884",
+          "issue": "NousResearch/hermes-agent issue 62884",
+          "area": "desktop-windows",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Desktop new sessions can freeze in an infinite backend restart loop on Windows"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62823,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62823",
+          "issue": "NousResearch/hermes-agent issue 62823",
+          "area": "session-state",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Desktop session switching can leak queue locks and UI state across sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61891,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61891",
+          "issue": "NousResearch/hermes-agent issue 61891",
+          "area": "mcp",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "MCP tools load in CLI but disappear in Desktop/TUI slash-worker subprocess sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 61889,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/61889",
+          "issue": "NousResearch/hermes-agent issue 61889",
+          "area": "model-picker",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop explicit-only model pickers hide user-authored MoA presets"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62634,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62634",
+          "issue": "NousResearch/hermes-agent issue 62634",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Windows Desktop UI scaling resets to 100% when switching profiles or restarting"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62774,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62774",
+          "issue": "NousResearch/hermes-agent issue 62774",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop streaming can truncate/corrupt Portuguese accented text on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62446,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62446",
+          "issue": "NousResearch/hermes-agent issue 62446",
+          "area": "desktop",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes Desktop v0.18.x frontend WebSocket can fail to connect to the hermes serve backend"
         }
       ]
     },
