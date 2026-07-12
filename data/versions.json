@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The v2026.6.11 pile grew again: final replies can block forever, ACP spawns trip on injected thinking config, web search forgets Exa secrets, and raw exec failure cards can leak to users. Works on my machine is now a historical document.",
+    "verdictComment": "v2026.6.11 picked up another fresh batch: exec output vanishes, tool results cosplay as images, launchd restarts can strand the gateway, and Signal/Telegram still have message-lane teeth. 3am deploy energy, now with screenshots.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -697,29 +697,89 @@
         "number": 99470,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/99470",
         "title": "# delivery-mirror transcript entries leak into model prompts as duplicate assistant messages → models repeat themselves"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104763,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104763",
+        "title": "Exec tool silently drops output"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104843,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104843",
+        "title": "[Bug]: WebChat transcript intermittently scrolls to top during streaming replies"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104721,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104721",
+        "title": "[Bug]: > All tool results return \"(see attached image)\" literal string instead of actual output."
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104538,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104538",
+        "title": "[Bug]: macOS launchd gateway \"supervisor restart\" on config-change exits without relaunching — stays dead until manual kickstart (2026.6.11)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 104783,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/104783",
+        "title": "[Bug]: Groq provider sends requests exceeding Groq TPM limit for a one-word prompt"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 105305,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/105305",
+        "title": "Bug: browser screenshot pollutes session output stream — all subsequent tool results forced into image-analysis format"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102081,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102081",
+        "title": "Exec allowlist matches never auto-execute on darwin — \"allowlist auto-execution is unavailable on darwin; reviewer or explicit approval is required\" (2026.6.11)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102270,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102270",
+        "title": "Plugin install doesn't build native bindings — plugins with better-sqlite3 fail on Node 24 (ABI v137) with bindings file not found"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 101335,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/101335",
+        "title": "Telegram: per-chat lane serialization (isolated ingress) starves messages.queue.collect — same-chat bursts never coalesce"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 102020,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/102020",
+        "title": "[Bug]: Second message in a session fails with \"reply session initialization conflicted\" (cross-channel, position-dependent)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -369,
+      "score": -400,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 369,
+      "evidencePenalty": 400,
       "survivalDays": 11,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 369,
+        "evidencePenalty": 400,
         "votePenalty": 0,
         "survivalDays": 11,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -369
+        "score": -400
       },
       "affected": [
         "acp",
@@ -750,6 +810,7 @@
         "service-env",
         "session-state",
         "sessions-management",
+        "signal",
         "skill-workshop",
         "slack",
         "subagent-runtime",
@@ -2031,6 +2092,116 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Delivery-mirror transcript entries can leak into model prompts and duplicate prior user/assistant transcript content."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104763,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104763",
+          "issue": "openclaw/openclaw issue 104763",
+          "area": "exec",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Exec output longer than a few lines can silently disappear instead of reaching the user as text."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104843,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104843",
+          "issue": "openclaw/openclaw issue 104843",
+          "area": "webchat",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "WebChat transcript can jump to the top while streaming, especially with TTS enabled."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104721,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104721",
+          "issue": "openclaw/openclaw issue 104721",
+          "area": "tools",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Tool results can collapse into a literal “see attached image” placeholder across channels, making tool output unusable."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104538,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104538",
+          "issue": "openclaw/openclaw issue 104538",
+          "area": "launchagent",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "macOS launchd supervisor restart on config change can exit without relaunching, leaving the gateway dead until manual kickstart."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 104783,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/104783",
+          "issue": "openclaw/openclaw issue 104783",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Groq provider can send oversized requests for tiny prompts, hitting provider TPM limits."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 105305,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/105305",
+          "issue": "openclaw/openclaw issue 105305",
+          "area": "browser",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Browser screenshots can poison subsequent tool-result rendering so later outputs are treated as image analysis."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102081,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102081",
+          "issue": "openclaw/openclaw issue 102081",
+          "area": "approval-boundary",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Darwin exec allowlist matches still require explicit approval, making documented allowlist auto-execution unavailable after auto-update."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102270,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102270",
+          "issue": "openclaw/openclaw issue 102270",
+          "area": "plugin-install",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Plugin installs can skip native binding builds on Node 24, leaving better-sqlite3 based plugins unable to load."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101335,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101335",
+          "issue": "openclaw/openclaw issue 101335",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Telegram isolated ingress serializes same-chat bursts before they can coalesce, creating separate turns instead of one collected follow-up."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 102020,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/102020",
+          "issue": "openclaw/openclaw issue 102020",
+          "area": "signal",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Signal sessions can fail on the second message with reply-session initialization conflicts."
         }
       ]
     },
@@ -18846,18 +19017,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 129,
-      "survivalDays": 3,
-      "survivalBonus": 9,
+      "survivalDays": 4,
+      "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 129,
         "votePenalty": 0,
-        "survivalDays": 3,
+        "survivalDays": 4,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 3,
-        "survivalBonus": 9,
+        "survivalCreditedDays": 4,
+        "survivalBonus": 12,
         "curatedBonus": 0,
         "score": -129
       },
