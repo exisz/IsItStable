@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "v2026.6.11 picked up another fresh batch: exec output vanishes, tool results cosplay as images, launchd restarts can strand the gateway, and Signal/Telegram still have message-lane teeth. 3am deploy energy, now with screenshots.",
+    "verdictComment": "v2026.6.11 picked up fresh gated evidence: exec output can vanish, model/provider routing still trips on real configs, and companion surfaces are throwing punches. The score was already in the basement; now it found stairs.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -757,29 +757,71 @@
         "number": 102020,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/102020",
         "title": "[Bug]: Second message in a session fails with \"reply session initialization conflicted\" (cross-channel, position-dependent)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 105664,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/105664",
+        "title": "exec tool output intermittently lost in 2026.6.11"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 105629,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/105629",
+        "title": "[Bug]: Apple Watch companion app crashes immediately on launch (iOS 2026.6.11)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106374,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106374",
+        "title": "[Bug]: openai/gpt-5.6-terra listed by OpenAI provider but Gateway run fails with missing models.providers.openai.models[] entry"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106203,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106203",
+        "title": "Remote Windows node is connected and system.which works, but Codex/WebChat exposes no node_exec surface"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106277,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106277",
+        "title": "[Bug]: codex_app__automation_update schema type is null, causing HTTP 400 on Codex endpoint"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106080,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106080",
+        "title": "[Bug]: Model cost reports $0 since 2026.6.10 — model_capability_cache never populates (persists on 2026.6.11)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 105528,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/105528",
+        "title": "exec/read tools silently return empty output on Windows (v2026.6.x regression)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -400,
+      "score": -423,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 400,
+      "evidencePenalty": 423,
       "survivalDays": 12,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 400,
+        "evidencePenalty": 423,
         "votePenalty": 0,
         "survivalDays": 12,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -400
+        "score": -423
       },
       "affected": [
         "acp",
@@ -818,6 +860,7 @@
         "tools",
         "ui",
         "upgrade",
+        "usage-accounting",
         "web-search",
         "web-tools",
         "webchat",
@@ -2202,6 +2245,83 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Signal sessions can fail on the second message with reply-session initialization conflicts."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 105664,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/105664",
+          "issue": "openclaw/openclaw issue 105664",
+          "area": "exec",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "exec output can disappear from agent-visible context on 2026.6.11, with process polling returning no retained session."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 105629,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/105629",
+          "issue": "openclaw/openclaw issue 105629",
+          "area": "desktop-macos",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Apple Watch companion build tied to the 2026.6.11 iOS release crashes immediately on launch on physical hardware."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106374,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106374",
+          "issue": "openclaw/openclaw issue 106374",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "openai/gpt-5.6-terra is listed/configurable but Gateway rejects runs because the model registry entry is missing."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106203,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106203",
+          "issue": "openclaw/openclaw issue 106203",
+          "area": "node-surface",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Healthy remote Windows nodes expose system tools but no node_exec surface in Codex/WebChat on 2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106277,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106277",
+          "issue": "openclaw/openclaw issue 106277",
+          "area": "codex",
+          "type": "tool-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "codex_app__automation_update exposes a null schema type, causing Codex endpoint HTTP 400 on 2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106080,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106080",
+          "issue": "openclaw/openclaw issue 106080",
+          "area": "usage-accounting",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Model cost accounting reports $0 because model_capability_cache never populates, reproduced on 2026.6.11."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 105528,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/105528",
+          "issue": "openclaw/openclaw issue 105528",
+          "area": "tools",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "exec/read tools can silently return empty output on Windows across the 2026.6.x release line."
         }
       ]
     },
@@ -2216,7 +2336,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "v2026.6.10 picked up stale-session evidence: queued inbound messages can answer against yesterday’s brain and contradict themselves seconds later. Very avant-garde. Very bad for trust.",
+    "verdictComment": "v2026.6.10 picked up fresh gated evidence: exec output can vanish, model/provider routing still trips on real configs, and companion surfaces are throwing punches. The score was already in the basement; now it found stairs.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -2259,6 +2379,18 @@
         "number": 103287,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/103287",
         "title": "Queued inbound message processed against stale session state — agent contradicts its own reply seconds later (2026.6.10)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106080,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106080",
+        "title": "[Bug]: Model cost reports $0 since 2026.6.10 — model_capability_cache never populates (persists on 2026.6.11)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 105528,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/105528",
+        "title": "exec/read tools silently return empty output on Windows (v2026.6.x regression)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -2600,24 +2732,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -172,
+      "score": -178,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 172,
+      "evidencePenalty": 178,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 172,
+        "evidencePenalty": 178,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -172
+        "score": -178
       },
       "affected": [
         "acp",
@@ -3351,6 +3483,28 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Queued inbound iMessage can be processed against stale session state on v2026.6.10, producing contradictory replies seconds apart."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106080,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106080",
+          "issue": "openclaw/openclaw issue 106080",
+          "area": "usage-accounting",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Model cost accounting reports $0 because model_capability_cache never populates, reproduced on 2026.6.10."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 105528,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/105528",
+          "issue": "openclaw/openclaw issue 105528",
+          "area": "tools",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "exec/read tools can silently return empty output on Windows across the 2026.6.x release line."
         }
       ]
     },
@@ -19059,18 +19213,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 152,
-      "survivalDays": 4,
-      "survivalBonus": 12,
+      "survivalDays": 5,
+      "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 152,
         "votePenalty": 0,
-        "survivalDays": 4,
+        "survivalDays": 5,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 4,
-        "survivalBonus": 12,
+        "survivalCreditedDays": 5,
+        "survivalBonus": 15,
         "curatedBonus": 0,
         "score": -152
       },
