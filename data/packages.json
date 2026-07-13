@@ -770,7 +770,7 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 400,
-        "survivalDays": 11,
+        "survivalDays": 12,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
@@ -778,7 +778,7 @@
           "baseScore": 80,
           "evidencePenalty": 400,
           "votePenalty": 0,
-          "survivalDays": 11,
+          "survivalDays": 12,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
@@ -2225,7 +2225,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "The 0.18.2 train found more loose bolts: approvals hide commands, Desktop sessions haunt each other, Matrix trips over unused crypto, and vision cache can literally collage reality. The 3am deploy goblin is well fed.",
+      "verdictComment": "The 0.18.2 train found more loose bolts: cron delegation went fire-and-forget, Desktop messages can vanish into session fog, Kanban poked the containment fence, and channel adapters keep dropping packages. The 3am depl<!-- isitstable:v1",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -2496,29 +2496,71 @@
           "number": 62446,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62446",
           "title": "Bug Report: Hermes Desktop v0.18.x — Frontend WebSocket not connected to `hermes serve` backend"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63142,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63142",
+          "title": "delegate_task broken in cron sessions since 0.18.2: forced background=true prevents subagent results from returning"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63210,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63210",
+          "title": "[Bug]: Desktop composer not ready on new session — first Enter fails, message stays in input, needs second send"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63396,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63396",
+          "title": "Kanban goal_mode workers never enter the goal loop — dispatcher spawns `chat -q` but the hook is only wired in the `-Q/--quiet` path"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63352,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63352",
+          "title": "[Bug]: Desktop submit fails after /goal; local session row created but message never reaches backend"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63109,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63109",
+          "title": "SimpleX adapter: DM text send addresses a numeric contactId as a display name → chatCmdError, silently dropped"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62985,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62985",
+          "title": "Kanban auto-decompose silently reassigns and launches tasks whose assignee is deliberately non-spawnable (containment bypass)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63212,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63212",
+          "title": "WhatsApp reconnect loop flashes Windows Terminal windows on every retry"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -129,
+        "score": -152,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 129,
+        "evidencePenalty": 152,
         "survivalDays": 4,
         "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 129,
+          "evidencePenalty": 152,
           "votePenalty": 0,
           "survivalDays": 4,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 4,
           "survivalBonus": 12,
           "curatedBonus": 0,
-          "score": -129
+          "score": -152
         },
         "affected": [
           "desktop-projects",
@@ -2550,7 +2592,10 @@
           "kanban",
           "matrix",
           "desktop-windows",
-          "session-state"
+          "session-state",
+          "cron",
+          "simplex",
+          "whatsapp"
         ],
         "evidence": [
           {
@@ -3047,6 +3092,83 @@
             "severity": 4,
             "penalty": 4,
             "reason": "Hermes Desktop v0.18.x frontend WebSocket can fail to connect to the hermes serve backend"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63142,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63142",
+            "issue": "NousResearch/hermes-agent issue 63142",
+            "area": "cron",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "delegate_task became fire-and-forget in cron sessions after 0.18.2, so subagent results never return to scheduled runs"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63210,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63210",
+            "issue": "NousResearch/hermes-agent issue 63210",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Desktop composer is not ready on new sessions; first Enter leaves the message unsent on Hermes 0.18.2"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63396,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63396",
+            "issue": "NousResearch/hermes-agent issue 63396",
+            "area": "kanban",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Kanban goal_mode workers spawn with chat -q but the goal-loop hook is only wired for -Q, so workers never enter the loop"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63352,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63352",
+            "issue": "NousResearch/hermes-agent issue 63352",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "After /goal in Hermes Desktop 0.18.2, local session rows can be created while messages never reach the backend"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63109,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63109",
+            "issue": "NousResearch/hermes-agent issue 63109",
+            "area": "simplex",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "SimpleX DM sends address numeric contactId as a display name, causing chatCmdError and silent drops on Hermes 0.18.2"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 62985,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62985",
+            "issue": "NousResearch/hermes-agent issue 62985",
+            "area": "kanban",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Kanban auto-decompose can reassign and launch non-spawnable assignees, bypassing containment intent"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63212,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63212",
+            "issue": "NousResearch/hermes-agent issue 63212",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WhatsApp reconnect loop flashes Windows Terminal windows repeatedly on Hermes Agent 0.18.2"
           }
         ]
       },
