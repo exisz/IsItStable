@@ -6,32 +6,305 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Early evidence window (<24h): the first smoke test found several gateway-startup and update-path landmines. The 3am deploy goblin is awake.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107220,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107220",
+        "title": "2026.7.1 gateway crash-loop: legacy memory sidecar `meta`/`chunks` conflicts are fatal while `files` conflicts auto-resolve"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107227,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107227",
+        "title": "2026.7.1 startup-migration gate is fatal, but the repair path (`openclaw doctor`) doesn't resolve the conflict — gateway crash-loops with no documented remedy"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107133,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107133",
+        "title": "[Bug]: Memory Core embedding_cache conflict permanently blocks Gateway startup on 2026.7.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106920,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106920",
+        "title": "[Bug]: openclaw 2026.7.1 can't restart the gateway"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107074,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107074",
+        "title": "[Bug]: 2026.7.1 macOS update targets Homebrew Cellar but leaves owning OpenClaw package stale"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107222,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107222",
+        "title": "normalizeNpmViewMetadata fails on array input from 'npm view --json', breaking all plugin updates"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107226,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107226",
+        "title": "`doctor --fix` silently drops the `plugins.allow` entry for a bundled→externalized plugin (codex), unregistering the agent harness — and the gateway still reports healthy"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107467,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107467",
+        "title": "[Bug]: openclaw plugins install/update on 2026.7.1 hits ENOTDIR scandir on openclaw.json after stale install path is removed"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107341,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107341",
+        "title": "[Bug] anthropic-vertex-provider 2026.7.1: \"Cannot convert undefined or null to object\" breaks all Claude auth (vertex-sdk 0.16.1 -> 0.19.0 regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107244,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107244",
+        "title": "WhatsApp group messages never reach inbound handling (LID groups?) — DMs work; repro across relink + 2026.6.11→2026.7.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107449,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107449",
+        "title": "[Bug]: cron tool JSON Schema is incompatible with llama.cpp tool parser (pattern: \"\\S\")"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106779,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106779",
+        "title": "Issue with 2026.7.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107281,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107281",
+        "title": "[Bug]: memsearch-summarize sub-session compaction fails with \"No API provider registered for api: ollama\" on 2026.7.1, while main-session compaction with the same provider succeeds"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107324,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107324",
+        "title": "2026.7.1: codex runs persist per-run usage but not the totalTokens aggregate — /status oscillates between ?/N and a number with each compaction (totalTokensFresh stuck false on plain turns)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107292,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107292",
+        "title": "[Bug]: Control UI user avatar selector silently does nothing in 2026.7.1"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 33,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 47,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 47,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 33
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "gateway",
+        "migration",
+        "memory",
+        "doctor",
+        "plugin-system",
+        "plugin-install",
+        "upgrade",
+        "installer",
+        "codex",
+        "provider-auth",
+        "whatsapp",
+        "local-model",
+        "compaction",
+        "usage-accounting",
+        "desktop-ui"
+      ],
+      "evidence": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107220,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107220",
+          "issue": "openclaw/openclaw issue 107220",
+          "area": "gateway/memory migration",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Legacy memory sidecar meta/chunks conflicts can crash-loop the gateway on 2026.7.1 upgrades. Gate: include — explicit 2026.7.1 upgrade reports."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107227,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107227",
+          "issue": "openclaw/openclaw issue 107227",
+          "area": "startup migration/doctor",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Fatal startup-migration gate leaves gateway crash-looping and doctor does not resolve the conflict. Gate: include — explicit 2026.7.1 reproduction."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107133,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107133",
+          "issue": "openclaw/openclaw issue 107133",
+          "area": "memory",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Memory Core embedding_cache conflict repeatedly blocks gateway startup. Gate: include — OpenClaw version field reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106920,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106920",
+          "issue": "openclaw/openclaw issue 106920",
+          "area": "gateway service/node runtime",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Gateway restart can fail after upgrade due service runtime/Node floor mismatch. Gate: include — OpenClaw version field reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107074,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107074",
+          "issue": "openclaw/openclaw issue 107074",
+          "area": "macOS updater",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "macOS Homebrew update can split CLI/gateway/plugin roots and leave a stale owning package. Gate: include — affected range includes 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107222,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107222",
+          "issue": "openclaw/openclaw issue 107222",
+          "area": "plugin update metadata",
+          "type": "tool",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "npm view array metadata breaks plugin updates and can auto-disable npm plugins. Gate: include — explicit 2026.7.1 reproduction."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107226,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107226",
+          "issue": "openclaw/openclaw issue 107226",
+          "area": "codex plugin/harness",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "doctor/update can drop codex allowlist after externalization, making Codex-backed agents fail every turn while health looks green. Gate: include — explicit 2026.7.1 upgrade report."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107467,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107467",
+          "issue": "openclaw/openclaw issue 107467",
+          "area": "plugin install/update",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "plugin install/update can hit ENOTDIR after stale install path removal, blocking follow-up plugin repair. Gate: include — explicit 2026.7.1 environment."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107341,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107341",
+          "issue": "openclaw/openclaw issue 107341",
+          "area": "provider auth",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "anthropic-vertex-provider 2026.7.1 breaks Claude auth via dependency regression. Gate: include — OpenClaw version field reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107244,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107244",
+          "issue": "openclaw/openclaw issue 107244",
+          "area": "whatsapp",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "WhatsApp group messages fail to reach inbound handling after 2026.7.1 upgrade/relink. Gate: include — reproduced on 2026.7.1 gateway and plugin."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107449,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107449",
+          "issue": "openclaw/openclaw issue 107449",
+          "area": "cron tool schema/local model",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "cron tool JSON Schema pattern breaks llama.cpp/OpenAI-compatible parser after upgrade. Gate: include — OpenClaw version field reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106779,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106779",
+          "issue": "openclaw/openclaw issue 106779",
+          "area": "local model/tool calling",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Qwen/GPT-OSS local tool-calling failures reported after 2026.7.1 upgrade and gone after downgrade. Gate: include — explicit 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107281,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107281",
+          "issue": "openclaw/openclaw issue 107281",
+          "area": "compaction/provider routing",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "memsearch-summarize sub-session compaction fails to see native Ollama provider while main compaction works. Gate: include — explicit 2026.7.1 reproduction."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107324,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107324",
+          "issue": "openclaw/openclaw issue 107324",
+          "area": "usage accounting/status",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Codex run totalTokens aggregate stays stale, making /status oscillate after compaction. Gate: include — explicit 2026.7.1 report."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107292,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107292",
+          "issue": "openclaw/openclaw issue 107292",
+          "area": "desktop UI",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Control UI user avatar selector silently does nothing. Gate: include — OpenClaw version field reports 2026.7.1."
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
@@ -19287,7 +19560,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 169,
-      "survivalDays": 5,
+      "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -19295,7 +19568,7 @@
         "baseScore": 80,
         "evidencePenalty": 169,
         "votePenalty": 0,
-        "survivalDays": 5,
+        "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
