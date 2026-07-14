@@ -53,7 +53,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "The 0.18.2 train found more loose bolts: cron delegation went fire-and-forget, Desktop messages can vanish into session fog, Kanban poked the containment fence, and channel adapters keep dropping packages. The 3am depl<!-- isitstable:v1",
+      "verdictComment": "The 0.18.2 train picked up fresh dents: CVE pins snap back after reboot, Windows update can eat local work, profile-scoped chat leaks into default, and Desktop still has enough sharp edges to wake an operator at 3am.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -366,29 +366,65 @@
           "number": 63212,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63212",
           "title": "WhatsApp reconnect loop flashes Windows Terminal windows on every retry"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63577,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63577",
+          "title": "Critical: hermes update on Windows destroys local commits + kills active chat + blocks when desktop is open"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63863,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63863",
+          "title": "kanban: materialize a named board's workspaces root when the board is created"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63871,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63871",
+          "title": "TTFB watchdog token estimator reports ~1.9M tokens while API prompt_tokens stays ~90-175K (extreme-aspect images / large data-URI tool output)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63978,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63978",
+          "title": "Regression in v2026.7.7.x: hermes -p <profile> chat runs the default profile (session store, SOUL, model config all default)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64003,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64003",
+          "title": "Write-guard error message conflates \"outside HERMES_WRITE_SAFE_ROOT\" with \"protected system/credential file\" — agent misdiagnoses and retry-loops"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64079,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64079",
+          "title": "[Bug]: Hermes Studio auto-update misses pip dependencies in embedded Python runtime (2nd occurrence)"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -152,
+        "score": -169,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 152,
+        "evidencePenalty": 169,
         "survivalDays": 5,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 152,
+          "evidencePenalty": 169,
           "votePenalty": 0,
           "survivalDays": 5,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -152
+          "score": -169
         },
         "affected": [
           "desktop-projects",
@@ -423,7 +459,9 @@
           "session-state",
           "cron",
           "simplex",
-          "whatsapp"
+          "whatsapp",
+          "config-profiles",
+          "file-tools"
         ],
         "evidence": [
           {
@@ -997,6 +1035,72 @@
             "severity": 1,
             "penalty": 1,
             "reason": "WhatsApp reconnect loop flashes Windows Terminal windows repeatedly on Hermes Agent 0.18.2"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63577,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63577",
+            "issue": "NousResearch/hermes-agent issue 63577",
+            "area": "windows-update",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Windows hermes update can kill active chat, block on Desktop, destroy local commits, and fail to relaunch"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63863,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63863",
+            "issue": "NousResearch/hermes-agent issue 63863",
+            "area": "kanban",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "0.18.2 kanban board creation omits the canonical workspaces root, breaking explicit-dir workers"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63871,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63871",
+            "issue": "NousResearch/hermes-agent issue 63871",
+            "area": "prompt-size",
+            "type": "runtime",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.18.2 TTFB watchdog can report phantom ~1.9M-token contexts for extreme image/data-URI sessions"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63978,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63978",
+            "issue": "NousResearch/hermes-agent issue 63978",
+            "area": "config-profiles",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "0.18.2 chat with -p profile runs against the default profile/session store/model config"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 64003,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64003",
+            "issue": "NousResearch/hermes-agent issue 64003",
+            "area": "file-tools",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.18.2 write guard reports safe-root misses as protected credential files, causing retry loops"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 64079,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64079",
+            "issue": "NousResearch/hermes-agent issue 64079",
+            "area": "desktop-windows",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Studio auto-update to embedded runtime 0.18.2 misses pip dependency sync, causing provider failures"
           }
         ]
       },

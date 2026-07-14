@@ -18929,7 +18929,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.2 train found more loose bolts: cron delegation went fire-and-forget, Desktop messages can vanish into session fog, Kanban poked the containment fence, and channel adapters keep dropping packages. The 3am depl<!-- isitstable:v1",
+    "verdictComment": "The 0.18.2 train picked up fresh dents: CVE pins snap back after reboot, Windows update can eat local work, profile-scoped chat leaks into default, and Desktop still has enough sharp edges to wake an operator at 3am.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -19242,29 +19242,65 @@
         "number": 63212,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63212",
         "title": "WhatsApp reconnect loop flashes Windows Terminal windows on every retry"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63577,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63577",
+        "title": "Critical: hermes update on Windows destroys local commits + kills active chat + blocks when desktop is open"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63863,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63863",
+        "title": "kanban: materialize a named board's workspaces root when the board is created"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63871,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63871",
+        "title": "TTFB watchdog token estimator reports ~1.9M tokens while API prompt_tokens stays ~90-175K (extreme-aspect images / large data-URI tool output)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63978,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63978",
+        "title": "Regression in v2026.7.7.x: hermes -p <profile> chat runs the default profile (session store, SOUL, model config all default)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64003,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64003",
+        "title": "Write-guard error message conflates \"outside HERMES_WRITE_SAFE_ROOT\" with \"protected system/credential file\" — agent misdiagnoses and retry-loops"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64079,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64079",
+        "title": "[Bug]: Hermes Studio auto-update misses pip dependencies in embedded Python runtime (2nd occurrence)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -152,
+      "score": -169,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 152,
+      "evidencePenalty": 169,
       "survivalDays": 5,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 152,
+        "evidencePenalty": 169,
         "votePenalty": 0,
         "survivalDays": 5,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -152
+        "score": -169
       },
       "affected": [
         "desktop-projects",
@@ -19299,7 +19335,9 @@
         "session-state",
         "cron",
         "simplex",
-        "whatsapp"
+        "whatsapp",
+        "config-profiles",
+        "file-tools"
       ],
       "evidence": [
         {
@@ -19873,6 +19911,72 @@
           "severity": 1,
           "penalty": 1,
           "reason": "WhatsApp reconnect loop flashes Windows Terminal windows repeatedly on Hermes Agent 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63577,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63577",
+          "issue": "NousResearch/hermes-agent issue 63577",
+          "area": "windows-update",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Windows hermes update can kill active chat, block on Desktop, destroy local commits, and fail to relaunch"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63863,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63863",
+          "issue": "NousResearch/hermes-agent issue 63863",
+          "area": "kanban",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "0.18.2 kanban board creation omits the canonical workspaces root, breaking explicit-dir workers"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63871,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63871",
+          "issue": "NousResearch/hermes-agent issue 63871",
+          "area": "prompt-size",
+          "type": "runtime",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.18.2 TTFB watchdog can report phantom ~1.9M-token contexts for extreme image/data-URI sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63978,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63978",
+          "issue": "NousResearch/hermes-agent issue 63978",
+          "area": "config-profiles",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "0.18.2 chat with -p profile runs against the default profile/session store/model config"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64003,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64003",
+          "issue": "NousResearch/hermes-agent issue 64003",
+          "area": "file-tools",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.18.2 write guard reports safe-root misses as protected credential files, causing retry loops"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64079,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64079",
+          "issue": "NousResearch/hermes-agent issue 64079",
+          "area": "desktop-windows",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Studio auto-update to embedded runtime 0.18.2 misses pip dependency sync, causing provider failures"
         }
       ]
     },
@@ -19887,7 +19991,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.18.1 got a late TUI receipt: session switching can show stale content. Not a mass rollback siren, but definitely a 3am “why am I reading the wrong chat?” gremlin.",
+    "verdictComment": "0.18.1 still has a calmer surface than the latest train, but QQ group ingress now joins the evidence pile. One more channel goblin in the wiring closet.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -19906,34 +20010,41 @@
         "number": 62170,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62170",
         "title": "[Bug]: TUI shows stale session content after switching sessions (v0.18.1)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63761,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63761",
+        "title": "[Bug]: Cannot receive QQ group messages"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 72,
+      "score": 71,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 8,
+      "evidencePenalty": 9,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 8,
+        "evidencePenalty": 9,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 72
+        "score": 71
       },
       "affected": [
         "lazy-deps",
         "hermes-link",
-        "tui"
+        "tui",
+        "qqbot"
       ],
       "evidence": [
         {
@@ -19968,6 +20079,17 @@
           "severity": 2,
           "penalty": 2,
           "reason": "TUI session browser can show stale session content after switching sessions on Hermes 0.18.1"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63761,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63761",
+          "issue": "NousResearch/hermes-agent issue 63761",
+          "area": "qqbot",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes 0.18.1 QQBot adapter drops GROUP_MESSAGE_CREATE events, so group messages receive no response"
         }
       ]
     },
@@ -19982,7 +20104,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.18.0 keeps collecting late receipts: stale gateway routing, image repair churn, custom-provider overrides, and OAuth refresh-token loss. The gremlin archive remains very well documented.",
+    "verdictComment": "0.18.0's old scar tissue grew two session-state notes: async DB writes can vanish, then prompt-cache savings vanish with them. Works on my machine, bills on yours.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -20457,67 +20579,79 @@
         "number": 62333,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62333",
         "title": "[Bug]: OAuth refresh_token erased on every token refresh - MCP servers die ~1h after login"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63712,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63712",
+        "title": "AsyncSessionDB methods silently dropped when called without await (e.g. gateway /model switch) → lost writes + RuntimeWarning"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63713,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63713",
+        "title": "Session system_prompt persists as null after a turn → every subsequent turn rebuilds, prefix cache misses permanently"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -214,
+      "score": -220,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 214,
+      "evidencePenalty": 220,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 214,
+        "evidencePenalty": 220,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -214
+        "score": -220
       },
       "affected": [
-        "agent-core",
-        "approval-boundary",
-        "auth",
-        "codex",
-        "cron",
-        "dashboard",
-        "daytona",
-        "dependencies",
-        "desktop",
-        "desktop-linux",
-        "desktop-remote-gateway",
-        "desktop-ui",
-        "desktop-windows",
-        "discord",
-        "gateway-service",
+        "ui",
         "imessage",
+        "provider-integration",
+        "desktop",
+        "dashboard",
+        "opencode",
+        "desktop-linux",
         "installer",
-        "journey",
-        "matrix",
+        "provider-routing",
+        "plugin-tools",
         "mcp",
         "memory",
-        "opencode",
-        "plugin-tools",
-        "prompt-cache",
-        "provider-integration",
-        "provider-routing",
+        "gateway-service",
+        "codex",
+        "agent-core",
         "qqbot",
-        "security",
-        "slack",
+        "discord",
+        "journey",
+        "approval-boundary",
+        "desktop-ui",
+        "cron",
         "telegram",
-        "tool-loader",
-        "ui",
-        "vision",
-        "web-tools",
         "weixin",
-        "windows-update"
+        "desktop-windows",
+        "tool-loader",
+        "vision",
+        "desktop-remote-gateway",
+        "prompt-cache",
+        "slack",
+        "security",
+        "web-tools",
+        "auth",
+        "matrix",
+        "windows-update",
+        "daytona",
+        "session-state"
       ],
       "evidence": [
         {
@@ -21388,6 +21522,28 @@
           "severity": 5,
           "penalty": 5,
           "reason": "OAuth refresh_token is erased on token refresh, killing MCP servers after about an hour on Hermes 0.18.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63712,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63712",
+          "issue": "NousResearch/hermes-agent issue 63712",
+          "area": "session-state",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes 0.18.0 AsyncSessionDB calls without await silently drop session-state writes during gateway paths"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63713,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63713",
+          "issue": "NousResearch/hermes-agent issue 63713",
+          "area": "prompt-cache",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes 0.18.0 sessions can persist null system_prompt, forcing rebuilds and prefix-cache misses every turn"
         }
       ]
     },
