@@ -102,24 +102,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 33,
+      "score": 36,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 47,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 47,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 33
+        "score": 36
       },
       "affected": [
         "gateway",
@@ -19202,7 +19202,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.2 train picked up fresh dents: CVE pins snap back after reboot, Windows update can eat local work, profile-scoped chat leaks into default, and Desktop still has enough sharp edges to wake an operator at 3am.",
+    "verdictComment": "The 0.18.2 train picked up fresh dents: cron delegation now drops real subagent results, HA ingress chat hits auth/health walls, Desktop MoA has a Windows splinter, and CVE pins still snap back after reboot. 3am deploy energy, neatly itemized.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -19551,29 +19551,47 @@
         "number": 64079,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64079",
         "title": "[Bug]: Hermes Studio auto-update misses pip dependencies in embedded Python runtime (2nd occurrence)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64246,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64246",
+        "title": "[Bug]: Hermes Desktop 0.18.2 226e8de"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64273,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64273",
+        "title": "Dashboard Chat tab broken behind HA Supervisor ingress (502 on /v1/health, 401 on /api/auth/me) — v0.18.2"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64424,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64424",
+        "title": "Dashboard auto-SSO redirect breaks for basic_auth (password-only) providers"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -169,
+      "score": -176,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 169,
+      "evidencePenalty": 176,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 169,
+        "evidencePenalty": 176,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -169
+        "score": -176
       },
       "affected": [
         "desktop-projects",
@@ -19610,7 +19628,8 @@
         "simplex",
         "whatsapp",
         "config-profiles",
-        "file-tools"
+        "file-tools",
+        "auth"
       ],
       "evidence": [
         {
@@ -20250,6 +20269,39 @@
           "severity": 4,
           "penalty": 4,
           "reason": "Studio auto-update to embedded runtime 0.18.2 misses pip dependency sync, causing provider failures"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64246,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64246",
+          "issue": "NousResearch/hermes-agent issue 64246",
+          "area": "moa",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.18.2 reports Mixture of Agents reference-model add failure on Windows"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64273,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64273",
+          "issue": "NousResearch/hermes-agent issue 64273",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.18.2 Home Assistant ingress dashboard cannot start chat sessions due to /v1/health 502 and /api/auth/me 401 failures"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64424,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64424",
+          "issue": "NousResearch/hermes-agent issue 64424",
+          "area": "auth",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.18.2 dashboard basic_auth-only setup auto-redirects to OAuth login and raises HTTP 500 instead of showing /login"
         }
       ]
     },
