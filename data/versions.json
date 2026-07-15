@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Early evidence window (<24h): the first smoke test found several gateway-startup and update-path landmines. The 3am deploy goblin is awake.",
+    "verdictComment": "Evidence window is now wide open: gateway startup, update/plugin drift, context leaks, and runtime failures are all on the board. The 3am deploy goblin brought friends.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -97,46 +97,182 @@
         "number": 107292,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/107292",
         "title": "[Bug]: Control UI user avatar selector silently does nothing in 2026.7.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 108075,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/108075",
+        "title": "[Bug]: 2026.7.1Agent failed before reply: LLM request failed: provider rejected the request schema or tool payload. Logs: openclaw logs --follow"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107607,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107607",
+        "title": "[Bug]: 2026.7.1 gateway fails to start, impossible sqlite version for ubuntu"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 108299,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/108299",
+        "title": "Upgrade 5.22→7.1: channels config dropped, old plugin blocks Gateway startup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 108284,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/108284",
+        "title": "[Bug]: Telegram runtime context metadata leak — <<<BEGIN_OPENCLAW_INTERNAL_CONTEXT>>> visible in every turn"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107761,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107761",
+        "title": "cli-backend: stale systemSent on session entries survives gateway restart — fresh spawns (esp. after /new) run WITHOUT the agent system prompt (identity loss)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107920,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107920",
+        "title": "Gateway crash-loops on npm 12: `npm view --json` now always returns an array, breaking plugin metadata parsing"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107842,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107842",
+        "title": "[Bug]: Gateway startup blocked because @openclaw/codex installation fails with \"npm view produced incomplete package metadata\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107659,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107659",
+        "title": "[Bug]: ACPX update expands to 2.1 GiB; OOM leaves core/plugin drift that startup does not repair"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 108250,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/108250",
+        "title": "Gateway startup fails on WSL2: EROFS chmod '/home/junl/.openclaw/state' in subagent-registry"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107228,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107228",
+        "title": "2026.7.1 plugin loader resolves inconsistently between flat project dirs and new `__openclaw-generation__` dirs — a `plugins install`/sync of a new version can silently not take effect"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107207,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107207",
+        "title": "Update to 2026.7.1 left managed install and WhatsApp plugin linked to old embedded Node"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 108255,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/108255",
+        "title": "runtime.llm.complete cannot pass a reasoning effort, and the omitted field can hard-fail reasoning-mandatory models"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 108068,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/108068",
+        "title": "[Bug]: memory_search intermittently returns \"database is not open\" on healthy index in 2026.7.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107815,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107815",
+        "title": "[Bug]: memory-core dreaming narrative fails with \"no low surrogate in string\" API 400 — clampDiaryContextEntry truncates mid-surrogate-pair (fix on main, missing from v2026.7.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107746,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107746",
+        "title": "`openclaw update` misidentifies pnpm 11 global installations as npm"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 108265,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/108265",
+        "title": "[Bug]: Feishu streaming mode causes extremely slow frontend rendering after upgrading to v2026.7.1 - characters dribble out a few at a time"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107648,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107648",
+        "title": "Notion number property write rejected via gateway MCP connection; identical call succeeds via separate local MCP session"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 36,
+      "score": -105,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 47,
+      "evidencePenalty": 105,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 47,
+        "evidencePenalty": 105,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 36
+        "score": -105
       },
       "affected": [
         "gateway",
-        "migration",
-        "memory",
+        "memory-migration",
+        "startup-migration",
         "doctor",
-        "plugin-system",
+        "memory",
+        "gateway-service",
+        "node-runtime",
+        "macos-updater",
+        "plugin-update-metadata",
+        "codex-plugin",
+        "harness",
         "plugin-install",
-        "upgrade",
-        "installer",
-        "codex",
+        "update",
         "provider-auth",
         "whatsapp",
+        "cron-tool-schema",
         "local-model",
+        "tool-calling",
         "compaction",
+        "provider-routing",
         "usage-accounting",
-        "desktop-ui"
+        "status",
+        "desktop-ui",
+        "llm-request-schema",
+        "gateway-startup",
+        "sqlite",
+        "upgrade",
+        "channel-config",
+        "telegram",
+        "context-privacy",
+        "session-identity",
+        "system-prompt",
+        "plugin-metadata",
+        "codex-plugin-install",
+        "acpx-update",
+        "core-plugin-drift",
+        "wsl2-startup",
+        "subagent-registry",
+        "plugin-loader",
+        "install-sync",
+        "managed-install",
+        "reasoning",
+        "model-routing",
+        "memorysearch",
+        "memory-core",
+        "dreaming",
+        "package-manager-detection",
+        "feishu",
+        "notion-mcp"
       ],
       "evidence": [
         {
@@ -303,6 +439,193 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Control UI user avatar selector silently does nothing. Gate: include — OpenClaw version field reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108075,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108075",
+          "issue": "openclaw/openclaw issue 108075",
+          "area": "llm request schema",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Agent can fail before replying because provider rejects request schema/tool payload on 2026.7.1. Gate: include — OpenClaw version field explicitly reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107607,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107607",
+          "issue": "openclaw/openclaw issue 107607",
+          "area": "gateway startup/sqlite",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Gateway can fail to start on Ubuntu due an impossible sqlite version/runtime mismatch. Gate: include — OpenClaw version field explicitly reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108299,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108299",
+          "issue": "openclaw/openclaw issue 108299",
+          "area": "upgrade/channel config",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Upgrade from 2026.5.22 to 2026.7.1 can drop channel config and leave old plugin blocks that stop gateway startup. Gate: include — affected version range includes 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108284,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108284",
+          "issue": "openclaw/openclaw issue 108284",
+          "area": "telegram/context privacy",
+          "type": "channel-specific",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Telegram can expose internal runtime context markers in every turn, a channel privacy/trust boundary leak. Gate: include — explicit 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107761,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107761",
+          "issue": "openclaw/openclaw issue 107761",
+          "area": "session identity/system prompt",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Stale systemSent state after restart can spawn sessions without the agent system prompt, causing identity loss. Gate: include — explicit 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107920,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107920",
+          "issue": "openclaw/openclaw issue 107920",
+          "area": "gateway/plugin metadata",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "npm 12 array metadata can crash-loop the gateway by breaking plugin metadata parsing. Gate: include — explicit 2026.7.1/npm 12 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107842,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107842",
+          "issue": "openclaw/openclaw issue 107842",
+          "area": "gateway/codex plugin install",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Gateway startup can block when @openclaw/codex installation fails on incomplete package metadata. Gate: include — OpenClaw version field explicitly reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107659,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107659",
+          "issue": "openclaw/openclaw issue 107659",
+          "area": "acpx update/core-plugin drift",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "ACPX update can expand to 2.1 GiB; OOM leaves core/plugin drift that startup does not repair. Gate: include — OpenClaw version field explicitly reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108250,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108250",
+          "issue": "openclaw/openclaw issue 108250",
+          "area": "wsl2 startup/subagent registry",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "WSL2 gateway startup can fail on EROFS chmod in subagent-registry state setup. Gate: include — explicit 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107228,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107228",
+          "issue": "openclaw/openclaw issue 107228",
+          "area": "plugin loader/install sync",
+          "type": "tool",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Plugin loader resolves inconsistently between flat project dirs and generation dirs, so plugin install/sync can silently not take effect. Gate: include — explicit 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107207,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107207",
+          "issue": "openclaw/openclaw issue 107207",
+          "area": "managed install/whatsapp",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Update can leave managed install and WhatsApp plugin linked to an old embedded Node runtime. Gate: include — affected version range includes 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108255,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108255",
+          "issue": "openclaw/openclaw issue 108255",
+          "area": "reasoning/model routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "runtime.llm.complete cannot pass reasoning effort, which can hard-fail reasoning-mandatory models. Gate: include — explicit 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108068,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108068",
+          "issue": "openclaw/openclaw issue 108068",
+          "area": "memory_search",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "memory_search can intermittently return “database is not open” despite a healthy index. Gate: include — OpenClaw version field explicitly reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107815,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107815",
+          "issue": "openclaw/openclaw issue 107815",
+          "area": "memory-core/dreaming",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Memory-core dreaming can fail with surrogate-pair truncation API 400; fix is on main but missing from v2026.7.1. Gate: include — explicit 2026.7.1 affected context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107746,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107746",
+          "issue": "openclaw/openclaw issue 107746",
+          "area": "update/package-manager detection",
+          "type": "tool",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "openclaw update can misidentify pnpm 11 global installs as npm, risking wrong update path. Gate: include — explicit 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108265,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108265",
+          "issue": "openclaw/openclaw issue 108265",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Feishu streaming mode can render extremely slowly after upgrading to v2026.7.1. Gate: include — affected version range includes 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107648,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107648",
+          "issue": "openclaw/openclaw issue 107648",
+          "area": "notion mcp",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Notion number property write is rejected through gateway MCP while the same local MCP call succeeds. Gate: include — affected version range includes 2026.7.1."
         }
       ]
     },
@@ -19578,7 +19901,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 176,
-      "survivalDays": 6,
+      "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -19586,7 +19909,7 @@
         "baseScore": 80,
         "evidencePenalty": 176,
         "votePenalty": 0,
-        "survivalDays": 6,
+        "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
