@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-15T01:16:55.069Z",
+  "generatedAt": "2026-07-15T04:39:11.013Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -659,15 +659,21 @@
       "labels": [
         "version",
         "risk:channel",
+        "risk:tool",
+        "risk:runtime",
         "affected:qqbot",
-        "pkg:hermes-agent"
+        "pkg:hermes-agent",
+        "score:80-89",
+        "affected:lazy-deps",
+        "affected:hermes-link",
+        "affected:tui"
       ],
       "issueNumber": 148,
       "title": "[v0.18.1] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-14T01:31:17Z"
+      "updatedAt": "2026-07-15T01:27:47Z"
     },
     {
       "version": "0.18.2",
@@ -692,6 +698,7 @@
         "affected:message-delivery",
         "pkg:hermes-agent",
         "affected:desktop",
+        "affected:auth",
         "affected:config-profiles",
         "affected:dependencies",
         "affected:desktop-remote-gateway",
@@ -721,7 +728,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-14T01:31:50Z"
+      "updatedAt": "2026-07-15T01:29:15Z"
     },
     {
       "version": "0.0.1",
