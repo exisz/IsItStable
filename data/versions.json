@@ -208,18 +208,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 105,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 105,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
         "score": -105
       },
@@ -19525,7 +19525,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "The 0.18.2 train picked up fresh dents: cron delegation now drops real subagent results, HA ingress chat hits auth/health walls, Desktop MoA has a Windows splinter, and CVE pins still snap back after reboot. 3am deploy energy, neatly itemized.",
+    "verdictComment": "0.18.2 keeps collecting paper cuts and a few sharp edges: profile/session cross-contamination, dashboard resume blanks, Telegram gateway conflicts, Desktop state leaks, and install/provider regressions. Works on my machine is now a distributed systems problem.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -19892,29 +19892,101 @@
         "number": 64424,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64424",
         "title": "Dashboard auto-SSO redirect breaks for basic_auth (password-only) providers"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65133,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65133",
+        "title": "session_search with profile= parameter returns sessions from wrong profile (cross-contamination)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65176,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65176",
+        "title": "Gateway doesn't auto-resolve Telegram token conflict at platform connect — waits for manual SIGKILL"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65005,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65005",
+        "title": "[Bug]: Session-switch data merging / cross-contamination — can't switch chats cleanly"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64710,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64710",
+        "title": "[Bug]: Regression — pyproject license=\"MIT\" + setuptools>=77 build requirement breaks editable install (Windows update fails)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63701,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63701",
+        "title": "**Web dashboard: clicking a previous session opens a blank new session (`/api/pty` `?attach=` reattach discards the `?resume=` spawn env)**"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65004,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65004",
+        "title": "[Bug]: Project<->session association lost — chats disappear from PROJECTS sidebar but remain in global sessions"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63682,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63682",
+        "title": "[Bug]: Desktop GUI: Drag-and-drop image upload freezes the UI"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65092,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65092",
+        "title": "[Bug]: Gemini Model missing thought_signature as being an aggregator in MoA model"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65047,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65047",
+        "title": "[Bug]: Opening the same chat in a second Desktop window shows stale history and can send into an out-of-date context (no live sync, no refresh)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65014,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65014",
+        "title": "[Bug]: Desktop sidebar renders a project EMPTY when its folder path contains a non-ASCII (Unicode) character — sessions exist in state.db"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63054,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63054",
+        "title": "bug(desktop): new-session composer prefilled with another session's first input (draft cross-session leak)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64722,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64722",
+        "title": "[Bug]: Paste (Command+V) doesn't work as expected when using non-Qwerty input source on Mac"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -176,
+      "score": -206,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 176,
+      "evidencePenalty": 206,
       "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 176,
+        "evidencePenalty": 206,
         "votePenalty": 0,
         "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -176
+        "score": -206
       },
       "affected": [
         "desktop-projects",
@@ -19952,7 +20024,8 @@
         "whatsapp",
         "config-profiles",
         "file-tools",
-        "auth"
+        "auth",
+        "dashboard"
       ],
       "evidence": [
         {
@@ -20625,6 +20698,138 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Hermes 0.18.2 dashboard basic_auth-only setup auto-redirects to OAuth login and raises HTTP 500 instead of showing /login"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65133,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65133",
+          "issue": "NousResearch/hermes-agent issue 65133",
+          "area": "config-profiles",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "session_search(profile=...) returns sessions from the wrong profile database on Hermes 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65176,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65176",
+          "issue": "NousResearch/hermes-agent issue 65176",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Gateway 0.18.2 loops forever on Telegram token conflicts instead of replacing the stale holder"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65005,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65005",
+          "issue": "NousResearch/hermes-agent issue 65005",
+          "area": "session-state",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Desktop 0.18.2 can merge state between chat sessions, contaminating active context"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64710,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64710",
+          "issue": "NousResearch/hermes-agent issue 64710",
+          "area": "dependencies",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows update/editable install path breaks on setuptools PEP 639 license validation for hermes-agent 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63701,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63701",
+          "issue": "NousResearch/hermes-agent issue 63701",
+          "area": "dashboard",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Web dashboard 0.18.2 opens blank sessions because PTY reattach discards resume state"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65004,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65004",
+          "issue": "NousResearch/hermes-agent issue 65004",
+          "area": "desktop-projects",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop 0.18.2 loses project-to-session associations while sessions remain in the global list"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63682,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63682",
+          "issue": "NousResearch/hermes-agent issue 63682",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop 0.18.2 freezes when an image is drag-dropped into chat input"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65092,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65092",
+          "issue": "NousResearch/hermes-agent issue 65092",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Gemini MoA aggregator calls fail on Hermes 0.18.2 because thought_signature is missing from functionCall parts"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65047,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65047",
+          "issue": "NousResearch/hermes-agent issue 65047",
+          "area": "session-state",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Opening one chat in two Desktop windows on 0.18.2 shows stale history and can send into outdated context"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65014,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65014",
+          "issue": "NousResearch/hermes-agent issue 65014",
+          "area": "desktop-projects",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop 0.18.2 renders projects with Unicode folder paths as empty despite matching sessions in state.db"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63054,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63054",
+          "issue": "NousResearch/hermes-agent issue 63054",
+          "area": "session-state",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop new-session composer can leak another session's first input on CLI 0.18.2"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64722,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64722",
+          "issue": "NousResearch/hermes-agent issue 64722",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop 0.18.2 maps Command+V incorrectly for non-QWERTY macOS input sources"
         }
       ]
     },
