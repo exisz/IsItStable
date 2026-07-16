@@ -20957,7 +20957,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "0.18.0's old scar tissue grew two session-state notes: async DB writes can vanish, then prompt-cache savings vanish with them. Works on my machine, bills on yours.",
+    "verdictComment": "0.18.0 picked up a few more old splinters: context compaction timeouts, Desktop layout/runtime issues, threat-scan false positives, and subagent interrupt stalls. Ancient history, still filed under sharp objects.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -21444,29 +21444,65 @@
         "number": 63713,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63713",
         "title": "Session system_prompt persists as null after a turn → every subsequent turn rebuilds, prefix cache misses permanently"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 60604,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60604",
+        "title": "[Bug]: compact context fail"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 49978,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49978",
+        "title": "[Bug] Hermes Desktop: PageUp while input is focused breaks page layout (sidebar gets squeezed out, content shifts left, blank space at bottom)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64079,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64079",
+        "title": "[Bug]: Hermes Studio auto-update misses pip dependencies in embedded Python runtime (2nd occurrence)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 65151,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65151",
+        "title": "Desktop runtime readiness probes can saturate the shared RPC pool"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64268,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64268",
+        "title": "Context-file threat scanner: negation-blind role_pretend pattern silently drops the entire persona file"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 63463,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63463",
+        "title": "[Bug]: Slash commands do not work correctly during sub agent waves."
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -220,
+      "score": -239,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 220,
+      "evidencePenalty": 239,
       "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 220,
+        "evidencePenalty": 239,
         "votePenalty": 0,
         "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -220
+        "score": -239
       },
       "affected": [
         "ui",
@@ -21504,7 +21540,8 @@
         "matrix",
         "windows-update",
         "daytona",
-        "session-state"
+        "session-state",
+        "context-engine"
       ],
       "evidence": [
         {
@@ -22397,6 +22434,72 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Hermes 0.18.0 sessions can persist null system_prompt, forcing rebuilds and prefix-cache misses every turn"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 60604,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/60604",
+          "issue": "NousResearch/hermes-agent issue 60604",
+          "area": "context-engine",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "compact context fails with digest timeout on Hermes 0.18.0 after upgrade from 0.17.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49978,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49978",
+          "issue": "NousResearch/hermes-agent issue 49978",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes Desktop 0.18.0 on Windows can squeeze the sidebar/layout when PageUp is pressed in focused input"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64079,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64079",
+          "issue": "NousResearch/hermes-agent issue 64079",
+          "area": "desktop-windows",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Studio embedded runtime 0.18.2 with hermes-agent CLI 0.18.0 misses pip dependency sync, causing provider failures"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65151,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65151",
+          "issue": "NousResearch/hermes-agent issue 65151",
+          "area": "desktop-remote-gateway",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Desktop/runtime readiness probes on Hermes 0.18.0 can saturate the shared RPC pool before provider calls"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64268,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64268",
+          "issue": "NousResearch/hermes-agent issue 64268",
+          "area": "security",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Context-file threat scanner on hermes-agent 0.18.0 is negation-blind and can drop an entire persona file"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63463,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63463",
+          "issue": "NousResearch/hermes-agent issue 63463",
+          "area": "agent-core",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Subagent waves on Hermes 0.18.0 can block CLI interrupt/refresh handling during long-running tasks"
         }
       ]
     },
