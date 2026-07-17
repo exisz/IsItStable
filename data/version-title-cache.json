@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-17T13:01:11.019Z",
+  "generatedAt": "2026-07-17T15:04:01.045Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -3014,6 +3014,7 @@
         "risk:kernel",
         "risk:runtime",
         "affected:compaction",
+        "affected:docs-command",
         "affected:feishu",
         "affected:telegram",
         "affected:whatsapp",
@@ -3021,8 +3022,10 @@
         "affected:browser",
         "affected:plugin-install",
         "affected:upgrade",
+        "affected:webchat",
         "affected:plugin-system",
         "affected:codex",
+        "affected:ui",
         "affected:doctor",
         "affected:model-routing",
         "affected:status",
@@ -3031,6 +3034,7 @@
         "affected:local-model",
         "affected:memory",
         "affected:reasoning",
+        "affected:cron-model-routing",
         "affected:desktop-ui",
         "affected:gateway-service",
         "affected:installer",
@@ -3039,6 +3043,8 @@
         "score:0-9",
         "affected:usage-accounting",
         "affected:provider-auth",
+        "affected:acp",
+        "affected:session-state",
         "affected:memory-migration",
         "affected:startup-migration",
         "affected:node-runtime",
@@ -3050,20 +3056,14 @@
         "affected:cron-tool-schema",
         "affected:tool-calling",
         "affected:llm-request-schema",
-        "affected:gateway-startup",
-        "affected:sqlite",
-        "affected:channel-config",
-        "affected:context-privacy",
-        "affected:session-identity",
-        "affected:system-prompt",
-        "affected:plugin-metadata"
+        "affected:gateway-startup"
       ],
       "issueNumber": 150,
       "title": "[v2026.7.1] [OpenClaw] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/150",
       "createdAt": "2026-07-13T19:09:21Z",
-      "updatedAt": "2026-07-16T13:31:49Z"
+      "updatedAt": "2026-07-17T13:46:31Z"
     }
   ],
   "duplicates": {
