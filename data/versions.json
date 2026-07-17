@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "v2026.7.1 keeps collecting fresh runtime dents: gateway startup, Codex/plugin drift, node auth, sandbox routing, mobile chat, and local-model schemas are all flashing red. Works on my machine has left the building.",
+    "verdictComment": "v2026.7.1 now has fresh score dents on top of the existing pile: Codex turns can end mid-promise, update can strand gateway startup, ACP ordering trips apps, and the UI still has little 3am deploy gremlins.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -259,31 +259,86 @@
         "number": 107787,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/107787",
         "title": "[Bug]: Thinking block leaking into telegram and confuses Agent"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107658,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107658",
+        "title": "[Docs Bug]: relaesa"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 109490,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/109490",
+        "title": "codex app-server: turn interrupted after app-delegated message tool result (terminate:true) — promised work never executes"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107223,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107223",
+        "title": "After 'openclaw update', new gateway refuses to start due to schema_meta checkpoint mismatch with no escape hatch"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107958,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107958",
+        "title": "[Feature]:  For version 2026.7.1, request to improve the documentation, as the current documentation is difficult to understand in conjunction with the product."
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106960,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106960",
+        "title": "macOS WebChat: Session rename/delete buttons in sidebar are non-functional"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 109961,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/109961",
+        "title": "ACP Issue"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107922,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107922",
+        "title": "Isolated cron job payload.model override leaks back to parent/main session model"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107853,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107853",
+        "title": "[Bug]: Control UI Simple Personal card uses workspace-relative assistant avatar as img URL"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 107571,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/107571",
+        "title": "[Bug]: Firefox cannot scroll Markdown content in the right chat sidebar"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -141,
+      "score": -163,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 141,
+      "evidencePenalty": 163,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 141,
+        "evidencePenalty": 163,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": -141
+        "score": -163
       },
       "affected": [
+        "acp",
         "acpx-update",
         "browser-proxy",
         "channel-config",
@@ -293,8 +348,10 @@
         "compaction",
         "context-privacy",
         "core-plugin-drift",
+        "cron-model-routing",
         "cron-tool-schema",
         "desktop-ui",
+        "docs-command",
         "doctor",
         "dreaming",
         "exec",
@@ -304,6 +361,7 @@
         "gateway-startup",
         "harness",
         "install-sync",
+        "installer",
         "ios-app",
         "llm-request-schema",
         "local-model",
@@ -328,6 +386,7 @@
         "sandbox-routing",
         "session-fencing",
         "session-identity",
+        "session-state",
         "slack",
         "sqlite",
         "startup-migration",
@@ -337,9 +396,11 @@
         "talk-mode",
         "telegram",
         "tool-calling",
+        "ui",
         "update",
         "upgrade",
         "usage-accounting",
+        "webchat",
         "whatsapp",
         "wsl2-startup"
       ],
@@ -805,6 +866,105 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Thinking blocks leak into Telegram after 2026.7.1 and confuse the agent. Gate: include — search/body explicitly reference 2026.7.1 context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107658,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107658",
+          "issue": "openclaw/openclaw issue 107658",
+          "area": "docs/release archive",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Release archive documentation/content issue reported against OpenClaw-2026.7.1.zip. Gate: include — explicit 2026.7.1 artifact report."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 109490,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/109490",
+          "issue": "openclaw/openclaw issue 109490",
+          "area": "codex app-server/message tool",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "App-delegated message tool result can terminate the turn early, so promised follow-up work never executes. Gate: include — explicit since-2026.7.1 regression."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107223,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107223",
+          "issue": "openclaw/openclaw issue 107223",
+          "area": "gateway startup migration",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "openclaw update can leave the new gateway unable to start until schema_meta is manually patched. Gate: include — explicit 2026.7.1 upgrade reproduction."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107958,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107958",
+          "issue": "openclaw/openclaw issue 107958",
+          "area": "installer/classic setup",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Classic install flow no longer provides skip options, making setup harder to recover/configure manually. Gate: include — explicit version 2026.7.1 report."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106960,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106960",
+          "issue": "openclaw/openclaw issue 106960",
+          "area": "macOS WebChat sessions UI",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Session rename/delete controls in the macOS WebChat sidebar are non-functional. Gate: include — OpenClaw 2026.7.1 stable report."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 109961,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/109961",
+          "issue": "openclaw/openclaw issue 109961",
+          "area": "ACP bridge/session ordering",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "ACP bridge emits session_info_update before session/new result, breaking app assertions on stock 2026.7.1. Gate: include — OpenClaw version field reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107922,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107922",
+          "issue": "openclaw/openclaw issue 107922",
+          "area": "cron model routing",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Isolated cron payload.model override can leak back to the parent/main session model. Gate: include — explicit 2026.7.1 regression range."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107853,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107853",
+          "issue": "openclaw/openclaw issue 107853",
+          "area": "Control UI avatar rendering",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Control UI Personal card uses workspace-relative assistant avatar paths as img URLs. Gate: include — OpenClaw version field reports 2026.7.1."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 107571,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/107571",
+          "issue": "openclaw/openclaw issue 107571",
+          "area": "Control UI Firefox markdown scroll",
+          "type": "tool",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Firefox cannot scroll long Markdown content in the right chat sidebar. Gate: include — explicit OpenClaw 2026.7.1 shipped-asset report."
         }
       ]
     },
@@ -20164,7 +20324,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 208,
-      "survivalDays": 8,
+      "survivalDays": 9,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -20172,7 +20332,7 @@
         "baseScore": 80,
         "evidencePenalty": 208,
         "votePenalty": 0,
-        "survivalDays": 8,
+        "survivalDays": 9,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
