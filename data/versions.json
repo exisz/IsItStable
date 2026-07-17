@@ -268,18 +268,18 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 141,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 141,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
         "score": -141
       },
@@ -19704,7 +19704,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "0.18.2 keeps collecting paper cuts and a few sharp edges: profile/session cross-contamination, dashboard resume blanks, Telegram gateway conflicts, Desktop state leaks, and install/provider regressions. Works on my machine is now a distributed systems problem.",
+    "verdictComment": "0.18.2 keeps collecting paper cuts and sharp edges: profile/session cross-contamination, Desktop state leaks, Telegram gateway conflicts, install/provider regressions, plus TUI cwd drift and CLI terminal jitter. Works on my machine is now a distributed systems problem.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -20143,29 +20143,41 @@
         "number": 64722,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64722",
         "title": "[Bug]: Paste (Command+V) doesn't work as expected when using non-Qwerty input source on Mac"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 50438,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50438",
+        "title": "bug: TUI sessions don't record cwd — Desktop groups them under default workspace"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64776,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64776",
+        "title": "[Bug]: CLI terminal window jumps periodically during idle after agent turn completes"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -206,
+      "score": -208,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 206,
+      "evidencePenalty": 208,
       "survivalDays": 8,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 206,
+        "evidencePenalty": 208,
         "votePenalty": 0,
         "survivalDays": 8,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -206
+        "score": -208
       },
       "affected": [
         "desktop-projects",
@@ -20204,7 +20216,8 @@
         "config-profiles",
         "file-tools",
         "auth",
-        "dashboard"
+        "dashboard",
+        "tui"
       ],
       "evidence": [
         {
@@ -21009,6 +21022,28 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Desktop 0.18.2 maps Command+V incorrectly for non-QWERTY macOS input sources"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 50438,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/50438",
+          "issue": "NousResearch/hermes-agent issue 50438",
+          "area": "desktop-projects",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "TUI sessions on 0.18.2 do not persist cwd, so Desktop groups them under the default workspace"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64776,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64776",
+          "issue": "NousResearch/hermes-agent issue 64776",
+          "area": "tui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes CLI 0.18.2 terminal window keeps jumping/repainting after a turn completes until restart"
         }
       ]
     },
