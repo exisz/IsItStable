@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-17T01:29:52.350Z",
+  "generatedAt": "2026-07-17T04:52:21.862Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -718,6 +718,7 @@
         "affected:context-engine",
         "affected:moa",
         "affected:background-review",
+        "affected:tui",
         "affected:vision",
         "affected:session-state",
         "affected:desktop-projects",
@@ -728,7 +729,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-16T01:30:52Z"
+      "updatedAt": "2026-07-17T01:44:08Z"
     },
     {
       "version": "0.0.1",
