@@ -10,32 +10,71 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "Fresh patch, fresh receipts: Telegram album captions can still vanish, and avatar uploads may fail silently. Tiny gremlins, but they do leave fingerprints.",
+      "referencedIssues": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 110690,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/110690",
+          "title": "Telegram media groups (albums): only the first caption is preserved — per-item captions dropped"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 110662,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/110662",
+          "title": "[Bug]: # Bug report: USER avatar upload silently fails in control-ui (Settings → Personal)"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 78,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 2,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 2,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 78
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "telegram",
+          "ui"
+        ],
+        "evidence": [
+          {
+            "repo": "openclaw/openclaw",
+            "number": 110690,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/110690",
+            "issue": "openclaw/openclaw issue 110690",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Telegram media groups with per-image captions drop all but the first caption; issue explicitly lists 2026.7.1-2."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 110662,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/110662",
+            "issue": "openclaw/openclaw issue 110662",
+            "area": "ui",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Control UI Personal avatar upload silently fails on OpenClaw 2026.7.1-2."
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
