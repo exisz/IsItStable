@@ -28,24 +28,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 78,
+        "score": 81,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 2,
-        "survivalDays": 0,
-        "survivalBonus": 0,
+        "survivalDays": 1,
+        "survivalBonus": 3,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 2,
           "votePenalty": 0,
-          "survivalDays": 0,
+          "survivalDays": 1,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 0,
-          "survivalBonus": 0,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 78
+          "score": 81
         },
         "affected": [
           "telegram",
