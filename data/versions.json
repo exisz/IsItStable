@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh patch, fresh receipts: Telegram album captions can still vanish, and avatar uploads may fail silently. Tiny gremlins, but they do leave fingerprints.",
+    "verdictComment": "Patch release is mostly breathing, but Telegram final delivery, local-model first turns, and WebChat replay are still leaving little \"works on my machine\" traps in the carpet.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -19,33 +19,53 @@
         "number": 110662,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/110662",
         "title": "[Bug]: # Bug report: USER avatar upload silently fails in control-ui (Settings → Personal)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 110953,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/110953",
+        "title": "[Bug]: Fresh LM Studio session on Ubuntu fails with \"Context overflow\" or \"Message ordering conflict\" after first message"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 110771,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/110771",
+        "title": "WebChat persists internal records and loses durable turn status"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 110901,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/110901",
+        "title": "Telegram: final reply silently lost when user navigates away from chat during agent turn (2026.7.1)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 81,
+      "score": 74,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 2,
+      "evidencePenalty": 9,
       "survivalDays": 1,
       "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 2,
+        "evidencePenalty": 9,
         "votePenalty": 0,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 81
+        "score": 74
       },
       "affected": [
         "telegram",
-        "ui"
+        "ui",
+        "local-model",
+        "webchat"
       ],
       "evidence": [
         {
@@ -69,6 +89,39 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Control UI Personal avatar upload silently fails on OpenClaw 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 110953,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/110953",
+          "issue": "openclaw/openclaw issue 110953",
+          "area": "local-model",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Fresh LM Studio sessions on Ubuntu fail before the first assistant reply with context overflow/message-ordering errors; OpenClaw version field reports 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 110771,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/110771",
+          "issue": "openclaw/openclaw issue 110771",
+          "area": "webchat",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "WebChat on 2026.7.1-2 can persist/replay internal records and lose durable turn status across refresh/replay."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 110901,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/110901",
+          "issue": "openclaw/openclaw issue 110901",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Telegram direct chats on 2026.7.1-2 can lose the final reply when the user navigates away during a tool-heavy turn."
         }
       ]
     },
@@ -20493,7 +20546,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 230,
-      "survivalDays": 10,
+      "survivalDays": 11,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -20501,7 +20554,7 @@
         "baseScore": 80,
         "evidencePenalty": 230,
         "votePenalty": 0,
-        "survivalDays": 10,
+        "survivalDays": 11,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
