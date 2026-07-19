@@ -19979,7 +19979,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "0.18.2 is still a bug magnet: Desktop Remote auth drift, empty assistant-message context poisoning, long-context gateway exits, and fresh Desktop UI paper cuts joined an already overloaded evidence pile. The deploy gremlin brought receipts.",
+    "verdictComment": "0.18.2 remains overloaded: fresh evidence now adds Desktop session dedup gaps, cross-profile Telegram storage bleed, shared new-chat drafts, and plugin hook short-circuit loss on top of the existing gateway/Desktop pile.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -20460,29 +20460,53 @@
         "number": 65714,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65714",
         "title": "[Feature]: Desktop — add setting to disable auto-scroll during streaming responses"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 66663,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66663",
+        "title": "[gateway] session.list RPC drops _lineage_root_id, breaking desktop session dedup"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 66887,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66887",
+        "title": "Multiplexed gateway: secondary-profile Telegram sessions persist in the default profile's state.db / sessions.json (creation AND recovery paths) — config/SOUL/memory scope correctly, storage does not"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 66662,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66662",
+        "title": "[desktop] New sessions share __new__ draft key causing draft bleed between unsaved chats"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 64823,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64823",
+        "title": "Feature: let pre_api_request complete a turn before provider transport"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -221,
+      "score": -230,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 221,
+      "evidencePenalty": 230,
       "survivalDays": 10,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 221,
+        "evidencePenalty": 230,
         "votePenalty": 0,
         "survivalDays": 10,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -221
+        "score": -230
       },
       "affected": [
         "approval-boundary",
@@ -20511,6 +20535,7 @@
         "message-delivery",
         "moa",
         "model-picker",
+        "plugin-tools",
         "prompt-size",
         "provider-routing",
         "sandbox",
@@ -21404,6 +21429,50 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Desktop 0.18.2 streaming auto-scroll remains disruptive enough to require a disable setting"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 66663,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66663",
+          "issue": "NousResearch/hermes-agent issue 66663",
+          "area": "session-state",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "session.list RPC on Hermes 0.18.2 drops _lineage_root_id, breaking Desktop session deduplication"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 66887,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66887",
+          "issue": "NousResearch/hermes-agent issue 66887",
+          "area": "config-profiles",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Multiplexed 0.18.2 Telegram sessions persist in the default profile store instead of the owning secondary profile"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 66662,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66662",
+          "issue": "NousResearch/hermes-agent issue 66662",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop 0.18.2 new unsaved chats share the __new__ draft key, leaking draft text between sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 64823,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/64823",
+          "issue": "NousResearch/hermes-agent issue 64823",
+          "area": "plugin-tools",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes 0.18.2 invokes pre_api_request hooks but discards completion directives and continues to provider transport"
         }
       ]
     },
