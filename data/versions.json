@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Patch release is mostly breathing, but Telegram final delivery, local-model first turns, and WebChat replay are still leaving little \"works on my machine\" traps in the carpet.",
+    "verdictComment": "Patch release is breathing, but the fresh evidence pile now includes cron scheduling, active-memory timeouts, provider auth, gateway restart races, and security-audit blind spots. The 3am deploy gremlins brought friends.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -37,35 +37,141 @@
         "number": 110901,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/110901",
         "title": "Telegram: final reply silently lost when user navigates away from chat during agent turn (2026.7.1)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111512,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111512",
+        "title": "Cron one-shot at-jobs remain idle past scheduled slot in 2026.7.1-2"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111799,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111799",
+        "title": "active-memory: ~45% timeout rate and zero cached results during agent turns (2026.7.1-2)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111570,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111570",
+        "title": "[Bug]: agents.list tools hot-reload not propagated to telegram channel workers — stale tool policy until full gateway restart (2026.7.1-2)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111472,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111472",
+        "title": "[Bug]: MiniMax-M3: thinking content leaks into final reply (adaptive AND off modes)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111510,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111510",
+        "title": "[Bug]: codex/* provider POSTs to legacy /backend-api/responses (403) at clean boot while sibling openai/* canonicalizes to /backend-api/codex/responses (200) — 2026.7.1"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111219,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111219",
+        "title": "secrets audit: auth-profile SQLite store scanned for default agent only (multi-agent blind spot)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111647,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111647",
+        "title": "[Bug]:  Nested subagent returns a valid result, but parent Task and mirrored Flow terminalize as blocked"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111745,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111745",
+        "title": "safe-package-install reifies all six @openai/codex platform binaries (~2.0 GB, ~1.65 GB unusable per host) despite correct os/cpu/optional flags"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111850,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111850",
+        "title": "stt-tts Talk: aborted active-memory pre-run surfaces as user-facing \"voice config failed\""
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111832,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111832",
+        "title": "stripAssistantInternalTraceLines misses the current tool-error warning format; model-echoed copies reach the channel"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 83337,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/83337",
+        "title": "Plugin/core version drift after upgrade causes silent channel failure"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111851,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111851",
+        "title": "Announce cron runs with suppressed silent replies report deliveryStatus \"not-delivered\" — indistinguishable from delivery failure"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111631,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111631",
+        "title": "sessions_spawn subagents don't inherit parent's tools.profile (no group:fs/group:runtime)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111242,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111242",
+        "title": "[Bug] Gateway restart races its own startup-migration lease; systemd start-limit exhausts ~10x before the lease expires → indefinite outage"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 111526,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111526",
+        "title": "[Bug]: WebChat: slash-command typing & ↑/↓ history recall lag: host render sorts a growing per-session Map with localeCompare"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 77,
+      "score": 39,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 9,
+      "evidencePenalty": 47,
       "survivalDays": 2,
       "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 9,
+        "evidencePenalty": 47,
         "votePenalty": 0,
         "survivalDays": 2,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 2,
         "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 77
+        "score": 39
       },
       "affected": [
         "telegram",
         "ui",
         "local-model",
-        "webchat"
+        "webchat",
+        "cron",
+        "memory",
+        "hot-reload",
+        "tool-policy",
+        "reasoning",
+        "codex",
+        "provider-auth",
+        "security",
+        "subagent-runtime",
+        "codex-plugin-install",
+        "voice",
+        "context-privacy",
+        "core-plugin-drift",
+        "message-delivery",
+        "gateway-startup",
+        "restart"
       ],
       "evidence": [
         {
@@ -122,6 +228,171 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Telegram direct chats on 2026.7.1-2 can lose the final reply when the user navigates away during a tool-heavy turn."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111512,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111512",
+          "issue": "openclaw/openclaw issue 111512",
+          "area": "cron",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "One-shot cron at-jobs can remain idle past their scheduled slot on OpenClaw 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111799,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111799",
+          "issue": "openclaw/openclaw issue 111799",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Active-memory shows roughly 45% timeout rate and zero cached results during agent turns on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111570,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111570",
+          "issue": "openclaw/openclaw issue 111570",
+          "area": "hot-reload",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Tool hot-reload does not propagate to Telegram channel workers until a full gateway restart on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111472,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111472",
+          "issue": "openclaw/openclaw issue 111472",
+          "area": "reasoning",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "MiniMax-M3 thinking content can leak into final replies even with thinking off/adaptive on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111510,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111510",
+          "issue": "openclaw/openclaw issue 111510",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "codex/* provider can POST to the legacy responses endpoint and get 403 at clean boot on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111219,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111219",
+          "issue": "openclaw/openclaw issue 111219",
+          "area": "security",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Secrets audit misses plaintext credentials in non-default agent auth stores on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111647,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111647",
+          "issue": "openclaw/openclaw issue 111647",
+          "area": "subagent-runtime",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Nested subagent can return a valid result while parent Task and mirrored Flow terminalize as blocked on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111745,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111745",
+          "issue": "openclaw/openclaw issue 111745",
+          "area": "codex-plugin-install",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "safe-package-install reifies all @openai/codex platform binaries, causing ~2 GiB installs on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111850,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111850",
+          "issue": "openclaw/openclaw issue 111850",
+          "area": "voice",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "STT/TTS Talk can surface an aborted active-memory pre-run as a user-facing voice config failure on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111832,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111832",
+          "issue": "openclaw/openclaw issue 111832",
+          "area": "context-privacy",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Current tool-error warning format can bypass internal trace stripping and reach channels on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 83337,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/83337",
+          "issue": "openclaw/openclaw issue 83337",
+          "area": "core-plugin-drift",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Core update to 2026.7.1-2 can leave official plugins on older versions, causing channel/plugin drift."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111851,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111851",
+          "issue": "openclaw/openclaw issue 111851",
+          "area": "message-delivery",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Suppressed silent cron replies report deliveryStatus not-delivered, masking expected silence vs delivery failure on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111631,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111631",
+          "issue": "openclaw/openclaw issue 111631",
+          "area": "tool-policy",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "sessions_spawn subagents do not inherit the parent tools.profile on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111242,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111242",
+          "issue": "openclaw/openclaw issue 111242",
+          "area": "gateway-startup",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Gateway restart can race its startup-migration lease and exhaust systemd start-limit into an outage on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 111526,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/111526",
+          "issue": "openclaw/openclaw issue 111526",
+          "area": "webchat",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "WebChat slash-command typing and history recall lag per keystroke on 2026.7.1-2."
         }
       ]
     },
@@ -20570,7 +20841,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 239,
-      "survivalDays": 11,
+      "survivalDays": 12,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -20578,7 +20849,7 @@
         "baseScore": 80,
         "evidencePenalty": 239,
         "votePenalty": 0,
-        "survivalDays": 11,
+        "survivalDays": 12,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
