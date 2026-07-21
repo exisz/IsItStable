@@ -1412,6 +1412,44 @@
     "createdAt": "2026-07-13T17:58:18.920Z"
   },
   {
+    "issueNumber": 154,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/154",
+    "version": "2026.6.33",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-07-21T11:25:55.513Z"
+  },
+  {
     "issueNumber": 146,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/146",
     "version": "2026.6.11",
@@ -20638,8 +20676,7 @@
       {
         "repo": "NousResearch/hermes-agent",
         "number": 62846,
-        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62846",
-        "title": "[Bug]: LINE adapter uses cache_image_from_bytes for audio/video"
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62846"
       },
       {
         "repo": "NousResearch/hermes-agent",
