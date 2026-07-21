@@ -1418,32 +1418,53 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "",
-    "referencedIssues": [],
+    "verdictComment": "Fresh LTS watch: one Telegram release-gate gremlin has an ID badge. Evidence is recorded while the release is still inside the 24h window.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 106738,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/106738",
+        "title": "[Bug]: LTS Telegram bot-to-bot release probe cannot observe replies"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 79,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 1,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 1,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 79
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "telegram"
+      ],
+      "evidence": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 106738,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/106738",
+          "issue": "openclaw/openclaw issue 106738",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Telegram bot-to-bot live release probe cannot observe replies on extended-stable/2026.6.33; issue explicitly lists the target branch/version and a deterministic failing release-check run."
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
