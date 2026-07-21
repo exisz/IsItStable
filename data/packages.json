@@ -416,32 +416,144 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
+      "verdictComment": "Fresh wheel, already dragging sharp edges: packaged tests include a live kill-switch canary without its guard, plugin handlers are tripping over new kwargs, and gateway TLS still found a rake to step on. Very \"works on my machine\", if the machine is haunted.",
+      "referencedIssues": [
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68311,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68311",
+          "title": "Every published sdist (0.13.0–0.19.0) ships tests/test_live_system_guard_self_test.py without tests/conftest.py — running the packaged tests executes os.kill(-1, SIGTERM) and kills the user's entire session"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68318,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68318",
+          "title": "[Bug]: v0.19.0 plugin handlers crash — unexpected task_id kwarg (registry.dispatch spreads kwargs to handler)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 29866,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/29866",
+          "title": "brew upgrade breaks certifi (cacert.pem missing in venv) - Feishu/Telegram/WeChat all fail"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68302,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68302",
+          "title": "[Bug]: Clicking a sidebar session has no effect while Skills & Tools is the active view"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 49529,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49529",
+          "title": "[Bug]: PyPI 0.17.0 wheel install: doctor false-positive venv entry point warning and optional-skills missing from wheel"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 59626,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59626",
+          "title": "dashboard --status can report wrapper lifecycle commands as running servers"
+        }
+      ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 80,
+        "score": 63,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 0,
+        "evidencePenalty": 17,
         "survivalDays": 0,
         "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 0,
+          "evidencePenalty": 17,
           "votePenalty": 0,
           "survivalDays": 0,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 0,
           "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 80
+          "score": 63
         },
-        "affected": [],
-        "evidence": []
+        "affected": [
+          "dashboard",
+          "desktop-ui",
+          "gateway",
+          "message-delivery",
+          "plugin-tools",
+          "runtime",
+          "security"
+        ],
+        "evidence": [
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 68311,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68311",
+            "issue": "NousResearch/hermes-agent issue 68311",
+            "area": "security",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "PyPI 0.19.0 sdist ships live_system_guard self-test without conftest guard; running packaged tests can execute os.kill(-1, SIGTERM)"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 68318,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68318",
+            "issue": "NousResearch/hermes-agent issue 68318",
+            "area": "plugin-tools",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.19.0 plugin handlers using the historical single-args shape crash with unexpected task_id/session kwargs"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 29866,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/29866",
+            "issue": "NousResearch/hermes-agent issue 29866",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "After updating to v0.19.0, gateway venv can miss certifi/cacert.pem, breaking Feishu/Telegram/WeChat message delivery"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 68302,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68302",
+            "issue": "NousResearch/hermes-agent issue 68302",
+            "area": "desktop-ui",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "v0.19.0 dashboard sidebar session clicks do not switch chat while Skills & Tools is active"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 49529,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/49529",
+            "issue": "NousResearch/hermes-agent issue 49529",
+            "area": "runtime",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "hermes doctor still reports a false-positive venv entry point warning on the official 0.19.0 wheel"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 59626,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59626",
+            "issue": "NousResearch/hermes-agent issue 59626",
+            "area": "dashboard",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "0.19.0 dashboard --status can mistake wrapper lifecycle commands for a running dashboard server"
+          }
+        ]
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
