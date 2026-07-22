@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Patch release is breathing, but the fresh evidence pile now includes cron scheduling, active-memory timeouts, provider auth, gateway restart races, and security-audit blind spots. The 3am deploy gremlins brought friends.",
+    "verdictComment": "The latest stable line keeps collecting sharp edges: startup migrations, channel delivery, plugin loading, and reasoning display all found fresh ways to say “works on my machine.”",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -127,51 +127,96 @@
         "number": 111526,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/111526",
         "title": "[Bug]: WebChat: slash-command typing & ↑/↓ history recall lag: host render sorts a growing per-session Map with localeCompare"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112660,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112660",
+        "title": "Feishu DM: internal envelope leaked to user visible text + empty reply / lost message bug"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112668,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112668",
+        "title": "sessions_yield abort-settle timeout still drops subagent announce on 2026.7.1-2 (post-SQLite storage rework)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112500,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112500",
+        "title": "Regression in 2026.7.1-2: cron ANNOUNCE drops Telegram message_thread_id even when job config has threadId"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112395,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112395",
+        "title": "[Bug]: Startup migration preflight blocks gateway after upgrade from 6.11 to 7.1; migration tables and leases are empty"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112427,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112427",
+        "title": "[Bug]: Codex plugin fails to load with ERR_REQUIRE_ESM_RACE_CONDITION on fresh Ubuntu 24.04 install (Node 24.18.0)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112341,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112341",
+        "title": "[Bug]: Session→SQLite migration deadlocks (`distinct filesystem aliases`) on large-inode filesystems (virtiofs/Kata) — `statSync().ino` read as JS Number loses precision"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112052,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112052",
+        "title": "[Bug]: claude-cli provider hardcodes reasoningOutputMode \"native\" — text `<think>` tags silently stripped, Thinking display broken since 2026.7.1 (regression)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 42,
+      "score": 19,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 47,
+      "evidencePenalty": 70,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 47,
+        "evidencePenalty": 70,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 42
+        "score": 19
       },
       "affected": [
-        "telegram",
-        "ui",
-        "local-model",
-        "webchat",
-        "cron",
-        "memory",
-        "hot-reload",
-        "tool-policy",
-        "reasoning",
         "codex",
-        "provider-auth",
-        "security",
-        "subagent-runtime",
         "codex-plugin-install",
-        "voice",
         "context-privacy",
         "core-plugin-drift",
-        "message-delivery",
+        "cron",
+        "feishu",
         "gateway-startup",
-        "restart"
+        "hot-reload",
+        "local-model",
+        "memory",
+        "message-delivery",
+        "provider-auth",
+        "reasoning",
+        "restart",
+        "security",
+        "sqlite",
+        "startup-migration",
+        "subagent-runtime",
+        "telegram",
+        "tool-policy",
+        "ui",
+        "voice",
+        "webchat"
       ],
       "evidence": [
         {
@@ -393,6 +438,83 @@
           "severity": 1,
           "penalty": 1,
           "reason": "WebChat slash-command typing and history recall lag per keystroke on 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112660,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112660",
+          "issue": "openclaw/openclaw issue 112660",
+          "area": "feishu",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Feishu DM on 2026.7.1-2 can leak internal envelopes to visible user text and lose/empty replies; gate included explicit target version."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112668,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112668",
+          "issue": "openclaw/openclaw issue 112668",
+          "area": "subagent-runtime",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "sessions_yield abort-settle timeout can drop the only subagent completion announce on 2026.7.1-2 during channel reconnect; gate included explicit reproduction."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112500,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112500",
+          "issue": "openclaw/openclaw issue 112500",
+          "area": "cron/telegram",
+          "type": "channel-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Cron ANNOUNCE drops Telegram message_thread_id on 2026.7.1-2, delivering topic jobs to the wrong chat context; gate included explicit target version."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112395,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112395",
+          "issue": "openclaw/openclaw issue 112395",
+          "area": "startup-migration",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Startup migration preflight blocks gateway after upgrade to 2026.7.1-2 despite empty migration tables/leases; Gate B included because environment explicitly reports target version."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112427,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112427",
+          "issue": "openclaw/openclaw issue 112427",
+          "area": "codex-plugin-install",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Codex plugin fails to load with ERR_REQUIRE_ESM_RACE_CONDITION on fresh Ubuntu 24.04 install running 2026.7.1-2; gate included OpenClaw version field."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112341,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112341",
+          "issue": "openclaw/openclaw issue 112341",
+          "area": "sqlite/startup-migration",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Session-to-SQLite migration can deadlock/fail on large-inode filesystems in 2026.7.1-2 due inode precision alias false positives; gate included OpenClaw version field."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112052,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112052",
+          "issue": "openclaw/openclaw issue 112052",
+          "area": "reasoning",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "claude-cli provider strips visible <think> output / breaks Thinking display on 2026.7.1-2; gate included explicit environment and symptom context."
         }
       ]
     },
@@ -1418,38 +1540,53 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh LTS watch: one Telegram release-gate gremlin has an ID badge. Evidence is recorded while the release is still inside the 24h window.",
+    "verdictComment": "Extended-stable picked up real shipping-risk paper cuts: Telegram probes, Docker tag drift, and Anthropic replay gremlins. Very “3am deploy says hello.”",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
         "number": 106738,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/106738",
         "title": "[Bug]: LTS Telegram bot-to-bot release probe cannot observe replies"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112391,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112391",
+        "title": "[Bug]: Docker :latest tag regressed from 2026.7.1 to 2026.6.33, triggering downgrade guard and blocking startup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 99382,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/99382",
+        "title": "Anthropic replay fails with \"Invalid signature in thinking block\" for thinking-enabled sessions after tool loops (no compaction)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 79,
+      "score": 75,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 1,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "evidencePenalty": 8,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 1,
+        "evidencePenalty": 8,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 79
+        "score": 75
       },
       "affected": [
+        "docker",
+        "gateway-startup",
+        "reasoning",
         "telegram"
       ],
       "evidence": [
@@ -1463,6 +1600,28 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Telegram bot-to-bot live release probe cannot observe replies on extended-stable/2026.6.33; issue explicitly lists the target branch/version and a deterministic failing release-check run."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112391,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112391",
+          "issue": "openclaw/openclaw issue 112391",
+          "area": "docker/latest-tag",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Docker :latest regressed from 2026.7.1 to 2026.6.33, triggering the downgrade guard and blocking startup; gate included explicit 2026.6.33 downgrade context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 99382,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/99382",
+          "issue": "openclaw/openclaw issue 99382",
+          "area": "reasoning",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Anthropic thinking replay can still 400-loop on 2026.6.33 with oversized/invalid thinking signatures; gate included explicit 2026.6.33 reproduction."
         }
       ]
     },
