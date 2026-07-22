@@ -20362,13 +20362,31 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "Fresh wheel, already dragging sharp edges: packaged tests include a live kill-switch canary without its guard, plugin handlers are tripping over new kwargs, and gateway TLS still found a rake to step on. Very \"works on my machine\", if the machine is haunted.",
+    "verdictComment": "v0.19.0 is carrying a full incident backpack: packaged-test kill switch, plugin/API breakage, gateway delivery failures, Desktop data-loss/crash loops, and state.db maintenance wedging. Very “works on my machine”, if the machine is haunted and the database is sweating.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
         "number": 68311,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68311",
         "title": "Every published sdist (0.13.0–0.19.0) ships tests/test_live_system_guard_self_test.py without tests/conftest.py — running the packaged tests executes os.kill(-1, SIGTERM) and kills the user's entire session"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68474,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68474",
+        "title": "state.db zeroed (95MB of null bytes) during desktop update to v0.19.0 on Windows"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68858,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68858",
+        "title": "[Bug]: v0.19 in-place compaction + dual FTS maintenance can saturate disk I/O and wedge gateway shutdown on large state.db"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 69016,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69016",
+        "title": "Desktop renderer memory leak: render process OOM-killed (render-process-gone, exitCode -36861) roughly every 60s"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20384,9 +20402,87 @@
       },
       {
         "repo": "NousResearch/hermes-agent",
+        "number": 68346,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68346",
+        "title": "[Bug]: # Dashboard chat fails with WebSocket code 1006 after upgrade to v0.19.0"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68406,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68406",
+        "title": "[Bug]: Telegram retry exhaustion can cancel fatal handoff before background reconnect is queued"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68517,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68517",
+        "title": "Desktop treats a basic-auth remote gateway as OAuth and never re-probes /api/auth/providers; sign-in window blank, Settings unreachable (follow-up to #51873 on a build containing f3af066b)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68379,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68379",
+        "title": "[Bug]: cannot import name 'is_provider_enabled' from 'hermes_cli.config' (Hermes Desktop 0.19.0)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68465,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68465",
+        "title": "Bug: Telegram gateway stuck at \"Connecting to Telegram (attempt 1/8)\" on Windows after clean run"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68393,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68393",
+        "title": "[Bug]: Mem0 writes from cron, flush, and subagent contexts despite provider contract"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 62726,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62726",
+        "title": "[Bug]: Dashboard cross-tab session bleed + /new hang requiring full container restart"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68756,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68756",
+        "title": "Desktop startup blocked ~11s on /api/status: eager plugin resolution imports lark_oapi (10,055 modules) on the event loop"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
         "number": 68302,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68302",
         "title": "[Bug]: Clicking a sidebar session has no effect while Skills & Tools is the active view"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68783,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68783",
+        "title": "[Bug]: Desktop app version stuck at 0.17.0 while CLI is v0.19.0 — apps/desktop/package.json version not bumped during releases"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68943,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68943",
+        "title": "[Bug]: Removed API | Provider isn't truly removed"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68392,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68392",
+        "title": "[Bug]: lazy session.activate omits desktop_contract and triggers false backend warning"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68396,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68396",
+        "title": "validate_response() accepts router timeout shim text as valid assistant completion"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 58670,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58670",
+        "title": "Make empty response retry count configurable (hardcoded to 3)"
       },
       {
         "repo": "NousResearch/hermes-agent",
@@ -20399,38 +20495,57 @@
         "number": 59626,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/59626",
         "title": "dashboard --status can report wrapper lifecycle commands as running servers"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68338,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68338",
+        "title": "cryptography"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68894,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68894",
+        "title": "Audio playback interrupted when submitting prompts in Desktop"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 63,
+      "score": 16,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 17,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "evidencePenalty": 67,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 17,
+        "evidencePenalty": 67,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 63
+        "score": 16
       },
       "affected": [
+        "auth",
         "dashboard",
+        "dependencies",
         "desktop-ui",
         "gateway",
+        "memory",
         "message-delivery",
         "plugin-tools",
+        "provider-routing",
         "runtime",
-        "security"
+        "security",
+        "session-state",
+        "telegram",
+        "version-metadata"
       ],
       "evidence": [
         {
@@ -20443,6 +20558,39 @@
           "severity": 5,
           "penalty": 5,
           "reason": "PyPI 0.19.0 sdist ships live_system_guard self-test without conftest guard; running packaged tests can execute os.kill(-1, SIGTERM)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68474,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68474",
+          "issue": "NousResearch/hermes-agent issue 68474",
+          "area": "session-state",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Desktop update to v0.19.0 can zero state.db, destroying the SQLite session database while reporting update success"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68858,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68858",
+          "issue": "NousResearch/hermes-agent issue 68858",
+          "area": "session-state",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "v0.19.0 in-place compaction plus broad FTS maintenance can saturate disk I/O and wedge gateway shutdown on large state.db"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69016,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69016",
+          "issue": "NousResearch/hermes-agent issue 69016",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "Windows Desktop 0.19.0 renderer grows memory rapidly and is OOM-killed roughly every 60 seconds"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -20468,6 +20616,94 @@
         },
         {
           "repo": "NousResearch/hermes-agent",
+          "number": 68346,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68346",
+          "issue": "NousResearch/hermes-agent issue 68346",
+          "area": "dashboard",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Dashboard chat can fail after upgrade to v0.19.0 with WebSocket code 1006 reconnect loops"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68406,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68406",
+          "issue": "NousResearch/hermes-agent issue 68406",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Telegram retry exhaustion on a 0.19.0 field incident can remove the adapter without queuing background reconnect"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68517,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68517",
+          "issue": "NousResearch/hermes-agent issue 68517",
+          "area": "auth",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Desktop against a v0.19.0 basic-auth remote gateway can misclassify auth as OAuth, leaving blank sign-in and unreachable Settings"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68379,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68379",
+          "issue": "NousResearch/hermes-agent issue 68379",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes Desktop 0.19.0 can fail provider/model initialization with missing is_provider_enabled import"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68465,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68465",
+          "issue": "NousResearch/hermes-agent issue 68465",
+          "area": "telegram",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Telegram gateway on Windows 0.19.0 can remain stuck at Connecting to Telegram attempt 1/8 after clean run"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68393,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68393",
+          "issue": "NousResearch/hermes-agent issue 68393",
+          "area": "memory",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Mem0 provider on 0.19.0 can write cron, flush, and subagent contexts despite the memory write-isolation contract"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 62726,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62726",
+          "issue": "NousResearch/hermes-agent issue 62726",
+          "area": "dashboard",
+          "type": "kernel",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Fresh 0.19.0 repro confirms dashboard cross-tab session bleed and /new hangs can require full container restart"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68756,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68756",
+          "issue": "NousResearch/hermes-agent issue 68756",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop 0.19.0 startup can block about 11 seconds on /api/status due to eager plugin resolution importing lark_oapi on the event loop"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
           "number": 68302,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68302",
           "issue": "NousResearch/hermes-agent issue 68302",
@@ -20476,6 +20712,61 @@
           "severity": 2,
           "penalty": 2,
           "reason": "v0.19.0 dashboard sidebar session clicks do not switch chat while Skills & Tools is active"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68783,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68783",
+          "issue": "NousResearch/hermes-agent issue 68783",
+          "area": "version-metadata",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Desktop package metadata remains stuck at 0.17.0 while the CLI is v0.19.0, confusing built app version identity"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68943,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68943",
+          "issue": "NousResearch/hermes-agent issue 68943",
+          "area": "provider-routing",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Provider/API removal on 0.19.0 can leave stale models visible and block newly-added provider models"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68392,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68392",
+          "issue": "NousResearch/hermes-agent issue 68392",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.19.0 lazy session.activate omits desktop_contract and can trigger a false backend-out-of-date warning"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68396,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68396",
+          "issue": "NousResearch/hermes-agent issue 68396",
+          "area": "provider-routing",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.19.0 accepts provider timeout shim text as a valid assistant completion instead of retrying/falling back"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 58670,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/58670",
+          "issue": "NousResearch/hermes-agent issue 58670",
+          "area": "runtime",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.19.0 still has hardcoded empty-response retry count, producing no-reply outcomes for flaky OpenAI-compatible providers"
         },
         {
           "repo": "NousResearch/hermes-agent",
@@ -20498,6 +20789,28 @@
           "severity": 1,
           "penalty": 1,
           "reason": "0.19.0 dashboard --status can mistake wrapper lifecycle commands for a running dashboard server"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68338,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68338",
+          "issue": "NousResearch/hermes-agent issue 68338",
+          "area": "dependencies",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "0.19.0 cryptography pin can conflict with environments upgraded to cryptography 49.0.0"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68894,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68894",
+          "issue": "NousResearch/hermes-agent issue 68894",
+          "area": "desktop-ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Desktop 0.19.0 audio playback can be interrupted when submitting prompts"
         }
       ]
     },
