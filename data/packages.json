@@ -538,7 +538,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.19.0 is carrying a full incident backpack: packaged-test kill switch, plugin/API breakage, gateway delivery failures, Desktop data-loss/crash loops, and state.db maintenance wedging. Very “works on my machine”, if the machine is haunted and the database is sweating.",
+      "verdictComment": "v0.19.0 picked up another stack of sharp edges: updater failures, auth timeouts, sandboxed attachments, trust-path risks, and Desktop crash loops. This release is not haunted; it is just very committed to acting haunted.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -683,43 +683,144 @@
           "number": 68894,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68894",
           "title": "Audio playback interrupted when submitting prompts in Desktop"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69570,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69570",
+          "title": "Desktop app auto-updater always fails: no macOS zip asset published to releases"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69462,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69462",
+          "title": "[Bug]: macOS: API Keys page times out connecting to backend after clean install (v0.19.0)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 63977,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63977",
+          "title": "exfil_curl context-scan pattern blocks legitimate API recipes in SOUL.md — whole identity file silently replaced, agent runs on stock persona"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 66888,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66888",
+          "title": "Memory context (format_memory_context) claims system authority but is transported inside user-role message content — trips injection-hardened personas; docs describe system-prompt injection"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69143,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69143",
+          "title": "[Bug]: Dashboard machine-level status blind to s6 per-profile gateways — widget/System/Channels report \"stopped\"/\"disconnected\" while profile gateway runs (0.19.0 regression)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69575,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69575",
+          "title": "[Bug]: Desktop app image uploads unreachable from profile Docker sandboxes"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69471,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69471",
+          "title": "Honcho: first-save config merge drops new fields into the wrong dict when writing to global config"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69398,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69398",
+          "title": "v2026.7.20: per-profile PairingStore path changed (profiles/<name>/platforms/pairing/ -> profiles/<name>/pairing/) — existing pairing approvals silently stop working after upgrade; hermes pairing approve writes to a store the multiplex authz never consults"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69476,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69476",
+          "title": "pip installs cannot use official bundled skills: wheel ships no skills/, forcing the skills.sh route where DANGEROUS false positives block install"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69470,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69470",
+          "title": "Qwen OAuth: resolve_runtime_provider ignores resolve_qwen_runtime_credentials, breaks auth-failure fallthrough"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69764,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69764",
+          "title": "[Bug]: Host Path Leakage in File Attachment Orchestration (v0.19.0)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 65868,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65868",
+          "title": "Hermes desktop v0.17.0 crashes repeatedly in Rust→V8 IPC bridge (renderer SIGTRAP crash-loop + main-process abort on update-skew)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69727,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69727",
+          "title": "[Bug]: In version 0.19, there is a conflict issue when multiple sessions control the browser simultaneously"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69663,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69663",
+          "title": "Desktop stuck \"An update is finishing…\" after a SUCCESSFUL self-update: hermes-setup succeeds but never exits, marker Drop never runs, boot gate blocks forever"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69208,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69208",
+          "title": "[Bug]: HTTP 400 on multi-turn tool calls with gemini-3-6-flash via Venice (thought_signature stripped by proxy)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69090,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69090",
+          "title": "[Bug]: Matrix adapter uses only the default recovery key in multi-profile mode"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 16,
+        "score": -121,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 67,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "evidencePenalty": 121,
+        "survivalDays": 2,
+        "survivalBonus": 6,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 67,
+          "evidencePenalty": 121,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 2,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 2,
+          "survivalBonus": 6,
           "curatedBonus": 0,
-          "score": 16
+          "score": -121
         },
         "affected": [
+          "attachments",
           "auth",
+          "browser",
+          "config-profiles",
           "dashboard",
           "dependencies",
           "desktop-ui",
           "gateway",
+          "macos-updater",
+          "matrix",
           "memory",
-          "message-delivery",
           "plugin-tools",
           "provider-routing",
           "runtime",
           "security",
           "session-state",
+          "skills",
           "telegram",
           "version-metadata"
         ],
@@ -987,6 +1088,182 @@
             "severity": 1,
             "penalty": 1,
             "reason": "Desktop 0.19.0 audio playback can be interrupted when submitting prompts"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69570,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69570",
+            "issue": "NousResearch/hermes-agent issue 69570",
+            "area": "macos-updater",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.19.0 Desktop auto-updater cannot find a published macOS zip asset, leaving app updates permanently failed"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69462,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69462",
+            "issue": "NousResearch/hermes-agent issue 69462",
+            "area": "auth",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Clean macOS Desktop 0.19.0 install times out on the API Keys page while the backend is otherwise reachable"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 63977,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/63977",
+            "issue": "NousResearch/hermes-agent issue 63977",
+            "area": "security",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "v0.19.0 still carries an overbroad exfil_curl context-scan pattern that can silently replace legitimate SOUL.md identity content"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 66888,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66888",
+            "issue": "NousResearch/hermes-agent issue 66888",
+            "area": "memory",
+            "type": "kernel",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "v0.19.0 still transports memory context with system-authority language inside user-role content, creating a trust-path risk"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69143,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69143",
+            "issue": "NousResearch/hermes-agent issue 69143",
+            "area": "dashboard",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "0.19.0 Docker per-profile gateway supervision makes dashboard/system/channel status report stopped while the profile gateway runs"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69575,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69575",
+            "issue": "NousResearch/hermes-agent issue 69575",
+            "area": "attachments",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Desktop 0.19.0 image uploads are unreachable from profile Docker sandboxes because configured terminal.docker_volumes are not applied"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69471,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69471",
+            "issue": "NousResearch/hermes-agent issue 69471",
+            "area": "config-profiles",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Honcho first-save config merge on v0.19.0 drops new fields into the wrong config dictionary"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69398,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69398",
+            "issue": "NousResearch/hermes-agent issue 69398",
+            "area": "auth",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.19.0 per-profile PairingStore path change breaks upgraded Telegram authorization until pairing files are migrated"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69476,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69476",
+            "issue": "NousResearch/hermes-agent issue 69476",
+            "area": "skills",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "v0.19.0 PyPI wheel ships no bundled skills payload, forcing skills.sh installs down a missing/dangerous fallback route"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69470,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69470",
+            "issue": "NousResearch/hermes-agent issue 69470",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Qwen OAuth runtime-provider resolution fails on v0.19.0, preventing auth-failure fallback to OpenRouter"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69764,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69764",
+            "issue": "NousResearch/hermes-agent issue 69764",
+            "area": "attachments",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Windows Desktop 0.19.0 leaks host attachment paths into sandbox file orchestration, breaking access from the Docker/WSL environment"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 65868,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/65868",
+            "issue": "NousResearch/hermes-agent issue 65868",
+            "area": "desktop-ui",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Update from 0.18.2 to 0.19.0 correlates with repeated Desktop Rust-to-V8 IPC SIGTRAP crash loops and main-process aborts"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69727,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69727",
+            "issue": "NousResearch/hermes-agent issue 69727",
+            "area": "browser",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Hermes 0.19.0 can conflict when multiple sessions control the browser simultaneously"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69663,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69663",
+            "issue": "NousResearch/hermes-agent issue 69663",
+            "area": "macos-updater",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "macOS 0.19.0 self-update can remain stuck at “An update is finishing…” even after hermes-setup exits successfully"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69208,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69208",
+            "issue": "NousResearch/hermes-agent issue 69208",
+            "area": "provider-routing",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes 0.19.0 receives HTTP 400 on multi-turn Gemini tool calls through Venice when thought signatures are stripped"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69090,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69090",
+            "issue": "NousResearch/hermes-agent issue 69090",
+            "area": "matrix",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Matrix adapter on 0.19.0 only uses the default recovery key in multi-profile mode"
           }
         ]
       },
