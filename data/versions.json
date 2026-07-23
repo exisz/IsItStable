@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "The latest stable line keeps collecting sharp edges: startup migrations, channel delivery, plugin loading, and reasoning display all found fresh ways to say “works on my machine.”",
+    "verdictComment": "Latest stable has more dents: startup hooks, Control UI, iOS Talk, docs config, plugin load, channel delivery. The 3am deploy gremlins brought a clipboard.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -169,29 +169,53 @@
         "number": 112052,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/112052",
         "title": "[Bug]: claude-cli provider hardcodes reasoningOutputMode \"native\" — text `<think>` tags silently stripped, Thinking display broken since 2026.7.1 (regression)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112696,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112696",
+        "title": "Control UI 2026.7.1-2: agent avatar + session list regressions in multi-agent setup"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112703,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112703",
+        "title": "[Bug]: iOS app 2026.7.2 Talk realtime incompatible with every published gateway (2026.7.1-2, 2026.7.2-beta.3) — silent robot-voice fallback"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112912,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112912",
+        "title": "boot-md: all BOOT.md startup hooks fail silently with CronSessionLifecycleClaimError on first boot after upgrading from <=2026.6.x (stale legacy boot session entries)"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112824,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112824",
+        "title": "Issue on docs"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 19,
+      "score": 10,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 70,
+      "evidencePenalty": 79,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 70,
+        "evidencePenalty": 79,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 19
+        "score": 10
       },
       "affected": [
         "codex",
@@ -199,6 +223,8 @@
         "context-privacy",
         "core-plugin-drift",
         "cron",
+        "cron/telegram",
+        "docs-command",
         "feishu",
         "gateway-startup",
         "hot-reload",
@@ -210,6 +236,7 @@
         "restart",
         "security",
         "sqlite",
+        "sqlite/startup-migration",
         "startup-migration",
         "subagent-runtime",
         "telegram",
@@ -515,6 +542,50 @@
           "severity": 2,
           "penalty": 2,
           "reason": "claude-cli provider strips visible <think> output / breaks Thinking display on 2026.7.1-2; gate included explicit environment and symptom context."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112696,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112696",
+          "issue": "openclaw/openclaw issue 112696",
+          "area": "ui",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Control UI agent avatar upload and multi-agent session selection regressions are explicitly reproduced after upgrading to 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112703,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112703",
+          "issue": "openclaw/openclaw issue 112703",
+          "area": "voice",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "iOS 2026.7.2 Talk realtime is incompatible with the published 2026.7.1-2 gateway, causing realtime Talk startup to fail and fall back silently."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112912,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112912",
+          "issue": "openclaw/openclaw issue 112912",
+          "area": "startup-migration",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "After upgrading from <=2026.6.x to 2026.7.1-2, stale legacy boot session entries make every BOOT.md startup hook fail with CronSessionLifecycleClaimError."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112824,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112824",
+          "issue": "openclaw/openclaw issue 112824",
+          "area": "docs-command",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Memory configuration examples fail config validation on 2026.7.1-2, leaving documented setup paths broken for users."
         }
       ]
     },
@@ -1564,24 +1635,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 75,
+      "score": 78,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 8,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 8,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 75
+        "score": 78
       },
       "affected": [
         "docker",
