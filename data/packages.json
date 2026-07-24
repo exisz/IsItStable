@@ -850,29 +850,47 @@
           "number": 69090,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69090",
           "title": "[Bug]: Matrix adapter uses only the default recovery key in multi-profile mode"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 70344,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70344",
+          "title": "Gateway silently deaf after generic network loss — reconnect watcher never starts post-escalation (0.19.0)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69907,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69907",
+          "title": "[desktop] Chromium utility child process bypasses single-instance lock on Windows"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68387,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68387",
+          "title": "[Bug]: Google Chat connects successfully but bot_user_id remains unresolved and no events are received"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -121,
+        "score": -131,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 121,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "evidencePenalty": 131,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 121,
+          "evidencePenalty": 131,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": -121
+          "score": -131
         },
         "affected": [
           "attachments",
@@ -883,6 +901,7 @@
           "dependencies",
           "desktop-ui",
           "gateway",
+          "google-chat",
           "macos-updater",
           "matrix",
           "memory",
@@ -1335,6 +1354,39 @@
             "severity": 2,
             "penalty": 2,
             "reason": "Matrix adapter on 0.19.0 only uses the default recovery key in multi-profile mode"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 70344,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70344",
+            "issue": "NousResearch/hermes-agent issue 70344",
+            "area": "gateway",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Hermes 0.19.0 gateway can stay silently deaf after generic network loss because the reconnect watcher never starts after escalation"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 69907,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69907",
+            "issue": "NousResearch/hermes-agent issue 69907",
+            "area": "desktop-ui",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Windows Hermes Desktop 0.19.0 can spawn Chromium utility children outside the single-instance lock, leaving degraded lifecycle state"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 68387,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68387",
+            "issue": "NousResearch/hermes-agent issue 68387",
+            "area": "google-chat",
+            "type": "channel-specific",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Current Docker release v0.19.0 can connect Google Chat successfully while bot_user_id remains unresolved and no events are received"
           }
         ]
       },

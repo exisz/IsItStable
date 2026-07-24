@@ -20833,29 +20833,47 @@
         "number": 69090,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69090",
         "title": "[Bug]: Matrix adapter uses only the default recovery key in multi-profile mode"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 70344,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70344",
+        "title": "Gateway silently deaf after generic network loss — reconnect watcher never starts post-escalation (0.19.0)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 69907,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69907",
+        "title": "[desktop] Chromium utility child process bypasses single-instance lock on Windows"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68387,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68387",
+        "title": "[Bug]: Google Chat connects successfully but bot_user_id remains unresolved and no events are received"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -121,
+      "score": -131,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 121,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "evidencePenalty": 131,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 121,
+        "evidencePenalty": 131,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": -121
+        "score": -131
       },
       "affected": [
         "attachments",
@@ -20866,6 +20884,7 @@
         "dependencies",
         "desktop-ui",
         "gateway",
+        "google-chat",
         "macos-updater",
         "matrix",
         "memory",
@@ -21318,6 +21337,39 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Matrix adapter on 0.19.0 only uses the default recovery key in multi-profile mode"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 70344,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70344",
+          "issue": "NousResearch/hermes-agent issue 70344",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Hermes 0.19.0 gateway can stay silently deaf after generic network loss because the reconnect watcher never starts after escalation"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69907,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69907",
+          "issue": "NousResearch/hermes-agent issue 69907",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Windows Hermes Desktop 0.19.0 can spawn Chromium utility children outside the single-instance lock, leaving degraded lifecycle state"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68387,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68387",
+          "issue": "NousResearch/hermes-agent issue 68387",
+          "area": "google-chat",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Current Docker release v0.19.0 can connect Google Chat successfully while bot_user_id remains unresolved and no events are received"
         }
       ]
     },
@@ -21860,29 +21912,47 @@
         "number": 66661,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/66661",
         "title": "[desktop] Session bleed: rejected submit text written to wrong session's composer"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68387,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68387",
+        "title": "[Bug]: Google Chat connects successfully but bot_user_id remains unresolved and no events are received"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 69874,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69874",
+        "title": "Python 3.14 venv ships cp311 binaries - numpy/Pillow broken on Windows"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68064,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68064",
+        "title": "[Setup]: not see all openrouter models / cant input manualy"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -239,
+      "score": -246,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 239,
+      "evidencePenalty": 246,
       "survivalDays": 12,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 239,
+        "evidencePenalty": 246,
         "votePenalty": 0,
         "survivalDays": 12,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -239
+        "score": -246
       },
       "affected": [
         "approval-boundary",
@@ -21902,6 +21972,7 @@
         "file-tools",
         "gateway",
         "goal-continuation",
+        "google-chat",
         "kanban",
         "lazy-deps",
         "line",
@@ -22893,6 +22964,39 @@
           "severity": 2,
           "penalty": 2,
           "reason": "Desktop 0.18.2 can restore rejected submit text into the wrong session composer after session switch"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68387,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68387",
+          "issue": "NousResearch/hermes-agent issue 68387",
+          "area": "google-chat",
+          "type": "channel-specific",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes Agent 0.18.2 Google Chat adapter can connect but fail to resolve bot_user_id or process incoming events"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 69874,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/69874",
+          "issue": "NousResearch/hermes-agent issue 69874",
+          "area": "dependencies",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes 0.18.2 on Windows/Python 3.14 can create a venv with cp311 numpy/Pillow binaries, breaking image and scientific tooling"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68064,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68064",
+          "issue": "NousResearch/hermes-agent issue 68064",
+          "area": "provider-routing",
+          "type": "tool-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Hermes 0.18.2 Windows installer setup can hide OpenRouter models and offers no manual model input path"
         }
       ]
     },
