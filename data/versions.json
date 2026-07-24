@@ -6,7 +6,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Latest stable has more dents: startup hooks, Control UI, iOS Talk, docs config, plugin load, channel delivery. The 3am deploy gremlins brought a clipboard.",
+    "verdictComment": "Latest stable picked up more target-version dents: startup hooks, Control UI, iOS Talk, docs config, plugin load, channel delivery, doctor locks, and Codex/Gateway stalls. The 3am deploy gremlins brought a clipboard and a stopwatch.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -193,29 +193,41 @@
         "number": 112824,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/112824",
         "title": "Issue on docs"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112854,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112854",
+        "title": "Doctor misclassifies exact openclaw-gateway process title as non-OpenClaw lock owner"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 112698,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/112698",
+        "title": "[Bug]: Codex app-server notification path starves Gateway main thread ~22s — quadratic reasoning-snapshot rebuild per streaming delta (2026.7.1-2)"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 10,
+      "score": 4,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 79,
+      "evidencePenalty": 85,
       "survivalDays": 3,
       "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 79,
+        "evidencePenalty": 85,
         "votePenalty": 0,
         "survivalDays": 3,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 3,
         "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 10
+        "score": 4
       },
       "affected": [
         "codex",
@@ -225,6 +237,7 @@
         "cron",
         "cron/telegram",
         "docs-command",
+        "doctor",
         "feishu",
         "gateway-startup",
         "hot-reload",
@@ -586,6 +599,28 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Memory configuration examples fail config validation on 2026.7.1-2, leaving documented setup paths broken for users."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112854,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112854",
+          "issue": "openclaw/openclaw issue 112854",
+          "area": "doctor",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Doctor misclassifies the exact openclaw-gateway process title as a non-OpenClaw lock owner; gate included because the source is reproduced against 2026.7.1-2."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112698,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112698",
+          "issue": "openclaw/openclaw issue 112698",
+          "area": "codex",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Codex app-server notification streaming can starve the Gateway main thread for ~22s on 2026.7.1-2 via quadratic reasoning-snapshot rebuilds."
         }
       ]
     },
@@ -1635,24 +1670,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 78,
+      "score": 81,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 8,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 8,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 78
+        "score": 81
       },
       "affected": [
         "docker",
