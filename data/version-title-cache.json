@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-24T01:30:16.551Z",
+  "generatedAt": "2026-07-24T04:59:25.720Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -663,7 +663,7 @@
         "risk:runtime",
         "affected:qqbot",
         "pkg:hermes-agent",
-        "score:80-89",
+        "score:70-79",
         "affected:lazy-deps",
         "affected:hermes-link",
         "affected:tui"
@@ -673,7 +673,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-15T01:27:47Z"
+      "updatedAt": "2026-07-24T02:53:58Z"
     },
     {
       "version": "0.18.2",
@@ -732,7 +732,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-20T02:04:37Z"
+      "updatedAt": "2026-07-24T02:53:56Z"
     },
     {
       "version": "0.19.0",
@@ -771,7 +771,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/153",
       "createdAt": "2026-07-20T19:22:36Z",
-      "updatedAt": "2026-07-23T02:56:15Z"
+      "updatedAt": "2026-07-24T02:53:53Z"
     },
     {
       "version": "0.0.1",
