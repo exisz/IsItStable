@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-25T01:30:00.541Z",
+  "generatedAt": "2026-07-25T04:54:39.008Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -760,10 +760,12 @@
         "affected:dependencies",
         "affected:desktop-ui",
         "affected:provider-routing",
+        "affected:session-history",
         "affected:skills",
         "score:0-9",
         "affected:attachments",
         "affected:session-state",
+        "affected:weixin",
         "affected:macos-updater"
       ],
       "issueNumber": 153,
@@ -771,7 +773,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/153",
       "createdAt": "2026-07-20T19:22:36Z",
-      "updatedAt": "2026-07-24T02:53:53Z"
+      "updatedAt": "2026-07-25T02:56:36Z"
     },
     {
       "version": "0.0.1",
