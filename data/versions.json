@@ -20627,7 +20627,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.19.0 picked up another stack of sharp edges: updater failures, auth timeouts, sandboxed attachments, trust-path risks, and Desktop crash loops. This release is not haunted; it is just very committed to acting haunted.",
+    "verdictComment": "v0.19.0 keeps finding new ways to make Desktop feel haunted: vanished assistant bubbles, duplicate project lanes, compaction eating the human-readable past, and Weixin media delivery face-planting at upload.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -20886,29 +20886,53 @@
         "number": 68387,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68387",
         "title": "[Bug]: Google Chat connects successfully but bot_user_id remains unresolved and no events are received"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 70846,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70846",
+        "title": "[Bug]: Compaction for agent causes message history to disappear for humans too"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 68321,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68321",
+        "title": "Desktop: all assistant messages vanish when switching away from and back to a chat (user messages remain; DB intact)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 52811,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52811",
+        "title": "[Bug]: Desktop sidebar shows duplicate entries under Project — same conversation listed under both \"main\" branch and folder name"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 70792,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70792",
+        "title": "[Bug] Weixin local image delivery fails at CDN upload stage"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -131,
+      "score": -141,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 131,
-      "survivalDays": 3,
-      "survivalBonus": 9,
+      "evidencePenalty": 141,
+      "survivalDays": 4,
+      "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 131,
+        "evidencePenalty": 141,
         "votePenalty": 0,
-        "survivalDays": 3,
+        "survivalDays": 4,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 3,
-        "survivalBonus": 9,
+        "survivalCreditedDays": 4,
+        "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": -131
+        "score": -141
       },
       "affected": [
         "attachments",
@@ -20927,10 +20951,12 @@
         "provider-routing",
         "runtime",
         "security",
+        "session-history",
         "session-state",
         "skills",
         "telegram",
-        "version-metadata"
+        "version-metadata",
+        "weixin"
       ],
       "evidence": [
         {
@@ -21405,6 +21431,50 @@
           "severity": 3,
           "penalty": 3,
           "reason": "Current Docker release v0.19.0 can connect Google Chat successfully while bot_user_id remains unresolved and no events are received"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 70846,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70846",
+          "issue": "NousResearch/hermes-agent issue 70846",
+          "area": "session-history",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 compaction can replace human-readable prior chat history with a summary, blocking later review/documentation"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68321,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68321",
+          "issue": "NousResearch/hermes-agent issue 68321",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Hermes Desktop 0.19.0 can drop all assistant messages from rendered chat after switching sessions while DB rows remain intact"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 52811,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/52811",
+          "issue": "NousResearch/hermes-agent issue 52811",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Hermes Desktop v0.19.0 project sidebar can duplicate conversations across branch/folder lanes, corrupting navigation counts"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 70792,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70792",
+          "issue": "NousResearch/hermes-agent issue 70792",
+          "area": "weixin",
+          "type": "channel-specific",
+          "severity": 1,
+          "penalty": 1,
+          "reason": "Weixin iLink image delivery on Hermes 0.19.0 fails at getUploadUrl with ret=-2, blocking outbound local media"
         }
       ]
     },
