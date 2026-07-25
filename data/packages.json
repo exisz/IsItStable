@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Latest stable picked up more target-version dents: startup hooks, Control UI, iOS Talk, docs config, plugin load, channel delivery, doctor locks, and Codex/Gateway stalls. The 3am deploy gremlins brought a clipboard and a stopwatch.",
+      "verdictComment": "Latest stable picked up fresh target-version dents: provenance, session reset, gateway start, model listing, and dependency-security grit. The 3am deploy gremlins found the supply closet.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -209,29 +209,59 @@
           "number": 112698,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/112698",
           "title": "[Bug]: Codex app-server notification path starves Gateway main thread ~22s — quadratic reasoning-snapshot rebuild per streaming delta (2026.7.1-2)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 113447,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/113447",
+          "title": "[Bug]: openclaw@2026.7.1-2 root package lacks verifiable build provenance"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 113466,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/113466",
+          "title": "[Bug]: /new and /reset don't actually create a new session in 2026.7.1-2"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 108435,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/108435",
+          "title": "[Bug]: update to openclaw 2026.7.1: gateway fails to start w/ error"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 112680,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/112680",
+          "title": "openclaw models list (default view) crashes with TypeError in applyAnthropicSonnet5Cost when a configured Anthropic Sonnet 5 ref is not resolvable from the registry"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 113584,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/113584",
+          "title": "npm shrinkwrap pins brace-expansion version affected by high-severity advisory"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 4,
+        "score": -105,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 85,
+        "evidencePenalty": 105,
         "survivalDays": 3,
         "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 85,
+          "evidencePenalty": 105,
           "votePenalty": 0,
           "survivalDays": 3,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 3,
           "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": 4
+          "score": -105
         },
         "affected": [
           "codex",
@@ -240,6 +270,8 @@
           "core-plugin-drift",
           "cron",
           "cron/telegram",
+          "dependency-resolution",
+          "dependency-security",
           "docs-command",
           "doctor",
           "feishu",
@@ -248,10 +280,13 @@
           "local-model",
           "memory",
           "message-delivery",
+          "model-routing",
           "provider-auth",
           "reasoning",
+          "release-provenance",
           "restart",
           "security",
+          "session-state",
           "sqlite",
           "sqlite/startup-migration",
           "startup-migration",
@@ -625,6 +660,61 @@
             "severity": 4,
             "penalty": 4,
             "reason": "Codex app-server notification streaming can starve the Gateway main thread for ~22s on 2026.7.1-2 via quadratic reasoning-snapshot rebuilds."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 113447,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/113447",
+            "issue": "openclaw/openclaw issue 113447",
+            "area": "release-provenance",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Root openclaw@2026.7.1-2 package lacks verifiable/reproducible npm build provenance while the exact version is explicitly reported."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 113466,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/113466",
+            "issue": "openclaw/openclaw issue 113466",
+            "area": "session-state",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "/new and /reset report a new session on 2026.7.1-2 but keep prior conversation context because the reset path is not invoked."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 108435,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/108435",
+            "issue": "openclaw/openclaw issue 108435",
+            "area": "gateway-startup",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Gateway startup failure thread has a target-version reproduction path/comment for 2026.7.1-2, blocking CLI/service availability."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 112680,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/112680",
+            "issue": "openclaw/openclaw issue 112680",
+            "area": "model-routing",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "openclaw models list crashes on 2026.7.1-2 when a configured Anthropic Sonnet 5 reference is unresolved from the registry."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 113584,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/113584",
+            "issue": "openclaw/openclaw issue 113584",
+            "area": "dependency-security",
+            "type": "runtime",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Published openclaw@2026.7.1-2 shrinkwrap pins dependencies affected by high-severity advisories."
           }
         ]
       },
