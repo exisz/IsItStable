@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-26T01:44:17.742Z",
+  "generatedAt": "2026-07-26T05:19:50.743Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -317,6 +317,7 @@
         "version",
         "risk:channel",
         "risk:tool",
+        "risk:kernel",
         "risk:runtime",
         "affected:discord",
         "affected:feishu",
@@ -337,7 +338,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/130",
       "createdAt": "2026-06-02T00:36:55Z",
-      "updatedAt": "2026-06-29T00:39:09Z"
+      "updatedAt": "2026-07-26T02:57:30Z"
     },
     {
       "version": "0.14.0",
@@ -348,6 +349,7 @@
         "risk:tool",
         "risk:kernel",
         "risk:runtime",
+        "affected:security",
         "affected:gateway",
         "affected:tool",
         "affected:plugin-install",
@@ -364,7 +366,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/115",
       "createdAt": "2026-06-01T23:54:21Z",
-      "updatedAt": "2026-06-25T00:34:44Z"
+      "updatedAt": "2026-07-26T02:57:33Z"
     },
     {
       "version": "0.15.0",
@@ -378,6 +380,7 @@
         "risk:runtime",
         "affected:feishu",
         "affected:runtime",
+        "affected:security",
         "affected:telegram",
         "affected:gateway",
         "affected:wechat",
@@ -406,7 +409,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/131",
       "createdAt": "2026-06-02T00:36:56Z",
-      "updatedAt": "2026-07-01T00:47:45Z"
+      "updatedAt": "2026-07-26T02:57:35Z"
     },
     {
       "version": "0.15.1",
@@ -416,8 +419,10 @@
         "version",
         "risk:channel",
         "risk:tool",
+        "risk:kernel",
         "risk:runtime",
         "affected:discord",
+        "affected:security",
         "affected:telegram",
         "affected:gateway",
         "affected:plugin-install",
@@ -437,7 +442,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/116",
       "createdAt": "2026-06-01T23:54:23Z",
-      "updatedAt": "2026-06-27T00:32:03Z"
+      "updatedAt": "2026-07-26T02:57:38Z"
     },
     {
       "version": "0.15.2",
@@ -447,6 +452,7 @@
         "version",
         "risk:channel",
         "risk:tool",
+        "risk:kernel",
         "risk:runtime",
         "risk:other",
         "affected:feishu",
@@ -475,7 +481,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/117",
       "createdAt": "2026-06-01T23:54:24Z",
-      "updatedAt": "2026-06-25T00:34:37Z"
+      "updatedAt": "2026-07-26T02:57:40Z"
     },
     {
       "version": "0.16.0",
@@ -489,6 +495,7 @@
         "risk:runtime",
         "affected:compaction",
         "affected:runtime",
+        "affected:security",
         "affected:telegram",
         "affected:voice",
         "affected:matrix",
@@ -530,15 +537,14 @@
         "affected:provider-routing",
         "affected:restart",
         "affected:session-history",
-        "affected:skills",
-        "affected:termux"
+        "affected:skills"
       ],
       "issueNumber": 135,
       "title": "[v0.16.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/135",
       "createdAt": "2026-06-06T01:36:26Z",
-      "updatedAt": "2026-06-19T00:32:09Z"
+      "updatedAt": "2026-07-26T02:57:43Z"
     },
     {
       "version": "0.17.0",
@@ -594,7 +600,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/143",
       "createdAt": "2026-06-19T20:28:46Z",
-      "updatedAt": "2026-07-01T00:45:20Z"
+      "updatedAt": "2026-07-26T02:57:47Z"
     },
     {
       "version": "0.18.0",
@@ -650,7 +656,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/147",
       "createdAt": "2026-07-01T20:32:17Z",
-      "updatedAt": "2026-07-16T01:32:23Z"
+      "updatedAt": "2026-07-26T02:57:49Z"
     },
     {
       "version": "0.18.1",
@@ -660,8 +666,10 @@
         "version",
         "risk:channel",
         "risk:tool",
+        "risk:kernel",
         "risk:runtime",
         "affected:qqbot",
+        "affected:security",
         "pkg:hermes-agent",
         "score:70-79",
         "affected:lazy-deps",
@@ -673,7 +681,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-24T02:53:58Z"
+      "updatedAt": "2026-07-26T02:57:51Z"
     },
     {
       "version": "0.18.2",
@@ -750,6 +758,7 @@
         "affected:gateway",
         "affected:matrix",
         "affected:browser",
+        "affected:approval-boundary",
         "affected:plugin-tools",
         "affected:memory",
         "pkg:hermes-agent",
@@ -758,22 +767,25 @@
         "affected:config-profiles",
         "affected:dashboard",
         "affected:dependencies",
+        "affected:desktop-remote-gateway",
         "affected:desktop-ui",
         "affected:provider-routing",
         "affected:session-history",
         "affected:skills",
         "score:0-9",
         "affected:attachments",
+        "affected:context-engine",
         "affected:session-state",
         "affected:weixin",
-        "affected:macos-updater"
+        "affected:macos-updater",
+        "affected:terminal"
       ],
       "issueNumber": 153,
       "title": "[v0.19.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/153",
       "createdAt": "2026-07-20T19:22:36Z",
-      "updatedAt": "2026-07-25T02:56:36Z"
+      "updatedAt": "2026-07-26T02:56:28Z"
     },
     {
       "version": "0.0.1",
