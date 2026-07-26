@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Latest stable picked up fresh target-version dents: provenance, session reset, gateway start, model listing, and dependency-security grit. The 3am deploy gremlins found the supply closet.",
+      "verdictComment": "Latest stable picked up three more target-version dents: gateway/Signal startup, WebChat ordering, and model identity drift. The 3am deploy gremlins are no longer just knocking; they found the side door.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -239,29 +239,47 @@
           "number": 113584,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/113584",
           "title": "npm shrinkwrap pins brace-expansion version affected by high-severity advisory"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 113983,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/113983",
+          "title": "[Bug]: 2026.7.1-2 gateway lock loop + signal plugin never loads after `openclaw update`"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 113756,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/113756",
+          "title": "[Bug]: Message ordering conflict / out-of-order replies still occurring on 2026.7.1-2 (webchat)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 113978,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/113978",
+          "title": "agentRuntime id replaces the configured provider in session state and user-facing model labels (2026.7.1-2)"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -105,
+        "score": -115,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 105,
+        "evidencePenalty": 115,
         "survivalDays": 3,
         "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 105,
+          "evidencePenalty": 115,
           "votePenalty": 0,
           "survivalDays": 3,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 3,
           "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": -105
+          "score": -115
         },
         "affected": [
           "codex",
@@ -715,6 +733,39 @@
             "severity": 5,
             "penalty": 5,
             "reason": "Published openclaw@2026.7.1-2 shrinkwrap pins dependencies affected by high-severity advisories."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 113983,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/113983",
+            "issue": "openclaw/openclaw issue 113983",
+            "area": "gateway-startup",
+            "type": "kernel",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Gateway upgrade to 2026.7.1-2 can enter a startup migration lock loop and then start without loading the Signal provider/plugin, leaving channel service unavailable."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 113756,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/113756",
+            "issue": "openclaw/openclaw issue 113756",
+            "area": "webchat",
+            "type": "channel-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "WebChat direct sessions on 2026.7.1-2 can render async background-task completion replies out of order with normal conversation turns."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 113978,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/113978",
+            "issue": "openclaw/openclaw issue 113978",
+            "area": "model-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Agent runtime ids replace configured provider refs in persisted session state and user-facing model labels on 2026.7.1-2, breaking selected-model identity."
           }
         ]
       },
