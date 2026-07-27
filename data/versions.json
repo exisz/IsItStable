@@ -13196,8 +13196,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 86190,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/86190",
-        "title": "[Bug]: Plugin skills (~/.openclaw/plugin-skills/) unreadable in sandbox — read fails \"Path escapes sandbox root\"; core-skill sync (#46257) does not cover plugin skills"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/86190"
       },
       {
         "repo": "openclaw/openclaw",
