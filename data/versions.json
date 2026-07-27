@@ -20789,7 +20789,7 @@
     "packageName": "Hermes Agent",
     "packageSlug": "hermes-agent",
     "verdict": "pending",
-    "verdictComment": "v0.19.0 now has approval gates that cannot be approved, a Docker SQLite corruption trap, and Desktop remote auth doing the 401 treadmill. Haunted house, now with paperwork.",
+    "verdictComment": "v0.19.0 is still collecting haunted-house paperwork: credentials in chat, no-op memory saves, MCP process orphans, and Discord profile gates leaking across rooms.",
     "referencedIssues": [
       {
         "repo": "NousResearch/hermes-agent",
@@ -21120,29 +21120,113 @@
         "number": 70792,
         "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70792",
         "title": "[Bug] Weixin local image delivery fails at CDN upload stage"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72108,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72108",
+        "title": "v0.19.0 security audit reports High advisories in locked dependencies"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72298,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72298",
+        "title": "[Bug]: Hermes shows passwords in Telegram chat"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72036,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72036",
+        "title": "Memory tool reports saved but never writes to MEMORY.md (v0.19.0)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72272,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72272",
+        "title": "[Bug] v0.19.0 --oneshot exits 0 with a non-challenge response under openai-codex"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72198,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72198",
+        "title": "SOUL.md recognized by doctor but never injected into system prompt with local/custom Ollama provider (v0.19.0)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72408,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72408",
+        "title": "vars(response) crashes with TypeError when response is a plain dict, masking the real \"malformed provider response\" error"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72391,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72391",
+        "title": "Desktop on Windows: WebSocket ready race under GIL stall — ready_send_failed / reconnect loop"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72348,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72348",
+        "title": "[Bug]: Discord adapter allow/deny gates are process-global, breaking per-profile isolation under multiplex_profiles"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72070,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72070",
+        "title": "MCP server processes never cleaned up on session end — 40+ orphans consuming 1.5GB RAM"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72069,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72069",
+        "title": "uvx-based MCP servers produce 2000+ ClosedResourceError failures/day from keepalive cascading"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 71710,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71710",
+        "title": "[Bug]: `${VAR}` env var references in `model.default` not resolved by gateway (Telegram/Discord/etc.)"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 71758,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71758",
+        "title": "Gateway marks a crashed platform adapter fatal and never retries — transient upstream outage permanently kills the platform"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72068,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72068",
+        "title": ".env template regeneration silently comments out filled API keys"
+      },
+      {
+        "repo": "NousResearch/hermes-agent",
+        "number": 72351,
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72351",
+        "title": "GPT-5.6 auto-title sends unsupported temperature and can fail during CLI cleanup"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": -167,
+      "score": -222,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 167,
-      "survivalDays": 5,
+      "evidencePenalty": 222,
+      "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 167,
+        "evidencePenalty": 222,
         "votePenalty": 0,
-        "survivalDays": 5,
+        "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": -167
+        "score": -222
       },
       "affected": [
         "approval-boundary",
@@ -21155,10 +21239,12 @@
         "dependencies",
         "desktop-remote-gateway",
         "desktop-ui",
+        "discord",
         "gateway",
         "google-chat",
         "macos-updater",
         "matrix",
+        "mcp",
         "memory",
         "plugin-tools",
         "provider-routing",
@@ -21777,6 +21863,160 @@
           "severity": 1,
           "penalty": 1,
           "reason": "Weixin iLink image delivery on Hermes 0.19.0 fails at getUploadUrl with ret=-2, blocking outbound local media"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72108,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72108",
+          "issue": "NousResearch/hermes-agent issue 72108",
+          "area": "dependencies",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "v0.19.0 security audit reports high-severity advisories in locked dependencies, including cryptography, Pillow, Starlette, and multipart packages"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72298,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72298",
+          "issue": "NousResearch/hermes-agent issue 72298",
+          "area": "security",
+          "type": "kernel",
+          "severity": 5,
+          "penalty": 5,
+          "reason": "v0.19.0 can expose Bitwarden-sourced credentials as plaintext in Telegram chat while filling login forms"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72036,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72036",
+          "issue": "NousResearch/hermes-agent issue 72036",
+          "area": "memory",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 memory tool reports a save but does not create or write MEMORY.md, leaving user memory silently unsaved"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72272,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72272",
+          "issue": "NousResearch/hermes-agent issue 72272",
+          "area": "terminal",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "Official v0.19.0 --oneshot invocation can exit 0 while returning a non-answer that fails the fresh challenge contract"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72198,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72198",
+          "issue": "NousResearch/hermes-agent issue 72198",
+          "area": "context-engine",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 detects SOUL.md but does not inject it into the system prompt for local/custom Ollama provider sessions"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72408,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72408",
+          "issue": "NousResearch/hermes-agent issue 72408",
+          "area": "runtime",
+          "type": "kernel",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 malformed provider response diagnostics can crash on vars(response) for plain dict responses, masking the real provider failure"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72391,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72391",
+          "issue": "NousResearch/hermes-agent issue 72391",
+          "area": "desktop-ui",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0-era Windows Desktop can loop on WebSocket ready_send_failed after backend GIL stalls during startup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72348,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72348",
+          "issue": "NousResearch/hermes-agent issue 72348",
+          "area": "discord",
+          "type": "channel-specific",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 multiplexed Discord profiles share process-global allow/deny gates, breaking channel/user isolation across profiles"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72070,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72070",
+          "issue": "NousResearch/hermes-agent issue 72070",
+          "area": "mcp",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 leaves MCP server processes orphaned after session end, accumulating dozens of processes and significant RAM use"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72069,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72069",
+          "issue": "NousResearch/hermes-agent issue 72069",
+          "area": "mcp",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 uvx MCP keepalive failures can cascade into thousands of ClosedResourceError failures and long session stalls"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 71710,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71710",
+          "issue": "NousResearch/hermes-agent issue 71710",
+          "area": "provider-routing",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 gateway does not expand ${VAR} in model.default, so Telegram/Discord routes can pass a literal model name and fail"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 71758,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71758",
+          "issue": "NousResearch/hermes-agent issue 71758",
+          "area": "gateway",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "v0.19.0 gateway can mark a crashed platform adapter fatal and stop retrying after a transient upstream outage"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72068,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72068",
+          "issue": "NousResearch/hermes-agent issue 72068",
+          "area": "config-profiles",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "v0.19.0 setup/update/doctor can regenerate .env with filled optional API keys commented out, silently disabling tool backends"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72351,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72351",
+          "issue": "NousResearch/hermes-agent issue 72351",
+          "area": "provider-routing",
+          "type": "tool-specific",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "v0.19.0 auto-title sends unsupported temperature to direct GPT-5.6 routing and can lose automatic titles during CLI cleanup"
         }
       ]
     },
