@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-27T12:48:54.376Z",
+  "generatedAt": "2026-07-27T15:35:28.082Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -3068,14 +3068,17 @@
         "version",
         "pkg:openclaw",
         "risk:channel",
+        "risk:tool",
         "risk:kernel",
         "risk:runtime",
         "affected:security",
         "affected:telegram",
+        "affected:codex",
+        "affected:message-delivery",
         "affected:reasoning",
         "affected:dependency-resolution",
         "affected:docker",
-        "score:60-69",
+        "score:70-79",
         "affected:gateway-startup"
       ],
       "issueNumber": 154,
@@ -3083,7 +3086,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/154",
       "createdAt": "2026-07-21T12:18:05Z",
-      "updatedAt": "2026-07-25T14:56:39Z"
+      "updatedAt": "2026-07-27T14:57:44Z"
     },
     {
       "version": "2026.7.1",
