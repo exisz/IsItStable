@@ -1787,7 +1787,7 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Extended-stable now has a security-advisory pin on top of Docker tag drift, Telegram probe trouble, and Anthropic replay grit. Not a disaster movie, but the smoke alarm is awake.",
+    "verdictComment": "Extended-stable picked up media delivery misses and Codex cleanup leaks. Still calmer than latest, but the janitor left a few 3am mops in the hallway.",
     "referencedIssues": [
       {
         "repo": "openclaw/openclaw",
@@ -1812,36 +1812,52 @@
         "number": 113584,
         "url": "https://redirect.github.com/openclaw/openclaw/issues/113584",
         "title": "npm shrinkwrap pins brace-expansion version affected by high-severity advisory"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 114299,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/114299",
+        "title": "[Bug]: Relative MEDIA: paths rejected on cron/heartbeat/subagent delivery route — workspaceDir not threaded to loadWebMedia"
+      },
+      {
+        "repo": "openclaw/openclaw",
+        "number": 101788,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/101788",
+        "title": "[Bug]: One-shot run cleanup leaks codex app-server process (inverted closeAndWait condition) → duplicate app-servers → spurious turn_aborted"
       }
     ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 82,
+      "score": 75,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 13,
-      "survivalDays": 5,
+      "evidencePenalty": 20,
+      "survivalDays": 6,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 13,
+        "evidencePenalty": 20,
         "votePenalty": 0,
-        "survivalDays": 5,
+        "survivalDays": 6,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 82
+        "score": 75
       },
       "affected": [
+        "codex",
+        "codex-app-server",
         "dependency-resolution",
         "dependency-security",
         "docker",
         "docker/latest-tag",
         "gateway-startup",
+        "media-paths",
+        "message-delivery",
         "reasoning",
         "security",
         "telegram"
@@ -1890,6 +1906,28 @@
           "severity": 5,
           "penalty": 5,
           "reason": "Published openclaw@2026.6.33 shrinkwrap explicitly pins brace-expansion/fast-uri versions covered by high-severity advisories."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 114299,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/114299",
+          "issue": "openclaw/openclaw issue 114299",
+          "area": "message-delivery/media-paths",
+          "type": "runtime",
+          "severity": 3,
+          "penalty": 3,
+          "reason": "Relative MEDIA paths are rejected on cron/heartbeat/subagent delivery because workspaceDir is not threaded to loadWebMedia; gate included explicit 2026.6.33 reproduction."
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 101788,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/101788",
+          "issue": "openclaw/openclaw issue 101788",
+          "area": "codex/app-server-cleanup",
+          "type": "runtime",
+          "severity": 4,
+          "penalty": 4,
+          "reason": "One-shot cleanup leaks Codex app-server processes on stable 2026.6.33, allowing duplicate app-servers and session collisions; gate included explicit 2026.6.33 data point."
         }
       ]
     },
@@ -13196,7 +13234,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 86190,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/86190"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/86190",
+        "title": "[Bug]: Plugin skills (~/.openclaw/plugin-skills/) unreadable in sandbox — read fails \"Path escapes sandbox root\"; core-skill sync (#46257) does not cover plugin skills"
       },
       {
         "repo": "openclaw/openclaw",
