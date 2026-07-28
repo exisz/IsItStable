@@ -785,7 +785,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.19.0 is still collecting haunted-house paperwork: credentials in chat, no-op memory saves, MCP process orphans, and Discord profile gates leaking across rooms.",
+      "verdictComment": "v0.19.0 has enough sharp edges to make a 3am deploy feel haunted: desktop auth, channel bridges, browser-tool leaks, and runtime setup checks all show fresh dents.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1200,29 +1200,77 @@
           "number": 72351,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72351",
           "title": "GPT-5.6 auto-title sends unsupported temperature and can fail during CLI cleanup"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72583,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72583",
+          "title": "[Bug]: I've been having this problem ever since I upgraded from version 0.19.0. My operating system is Windows 10."
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72454,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72454",
+          "title": "python-telegram-bot Application.initialize() hangs at \"attempt 1/8\" with no timeout           (#63309 regression)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68139,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68139",
+          "title": "browser_tool: command timeout leaks the spawned agent-browser daemon + Chromium tree (long-lived gateway accumulates orphans until host OOM)"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 70411,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70411",
+          "title": "[Bug]: Hermes Desktop git-review errors on Windows — missing path C:\\Program Files\\Git\\bin"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 68128,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68128",
+          "title": "WhatsApp bridge spawn fails with WinError 5 in no-breakaway job objects — adapter missing the documented windows_detach_flags_without_breakaway() fallback"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 71923,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71923",
+          "title": "[Bug]: setup.runtime_check is not fallback-aware — a rate-limited primary with a healthy fallback_model chain forces the UI into onboarding while chat works"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 72421,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72421",
+          "title": "[Bug]: Auxiliary Azure Foundry calls fail with HTTP 401"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 71964,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71964",
+          "title": "[Bug]: Desktop"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -222,
+        "score": -244,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 222,
-        "survivalDays": 6,
+        "evidencePenalty": 244,
+        "survivalDays": 7,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 222,
+          "evidencePenalty": 244,
           "votePenalty": 0,
-          "survivalDays": 6,
+          "survivalDays": 7,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -222
+          "score": -244
         },
         "affected": [
           "approval-boundary",
@@ -1252,7 +1300,10 @@
           "telegram",
           "terminal",
           "version-metadata",
-          "weixin"
+          "weixin",
+          "desktop",
+          "whatsapp",
+          "wechat"
         ],
         "evidence": [
           {
@@ -2013,6 +2064,94 @@
             "severity": 2,
             "penalty": 2,
             "reason": "v0.19.0 auto-title sends unsupported temperature to direct GPT-5.6 routing and can lose automatic titles during CLI cleanup"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 72583,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72583",
+            "issue": "NousResearch/hermes-agent issue 72583",
+            "area": "desktop",
+            "type": "runtime",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Desktop boot fails after upgrade with backend 401 Unauthorized on Windows 10 / Hermes 0.19.0."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 72454,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72454",
+            "issue": "NousResearch/hermes-agent issue 72454",
+            "area": "telegram",
+            "type": "channel-specific",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "Telegram gateway initialization hangs at attempt 1/8 with no timeout on Hermes 0.19.0."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 68139,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68139",
+            "issue": "NousResearch/hermes-agent issue 68139",
+            "area": "browser",
+            "type": "tool-specific",
+            "severity": 5,
+            "penalty": 5,
+            "reason": "browser_tool timeout can orphan agent-browser/Chromium trees until long-lived gateways run out of memory."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 70411,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/70411",
+            "issue": "NousResearch/hermes-agent issue 70411",
+            "area": "terminal",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Desktop git-review on Windows looks for Git in an obsolete path and errors on Hermes 0.19.0."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 68128,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/68128",
+            "issue": "NousResearch/hermes-agent issue 68128",
+            "area": "whatsapp",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WhatsApp bridge spawn still fails under Windows no-breakaway job objects on Hermes 0.19.0."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 71923,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71923",
+            "issue": "NousResearch/hermes-agent issue 71923",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "setup.runtime_check ignores fallback_model and can force onboarding while chat works on Hermes 0.19.0."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 72421,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/72421",
+            "issue": "NousResearch/hermes-agent issue 72421",
+            "area": "provider-routing",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Azure Foundry auxiliary title/approval calls lose Entra auth and fail with HTTP 401 on Hermes 0.19.0."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 71964,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71964",
+            "issue": "NousResearch/hermes-agent issue 71964",
+            "area": "wechat",
+            "type": "channel-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "WeChat Work / WeChat Desktop conversations split into duplicate sessions on Hermes 0.19.0."
           }
         ]
       },
