@@ -10,7 +10,7 @@
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
-      "verdictComment": "Latest stable picked up three more target-version dents: gateway/Signal startup, WebChat ordering, and model identity drift. The 3am deploy gremlins are no longer just knocking; they found the side door.",
+      "verdictComment": "Latest stable took another fresh pass from auth, tool-calling, Signal delivery, and UI/update banner evidence. The gremlins found more than one side door.",
       "referencedIssues": [
         {
           "repo": "openclaw/openclaw",
@@ -257,29 +257,83 @@
           "number": 113978,
           "url": "https://redirect.github.com/openclaw/openclaw/issues/113978",
           "title": "agentRuntime id replaces the configured provider in session state and user-facing model labels (2026.7.1-2)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 115233,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/115233",
+          "title": "[Bug] External Control UI tab with auth:\"gateway\" loads 401 — documented scoped-grant bootstrap absent in 2026.7.1 and 2026.7.1-2"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 114969,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/114969",
+          "title": "Dashboard update banner does not indicate beta releases"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 114989,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/114989",
+          "title": "[Bug]: OAuth CLI Bug"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 114826,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/114826",
+          "title": "[Bug]: Zod-generated unanchored regex patterns break llama.cpp tool calling"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 114577,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/114577",
+          "title": "[Bug]: ZAI_API_KEY is ignored by regular agent runs without a stored auth profile"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 115063,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/115063",
+          "title": "v2026.7.1 Codex extension can strand parent after Completed(None)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 115228,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/115228",
+          "title": "[Bug]: Orphaned task-notification from a killed background Agent silently consumes the next user message (claude-cli, 2026.7.1-2)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 114137,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/114137",
+          "title": "[Bug]: Visible channel turns intermittently dispatch with no queued reply payloads — final text persisted in transcript, never delivered (2026.7.1-2)"
+        },
+        {
+          "repo": "openclaw/openclaw",
+          "number": 114888,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/114888",
+          "title": "[Bug]: DeepSeek V4 custom openai-completions proxy emits malformed DSML / nested arguments; tools not executed"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -115,
+        "score": -139,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 115,
+        "evidencePenalty": 139,
         "survivalDays": 3,
         "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 115,
+          "evidencePenalty": 139,
           "votePenalty": 0,
           "survivalDays": 3,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 3,
           "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": -115
+          "score": -139
         },
         "affected": [
           "codex",
@@ -305,13 +359,16 @@
           "restart",
           "security",
           "session-state",
+          "signal",
           "sqlite",
           "sqlite/startup-migration",
           "startup-migration",
           "subagent-runtime",
           "telegram",
+          "tool-calling",
           "tool-policy",
           "ui",
+          "update",
           "voice",
           "webchat"
         ],
@@ -766,6 +823,105 @@
             "severity": 3,
             "penalty": 3,
             "reason": "Agent runtime ids replace configured provider refs in persisted session state and user-facing model labels on 2026.7.1-2, breaking selected-model identity."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 115233,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/115233",
+            "issue": "openclaw/openclaw issue 115233",
+            "area": "ui",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "External Plugin Control UI tabs using auth:\"gateway\" load 401 on 2026.7.1-2 because the documented scoped-grant bootstrap path is absent."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 114969,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/114969",
+            "issue": "openclaw/openclaw issue 114969",
+            "area": "update",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Dashboard update banner on stable 2026.7.1-2 advertises beta releases without labeling them as beta, creating misleading upgrade pressure."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 114989,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/114989",
+            "issue": "openclaw/openclaw issue 114989",
+            "area": "provider-auth",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Anthropic auth resolution on 2026.7.1-2 can select an expired claude-cli OAuth profile while valid api_key profiles are ignored."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 114826,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/114826",
+            "issue": "openclaw/openclaw issue 114826",
+            "area": "tool-calling",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Zod-generated unanchored regex patterns in 2026.7.1-2 break llama.cpp tool/function calling, causing tools to be rejected."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 114577,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/114577",
+            "issue": "openclaw/openclaw issue 114577",
+            "area": "provider-auth",
+            "type": "runtime",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "ZAI_API_KEY environment-only setup remains ignored by regular agent runs across 2026.7.1 through 2026.7.1-2, blocking provider auth without a stored profile."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 115063,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/115063",
+            "issue": "openclaw/openclaw issue 115063",
+            "area": "codex",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "Installed 2026.7.1-2 Codex extension can leave a parent session stranded after a native subagent emits Completed(None)."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 115228,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/115228",
+            "issue": "openclaw/openclaw issue 115228",
+            "area": "message-delivery",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "On 2026.7.1-2, an orphaned task-notification from a killed background agent can silently consume the next Telegram user message."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 114137,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/114137",
+            "issue": "openclaw/openclaw issue 114137",
+            "area": "signal",
+            "type": "channel-specific",
+            "severity": 4,
+            "penalty": 4,
+            "reason": "Visible Signal turns on 2026.7.1-2 intermittently persist final text in the transcript but dispatch no queued reply payload to the user."
+          },
+          {
+            "repo": "openclaw/openclaw",
+            "number": 114888,
+            "url": "https://redirect.github.com/openclaw/openclaw/issues/114888",
+            "issue": "openclaw/openclaw issue 114888",
+            "area": "tool-calling",
+            "type": "runtime",
+            "severity": 3,
+            "penalty": 3,
+            "reason": "DeepSeek V4 via custom openai-completions on 2026.7.1-2 emits malformed DSML/nested arguments, so tools are not executed and raw DSML can leak to Feishu users."
           }
         ]
       },
