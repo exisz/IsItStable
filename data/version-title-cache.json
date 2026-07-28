@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-28T01:25:56.074Z",
+  "generatedAt": "2026-07-28T04:52:33.463Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -671,7 +671,7 @@
         "affected:qqbot",
         "affected:security",
         "pkg:hermes-agent",
-        "score:70-79",
+        "score:60-69",
         "affected:lazy-deps",
         "affected:hermes-link",
         "affected:tui"
@@ -681,7 +681,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/148",
       "createdAt": "2026-07-08T01:28:37Z",
-      "updatedAt": "2026-07-26T02:57:51Z"
+      "updatedAt": "2026-07-28T02:59:20Z"
     },
     {
       "version": "0.18.2",
@@ -740,7 +740,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/149",
       "createdAt": "2026-07-08T04:57:32Z",
-      "updatedAt": "2026-07-24T02:53:56Z"
+      "updatedAt": "2026-07-28T02:57:19Z"
     },
     {
       "version": "0.19.0",
@@ -756,14 +756,17 @@
         "affected:runtime",
         "affected:security",
         "affected:telegram",
+        "affected:whatsapp",
         "affected:gateway",
         "affected:matrix",
+        "affected:wechat",
         "affected:browser",
         "affected:approval-boundary",
         "affected:plugin-tools",
         "affected:mcp",
         "affected:memory",
         "pkg:hermes-agent",
+        "affected:desktop",
         "affected:version-metadata",
         "affected:auth",
         "affected:config-profiles",
@@ -787,7 +790,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/153",
       "createdAt": "2026-07-20T19:22:36Z",
-      "updatedAt": "2026-07-27T02:58:27Z"
+      "updatedAt": "2026-07-28T02:57:15Z"
     },
     {
       "version": "0.0.1",
