@@ -932,32 +932,55 @@
     "packageName": "OpenClaw",
     "packageSlug": "openclaw",
     "verdict": "pending",
-    "verdictComment": "Fresh patch watch: no target-version negative evidence survived the gate yet. The 3am deploy gremlins are being kept outside the JSON until they show an ID badge.",
-    "referencedIssues": [],
+    "verdictComment": "Patch-line artifact grit: the Codex bundle still looks like it skipped part of the finality settlement. Not a 3am rollback siren, but definitely a release-mapping splinter.",
+    "referencedIssues": [
+      {
+        "repo": "openclaw/openclaw",
+        "number": 109490,
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/109490",
+        "title": "codex app-server: turn interrupted after app-delegated message tool result (terminate:true) — promised work never executes"
+      }
+    ],
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 78,
       "verdict": "pending",
       "votePenalty": 0,
-      "evidencePenalty": 0,
+      "evidencePenalty": 2,
       "survivalDays": 0,
       "survivalBonus": 0,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
-        "evidencePenalty": 0,
+        "evidencePenalty": 2,
         "votePenalty": 0,
         "survivalDays": 0,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 0,
         "survivalBonus": 0,
         "curatedBonus": 0,
-        "score": 80
+        "score": 78
       },
-      "affected": [],
-      "evidence": []
+      "affected": [
+        "codex",
+        "message-delivery",
+        "release-mapping"
+      ],
+      "evidence": [
+        {
+          "repo": "openclaw/openclaw",
+          "number": 109490,
+          "url": "https://redirect.github.com/openclaw/openclaw/issues/109490",
+          "issue": "openclaw/openclaw issue 109490",
+          "area": "codex",
+          "type": "runtime",
+          "severity": 2,
+          "penalty": 2,
+          "reason": "Stable @openclaw/codex@2026.7.1-1 artifact lacks the full #108487 source-reply finality settlement path, leaving release-mapping uncertainty around progress-message continuation semantics."
+        }
+      ]
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
@@ -1989,7 +2012,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 20,
-      "survivalDays": 7,
+      "survivalDays": 8,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -1997,7 +2020,7 @@
         "baseScore": 80,
         "evidencePenalty": 20,
         "votePenalty": 0,
-        "survivalDays": 7,
+        "survivalDays": 8,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
