@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-29T01:26:29.036Z",
+  "generatedAt": "2026-07-29T04:57:49.289Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -239,20 +239,21 @@
         "affected:discord",
         "affected:runtime",
         "affected:whatsapp",
+        "affected:gateway",
         "affected:browser",
         "affected:plugin-install",
         "affected:provider-integration",
         "affected:memory",
         "pkg:hermes-agent",
         "affected:hooks",
-        "score:70-79"
+        "score:60-69"
       ],
       "issueNumber": 127,
       "title": "[v0.10.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/127",
       "createdAt": "2026-06-02T00:36:52Z",
-      "updatedAt": "2026-07-01T00:45:22Z"
+      "updatedAt": "2026-07-29T02:59:49Z"
     },
     {
       "version": "0.11.0",
@@ -263,6 +264,7 @@
         "risk:channel",
         "risk:tool",
         "risk:runtime",
+        "affected:runtime",
         "affected:wechat",
         "affected:plugin-install",
         "affected:ui",
@@ -272,14 +274,15 @@
         "affected:identity",
         "pkg:hermes-agent",
         "affected:docker",
-        "score:70-79"
+        "affected:email",
+        "score:60-69"
       ],
       "issueNumber": 128,
       "title": "[v0.11.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/128",
       "createdAt": "2026-06-02T00:36:53Z",
-      "updatedAt": "2026-07-10T01:16:52Z"
+      "updatedAt": "2026-07-29T02:59:46Z"
     },
     {
       "version": "0.12.0",
@@ -300,14 +303,16 @@
         "affected:windows",
         "affected:memory",
         "pkg:hermes-agent",
-        "score:70-79"
+        "affected:config-profiles",
+        "affected:provider-routing",
+        "score:60-69"
       ],
       "issueNumber": 129,
       "title": "[v0.12.0] [Hermes Agent] Is it stable?",
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/129",
       "createdAt": "2026-06-02T00:36:54Z",
-      "updatedAt": "2026-07-10T01:16:50Z"
+      "updatedAt": "2026-07-29T02:59:43Z"
     },
     {
       "version": "0.13.0",
@@ -778,7 +783,9 @@
         "affected:session-history",
         "affected:skills",
         "score:0-9",
+        "affected:acp",
         "affected:attachments",
+        "affected:windows-update",
         "affected:context-engine",
         "affected:session-state",
         "affected:weixin",
@@ -790,7 +797,7 @@
       "state": "open",
       "url": "https://github.com/exisz/IsItStable/issues/153",
       "createdAt": "2026-07-20T19:22:36Z",
-      "updatedAt": "2026-07-28T02:57:15Z"
+      "updatedAt": "2026-07-29T02:57:21Z"
     },
     {
       "version": "0.0.1",
