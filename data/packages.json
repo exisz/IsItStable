@@ -941,7 +941,7 @@
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
-      "verdictComment": "v0.19.0 has enough sharp edges to make a 3am deploy feel haunted: desktop auth, channel bridges, browser-tool leaks, and runtime setup checks all show fresh dents.",
+      "verdictComment": "v0.19.0 keeps collecting Windows desktop splinters: updater loops and ACP tool hangs join the existing 3am deploy goblin pile.",
       "referencedIssues": [
         {
           "repo": "NousResearch/hermes-agent",
@@ -1404,31 +1404,44 @@
           "number": 71964,
           "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/71964",
           "title": "[Bug]: Desktop"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 73797,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/73797",
+          "title": "[Bug]: Hermes Desktop application update: Error submission"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "number": 73693,
+          "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/73693",
+          "title": "Windows Rider ACP hangs on read_file and terminal during Git Bash bootstrap"
         }
       ],
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": -244,
+        "score": -247,
         "verdict": "pending",
         "votePenalty": 0,
-        "evidencePenalty": 244,
-        "survivalDays": 7,
+        "evidencePenalty": 247,
+        "survivalDays": 8,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
-          "evidencePenalty": 244,
+          "evidencePenalty": 247,
           "votePenalty": 0,
-          "survivalDays": 7,
+          "survivalDays": 8,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,
           "curatedBonus": 0,
-          "score": -244
+          "score": -247
         },
         "affected": [
+          "acp",
           "approval-boundary",
           "attachments",
           "auth",
@@ -1437,6 +1450,7 @@
           "context-engine",
           "dashboard",
           "dependencies",
+          "desktop",
           "desktop-remote-gateway",
           "desktop-ui",
           "discord",
@@ -1456,10 +1470,10 @@
           "telegram",
           "terminal",
           "version-metadata",
+          "wechat",
           "weixin",
-          "desktop",
           "whatsapp",
-          "wechat"
+          "windows-update"
         ],
         "evidence": [
           {
@@ -2308,6 +2322,28 @@
             "severity": 1,
             "penalty": 1,
             "reason": "WeChat Work / WeChat Desktop conversations split into duplicate sessions on Hermes 0.19.0."
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 73797,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/73797",
+            "issue": "NousResearch/hermes-agent issue 73797",
+            "area": "windows-update",
+            "type": "tool-specific",
+            "severity": 1,
+            "penalty": 1,
+            "reason": "Hermes Desktop 0.19.0 on Windows 11 shows the update error every time after clicking Update, leaving normal update flow unavailable without killing the process"
+          },
+          {
+            "repo": "NousResearch/hermes-agent",
+            "number": 73693,
+            "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/73693",
+            "issue": "NousResearch/hermes-agent issue 73693",
+            "area": "terminal",
+            "type": "tool-specific",
+            "severity": 2,
+            "penalty": 2,
+            "reason": "Hermes 0.19.0 as a Rider ACP agent on Windows hangs read_file and terminal tool calls during Git Bash bootstrap; direct CLI control test works"
           }
         ]
       },
