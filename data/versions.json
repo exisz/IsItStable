@@ -1971,24 +1971,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 86,
+      "score": 89,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 2,
-      "survivalBonus": 6,
+      "survivalDays": 3,
+      "survivalBonus": 9,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 2,
+        "survivalDays": 3,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 2,
-        "survivalBonus": 6,
+        "survivalCreditedDays": 3,
+        "survivalBonus": 9,
         "curatedBonus": 0,
-        "score": 86
+        "score": 89
       },
       "affected": [],
       "evidence": []
@@ -21049,24 +21049,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 89,
+      "score": 92,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 3,
-      "survivalBonus": 9,
+      "survivalDays": 4,
+      "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 3,
+        "survivalDays": 4,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 3,
-        "survivalBonus": 9,
+        "survivalCreditedDays": 4,
+        "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": 89
+        "score": 92
       },
       "affected": [],
       "evidence": []
