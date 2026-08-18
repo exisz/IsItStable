@@ -1975,7 +1975,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 12,
+      "survivalDays": 13,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -1983,7 +1983,7 @@
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 12,
+        "survivalDays": 13,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -21073,7 +21073,7 @@
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
-    "createdAt": "2026-08-17T18:43:27Z"
+    "createdAt": "2026-08-17T21:24:45.329Z"
   },
   {
     "issueNumber": 159,
