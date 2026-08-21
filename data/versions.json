@@ -1975,7 +1975,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 15,
+      "survivalDays": 16,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -1983,7 +1983,7 @@
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 15,
+        "survivalDays": 16,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -13061,8 +13061,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 86104,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/86104",
-        "title": "macOS: launchctl submit can relaunch one-shot update jobs after clean exit"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/86104"
       },
       {
         "repo": "openclaw/openclaw",
@@ -21049,24 +21048,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 83,
+      "score": 86,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 83
+        "score": 86
       },
       "affected": [],
       "evidence": []
