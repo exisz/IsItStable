@@ -1,5 +1,43 @@
 [
   {
+    "issueNumber": 168,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/168",
+    "version": "2026.9.2",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-09-05T19:13:07.937Z"
+  },
+  {
     "issueNumber": 167,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/167",
     "version": "2026.9.1",
@@ -11,24 +49,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 83,
+      "score": 86,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 83
+        "score": 86
       },
       "affected": [],
       "evidence": []
@@ -2107,7 +2145,7 @@
       "affected": [],
       "evidence": []
     },
-    "thumbsUp": 1,
+    "thumbsUp": 2,
     "thumbsDown": 0,
     "createdAt": "2026-08-04T21:14:03.969Z"
   },
@@ -21163,24 +21201,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 92,
+      "score": 95,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 4,
-      "survivalBonus": 12,
+      "survivalDays": 5,
+      "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 4,
+        "survivalDays": 5,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 4,
-        "survivalBonus": 12,
+        "survivalCreditedDays": 5,
+        "survivalBonus": 15,
         "curatedBonus": 0,
-        "score": 92
+        "score": 95
       },
       "affected": [],
       "evidence": []
