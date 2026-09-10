@@ -2150,6 +2150,44 @@
     "createdAt": "2026-07-13T17:58:18.920Z"
   },
   {
+    "issueNumber": 171,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/171",
+    "version": "2026.6.35",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-09-10T04:51:20.511Z"
+  },
+  {
     "issueNumber": 157,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/157",
     "version": "2026.6.34",
