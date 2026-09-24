@@ -9679,8 +9679,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 91433,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91433",
-        "title": "MCP remote OAuth: two bugs block streamable-http servers (regex `\\:` under /u; OAuth errors surfaced as [object Response])"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91433"
       },
       {
         "repo": "openclaw/openclaw",
@@ -21492,6 +21491,44 @@
     "thumbsUp": 9,
     "thumbsDown": 0,
     "createdAt": "2026-04-24T16:30:05.632Z"
+  },
+  {
+    "issueNumber": 181,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/181",
+    "version": "0.21.5",
+    "packageName": "Hermes Agent",
+    "packageSlug": "hermes-agent",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-09-24T11:04:30.961Z"
   },
   {
     "issueNumber": 179,
