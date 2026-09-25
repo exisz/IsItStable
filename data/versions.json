@@ -11,24 +11,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 83,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 80
+        "score": 83
       },
       "affected": [],
       "evidence": []
@@ -32267,8 +32267,7 @@
       {
         "repo": "NousResearch/hermes-agent",
         "number": 34179,
-        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34179",
-        "title": "[Bug]: Direct Copilot gpt-5.5 large resumes are killed by 12s Codex TTFB watchdog"
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/34179"
       },
       {
         "repo": "NousResearch/hermes-agent",
