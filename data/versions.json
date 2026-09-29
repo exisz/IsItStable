@@ -228,6 +228,44 @@
     "createdAt": "2026-09-03T18:03:45.738Z"
   },
   {
+    "issueNumber": 182,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/182",
+    "version": "2026.8.33",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-09-28T22:37:47.204Z"
+  },
+  {
     "issueNumber": 166,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/166",
     "version": "2026.8.2",
@@ -21504,24 +21542,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 89,
+      "score": 92,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 3,
-      "survivalBonus": 9,
+      "survivalDays": 4,
+      "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 3,
+        "survivalDays": 4,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 3,
-        "survivalBonus": 9,
+        "survivalCreditedDays": 4,
+        "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": 89
+        "score": 92
       },
       "affected": [],
       "evidence": []
