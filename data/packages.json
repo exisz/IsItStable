@@ -15,9 +15,9 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 83,
+        "score": 81,
         "verdict": "pending",
-        "votePenalty": 0,
+        "votePenalty": 2,
         "evidencePenalty": 0,
         "survivalDays": 1,
         "survivalBonus": 3,
@@ -26,19 +26,19 @@
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
-          "votePenalty": 0,
+          "votePenalty": 2,
           "survivalDays": 1,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 1,
           "survivalBonus": 3,
           "curatedBonus": 0,
-          "score": 83
+          "score": 81
         },
         "affected": [],
         "evidence": []
       },
       "thumbsUp": 0,
-      "thumbsDown": 0,
+      "thumbsDown": 1,
       "createdAt": "2026-09-30T03:38:09.894Z"
     }
   },
@@ -62,7 +62,7 @@
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 6,
+        "survivalDays": 7,
         "survivalBonus": 15,
         "curated": false,
         "curatedBonus": 0,
@@ -70,7 +70,7 @@
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 6,
+          "survivalDays": 7,
           "survivalPointsPerDay": 3,
           "survivalCreditedDays": 5,
           "survivalBonus": 15,

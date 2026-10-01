@@ -11,9 +11,9 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 83,
+      "score": 81,
       "verdict": "pending",
-      "votePenalty": 0,
+      "votePenalty": 2,
       "evidencePenalty": 0,
       "survivalDays": 1,
       "survivalBonus": 3,
@@ -22,19 +22,19 @@
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
-        "votePenalty": 0,
+        "votePenalty": 2,
         "survivalDays": 1,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 1,
         "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 83
+        "score": 81
       },
       "affected": [],
       "evidence": []
     },
     "thumbsUp": 0,
-    "thumbsDown": 0,
+    "thumbsDown": 1,
     "createdAt": "2026-09-30T03:38:09.894Z"
   },
   {
@@ -49,9 +49,9 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 92,
+      "score": 90,
       "verdict": "pending",
-      "votePenalty": 0,
+      "votePenalty": 2,
       "evidencePenalty": 0,
       "survivalDays": 4,
       "survivalBonus": 12,
@@ -60,19 +60,19 @@
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
-        "votePenalty": 0,
+        "votePenalty": 2,
         "survivalDays": 4,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 4,
         "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": 92
+        "score": 90
       },
       "affected": [],
       "evidence": []
     },
     "thumbsUp": 0,
-    "thumbsDown": 0,
+    "thumbsDown": 1,
     "createdAt": "2026-09-23T23:07:43.684Z"
   },
   {
@@ -109,7 +109,7 @@
       "affected": [],
       "evidence": []
     },
-    "thumbsUp": 0,
+    "thumbsUp": 1,
     "thumbsDown": 0,
     "createdAt": "2026-09-19T01:14:57.889Z"
   },
@@ -264,6 +264,44 @@
     "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-09-03T18:03:45.738Z"
+  },
+  {
+    "issueNumber": 184,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/184",
+    "version": "2026.8.34",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-10-01T20:28:57.660Z"
   },
   {
     "issueNumber": 182,
@@ -21584,7 +21622,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 6,
+      "survivalDays": 7,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -21592,7 +21630,7 @@
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 6,
+        "survivalDays": 7,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
@@ -34186,8 +34224,7 @@
       {
         "repo": "NousResearch/hermes-agent",
         "number": 9973,
-        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/9973",
-        "title": "fix(memory): prefetch cache lost on every gateway turn due to AIAgent recreation"
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/9973"
       },
       {
         "repo": "NousResearch/hermes-agent",
