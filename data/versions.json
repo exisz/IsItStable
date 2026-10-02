@@ -266,6 +266,44 @@
     "createdAt": "2026-09-03T18:03:45.738Z"
   },
   {
+    "issueNumber": 185,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/185",
+    "version": "2026.8.35",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-10-02T13:20:17.208Z"
+  },
+  {
     "issueNumber": 184,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/184",
     "version": "2026.8.34",
@@ -603,8 +641,7 @@
       {
         "repo": "openclaw/openclaw",
         "number": 111219,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/111219",
-        "title": "secrets audit: auth-profile SQLite store scanned for default agent only (multi-agent blind spot)"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111219"
       },
       {
         "repo": "openclaw/openclaw",
@@ -9793,7 +9830,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 91433,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/91433"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/91433",
+        "title": "MCP remote OAuth: two bugs block streamable-http servers (regex `\\:` under /u; OAuth errors surfaced as [object Response])"
       },
       {
         "repo": "openclaw/openclaw",
@@ -21622,7 +21660,7 @@
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 7,
+      "survivalDays": 8,
       "survivalBonus": 15,
       "curated": false,
       "curatedBonus": 0,
@@ -21630,7 +21668,7 @@
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 7,
+        "survivalDays": 8,
         "survivalPointsPerDay": 3,
         "survivalCreditedDays": 5,
         "survivalBonus": 15,
