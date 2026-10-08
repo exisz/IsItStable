@@ -4,9 +4,9 @@
     "slug": "openclaw",
     "displayName": "OpenClaw",
     "latestVersion": {
-      "issueNumber": 186,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/186",
-      "version": "2026.9.8",
+      "issueNumber": 187,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/187",
+      "version": "2026.9.9",
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
@@ -15,31 +15,31 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 95,
+        "score": 80,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 5,
-        "survivalBonus": 15,
+        "survivalDays": 0,
+        "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 5,
+          "survivalDays": 0,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 5,
-          "survivalBonus": 15,
+          "survivalCreditedDays": 0,
+          "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 95
+          "score": 80
         },
         "affected": [],
         "evidence": []
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-10-03T02:08:46.095Z"
+      "createdAt": "2026-10-08T09:38:01.687Z"
     }
   },
   {
@@ -47,9 +47,9 @@
     "slug": "hermes-agent",
     "displayName": "Hermes Agent",
     "latestVersion": {
-      "issueNumber": 181,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/181",
-      "version": "0.21.5",
+      "issueNumber": 188,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/188",
+      "version": "0.21.6",
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
@@ -58,31 +58,31 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 95,
+        "score": 80,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 13,
-        "survivalBonus": 15,
+        "survivalDays": 0,
+        "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 13,
+          "survivalDays": 0,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 5,
-          "survivalBonus": 15,
+          "survivalCreditedDays": 0,
+          "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 95
+          "score": 80
         },
         "affected": [],
         "evidence": []
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-09-24T11:04:30.961Z"
+      "createdAt": "2026-10-08T11:51:57Z"
     }
   }
 ]
