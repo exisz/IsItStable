@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-12T00:04:17.892Z",
+  "generatedAt": "2026-10-12T06:42:57.887Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -1027,6 +1027,21 @@
       "url": "https://github.com/exisz/IsItStable/issues/188",
       "createdAt": "2026-10-08T14:09:26Z",
       "updatedAt": "2026-10-08T14:09:26Z"
+    },
+    {
+      "version": "0.21.7",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "labels": [
+        "version",
+        "pkg:hermes-agent"
+      ],
+      "issueNumber": 191,
+      "title": "[v0.21.7] [Hermes Agent] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/191",
+      "createdAt": "2026-10-12T06:42:56Z",
+      "updatedAt": "2026-10-12T06:42:56Z"
     },
     {
       "version": "0.0.1",
@@ -3759,6 +3774,21 @@
       "url": "https://github.com/exisz/IsItStable/issues/189",
       "createdAt": "2026-10-10T23:03:16Z",
       "updatedAt": "2026-10-10T23:03:16Z"
+    },
+    {
+      "version": "2026.10.2",
+      "packageName": "OpenClaw",
+      "packageSlug": "openclaw",
+      "labels": [
+        "version",
+        "pkg:openclaw"
+      ],
+      "issueNumber": 190,
+      "title": "[v2026.10.2] [OpenClaw] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/190",
+      "createdAt": "2026-10-12T06:42:54Z",
+      "updatedAt": "2026-10-12T06:42:54Z"
     }
   ],
   "duplicates": {
