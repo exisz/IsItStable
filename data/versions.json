@@ -1,5 +1,43 @@
 [
   {
+    "issueNumber": 192,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/192",
+    "version": "2026.10.3",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-10-13T13:43:36.600Z"
+  },
+  {
     "issueNumber": 190,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/190",
     "version": "2026.10.2",
@@ -21808,24 +21846,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 80,
+      "score": 83,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 0,
-      "survivalBonus": 0,
+      "survivalDays": 1,
+      "survivalBonus": 3,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 0,
+        "survivalDays": 1,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 0,
-        "survivalBonus": 0,
+        "survivalCreditedDays": 1,
+        "survivalBonus": 3,
         "curatedBonus": 0,
-        "score": 80
+        "score": 83
       },
       "affected": [],
       "evidence": []
@@ -24204,7 +24242,8 @@
       {
         "repo": "NousResearch/hermes-agent",
         "number": 62846,
-        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62846"
+        "url": "https://redirect.github.com/NousResearch/hermes-agent/issues/62846",
+        "title": "[Bug]: LINE adapter uses cache_image_from_bytes for audio/video"
       },
       {
         "repo": "NousResearch/hermes-agent",

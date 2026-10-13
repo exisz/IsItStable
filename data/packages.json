@@ -4,54 +4,11 @@
     "slug": "openclaw",
     "displayName": "OpenClaw",
     "latestVersion": {
-      "issueNumber": 190,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/190",
-      "version": "2026.10.2",
+      "issueNumber": 192,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/192",
+      "version": "2026.10.3",
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
-      "verdict": "pending",
-      "verdictComment": "",
-      "referencedIssues": [],
-      "stabilityScore": {
-        "schemaVersion": "isitstable:v1",
-        "baseScore": 80,
-        "score": 83,
-        "verdict": "pending",
-        "votePenalty": 0,
-        "evidencePenalty": 0,
-        "survivalDays": 1,
-        "survivalBonus": 3,
-        "curated": false,
-        "curatedBonus": 0,
-        "formula": {
-          "baseScore": 80,
-          "evidencePenalty": 0,
-          "votePenalty": 0,
-          "survivalDays": 1,
-          "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
-          "curatedBonus": 0,
-          "score": 83
-        },
-        "affected": [],
-        "evidence": []
-      },
-      "thumbsUp": 0,
-      "thumbsDown": 0,
-      "createdAt": "2026-10-12T05:28:25.059Z"
-    }
-  },
-  {
-    "name": "hermes-agent",
-    "slug": "hermes-agent",
-    "displayName": "Hermes Agent",
-    "latestVersion": {
-      "issueNumber": 191,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/191",
-      "version": "0.21.7",
-      "packageName": "Hermes Agent",
-      "packageSlug": "hermes-agent",
       "verdict": "pending",
       "verdictComment": "",
       "referencedIssues": [],
@@ -76,6 +33,49 @@
           "survivalBonus": 0,
           "curatedBonus": 0,
           "score": 80
+        },
+        "affected": [],
+        "evidence": []
+      },
+      "thumbsUp": 0,
+      "thumbsDown": 0,
+      "createdAt": "2026-10-13T13:43:36.600Z"
+    }
+  },
+  {
+    "name": "hermes-agent",
+    "slug": "hermes-agent",
+    "displayName": "Hermes Agent",
+    "latestVersion": {
+      "issueNumber": 191,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/191",
+      "version": "0.21.7",
+      "packageName": "Hermes Agent",
+      "packageSlug": "hermes-agent",
+      "verdict": "pending",
+      "verdictComment": "",
+      "referencedIssues": [],
+      "stabilityScore": {
+        "schemaVersion": "isitstable:v1",
+        "baseScore": 80,
+        "score": 83,
+        "verdict": "pending",
+        "votePenalty": 0,
+        "evidencePenalty": 0,
+        "survivalDays": 1,
+        "survivalBonus": 3,
+        "curated": false,
+        "curatedBonus": 0,
+        "formula": {
+          "baseScore": 80,
+          "evidencePenalty": 0,
+          "votePenalty": 0,
+          "survivalDays": 1,
+          "survivalPointsPerDay": 3,
+          "survivalCreditedDays": 1,
+          "survivalBonus": 3,
+          "curatedBonus": 0,
+          "score": 83
         },
         "affected": [],
         "evidence": []
