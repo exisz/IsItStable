@@ -114,6 +114,44 @@
     "createdAt": "2026-10-10T22:45:05.897Z"
   },
   {
+    "issueNumber": 195,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/195",
+    "version": "2026.9.33",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-10-15T10:05:43.246Z"
+  },
+  {
     "issueNumber": 187,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/187",
     "version": "2026.9.9",
@@ -21833,6 +21871,44 @@
     "thumbsUp": 9,
     "thumbsDown": 0,
     "createdAt": "2026-04-24T16:30:05.632Z"
+  },
+  {
+    "issueNumber": 196,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/196",
+    "version": "0.22.2",
+    "packageName": "Hermes Agent",
+    "packageSlug": "hermes-agent",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-10-15T08:21:32Z"
   },
   {
     "issueNumber": 194,
