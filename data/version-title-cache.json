@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-15T23:23:42.859Z",
+  "generatedAt": "2026-10-16T02:04:36.822Z",
   "source": "github-graphql:repository.issues:title-only",
   "repo": "exisz/IsItStable",
   "versions": [
@@ -3864,6 +3864,21 @@
       "url": "https://github.com/exisz/IsItStable/issues/192",
       "createdAt": "2026-10-13T19:36:48Z",
       "updatedAt": "2026-10-13T19:36:48Z"
+    },
+    {
+      "version": "2026.10.4",
+      "packageName": "OpenClaw",
+      "packageSlug": "openclaw",
+      "labels": [
+        "version",
+        "pkg:openclaw"
+      ],
+      "issueNumber": 197,
+      "title": "[v2026.10.4] [OpenClaw] Is it stable?",
+      "state": "open",
+      "url": "https://github.com/exisz/IsItStable/issues/197",
+      "createdAt": "2026-10-16T02:04:34Z",
+      "updatedAt": "2026-10-16T02:04:34Z"
     }
   ],
   "duplicates": {
