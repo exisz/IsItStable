@@ -4,9 +4,9 @@
     "slug": "openclaw",
     "displayName": "OpenClaw",
     "latestVersion": {
-      "issueNumber": 197,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/197",
-      "version": "2026.10.4",
+      "issueNumber": 198,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/198",
+      "version": "2026.10.5",
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
@@ -15,31 +15,31 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 86,
+        "score": 80,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "survivalDays": 0,
+        "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 0,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 0,
+          "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 86
+          "score": 80
         },
         "affected": [],
         "evidence": []
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-10-15T23:58:28.695Z"
+      "createdAt": "2026-10-18T21:16:43.569Z"
     }
   },
   {
@@ -58,24 +58,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 86,
+        "score": 89,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 2,
-        "survivalBonus": 6,
+        "survivalDays": 3,
+        "survivalBonus": 9,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 2,
+          "survivalDays": 3,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 2,
-          "survivalBonus": 6,
+          "survivalCreditedDays": 3,
+          "survivalBonus": 9,
           "curatedBonus": 0,
-          "score": 86
+          "score": 89
         },
         "affected": [],
         "evidence": []
