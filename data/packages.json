@@ -4,9 +4,9 @@
     "slug": "openclaw",
     "displayName": "OpenClaw",
     "latestVersion": {
-      "issueNumber": 204,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/204",
-      "version": "2026.10.7",
+      "issueNumber": 206,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/206",
+      "version": "2026.10.8",
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
@@ -39,7 +39,7 @@
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-10-24T07:36:46.919Z"
+      "createdAt": "2026-10-27T11:24:29.436Z"
     }
   },
   {
@@ -58,24 +58,24 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 89,
+        "score": 92,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "survivalDays": 4,
+        "survivalBonus": 12,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 3,
+          "survivalDays": 4,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 4,
+          "survivalBonus": 12,
           "curatedBonus": 0,
-          "score": 89
+          "score": 92
         },
         "affected": [],
         "evidence": []
