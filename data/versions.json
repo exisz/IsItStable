@@ -1,5 +1,43 @@
 [
   {
+    "issueNumber": 210,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/210",
+    "version": "2026.10.10",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-11-03T02:26:08.904Z"
+  },
+  {
     "issueNumber": 207,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/207",
     "version": "2026.10.9",
@@ -22250,7 +22288,7 @@
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
-    "createdAt": "2026-11-02T17:18:36Z"
+    "createdAt": "2026-11-02T23:35:43.457Z"
   },
   {
     "issueNumber": 202,
