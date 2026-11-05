@@ -47,9 +47,9 @@
     "slug": "hermes-agent",
     "displayName": "Hermes Agent",
     "latestVersion": {
-      "issueNumber": 211,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/211",
-      "version": "0.22.7",
+      "issueNumber": 213,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/213",
+      "version": "0.23.0",
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
@@ -58,31 +58,31 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 83,
+        "score": 80,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 1,
-        "survivalBonus": 3,
+        "survivalDays": 0,
+        "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 1,
+          "survivalDays": 0,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 1,
-          "survivalBonus": 3,
+          "survivalCreditedDays": 0,
+          "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 83
+          "score": 80
         },
         "affected": [],
         "evidence": []
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-11-04T01:25:50.288Z"
+      "createdAt": "2026-11-05T21:32:33Z"
     }
   }
 ]
