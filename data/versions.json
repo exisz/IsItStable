@@ -1,5 +1,43 @@
 [
   {
+    "issueNumber": 217,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/217",
+    "version": "2026.11.3",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-11-10T17:59:44.785Z"
+  },
+  {
     "issueNumber": 214,
     "issueUrl": "https://github.com/exisz/IsItStable/issues/214",
     "version": "2026.11.2",
@@ -11,24 +49,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 83,
+      "score": 86,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 1,
-      "survivalBonus": 3,
+      "survivalDays": 2,
+      "survivalBonus": 6,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 1,
+        "survivalDays": 2,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 1,
-        "survivalBonus": 3,
+        "survivalCreditedDays": 2,
+        "survivalBonus": 6,
         "curatedBonus": 0,
-        "score": 83
+        "score": 86
       },
       "affected": [],
       "evidence": []
@@ -454,6 +492,44 @@
     "thumbsUp": 0,
     "thumbsDown": 0,
     "createdAt": "2026-10-10T22:45:05.897Z"
+  },
+  {
+    "issueNumber": 216,
+    "issueUrl": "https://github.com/exisz/IsItStable/issues/216",
+    "version": "2026.9.37",
+    "packageName": "OpenClaw",
+    "packageSlug": "openclaw",
+    "verdict": "pending",
+    "verdictComment": "",
+    "referencedIssues": [],
+    "stabilityScore": {
+      "schemaVersion": "isitstable:v1",
+      "baseScore": 80,
+      "score": 80,
+      "verdict": "pending",
+      "votePenalty": 0,
+      "evidencePenalty": 0,
+      "survivalDays": 0,
+      "survivalBonus": 0,
+      "curated": false,
+      "curatedBonus": 0,
+      "formula": {
+        "baseScore": 80,
+        "evidencePenalty": 0,
+        "votePenalty": 0,
+        "survivalDays": 0,
+        "survivalPointsPerDay": 3,
+        "survivalCreditedDays": 0,
+        "survivalBonus": 0,
+        "curatedBonus": 0,
+        "score": 80
+      },
+      "affected": [],
+      "evidence": []
+    },
+    "thumbsUp": 0,
+    "thumbsDown": 0,
+    "createdAt": "2026-11-10T20:16:24.913Z"
   },
   {
     "issueNumber": 208,
@@ -1325,7 +1401,8 @@
       {
         "repo": "openclaw/openclaw",
         "number": 111219,
-        "url": "https://redirect.github.com/openclaw/openclaw/issues/111219"
+        "url": "https://redirect.github.com/openclaw/openclaw/issues/111219",
+        "title": "secrets audit: auth-profile SQLite store scanned for default agent only (multi-agent blind spot)"
       },
       {
         "repo": "openclaw/openclaw",
@@ -22364,7 +22441,7 @@
     },
     "thumbsUp": 0,
     "thumbsDown": 0,
-    "createdAt": "2026-11-10T01:42:15Z"
+    "createdAt": "2026-11-10T19:43:41.227Z"
   },
   {
     "issueNumber": 213,
@@ -22378,24 +22455,24 @@
     "stabilityScore": {
       "schemaVersion": "isitstable:v1",
       "baseScore": 80,
-      "score": 89,
+      "score": 92,
       "verdict": "pending",
       "votePenalty": 0,
       "evidencePenalty": 0,
-      "survivalDays": 3,
-      "survivalBonus": 9,
+      "survivalDays": 4,
+      "survivalBonus": 12,
       "curated": false,
       "curatedBonus": 0,
       "formula": {
         "baseScore": 80,
         "evidencePenalty": 0,
         "votePenalty": 0,
-        "survivalDays": 3,
+        "survivalDays": 4,
         "survivalPointsPerDay": 3,
-        "survivalCreditedDays": 3,
-        "survivalBonus": 9,
+        "survivalCreditedDays": 4,
+        "survivalBonus": 12,
         "curatedBonus": 0,
-        "score": 89
+        "score": 92
       },
       "affected": [],
       "evidence": []
