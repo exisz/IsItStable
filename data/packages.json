@@ -4,9 +4,9 @@
     "slug": "openclaw",
     "displayName": "OpenClaw",
     "latestVersion": {
-      "issueNumber": 228,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/228",
-      "version": "2026.11.10",
+      "issueNumber": 230,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/230",
+      "version": "2026.11.11",
       "packageName": "OpenClaw",
       "packageSlug": "openclaw",
       "verdict": "pending",
@@ -39,7 +39,7 @@
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-11-25T05:07:34.288Z"
+      "createdAt": "2026-11-28T04:05:49.047Z"
     }
   },
   {
@@ -47,9 +47,9 @@
     "slug": "hermes-agent",
     "displayName": "Hermes Agent",
     "latestVersion": {
-      "issueNumber": 226,
-      "issueUrl": "https://github.com/exisz/IsItStable/issues/226",
-      "version": "0.23.4",
+      "issueNumber": 231,
+      "issueUrl": "https://github.com/exisz/IsItStable/issues/231",
+      "version": "0.23.5",
       "packageName": "Hermes Agent",
       "packageSlug": "hermes-agent",
       "verdict": "pending",
@@ -58,31 +58,31 @@
       "stabilityScore": {
         "schemaVersion": "isitstable:v1",
         "baseScore": 80,
-        "score": 89,
+        "score": 80,
         "verdict": "pending",
         "votePenalty": 0,
         "evidencePenalty": 0,
-        "survivalDays": 3,
-        "survivalBonus": 9,
+        "survivalDays": 0,
+        "survivalBonus": 0,
         "curated": false,
         "curatedBonus": 0,
         "formula": {
           "baseScore": 80,
           "evidencePenalty": 0,
           "votePenalty": 0,
-          "survivalDays": 3,
+          "survivalDays": 0,
           "survivalPointsPerDay": 3,
-          "survivalCreditedDays": 3,
-          "survivalBonus": 9,
+          "survivalCreditedDays": 0,
+          "survivalBonus": 0,
           "curatedBonus": 0,
-          "score": 89
+          "score": 80
         },
         "affected": [],
         "evidence": []
       },
       "thumbsUp": 0,
       "thumbsDown": 0,
-      "createdAt": "2026-11-24T17:50:27.153Z"
+      "createdAt": "2026-11-28T10:32:02.539Z"
     }
   }
 ]
